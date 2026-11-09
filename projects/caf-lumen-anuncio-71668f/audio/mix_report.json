@@ -1,0 +1,98 @@
+{
+ "duration": 20.666666666666668,
+ "sampleRate": 48000,
+ "targetLUFS": -14.0,
+ "ceilingDBTP": -2.0,
+ "measured": {
+  "integratedLUFS": -14.02,
+  "truePeakDBTP": -2.0,
+  "LRA": 0.92,
+  "maxGainReductionDB": 4.76,
+  "voiceLUFS": -13.74,
+  "musicLUFS": -29.69,
+  "sfxLUFS": -28.88
+ },
+ "ffmpegEbur128": {
+  "I": -14.0,
+  "LRA": 0.9,
+  "truePeak": -2.0
+ },
+ "musicSections": [
+  {
+   "start": 0.0,
+   "end": 20.67,
+   "mood": "upbeat"
+  }
+ ],
+ "musicCues": [
+  "0.00s section 1: upbeat (118 bpm)"
+ ],
+ "sfxCues": [
+  {
+   "t": 0.0,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 1.58,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 3.1,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 2.88,
+   "kind": "whoosh",
+   "what": "flash into b02"
+  },
+  {
+   "t": 3.367,
+   "kind": "product",
+   "what": "product croissant"
+  },
+  {
+   "t": 7.467,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 7.733,
+   "kind": "product",
+   "what": "product coffee"
+  },
+  {
+   "t": 10.533,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 12.347,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 14.067,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 15.513,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 16.967,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 18.88,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  }
+ ],
+ "license": "All music and SFX synthesized locally (numpy/scipy), original; voice from local TTS or user import."
+}

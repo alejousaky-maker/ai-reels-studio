@@ -1,0 +1,574 @@
+{
+ "lang": "en",
+ "title": "The Town That Couldn't Stop Dancing",
+ "words": 191,
+ "beats": [
+  {
+   "narration": "One summer day in 1518, a woman in Strasbourg walked out of her house and started dancing in the street.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "anna",
+     "action": "dance",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "kid",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "dancing",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "anna",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": "Lone woman dancing in a sunny cobbled square, a kid watching."
+  },
+  {
+   "narration": "And she would not stop.",
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "anna",
+     "action": "dance",
+     "expr": "dazed",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "anna",
+   "fx": [],
+   "impactWord": "stop",
+   "transition": "flash",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": null
+  },
+  {
+   "narration": "There was no music. No party. Just one woman, dancing for days, while her neighbours stared.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "anna",
+     "action": "dance",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "hans",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "stared",
+      "expr": "nervous"
+     },
+     "holding": null
+    },
+    {
+     "id": "greta",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "neighbours",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "anna",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "question",
+     "word": "music",
+     "on": "greta"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": null
+  },
+  {
+   "narration": "Then her neighbour joined in. Then another.",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "hans",
+     "action": "dance",
+     "expr": "laugh",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "anna",
+     "action": "dance",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "greta",
+     "action": "dance",
+     "expr": "nervous",
+     "react": {
+      "word": "another",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "hans",
+   "fx": [],
+   "impactWord": "another",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": null
+  },
+  {
+   "narration": "Within weeks, dozens of people were dancing in the streets, drenched in sweat, unable to stop.",
+   "shot": "high",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "anna",
+     "action": "dance",
+     "expr": "dazed",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "hans",
+     "action": "dance",
+     "expr": "pained",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "greta",
+     "action": "dance",
+     "expr": "dazed",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 8,
+   "extrasAction": "dance",
+   "focus": "anna",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": "A crowd of exhausted dancers fills the square."
+  },
+  {
+   "narration": "So what did the town council do?",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "council",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "council",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "question",
+     "word": "council",
+     "on": "council"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": null
+  },
+  {
+   "narration": "They decided the cure was more dancing.",
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "council",
+     "action": "stand",
+     "expr": "stern",
+     "react": {
+      "word": "dancing",
+      "expr": "grin"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "council",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "lightbulb",
+     "word": "cure",
+     "on": "council"
+    }
+   ],
+   "impactWord": "dancing",
+   "transition": "flash",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": null
+  },
+  {
+   "narration": "According to the chronicles, they cleared halls, hired musicians, and even paid strong men to keep the dancers on their feet.",
+   "shot": "low",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "fiddler",
+     "action": "stand",
+     "expr": "whistle",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "anna",
+     "action": "dance",
+     "expr": "dazed",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "hans",
+     "action": "dance",
+     "expr": "pained",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 4,
+   "extrasAction": "dance",
+   "focus": "fiddler",
+   "fx": [
+    {
+     "kind": "notes",
+     "product": null,
+     "word": "musicians",
+     "on": "fiddler"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": null
+  },
+  {
+   "narration": "Luckily, the music was excellent.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "fiddler",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "kid",
+     "action": "stand",
+     "expr": "laugh",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "fiddler",
+   "fx": [
+    {
+     "kind": "notes",
+     "product": null,
+     "word": null,
+     "on": "fiddler"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": null
+  },
+  {
+   "narration": "Unluckily, it only made things worse.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "anna",
+     "action": "dance",
+     "expr": "pained",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "anna",
+   "fx": [],
+   "impactWord": "worse",
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": null
+  },
+  {
+   "narration": "The council banned public dancing, and the dancers were sent to a shrine to pray.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "council",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "anna",
+     "action": "walk",
+     "expr": "dazed",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "hans",
+     "action": "walk",
+     "expr": "relief",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "council",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "scroll",
+     "word": "banned",
+     "on": "council"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": null
+  },
+  {
+   "narration": "You see, historians still argue about why it happened.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "scholar",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "argue",
+      "expr": "nervous"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "scholar",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "book",
+     "word": "historians",
+     "on": "scholar"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": null
+  },
+  {
+   "narration": "The most popular idea is that fear, hunger and disease pushed people past their limits, and the panic spread from person to person, like a yawn across a crowded room.",
+   "shot": "two_shot",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "scholar",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "kid",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "yawn",
+      "expr": "whistle"
+     },
+     "holding": null
+    },
+    {
+     "id": "greta",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "crowded",
+      "expr": "whistle"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "scholar",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "lightbulb",
+     "word": "idea",
+     "on": "scholar"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": null
+  },
+  {
+   "narration": "By September, the dancing faded away, and nobody knows exactly how many danced.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "anna",
+     "action": "sit",
+     "expr": "relief",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "hans",
+     "action": "sit",
+     "expr": "dazed",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "anna",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": null
+  },
+  {
+   "narration": "But the town that tried to cure dancing with more dancing never forgot it.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "council",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "fiddler",
+     "action": "stand",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "council",
+   "fx": [],
+   "impactWord": "forgot",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": null
+  }
+ ]
+}

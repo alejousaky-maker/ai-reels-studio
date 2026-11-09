@@ -1,0 +1,297 @@
+{
+ "id": "demo-c-variant-of-demo-a-a31d2d",
+ "steps": {
+  "storyboard": {
+   "status": "done",
+   "frames": 1937,
+   "seconds_video": 64.56666666666666,
+   "scenes": 15,
+   "at": "2026-11-09T16:27:31"
+  },
+  "render_standard": {
+   "status": "done",
+   "quality": "standard",
+   "seconds": 101.2,
+   "frames": 1937,
+   "renderedScenes": [
+    "b01",
+    "b04",
+    "b05",
+    "b06",
+    "b15"
+   ],
+   "reusedScenes": [
+    "b02",
+    "b03",
+    "b07",
+    "b08",
+    "b09",
+    "b10",
+    "b11",
+    "b12",
+    "b13",
+    "b14"
+   ],
+   "fps_render": 6.22,
+   "at": "2026-11-09T16:31:56"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 25.7,
+   "integratedLUFS": -14.01,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.34,
+   "maxGainReductionDB": 6.9,
+   "voiceLUFS": -14.09,
+   "musicLUFS": -29.87,
+   "sfxLUFS": -28.85,
+   "at": "2026-11-09T16:32:22"
+  },
+  "mux_standard": {
+   "status": "done",
+   "file": "projects\\demo-c-variant-of-demo-a-a31d2d\\output\\the-town-that-couldn-t-stop-dancing_standard_v5.mp4",
+   "at": "2026-11-09T16:32:24"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-09T16:32:36"
+  },
+  "script": {
+   "status": "done",
+   "words": 191,
+   "beats": 15,
+   "at": "2026-11-09T16:26:48"
+  },
+  "voice": {
+   "duration": 64.0610625,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 27.4,
+   "status": "done",
+   "voice": "af_heart",
+   "speed": 1.0,
+   "at": "2026-11-09T16:27:15"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 16.1,
+   "method": {
+    "whisper": 18,
+    "spread": 0
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-09T16:27:31"
+  },
+  "stills": {
+   "status": "done",
+   "count": 45,
+   "at": "2026-11-09T16:30:15"
+  }
+ },
+ "history": [
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T15:58:57",
+   "status": "done"
+  },
+  {
+   "step": "render_standard",
+   "at": "2026-11-09T16:02:00",
+   "status": "done",
+   "seconds": 182.6
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T16:02:21",
+   "status": "done",
+   "seconds": 21.5
+  },
+  {
+   "step": "mux_standard",
+   "at": "2026-11-09T16:02:23",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T16:02:33",
+   "status": "done"
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T16:05:38",
+   "status": "done"
+  },
+  {
+   "step": "render_standard",
+   "at": "2026-11-09T16:10:28",
+   "status": "done",
+   "seconds": 289.6
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T16:10:50",
+   "status": "done",
+   "seconds": 22.4
+  },
+  {
+   "step": "mux_standard",
+   "at": "2026-11-09T16:10:52",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T16:11:03",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T16:11:23",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T16:11:23",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T16:11:23",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-09T16:11:47",
+   "seconds": 24.0,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-09T16:12:02",
+   "status": "done",
+   "seconds": 15.2
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T16:12:02",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-09T16:14:33",
+   "status": "done"
+  },
+  {
+   "step": "render_standard",
+   "at": "2026-11-09T16:19:32",
+   "status": "done",
+   "seconds": 298.6
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T16:19:53",
+   "status": "done",
+   "seconds": 21.3
+  },
+  {
+   "step": "mux_standard",
+   "at": "2026-11-09T16:19:55",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T16:20:06",
+   "status": "done"
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T16:21:19",
+   "status": "done"
+  },
+  {
+   "step": "render_standard",
+   "at": "2026-11-09T16:26:09",
+   "status": "done",
+   "seconds": 289.8
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T16:26:30",
+   "status": "done",
+   "seconds": 21.1
+  },
+  {
+   "step": "mux_standard",
+   "at": "2026-11-09T16:26:32",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T16:26:42",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T16:26:48",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T16:26:48",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T16:26:48",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-09T16:27:15",
+   "seconds": 27.4,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-09T16:27:31",
+   "status": "done",
+   "seconds": 16.1
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T16:27:31",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-09T16:30:15",
+   "status": "done"
+  },
+  {
+   "step": "render_standard",
+   "at": "2026-11-09T16:31:56",
+   "status": "done",
+   "seconds": 101.2
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T16:32:22",
+   "status": "done",
+   "seconds": 25.7
+  },
+  {
+   "step": "mux_standard",
+   "at": "2026-11-09T16:32:24",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T16:32:36",
+   "status": "done"
+  }
+ ],
+ "title": "The Town That Couldn't Stop Dancing",
+ "parent": "demo-dancing-1518",
+ "lang": "en",
+ "style": "storybook"
+}

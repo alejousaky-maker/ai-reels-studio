@@ -1,0 +1,505 @@
+{
+ "version": 1,
+ "title": "Café Lumen — anuncio",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 620,
+ "env": {
+  "preset": "street",
+  "seed": 21,
+  "shop": {
+   "name": "Café Lumen",
+   "tagline": "Café de barrio",
+   "colors": {
+    "primary": "#2f6a5a",
+    "secondary": "#f2c94c",
+    "text": "#fffaf0"
+   },
+   "x": -11.5,
+   "z": 0.0,
+   "yaw": 1.5707963267948966
+  }
+ },
+ "cast": [
+  {
+   "id": "barista",
+   "name": "Barista",
+   "outfit": {
+    "jacket": "#f4efe6",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#f5c9a0",
+    "hat": "cap",
+    "cap": "#f7f3ea",
+    "buttons": "#c8553d"
+   }
+  },
+  {
+   "id": "customer",
+   "name": "Cliente",
+   "outfit": {
+    "jacket": "#8c3b4a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "hat": "cap",
+    "cap": "#7b5ac9"
+   }
+  },
+  {
+   "id": "friend",
+   "name": "Amiga",
+   "outfit": {
+    "jacket": "#5d7a3a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ecd0b6",
+    "hat": "hair",
+    "hair": "#7a4a2a",
+    "dress": "#7b5ac9"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 93,
+   "narration": "¿Buscas un rincón tranquilo para tu café de la mañana?",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "barista",
+     "x": -5.3,
+     "z": 0.0,
+     "expr": "smile",
+     "mode": "stand"
+    },
+    {
+     "castId": "customer",
+     "x": -5.84,
+     "z": 1.907,
+     "expr": "smile",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      5.2,
+      2.3,
+      0.0
+     ],
+     "lookAt": [
+      -5.3,
+      2.6,
+      0.0
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 39,
+     "dur": 24,
+     "position": [
+      0.3,
+      1.68,
+      0.0
+     ],
+     "lookAt": [
+      -5.3,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2100,
+   "qualityNotes": ""
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 93,
+   "endFrame": 224,
+   "narration": "En Café Lumen tostamos nuestro café cada semana, aquí mismo, en el barrio.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "customer",
+     "x": 0.0,
+     "z": -12.0,
+     "expr": "grin",
+     "mode": "stand",
+     "holding": "coffee"
+    },
+    {
+     "castId": "barista",
+     "x": 0.893,
+     "z": -9.5,
+     "expr": "smile",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 93,
+     "position": [
+      0.55,
+      1.62,
+      -14.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -12.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 165,
+     "cut": true,
+     "position": [
+      -0.55,
+      1.62,
+      -14.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -12.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "flash",
+   "seed": 2101,
+   "qualityNotes": "",
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 101,
+     "dur": 60,
+     "at": [
+      -0.274,
+      2.05,
+      -12.0
+     ],
+     "size": 0.28371807239363683,
+     "product": "croissant"
+    }
+   ]
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 224,
+   "endFrame": 316,
+   "narration": "Cada mañana sacamos croissants recién horneados.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "barista",
+     "x": 0.0,
+     "z": -24.0,
+     "expr": "smile",
+     "mode": "stand"
+    },
+    {
+     "castId": "customer",
+     "x": 0.893,
+     "z": -21.5,
+     "expr": "smile",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 224,
+     "position": [
+      -0.25,
+      1.55,
+      -26.7
+     ],
+     "lookAt": [
+      0.0,
+      1.32,
+      -25.1
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 274,
+     "cut": true,
+     "position": [
+      0.25,
+      1.55,
+      -26.7
+     ],
+     "lookAt": [
+      0.0,
+      1.32,
+      -25.1
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2102,
+   "qualityNotes": "",
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 232,
+     "dur": 60,
+     "at": [
+      0.0,
+      1.32,
+      -25.1
+     ],
+     "size": 0.55,
+     "product": "coffee"
+    }
+   ]
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 316,
+   "endFrame": 422,
+   "narration": "Y siempre hay una mesa junto a la ventana para leer sin prisa.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "customer",
+     "x": -5.3,
+     "z": 0.0,
+     "expr": "grin",
+     "mode": "stand",
+     "holding": "coffee"
+    },
+    {
+     "castId": "barista",
+     "x": -6.175,
+     "z": 0.612,
+     "expr": "smile",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 316,
+     "position": [
+      -1.0,
+      1.66,
+      1.0
+     ],
+     "lookAt": [
+      -5.3,
+      1.42,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 362,
+     "dur": 24,
+     "position": [
+      -2.4,
+      1.62,
+      0.55
+     ],
+     "lookAt": [
+      -5.3,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2103,
+   "qualityNotes": ""
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 422,
+   "endFrame": 509,
+   "narration": "Ven sola, con amigos o con tu libro favorito.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "barista",
+     "x": 0.0,
+     "z": -12.0,
+     "expr": "smile",
+     "mode": "stand"
+    },
+    {
+     "castId": "customer",
+     "x": 1.051,
+     "z": -11.165,
+     "expr": "smile",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 422,
+     "position": [
+      2.4,
+      0.85,
+      -18.2
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -12
+     ],
+     "fov": 44,
+     "roll": 0.0
+    },
+    {
+     "frame": 457,
+     "dur": 24,
+     "position": [
+      -1.6,
+      1.68,
+      -17.6
+     ],
+     "lookAt": [
+      0.0,
+      1.38,
+      -12
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 6,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2104,
+   "qualityNotes": ""
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 509,
+   "endFrame": 620,
+   "narration": "Café Lumen, café de barrio. Pasa a saludarnos.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "customer",
+     "x": -5.3,
+     "z": 0.0,
+     "expr": "grin",
+     "mode": "stand",
+     "holding": "coffee"
+    },
+    {
+     "castId": "barista",
+     "x": -6.2,
+     "z": 0.937,
+     "expr": "smile",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 509,
+     "position": [
+      0.3,
+      1.68,
+      0.0
+     ],
+     "lookAt": [
+      -5.3,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 558,
+     "dur": 24,
+     "position": [
+      -2.4,
+      1.62,
+      0.0
+     ],
+     "lookAt": [
+      -5.3,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2105,
+   "qualityNotes": "",
+   "textOverlays": [
+    {
+     "text": "Pasa a saludarnos",
+     "frame": 512,
+     "dur": 105,
+     "position": "bottom",
+     "style": "cta"
+    }
+   ]
+  }
+ ],
+ "brand": {
+  "name": "Café Lumen",
+  "primary": "#2f6a5a",
+  "secondary": "#f2c94c",
+  "text": "#fffaf0"
+ },
+ "captions": {
+  "enabled": false,
+  "words": []
+ }
+}

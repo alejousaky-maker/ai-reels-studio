@@ -1,0 +1,91 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 56.25620833333333,
+ "voice": "af_heart",
+ "lang": "en",
+ "speed": 1.0,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "In 1919, a tank of molasses burst in Boston, flooding the city in sticky syrup.",
+   "start": 0.06,
+   "end": 5.5918125
+  },
+  {
+   "text": "Setting: A cozy village square in the heart of Boston.",
+   "start": 5.7318125,
+   "end": 8.490270833333334
+  },
+  {
+   "text": "Sarah and Josh, the local shopkeepers, are chatting by the fountain.",
+   "start": 8.630270833333332,
+   "end": 12.471895833333333
+  },
+  {
+   "text": "Suddenly, a huge tank of molasses appears out of nowhere.",
+   "start": 12.611895833333334,
+   "end": 15.793416666666667
+  },
+  {
+   "text": "It starts to leak, and a thick, sticky flood begins to cover the square.",
+   "start": 15.933416666666666,
+   "end": 19.876416666666668
+  },
+  {
+   "text": "Children run in circles, laughing, until the syrup gets too deep.",
+   "start": 20.016416666666668,
+   "end": 23.785229166666667
+  },
+  {
+   "text": "The flood reaches their shop, and they realize the syrup is dangerous.",
+   "start": 23.925229166666668,
+   "end": 27.991479166666668
+  },
+  {
+   "text": "You see,",
+   "start": 28.131479166666665,
+   "end": 28.779958333333333
+  },
+  {
+   "text": "The syrup is so thick it traps people in its sticky embrace.",
+   "start": 28.919958333333334,
+   "end": 32.23047916666667
+  },
+  {
+   "text": "It’s like a giant, gooey blanket that doesn’t let go.",
+   "start": 32.37047916666667,
+   "end": 35.20547916666667
+  },
+  {
+   "text": "You see, the villagers learn to avoid the syrup and use it for its sticky good.",
+   "start": 35.345479166666664,
+   "end": 39.56847916666667
+  },
+  {
+   "text": "In the end, the syrup becomes a fond memory of the great flood.",
+   "start": 39.70847916666666,
+   "end": 43.383229166666666
+  },
+  {
+   "text": "The flood of molasses taught the village to be prepared for unexpected sticky situations.",
+   "start": 43.52322916666667,
+   "end": 48.535875
+  },
+  {
+   "text": "The molasses flood was a true story that left a sweet memory.",
+   "start": 48.675875,
+   "end": 52.18216666666667
+  },
+  {
+   "text": "verifiedClaims: [fiction]",
+   "start": 52.32216666666667,
+   "end": 54.065
+  },
+  {
+   "text": "verifiedClaims: [uncertain]",
+   "start": 54.205,
+   "end": 56.11620833333333
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "title": "THE GREAT MOLASSES FLOOD",
+ "idea": "THE GREAT MOLASSES FLOOD",
+ "script": "",
+ "kind": "story",
+ "lang": "en",
+ "seconds": 60,
+ "quality": "standard",
+ "style": "minimal_stickman",
+ "environment": "village_square",
+ "voice": null,
+ "speed": 1.0,
+ "clientId": null,
+ "cta": null,
+ "captions": false,
+ "music": true,
+ "variants": 1,
+ "provider": "auto",
+ "review": "auto_qa",
+ "seed": 7,
+ "autostart": true
+}

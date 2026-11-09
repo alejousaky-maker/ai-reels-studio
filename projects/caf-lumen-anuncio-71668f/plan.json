@@ -1,0 +1,263 @@
+{
+ "version": 1,
+ "title": "Café Lumen — anuncio",
+ "lang": "es",
+ "style": "product_ad",
+ "environment": "street",
+ "seed": 21,
+ "cast": [
+  {
+   "id": "barista",
+   "name": "Barista",
+   "role": "barista",
+   "palette": null
+  },
+  {
+   "id": "customer",
+   "name": "Cliente",
+   "role": "customer",
+   "palette": null
+  },
+  {
+   "id": "friend",
+   "name": "Amiga",
+   "role": "villager_woman",
+   "palette": null
+  }
+ ],
+ "beats": [
+  {
+   "narration": "¿Buscas un rincón tranquilo para tu café de la mañana?",
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "barista",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "customer",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "barista",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": true,
+   "visual": null
+  },
+  {
+   "narration": "En Café Lumen tostamos nuestro café cada semana, aquí mismo, en el barrio.",
+   "shot": "close",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "barista",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "customer",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": "coffee"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "customer",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "croissant",
+     "word": null,
+     "on": null
+    }
+   ],
+   "impactWord": null,
+   "transition": "flash",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": null
+  },
+  {
+   "narration": "Cada mañana sacamos croissants recién horneados.",
+   "shot": "insert",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "barista",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "customer",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "barista",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "coffee",
+     "word": null,
+     "on": null
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": null
+  },
+  {
+   "narration": "Y siempre hay una mesa junto a la ventana para leer sin prisa.",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "barista",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "customer",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": "coffee"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "customer",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": true,
+   "visual": null
+  },
+  {
+   "narration": "Ven sola, con amigos o con tu libro favorito.",
+   "shot": "low",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "barista",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "customer",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "barista",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": null
+  },
+  {
+   "narration": "Café Lumen, café de barrio. Pasa a saludarnos.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "barista",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "customer",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": "coffee"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "customer",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "Pasa a saludarnos",
+   "textStyle": "cta",
+   "atShop": true,
+   "visual": null
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Tostamos nuestro café cada semana",
+   "status": "approved_by_client",
+   "source": null
+  },
+  {
+   "text": "Croissants horneados cada mañana",
+   "status": "approved_by_client",
+   "source": null
+  },
+  {
+   "text": "Mesas junto a la ventana",
+   "status": "approved_by_client",
+   "source": null
+  }
+ ],
+ "creativeHooks": [],
+ "brand": {
+  "name": "Café Lumen",
+  "primary": "#2f6a5a",
+  "secondary": "#f2c94c",
+  "text": "#fffaf0",
+  "tagline": "Café de barrio"
+ },
+ "cta": "Pasa a saludarnos",
+ "captions": false
+}

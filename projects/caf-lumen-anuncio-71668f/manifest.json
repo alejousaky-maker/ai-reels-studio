@@ -1,0 +1,251 @@
+{
+ "id": "caf-lumen-anuncio-71668f",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 59,
+   "beats": 6,
+   "at": "2026-11-09T15:55:00"
+  },
+  "voice": {
+   "duration": 20.1973125,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 8.3,
+   "status": "done",
+   "voice": "ef_dora",
+   "speed": 1.0,
+   "at": "2026-11-09T15:55:08"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 5.9,
+   "method": {
+    "whisper": 6,
+    "spread": 1
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-09T15:55:14"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 620,
+   "seconds_video": 20.666666666666668,
+   "scenes": 6,
+   "at": "2026-11-09T16:03:53"
+  },
+  "stills": {
+   "status": "done",
+   "count": 18,
+   "at": "2026-11-09T15:56:12"
+  },
+  "render_standard": {
+   "status": "done",
+   "quality": "standard",
+   "seconds": 0.1,
+   "frames": 621,
+   "renderedScenes": [],
+   "reusedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06"
+   ],
+   "fps_render": 0.0,
+   "at": "2026-11-09T15:58:45"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 6.4,
+   "integratedLUFS": -14.02,
+   "truePeakDBTP": -2.0,
+   "LRA": 0.92,
+   "maxGainReductionDB": 4.76,
+   "voiceLUFS": -13.74,
+   "musicLUFS": -29.69,
+   "sfxLUFS": -28.88,
+   "at": "2026-11-09T16:05:32"
+  },
+  "mux_standard": {
+   "status": "done",
+   "file": "projects\\caf-lumen-anuncio-71668f\\output\\caf-lumen-anuncio_standard_v2.mp4",
+   "at": "2026-11-09T15:58:53"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-09T16:05:38"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 92.8,
+   "frames": 620,
+   "renderedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06"
+   ],
+   "reusedScenes": [],
+   "fps_render": 6.68,
+   "at": "2026-11-09T16:05:25"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\caf-lumen-anuncio-71668f\\output\\caf-lumen-anuncio_master_v1.mp4",
+   "at": "2026-11-09T16:05:32"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-09T15:55:00",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T15:55:00",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-09T15:55:08",
+   "seconds": 8.3,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-09T15:55:14",
+   "status": "done",
+   "seconds": 5.9
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T15:55:14",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-09T15:56:12",
+   "status": "done"
+  },
+  {
+   "step": "render_standard",
+   "at": "2026-11-09T15:57:31",
+   "status": "done",
+   "seconds": 79.3
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T15:57:38",
+   "status": "done",
+   "seconds": 6.5
+  },
+  {
+   "step": "mux_standard",
+   "at": "2026-11-09T15:57:38",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T15:57:41",
+   "status": "done"
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T15:58:28",
+   "status": "done"
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T15:58:45",
+   "status": "done"
+  },
+  {
+   "step": "render_standard",
+   "at": "2026-11-09T15:58:45",
+   "status": "done",
+   "seconds": 0.1
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T15:58:52",
+   "status": "done",
+   "seconds": 6.8
+  },
+  {
+   "step": "mux_standard",
+   "at": "2026-11-09T15:58:53",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T15:58:56",
+   "status": "done"
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T15:58:56",
+   "status": "done"
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T16:03:53",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-09T16:05:25",
+   "status": "done",
+   "seconds": 92.8
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T16:05:32",
+   "status": "done",
+   "seconds": 6.4
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-09T16:05:32",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T16:05:38",
+   "status": "done"
+  }
+ ],
+ "title": "Café Lumen — anuncio",
+ "created": "2026-11-09T15:50:54",
+ "request": {
+  "title": "Café Lumen — anuncio",
+  "idea": "Anuncio de una cafetería de barrio",
+  "script": "¿Buscas un rincón tranquilo para tu café de la mañana? En Café Lumen tostamos nuestro café cada semana, aquí mismo, en el barrio. Cada mañana sacamos croissants recién horneados. Y siempre hay una mesa junto a la ventana para leer sin prisa. Ven sola, con amigos o con tu libro favorito. Café Lumen, café de barrio. Pasa a saludarnos.",
+  "kind": "ad",
+  "lang": "es",
+  "seconds": 30,
+  "quality": "standard",
+  "style": "product_ad",
+  "environment": "street",
+  "voice": null,
+  "speed": 1.0,
+  "clientId": "caf-lumen-efc6",
+  "cta": "Pasa a saludarnos",
+  "captions": false,
+  "music": true,
+  "variants": 1,
+  "provider": "template",
+  "review": "auto_qa",
+  "seed": 21,
+  "autostart": true
+ },
+ "lang": "es",
+ "style": "product_ad",
+ "scriptProvider": "template"
+}

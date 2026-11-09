@@ -1,0 +1,22 @@
+{
+ "title": "Café Lumen — anuncio",
+ "idea": "Anuncio de una cafetería de barrio",
+ "script": "¿Buscas un rincón tranquilo para tu café de la mañana? En Café Lumen tostamos nuestro café cada semana, aquí mismo, en el barrio. Cada mañana sacamos croissants recién horneados. Y siempre hay una mesa junto a la ventana para leer sin prisa. Ven sola, con amigos o con tu libro favorito. Café Lumen, café de barrio. Pasa a saludarnos.",
+ "kind": "ad",
+ "lang": "es",
+ "seconds": 30,
+ "quality": "standard",
+ "style": "product_ad",
+ "environment": "street",
+ "voice": null,
+ "speed": 1.0,
+ "clientId": "caf-lumen-efc6",
+ "cta": "Pasa a saludarnos",
+ "captions": false,
+ "music": true,
+ "variants": 1,
+ "provider": "template",
+ "review": "auto_qa",
+ "seed": 21,
+ "autostart": true
+}

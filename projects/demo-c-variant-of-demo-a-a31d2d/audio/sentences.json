@@ -1,0 +1,101 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 64.0610625,
+ "voice": "af_heart",
+ "lang": "en",
+ "speed": 1.0,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "One summer day in 1518, a woman in Strasbourg walked out of her house and started dancing in the street.",
+   "start": 0.06,
+   "end": 6.235333333333333
+  },
+  {
+   "text": "And she would not stop.",
+   "start": 6.375333333333334,
+   "end": 7.572520833333333
+  },
+  {
+   "text": "There was no music.",
+   "start": 7.7125208333333335,
+   "end": 8.782145833333333
+  },
+  {
+   "text": "No party.",
+   "start": 8.922145833333333,
+   "end": 9.7570625
+  },
+  {
+   "text": "Just one woman, dancing for days, while her neighbours stared.",
+   "start": 9.8970625,
+   "end": 13.08875
+  },
+  {
+   "text": "Then her neighbour joined in.",
+   "start": 13.22875,
+   "end": 14.672104166666667
+  },
+  {
+   "text": "Then another.",
+   "start": 14.812104166666666,
+   "end": 15.5873125
+  },
+  {
+   "text": "Within weeks, dozens of people were dancing in the streets, drenched in sweat, unable to stop.",
+   "start": 15.7273125,
+   "end": 21.126354166666665
+  },
+  {
+   "text": "So what did the town council do?",
+   "start": 21.266354166666666,
+   "end": 23.042708333333334
+  },
+  {
+   "text": "They decided the cure was more dancing.",
+   "start": 23.182708333333334,
+   "end": 25.172270833333332
+  },
+  {
+   "text": "According to the chronicles, they cleared halls, hired musicians, and even paid strong men to keep the dancers on their feet.",
+   "start": 25.312270833333333,
+   "end": 32.27879166666666
+  },
+  {
+   "text": "Luckily, the music was excellent.",
+   "start": 32.418791666666664,
+   "end": 34.37835416666667
+  },
+  {
+   "text": "Unluckily, it only made things worse.",
+   "start": 34.51835416666667,
+   "end": 36.63395833333333
+  },
+  {
+   "text": "The council banned public dancing, and the dancers were sent to a shrine to pray.",
+   "start": 36.77395833333333,
+   "end": 41.323145833333335
+  },
+  {
+   "text": "You see, historians still argue about why it happened.",
+   "start": 41.463145833333336,
+   "end": 44.3486875
+  },
+  {
+   "text": "The most popular idea is that fear, hunger and disease pushed people past their limits, and the panic spread from person to person, like a yawn across a crowded room.",
+   "start": 44.4886875,
+   "end": 54.67933333333333
+  },
+  {
+   "text": "By September, the dancing faded away, and nobody knows exactly how many danced.",
+   "start": 54.81933333333333,
+   "end": 59.7498125
+  },
+  {
+   "text": "But the town that tried to cure dancing with more dancing never forgot it.",
+   "start": 59.8898125,
+   "end": 63.9210625
+  }
+ ]
+}

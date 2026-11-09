@@ -1,0 +1,24 @@
+# big / machine-local / regenerable
+.venv/
+tools/
+models/
+work/
+logs/
+data/
+node_modules/
+app/frontend/dist/
+engine/remotion/out/
+engine/remotion/public/bridge/kenney/
+_upstream/
+# project media (keep plans/scripts/storyboards, not renders)
+projects/*/scenes/
+projects/*/output/
+projects/*/preview/
+projects/*/qa/frames/
+projects/*/audio/*.wav
+projects/*/input/*.wav
+projects/*/input/*.mp3
+assets/clients/
+assets/library/
+.env
+*.part.mp4

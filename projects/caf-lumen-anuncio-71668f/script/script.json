@@ -1,0 +1,213 @@
+{
+ "lang": "es",
+ "title": "Café Lumen — anuncio",
+ "words": 59,
+ "beats": [
+  {
+   "narration": "¿Buscas un rincón tranquilo para tu café de la mañana?",
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "barista",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "customer",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "barista",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": true,
+   "visual": null
+  },
+  {
+   "narration": "En Café Lumen tostamos nuestro café cada semana, aquí mismo, en el barrio.",
+   "shot": "close",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "barista",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "customer",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": "coffee"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "customer",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "croissant",
+     "word": null,
+     "on": null
+    }
+   ],
+   "impactWord": null,
+   "transition": "flash",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": null
+  },
+  {
+   "narration": "Cada mañana sacamos croissants recién horneados.",
+   "shot": "insert",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "barista",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "customer",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "barista",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "coffee",
+     "word": null,
+     "on": null
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": null
+  },
+  {
+   "narration": "Y siempre hay una mesa junto a la ventana para leer sin prisa.",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "barista",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "customer",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": "coffee"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "customer",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": true,
+   "visual": null
+  },
+  {
+   "narration": "Ven sola, con amigos o con tu libro favorito.",
+   "shot": "low",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "barista",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "customer",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "barista",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": null
+  },
+  {
+   "narration": "Café Lumen, café de barrio. Pasa a saludarnos.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "barista",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "customer",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": "coffee"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "customer",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "Pasa a saludarnos",
+   "textStyle": "cta",
+   "atShop": true,
+   "visual": null
+  }
+ ]
+}

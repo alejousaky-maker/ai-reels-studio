@@ -1,0 +1,46 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 20.1973125,
+ "voice": "ef_dora",
+ "lang": "es",
+ "speed": 1.0,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "¿Buscas un rincón tranquilo para tu café de la mañana?",
+   "start": 0.06,
+   "end": 3.0242291666666667
+  },
+  {
+   "text": "En Café Lumen tostamos nuestro café cada semana, aquí mismo, en el barrio.",
+   "start": 3.164229166666667,
+   "end": 7.384125
+  },
+  {
+   "text": "Cada mañana sacamos croissants recién horneados.",
+   "start": 7.524125,
+   "end": 10.43725
+  },
+  {
+   "text": "Y siempre hay una mesa junto a la ventana para leer sin prisa.",
+   "start": 10.57725,
+   "end": 13.942125
+  },
+  {
+   "text": "Ven sola, con amigos o con tu libro favorito.",
+   "start": 14.082125,
+   "end": 16.8515
+  },
+  {
+   "text": "Café Lumen, café de barrio.",
+   "start": 16.9915,
+   "end": 18.653854166666665
+  },
+  {
+   "text": "Pasa a saludarnos.",
+   "start": 18.793854166666666,
+   "end": 20.0573125
+  }
+ ]
+}

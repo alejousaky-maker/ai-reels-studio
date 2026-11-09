@@ -1,0 +1,103 @@
+{
+ "id": "the-great-molasses-flood-0cea81",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 166,
+   "beats": 16,
+   "at": "2026-11-09T16:33:44"
+  },
+  "voice": {
+   "duration": 56.25620833333333,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 23.8,
+   "status": "done",
+   "voice": "af_heart",
+   "speed": 1.0,
+   "at": "2026-11-09T16:34:08"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 14.1,
+   "method": {
+    "whisper": 14,
+    "spread": 2
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-09T16:34:22"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1704,
+   "seconds_video": 56.8,
+   "scenes": 16,
+   "at": "2026-11-09T16:34:22"
+  },
+  "stills": {
+   "status": "done",
+   "count": 48,
+   "at": "2026-11-09T16:37:40"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-09T16:33:44",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T16:33:44",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-09T16:34:08",
+   "seconds": 23.8,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-09T16:34:22",
+   "status": "done",
+   "seconds": 14.1
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T16:34:22",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-09T16:37:40",
+   "status": "done"
+  }
+ ],
+ "title": "THE GREAT MOLASSES FLOOD",
+ "created": "2026-11-09T16:32:35",
+ "request": {
+  "title": "THE GREAT MOLASSES FLOOD",
+  "idea": "THE GREAT MOLASSES FLOOD",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 60,
+  "quality": "standard",
+  "style": "minimal_stickman",
+  "environment": "village_square",
+  "voice": null,
+  "speed": 1.0,
+  "clientId": null,
+  "cta": null,
+  "captions": false,
+  "music": true,
+  "variants": 1,
+  "provider": "auto",
+  "review": "auto_qa",
+  "seed": 7,
+  "autostart": true
+ },
+ "lang": "en",
+ "style": "minimal_stickman",
+ "scriptProvider": "ollama:qwen2.5:7b"
+}
