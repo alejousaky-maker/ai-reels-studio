@@ -1,0 +1,544 @@
+{
+ "lang": "en",
+ "title": "The Wedding Slideshow",
+ "words": 117,
+ "beats": [
+  {
+   "narration": "He found out his bride cheated with the best man. He didn't cancel the wedding. He edited the slideshow.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "groom",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": "mic"
+    },
+    {
+     "id": "bride",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "best",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "groom",
+   "fx": [],
+   "impactWord": "slideshow",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "banquet",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "screen",
+     "where": "behind",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "photos"
+    }
+   ],
+   "extrasRole": null,
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "Forty thousand dollars. Two hundred guests. One projector.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "g1",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "g2",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "g1",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "$40,000",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "banquet",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 3,
+   "visual": null
+  },
+  {
+   "narration": "The night before, a hotel hallway camera told him everything.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "groom",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "everything",
+      "expr": "stern"
+     },
+     "holding": "phone"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "groom",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "camera",
+     "color": null,
+     "word": "camera",
+     "on": "groom"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "hotel",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "He smiled through the whole ceremony.",
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "groom",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "groom",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "banquet",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Then, at the reception, he took the mic for a special slideshow.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "groom",
+     "action": "stand",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": "mic"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "groom",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "banquet",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "Baby photos. The first date. The proposal.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "g1",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "g2",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "g1",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "heart",
+     "color": null,
+     "word": "proposal",
+     "on": "g1"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "banquet",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "screen",
+     "where": "behind",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "photos"
+    }
+   ],
+   "extrasRole": null,
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "And then, a hallway photo. The bride and the best man, walking into the same hotel room.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "g1",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "hallway",
+      "expr": "shock"
+     },
+     "holding": null
+    },
+    {
+     "id": "g2",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "best",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "g1",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "color": null,
+     "word": "hallway",
+     "on": "g2"
+    }
+   ],
+   "impactWord": "hallway",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "banquet",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "screen",
+     "where": "behind",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "hallway"
+    }
+   ],
+   "extrasRole": null,
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "Timestamp: last night.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "groom",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "groom",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "clock",
+     "color": null,
+     "word": "last",
+     "on": "groom"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "23:47 — LAST NIGHT",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "banquet",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "screen",
+     "where": "behind",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "hallway"
+    }
+   ],
+   "extrasRole": null,
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "The bride and the best man went pale.",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "bride",
+     "action": "stand",
+     "expr": "dazed",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "best",
+     "action": "stand",
+     "expr": "dazed",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "bride",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "banquet",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "He raised his glass. To the happy couple.",
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "groom",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "groom",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "banquet",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Then he dropped the mic.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "groom",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": "mic"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "groom",
+   "fx": [
+    {
+     "kind": "burst",
+     "product": null,
+     "color": null,
+     "word": "dropped",
+     "on": "groom"
+    }
+   ],
+   "impactWord": "dropped",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "banquet",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "He grabbed his suitcase, and the honeymoon tickets.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "groom",
+     "action": "walk",
+     "expr": "smile",
+     "react": null,
+     "holding": "suitcase"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "groom",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "banquet",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 2,
+   "visual": null
+  },
+  {
+   "narration": "Best wedding ever. For one guest.",
+   "shot": "close",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "groom",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": "ticket"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "groom",
+   "fx": [
+    {
+     "kind": "sparkle",
+     "product": null,
+     "color": null,
+     "word": "guest",
+     "on": "groom"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "airport",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  }
+ ]
+}

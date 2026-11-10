@@ -1,0 +1,1221 @@
+{
+ "version": 1,
+ "title": "The Day the Earth Stood Still",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1455,
+ "env": {
+  "preset": "bedroom",
+  "seed": 33,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "me",
+   "name": "Him (pajamas)",
+   "outfit": {
+    "jacket": "#7fa8d9",
+    "pants": "#7fa8d9",
+    "boots": "#ff9fc8",
+    "skin": "#ffe2c2",
+    "stripes": "#f2efe8",
+    "hat": "hair",
+    "hair": "#3a2a1e"
+   }
+  },
+  {
+   "id": "meg",
+   "name": "Him (gamer)",
+   "outfit": {
+    "jacket": "#3a2a6a",
+    "pants": "#2b2b38",
+    "boots": "#ff9fc8",
+    "skin": "#ffe2c2",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "headset": "#1d1b22",
+    "pockets": false
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 210,
+   "narration": "I woke up this morning and thought the zombie apocalypse finally happened. Turns out, it was something way more serious.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -0.5,
+     "z": -0.3,
+     "expr": "laugh",
+     "mode": "stand",
+     "pose": "up",
+     "exprKeys": [
+      {
+       "frame": 61,
+       "expr": "neutral"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      1.1,
+      1.68,
+      5.3
+     ],
+     "lookAt": [
+      -0.5,
+      1.38,
+      -0.3
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 185,
+     "cut": true,
+     "position": [
+      -1.05,
+      1.62,
+      2.6
+     ],
+     "lookAt": [
+      -0.5,
+      1.5,
+      -0.3
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 3300,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "bedroom",
+    "seed": 33,
+    "shop": null,
+    "variant": "day"
+   },
+   "kicks": [
+    {
+     "frame": 187,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 185,
+     "dur": 25,
+     "at": [
+      -0.08,
+      2.28,
+      -0.3
+     ],
+     "size": 0.42,
+     "product": "exclaim"
+    }
+   ]
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 210,
+   "endFrame": 346,
+   "narration": "No traffic. No dogs. No neighbors yelling. Nothing.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 321,
+       "expr": "nervous"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 210,
+     "position": [
+      -0.55,
+      1.62,
+      3.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      1.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 284,
+     "cut": true,
+     "position": [
+      0.55,
+      1.62,
+      3.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      1.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 3301,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "bedroom",
+    "seed": 33,
+    "shop": null,
+    "variant": "day"
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 321,
+     "dur": 25,
+     "at": [
+      0.274,
+      2.05,
+      1.0
+     ],
+     "size": 0.28371807239363683,
+     "product": "question"
+    }
+   ]
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 346,
+   "endFrame": 451,
+   "narration": "I opened the blinds. The street was completely empty.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 346,
+     "position": [
+      3.0,
+      2.3,
+      21.5
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      11
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 403,
+     "cut": true,
+     "position": [
+      -3.0,
+      2.3,
+      21.5
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      11
+     ],
+     "fov": 42,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 3302,
+   "qualityNotes": "",
+   "env": {
+    "preset": "suburb",
+    "seed": 33,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "tumbleweed",
+     "x": -1.73,
+     "z": 12.2,
+     "spin": 5.0,
+     "moveTo": [
+      1.27,
+      12.2
+     ],
+     "moveFrames": [
+      356,
+      440
+     ]
+    },
+    {
+     "kind": "trafficlight",
+     "x": 1.38,
+     "z": 9.88
+    }
+   ]
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 451,
+   "endFrame": 556,
+   "narration": "So I went out in my slippers to find another human being.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -3.582,
+     "z": 1.172,
+     "expr": "neutral",
+     "mode": "stroll",
+     "walkTo": [
+      -3.0,
+      3.5
+     ],
+     "walkFrames": [
+      451,
+      524
+     ],
+     "holding": "coffee"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 451,
+     "position": [
+      -8.821,
+      1.68,
+      3.306
+     ],
+     "lookAt": [
+      -3,
+      1.38,
+      3.5
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 496,
+     "dur": 24,
+     "position": [
+      -5.947,
+      1.62,
+      3.67
+     ],
+     "lookAt": [
+      -3,
+      1.5,
+      3.5
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 3303,
+   "qualityNotes": "",
+   "env": {
+    "preset": "shops",
+    "seed": 33,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 556,
+   "endFrame": 715,
+   "narration": "The coffee shop? Closed. The bank? Closed. Even the grocery store.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 3.0,
+     "expr": "nervous",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 681,
+       "expr": "shock"
+      }
+     ],
+     "holding": "coffee"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 556,
+     "position": [
+      3.0,
+      2.3,
+      13.5
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      3.0
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 643,
+     "cut": true,
+     "position": [
+      -1.6,
+      1.68,
+      8.6
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      3.0
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 3304,
+   "qualityNotes": "",
+   "env": {
+    "preset": "shops",
+    "seed": 33,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 681,
+     "dur": 34,
+     "at": [
+      0.42,
+      2.28,
+      3.0
+     ],
+     "size": 0.42,
+     "product": "exclaim"
+    }
+   ]
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 715,
+   "endFrame": 777,
+   "narration": "That's when I really started to panic.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -8.0,
+     "z": 3.2,
+     "expr": "nervous",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 758,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 715,
+     "position": [
+      -8.694,
+      1.62,
+      6.069
+     ],
+     "lookAt": [
+      -8.0,
+      1.5,
+      3.2
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 3305,
+   "qualityNotes": "",
+   "env": {
+    "preset": "shops",
+    "seed": 33,
+    "shop": null
+   },
+   "kicks": [
+    {
+     "frame": 760,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 758,
+     "dur": 19,
+     "at": [
+      -7.726,
+      2.05,
+      3.214
+     ],
+     "size": 0.44330948811505755
+    }
+   ]
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 777,
+   "endFrame": 871,
+   "narration": "Then I checked my phone. November nineteenth.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -0.5,
+     "z": -0.3,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 838,
+       "expr": "shock"
+      }
+     ],
+     "holding": "phone"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 777,
+     "position": [
+      0.05,
+      1.62,
+      2.6
+     ],
+     "lookAt": [
+      -0.5,
+      1.5,
+      -0.3
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 828,
+     "cut": true,
+     "position": [
+      -1.05,
+      1.62,
+      2.6
+     ],
+     "lookAt": [
+      -0.5,
+      1.5,
+      -0.3
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 3306,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "bedroom",
+    "seed": 33,
+    "shop": null,
+    "variant": "day"
+   },
+   "textOverlays": [
+    {
+     "text": "NOV 19 — RELEASE DAY",
+     "frame": 780,
+     "dur": 88,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 871,
+   "endFrame": 930,
+   "narration": "GTA 6 release day.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -0.5,
+     "z": -0.3,
+     "expr": "starry",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 871,
+     "position": [
+      -1.05,
+      1.62,
+      2.6
+     ],
+     "lookAt": [
+      -0.5,
+      1.5,
+      -0.3
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 3307,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "bedroom",
+    "seed": 33,
+    "shop": null,
+    "variant": "day"
+   },
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 901,
+     "dur": 29,
+     "at": [
+      -0.226,
+      2.05,
+      -0.3
+     ],
+     "size": 0.44330948811505755
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "RELEASE DAY",
+     "frame": 874,
+     "dur": 53,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 930,
+   "endFrame": 1023,
+   "narration": "The whole world wasn't gone. It was just loading.",
+   "light": "night",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 2.5,
+     "expr": "smile_closed",
+     "mode": "stand",
+     "pose": "point"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 930,
+     "position": [
+      3.0,
+      2.3,
+      13.0
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      2.5
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 984,
+     "dur": 24,
+     "position": [
+      1.6,
+      1.68,
+      8.1
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      2.5
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 3308,
+   "qualityNotes": "",
+   "env": {
+    "preset": "suburb",
+    "seed": 33,
+    "shop": null,
+    "variant": "tvglow"
+   },
+   "kicks": [
+    {
+     "frame": 998,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 996,
+     "dur": 27,
+     "at": [
+      0.42,
+      2.28,
+      2.5
+     ],
+     "size": 0.42,
+     "product": "lightbulb"
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "LOADING...",
+     "frame": 933,
+     "dur": 87,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 1023,
+   "endFrame": 1092,
+   "narration": "Curtains closed. Console on.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "meg",
+     "x": -1.4,
+     "z": -1.0,
+     "expr": "grin",
+     "mode": "stand",
+     "holding": "controller"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1023,
+     "position": [
+      -3.0,
+      1.68,
+      4.6
+     ],
+     "lookAt": [
+      -1.4,
+      1.38,
+      -1.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "flash",
+   "seed": 3309,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "gameroom",
+    "seed": 33,
+    "shop": null
+   },
+   "kicks": [
+    {
+     "frame": 1063,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 1061,
+     "dur": 31,
+     "at": [
+      -0.98,
+      2.28,
+      -1.0
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 1092,
+   "endFrame": 1208,
+   "narration": "Headset on. Snacks stocked. Phone on airplane mode.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "meg",
+     "x": -0.733,
+     "z": -0.092,
+     "expr": "smile_closed",
+     "mode": "stand",
+     "holding": "can"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1092,
+     "position": [
+      0.627,
+      2.3,
+      6.179
+     ],
+     "lookAt": [
+      -1.45,
+      1.2,
+      -0.2
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1155,
+     "cut": true,
+     "position": [
+      -5.307,
+      2.3,
+      5.289
+     ],
+     "lookAt": [
+      -1.45,
+      1.2,
+      -0.2
+     ],
+     "fov": 42,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 3310,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "gameroom",
+    "seed": 33,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "snacks",
+     "x": -2.649,
+     "z": -1.504,
+     "scale": 0.7
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 1126,
+     "dur": 60,
+     "at": [
+      -0.317,
+      2.28,
+      -0.03
+     ],
+     "size": 0.42,
+     "product": "pizza"
+    }
+   ]
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 1208,
+   "endFrame": 1234,
+   "narration": "Day one.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "meg",
+     "x": -1.107,
+     "z": -0.149,
+     "expr": "grin",
+     "mode": "stand",
+     "holding": "controller"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1208,
+     "position": [
+      -3.863,
+      1.68,
+      5.101
+     ],
+     "lookAt": [
+      -1.45,
+      1.38,
+      -0.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 3311,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "gameroom",
+    "seed": 33,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "snacks",
+     "x": -2.22,
+     "z": -1.456,
+     "scale": 0.8
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "DAY 1",
+     "frame": 1211,
+     "dur": 20,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 1234,
+   "endFrame": 1264,
+   "narration": "Day three.",
+   "light": "golden",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "meg",
+     "x": -1.107,
+     "z": -0.149,
+     "expr": "crazy",
+     "mode": "stand",
+     "holding": "controller"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1234,
+     "position": [
+      -0.698,
+      1.68,
+      5.575
+     ],
+     "lookAt": [
+      -1.45,
+      1.38,
+      -0.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "flash",
+   "seed": 3312,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "gameroom",
+    "seed": 33,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "snacks",
+     "x": -2.379,
+     "z": -1.529,
+     "scale": 1.1
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "DAY 3",
+     "frame": 1237,
+     "dur": 24,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b14",
+   "startFrame": 1264,
+   "endFrame": 1293,
+   "narration": "Day seven.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "meg",
+     "x": -1.107,
+     "z": -0.149,
+     "expr": "crazy",
+     "mode": "stand",
+     "holding": "controller"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1264,
+     "position": [
+      -3.863,
+      1.68,
+      5.101
+     ],
+     "lookAt": [
+      -1.45,
+      1.38,
+      -0.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "flash",
+   "seed": 3313,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "gameroom",
+    "seed": 33,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "snacks",
+     "x": -2.591,
+     "z": -1.625,
+     "scale": 1.5
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "DAY 7",
+     "frame": 1267,
+     "dur": 23,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b15",
+   "startFrame": 1293,
+   "endFrame": 1455,
+   "narration": "The apocalypse was real. We just did it to ourselves, one mission at a time.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "meg",
+     "x": -1.4,
+     "z": -1.0,
+     "expr": "crazy",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1402,
+       "expr": "starry"
+      }
+     ],
+     "holding": "controller"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1293,
+     "position": [
+      -0.85,
+      1.62,
+      1.9
+     ],
+     "lookAt": [
+      -1.4,
+      1.5,
+      -1.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1382,
+     "cut": true,
+     "position": [
+      -1.95,
+      1.62,
+      1.9
+     ],
+     "lookAt": [
+      -1.4,
+      1.5,
+      -1.0
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 3314,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "gameroom",
+    "seed": 33,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 1421,
+     "dur": 34,
+     "at": [
+      -1.126,
+      2.05,
+      -1.0
+     ],
+     "size": 0.44330948811505755
+    }
+   ]
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": false,
+  "words": []
+ },
+ "style": "storybook",
+ "graphics": "full"
+}

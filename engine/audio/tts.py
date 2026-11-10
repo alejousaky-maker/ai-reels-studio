@@ -21,7 +21,8 @@ from . import dsp_bridge as D
 
 SR = 48000
 VOICES = {
-    "en": [("af_heart", "Heart — warm female (EN-US)"), ("af_bella", "Bella — bright female (EN-US)"), ("am_michael", "Michael — calm male (EN-US)"),
+    "en": [("am_eric*0.6+am_fenrir*0.4", "Shorts narrator — energetic young male (EN-US blend)"), ("am_eric", "Eric — bright male (EN-US)"),
+           ("af_heart", "Heart — warm female (EN-US)"), ("af_bella", "Bella — bright female (EN-US)"), ("am_michael", "Michael — calm male (EN-US)"),
            ("am_fenrir", "Fenrir — deep male (EN-US)"), ("bm_george", "George — British male"), ("bf_emma", "Emma — British female")],
     "es": [("ef_dora", "Dora — voz femenina (ES)"), ("em_alex", "Alex — voz masculina (ES)"), ("em_santa", "Santa — voz masculina grave (ES)")],
 }
@@ -91,6 +92,20 @@ def available() -> tuple[bool, str]:
         return False, str(e)
 
 
+def voice_style(k, voice: str):
+    """a voice name, or a blend of Kokoro voices "am_eric*0.6+am_fenrir*0.4" (style vectors mixed by weight)"""
+    if "+" not in voice and "*" not in voice:
+        return voice
+    parts = []
+    for p in voice.split("+"):
+        name, _, w = p.strip().partition("*")
+        if not re.fullmatch(r"[a-z]{2}_[a-z]+", name):
+            raise ValueError(f"bad voice name {name!r}")
+        parts.append((name, float(w or 1.0)))
+    tot = sum(w for _, w in parts) or 1.0
+    return sum((w / tot) * k.get_voice_style(n) for n, w in parts)
+
+
 def synth(sentences: list[str], lang: str, voice: str, speed: float = 1.0, gap: float = 0.14) -> tuple[np.ndarray, list[Sentence]]:
     k = _get_kokoro()
     out: list[np.ndarray] = []
@@ -98,8 +113,9 @@ def synth(sentences: list[str], lang: str, voice: str, speed: float = 1.0, gap: 
     pos = 0
     lead = int(0.06 * SR)
     out.append(np.zeros(lead)); pos += lead
+    vstyle = voice_style(k, voice)
     for s in sentences:
-        audio, sr = k.create(normalize(s, lang), voice=voice, speed=speed, lang=LANG_CODE.get(lang, "en-us"))
+        audio, sr = k.create(normalize(s, lang), voice=vstyle, speed=speed, lang=LANG_CODE.get(lang, "en-us"))
         a = np.asarray(audio, dtype=np.float64)
         if sr != SR:
             g = np.gcd(SR, sr)

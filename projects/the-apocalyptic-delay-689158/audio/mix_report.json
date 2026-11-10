@@ -1,0 +1,213 @@
+{
+ "duration": 48.86666666666667,
+ "sampleRate": 48000,
+ "targetLUFS": -14.0,
+ "ceilingDBTP": -2.0,
+ "measured": {
+  "integratedLUFS": -14.01,
+  "truePeakDBTP": -2.0,
+  "LRA": 0.96,
+  "maxGainReductionDB": 2.53,
+  "voiceLUFS": -14.05,
+  "musicLUFS": -29.87,
+  "sfxLUFS": -29.5
+ },
+ "ffmpegEbur128": {
+  "I": -14.0,
+  "LRA": 1.0,
+  "truePeak": -2.0
+ },
+ "musicSections": [
+  {
+   "start": 0.0,
+   "end": 12.33,
+   "mood": "tense"
+  },
+  {
+   "start": 12.33,
+   "end": 16.73,
+   "mood": "curious"
+  },
+  {
+   "start": 16.73,
+   "end": 20.4,
+   "mood": "whimsical"
+  },
+  {
+   "start": 20.4,
+   "end": 34.77,
+   "mood": "tense"
+  },
+  {
+   "start": 34.77,
+   "end": 40.03,
+   "mood": "upbeat"
+  },
+  {
+   "start": 40.03,
+   "end": 48.87,
+   "mood": "warm"
+  }
+ ],
+ "musicCues": [
+  "0.00s section 1: tense (92 bpm)",
+  "12.33s section 2: curious (96 bpm)",
+  "16.73s section 3: whimsical (108 bpm)",
+  "20.40s section 4: tense (92 bpm)",
+  "34.77s section 5: upbeat (118 bpm)",
+  "40.03s section 6: warm (84 bpm)"
+ ],
+ "sfxCues": [
+  {
+   "t": 0.0,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 0.093,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 2.633,
+   "kind": "bed",
+   "what": "golden ambience + crowd"
+  },
+  {
+   "t": 4.867,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 4.933,
+   "kind": "impact",
+   "what": "impact thump"
+  },
+  {
+   "t": 4.867,
+   "kind": "burst",
+   "what": "burst"
+  },
+  {
+   "t": 6.833,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 9.033,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 11.733,
+   "kind": "impact",
+   "what": "impact thump"
+  },
+  {
+   "t": 11.667,
+   "kind": "stars",
+   "what": "stars"
+  },
+  {
+   "t": 12.333,
+   "kind": "bed",
+   "what": "day ambience + crowd"
+  },
+  {
+   "t": 16.733,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 17.153,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 18.283,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 18.933,
+   "kind": "product",
+   "what": "product question"
+  },
+  {
+   "t": 20.4,
+   "kind": "bed",
+   "what": "night ambience + crowd"
+  },
+  {
+   "t": 24.167,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 27.467,
+   "kind": "bed",
+   "what": "night ambience + crowd"
+  },
+  {
+   "t": 27.56,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 28.633,
+   "kind": "impact",
+   "what": "impact thump"
+  },
+  {
+   "t": 28.567,
+   "kind": "burst",
+   "what": "burst"
+  },
+  {
+   "t": 30.4,
+   "kind": "bed",
+   "what": "golden ambience"
+  },
+  {
+   "t": 34.767,
+   "kind": "bed",
+   "what": "golden ambience + crowd"
+  },
+  {
+   "t": 38.133,
+   "kind": "bed",
+   "what": "golden ambience"
+  },
+  {
+   "t": 39.5,
+   "kind": "impact",
+   "what": "impact thump"
+  },
+  {
+   "t": 39.433,
+   "kind": "burst",
+   "what": "burst"
+  },
+  {
+   "t": 40.033,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 42.733,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 46.5,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 47.467,
+   "kind": "sparkle",
+   "what": "sparkle"
+  }
+ ],
+ "license": "All music and SFX synthesized locally (numpy/scipy), original; voice from local TTS or user import."
+}

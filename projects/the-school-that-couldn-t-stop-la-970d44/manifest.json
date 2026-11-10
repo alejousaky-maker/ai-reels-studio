@@ -5,16 +5,16 @@
    "status": "done",
    "words": 177,
    "beats": 16,
-   "at": "2026-11-09T23:19:57"
+   "at": "2026-11-09T23:29:13"
   },
   "voice": {
    "duration": 61.92720833333333,
    "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
-   "seconds": 21.2,
+   "seconds": 22.0,
    "status": "done",
    "voice": "af_heart",
    "speed": 1.0,
-   "at": "2026-11-09T23:20:18"
+   "at": "2026-11-09T23:29:35"
   },
   "align": {
    "status": "done",
@@ -197,6 +197,17 @@
   {
    "step": "qa",
    "at": "2026-11-09T23:25:17",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T23:29:13",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-09T23:29:35",
+   "seconds": 22.0,
    "status": "done"
   }
  ],

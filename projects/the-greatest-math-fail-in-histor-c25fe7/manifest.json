@@ -1,0 +1,285 @@
+{
+ "id": "the-greatest-math-fail-in-histor-c25fe7",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 156,
+   "beats": 14,
+   "at": "2026-11-10T02:25:11"
+  },
+  "voice": {
+   "duration": 51.0225625,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 21.1,
+   "status": "done",
+   "voice": "af_heart",
+   "speed": 1.0,
+   "at": "2026-11-10T02:25:35"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 14.9,
+   "method": {
+    "whisper": 18,
+    "spread": 1
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T02:25:50"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1546,
+   "seconds_video": 51.53333333333333,
+   "scenes": 14,
+   "at": "2026-11-10T02:25:50"
+  },
+  "stills": {
+   "status": "done",
+   "count": 42,
+   "at": "2026-11-10T02:27:52"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 244.5,
+   "frames": 1546,
+   "renderedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b07",
+    "b08",
+    "b09",
+    "b10",
+    "b11",
+    "b12",
+    "b13",
+    "b14"
+   ],
+   "reusedScenes": [],
+   "fps_render": 6.32,
+   "at": "2026-11-10T02:31:57"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 16.2,
+   "integratedLUFS": -14.01,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.04,
+   "maxGainReductionDB": 5.84,
+   "voiceLUFS": -14.06,
+   "musicLUFS": -29.87,
+   "sfxLUFS": -27.28,
+   "at": "2026-11-10T02:32:13"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\the-greatest-math-fail-in-histor-c25fe7\\output\\the-greatest-math-fail-in-history_master_v3.mp4",
+   "at": "2026-11-10T02:32:15"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-10T02:32:31"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T01:15:10",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T01:15:11",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T01:15:35",
+   "seconds": 21.7,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T01:15:52",
+   "status": "done",
+   "seconds": 17.0
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T01:15:52",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T01:17:54",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T01:21:51",
+   "status": "done",
+   "seconds": 236.9
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T01:22:05",
+   "status": "done",
+   "seconds": 14.8
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T01:22:07",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T01:22:22",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T01:43:15",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T01:43:15",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T01:43:38",
+   "seconds": 20.4,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T01:43:51",
+   "status": "done",
+   "seconds": 13.3
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T01:43:51",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T01:45:47",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T01:49:42",
+   "status": "done",
+   "seconds": 234.2
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T01:49:57",
+   "status": "done",
+   "seconds": 15.4
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T01:49:59",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T01:50:15",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T02:25:11",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T02:25:11",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T02:25:35",
+   "seconds": 21.1,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T02:25:50",
+   "status": "done",
+   "seconds": 14.9
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T02:25:50",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T02:27:52",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T02:31:57",
+   "status": "done",
+   "seconds": 244.5
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T02:32:13",
+   "status": "done",
+   "seconds": 16.2
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T02:32:15",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T02:32:31",
+   "status": "done"
+  }
+ ],
+ "title": "The Greatest Math Fail in History",
+ "created": "2026-11-10T01:15:10",
+ "request": {
+  "title": "The Greatest Math Fail in History",
+  "idea": "Columbus discovered America because of a math mistake",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 60,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "village_square",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": false,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "claude",
+  "review": "auto_qa",
+  "seed": 4,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "",
+ "requestedSeconds": 60
+}

@@ -1,0 +1,101 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 50.750229166666664,
+ "voice": "af_heart",
+ "lang": "en",
+ "speed": 0.88,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "When this guy found out his wife was cheating with his boss, he didn't fight.",
+   "start": 0.06,
+   "end": 4.3419791666666665
+  },
+  {
+   "text": "He asked for a promotion.",
+   "start": 4.481979166666667,
+   "end": 5.948666666666667
+  },
+  {
+   "text": "It started with a family tablet that synced everything.",
+   "start": 6.088666666666667,
+   "end": 9.196770833333334
+  },
+  {
+   "text": "Including his wife's messages to his vice president.",
+   "start": 9.336770833333333,
+   "end": 12.667666666666667
+  },
+  {
+   "text": "Most people would explode.",
+   "start": 12.807666666666666,
+   "end": 14.321479166666666
+  },
+  {
+   "text": "He smiled.",
+   "start": 14.461479166666667,
+   "end": 15.3313125
+  },
+  {
+   "text": "Because his boss had a bigger problem: a billionaire father-in-law.",
+   "start": 15.4713125,
+   "end": 19.285083333333333
+  },
+  {
+   "text": "So he walked into the corner office.",
+   "start": 19.425083333333333,
+   "end": 21.30625
+  },
+  {
+   "text": "He asked for the overseas branch, a huge bonus, and a contract with guaranteed severance.",
+   "start": 21.44625,
+   "end": 27.2403125
+  },
+  {
+   "text": "Then he casually mentioned that his doorbell camera backs up to the cloud.",
+   "start": 27.3803125,
+   "end": 31.637895833333335
+  },
+  {
+   "text": "The boss signed in record time.",
+   "start": 31.777895833333332,
+   "end": 33.461104166666665
+  },
+  {
+   "text": "The contract cleared on a Friday.",
+   "start": 33.601104166666666,
+   "end": 35.476729166666665
+  },
+  {
+   "text": "That afternoon, his wife got divorce papers.",
+   "start": 35.616729166666666,
+   "end": 38.602875
+  },
+  {
+   "text": "And the company board got an email.",
+   "start": 38.742875,
+   "end": 40.698395833333336
+  },
+  {
+   "text": "Messages and doorbell clips attached.",
+   "start": 40.83839583333334,
+   "end": 43.146125
+  },
+  {
+   "text": "By Monday, the vice president was carrying a cardboard box.",
+   "start": 43.286125,
+   "end": 46.92004166666667
+  },
+  {
+   "text": "He got the corner office overseas.",
+   "start": 47.06004166666666,
+   "end": 49.04354166666667
+  },
+  {
+   "text": "His boss got the box.",
+   "start": 49.18354166666666,
+   "end": 50.61022916666667
+  }
+ ]
+}

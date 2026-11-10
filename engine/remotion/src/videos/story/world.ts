@@ -18,6 +18,14 @@ import type { Storyboard, SceneSpec, ActorSpec, Expr, LightName, V3 } from "./ty
 const hh = (i: number, s = 0) => { const v = Math.sin(i * 127.1 + s * 311.7) * 43758.5453; return v - Math.floor(v); };
 const q = (v: number, n = 120) => Math.round(v * n) / n;
 const clamp01 = (x: number) => Math.max(0, Math.min(1, x));
+/** vertical scale for the landing bounce over the first 10 frames of a scene: 0.86 -> 1.07 -> 0.98 -> 1 */
+const entrance = (n: number) => n < 0 || n >= 10 ? 1 : 1 - 0.14 * Math.cos((n / 10) * Math.PI * 1.5) * Math.exp(-n / 4);
+/** a green banknote */
+const billFx = (p: Pen) => {
+  p.poly([[6, 6], [194, 6], [194, 94], [6, 94]], "#7cc46a", 5);
+  p.ell(100, 50, 26, 26, "#4f9a44", 3);
+  p.poly([[20, 20], [50, 20], [50, 80], [20, 80]], "#9fd88e", 0); p.poly([[150, 20], [180, 20], [180, 80], [150, 80]], "#9fd88e", 0);
+};
 const smooth = (x: number) => { const u = clamp01(x); return u * u * (3 - 2 * u); };
 const LEAD = 2; // reactions land 0-3 f before the word
 const LID = [0.5, 1, 1, 0.5];
@@ -306,12 +314,12 @@ export class StoryWorld {
         return;
       }
       const key = `F|${a.castId}|${JSON.stringify(fo, (_k, v) => (typeof v === "number" ? q(v) : v))}`;
-      places.push({ key, x: st.x, y: hop, z: st.z, scale: scl, draw: (p) => bodyFront(p, who.o, fo), size: [w, h, k] });
-      blob(st.x, st.z, scl, hop > 0.02 ? 0.7 : 1);
+      places.push({ key, x: st.x, y: hop + (a.y ?? 0), z: st.z, scale: scl, draw: (p) => bodyFront(p, who.o, fo), size: [w, h, k] });
+      if (!a.y) blob(st.x, st.z, scl, hop > 0.02 ? 0.7 : 1);
       if (a.holding) {
         const sz = 0.34 * scl;
         fx.push({ key: `prod|${a.holding}|${this.sb.brand?.primary ?? ""}`, cw: 400, ch: 400, draw: (p) => drawProduct(p, a.holding!, this.sb.brand?.primary),
-          x: st.x + right.x * 0.42 * scl, y: hop + 0.98 * scl, z: st.z + right.z * 0.42 * scl - 0.05, w: sz, h: sz });
+          x: st.x + right.x * 0.42 * scl, y: hop + (a.y ?? 0) + 0.98 * scl, z: st.z + right.z * 0.42 * scl - 0.05, w: sz, h: sz });
       }
     });
     // ---- effects ----
@@ -337,9 +345,34 @@ export class StoryWorld {
         case "steam": fx.push({ key: `steam${q((t * 0.8) % 1, 20)}`, cw: 400, ch: 400, draw: (p) => steamFx(p, q((t * 0.8) % 1, 20)), x, y, z, w: size, h: size, soft: true }); break;
         case "splash": fx.push({ key: `splash${u}|${e.color ?? ""}`, cw: 800, ch: 800, draw: (p) => drawSplash(p, u, e.color ?? "#4fa8d8"), x, y, z, w: size, h: size }); break;
         case "sparkle": fx.push({ key: `spark${u}|${e.color ?? ""}`, cw: 400, ch: 400, draw: (p) => sparkleFx(p, u, e.color ?? "#ffe27a"), x, y, z, w: size, h: size }); break;
+        case "money": case "confetti": case "dust": {
+          // particles raining / drifting across the subject: deterministic per index, looping, swaying, spinning
+          const conf = e.kind === "confetti", dust = e.kind === "dust";
+          const N = conf ? 34 : dust ? 22 : 16, age0 = f - e.frame, fade = Math.min(1, age0 / 6) * Math.min(1, (e.dur - age0) / 8);
+          for (let n = 0; n < N; n++) {
+            const h1 = hh(n, 41), h2 = hh(n, 43), h3 = hh(n, 47);
+            const speed = conf ? 0.75 : dust ? 0.07 : 0.32, cyc = ((t * speed + h1) % 1);
+            const lat = (h2 - 0.5) * size * 1.4 + (dust ? 0.3 : 0.18) * Math.sin(t * (dust ? 0.7 : 2.2) + n);
+            const yy = dust ? y - size * 0.4 + size * 0.9 * ((h3 + t * 0.05) % 1) : y + size * 0.55 - cyc * size * 1.1;
+            const dep = (h3 - 0.5) * 1.2, sz = (conf ? 0.07 : dust ? 0.035 : 0.2) * (0.7 + 0.6 * h3) * Math.max(0.05, fade);
+            const col = conf ? ["#ff4fa0", "#ffd23f", "#39d9ff", "#39d98a", "#ff7a1a"][n % 5] : dust ? "#f4ead2" : "";
+            fx.push({ key: conf ? `conf|${col}` : dust ? "dustmote" : "bill", cw: conf ? 60 : dust ? 64 : 200, ch: conf ? 36 : dust ? 64 : 100,
+              draw: (p) => conf ? p.poly([[4, 4], [56, 4], [56, 32], [4, 32]], col, 3) : dust ? p.ell(32, 32, 26, 26, "rgba(255,246,220,0.55)", 0) : billFx(p),
+              x: x + right.x * lat - right.z * dep, y: yy, z: z + right.z * lat + right.x * dep, w: sz * (conf ? 1.6 : dust ? 1 : 2), h: sz, rot: (conf ? 6 : 2.2) * t + n, soft: dust });
+          }
+          break;
+        }
+        case "sparks": for (let n = 0; n < 12; n++) {   // a burst of hot streaks shooting out, falling with gravity
+          const a = hh(n, 51) * Math.PI * 2, sp = 0.6 + hh(n, 53) * 0.9, ag = ((f - e.frame) % 14) / 14;
+          const dx = Math.cos(a) * sp * ag * size, dy = Math.sin(a) * sp * ag * size - 1.4 * ag * ag * size;
+          fx.push({ key: "sparkstreak", cw: 120, ch: 30, draw: (p) => { p.stroke([[6, 15], [114, 15]], 14, "#ffb347"); p.stroke([[40, 15], [114, 15]], 6, "#fff6c0"); },
+            x: x + right.x * dx, y: y + dy, z: z + right.z * dx, w: 0.22 * size * (1 - ag), h: 0.055 * size * (1 - ag), rot: Math.atan2(dy, dx) });
+        } break;
       }
     }
     this.frustum.setFromProjectionMatrix(this.m4.multiplyMatrices(cam.projectionMatrix, cam.matrixWorldInverse));
+    // entrance: on a new scene (not a clause cut) people and set pieces land with a little squash-and-settle bounce
+    const ent = s.sub ? 1 : entrance(f - s.startFrame);
     let ai = 0;
     const used: Actor[] = [];
     for (const p of places) {
@@ -351,7 +384,7 @@ export class StoryWorld {
       a.mesh.visible = true;
       a.mesh.position.set(p.x, p.y, p.z);
       a.mesh.rotation.set(0, Math.atan2(cam.position.x - p.x, cam.position.z - p.z), 0);
-      a.mesh.scale.set(p.mirror ? -sc2 : sc2, sc2, sc2);
+      a.mesh.scale.set((p.mirror ? -sc2 : sc2) * (2 - ent), sc2 * ent, sc2);
       a.mesh.castShadow = L.actorShadow;
       used.push(a);
     }
@@ -375,21 +408,26 @@ export class StoryWorld {
     (s.pieces ?? []).forEach((pc, i) => {
       const A = this.pieceActors[i], P = PIECES[pc.kind];
       if (!A || !P) return;
-      let x = pc.x, z = pc.z;
+      let x = pc.x, z = pc.z, lift = 0;
       if (pc.moveTo && pc.moveFrames) {
         const u = smooth((f - pc.moveFrames[0]) / Math.max(1, pc.moveFrames[1] - pc.moveFrames[0]));
         x += (pc.moveTo[0] - pc.x) * u; z += (pc.moveTo[1] - pc.z) * u;
       }
+      if (pc.liftTo !== undefined && pc.moveFrames) {   // blast-off: slow start, accelerating climb
+        const u = clamp01((f - pc.moveFrames[0]) / Math.max(1, pc.moveFrames[1] - pc.moveFrames[0]));
+        lift = (pc.liftTo - (pc.y ?? 0)) * u * u * u;
+      }
+      if (pc.shake) { x += pc.shake * 0.045 * Math.sin(f * 2.7); z += pc.shake * 0.03 * Math.cos(f * 3.3); }
       const k = pc.scale ?? 1, d = cam.position.distanceTo(this.v.set(x, P.h * k * 0.5, z)) / (k * P.h / 2.2);
       const res = d < 3.2 ? 1.6 : d < 6.5 ? 1.0 : d < 16 ? 0.55 : 0.3;
       const cw = Math.round(P.dw * res), ch = Math.round(P.dh * res);
       A.r = this.pool.req(`piece|${pc.kind}|${pc.label ?? ""}`, cw, ch, res, (pp) => P.draw(pp, pc.label ?? ""));
       const bob = pc.rock ? pc.rock * Math.sin(t * 1.6 + i) : 0;
       A.mesh.visible = true;
-      A.mesh.position.set(x, (pc.y ?? 0) + bob * 0.15, z);
-      A.mesh.rotation.set(0, Math.atan2(cam.position.x - x, cam.position.z - z), bob * 0.03 - (pc.spin ? pc.spin * t : 0));
+      A.mesh.position.set(x, (pc.y ?? 0) + lift + bob * 0.15 + (pc.shake ? pc.shake * 0.02 * Math.abs(Math.sin(f * 4.1)) : 0), z);
+      A.mesh.rotation.set(0, Math.atan2(cam.position.x - x, cam.position.z - z), bob * 0.03 - (pc.spin ? pc.spin * t : 0) + (pc.shake ? pc.shake * 0.05 * Math.sin(f * 5.3) : 0));
       if (pc.spin) A.mesh.position.y += (P.h * k) / 2 + 0.15 * Math.abs(Math.sin(t * 3.2));   // centred pivot + tumbling bounce
-      A.mesh.scale.set(pc.mirror ? -1 : 1, 1, 1);
+      A.mesh.scale.set((pc.mirror ? -1 : 1) * (2 - ent), ent, 1);
       A.mesh.castShadow = L.actorShadow;
       used.push(A);
     });

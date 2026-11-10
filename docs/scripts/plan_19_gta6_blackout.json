@@ -1,0 +1,439 @@
+{
+ "title": "The Global Internet Blackout",
+ "environment": "gameroom",
+ "seed": 61,
+ "cast": [
+  {
+   "id": "me",
+   "name": "Esports gamer",
+   "role": "esports"
+  },
+  {
+   "id": "tech",
+   "name": "Technician",
+   "role": "technician"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "The second GTA 6 unlocks at midnight, a hundred million downloads will literally melt the global internet.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "sweat"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "whip",
+   "hud": "panel",
+   "hudText": "11:59:59 PM",
+   "shots": [
+    {
+     "at": "hundred",
+     "shot": "wide",
+     "environment": "datacenter",
+     "envVariant": "red",
+     "characters": [],
+     "text": "100,000,000",
+     "textStyle": "title",
+     "camMove": "truck_right"
+    },
+    {
+     "at": "melt",
+     "shot": "low",
+     "environment": "datacenter",
+     "envVariant": "red",
+     "characters": [
+      {
+       "id": "tech",
+       "action": "panic",
+       "expr": "shock",
+       "holding": "extinguisher"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "burst",
+       "word": "melt",
+       "on": "tech"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Eleven fifty-nine and fifty-nine seconds. His heart is louder than his fans.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "sweat"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "push",
+   "hud": "panel",
+   "hudText": "11:59:59 PM"
+  },
+  {
+   "narration": "His trembling finger hovers over the download button, sweat pouring down his face.",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "nervous"
+    }
+   ],
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "monitor",
+     "where": "left",
+     "label": "[ DOWNLOAD ]"
+    }
+   ],
+   "camMove": "orbit"
+  },
+  {
+   "narration": "Midnight. Click.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "starry"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "Click",
+     "on": "me"
+    }
+   ],
+   "impactWord": "Click",
+   "environment": "gameroom",
+   "camMove": "whip"
+  },
+  {
+   "narration": "Across the world, data centers start glowing red like toasters.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "tense",
+   "environment": "datacenter",
+   "envVariant": "red",
+   "pieces": [
+    {
+     "kind": "rack",
+     "where": "left",
+     "label": "red"
+    },
+    {
+     "kind": "rack",
+     "where": "right",
+     "label": "red"
+    }
+   ],
+   "camMove": "truck_left"
+  },
+  {
+   "narration": "Lightning shoots out of the servers.",
+   "shot": "worm",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "tech",
+     "expr": "shock"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "Lightning",
+     "on": "tech"
+    }
+   ],
+   "impactWord": "Lightning",
+   "environment": "datacenter",
+   "envVariant": "red",
+   "pieces": [
+    {
+     "kind": "rack",
+     "where": "left",
+     "label": "red",
+     "shake": 1.0
+    },
+    {
+     "kind": "rack",
+     "where": "right",
+     "label": "red",
+     "shake": 1.0
+    }
+   ],
+   "camMove": "crane_up"
+  },
+  {
+   "narration": "Technicians in hard hats run around with fire extinguishers.",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "tech",
+     "action": "run",
+     "expr": "shock",
+     "holding": "extinguisher"
+    }
+   ],
+   "extras": 3,
+   "extrasAction": "march",
+   "environment": "datacenter",
+   "envVariant": "red",
+   "extrasRole": "technician",
+   "camMove": "follow"
+  },
+  {
+   "narration": "Gauges explode, one by one.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "tech",
+     "expr": "broken"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "explode",
+     "on": "tech"
+    },
+    {
+     "kind": "puff",
+     "word": "one",
+     "on": "tech"
+    }
+   ],
+   "impactWord": "explode",
+   "environment": "datacenter",
+   "envVariant": "red",
+   "camMove": "whip"
+  },
+  {
+   "narration": "Back in the bedroom, the download bar crawls to ninety-nine point nine percent.",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sit",
+     "expr": "starry"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "push",
+   "hud": "bar",
+   "hudText": "DOWNLOADING GTA 6|98|99.9"
+  },
+  {
+   "narration": "One second remaining.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "sweat"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "push",
+   "hud": "bar",
+   "hudText": "1 SECOND REMAINING|99.9|99.9"
+  },
+  {
+   "narration": "Then the router on the desk bursts into a cloud of black smoke.",
+   "shot": "insert",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "shock",
+     "holding": "router"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "puff",
+     "word": "bursts",
+     "on": "me"
+    },
+    {
+     "kind": "burst",
+     "word": "smoke",
+     "on": "me"
+    }
+   ],
+   "impactWord": "bursts",
+   "environment": "gameroom"
+  },
+  {
+   "narration": "No internet. Not on his street, not in his city, not anywhere.",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "broken"
+    }
+   ],
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "tv",
+     "where": "left",
+     "label": "~nointernet"
+    }
+   ],
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "Not",
+     "shot": "extreme",
+     "camMove": "push"
+    },
+    {
+     "at": "anywhere",
+     "shot": "high",
+     "environment": "street",
+     "characters": [],
+     "extras": 4,
+     "extrasRole": "streamer",
+     "camMove": "crane_up"
+    }
+   ]
+  },
+  {
+   "narration": "Total blackout. Millions of gamers flood the streets in their headsets.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "run",
+     "expr": "crazy"
+    }
+   ],
+   "extras": 6,
+   "extrasAction": "march",
+   "environment": "street",
+   "extrasRole": "streamer",
+   "camMove": "crane_up"
+  },
+  {
+   "narration": "They climb telephone poles and plug ethernet cables into potatoes and car batteries.",
+   "light": "night",
+   "characters": [
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "crazy",
+     "holding": "potato",
+     "y": 2.4
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "potato",
+     "word": "potatoes",
+     "on": "me"
+    }
+   ],
+   "environment": "street",
+   "pieces": [
+    {
+     "kind": "pole",
+     "where": "on",
+     "dz": 0.7,
+     "scale": 0.8
+    }
+   ],
+   "camMove": "crane_up",
+   "shots": [
+    {
+     "at": "car",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "me",
+       "action": "point",
+       "expr": "grin",
+       "holding": "battery",
+       "y": 2.4
+      }
+     ],
+     "fx": [
+      {
+       "kind": "product",
+       "product": "battery",
+       "word": "batteries",
+       "on": "me"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "pole",
+       "where": "on",
+       "dz": 0.7,
+       "scale": 0.8
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": "Just one more megabyte. Please.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "crazy",
+     "y": 2.4
+    }
+   ],
+   "environment": "street",
+   "pieces": [
+    {
+     "kind": "pole",
+     "where": "on",
+     "dz": 0.7,
+     "scale": 0.8
+    }
+   ],
+   "camMove": "pull",
+   "hud": "bar",
+   "hudText": "DOWNLOADING|99.9|99.9"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Comedy fiction about GTA 6 (hypothetical delay / size / price / release-day scenarios); the game, console and studio appear only as generic unbranded props.",
+   "status": "fiction"
+  }
+ ]
+}

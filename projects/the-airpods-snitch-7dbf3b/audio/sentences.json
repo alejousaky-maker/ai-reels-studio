@@ -1,0 +1,96 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 39.54975,
+ "voice": "af_heart",
+ "lang": "en",
+ "speed": 0.88,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "She caught her boyfriend cheating before she even turned off her car.",
+   "start": 0.06,
+   "end": 3.7829166666666665
+  },
+  {
+   "text": "She came home early to surprise him.",
+   "start": 3.9229166666666666,
+   "end": 6.1646875
+  },
+  {
+   "text": "Then her car connected to his AirPods.",
+   "start": 6.3046875,
+   "end": 8.630166666666666
+  },
+  {
+   "text": "The ones upstairs.",
+   "start": 8.770166666666666,
+   "end": 9.920208333333333
+  },
+  {
+   "text": "And her car speakers started playing his bedroom.",
+   "start": 10.060208333333334,
+   "end": 12.686333333333334
+  },
+  {
+   "text": "Upstairs, he and another girl were sharing his AirPods, laughing.",
+   "start": 12.826333333333332,
+   "end": 16.64260416666667
+  },
+  {
+   "text": "They had no idea the mic was live.",
+   "start": 16.782604166666665,
+   "end": 18.871395833333334
+  },
+  {
+   "text": "She didn't scream.",
+   "start": 19.011395833333335,
+   "end": 20.114958333333334
+  },
+  {
+   "text": "She just listened.",
+   "start": 20.254958333333335,
+   "end": 21.3455
+  },
+  {
+   "text": "Then she picked up her phone, and spoke into the mic.",
+   "start": 21.4855,
+   "end": 24.2874375
+  },
+  {
+   "text": "Hi babe.",
+   "start": 24.4274375,
+   "end": 25.268125
+  },
+  {
+   "text": "Enjoy your last night in my house.",
+   "start": 25.408125,
+   "end": 27.361833333333333
+  },
+  {
+   "text": "Through the upstairs window, two silhouettes froze.",
+   "start": 27.501833333333334,
+   "end": 30.324875
+  },
+  {
+   "text": "By morning, the locks were changed and his stuff was on the lawn.",
+   "start": 30.464875,
+   "end": 34.33058333333334
+  },
+  {
+   "text": "He kept the AirPods.",
+   "start": 34.47058333333333,
+   "end": 35.825270833333335
+  },
+  {
+   "text": "Bluetooth: connecting people.",
+   "start": 35.965270833333335,
+   "end": 37.735145833333334
+  },
+  {
+   "text": "Especially the wrong ones.",
+   "start": 37.875145833333335,
+   "end": 39.40975
+  }
+ ]
+}

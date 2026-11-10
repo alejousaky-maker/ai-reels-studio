@@ -1,0 +1,481 @@
+{
+ "title": "The Jet Engine Console",
+ "environment": "gameroom",
+ "seed": 43,
+ "cast": [
+  {
+   "id": "me",
+   "name": "Gamer",
+   "role": "capgamer"
+  },
+  {
+   "id": "wife",
+   "name": "Wife",
+   "role": "wife"
+  },
+  {
+   "id": "meg",
+   "name": "Gamer (goggles)",
+   "role": "capgamer",
+   "shades": true
+  }
+ ],
+ "beats": [
+  {
+   "narration": "Installing GTA 6 on a base PS5 won't just fill your storage. It will turn your console into a jet engine.",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sit",
+     "expr": "grin",
+     "holding": "controller"
+    }
+   ],
+   "impactWord": "jet",
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "console",
+     "where": "left",
+     "scale": 1.4
+    }
+   ],
+   "camMove": "whip",
+   "shots": [
+    {
+     "at": "storage",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "sweat"
+      }
+     ],
+     "hud": "panel",
+     "hudText": "STORAGE|FULL!"
+    },
+    {
+     "at": "jet",
+     "shot": "worm",
+     "characters": [
+      {
+       "id": "me",
+       "action": "panic",
+       "expr": "shock"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "burst",
+       "word": "jet",
+       "on": "me"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "console",
+       "where": "left",
+       "scale": 1.4,
+       "label": "flames",
+       "shake": 1.5
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "First, the warning pops up. Required space: five hundred gigs.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "nervous",
+     "react": {
+      "word": "five",
+      "expr": "shock"
+     }
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "push",
+   "hud": "panel",
+   "hudText": "WARNING|REQUIRED SPACE: 500 GB|AVAILABLE: 12 GB!"
+  },
+  {
+   "narration": "A sweat drop the size of a grape rolls down his head.",
+   "shot": "extreme",
+   "light": "night",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "sweat"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "push"
+  },
+  {
+   "narration": "So he starts deleting. Call of Duty, gone. Eight years of saves, gone.",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "stern",
+     "holding": "controller"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "folder",
+     "word": "Duty",
+     "on": "me"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "truck_right",
+   "hud": "panel",
+   "hudText": "DELETE?|Call of Duty  ✕",
+   "shots": [
+    {
+     "at": "gone",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "grin"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "puff",
+       "word": "gone",
+       "on": "me"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": "System files, gone. Wedding photos, gone.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "crazy"
+    }
+   ],
+   "environment": "gameroom",
+   "hud": "panel",
+   "hudText": "DELETE?|System Files  ✕",
+   "shots": [
+    {
+     "at": "Wedding",
+     "shot": "medium",
+     "fx": [
+      {
+       "kind": "product",
+       "product": "camera",
+       "word": "Wedding",
+       "on": "me"
+      }
+     ],
+     "hud": "panel",
+     "hudText": "DELETE?|Wedding Photos  ✕"
+    }
+   ]
+  },
+  {
+   "narration": "His wife gasps from the doorway.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "wife",
+     "expr": "shock"
+    }
+   ],
+   "impactWord": "gasps",
+   "environment": "gameroom",
+   "spot": 3,
+   "camMove": "whip"
+  },
+  {
+   "narration": "Then the install finally begins, and the console starts to shake like a washing machine.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sit",
+     "expr": "nervous"
+    }
+   ],
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "console",
+     "where": "left",
+     "scale": 1.4,
+     "shake": 0.8
+    }
+   ],
+   "hud": "bar",
+   "hudText": "INSTALLING GTA 6|1|45",
+   "shots": [
+    {
+     "at": "console",
+     "shot": "insert",
+     "pieces": [
+      {
+       "kind": "console",
+       "where": "on",
+       "scale": 1.0,
+       "shake": 1.2
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "The side plates glow orange. The fans spin like turbines.",
+   "shot": "insert",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "shock"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "steam",
+     "word": "glow",
+     "on": "me"
+    }
+   ],
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "console",
+     "where": "on",
+     "label": "hot",
+     "shake": 1.6
+    }
+   ],
+   "camMove": "orbit",
+   "shots": [
+    {
+     "at": "fans",
+     "shot": "worm",
+     "fx": [
+      {
+       "kind": "burst",
+       "word": "turbines",
+       "on": "me"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "console",
+       "where": "left",
+       "scale": 1.4,
+       "label": "hot",
+       "shake": 2.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": "Pizza boxes fly across the room. The curtains are flapping. The cat is gone.",
+   "shot": "wide",
+   "light": "night",
+   "characters": [
+    {
+     "id": "me",
+     "action": "panic",
+     "expr": "shock"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "puff",
+     "word": "fly",
+     "on": "me"
+    }
+   ],
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "snacks",
+     "where": "left",
+     "move": "right"
+    },
+    {
+     "kind": "console",
+     "where": "right",
+     "label": "hot",
+     "shake": 2.0
+    }
+   ],
+   "camMove": "truck_left"
+  },
+  {
+   "narration": "Ninety-nine percent installed.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "starry"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "push",
+   "hud": "bar",
+   "hudText": "INSTALLING GTA 6|96|99"
+  },
+  {
+   "narration": "And then, liftoff!",
+   "shot": "worm",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "panic",
+     "expr": "shock"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "liftoff",
+     "on": "me"
+    }
+   ],
+   "impactWord": "liftoff",
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "console",
+     "where": "left",
+     "scale": 1.4,
+     "label": "flames",
+     "lift": 4.0,
+     "shake": 1.0
+    }
+   ],
+   "camMove": "crane_up"
+  },
+  {
+   "narration": "The console blasts straight through the ceiling and rockets into the night sky.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "upbeat",
+   "environment": "suburb",
+   "envVariant": "tvglow",
+   "pieces": [
+    {
+     "kind": "console",
+     "scale": 2.0,
+     "y": 1.0,
+     "label": "flames",
+     "lift": 8.0
+    }
+   ],
+   "spot": 0,
+   "camMove": "crane_up"
+  },
+  {
+   "narration": "And he is still hanging from the HDMI cable, wearing aviator goggles.",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "meg",
+     "action": "cheer",
+     "expr": "laugh",
+     "y": 2.2
+    }
+   ],
+   "environment": "suburb",
+   "envVariant": "tvglow",
+   "pieces": [
+    {
+     "kind": "console",
+     "where": "on",
+     "scale": 1.6,
+     "y": 4.4,
+     "label": "flames"
+    }
+   ],
+   "spot": 0,
+   "camMove": "crane_up"
+  },
+  {
+   "narration": "Totally worth it. Now, the day one patch: one hundred and fifty gigs.",
+   "shot": "close",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "meg",
+     "action": "cheer",
+     "expr": "starry",
+     "y": 2.2
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "worth",
+     "on": "meg"
+    }
+   ],
+   "environment": "suburb",
+   "envVariant": "tvglow",
+   "spot": 0,
+   "camMove": "orbit",
+   "shots": [
+    {
+     "at": "Now",
+     "shot": "extreme",
+     "environment": "gameroom",
+     "spot": 0,
+     "characters": [
+      {
+       "id": "me",
+       "expr": "sweat"
+      }
+     ],
+     "camMove": "push",
+     "hud": "panel",
+     "hudText": "DAY 1 PATCH|150 GB"
+    }
+   ]
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Comedy fiction about GTA 6 (hypothetical delay / size / price / release-day scenarios); the game, console and studio appear only as generic unbranded props.",
+   "status": "fiction"
+  }
+ ]
+}

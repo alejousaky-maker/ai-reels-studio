@@ -1,0 +1,146 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 47.693666666666665,
+ "voice": "am_eric*0.6+am_fenrir*0.4",
+ "lang": "en",
+ "speed": 1.12,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "I pre-ordered GTA 6 as a teenager, and by the time it finally loaded, my son was graduating college.",
+   "start": 0.06,
+   "end": 6.239041666666667
+  },
+  {
+   "text": "Twenty thirteen.",
+   "start": 6.379041666666667,
+   "end": 7.2943541666666665
+  },
+  {
+   "text": "I clicked pre-order and bounced in my chair for an hour.",
+   "start": 7.434354166666667,
+   "end": 9.976541666666666
+  },
+  {
+   "text": "Then the calendar pages started flying.",
+   "start": 10.116541666666667,
+   "end": 12.053458333333333
+  },
+  {
+   "text": "College.",
+   "start": 12.193458333333334,
+   "end": 12.8039375
+  },
+  {
+   "text": "Exams, parties, heartbreak.",
+   "start": 12.9439375,
+   "end": 14.554520833333333
+  },
+  {
+   "text": "Still waiting.",
+   "start": 14.694520833333334,
+   "end": 15.537145833333334
+  },
+  {
+   "text": "First job.",
+   "start": 15.677145833333332,
+   "end": 16.50275
+  },
+  {
+   "text": "A suit, a tie, a beard.",
+   "start": 16.64275,
+   "end": 17.890916666666666
+  },
+  {
+   "text": "Still waiting.",
+   "start": 18.030916666666666,
+   "end": 18.873541666666668
+  },
+  {
+   "text": "And the TV never changed.",
+   "start": 19.013541666666665,
+   "end": 20.518625
+  },
+  {
+   "text": "Trailer two, coming soon.",
+   "start": 20.658625,
+   "end": 22.024020833333335
+  },
+  {
+   "text": "I got married.",
+   "start": 22.164020833333332,
+   "end": 23.045270833333333
+  },
+  {
+   "text": "We had a kid.",
+   "start": 23.185270833333334,
+   "end": 23.994666666666667
+  },
+  {
+   "text": "My hair turned gray.",
+   "start": 24.134666666666668,
+   "end": 25.288625
+  },
+  {
+   "text": "Now I have a wizard beard and reading glasses.",
+   "start": 25.428625,
+   "end": 27.7305625
+  },
+  {
+   "text": "My son walks in with his diploma.",
+   "start": 27.8705625,
+   "end": 29.684645833333335
+  },
+  {
+   "text": "Dad, is it out yet?",
+   "start": 29.824645833333335,
+   "end": 30.8885625
+  },
+  {
+   "text": "Asking for my whole generation.",
+   "start": 31.0285625,
+   "end": 32.75808333333333
+  },
+  {
+   "text": "Not yet, son.",
+   "start": 32.89808333333333,
+   "end": 33.799791666666664
+  },
+  {
+   "text": "Not yet.",
+   "start": 33.939791666666665,
+   "end": 34.626083333333334
+  },
+  {
+   "text": "Go get a job.",
+   "start": 34.766083333333334,
+   "end": 35.733979166666664
+  },
+  {
+   "text": "Years later, lying in a hospital bed, the heart monitor beeping slowly,",
+   "start": 35.873979166666665,
+   "end": 39.57875
+  },
+  {
+   "text": "I pass my dusty, cobweb-covered controller to my grandson.",
+   "start": 39.71875,
+   "end": 43.07745833333333
+  },
+  {
+   "text": "And right then, the TV dings.",
+   "start": 43.21745833333333,
+   "end": 44.885125
+  },
+  {
+   "text": "GTA 6, ready to start.",
+   "start": 45.025125,
+   "end": 46.7295625
+  },
+  {
+   "text": "Finally.",
+   "start": 46.8695625,
+   "end": 47.553666666666665
+  }
+ ]
+}

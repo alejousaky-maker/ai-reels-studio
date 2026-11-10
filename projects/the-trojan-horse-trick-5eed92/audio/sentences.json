@@ -1,0 +1,121 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 52.36566666666667,
+ "voice": "af_heart",
+ "lang": "en",
+ "speed": 0.88,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "Ten years of war couldn't break one wall.",
+   "start": 0.06,
+   "end": 2.338041666666667
+  },
+  {
+   "text": "So one guy weaponized FOMO.",
+   "start": 2.4780416666666665,
+   "end": 4.35875
+  },
+  {
+   "text": "Troy's walls were so strong, Greek spears bounced right off.",
+   "start": 4.49875,
+   "end": 8.01025
+  },
+  {
+   "text": "So Odysseus drew a plan.",
+   "start": 8.15025,
+   "end": 9.711770833333333
+  },
+  {
+   "text": "A giant wooden horse.",
+   "start": 9.851770833333333,
+   "end": 11.310458333333333
+  },
+  {
+   "text": "Hollow.",
+   "start": 11.450458333333334,
+   "end": 12.1563125
+  },
+  {
+   "text": "His best soldiers hid inside, and the whole army sailed away.",
+   "start": 12.2963125,
+   "end": 16.0796875
+  },
+  {
+   "text": "Well, they pretended to.",
+   "start": 16.2196875,
+   "end": 17.710145833333332
+  },
+  {
+   "text": "They hid behind an island.",
+   "start": 17.850145833333332,
+   "end": 19.483229166666668
+  },
+  {
+   "text": "They left one guy behind on the beach.",
+   "start": 19.62322916666667,
+   "end": 21.763791666666666
+  },
+  {
+   "text": "Sinon.",
+   "start": 21.903791666666667,
+   "end": 22.596875
+  },
+  {
+   "text": "Tied up.",
+   "start": 22.736875,
+   "end": 23.447520833333332
+  },
+  {
+   "text": "On purpose.",
+   "start": 23.587520833333333,
+   "end": 24.509145833333335
+  },
+  {
+   "text": "The Trojans found him, and he started crying.",
+   "start": 24.649145833333332,
+   "end": 27.362625
+  },
+  {
+   "text": "That horse is a gift for the goddess Athena, he sobbed.",
+   "start": 27.502625,
+   "end": 30.776375
+  },
+  {
+   "text": "They built it huge, so you could never get it into your city.",
+   "start": 30.916375,
+   "end": 34.3925
+  },
+  {
+   "text": "Because if it gets inside, Troy can never fall.",
+   "start": 34.5325,
+   "end": 37.387145833333335
+  },
+  {
+   "text": "The Trojans could not resist stealing the Greeks' luck.",
+   "start": 37.527145833333336,
+   "end": 40.57179166666667
+  },
+  {
+   "text": "So they tore open their own unbreakable wall, to squeeze it in.",
+   "start": 40.71179166666667,
+   "end": 44.5549375
+  },
+  {
+   "text": "That night, the Greeks climbed out, and opened the gates.",
+   "start": 44.6949375,
+   "end": 47.620375
+  },
+  {
+   "text": "Ten years of attacks failed.",
+   "start": 47.760375,
+   "end": 49.310833333333335
+  },
+  {
+   "text": "Reverse psychology and a wooden toy didn't.",
+   "start": 49.450833333333335,
+   "end": 52.22566666666667
+  }
+ ]
+}

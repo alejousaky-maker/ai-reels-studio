@@ -1,5 +1,43 @@
 # Changelog
 
+## 0.11.0 — 2026-11-11 (megaproject docs: transitions, film looks, animated maps, new worlds)
+- Scene transitions: `dissolve` (soft blurred crossfade), `zoom` (punch through the frame with zoom blur), `whip`
+  (horizontal swipe with motion blur); whooshes follow them in the mix.
+- Film looks per shot (`look`): sepia with vignette for the past, black-and-white archive, cool / warm grades.
+- Motion: people and set pieces land with a squash-and-settle bounce when a new scene starts (not on clause cuts).
+- Particles: money raining, confetti, spark bursts, drifting dust motes.
+- Full-screen animated 2D scenes (`hud`): Manhattan map (toll jam / glowing night grid), Osaka Bay marker drop, the
+  Americas with the Panama shortcut, spinning globe with converging shipping lanes, subway map, seabed cross-section with
+  a sinking island, and the outro loop arrow.
+- Captions moved to the lower third, smaller (80 px at 1080p), hidden on the outro, lower still over map scenes.
+- New locations: subway tunnel under construction + marble station, produce warehouse, Panama-style canal (+1914 dig,
+  drought), artificial island airport (+reclamation), suspension bridge with skyline; airport "aquarium" windows.
+- New pieces: 18-wheeler, forklift, fruit pyramid, container ship, tugboat, steam shovel, mosquito, cement mixer, airliner,
+  excavator, rock pile, tetrapods, departures board, escalator, pipe maze, money counter (on fire), blueprint (CANCELLED),
+  subway map, ribbon, 1920s car. Wardrobe: hi-vis vest, apron, tutu, chef toque, police / pilot caps, beanie, night cap,
+  ballet bun. Roles: engineer, accountant, driver, cop, chef, stocker, ballerina, tollman, pilot, sleeper, commuter.
+  Extras can hold props (`extrasHolding`). Icons: newspaper, pickaxe, shovel, bagel, lettuce, pillow, wrench, cheque,
+  trident, clipboard.
+- Voice for these shorts: `am_fenrir*0.8+am_eric*0.2` (closest measured match to the new reference narrator).
+- Shorts 20–23 (`docs/scripts/build_plans_20_23.py`, `STORIES_20-23.md`).
+
+## 0.10.0 — 2026-11-11 (six GTA 6 shorts; new sets, wardrobe, screens and voice)
+- Voice: Kokoro voice blends (`"am_eric*0.6+am_fenrir*0.4"`) chosen by measurement to sit close to the reference Short's
+  narrator (energetic young male, ~3 words/s at speed 1.12). Listed first in the voice picker.
+- New locations: stock-exchange trading floor (red ticker walls, screen desks), clinic exam room + hospital ward variant,
+  data centre (rack rows, cold LEDs; "red" meltdown variant), stripped apartment ("empty": bare brick, one bulb).
+- New set pieces: cryo tube, crash arrow, console (hot / flames, shakes, blasts off with `lift`), sofa / fridge / bed /
+  dog house with SOLD stickers, big TV (painted game / text / no-internet), calendar, hospital bed, heart monitor,
+  telephone pole, curved monitor, cardboard box, office desk with ringing phone, server rack, protest signs, ticker.
+  Pieces can sit `on` the lead character, shake, and rise.
+- Wardrobe: hoodie with drawstrings, lab coat + stethoscope + head mirror, esports jersey, patched tee, reading glasses,
+  long wizard beard, backwards cap, propeller cap, mortarboard. Roles: streamer, broker, doctor, technician, esports,
+  oldgamer, graduate, teen, officeguy, bathrobe, brokeguy, wife, capgamer. Faces: shattered-glass eyes, "> <" squint,
+  giant sweat drop, sleepy. Characters can stand high (`y`), and the camera rises with them.
+- Screens (`hud`): floating UI panel, progress bar that fills across the shot, police lights.
+- Icons: thermometer, moth, cash stack, noodles, extinguisher, potato, car battery, diploma, sick note, router.
+- Shorts 14–19 (`docs/scripts/build_plans_14_19.py`, `STORIES_14-19.md`).
+
 ## 0.9.0 — 2026-11-11 ("pro" cut: the picture follows every clause)
 - Clause cuts: a beat can carry `shots` (each cuts 2 frames before its word `at` and overrides shot / place / cast / action /
   pieces / effects / HUD). The voice stays one natural sentence; the picture changes every 1.5–2.5 s like pro Shorts.

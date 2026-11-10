@@ -1,0 +1,182 @@
+{
+ "id": "caesar-vs-the-pirates-72e0d7",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 152,
+   "beats": 13,
+   "at": "2026-11-10T03:20:42"
+  },
+  "voice": {
+   "duration": 52.9145625,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 18.9,
+   "status": "done",
+   "voice": "af_heart",
+   "speed": 0.913,
+   "at": "2026-11-10T03:21:19"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 13.4,
+   "method": {
+    "whisper": 20,
+    "spread": 1
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T03:21:32"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1597,
+   "seconds_video": 53.233333333333334,
+   "scenes": 13,
+   "at": "2026-11-10T03:21:32"
+  },
+  "stills": {
+   "status": "done",
+   "count": 39,
+   "at": "2026-11-10T03:23:10"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 214.9,
+   "frames": 1597,
+   "renderedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b07",
+    "b08",
+    "b09",
+    "b10",
+    "b11",
+    "b12",
+    "b13"
+   ],
+   "reusedScenes": [],
+   "fps_render": 7.43,
+   "at": "2026-11-10T03:26:45"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 15.5,
+   "integratedLUFS": -14.01,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.19,
+   "maxGainReductionDB": 6.68,
+   "voiceLUFS": -14.0,
+   "musicLUFS": -29.73,
+   "sfxLUFS": -29.21,
+   "at": "2026-11-10T03:27:00"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\caesar-vs-the-pirates-72e0d7\\output\\caesar-vs-the-pirates_master_v1.mp4",
+   "at": "2026-11-10T03:27:02"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-10T03:27:16"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T02:56:12",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T03:20:42",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T03:21:00",
+   "seconds": 17.7,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T03:21:19",
+   "seconds": 18.9,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T03:21:32",
+   "status": "done",
+   "seconds": 13.4
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T03:21:32",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T03:23:10",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T03:26:45",
+   "status": "done",
+   "seconds": 214.9
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T03:27:00",
+   "status": "done",
+   "seconds": 15.5
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T03:27:02",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T03:27:16",
+   "status": "done"
+  }
+ ],
+ "title": "Caesar vs the Pirates",
+ "created": "2026-11-10T02:56:12",
+ "request": {
+  "title": "Caesar vs the Pirates",
+  "idea": "Caesar vs the Pirates",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 60,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "village_square",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": false,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "claude",
+  "review": "auto_qa",
+  "seed": 23,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "",
+ "requestedSeconds": 60
+}

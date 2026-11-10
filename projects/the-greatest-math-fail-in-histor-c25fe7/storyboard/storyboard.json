@@ -1,0 +1,1302 @@
+{
+ "version": 1,
+ "title": "The Greatest Math Fail in History",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1546,
+ "env": {
+  "preset": "beach",
+  "seed": 4,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "columbus",
+   "name": "Columbus",
+   "outfit": {
+    "jacket": "#b8323a",
+    "pants": "#3a2f2a",
+    "boots": "#3a2f2a",
+    "skin": "#ffe2c2",
+    "hat": "explorer",
+    "cap": "#2e2a36",
+    "buttons": "#e8b83a",
+    "belt": "#5a3b2a"
+   }
+  },
+  {
+   "id": "scholar",
+   "name": "Scholar",
+   "outfit": {
+    "jacket": "#4a3b6a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "hat": "hair",
+    "hair": "#d9d4cc",
+    "moustache": "#d9d4cc"
+   }
+  },
+  {
+   "id": "villager",
+   "name": "Villager",
+   "outfit": {
+    "jacket": "#8a5a3c",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ecd0b6",
+    "hat": "tophat",
+    "cap": "#2f5f6a"
+   }
+  },
+  {
+   "id": "king",
+   "name": "King",
+   "outfit": {
+    "jacket": "#8c2a3a",
+    "pants": "#3a2f2a",
+    "boots": "#4a3426",
+    "skin": "#ffe2c2",
+    "hat": "crown",
+    "build": "stout",
+    "beard": "#8a8278",
+    "sash": "#e8b83a",
+    "buttons": "#e8b83a"
+   }
+  },
+  {
+   "id": "sailor",
+   "name": "Sailor",
+   "outfit": {
+    "jacket": "#e9e2d0",
+    "pants": "#3b5b9a",
+    "boots": "#4a3426",
+    "skin": "#c99067",
+    "hat": "cap",
+    "cap": "#c8323a",
+    "belt": "#5a3b2a"
+   }
+  },
+  {
+   "id": "sailor2",
+   "name": "Sailor",
+   "outfit": {
+    "jacket": "#c9d6e0",
+    "pants": "#3b5b9a",
+    "boots": "#4a3426",
+    "skin": "#f5c9a0",
+    "hat": "cap",
+    "cap": "#c8323a",
+    "belt": "#5a3b2a"
+   }
+  },
+  {
+   "id": "local",
+   "name": "Islander",
+   "outfit": {
+    "jacket": "#e8d9b0",
+    "pants": "#c9a66b",
+    "boots": "#8d5a3b",
+    "skin": "#c99067",
+    "hat": "hair",
+    "hair": "#2a201a"
+   }
+  },
+  {
+   "id": "local2",
+   "name": "Islander",
+   "outfit": {
+    "jacket": "#d8c49a",
+    "pants": "#c9a66b",
+    "boots": "#8d5a3b",
+    "skin": "#8d5a3b",
+    "hat": "hair",
+    "hair": "#2a201a"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 113,
+   "narration": "This guy was so bad at math, he accidentally found two continents.",
+   "light": "golden",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "columbus",
+     "x": 0.0,
+     "z": 2.5,
+     "expr": "smile",
+     "mode": "stand",
+     "holding": "map"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      -2.149,
+      1.68,
+      -2.913
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      2.5
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 46,
+     "dur": 24,
+     "position": [
+      -0.836,
+      1.62,
+      -0.331
+     ],
+     "lookAt": [
+      0,
+      1.5,
+      2.5
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 400,
+   "qualityNotes": "Columbus smug on the beach, his caravel rammed into the shore behind him.",
+   "sunEl": 18,
+   "sunAz": 150,
+   "pieces": [
+    {
+     "kind": "ship",
+     "x": -1.904,
+     "z": 13.615,
+     "y": -2.6,
+     "rock": 1.0
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 60,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 58,
+     "dur": 55,
+     "at": [
+      -0.418,
+      2.28,
+      2.542
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 113,
+   "endFrame": 191,
+   "narration": "And he died refusing to admit he was lost.",
+   "light": "golden",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "columbus",
+     "x": 0.0,
+     "z": 2.5,
+     "expr": "smile_closed",
+     "mode": "stand",
+     "holding": "map"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 113,
+     "position": [
+      0.259,
+      1.62,
+      -0.44
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      2.5
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 401,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150,
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 171,
+     "dur": 20,
+     "at": [
+      -0.273,
+      2.05,
+      2.527
+     ],
+     "size": 0.28371807239363683,
+     "product": "question"
+    }
+   ]
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 191,
+   "endFrame": 315,
+   "narration": "Here's the myth: in 1492, people thought the Earth was flat.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "villager",
+     "x": -0.0,
+     "z": -9.5,
+     "expr": "nervous",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 191,
+     "position": [
+      -1.6,
+      1.68,
+      -15.1
+     ],
+     "lookAt": [
+      -0.0,
+      1.38,
+      -9.5
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 247,
+     "dur": 24,
+     "position": [
+      -0.55,
+      1.62,
+      -12.4
+     ],
+     "lookAt": [
+      -0.0,
+      1.5,
+      -9.5
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 402,
+   "qualityNotes": "",
+   "env": {
+    "preset": "village_square",
+    "seed": 4,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 205,
+     "dur": 60,
+     "at": [
+      -0.42,
+      2.28,
+      -9.5
+     ],
+     "size": 0.42,
+     "product": "scroll"
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "THE MYTH",
+     "frame": 194,
+     "dur": 118,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 315,
+   "endFrame": 444,
+   "narration": "Nope. Educated Europeans knew it was round, and roughly how big.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "scholar",
+     "x": -0.0,
+     "z": -9.5,
+     "expr": "smile",
+     "mode": "stand",
+     "holding": "globe"
+    },
+    {
+     "castId": "villager",
+     "x": 0.612,
+     "z": -8.625,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 387,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 315,
+     "position": [
+      1.0,
+      1.66,
+      -13.8
+     ],
+     "lookAt": [
+      -0.0,
+      1.42,
+      -9.5
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 373,
+     "dur": 24,
+     "position": [
+      0.55,
+      1.62,
+      -12.4
+     ],
+     "lookAt": [
+      -0.0,
+      1.5,
+      -9.5
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 403,
+   "qualityNotes": "",
+   "env": {
+    "preset": "village_square",
+    "seed": 4,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 387,
+     "dur": 57,
+     "at": [
+      -0.42,
+      2.28,
+      -9.5
+     ],
+     "size": 0.42,
+     "product": "lightbulb"
+    }
+   ]
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 444,
+   "endFrame": 538,
+   "narration": "About twenty-five thousand miles around. Huge.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "scholar",
+     "x": 0.0,
+     "z": 9.5,
+     "expr": "smile_closed",
+     "mode": "stand",
+     "holding": "book"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 444,
+     "position": [
+      0.55,
+      1.62,
+      12.4
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      9.5
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 495,
+     "cut": true,
+     "position": [
+      -0.55,
+      1.62,
+      12.4
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      9.5
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 404,
+   "qualityNotes": "",
+   "env": {
+    "preset": "village_square",
+    "seed": 4,
+    "shop": null
+   },
+   "textOverlays": [
+    {
+     "text": "≈ 25,000 miles",
+     "frame": 447,
+     "dur": 88,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 538,
+   "endFrame": 671,
+   "narration": "Columbus read an Arabic measurement, and used shorter Roman miles instead.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "columbus",
+     "x": 2.4,
+     "z": -1.0,
+     "expr": "smile",
+     "mode": "stand",
+     "holding": "map"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 538,
+     "position": [
+      1.929,
+      1.68,
+      4.805
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      -1.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 599,
+     "dur": 24,
+     "position": [
+      2.429,
+      1.62,
+      1.952
+     ],
+     "lookAt": [
+      2.4,
+      1.5,
+      -1.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 405,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "interior",
+    "seed": 4,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 566,
+     "dur": 60,
+     "at": [
+      2.812,
+      2.28,
+      -1.082
+     ],
+     "size": 0.42,
+     "product": "book"
+    }
+   ]
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 671,
+   "endFrame": 742,
+   "narration": "Boom. His Earth shrank by a quarter.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "columbus",
+     "x": 2.0,
+     "z": 1.4,
+     "expr": "grin",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 671,
+     "position": [
+      2.836,
+      1.62,
+      4.231
+     ],
+     "lookAt": [
+      2.0,
+      1.5,
+      1.4
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 406,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "interior",
+    "seed": 4,
+    "shop": null
+   },
+   "kicks": [
+    {
+     "frame": 674,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 672,
+     "dur": 60,
+     "at": [
+      2.273,
+      2.05,
+      1.373
+     ],
+     "size": 0.44330948811505755
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "−25% EARTH",
+     "frame": 674,
+     "dur": 65,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 742,
+   "endFrame": 864,
+   "narration": "On his map, Japan sat just a few weeks west of the Canary Islands.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "columbus",
+     "x": 0.0,
+     "z": -2.2,
+     "expr": "smile_closed",
+     "mode": "stand",
+     "holding": "map"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 742,
+     "position": [
+      -1.6,
+      1.68,
+      3.4
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      -2.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 797,
+     "dur": 24,
+     "position": [
+      -0.55,
+      1.62,
+      0.7
+     ],
+     "lookAt": [
+      0,
+      1.5,
+      -2.2
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 407,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "interior",
+    "seed": 4,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 772,
+     "dur": 60,
+     "at": [
+      0.42,
+      2.28,
+      -2.2
+     ],
+     "size": 0.42,
+     "product": "globe"
+    }
+   ]
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 864,
+   "endFrame": 950,
+   "narration": "The royal experts checked his math, and said no.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "king",
+     "x": 0.0,
+     "z": -2.4,
+     "expr": "stern",
+     "mode": "stand"
+    },
+    {
+     "castId": "columbus",
+     "x": -1.959,
+     "z": -2.94,
+     "expr": "smile",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 933,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 864,
+     "position": [
+      3.0,
+      2.3,
+      5.6
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      -2.4
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 899,
+     "dur": 24,
+     "position": [
+      1.6,
+      1.68,
+      3.2
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      -2.4
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 408,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "throne",
+    "seed": 4,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 933,
+     "dur": 17,
+     "at": [
+      0.42,
+      2.28,
+      -2.4
+     ],
+     "size": 0.42,
+     "product": "scroll"
+    }
+   ]
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 950,
+   "endFrame": 1074,
+   "narration": "Not because of a flat Earth. Because his crew would starve in an empty ocean.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "king",
+     "x": 0.0,
+     "z": -2.4,
+     "expr": "stern",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 950,
+     "position": [
+      -0.55,
+      1.62,
+      0.5
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -2.4
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1018,
+     "cut": true,
+     "position": [
+      0.55,
+      1.62,
+      0.5
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -2.4
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 409,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "throne",
+    "seed": 4,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 1023,
+     "dur": 51,
+     "at": [
+      0.274,
+      2.05,
+      -2.4
+     ],
+     "size": 0.28371807239363683,
+     "product": "clock"
+    }
+   ]
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 1074,
+   "endFrame": 1217,
+   "narration": "And they were right. Except two continents nobody in Europe knew about were in the way.",
+   "light": "golden",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "sailor2",
+     "x": 1.3,
+     "z": -4.5,
+     "expr": "nervous",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1106,
+       "expr": "shock"
+      }
+     ]
+    },
+    {
+     "castId": "sailor",
+     "x": 2.129,
+     "z": -6.261,
+     "expr": "nervous",
+     "mode": "stand"
+    },
+    {
+     "castId": "columbus",
+     "x": 1.307,
+     "z": -3.527,
+     "expr": "smile",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1074,
+     "position": [
+      -3.625,
+      2.3,
+      -2.069
+     ],
+     "lookAt": [
+      1.3,
+      1.2,
+      -4.5
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1140,
+     "dur": 24,
+     "position": [
+      -3.458,
+      1.68,
+      -3.459
+     ],
+     "lookAt": [
+      1.3,
+      1.38,
+      -4.5
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 410,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150,
+   "env": {
+    "preset": "ocean",
+    "seed": 4,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 1106,
+     "dur": 60,
+     "at": [
+      1.25,
+      2.28,
+      -4.083
+     ],
+     "size": 0.42,
+     "product": "exclaim"
+    }
+   ]
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 1217,
+   "endFrame": 1330,
+   "narration": "He landed in the Bahamas, and called the people he met Indians.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "columbus",
+     "x": -3.0,
+     "z": -2.0,
+     "expr": "grin",
+     "mode": "stand",
+     "wave": true
+    },
+    {
+     "castId": "local",
+     "x": -3.791,
+     "z": -2.858,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1304,
+       "expr": "shock"
+      }
+     ]
+    },
+    {
+     "castId": "local2",
+     "x": -2.012,
+     "z": -3.4,
+     "expr": "neutral",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1217,
+     "position": [
+      -4.6,
+      1.68,
+      3.6
+     ],
+     "lookAt": [
+      -3,
+      1.38,
+      -2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1267,
+     "dur": 24,
+     "position": [
+      -3.55,
+      1.62,
+      0.9
+     ],
+     "lookAt": [
+      -3,
+      1.5,
+      -2
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 411,
+   "qualityNotes": "",
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 1304,
+     "dur": 26,
+     "at": [
+      -3.371,
+      2.28,
+      -2.858
+     ],
+     "size": 0.42,
+     "product": "question"
+    }
+   ]
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 1330,
+   "endFrame": 1427,
+   "narration": "Later, he made his crew swear that Cuba was part of Asia.",
+   "light": "golden",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "columbus",
+     "x": 2.0,
+     "z": -3.0,
+     "expr": "stern",
+     "mode": "stand",
+     "holding": "scroll"
+    },
+    {
+     "castId": "sailor",
+     "x": 1.257,
+     "z": -4.066,
+     "expr": "nervous",
+     "mode": "stand"
+    },
+    {
+     "castId": "sailor2",
+     "x": 2.979,
+     "z": -4.157,
+     "expr": "nervous",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1330,
+     "position": [
+      2.471,
+      1.68,
+      2.805
+     ],
+     "lookAt": [
+      2,
+      1.38,
+      -3
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1371,
+     "dur": 24,
+     "position": [
+      1.971,
+      1.62,
+      -0.048
+     ],
+     "lookAt": [
+      2,
+      1.5,
+      -3
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 412,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150,
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 1365,
+     "dur": 60,
+     "at": [
+      1.669,
+      2.28,
+      -3.984
+     ],
+     "size": 0.42,
+     "product": "exclaim"
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "CUBA = ASIA",
+     "frame": 1333,
+     "dur": 91,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b14",
+   "startFrame": 1427,
+   "endFrame": 1546,
+   "narration": "The worst math in history, and the luckiest wrong answer ever.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "columbus",
+     "x": 0.0,
+     "z": 2.5,
+     "expr": "smile",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1482,
+       "expr": "smile_closed"
+      }
+     ],
+     "holding": "map"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1427,
+     "position": [
+      0.259,
+      1.62,
+      -0.44
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      2.5
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1492,
+     "cut": true,
+     "position": [
+      -0.836,
+      1.62,
+      -0.331
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      2.5
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 413,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150,
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 1482,
+     "dur": 60,
+     "at": [
+      -0.273,
+      2.05,
+      2.527
+     ],
+     "size": 0.44330948811505755
+    }
+   ]
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": false,
+  "words": []
+ },
+ "style": "storybook",
+ "graphics": "full"
+}

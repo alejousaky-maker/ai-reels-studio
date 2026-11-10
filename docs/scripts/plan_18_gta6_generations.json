@@ -1,0 +1,436 @@
+{
+ "title": "The Generational Pre-Order",
+ "environment": "bedroom",
+ "seed": 59,
+ "cast": [
+  {
+   "id": "teen",
+   "name": "Me at 16",
+   "role": "teen"
+  },
+  {
+   "id": "uni",
+   "name": "Me at 20",
+   "role": "streamer",
+   "palette": "#3f6fb5"
+  },
+  {
+   "id": "job",
+   "name": "Me at 30",
+   "role": "officeguy",
+   "hair": "#3a2a1e"
+  },
+  {
+   "id": "wife",
+   "name": "Wife",
+   "role": "wife"
+  },
+  {
+   "id": "old",
+   "name": "Me at 70",
+   "role": "oldgamer"
+  },
+  {
+   "id": "son",
+   "name": "Son",
+   "role": "graduate"
+  },
+  {
+   "id": "kid",
+   "name": "Grandson",
+   "role": "kid"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "I pre-ordered GTA 6 as a teenager, and by the time it finally loaded, my son was graduating college.",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "teen",
+     "action": "jump",
+     "expr": "starry"
+    }
+   ],
+   "environment": "bedroom",
+   "envVariant": "day",
+   "camMove": "whip",
+   "hud": "panel",
+   "hudText": "PRE-ORDER CONFIRMED|GTA 6",
+   "shots": [
+    {
+     "at": "by",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "old",
+       "expr": "sleepy"
+      }
+     ],
+     "camMove": "push"
+    },
+    {
+     "at": "son",
+     "shot": "medium",
+     "characters": [
+      {
+       "id": "son",
+       "action": "cheer",
+       "expr": "laugh",
+       "holding": "diploma"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "sparkle",
+       "word": "graduating",
+       "on": "son"
+      }
+     ],
+     "camMove": "orbit"
+    }
+   ]
+  },
+  {
+   "narration": "Twenty thirteen. I clicked pre-order and bounced in my chair for an hour.",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "teen",
+     "action": "jump",
+     "expr": "starry"
+    }
+   ],
+   "text": "2013",
+   "textStyle": "title",
+   "environment": "bedroom",
+   "envVariant": "day",
+   "pieces": [
+    {
+     "kind": "calendar",
+     "where": "right",
+     "label": "2013"
+    }
+   ],
+   "camMove": "push"
+  },
+  {
+   "narration": "Then the calendar pages started flying.",
+   "shot": "close",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "teen",
+     "expr": "shock"
+    }
+   ],
+   "environment": "bedroom",
+   "envVariant": "day",
+   "pieces": [
+    {
+     "kind": "calendar",
+     "where": "right",
+     "label": "2016"
+    }
+   ],
+   "camMove": "whip"
+  },
+  {
+   "narration": "College. Exams, parties, heartbreak. Still waiting.",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "uni",
+     "action": "sit",
+     "expr": "sleepy"
+    }
+   ],
+   "text": "2018",
+   "textStyle": "title",
+   "environment": "bedroom",
+   "envVariant": "day",
+   "pieces": [
+    {
+     "kind": "calendar",
+     "where": "right",
+     "label": "2018"
+    }
+   ]
+  },
+  {
+   "narration": "First job. A suit, a tie, a beard. Still waiting.",
+   "light": "golden",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "job",
+     "action": "hips"
+    }
+   ],
+   "text": "2024",
+   "textStyle": "title",
+   "environment": "bedroom",
+   "pieces": [
+    {
+     "kind": "calendar",
+     "where": "right",
+     "label": "2024"
+    }
+   ],
+   "camMove": "orbit"
+  },
+  {
+   "narration": "And the TV never changed. Trailer two, coming soon.",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "job",
+     "expr": "sleepy"
+    }
+   ],
+   "environment": "bedroom",
+   "pieces": [
+    {
+     "kind": "tv",
+     "where": "left",
+     "label": "TRAILER 2|COMING SOON"
+    }
+   ],
+   "camMove": "truck_left",
+   "shots": [
+    {
+     "at": "Trailer",
+     "shot": "insert",
+     "pieces": [
+      {
+       "kind": "tv",
+       "scale": 1.4,
+       "label": "TRAILER 2|COMING SOON"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "I got married. We had a kid. My hair turned gray.",
+   "shot": "two_shot",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "job",
+     "expr": "smile_closed"
+    },
+    {
+     "id": "wife",
+     "expr": "smile"
+    }
+   ],
+   "focus": "job",
+   "environment": "bedroom",
+   "camMove": "orbit",
+   "shots": [
+    {
+     "at": "We",
+     "shot": "medium",
+     "characters": [
+      {
+       "id": "kid",
+       "action": "jump",
+       "expr": "laugh"
+      }
+     ],
+     "camMove": "push"
+    },
+    {
+     "at": "My",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "old",
+       "expr": "sleepy"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Now I have a wizard beard and reading glasses.",
+   "shot": "close",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "old"
+    }
+   ],
+   "text": "2061",
+   "textStyle": "title",
+   "environment": "bedroom",
+   "pieces": [
+    {
+     "kind": "calendar",
+     "where": "right",
+     "label": "2061"
+    }
+   ],
+   "camMove": "push"
+  },
+  {
+   "narration": "My son walks in with his diploma.",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "son",
+     "action": "walk",
+     "expr": "smile_closed",
+     "holding": "diploma"
+    }
+   ],
+   "environment": "bedroom",
+   "camMove": "follow"
+  },
+  {
+   "narration": "Dad, is it out yet? Asking for my whole generation.",
+   "shot": "close",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "son",
+     "expr": "smile"
+    }
+   ],
+   "environment": "bedroom",
+   "camMove": "push"
+  },
+  {
+   "narration": "Not yet, son. Not yet. Go get a job.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "old",
+     "expr": "nervous"
+    }
+   ],
+   "environment": "bedroom",
+   "camMove": "pull"
+  },
+  {
+   "narration": "Years later, lying in a hospital bed, the heart monitor beeping slowly,",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "old",
+     "action": "sit",
+     "expr": "sleepy"
+    }
+   ],
+   "environment": "clinic",
+   "envVariant": "ward",
+   "pieces": [
+    {
+     "kind": "hospitalbed",
+     "where": "on",
+     "scale": 0.6
+    },
+    {
+     "kind": "heartmonitor",
+     "where": "right"
+    }
+   ],
+   "camMove": "push"
+  },
+  {
+   "narration": "I pass my dusty, cobweb-covered controller to my grandson.",
+   "shot": "two_shot",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "old",
+     "action": "sit",
+     "expr": "smile_closed",
+     "holding": "controller"
+    },
+    {
+     "id": "kid",
+     "expr": "smile"
+    }
+   ],
+   "focus": "old",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "controller",
+     "word": "controller",
+     "on": "old"
+    }
+   ],
+   "environment": "clinic",
+   "envVariant": "ward",
+   "pieces": [
+    {
+     "kind": "hospitalbed",
+     "where": "on",
+     "scale": 0.6
+    }
+   ],
+   "camMove": "orbit"
+  },
+  {
+   "narration": "And right then, the TV dings. GTA 6, ready to start. Finally.",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "kid",
+     "action": "jump",
+     "expr": "starry",
+     "holding": "controller"
+    }
+   ],
+   "impactWord": "dings",
+   "environment": "clinic",
+   "envVariant": "ward",
+   "pieces": [
+    {
+     "kind": "tv",
+     "where": "left",
+     "label": "~game|READY TO START"
+    }
+   ],
+   "camMove": "whip",
+   "shots": [
+    {
+     "at": "GTA",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "old",
+       "expr": "relief"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "sparkle",
+       "word": "ready",
+       "on": "old"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Comedy fiction about GTA 6 (hypothetical delay / size / price / release-day scenarios); the game, console and studio appear only as generic unbranded props.",
+   "status": "fiction"
+  }
+ ]
+}

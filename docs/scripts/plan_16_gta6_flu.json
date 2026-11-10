@@ -1,0 +1,409 @@
+{
+ "title": "The Vice City Flu",
+ "environment": "bedroom",
+ "seed": 47,
+ "cast": [
+  {
+   "id": "me",
+   "name": "Employee",
+   "role": "bathrobe"
+  },
+  {
+   "id": "boss",
+   "name": "Boss",
+   "role": "boss"
+  },
+  {
+   "id": "doc",
+   "name": "Doctor",
+   "role": "doctor"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "The day GTA 6 drops, forty million men will mysteriously catch the exact same fake illness at eight AM.",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "smile",
+     "holding": "thermometer"
+    }
+   ],
+   "environment": "bedroom",
+   "envVariant": "day",
+   "pieces": [
+    {
+     "kind": "tv",
+     "where": "right",
+     "label": "~game|LOADING..."
+    }
+   ],
+   "camMove": "whip",
+   "shots": [
+    {
+     "at": "forty",
+     "shot": "wide",
+     "environment": "suburb",
+     "characters": [],
+     "extras": 7,
+     "extrasRole": "bathrobe",
+     "text": "40,000,000",
+     "textStyle": "title",
+     "camMove": "pull"
+    },
+    {
+     "at": "fake",
+     "shot": "close",
+     "environment": "bedroom",
+     "envVariant": "day",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "pained",
+       "holding": "thermometer"
+      }
+     ]
+    },
+    {
+     "at": "eight",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "smile_closed"
+      }
+     ],
+     "camMove": "push",
+     "hud": "panel",
+     "hudText": "8:00 AM|CALL IN SICK"
+    }
+   ]
+  },
+  {
+   "narration": "He holds the thermometer over a steaming cup of coffee. One hundred and three degrees.",
+   "shot": "insert",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "smile",
+     "holding": "thermometer"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "steam",
+     "word": "coffee",
+     "on": "me"
+    }
+   ],
+   "environment": "bedroom",
+   "envVariant": "day",
+   "camMove": "push"
+  },
+  {
+   "narration": "Then the weakest cough in human history.",
+   "shot": "close",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "pained",
+     "holding": "phone"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "puff",
+     "word": "cough",
+     "on": "me"
+    }
+   ],
+   "impactWord": "cough",
+   "environment": "bedroom",
+   "envVariant": "day"
+  },
+  {
+   "narration": "Boss, I think I'm dying.",
+   "shot": "extreme",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "nervous",
+     "holding": "phone"
+    }
+   ],
+   "environment": "bedroom",
+   "envVariant": "day",
+   "camMove": "push",
+   "hud": "phone",
+   "hudText": "Calling BOSS..."
+  },
+  {
+   "narration": "Meanwhile, at nine o'clock, the office is a ghost town.",
+   "shot": "wide",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "boss",
+     "expr": "stern"
+    }
+   ],
+   "text": "9:00 AM",
+   "textStyle": "title",
+   "environment": "office",
+   "pieces": [
+    {
+     "kind": "desk",
+     "where": "left"
+    },
+    {
+     "kind": "desk",
+     "where": "right",
+     "mirror": true
+    }
+   ],
+   "spot": 3,
+   "camMove": "truck_right"
+  },
+  {
+   "narration": "Fifty empty desks. Twenty phones ringing at once.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "boss",
+     "action": "panic",
+     "expr": "shock"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "phone",
+     "word": "phones",
+     "on": "boss"
+    }
+   ],
+   "environment": "office",
+   "pieces": [
+    {
+     "kind": "desk",
+     "where": "left",
+     "label": "ring"
+    },
+    {
+     "kind": "desk",
+     "where": "right",
+     "mirror": true,
+     "label": "ring"
+    }
+   ],
+   "camMove": "orbit",
+   "shots": [
+    {
+     "at": "Twenty",
+     "shot": "low",
+     "pieces": [
+      {
+       "kind": "desk",
+       "where": "front",
+       "label": "ring"
+      },
+      {
+       "kind": "desk",
+       "where": "left",
+       "label": "ring"
+      }
+     ],
+     "camMove": "truck_left"
+    }
+   ]
+  },
+  {
+   "narration": "The boss picks up.",
+   "shot": "close",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "boss",
+     "expr": "stern",
+     "holding": "phone"
+    }
+   ],
+   "environment": "office",
+   "camMove": "push"
+  },
+  {
+   "narration": "I'm in bed with a fever, says the employee, controller in hand.",
+   "light": "night",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sit",
+     "expr": "smile_closed",
+     "holding": "controller"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "pull",
+   "shots": [
+    {
+     "at": "says",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "grin",
+       "holding": "controller"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": "But behind him, police lights flash across the walls,",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "crazy",
+     "holding": "controller"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "orbit",
+   "hud": "police"
+  },
+  {
+   "narration": "and a helicopter roars through his headset.",
+   "shot": "extreme",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "boss",
+     "expr": "broken",
+     "holding": "phone"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "helicopter",
+     "on": "boss"
+    }
+   ],
+   "impactWord": "helicopter",
+   "environment": "office",
+   "camMove": "whip"
+  },
+  {
+   "narration": "So the boss storms across town into the clinic for a real doctor's note.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "boss",
+     "action": "run",
+     "expr": "stern"
+    }
+   ],
+   "environment": "clinic",
+   "camMove": "follow"
+  },
+  {
+   "narration": "The doctor has his feet up, playing GTA 6 on a portable screen.",
+   "characters": [
+    {
+     "id": "doc",
+     "action": "sit",
+     "expr": "grin",
+     "holding": "tablet"
+    }
+   ],
+   "environment": "clinic",
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "playing",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "doc",
+       "action": "sit",
+       "expr": "starry",
+       "holding": "tablet"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": "Without looking up, he hands over a pre-signed sick note.",
+   "shot": "two_shot",
+   "characters": [
+    {
+     "id": "doc",
+     "action": "sit",
+     "expr": "smile_closed",
+     "holding": "sicknote"
+    },
+    {
+     "id": "boss",
+     "expr": "broken"
+    }
+   ],
+   "focus": "doc",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "sicknote",
+     "word": "note",
+     "on": "doc"
+    }
+   ],
+   "impactWord": "pre-signed",
+   "environment": "clinic"
+  },
+  {
+   "narration": "Get well soon. Next! The waiting room is full of men in bathrobes.",
+   "shot": "extreme",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "boss",
+     "expr": "dazed"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "stars",
+     "word": "well",
+     "on": "boss"
+    }
+   ],
+   "environment": "clinic",
+   "camMove": "pull",
+   "shots": [
+    {
+     "at": "waiting",
+     "shot": "wide",
+     "characters": [
+      {
+       "id": "doc",
+       "action": "sit",
+       "expr": "grin",
+       "holding": "tablet"
+      }
+     ],
+     "extras": 6,
+     "extrasRole": "bathrobe",
+     "camMove": "truck_right"
+    }
+   ]
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Comedy fiction about GTA 6 (hypothetical delay / size / price / release-day scenarios); the game, console and studio appear only as generic unbranded props.",
+   "status": "fiction"
+  }
+ ]
+}

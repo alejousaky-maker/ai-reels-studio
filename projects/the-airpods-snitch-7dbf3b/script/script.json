@@ -1,0 +1,530 @@
+{
+ "lang": "en",
+ "title": "The AirPods Snitch",
+ "words": 112,
+ "beats": [
+  {
+   "narration": "She caught her boyfriend cheating before she even turned off her car.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "gf",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": "phone"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "gf",
+   "fx": [],
+   "impactWord": "car",
+   "transition": "cut",
+   "text": "CONNECTED: BEDROOM AIRPODS",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "car",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "She came home early to surprise him.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "gf",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "gf",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "car",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Then her car connected to his AirPods. The ones upstairs.",
+   "shot": "close",
+   "light": "golden",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "gf",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "upstairs",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "gf",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "earbuds",
+     "color": null,
+     "word": "AirPods",
+     "on": "gf"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "And her car speakers started playing his bedroom.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "gf",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": "phone"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "gf",
+   "fx": [
+    {
+     "kind": "notes",
+     "product": null,
+     "color": null,
+     "word": "playing",
+     "on": "gf"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "car",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Upstairs, he and another girl were sharing his AirPods, laughing.",
+   "shot": "two_shot",
+   "light": "night",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "bf",
+     "action": "stand",
+     "expr": "laugh",
+     "react": null,
+     "holding": "earbuds"
+    },
+    {
+     "id": "girl",
+     "action": "stand",
+     "expr": "laugh",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "bf",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "They had no idea the mic was live.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "bf",
+     "action": "stand",
+     "expr": "laugh",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "bf",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "mic",
+     "color": null,
+     "word": "mic",
+     "on": "bf"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "She didn't scream. She just listened.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "gf",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "gf",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Then she picked up her phone, and spoke into the mic.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "gf",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": "phone"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "gf",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "mic",
+     "color": null,
+     "word": "mic",
+     "on": "gf"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Hi babe. Enjoy your last night in my house.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "gf",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "gf",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Through the upstairs window, two silhouettes froze.",
+   "shot": "two_shot",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "bf",
+     "action": "stand",
+     "expr": "laugh",
+     "react": {
+      "word": "froze",
+      "expr": "shock"
+     },
+     "holding": null
+    },
+    {
+     "id": "girl",
+     "action": "stand",
+     "expr": "laugh",
+     "react": {
+      "word": "froze",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "bf",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "color": null,
+     "word": "froze",
+     "on": "bf"
+    }
+   ],
+   "impactWord": "froze",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "By morning, the locks were changed and his stuff was on the lawn.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "bf",
+     "action": "stand",
+     "expr": "dazed",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "bf",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "boxes",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null
+    },
+    {
+     "kind": "van",
+     "where": "behind",
+     "dx": 2.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "He kept the AirPods.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "bf",
+     "action": "stand",
+     "expr": "pained",
+     "react": null,
+     "holding": "earbuds"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "bf",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "Bluetooth: connecting people. Especially the wrong ones.",
+   "shot": "close",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "gf",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "wrong",
+      "expr": "smile_closed"
+     },
+     "holding": "key"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "gf",
+   "fx": [
+    {
+     "kind": "sparkle",
+     "product": null,
+     "color": null,
+     "word": "wrong",
+     "on": "gf"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  }
+ ]
+}

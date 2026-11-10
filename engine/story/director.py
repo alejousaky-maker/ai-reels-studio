@@ -104,7 +104,7 @@ def _wf_of(ws: list[dict], w: dict, fps: int) -> int:
 
 
 _SUB_KEEP = ("shot", "light", "environment", "envVariant", "spot", "characters", "extras", "extrasAction", "extrasRole", "focus",
-             "fx", "impactWord", "transition", "text", "textStyle", "pieces", "camMove", "hud", "hudText", "visual")
+             "fx", "impactWord", "transition", "text", "textStyle", "pieces", "camMove", "hud", "hudText", "visual", "look", "extrasHolding")
 
 
 def expand_views(plan: Plan, spans, fps: int) -> list[tuple]:
@@ -274,6 +274,8 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                     act["exprKeys"] = [{"frame": wf, "expr": c.react.expr}]
             if c.holding:
                 act["holding"] = c.holding
+            if c.y:
+                act["y"] = c.y
             pos[c.id] = (x, z)
             actors.append(act)
         for e in range(min(beat.extras, 2) if plan.graphics == "simple" else beat.extras):
@@ -288,7 +290,7 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
             Dp = 3.0 + 1.1 * (e % 3)
             actors.append({"castId": eid, "x": round(Cx + rx * L + ux * Dp, 3), "z": round(Cz + rz * L + uz * Dp, 3),
                            "mode": {"dance": "dance", "walk": "stroll", "march": "march", "sit": "sit"}.get(beat.extrasAction, "stand"),
-                           "expr": ["smile", "grin", "nervous", "neutral", "laugh"][e % 5]})
+                           "expr": ["smile", "grin", "nervous", "neutral", "laugh"][e % 5], **({"holding": beat.extrasHolding} if beat.extrasHolding else {})})
         # ---- camera ----
         sp = SHOTS[beat.shot]
         tx, tz = pos.get(focus_id, (Cx0, Cz0)) if beat.shot in ("close", "insert", "two_shot", "extreme", "worm", "dutch") else (Cx0, Cz0)
@@ -296,6 +298,7 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
             tx, tz = tx - ux * 1.1, tz - uz * 1.1
         side_sign = 1 if si % 2 == 0 else -1   # consecutive shots alternate sides (clause cuts never look like a jump cut)
         fscale = scale_of.get(focus_id, 1.0)
+        focus_y = next((c.y or 0.0 for c in chars if c.id == focus_id), 0.0)
         if anc.get("shop") and beat.shot in ("wide", "medium", "high"):
             side_sign = 0           # the shop sign is the subject: frame it centred, never cropped
 
@@ -314,7 +317,8 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
             k_h = fscale if shot in ("close", "insert", "two_shot", "medium", "extreme", "dutch", "worm") else (0.6 * fscale if fscale > 1.2 else 1.0)
             lens_h = p["h"] if shot in ("high", "low", "wide", "worm") else p["h"] * k_h + (1 - k_h) * 0.35
             roll += p.get("roll", 0.0) * (s_sign or 1)
-            return {"position": [round(cx, 3), round(lens_h, 3), round(cz, 3)], "lookAt": [round(tx, 3), round(p["lh"] * k_h, 3), round(tz, 3)], "fov": p["fov"], "roll": round(roll, 4)}
+            yo = focus_y   # the lead stands up high (on a pole, hanging from a rocket): lens and aim rise with them
+            return {"position": [round(cx, 3), round(lens_h + yo, 3), round(cz, 3)], "lookAt": [round(tx, 3), round(p["lh"] * k_h + yo, 3), round(tz, 3)], "fov": p["fov"], "roll": round(roll, 4)}
 
         keys = [{"frame": a, **frame_at(beat.shot, side_sign)}]
         if anc.get("shop") and beat.shot == "wide":   # include the whole sign (5.6 m) + awning: look a bit higher
@@ -362,6 +366,8 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                  "seed": plan.seed * 100 + bi + 37 * sub_k, "qualityNotes": beat.visual or ""}
         if sub_k:
             scene["sub"] = True     # a clause cut inside a sentence (the ambience bed carries on)
+        if beat.look:
+            scene["look"] = beat.look
         if beat.hud:
             scene["hud"] = {"kind": beat.hud, **({"text": beat.hudText} if beat.hudText else {})}
         for w_ in (beat.impactWord, *[x.word for x in beat.fx]):
@@ -370,7 +376,7 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                 for w in ws:
                     if _norm(w["w"]).startswith(_norm(w_)) and _wf_of(ws, w, fps) - LEAD == wf_:
                         hot.add(w["s"])
-        if beat.light == "golden" and env_b in ("beach", "troy", "ocean", "suburb", "lake", "resort", "outback"):
+        if beat.light == "golden" and env_b in ("beach", "troy", "ocean", "suburb", "lake", "resort", "outback", "canal", "island", "bridge"):
             scene["sunEl"], scene["sunAz"] = 18, 150
         if env_b in ROOMS or env_b == "cave":   # open-topped rooms: a high sun pours in over the walls
             scene["sunEl"], scene["sunAz"] = (42, 165) if env_b == "cave" else (68, 35)   # cave: light from behind the lens onto the far wall
@@ -384,6 +390,8 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                 off_l, off_d = 0.0, 3.5 + 0.55 * ph * k
             elif pc.where == "far":
                 off_l, off_d = 0.0, 12.0 + ph * k
+            elif pc.where == "on":   # over the lead character: a cryo tube around him, a bed / box in front of him
+                off_l, off_d = 0.0, -0.35
             elif pc.where in ("left", "right"):
                 # centre the piece at ~55 % of the visible half-width at its depth (the cast moved the other way)
                 off_d = 1.0 + 0.1 * pw * k
@@ -408,6 +416,11 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                 spec["label"] = pc.label
             if pc.spin:
                 spec["spin"] = pc.spin
+            if pc.shake:
+                spec["shake"] = pc.shake
+            if pc.lift is not None:   # blast-off across the shot (accelerating)
+                spec["liftTo"] = pc.lift
+                spec.setdefault("moveFrames", [a + int(0.15 * (b - a)), b])
             if pc.kind in ("ship", "galley") and env_b in ("beach", "troy", "harbour", "ocean"):
                 spec["rock"] = 1.0
             if pc.move:
@@ -440,19 +453,26 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                 if ks > 1.2:
                     y, side = y * ks * 0.92, side * ks
                 at = [round(who[0] + rx * side, 3), round(y, 3), round(who[1] + rz * side, 3)]
+            elif f.kind in ("money", "confetti", "dust"):   # particles raining / drifting through the whole frame around the subject
+                at = [round(who[0] - ux * 0.6, 3), 1.4, round(who[1] - uz * 0.6, 3)]; size = 3.2
+            elif f.kind == "sparks":
+                at = [round(who[0] + rx * 0.5, 3), 1.2, round(who[1] + rz * 0.5, 3)]; size = 1.0
             elif f.kind == "splash":   # a liquid wave rolling in behind/beside the subject, base on the ground
                 at = [round(who[0] + rx * 1.4 + ux * 2.5, 3), 1.6, round(who[1] + rz * 1.4 + uz * 2.5, 3)]; size = 4.2
             elif f.kind == "steam":   # rises from the held cup (right hand), not over the body
                 at = [round(who[0] + rx * 0.42, 3), 1.32, round(who[1] + rz * 0.42 - uz * 0.05, 3)]; size = 0.32
             else:
                 at = [round(who[0], 3), 1.0, round(who[1], 3)]; size = 0.9
-            d = b - fr if f.kind in ("notes", "steam") else min(60, b - fr)
+            d = b - fr if f.kind in ("notes", "steam", "money", "confetti", "dust") else min(60, b - fr)
             if f.kind == "splash":
                 d = min(45, b - fr)
             if d > 4:
                 fxs.append({"kind": f.kind, "frame": fr, "dur": d, "at": at, "size": size, **({"product": f.product} if f.product else {}),
                             **({"color": f.color} if getattr(f, "color", None) else {})})
         if fxs:
+            if focus_y:
+                for e in fxs:
+                    e["at"][1] = round(e["at"][1] + focus_y, 3)
             scene["fx"] = fxs
         if beat.text:
             scene["textOverlays"] = [{"text": beat.text, "frame": a + 3, "dur": max(20, b - a - 6), "position": "bottom" if beat.textStyle == "cta" else "top", "style": beat.textStyle}]

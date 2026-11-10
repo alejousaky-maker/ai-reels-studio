@@ -1,0 +1,639 @@
+{
+ "version": 1,
+ "title": "The Smart Scale Trap",
+ "lang": "en",
+ "style": "storybook",
+ "environment": "apartment",
+ "seed": 12,
+ "cast": [
+  {
+   "id": "guy",
+   "name": "Him",
+   "role": "businessman",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "gf",
+   "name": "Girlfriend",
+   "role": "woman",
+   "palette": "#e06a9a",
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "towel",
+   "name": "Towel guy",
+   "role": "towelguy",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "mom",
+   "name": "Her mom",
+   "role": "villager_woman",
+   "palette": "#5d7a3a",
+   "skin": null,
+   "hair": null,
+   "shades": null
+  }
+ ],
+ "beats": [
+  {
+   "narration": "A guy caught his girlfriend cheating, because his bathroom floor snitched on her at three in the morning.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "guy",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": "receipt"
+    },
+    {
+     "id": "towel",
+     "action": "stand",
+     "expr": "nervous",
+     "react": {
+      "word": "snitched",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "guy",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "color": null,
+     "word": "snitched",
+     "on": "towel"
+    }
+   ],
+   "impactWord": "snitched",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bathroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "scale",
+     "where": "front",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 2.0,
+     "y": null,
+     "mirror": false,
+     "move": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "He was away on a business trip.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "guy",
+     "action": "walk",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "airport",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "His girlfriend texted: sleeping alone all weekend. Miss you.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "gf",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": "phone"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "product",
+     "product": "heart",
+     "color": null,
+     "word": "Miss",
+     "on": "gf"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "apartment",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "She forgot one tiny detail. His smart scale.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "guy",
+     "action": "stand",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "product",
+     "product": "wifi",
+     "color": null,
+     "word": "scale",
+     "on": "guy"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bathroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "scale",
+     "where": "front",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 2.0,
+     "y": null,
+     "mirror": false,
+     "move": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "It syncs every single weigh-in to his phone.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "guy",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": "phone"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "product",
+     "product": "phone",
+     "color": null,
+     "word": "phone",
+     "on": "guy"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "hotel",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "At two forty-five in the morning, his phone dinged.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "guy",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "dinged",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "product",
+     "product": "clock",
+     "color": null,
+     "word": "dinged",
+     "on": "guy"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "2:45 AM",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "hotel",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "New weight recorded. One hundred ninety-five pounds.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "guy",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": "pounds",
+   "transition": "cut",
+   "text": "NEW WEIGHT: 195 lbs",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "hotel",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "His girlfriend weighs one hundred fifteen.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "gf",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "fifteen",
+      "expr": "nervous"
+     },
+     "holding": "phone"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "SHE: 115 lbs",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "apartment",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "At eight in the morning, the scale saved a brand new guest profile. With body fat.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "towel",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "guest",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "color": null,
+     "word": "guest",
+     "on": "towel"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "GUEST PROFILE SAVED",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bathroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "scale",
+     "where": "front",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 2.0,
+     "y": null,
+     "mirror": false,
+     "move": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "He didn't call. He didn't yell.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "guy",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "hotel",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "He renamed the home Wi-Fi: Who weighs one ninety-five?",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "gf",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "Who",
+      "expr": "shock"
+     },
+     "holding": "phone"
+    },
+    {
+     "id": "towel",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "weighs",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "gf",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "wifi",
+     "color": null,
+     "word": "Wi-Fi",
+     "on": "gf"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": "WI-FI: WHO WEIGHS 195?",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "apartment",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Then he shipped all her stuff to her parents' house.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "mom",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "parents",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "boxes",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null
+    },
+    {
+     "kind": "van",
+     "where": "behind",
+     "dx": 2.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Before his flight even landed.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "guy",
+     "action": "walk",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "airport",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Turns out, cheating is hard when even the floor keeps receipts.",
+   "shot": "close",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "guy",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "receipts",
+      "expr": "smile_closed"
+     },
+     "holding": "receipt"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "sparkle",
+     "product": null,
+     "color": null,
+     "word": "receipts",
+     "on": "guy"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "airport",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Fictional comedy story (not a real event).",
+   "status": "fiction",
+   "source": null
+  }
+ ],
+ "creativeHooks": [
+  "His bathroom floor snitched on her at 3 AM.",
+  "Even the floor keeps receipts."
+ ],
+ "brand": null,
+ "cta": null,
+ "captions": false,
+ "graphics": "full"
+}

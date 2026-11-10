@@ -67,9 +67,9 @@ def build_sfx(sb: dict, duration: float, voice_lufs: float, seed: int = 11) -> t
                 D.place(out, D.fades(seg * D.dbg(bed - L), 0.25, 0.25), a)
             cues.append({"t": round(a, 3), "kind": "bed", "what": f"{light} ambience" + (" + crowd" if len(s.get('actors', [])) >= 4 else "")})
         tr = s.get("transitionIn", "cut")
-        if i > 0 and tr in ("flash", "xfade"):
-            t0 = a - (0.22 if tr == "flash" else 0.12)
-            _ev(out, S.whoosh(0.55, r, peak=0.35), max(0, t0), ev - (2 if tr == "flash" else 5), 0.0)
+        if i > 0 and tr in ("flash", "xfade", "dissolve", "zoom", "whip"):
+            t0 = a - (0.22 if tr in ("flash", "zoom", "whip") else 0.12)
+            _ev(out, S.whoosh(0.55, r, peak=0.35), max(0, t0), ev - (2 if tr in ("flash", "zoom", "whip") else 5), 0.0)
             cues.append({"t": round(t0, 3), "kind": "whoosh", "what": f"{tr} into {s['sceneId']}"})
         for k in s.get("cameraKeys", [])[1:]:
             if k.get("cut") or k.get("dur", 24) > 40:   # slow camera moves across a whole shot are silent

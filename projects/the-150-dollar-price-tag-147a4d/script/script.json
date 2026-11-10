@@ -1,0 +1,930 @@
+{
+ "lang": "en",
+ "title": "The 150 Dollar Price Tag",
+ "words": 147,
+ "beats": [
+  {
+   "narration": "Rumors say GTA 6 might cost a hundred and fifty dollars, and gamers are already selling their furniture just to pre-order the base edition.",
+   "shot": "close",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "apartment",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "whip",
+   "hud": "panel",
+   "hudText": "GTA 6|STANDARD: $150|COLLECTOR'S: $500!",
+   "shots": [
+    {
+     "at": "selling",
+     "shot": "wide",
+     "light": null,
+     "environment": "suburb",
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "point",
+       "expr": "grin",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": 3,
+     "extrasAction": null,
+     "extrasRole": "villager_man",
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": [
+      {
+       "kind": "sofa",
+       "where": "left",
+       "dx": 0.0,
+       "dz": 0.0,
+       "scale": null,
+       "y": null,
+       "mirror": false,
+       "move": null,
+       "label": "SOLD",
+       "spin": null,
+       "lift": null,
+       "shake": null
+      },
+      {
+       "kind": "fridge",
+       "where": "right",
+       "dx": 0.0,
+       "dz": 0.0,
+       "scale": null,
+       "y": null,
+       "mirror": false,
+       "move": null,
+       "label": "SOLD",
+       "spin": null,
+       "lift": null,
+       "shake": null
+      }
+     ],
+     "camMove": "truck_right",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    },
+    {
+     "at": "pre-order",
+     "shot": "extreme",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "stand",
+       "expr": "starry",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "He checks his pockets. Both of them.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "me",
+     "action": "shrug",
+     "expr": "nervous",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "apartment",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Only a moth flies out.",
+   "shot": "extreme",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "broken",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "product",
+     "product": "moth",
+     "color": null,
+     "word": "moth",
+     "on": "me"
+    }
+   ],
+   "impactWord": "moth",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "apartment",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": null,
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "So he drags everything he owns onto the front lawn for a yard sale.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "walk",
+     "expr": "stern",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "sofa",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "follow",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Sofa, sold. Fridge, sold. Bed, sold.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "grin",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "sofa",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "SOLD",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "whip",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "Fridge",
+     "shot": null,
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "hips",
+       "expr": "grin",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": [
+      {
+       "kind": "fridge",
+       "where": "left",
+       "dx": 0.0,
+       "dz": 0.0,
+       "scale": null,
+       "y": null,
+       "mirror": false,
+       "move": null,
+       "label": "SOLD",
+       "spin": null,
+       "lift": null,
+       "shake": null
+      }
+     ],
+     "camMove": "whip",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    },
+    {
+     "at": "Bed",
+     "shot": null,
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "cheer",
+       "expr": "laugh",
+       "react": null,
+       "holding": "cash",
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": [
+      {
+       "kind": "bed",
+       "where": "left",
+       "dx": 0.0,
+       "dz": 0.0,
+       "scale": null,
+       "y": null,
+       "mirror": false,
+       "move": null,
+       "label": "SOLD",
+       "spin": null,
+       "lift": null,
+       "shake": null
+      }
+     ],
+     "camMove": "whip",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "Even the dog house. Sold.",
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "crazy",
+     "react": null,
+     "holding": "cash",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": "Sold",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "doghouse",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "SOLD",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Neighbors walk away with his whole life, piece by piece, for cash.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 5,
+   "extrasAction": "walk",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "sofa",
+     "where": "far",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": "right",
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": "villager_man",
+   "spot": null,
+   "visual": null,
+   "camMove": "pull",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Then he trades his car keys for a single gift card.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": "key",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "product",
+     "product": "card",
+     "color": null,
+     "word": "gift",
+     "on": "me"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "car",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "orbit",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "gift",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "stand",
+       "expr": "starry",
+       "react": null,
+       "holding": "card",
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": null,
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "He walks back inside in his socks and headphones, smiling like a millionaire.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "walk",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "follow",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Rent is due tomorrow. He does not care.",
+   "shot": "close",
+   "light": "night",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "apartment",
+   "envVariant": "empty",
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": "phone",
+   "hudText": "RENT DUE TOMORROW",
+   "shots": []
+  },
+  {
+   "narration": "The apartment is now completely empty.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "apartment",
+   "envVariant": "empty",
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "pull",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Bare brick. One light bulb. No furniture.",
+   "shot": "high",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "apartment",
+   "envVariant": "empty",
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "orbit",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "One",
+     "shot": "worm",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": null,
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "crane_up",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    },
+    {
+     "at": "No",
+     "shot": "wide",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": null,
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "truck_left",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "He sits on a cardboard box, eating cold instant noodles,",
+   "shot": "medium",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sit",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": "noodles",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "apartment",
+   "envVariant": "empty",
+   "pieces": [
+    {
+     "kind": "cardbox",
+     "where": "on",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "in front of an eighty-five inch TV running GTA 6.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sit",
+     "expr": "starry",
+     "react": null,
+     "holding": "noodles",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "apartment",
+   "envVariant": "empty",
+   "pieces": [
+    {
+     "kind": "tv",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 1.6,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "~game",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "truck_right",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Happiest man alive. No couch, no bed, no regrets.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "starry",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "sparkle",
+     "product": null,
+     "color": null,
+     "word": "Happiest",
+     "on": "me"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "apartment",
+   "envVariant": "empty",
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  }
+ ]
+}

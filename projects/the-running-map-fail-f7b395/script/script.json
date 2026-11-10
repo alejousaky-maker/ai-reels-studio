@@ -1,0 +1,507 @@
+{
+ "lang": "en",
+ "title": "The Running Map Fail",
+ "words": 124,
+ "beats": [
+  {
+   "narration": "He bragged about running five miles every morning, until his GPS map drew a line straight to his ex's house.",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "hub",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "wife",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": "tablet"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "hub",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "gpsmap",
+     "color": null,
+     "word": "map",
+     "on": "wife"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "kitchen",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Every day at six, he laced up and left.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "hub",
+     "action": "walk",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "hub",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "His running app shared every route. Publicly.",
+   "shot": "close",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "wife",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": "tablet"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "wife",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "phone",
+     "color": null,
+     "word": "Publicly",
+     "on": "wife"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "kitchen",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "His wife opened the map.",
+   "shot": "close",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "wife",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "wife",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "gpsmap",
+     "color": null,
+     "word": "map",
+     "on": "wife"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "kitchen",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "Five miles? The red line went three blocks, and stopped at one pink house.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "wife",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "pink",
+      "expr": "shock"
+     },
+     "holding": "tablet"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "wife",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "gpsmap",
+     "color": null,
+     "word": "pink",
+     "on": "wife"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "5 MILES? 3 BLOCKS.",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "kitchen",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "For forty-five minutes.",
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "wife",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "wife",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "clock",
+     "color": null,
+     "word": "minutes",
+     "on": "wife"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "45 MIN",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "kitchen",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Heart rate: one sixty-five. While standing still.",
+   "shot": "close",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "wife",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "wife",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "heart",
+     "color": null,
+     "word": "Heart",
+     "on": "wife"
+    }
+   ],
+   "impactWord": "still",
+   "transition": "cut",
+   "text": "165 BPM",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "kitchen",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "The pink house belonged to his ex.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "ex",
+     "action": "wave",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "ex",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "His wife didn't say a word. She planned a finish line.",
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "wife",
+     "action": "stand",
+     "expr": "stern",
+     "react": {
+      "word": "finish",
+      "expr": "smile"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "wife",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "lightbulb",
+     "color": null,
+     "word": "finish",
+     "on": "wife"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "kitchen",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Next morning, he jogged home smiling.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "hub",
+     "action": "walk",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "hub",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "A red finish tape was stretched across the lawn, tied to two packed suitcases.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "hub",
+     "action": "stand",
+     "expr": "grin",
+     "react": {
+      "word": "suitcases",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "hub",
+   "fx": [],
+   "impactWord": "suitcases",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "finish",
+     "where": "behind",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "And divorce papers, with his route printed on the back.",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "wife",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": "scroll"
+    },
+    {
+     "id": "hub",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "wife",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "gpsmap",
+     "color": null,
+     "word": "route",
+     "on": "wife"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "He finally finished a run. Just not the one he planned.",
+   "shot": "close",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "wife",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "planned",
+      "expr": "smile_closed"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "wife",
+   "fx": [
+    {
+     "kind": "sparkle",
+     "product": null,
+     "color": null,
+     "word": "planned",
+     "on": "wife"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  }
+ ]
+}

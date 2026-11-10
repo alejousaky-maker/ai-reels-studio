@@ -1,0 +1,182 @@
+{
+ "id": "the-great-emu-war-47ee31",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 138,
+   "beats": 13,
+   "at": "2026-11-10T03:14:29"
+  },
+  "voice": {
+   "duration": 52.638958333333335,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 18.6,
+   "status": "done",
+   "voice": "af_heart",
+   "speed": 0.881,
+   "at": "2026-11-10T03:15:05"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 12.2,
+   "method": {
+    "whisper": 19,
+    "spread": 0
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T03:15:17"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1591,
+   "seconds_video": 53.03333333333333,
+   "scenes": 13,
+   "at": "2026-11-10T03:15:17"
+  },
+  "stills": {
+   "status": "done",
+   "count": 39,
+   "at": "2026-11-10T03:16:45"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 204.4,
+   "frames": 1591,
+   "renderedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b07",
+    "b08",
+    "b09",
+    "b10",
+    "b11",
+    "b12",
+    "b13"
+   ],
+   "reusedScenes": [],
+   "fps_render": 7.78,
+   "at": "2026-11-10T03:20:09"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 17.4,
+   "integratedLUFS": -14.02,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.17,
+   "maxGainReductionDB": 5.74,
+   "voiceLUFS": -13.99,
+   "musicLUFS": -29.71,
+   "sfxLUFS": -29.28,
+   "at": "2026-11-10T03:20:27"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\the-great-emu-war-47ee31\\output\\the-great-emu-war_master_v1.mp4",
+   "at": "2026-11-10T03:20:28"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-10T03:20:42"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T02:56:12",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T03:14:29",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T03:14:46",
+   "seconds": 17.1,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T03:15:05",
+   "seconds": 18.6,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T03:15:17",
+   "status": "done",
+   "seconds": 12.2
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T03:15:17",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T03:16:45",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T03:20:09",
+   "status": "done",
+   "seconds": 204.4
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T03:20:27",
+   "status": "done",
+   "seconds": 17.4
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T03:20:28",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T03:20:42",
+   "status": "done"
+  }
+ ],
+ "title": "The Great Emu War",
+ "created": "2026-11-10T02:56:12",
+ "request": {
+  "title": "The Great Emu War",
+  "idea": "The Great Emu War",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 60,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "village_square",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": false,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "claude",
+  "review": "auto_qa",
+  "seed": 21,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "",
+ "requestedSeconds": 60
+}

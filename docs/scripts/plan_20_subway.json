@@ -1,0 +1,658 @@
+{
+ "title": "The Most Expensive Hole in History",
+ "environment": "shops",
+ "seed": 71,
+ "cast": [
+  {
+   "id": "eng",
+   "name": "Engineer",
+   "role": "engineer"
+  },
+  {
+   "id": "acc",
+   "name": "Accountant",
+   "role": "accountant"
+  },
+  {
+   "id": "pax",
+   "name": "Passenger",
+   "role": "officeguy"
+  },
+  {
+   "id": "dig",
+   "name": "Digger",
+   "role": "technician"
+  },
+  {
+   "id": "old",
+   "name": "1929 commuter",
+   "role": "commuter"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "If you want to build a subway that costs four and a half billion dollars for just three stations, you don't build transit. You build a gold mine.",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "eng",
+     "expr": "smile",
+     "holding": "coffee"
+    }
+   ],
+   "environment": "shops",
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "four",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "eng",
+       "expr": "shock",
+       "holding": "coffee"
+      }
+     ],
+     "text": "$4,500,000,000",
+     "textStyle": "title"
+    },
+    {
+     "at": "you",
+     "shot": "worm",
+     "characters": [
+      {
+       "id": "eng",
+       "action": "panic",
+       "expr": "shock"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "product",
+       "product": "coins",
+       "word": "transit",
+       "on": "eng"
+      },
+      {
+       "kind": "burst",
+       "word": "transit",
+       "on": "eng"
+      }
+     ],
+     "camMove": "crane_up"
+    },
+    {
+     "at": "gold",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "eng",
+       "expr": "starry"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "money",
+       "word": "gold",
+       "on": "eng"
+      },
+      {
+       "kind": "sparkle",
+       "word": "mine",
+       "on": "eng"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "It's nineteen twenty-nine, and New York promises commuters a brand new subway line under Second Avenue to fix endless overcrowding.",
+   "shot": "wide",
+   "characters": [
+    {
+     "id": "old",
+     "expr": "smile",
+     "holding": "newspaper"
+    }
+   ],
+   "extras": 5,
+   "transition": "dissolve",
+   "text": "1929",
+   "textStyle": "title",
+   "environment": "street",
+   "pieces": [
+    {
+     "kind": "oldcar",
+     "where": "left"
+    },
+    {
+     "kind": "oldcar",
+     "where": "far",
+     "move": "right"
+    }
+   ],
+   "extrasRole": "commuter",
+   "camMove": "truck_right",
+   "look": "sepia",
+   "extrasHolding": "newspaper",
+   "shots": [
+    {
+     "at": "Second",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "old",
+       "action": "point",
+       "expr": "grin",
+       "holding": "newspaper"
+      }
+     ],
+     "camMove": "orbit"
+    }
+   ]
+  },
+  {
+   "narration": "Then the Great Depression hits, World War Two happens, and the project gets quietly buried for nearly a century.",
+   "shot": "insert",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "old",
+     "expr": "nervous"
+    }
+   ],
+   "environment": "street",
+   "pieces": [
+    {
+     "kind": "blueprint",
+     "where": "on",
+     "label": "SECOND AVE LINE"
+    }
+   ],
+   "camMove": "push",
+   "look": "sepia",
+   "shots": [
+    {
+     "at": "World",
+     "shot": "medium",
+     "characters": [
+      {
+       "id": "old",
+       "action": "panic",
+       "expr": "shock"
+      }
+     ],
+     "hud": "news",
+     "hudText": "WAR!"
+    },
+    {
+     "at": "buried",
+     "shot": "insert",
+     "fx": [
+      {
+       "kind": "dust",
+       "word": "buried",
+       "on": "old"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "blueprint",
+       "where": "on",
+       "label": "~CANCELLED"
+      }
+     ],
+     "camMove": "push",
+     "look": "bw"
+    }
+   ]
+  },
+  {
+   "narration": "When they finally restart digging in the two thousands, every single inch of dirt costs more than solid platinum.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "dig",
+     "expr": "stern",
+     "holding": "pickaxe"
+    }
+   ],
+   "extras": 4,
+   "fx": [
+    {
+     "kind": "dust",
+     "word": "digging",
+     "on": "dig"
+    }
+   ],
+   "transition": "zoom",
+   "text": "2007",
+   "textStyle": "title",
+   "environment": "tunnel",
+   "extrasRole": "technician",
+   "camMove": "truck_left",
+   "extrasHolding": "pickaxe",
+   "shots": [
+    {
+     "at": "every",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "dig",
+       "action": "panic",
+       "expr": "shock",
+       "holding": "pickaxe"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "money",
+       "word": "inch",
+       "on": "dig"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Why? Because underneath the street lies a hundred-year-old maze of mystery pipes, electrical cables, and forgotten steam lines.",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "dig",
+     "action": "shrug",
+     "expr": "nervous"
+    }
+   ],
+   "environment": "tunnel",
+   "pieces": [
+    {
+     "kind": "pipes",
+     "scale": 1.2
+    }
+   ],
+   "camMove": "orbit",
+   "shots": [
+    {
+     "at": "maze",
+     "shot": "wide",
+     "characters": [
+      {
+       "id": "dig",
+       "action": "point",
+       "expr": "dazed"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "pipes",
+       "scale": 1.6
+      }
+     ],
+     "camMove": "crane_up"
+    },
+    {
+     "at": "electrical",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "dig",
+       "expr": "shock",
+       "holding": "wrench"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "sparks",
+       "word": "cables",
+       "on": "dig"
+      },
+      {
+       "kind": "puff",
+       "word": "forgotten",
+       "on": "dig"
+      }
+     ],
+     "impactWord": "cables"
+    }
+   ]
+  },
+  {
+   "narration": "Every time they move a single water pipe, it costs millions. They're literally tunneling through a maze of financial regret.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "acc",
+     "expr": "sweat"
+    }
+   ],
+   "environment": "office",
+   "pieces": [
+    {
+     "kind": "cashcounter",
+     "where": "left"
+    }
+   ],
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "millions",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "acc",
+       "action": "panic",
+       "expr": "shock"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "money",
+       "word": "millions",
+       "on": "acc"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "cashcounter",
+       "where": "left",
+       "label": "fire",
+       "shake": 1.2
+      }
+     ]
+    },
+    {
+     "at": "They're",
+     "shot": "dutch",
+     "characters": [
+      {
+       "id": "acc",
+       "expr": "dazed"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "cashcounter",
+       "where": "left",
+       "label": "fire",
+       "shake": 1.6
+      }
+     ],
+     "camMove": "orbit"
+    }
+   ]
+  },
+  {
+   "narration": "Fast forward billions of dollars later: they finally open three shiny new stations, about two miles of track.",
+   "shot": "wide",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "pax",
+     "expr": "starry"
+    }
+   ],
+   "extras": 3,
+   "transition": "dissolve",
+   "environment": "tunnel",
+   "envVariant": "station",
+   "extrasRole": "officeguy",
+   "camMove": "crane_up",
+   "shots": [
+    {
+     "at": "three",
+     "shot": "low",
+     "fx": [
+      {
+       "kind": "sparkle",
+       "word": "shiny",
+       "on": "pax"
+      }
+     ],
+     "camMove": "truck_right"
+    }
+   ]
+  },
+  {
+   "narration": "That means every single step you walk underground cost roughly a million dollars.",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "pax",
+     "action": "walk",
+     "holding": "ticket"
+    }
+   ],
+   "environment": "tunnel",
+   "envVariant": "station",
+   "pieces": [
+    {
+     "kind": "escalator",
+     "where": "left"
+    }
+   ],
+   "camMove": "follow",
+   "hud": "panel",
+   "hudText": "$4,500,000,000 ÷ 2 MILES|≈ $1,000,000 PER STEP!"
+  },
+  {
+   "narration": "For that money, you could buy every daily rider a brand new car, and still have cash left for a private island.",
+   "shot": "wide",
+   "characters": [
+    {
+     "id": "pax",
+     "action": "point",
+     "expr": "grin"
+    }
+   ],
+   "environment": "tunnel",
+   "envVariant": "station",
+   "pieces": [
+    {
+     "kind": "car",
+     "where": "left"
+    },
+    {
+     "kind": "car",
+     "where": "right",
+     "mirror": true
+    },
+    {
+     "kind": "car",
+     "where": "far"
+    }
+   ],
+   "camMove": "truck_left",
+   "shots": [
+    {
+     "at": "private",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "pax",
+       "expr": "starry"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "money",
+       "word": "island",
+       "on": "pax"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "So why did it cost so much? Consultants, special contracts, and hiring six guys to watch one guy hold a shovel.",
+   "light": "night",
+   "characters": [
+    {
+     "id": "acc",
+     "action": "shrug",
+     "expr": "nervous"
+    }
+   ],
+   "environment": "tunnel",
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "Consultants",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "acc",
+       "action": "point",
+       "expr": "stern",
+       "holding": "clipboard"
+      }
+     ],
+     "hud": "panel",
+     "hudText": "INVOICE|CONSULTANTS: $$$|CONTRACTS: $$$$"
+    },
+    {
+     "at": "six",
+     "shot": "wide",
+     "characters": [
+      {
+       "id": "dig",
+       "action": "sit",
+       "expr": "pained",
+       "holding": "shovel"
+      }
+     ],
+     "extras": 6,
+     "extrasRole": "engineer",
+     "camMove": "orbit"
+    }
+   ]
+  },
+  {
+   "narration": "And the best part? Phase two is still years from finished, which means the budget is about to enter orbit.",
+   "shot": "insert",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "eng",
+     "expr": "grin"
+    }
+   ],
+   "transition": "zoom",
+   "environment": "office",
+   "pieces": [
+    {
+     "kind": "subwaymap",
+     "where": "on",
+     "label": "PHASE 2|COMING NEVER"
+    }
+   ],
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "budget",
+     "shot": "worm",
+     "characters": [
+      {
+       "id": "eng",
+       "action": "cheer",
+       "expr": "crazy"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "cashcounter",
+       "where": "left",
+       "label": "fire",
+       "lift": 6.0
+      }
+     ],
+     "camMove": "crane_up"
+    }
+   ]
+  },
+  {
+   "narration": "Congratulations, you've just built the most expensive hole in human history.",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "eng",
+     "action": "hips",
+     "expr": "laugh"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "confetti",
+     "word": "Congratulations",
+     "on": "eng"
+    }
+   ],
+   "impactWord": "hole",
+   "environment": "tunnel",
+   "pieces": [
+    {
+     "kind": "ribbon",
+     "where": "front"
+    }
+   ],
+   "camMove": "pull",
+   "shots": [
+    {
+     "at": "most",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "eng",
+       "expr": "starry"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "confetti",
+       "word": "most",
+       "on": "eng"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": "Send this to that friend who complains about his local train ticket price.",
+   "shot": "high",
+   "light": "golden",
+   "mood": "warm",
+   "transition": "dissolve",
+   "environment": "shops",
+   "camMove": "crane_up"
+  },
+  {
+   "narration": "Hit follow for more engineering disasters.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "warm",
+   "transition": "dissolve",
+   "environment": "shops",
+   "hud": "outro"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Second Avenue Subway first proposed 1929; delayed by the Depression and WWII.",
+   "status": "verified"
+  },
+  {
+   "text": "Phase 1 (opened 2017): about $4.45 billion for three new stations, roughly two miles of track.",
+   "status": "verified"
+  },
+  {
+   "text": "'A million dollars per step', 'a car for every daily rider' are rounded comic comparisons.",
+   "status": "fiction"
+  }
+ ]
+}

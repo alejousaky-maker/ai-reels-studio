@@ -1,0 +1,101 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 43.8365,
+ "voice": "af_heart",
+ "lang": "en",
+ "speed": 0.88,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "He bragged about running five miles every morning, until his GPS map drew a line straight to his ex's house.",
+   "start": 0.06,
+   "end": 7.3834375
+  },
+  {
+   "text": "Every day at six, he laced up and left.",
+   "start": 7.5234375,
+   "end": 10.056458333333333
+  },
+  {
+   "text": "His running app shared every route.",
+   "start": 10.196458333333334,
+   "end": 12.051979166666667
+  },
+  {
+   "text": "Publicly.",
+   "start": 12.191979166666666,
+   "end": 12.992
+  },
+  {
+   "text": "His wife opened the map.",
+   "start": 13.132,
+   "end": 14.588458333333334
+  },
+  {
+   "text": "Five miles?",
+   "start": 14.728458333333334,
+   "end": 15.741958333333333
+  },
+  {
+   "text": "The red line went three blocks, and stopped at one pink house.",
+   "start": 15.881958333333333,
+   "end": 19.3465
+  },
+  {
+   "text": "For forty-five minutes.",
+   "start": 19.4865,
+   "end": 20.9215625
+  },
+  {
+   "text": "Heart rate: one sixty-five.",
+   "start": 21.0615625,
+   "end": 22.943854166666668
+  },
+  {
+   "text": "While standing still.",
+   "start": 23.083854166666665,
+   "end": 24.246916666666667
+  },
+  {
+   "text": "The pink house belonged to his ex.",
+   "start": 24.386916666666668,
+   "end": 26.2610625
+  },
+  {
+   "text": "His wife didn't say a word.",
+   "start": 26.4010625,
+   "end": 28.012229166666668
+  },
+  {
+   "text": "She planned a finish line.",
+   "start": 28.152229166666668,
+   "end": 29.629125
+  },
+  {
+   "text": "Next morning, he jogged home smiling.",
+   "start": 29.769125,
+   "end": 32.22172916666667
+  },
+  {
+   "text": "A red finish tape was stretched across the lawn, tied to two packed suitcases.",
+   "start": 32.36172916666667,
+   "end": 37.09322916666667
+  },
+  {
+   "text": "And divorce papers, with his route printed on the back.",
+   "start": 37.23322916666667,
+   "end": 40.394416666666665
+  },
+  {
+   "text": "He finally finished a run.",
+   "start": 40.534416666666665,
+   "end": 42.02125
+  },
+  {
+   "text": "Just not the one he planned.",
+   "start": 42.16125,
+   "end": 43.6965
+  }
+ ]
+}

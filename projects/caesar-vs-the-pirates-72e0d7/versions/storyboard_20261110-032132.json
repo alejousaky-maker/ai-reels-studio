@@ -1,0 +1,1170 @@
+{
+ "version": 1,
+ "title": "Caesar vs the Pirates",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1597,
+ "env": {
+  "preset": "ocean",
+  "seed": 23,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "caesar",
+   "name": "Julius Caesar",
+   "outfit": {
+    "jacket": "#f7f5f0",
+    "pants": "#f2efe8",
+    "boots": "#8a5a34",
+    "skin": "#f5c9a0",
+    "hat": "laurel",
+    "toga": "#9a2a3a"
+   }
+  },
+  {
+   "id": "cap",
+   "name": "Pirate captain",
+   "outfit": {
+    "jacket": "#2f5f6a",
+    "pants": "#3a2f2a",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "stripes": "#f2efe8",
+    "hat": "bandana",
+    "cap": "#c8323a",
+    "eyepatch": true,
+    "beard": "#2a201a"
+   }
+  },
+  {
+   "id": "pir",
+   "name": "Pirate",
+   "outfit": {
+    "jacket": "#3f6fb5",
+    "pants": "#3a2f2a",
+    "boots": "#4a3426",
+    "skin": "#ecd0b6",
+    "stripes": "#f2efe8",
+    "hat": "bandana",
+    "cap": "#e8b83a",
+    "eyepatch": true
+   }
+  },
+  {
+   "id": "pir2",
+   "name": "Pirate",
+   "outfit": {
+    "jacket": "#2f5f6a",
+    "pants": "#3a2f2a",
+    "boots": "#4a3426",
+    "skin": "#ffe2c2",
+    "stripes": "#f2efe8",
+    "hat": "bandana",
+    "cap": "#2b2b38",
+    "eyepatch": false
+   }
+  },
+  {
+   "id": "legion",
+   "name": "Soldier",
+   "outfit": {
+    "jacket": "#9a2a3a",
+    "pants": "#7a2f2a",
+    "boots": "#5a3b2a",
+    "skin": "#c99067",
+    "hat": "helmet",
+    "crest": "#c8323a",
+    "belt": "#5a3b2a",
+    "buttons": "#8a5a34"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 203,
+   "narration": "Pirates kidnapped Julius Caesar and asked for twenty talents. He was offended. He told them to ask for fifty.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "caesar",
+     "x": 1.3,
+     "z": -4.5,
+     "expr": "stern",
+     "mode": "stand",
+     "holding": "scroll"
+    },
+    {
+     "castId": "cap",
+     "x": 2.279,
+     "z": -5.107,
+     "expr": "grin",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 181,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      -3.089,
+      1.66,
+      -4.019
+     ],
+     "lookAt": [
+      1.3,
+      1.42,
+      -4.5
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 181,
+     "cut": true,
+     "position": [
+      -1.514,
+      1.62,
+      -5.392
+     ],
+     "lookAt": [
+      1.3,
+      1.5,
+      -4.5
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2300,
+   "qualityNotes": "",
+   "kicks": [
+    {
+     "frame": 183,
+     "amp": 0.8
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "50 TALENTS",
+     "frame": 3,
+     "dur": 197,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 203,
+   "endFrame": 350,
+   "narration": "Around seventy-five B.C., young Caesar was sailing across the Aegean.",
+   "light": "golden",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "caesar",
+     "x": -1.3,
+     "z": 3.0,
+     "expr": "smile_closed",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 203,
+     "position": [
+      2.91,
+      2.3,
+      6.527
+     ],
+     "lookAt": [
+      -1.3,
+      1.2,
+      3.0
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 283,
+     "cut": true,
+     "position": [
+      3.458,
+      1.68,
+      1.959
+     ],
+     "lookAt": [
+      -1.3,
+      1.38,
+      3.0
+     ],
+     "fov": 38,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2301,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 350,
+   "endFrame": 441,
+   "narration": "Cilician pirates grabbed him, and set his price.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": 1.3,
+     "z": 3.5,
+     "expr": "grin",
+     "mode": "stand"
+    },
+    {
+     "castId": "pir",
+     "x": 2.102,
+     "z": 2.478,
+     "expr": "grin",
+     "mode": "stand"
+    },
+    {
+     "castId": "caesar",
+     "x": 2.587,
+     "z": 3.905,
+     "expr": "neutral",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 350,
+     "position": [
+      -3.118,
+      1.68,
+      5.55
+     ],
+     "lookAt": [
+      1.3,
+      1.38,
+      3.5
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 388,
+     "dur": 24,
+     "position": [
+      -1.531,
+      1.62,
+      4.336
+     ],
+     "lookAt": [
+      1.3,
+      1.5,
+      3.5
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2302,
+   "qualityNotes": "",
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 420,
+     "dur": 21,
+     "at": [
+      1.342,
+      2.28,
+      3.918
+     ],
+     "size": 0.42,
+     "product": "coins"
+    }
+   ]
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 441,
+   "endFrame": 539,
+   "narration": "Twenty talents? For me? Do you know who I am?",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "caesar",
+     "x": 1.3,
+     "z": -4.5,
+     "expr": "stern",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 441,
+     "position": [
+      -1.514,
+      1.62,
+      -5.392
+     ],
+     "lookAt": [
+      1.3,
+      1.5,
+      -4.5
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 494,
+     "cut": true,
+     "position": [
+      -1.645,
+      1.62,
+      -4.299
+     ],
+     "lookAt": [
+      1.3,
+      1.5,
+      -4.5
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2303,
+   "qualityNotes": "",
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 511,
+     "dur": 28,
+     "at": [
+      1.267,
+      2.05,
+      -4.228
+     ],
+     "size": 0.28371807239363683,
+     "product": "question"
+    }
+   ]
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 539,
+   "endFrame": 689,
+   "narration": "He sent his friends to raise the money, and stayed with the pirates for thirty-eight days.",
+   "light": "golden",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "caesar",
+     "x": 1.8,
+     "z": -5.5,
+     "expr": "smile",
+     "mode": "stand"
+    },
+    {
+     "castId": "pir2",
+     "x": 0.863,
+     "z": -6.4,
+     "expr": "nervous",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 539,
+     "position": [
+      3.4,
+      1.68,
+      -0.9
+     ],
+     "lookAt": [
+      1.8,
+      1.38,
+      -5.5
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 621,
+     "cut": true,
+     "position": [
+      1.25,
+      1.62,
+      -2.6
+     ],
+     "lookAt": [
+      1.8,
+      1.5,
+      -5.5
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2304,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150,
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 668,
+     "dur": 21,
+     "at": [
+      2.22,
+      2.28,
+      -5.5
+     ],
+     "size": 0.42,
+     "product": "clock"
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "38 DAYS",
+     "frame": 542,
+     "dur": 144,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 689,
+   "endFrame": 772,
+   "narration": "When he wanted to sleep, he told them to be quiet.",
+   "light": "night",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "caesar",
+     "x": 0.0,
+     "z": -0.8,
+     "expr": "stern",
+     "mode": "stand"
+    },
+    {
+     "castId": "pir",
+     "x": -0.612,
+     "z": -1.675,
+     "expr": "nervous",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 750,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 689,
+     "position": [
+      -1.0,
+      1.66,
+      3.5
+     ],
+     "lookAt": [
+      0.0,
+      1.42,
+      -0.8
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 722,
+     "dur": 24,
+     "position": [
+      -0.55,
+      1.62,
+      2.1
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -0.8
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 2305,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "cabin",
+    "seed": 23,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 750,
+     "dur": 22,
+     "at": [
+      0.42,
+      2.28,
+      -0.8
+     ],
+     "size": 0.42,
+     "product": "exclaim"
+    }
+   ]
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 772,
+   "endFrame": 941,
+   "narration": "He wrote poems, read them out loud, and called them illiterate barbarians if they didn't clap.",
+   "light": "night",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "caesar",
+     "x": 0.0,
+     "z": -0.8,
+     "expr": "smile_closed",
+     "mode": "stand",
+     "holding": "scroll"
+    },
+    {
+     "castId": "pir",
+     "x": -0.937,
+     "z": -1.7,
+     "expr": "nervous",
+     "mode": "stand"
+    },
+    {
+     "castId": "pir2",
+     "x": 0.612,
+     "z": -2.08,
+     "expr": "nervous",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 772,
+     "position": [
+      1.6,
+      1.68,
+      4.2
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      -0.8
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 864,
+     "cut": true,
+     "position": [
+      -0.55,
+      1.62,
+      2.1
+     ],
+     "lookAt": [
+      0,
+      1.5,
+      -0.8
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2306,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "cabin",
+    "seed": 23,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "notes",
+     "frame": 788,
+     "dur": 153,
+     "at": [
+      0.3,
+      1.65,
+      -0.8
+     ],
+     "size": 1.1
+    }
+   ]
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 941,
+   "endFrame": 1040,
+   "narration": "He joked he'd come back and punish them all. They laughed.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "caesar",
+     "x": -1.6,
+     "z": -0.4,
+     "expr": "smile",
+     "mode": "stand"
+    },
+    {
+     "castId": "cap",
+     "x": -2.438,
+     "z": -1.062,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1019,
+       "expr": "laugh"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 941,
+     "position": [
+      -1.322,
+      1.66,
+      4.006
+     ],
+     "lookAt": [
+      -1.6,
+      1.42,
+      -0.4
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 983,
+     "dur": 24,
+     "position": [
+      -1.293,
+      1.62,
+      2.536
+     ],
+     "lookAt": [
+      -1.6,
+      1.5,
+      -0.4
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2307,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "cabin",
+    "seed": 23,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 1040,
+   "endFrame": 1152,
+   "narration": "The ransom arrived. Fifty talents. They let him go.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "caesar",
+     "x": 0.0,
+     "z": 5.5,
+     "expr": "smile_closed",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1040,
+     "position": [
+      -2.413,
+      1.68,
+      0.199
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      5.5
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1089,
+     "dur": 24,
+     "position": [
+      -0.974,
+      1.62,
+      2.714
+     ],
+     "lookAt": [
+      0,
+      1.5,
+      5.5
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 2308,
+   "qualityNotes": "",
+   "env": {
+    "preset": "harbour",
+    "seed": 23,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 1082,
+     "dur": 60,
+     "at": [
+      -0.415,
+      2.28,
+      5.562
+     ],
+     "size": 0.42,
+     "product": "coins"
+    }
+   ]
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 1152,
+   "endFrame": 1246,
+   "narration": "Caesar raised a fleet, without any official command.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "caesar",
+     "x": 14.0,
+     "z": 17.0,
+     "expr": "grin",
+     "mode": "stand",
+     "wave": true
+    },
+    {
+     "castId": "legion",
+     "x": 15.847,
+     "z": 16.634,
+     "expr": "stern",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1152,
+     "position": [
+      11.988,
+      2.3,
+      6.267
+     ],
+     "lookAt": [
+      14,
+      1.2,
+      17
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1191,
+     "dur": 24,
+     "position": [
+      12.927,
+      1.68,
+      11.276
+     ],
+     "lookAt": [
+      14,
+      1.38,
+      17
+     ],
+     "fov": 38,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2309,
+   "qualityNotes": "",
+   "env": {
+    "preset": "harbour",
+    "seed": 23,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "galley",
+     "x": 28.534,
+     "z": 37.125,
+     "y": -2.6,
+     "rock": 1.0
+    },
+    {
+     "kind": "galley",
+     "x": 16.012,
+     "z": 43.386,
+     "y": -2.6,
+     "rock": 1.0
+    }
+   ]
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 1246,
+   "endFrame": 1397,
+   "narration": "He found the pirates on the same island, took back the silver, and captured them all.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": 0.722,
+     "z": 2.428,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1365,
+       "expr": "shock"
+      }
+     ]
+    },
+    {
+     "castId": "pir",
+     "x": 2.419,
+     "z": 2.892,
+     "expr": "shock",
+     "mode": "stand"
+    },
+    {
+     "castId": "pir2",
+     "x": -1.25,
+     "z": 3.469,
+     "expr": "shock",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1246,
+     "position": [
+      -4.03,
+      2.3,
+      -7.649
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      2.5
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1365,
+     "cut": true,
+     "position": [
+      1.94,
+      2.3,
+      -8.246
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      2.5
+     ],
+     "fov": 42,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2310,
+   "qualityNotes": "",
+   "env": {
+    "preset": "beach",
+    "seed": 23,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "galley",
+     "x": -4.199,
+     "z": 11.261,
+     "y": -2.6,
+     "rock": 1.0
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 1367,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 1365,
+     "dur": 32,
+     "at": [
+      0.304,
+      2.28,
+      2.47
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 1397,
+   "endFrame": 1490,
+   "narration": "And that joke about punishing them? It wasn't a joke.",
+   "light": "golden",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": 0.0,
+     "z": 2.5,
+     "expr": "dazed",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1397,
+     "position": [
+      0.259,
+      1.62,
+      -0.44
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      2.5
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1448,
+     "cut": true,
+     "position": [
+      -0.836,
+      1.62,
+      -0.331
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      2.5
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2311,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150,
+   "env": {
+    "preset": "beach",
+    "seed": 23,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 1490,
+   "endFrame": 1597,
+   "narration": "Never let your hostage negotiate his own price.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "caesar",
+     "x": 0.0,
+     "z": 5.5,
+     "expr": "smile",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1564,
+       "expr": "smile_closed"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1490,
+     "position": [
+      -0.974,
+      1.62,
+      2.714
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      5.5
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1548,
+     "cut": true,
+     "position": [
+      0.114,
+      1.62,
+      2.55
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      5.5
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2312,
+   "qualityNotes": "",
+   "env": {
+    "preset": "harbour",
+    "seed": 23,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 1564,
+     "dur": 33,
+     "at": [
+      -0.271,
+      2.05,
+      5.541
+     ],
+     "size": 0.44330948811505755
+    }
+   ]
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": false,
+  "words": []
+ },
+ "style": "storybook",
+ "graphics": "full"
+}

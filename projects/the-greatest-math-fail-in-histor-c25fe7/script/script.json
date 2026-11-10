@@ -1,0 +1,613 @@
+{
+ "lang": "en",
+ "title": "The Greatest Math Fail in History",
+ "words": 156,
+ "beats": [
+  {
+   "narration": "This guy was so bad at math, he accidentally found two continents.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "columbus",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": "map"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "burst",
+     "product": null,
+     "color": null,
+     "word": "accidentally",
+     "on": "columbus"
+    }
+   ],
+   "impactWord": "accidentally",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "beach",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "ship",
+     "where": "behind",
+     "dx": 3.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": "Columbus smug on the beach, his caravel rammed into the shore behind him."
+  },
+  {
+   "narration": "And he died refusing to admit he was lost.",
+   "shot": "close",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "columbus",
+     "action": "stand",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": "map"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "product",
+     "product": "question",
+     "color": null,
+     "word": "lost",
+     "on": "columbus"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "beach",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Here's the myth: in 1492, people thought the Earth was flat.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "villager",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "product",
+     "product": "scroll",
+     "color": null,
+     "word": "myth",
+     "on": "villager"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": "THE MYTH",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null
+  },
+  {
+   "narration": "Nope. Educated Europeans knew it was round, and roughly how big.",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "scholar",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": "globe"
+    },
+    {
+     "id": "villager",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "round",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "scholar",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "lightbulb",
+     "color": null,
+     "word": "round",
+     "on": "scholar"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 2,
+   "visual": null
+  },
+  {
+   "narration": "About twenty-five thousand miles around. Huge.",
+   "shot": "close",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "scholar",
+     "action": "stand",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": "book"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "≈ 25,000 miles",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null
+  },
+  {
+   "narration": "Columbus read an Arabic measurement, and used shorter Roman miles instead.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "columbus",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": "map"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "product",
+     "product": "book",
+     "color": null,
+     "word": "Arabic",
+     "on": "columbus"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "interior",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null
+  },
+  {
+   "narration": "Boom. His Earth shrank by a quarter.",
+   "shot": "close",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "columbus",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "burst",
+     "product": null,
+     "color": null,
+     "word": "Boom",
+     "on": "columbus"
+    }
+   ],
+   "impactWord": "Boom",
+   "transition": "cut",
+   "text": "−25% EARTH",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "interior",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null
+  },
+  {
+   "narration": "On his map, Japan sat just a few weeks west of the Canary Islands.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "columbus",
+     "action": "stand",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": "map"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "product",
+     "product": "globe",
+     "color": null,
+     "word": "Japan",
+     "on": "columbus"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "interior",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null
+  },
+  {
+   "narration": "The royal experts checked his math, and said no.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "king",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "columbus",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "no",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "king",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "scroll",
+     "color": null,
+     "word": "no",
+     "on": "king"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "throne",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Not because of a flat Earth. Because his crew would starve in an empty ocean.",
+   "shot": "close",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "king",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "product",
+     "product": "clock",
+     "color": null,
+     "word": "starve",
+     "on": "king"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "throne",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "And they were right. Except two continents nobody in Europe knew about were in the way.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "sailor",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "sailor2",
+     "action": "stand",
+     "expr": "nervous",
+     "react": {
+      "word": "Except",
+      "expr": "shock"
+     },
+     "holding": null
+    },
+    {
+     "id": "columbus",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "sailor2",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "color": null,
+     "word": "Except",
+     "on": "sailor2"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "ocean",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "He landed in the Bahamas, and called the people he met Indians.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "columbus",
+     "action": "wave",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "local",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "Indians",
+      "expr": "shock"
+     },
+     "holding": null
+    },
+    {
+     "id": "local2",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "columbus",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "question",
+     "color": null,
+     "word": "Indians",
+     "on": "local"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "beach",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "Later, he made his crew swear that Cuba was part of Asia.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "columbus",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": "scroll"
+    },
+    {
+     "id": "sailor",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "sailor2",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "columbus",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "color": null,
+     "word": "swear",
+     "on": "sailor"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "CUBA = ASIA",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "beach",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 3,
+   "visual": null
+  },
+  {
+   "narration": "The worst math in history, and the luckiest wrong answer ever.",
+   "shot": "close",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "columbus",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "luckiest",
+      "expr": "smile_closed"
+     },
+     "holding": "map"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "sparkle",
+     "product": null,
+     "color": null,
+     "word": "luckiest",
+     "on": "columbus"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "beach",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  }
+ ]
+}

@@ -1,0 +1,1297 @@
+{
+ "version": 1,
+ "title": "The Great Emu War",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1591,
+ "env": {
+  "preset": "outback",
+  "seed": 21,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "sold",
+   "name": "Soldier",
+   "outfit": {
+    "jacket": "#8a8a56",
+    "pants": "#7a7a4a",
+    "boots": "#4a3426",
+    "skin": "#f5c9a0",
+    "hat": "slouch",
+    "belt": "#5a4430"
+   }
+  },
+  {
+   "id": "sold2",
+   "name": "Soldier",
+   "outfit": {
+    "jacket": "#7a7a4a",
+    "pants": "#7a7a4a",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "hat": "slouch",
+    "belt": "#5a4430"
+   }
+  },
+  {
+   "id": "major",
+   "name": "Major Meredith",
+   "outfit": {
+    "jacket": "#8a8a56",
+    "pants": "#7a7a4a",
+    "boots": "#4a3426",
+    "skin": "#ecd0b6",
+    "hat": "slouch",
+    "belt": "#5a4430",
+    "moustache": "#4a3020",
+    "build": "stout",
+    "buttons": "#e8b83a",
+    "sash": "#c8323a"
+   }
+  },
+  {
+   "id": "emu",
+   "name": "Emu",
+   "outfit": {
+    "jacket": "#7a5a3a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ffe2c2",
+    "creature": "emu"
+   }
+  },
+  {
+   "id": "farmer",
+   "name": "Farmer",
+   "outfit": {
+    "jacket": "#b5653f",
+    "pants": "#3b5b9a",
+    "boots": "#4a3426",
+    "skin": "#c99067",
+    "hat": "sunhat",
+    "cap": "#e8c46a"
+   }
+  },
+  {
+   "id": "pol",
+   "name": "Politician",
+   "outfit": {
+    "jacket": "#2b2b38",
+    "pants": "#26304f",
+    "boots": "#1d1b22",
+    "skin": "#f5c9a0",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "tie": "#c8323a"
+   }
+  },
+  {
+   "id": "pol2",
+   "name": "Politician",
+   "outfit": {
+    "jacket": "#c25a7a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "tie": "#c8323a"
+   }
+  },
+  {
+   "id": "extra0",
+   "name": "",
+   "outfit": {
+    "jacket": "#7a5a3a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "creature": "emu"
+   }
+  },
+  {
+   "id": "extra1",
+   "name": "",
+   "outfit": {
+    "jacket": "#7a5a3a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ecd0b6",
+    "creature": "emu"
+   }
+  },
+  {
+   "id": "extra2",
+   "name": "",
+   "outfit": {
+    "jacket": "#7a5a3a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ffe2c2",
+    "creature": "emu"
+   }
+  },
+  {
+   "id": "extra3",
+   "name": "",
+   "outfit": {
+    "jacket": "#7a5a3a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#c99067",
+    "creature": "emu"
+   }
+  },
+  {
+   "id": "extra4",
+   "name": "",
+   "outfit": {
+    "jacket": "#7a5a3a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "creature": "emu"
+   }
+  },
+  {
+   "id": "extra5",
+   "name": "",
+   "outfit": {
+    "jacket": "#7a5a3a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ecd0b6",
+    "creature": "emu"
+   }
+  },
+  {
+   "id": "extra6",
+   "name": "",
+   "outfit": {
+    "jacket": "#7a5a3a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ffe2c2",
+    "creature": "emu"
+   }
+  },
+  {
+   "id": "extra7",
+   "name": "",
+   "outfit": {
+    "jacket": "#7a5a3a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#c99067",
+    "creature": "emu"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 194,
+   "narration": "In 1932, Australia sent soldiers with machine guns to fight birds. The birds won.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "sold",
+     "x": 0.726,
+     "z": 0.0,
+     "expr": "nervous",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 172,
+       "expr": "shock"
+      }
+     ]
+    },
+    {
+     "castId": "emu",
+     "x": -1.234,
+     "z": -0.54,
+     "expr": "neutral",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      3.0,
+      2.3,
+      10.5
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      0
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 172,
+     "cut": true,
+     "position": [
+      -3.0,
+      2.3,
+      10.5
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      0
+     ],
+     "fov": 42,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2100,
+   "qualityNotes": "",
+   "pieces": [
+    {
+     "kind": "lewis",
+     "x": -1.386,
+     "z": -1.17
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 174,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 172,
+     "dur": 22,
+     "at": [
+      1.146,
+      2.28,
+      0.0
+     ],
+     "size": 0.42,
+     "product": "exclaim"
+    }
+   ]
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 194,
+   "endFrame": 301,
+   "narration": "About twenty thousand emus were eating the farmers' wheat.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "farmer",
+     "x": 0.0,
+     "z": 0.0,
+     "expr": "stern",
+     "mode": "stand"
+    },
+    {
+     "castId": "extra0",
+     "x": 1.6,
+     "z": -3.0,
+     "mode": "stand",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra1",
+     "x": -0.4,
+     "z": -3.986,
+     "mode": "stand",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra2",
+     "x": 2.9,
+     "z": -5.2,
+     "mode": "stand",
+     "expr": "nervous"
+    },
+    {
+     "castId": "extra3",
+     "x": -0.578,
+     "z": -2.565,
+     "mode": "stand",
+     "expr": "neutral"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 194,
+     "position": [
+      -1.6,
+      1.68,
+      5.6
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 240,
+     "dur": 24,
+     "position": [
+      -0.55,
+      1.62,
+      2.9
+     ],
+     "lookAt": [
+      0,
+      1.5,
+      0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2101,
+   "qualityNotes": "",
+   "textOverlays": [
+    {
+     "text": "≈ 20,000 EMUS",
+     "frame": 197,
+     "dur": 101,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 301,
+   "endFrame": 485,
+   "narration": "So the army sent Major Meredith, two soldiers, two machine guns, and ten thousand bullets.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "major",
+     "x": -8.0,
+     "z": -5.0,
+     "expr": "smile",
+     "mode": "stand"
+    },
+    {
+     "castId": "sold",
+     "x": -8.587,
+     "z": -6.159,
+     "expr": "neutral",
+     "mode": "stand"
+    },
+    {
+     "castId": "sold2",
+     "x": -6.87,
+     "z": -6.011,
+     "expr": "neutral",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 301,
+     "position": [
+      -8.34,
+      1.68,
+      0.814
+     ],
+     "lookAt": [
+      -8,
+      1.38,
+      -5
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 402,
+     "cut": true,
+     "position": [
+      -9.477,
+      1.62,
+      -2.445
+     ],
+     "lookAt": [
+      -8,
+      1.5,
+      -5
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2102,
+   "qualityNotes": "",
+   "pieces": [
+    {
+     "kind": "truck",
+     "x": 0.797,
+     "z": -18.025
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "10,000 BULLETS",
+     "frame": 304,
+     "dur": 178,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 485,
+   "endFrame": 631,
+   "narration": "Plan: wait at a dam, let a thousand emus walk in, and open fire.",
+   "light": "golden",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "sold",
+     "x": 14.5,
+     "z": 6.726,
+     "expr": "grin",
+     "mode": "stand"
+    },
+    {
+     "castId": "sold2",
+     "x": 15.04,
+     "z": 4.766,
+     "expr": "grin",
+     "mode": "stand"
+    },
+    {
+     "castId": "extra4",
+     "x": 17.5,
+     "z": 8.326,
+     "mode": "stroll",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra5",
+     "x": 18.6,
+     "z": 5.926,
+     "mode": "stroll",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra6",
+     "x": 19.7,
+     "z": 9.626,
+     "mode": "stroll",
+     "expr": "nervous"
+    },
+    {
+     "castId": "extra7",
+     "x": 17.5,
+     "z": 4.626,
+     "mode": "stroll",
+     "expr": "neutral"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 485,
+     "position": [
+      4.0,
+      2.3,
+      3.0
+     ],
+     "lookAt": [
+      14.5,
+      1.2,
+      6
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 565,
+     "cut": true,
+     "position": [
+      4.0,
+      2.3,
+      9.0
+     ],
+     "lookAt": [
+      14.5,
+      1.2,
+      6
+     ],
+     "fov": 42,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 2103,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150,
+   "pieces": [
+    {
+     "kind": "lewis",
+     "x": 15.67,
+     "z": 4.614
+    }
+   ]
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 631,
+   "endFrame": 702,
+   "narration": "The gun jammed after a dozen shots.",
+   "light": "golden",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "sold",
+     "x": 14.5,
+     "z": 6.347,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 641,
+       "expr": "dazed"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 631,
+     "position": [
+      8.9,
+      1.68,
+      7.6
+     ],
+     "lookAt": [
+      14.5,
+      1.38,
+      6
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2104,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150,
+   "pieces": [
+    {
+     "kind": "lewis",
+     "x": 15.67,
+     "z": 4.905
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 643,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "puff",
+     "frame": 641,
+     "dur": 60,
+     "at": [
+      14.5,
+      1.0,
+      6.347
+     ],
+     "size": 0.9
+    }
+   ]
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 702,
+   "endFrame": 835,
+   "narration": "And the emus scattered in every direction, at fifty kilometers an hour.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "emu",
+     "x": 2.4,
+     "z": 3.0,
+     "expr": "shock",
+     "mode": "stroll",
+     "walkTo": [
+      0.0,
+      3.0
+     ],
+     "walkFrames": [
+      702,
+      795
+     ]
+    },
+    {
+     "castId": "extra0",
+     "x": -1.6,
+     "z": 6.0,
+     "mode": "stroll",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra1",
+     "x": 0.8,
+     "z": 7.1,
+     "mode": "stroll",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra2",
+     "x": -2.9,
+     "z": 8.2,
+     "mode": "stroll",
+     "expr": "nervous"
+    },
+    {
+     "castId": "extra3",
+     "x": 1.563,
+     "z": 5.847,
+     "mode": "stroll",
+     "expr": "neutral"
+    },
+    {
+     "castId": "extra4",
+     "x": -4.06,
+     "z": 7.14,
+     "mode": "stroll",
+     "expr": "laugh"
+    },
+    {
+     "castId": "extra5",
+     "x": 1.372,
+     "z": 7.621,
+     "mode": "stroll",
+     "expr": "smile"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 702,
+     "position": [
+      3.0,
+      2.3,
+      -7.5
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      3
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 763,
+     "dur": 24,
+     "position": [
+      1.6,
+      1.68,
+      -2.6
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      3
+     ],
+     "fov": 38,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2105,
+   "qualityNotes": "",
+   "textOverlays": [
+    {
+     "text": "50 KM/H",
+     "frame": 705,
+     "dur": 127,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 835,
+   "endFrame": 926,
+   "narration": "Meredith said they could face machine guns like tanks.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "major",
+     "x": 0.0,
+     "z": 0.0,
+     "expr": "shock",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 835,
+     "position": [
+      0.55,
+      1.62,
+      2.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 885,
+     "cut": true,
+     "position": [
+      -0.55,
+      1.62,
+      2.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2106,
+   "qualityNotes": "",
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 906,
+     "dur": 20,
+     "at": [
+      0.274,
+      2.05,
+      0.0
+     ],
+     "size": 0.28371807239363683,
+     "product": "exclaim"
+    }
+   ]
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 926,
+   "endFrame": 1022,
+   "narration": "Newspapers laughed. Parliament asked questions.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "pol",
+     "x": 0.0,
+     "z": -1.0,
+     "expr": "laugh",
+     "mode": "stand",
+     "holding": "book"
+    },
+    {
+     "castId": "pol2",
+     "x": -0.612,
+     "z": -1.875,
+     "expr": "laugh",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 926,
+     "position": [
+      -1.0,
+      1.66,
+      3.3
+     ],
+     "lookAt": [
+      0.0,
+      1.42,
+      -1.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 966,
+     "dur": 24,
+     "position": [
+      -0.55,
+      1.62,
+      1.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -1.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 2107,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "office",
+    "seed": 21,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 995,
+     "dur": 27,
+     "at": [
+      -0.192,
+      2.28,
+      -1.875
+     ],
+     "size": 0.42,
+     "product": "question"
+    }
+   ]
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 1022,
+   "endFrame": 1092,
+   "narration": "The soldiers were pulled out within a week.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "major",
+     "x": 0.0,
+     "z": -1.0,
+     "expr": "dazed",
+     "mode": "stand",
+     "holding": "folder"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1022,
+     "position": [
+      0.55,
+      1.62,
+      1.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -1.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2108,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "office",
+    "seed": 21,
+    "shop": null
+   },
+   "kicks": [
+    {
+     "frame": 1052,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 1050,
+     "dur": 42,
+     "at": [
+      0.274,
+      2.05,
+      -1.0
+     ],
+     "size": 0.44330948811505755
+    }
+   ]
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 1092,
+   "endFrame": 1211,
+   "narration": "They came back for round two, and used nearly ten bullets per bird.",
+   "light": "golden",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "sold",
+     "x": 0.726,
+     "z": 0.0,
+     "expr": "nervous",
+     "mode": "stand"
+    },
+    {
+     "castId": "emu",
+     "x": -1.234,
+     "z": -0.54,
+     "expr": "smile",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1092,
+     "position": [
+      -3.0,
+      2.3,
+      10.5
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      0
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1157,
+     "cut": true,
+     "position": [
+      3.0,
+      2.3,
+      10.5
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      0
+     ],
+     "fov": 42,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 2109,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150,
+   "pieces": [
+    {
+     "kind": "lewis",
+     "x": -1.386,
+     "z": -1.17
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "≈ 10 BULLETS PER BIRD",
+     "frame": 1095,
+     "dur": 113,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 1211,
+   "endFrame": 1309,
+   "narration": "The emus? Still there. Still eating wheat.",
+   "light": "golden",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "emu",
+     "x": 0.0,
+     "z": 0.0,
+     "expr": "laugh",
+     "mode": "stand"
+    },
+    {
+     "castId": "extra6",
+     "x": 0.56,
+     "z": -2.703,
+     "mode": "stand",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra7",
+     "x": -0.8,
+     "z": -4.1,
+     "mode": "stand",
+     "expr": "grin"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1211,
+     "position": [
+      1.6,
+      1.68,
+      5.6
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1252,
+     "dur": 24,
+     "position": [
+      0.55,
+      1.62,
+      2.9
+     ],
+     "lookAt": [
+      0,
+      1.5,
+      0
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2110,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 1309,
+   "endFrame": 1417,
+   "narration": "In the end, farmers got fences and ammo for themselves.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "farmer",
+     "x": 8.0,
+     "z": -6.0,
+     "expr": "smile",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1309,
+     "position": [
+      7.529,
+      1.68,
+      -0.195
+     ],
+     "lookAt": [
+      8,
+      1.38,
+      -6
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1356,
+     "dur": 24,
+     "position": [
+      8.029,
+      1.62,
+      -3.048
+     ],
+     "lookAt": [
+      8,
+      1.5,
+      -6
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2111,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 1417,
+   "endFrame": 1591,
+   "narration": "A modern army. Machine guns. And the only war Australia ever lost to a bird.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "emu",
+     "x": 0.0,
+     "z": 0.0,
+     "expr": "smile",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1561,
+       "expr": "laugh"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1417,
+     "position": [
+      0.55,
+      1.62,
+      2.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1512,
+     "cut": true,
+     "position": [
+      -0.55,
+      1.62,
+      2.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2112,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150,
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 1561,
+     "dur": 30,
+     "at": [
+      0.274,
+      2.05,
+      0.0
+     ],
+     "size": 0.44330948811505755
+    }
+   ]
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": false,
+  "words": []
+ },
+ "style": "storybook",
+ "graphics": "full"
+}

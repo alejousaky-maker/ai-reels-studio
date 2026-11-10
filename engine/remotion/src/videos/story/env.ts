@@ -10,6 +10,7 @@ import { drawSign, drawAwning } from "./products";
 import { buildInterior, buildHarbour } from "./env2";
 import { buildBeach, buildOcean, buildTroy, buildCave, buildThrone } from "./env3";
 import { buildModernRoom, buildSuburb, buildLake, buildResort, buildOutback, buildShops } from "./env4";
+import { buildTunnel, buildWarehouse, buildCanal, buildIsland, buildBridge } from "./env5";
 
 /** horizontal quad facing up covering x0..x1, z0..z1 at height y with uv tiles u, v */
 export const ground = (x0: number, x1: number, z0: number, z1: number, u: number, v: number, y = 0) => {
@@ -81,13 +82,19 @@ export const buildEnv = (root: THREE.Object3D, kit: Kit, env: EnvSpec, rays: Ray
   const cobble = lam("cobbleHD", () => ({ map: cobbleHD() }));
   const stone = lam("copeHD", () => ({ map: stoneHD("copeHD", ["#e6dccd", "#ddd3c3", "#ece4d6", "#d6cbba"], "#aea293") }));
   // grass everywhere on land (the harbour's sea starts at z = 9.4)
-  const own = ["beach", "ocean", "troy", "cave", "suburb", "lake", "resort", "outback", "shops"].includes(env.preset);   // these lay their own ground / sea
+  const own = ["beach", "ocean", "troy", "cave", "suburb", "lake", "resort", "outback", "shops", "canal", "island", "bridge"].includes(env.preset);   // these lay their own ground / sea
   if (!own) b.add(env.preset === "harbour" ? ground(-900, 900, -900, 9.4, 450, 227, -0.01) : ground(-900, 900, -900, 900, 450, 450, -0.01), grass);
-  if (!["ocean", "beach", "resort", "outback"].includes(env.preset)) hills(b);
+  if (!["ocean", "beach", "resort", "outback", "island", "bridge", "canal"].includes(env.preset)) hills(b);
   setSight(rays);
+  if (env.preset === "tunnel" || env.preset === "warehouse" || env.preset === "canal" || env.preset === "island" || env.preset === "bridge") {
+    ({ tunnel: buildTunnel, warehouse: buildWarehouse, canal: buildCanal, island: buildIsland, bridge: buildBridge })[env.preset](root, kit, env, info, b);
+    if (env.preset === "warehouse") forest(b, kit, r, 90, FN);
+    b.build(root); setSight([]);
+    return info;
+  }
   const lantern = (x: number, z: number) => { prop(b, kit, "lantern", x, 0, z, 2.8); info.lanterns.push(new THREE.Vector3(x, 2.55, z)); };
 
-  if (["apartment", "bathroom", "office", "hotel", "airport", "cabin", "bedroom", "kitchen", "banquet", "gameroom"].includes(env.preset)) {
+  if (["apartment", "bathroom", "office", "hotel", "airport", "cabin", "bedroom", "kitchen", "banquet", "gameroom", "trading", "clinic", "datacenter"].includes(env.preset)) {
     buildModernRoom(root, kit, env, info, b);
     forest(b, kit, r, 90, FN);
     b.build(root); setSight([]);

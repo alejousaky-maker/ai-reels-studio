@@ -1,0 +1,1375 @@
+{
+ "version": 1,
+ "title": "The Trojan Horse Trick",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1588,
+ "env": {
+  "preset": "troy",
+  "seed": 6,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "ody",
+   "name": "Odysseus",
+   "outfit": {
+    "jacket": "#c9923e",
+    "pants": "#7a2f2a",
+    "boots": "#5a3b2a",
+    "skin": "#f5c9a0",
+    "hat": "helmet",
+    "crest": "#c8323a",
+    "belt": "#5a3b2a",
+    "buttons": "#8a5a34",
+    "beard": "#4a3020"
+   }
+  },
+  {
+   "id": "greek",
+   "name": "Greek soldier",
+   "outfit": {
+    "jacket": "#c9923e",
+    "pants": "#7a2f2a",
+    "boots": "#5a3b2a",
+    "skin": "#8d5a3b",
+    "hat": "helmet",
+    "crest": "#c8323a",
+    "belt": "#5a3b2a",
+    "buttons": "#8a5a34"
+   }
+  },
+  {
+   "id": "greek2",
+   "name": "Greek soldier",
+   "outfit": {
+    "jacket": "#b8843a",
+    "pants": "#7a2f2a",
+    "boots": "#5a3b2a",
+    "skin": "#ecd0b6",
+    "hat": "helmet",
+    "crest": "#c8323a",
+    "belt": "#5a3b2a",
+    "buttons": "#8a5a34"
+   }
+  },
+  {
+   "id": "sinon",
+   "name": "Sinon",
+   "outfit": {
+    "jacket": "#b9a27a",
+    "pants": "#7a6a52",
+    "boots": "#5a3b2a",
+    "skin": "#ffe2c2",
+    "hat": "hair",
+    "hair": "#4a3020",
+    "rope": "#a0784c"
+   }
+  },
+  {
+   "id": "trojan",
+   "name": "Trojan soldier",
+   "outfit": {
+    "jacket": "#b8a06a",
+    "pants": "#2f4a7a",
+    "boots": "#5a3b2a",
+    "skin": "#c99067",
+    "hat": "helmet",
+    "crest": "#3f6fb5",
+    "belt": "#3a2f2a",
+    "buttons": "#8a5a34"
+   }
+  },
+  {
+   "id": "trojan2",
+   "name": "Trojan soldier",
+   "outfit": {
+    "jacket": "#a8946a",
+    "pants": "#2f4a7a",
+    "boots": "#5a3b2a",
+    "skin": "#f5c9a0",
+    "hat": "helmet",
+    "crest": "#3f6fb5",
+    "belt": "#3a2f2a",
+    "buttons": "#8a5a34"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 133,
+   "narration": "Ten years of war couldn't break one wall. So one guy weaponized FOMO.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "greek",
+     "x": 0.0,
+     "z": -6.0,
+     "expr": "grin",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 52,
+       "expr": "dazed"
+      }
+     ],
+     "holding": "spear"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      3.0,
+      2.3,
+      4.5
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      -6
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 40,
+     "dur": 24,
+     "position": [
+      1.6,
+      1.68,
+      -0.4
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      -6
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 600,
+   "qualityNotes": "A Greek soldier's spear bounces off Troy's colossal wall; dizzy stars.",
+   "kicks": [
+    {
+     "frame": 54,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 52,
+     "dur": 60,
+     "at": [
+      0.42,
+      2.28,
+      -6.0
+     ],
+     "size": 0.8
+    },
+    {
+     "kind": "stars",
+     "frame": 73,
+     "dur": 60,
+     "at": [
+      0.42,
+      2.28,
+      -6.0
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 133,
+   "endFrame": 243,
+   "narration": "Troy's walls were so strong, Greek spears bounced right off.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "greek2",
+     "x": -14.0,
+     "z": -8.0,
+     "expr": "nervous",
+     "mode": "stand"
+    },
+    {
+     "castId": "greek",
+     "x": -14.655,
+     "z": -8.966,
+     "expr": "dazed",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 133,
+     "position": [
+      -16.413,
+      1.68,
+      -2.699
+     ],
+     "lookAt": [
+      -14,
+      1.38,
+      -8
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 181,
+     "dur": 24,
+     "position": [
+      -14.974,
+      1.62,
+      -5.214
+     ],
+     "lookAt": [
+      -14,
+      1.5,
+      -8
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 601,
+   "qualityNotes": "",
+   "fx": [
+    {
+     "kind": "puff",
+     "frame": 208,
+     "dur": 35,
+     "at": [
+      -14.655,
+      1.0,
+      -8.966
+     ],
+     "size": 0.9
+    }
+   ]
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 243,
+   "endFrame": 367,
+   "narration": "So Odysseus drew a plan. A giant wooden horse. Hollow.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "ody",
+     "x": -3.347,
+     "z": -2.0,
+     "expr": "grin",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 243,
+     "position": [
+      -1.4,
+      1.68,
+      3.6
+     ],
+     "lookAt": [
+      -3,
+      1.38,
+      -2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 299,
+     "dur": 24,
+     "position": [
+      -2.45,
+      1.62,
+      0.9
+     ],
+     "lookAt": [
+      -3,
+      1.5,
+      -2
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 602,
+   "qualityNotes": "",
+   "env": {
+    "preset": "beach",
+    "seed": 6,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "chalkboard",
+     "x": -1.835,
+     "z": -3.19
+    },
+    {
+     "kind": "tent",
+     "x": -8.347,
+     "z": -17.67
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 275,
+     "dur": 60,
+     "at": [
+      -2.927,
+      2.28,
+      -2.0
+     ],
+     "size": 0.42,
+     "product": "lightbulb"
+    }
+   ]
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 367,
+   "endFrame": 485,
+   "narration": "His best soldiers hid inside, and the whole army sailed away.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "greek",
+     "x": 1.666,
+     "z": 2.333,
+     "expr": "smile",
+     "mode": "stroll",
+     "walkTo": [
+      -0.722,
+      2.572
+     ],
+     "walkFrames": [
+      367,
+      449
+     ]
+    },
+    {
+     "castId": "greek2",
+     "x": 1.86,
+     "z": 2.349,
+     "expr": "smile",
+     "mode": "stroll",
+     "walkTo": [
+      -0.528,
+      2.588
+     ],
+     "walkFrames": [
+      367,
+      449
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 367,
+     "position": [
+      1.94,
+      2.3,
+      -8.246
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      2.5
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 419,
+     "dur": 24,
+     "position": [
+      1.035,
+      1.68,
+      -3.231
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      2.5
+     ],
+     "fov": 38,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 603,
+   "qualityNotes": "",
+   "env": {
+    "preset": "beach",
+    "seed": 6,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "horse",
+     "x": 3.662,
+     "z": 5.953
+    },
+    {
+     "kind": "galley",
+     "x": -4.254,
+     "z": 27.548,
+     "y": -2.6,
+     "rock": 1.0,
+     "moveTo": [
+      -11.22,
+      28.244
+     ],
+     "moveFrames": [
+      378,
+      473
+     ]
+    }
+   ]
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 485,
+   "endFrame": 587,
+   "narration": "Well, they pretended to. They hid behind an island.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "ody",
+     "x": 0.0,
+     "z": 2.5,
+     "expr": "smile",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 502,
+       "expr": "smile_closed"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 485,
+     "position": [
+      -0.836,
+      1.62,
+      -0.331
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      2.5
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 541,
+     "cut": true,
+     "position": [
+      0.259,
+      1.62,
+      -0.44
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      2.5
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 604,
+   "qualityNotes": "",
+   "env": {
+    "preset": "beach",
+    "seed": 6,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 502,
+     "dur": 60,
+     "at": [
+      -0.273,
+      2.05,
+      2.527
+     ],
+     "size": 0.44330948811505755
+    }
+   ]
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 587,
+   "endFrame": 738,
+   "narration": "They left one guy behind on the beach. Sinon. Tied up. On purpose.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "sinon",
+     "x": -3.0,
+     "z": -2.0,
+     "expr": "nervous",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 587,
+     "position": [
+      -4.6,
+      1.68,
+      3.6
+     ],
+     "lookAt": [
+      -3,
+      1.38,
+      -2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 670,
+     "cut": true,
+     "position": [
+      -2.45,
+      1.62,
+      0.9
+     ],
+     "lookAt": [
+      -3,
+      1.5,
+      -2
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 605,
+   "qualityNotes": "",
+   "env": {
+    "preset": "beach",
+    "seed": 6,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "horse",
+     "x": -1.0,
+     "z": -9.9
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 713,
+     "dur": 25,
+     "at": [
+      -2.58,
+      2.28,
+      -2.0
+     ],
+     "size": 0.42,
+     "product": "exclaim"
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "SINON",
+     "frame": 590,
+     "dur": 145,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 738,
+   "endFrame": 824,
+   "narration": "The Trojans found him, and he started crying.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "sinon",
+     "x": -3.0,
+     "z": -2.0,
+     "expr": "nervous",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 799,
+       "expr": "pained"
+      }
+     ]
+    },
+    {
+     "castId": "trojan",
+     "x": -3.72,
+     "z": -2.9,
+     "expr": "stern",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 738,
+     "position": [
+      -2.0,
+      1.66,
+      2.3
+     ],
+     "lookAt": [
+      -3.0,
+      1.42,
+      -2.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 773,
+     "dur": 24,
+     "position": [
+      -2.45,
+      1.62,
+      0.9
+     ],
+     "lookAt": [
+      -3.0,
+      1.5,
+      -2.0
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 606,
+   "qualityNotes": "",
+   "env": {
+    "preset": "beach",
+    "seed": 6,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 824,
+   "endFrame": 926,
+   "narration": "That horse is a gift for the goddess Athena, he sobbed.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "sinon",
+     "x": -3.0,
+     "z": -2.0,
+     "expr": "pained",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 824,
+     "position": [
+      -3.55,
+      1.62,
+      0.9
+     ],
+     "lookAt": [
+      -3.0,
+      1.5,
+      -2.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 880,
+     "cut": true,
+     "position": [
+      -2.45,
+      1.62,
+      0.9
+     ],
+     "lookAt": [
+      -3.0,
+      1.5,
+      -2.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 607,
+   "qualityNotes": "",
+   "env": {
+    "preset": "beach",
+    "seed": 6,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 848,
+     "dur": 60,
+     "at": [
+      -2.726,
+      2.05,
+      -2.0
+     ],
+     "size": 0.28371807239363683,
+     "product": "scroll"
+    }
+   ]
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 926,
+   "endFrame": 1034,
+   "narration": "They built it huge, so you could never get it into your city.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "sinon",
+     "x": -3.0,
+     "z": -2.0,
+     "expr": "nervous",
+     "mode": "stand"
+    },
+    {
+     "castId": "trojan",
+     "x": -3.937,
+     "z": -2.9,
+     "expr": "neutral",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 926,
+     "position": [
+      -1.4,
+      1.68,
+      3.6
+     ],
+     "lookAt": [
+      -3,
+      1.38,
+      -2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 973,
+     "dur": 24,
+     "position": [
+      -2.45,
+      1.62,
+      0.9
+     ],
+     "lookAt": [
+      -3,
+      1.5,
+      -2
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 608,
+   "qualityNotes": "",
+   "env": {
+    "preset": "beach",
+    "seed": 6,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "horse",
+     "x": -5.0,
+     "z": -9.9
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 989,
+     "dur": 45,
+     "at": [
+      -2.58,
+      2.28,
+      -2.0
+     ],
+     "size": 0.42,
+     "product": "exclaim"
+    }
+   ]
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 1034,
+   "endFrame": 1124,
+   "narration": "Because if it gets inside, Troy can never fall.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "trojan",
+     "x": 2.0,
+     "z": -3.0,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1053,
+       "expr": "grin"
+      }
+     ]
+    },
+    {
+     "castId": "trojan2",
+     "x": 1.571,
+     "z": -3.978,
+     "expr": "shock",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1104,
+       "expr": "grin"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1034,
+     "position": [
+      0.176,
+      1.66,
+      1.02
+     ],
+     "lookAt": [
+      2.0,
+      1.42,
+      -3.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1071,
+     "dur": 24,
+     "position": [
+      0.892,
+      1.62,
+      -0.264
+     ],
+     "lookAt": [
+      2.0,
+      1.5,
+      -3.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 609,
+   "qualityNotes": "",
+   "env": {
+    "preset": "beach",
+    "seed": 6,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 1053,
+     "dur": 60,
+     "at": [
+      2.412,
+      2.28,
+      -2.918
+     ],
+     "size": 0.42,
+     "product": "lightbulb"
+    }
+   ]
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 1124,
+   "endFrame": 1220,
+   "narration": "The Trojans could not resist stealing the Greeks' luck.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "trojan",
+     "x": -2.4,
+     "z": -6.0,
+     "expr": "grin",
+     "mode": "stroll",
+     "walkTo": [
+      0.0,
+      -6.0
+     ],
+     "walkFrames": [
+      1124,
+      1191
+     ]
+    },
+    {
+     "castId": "trojan2",
+     "x": -2.571,
+     "z": -7.051,
+     "expr": "laugh",
+     "mode": "stroll",
+     "walkTo": [
+      -0.171,
+      -7.051
+     ],
+     "walkFrames": [
+      1124,
+      1191
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1124,
+     "position": [
+      3.0,
+      2.3,
+      4.5
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      -6
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1164,
+     "dur": 24,
+     "position": [
+      1.6,
+      1.68,
+      -0.4
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      -6
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 610,
+   "qualityNotes": "",
+   "pieces": [
+    {
+     "kind": "horse",
+     "x": 0.0,
+     "z": -11.9,
+     "moveTo": [
+      0.0,
+      -18.9
+     ],
+     "moveFrames": [
+      1133,
+      1210
+     ]
+    }
+   ]
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 1220,
+   "endFrame": 1339,
+   "narration": "So they tore open their own unbreakable wall, to squeeze it in.",
+   "light": "golden",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "trojan",
+     "x": 14.0,
+     "z": -7.0,
+     "expr": "grin",
+     "mode": "stand"
+    },
+    {
+     "castId": "trojan2",
+     "x": 12.211,
+     "z": -7.589,
+     "expr": "grin",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1220,
+     "position": [
+      10.479,
+      2.3,
+      3.337
+     ],
+     "lookAt": [
+      14,
+      1.2,
+      -7
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1273,
+     "dur": 24,
+     "position": [
+      12.122,
+      1.68,
+      -1.487
+     ],
+     "lookAt": [
+      14,
+      1.38,
+      -7
+     ],
+     "fov": 38,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 611,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150,
+   "env": {
+    "preset": "troy",
+    "seed": 6,
+    "shop": null,
+    "variant": "breach"
+   },
+   "pieces": [
+    {
+     "kind": "horse",
+     "x": 14.494,
+     "z": -16.888
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 1232,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "puff",
+     "frame": 1230,
+     "dur": 60,
+     "at": [
+      14.0,
+      1.0,
+      -7.0
+     ],
+     "size": 0.9
+    },
+    {
+     "kind": "burst",
+     "frame": 1264,
+     "dur": 60,
+     "at": [
+      12.63,
+      2.28,
+      -7.568
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 1339,
+   "endFrame": 1431,
+   "narration": "That night, the Greeks climbed out, and opened the gates.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "ody",
+     "x": 14.653,
+     "z": -34.0,
+     "expr": "grin",
+     "mode": "stand"
+    },
+    {
+     "castId": "greek",
+     "x": 15.59,
+     "z": -33.1,
+     "expr": "stern",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1339,
+     "position": [
+      13.4,
+      1.68,
+      -39.6
+     ],
+     "lookAt": [
+      15,
+      1.38,
+      -34
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1400,
+     "dur": 24,
+     "position": [
+      14.45,
+      1.62,
+      -36.9
+     ],
+     "lookAt": [
+      15,
+      1.5,
+      -34
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 612,
+   "qualityNotes": "",
+   "env": {
+    "preset": "troy",
+    "seed": 6,
+    "shop": null,
+    "variant": "breach"
+   },
+   "pieces": [
+    {
+     "kind": "horse",
+     "x": 18.3,
+     "z": -32.2
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 1414,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 1412,
+     "dur": 19,
+     "at": [
+      15.17,
+      2.28,
+      -33.1
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b14",
+   "startFrame": 1431,
+   "endFrame": 1588,
+   "narration": "Ten years of attacks failed. Reverse psychology and a wooden toy didn't.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "ody",
+     "x": 15.0,
+     "z": -34.0,
+     "expr": "smile",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1540,
+       "expr": "grin"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1431,
+     "position": [
+      15.55,
+      1.62,
+      -36.9
+     ],
+     "lookAt": [
+      15.0,
+      1.5,
+      -34.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1517,
+     "cut": true,
+     "position": [
+      14.45,
+      1.62,
+      -36.9
+     ],
+     "lookAt": [
+      15.0,
+      1.5,
+      -34.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 613,
+   "qualityNotes": "",
+   "env": {
+    "preset": "troy",
+    "seed": 6,
+    "shop": null,
+    "variant": "breach"
+   },
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 1540,
+     "dur": 48,
+     "at": [
+      14.726,
+      2.05,
+      -34.0
+     ],
+     "size": 0.44330948811505755
+    }
+   ]
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": false,
+  "words": []
+ },
+ "style": "storybook",
+ "graphics": "full"
+}

@@ -1,0 +1,106 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 51.0225625,
+ "voice": "af_heart",
+ "lang": "en",
+ "speed": 1.0,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "This guy was so bad at math, he accidentally found two continents.",
+   "start": 0.06,
+   "end": 3.6923541666666666
+  },
+  {
+   "text": "And he died refusing to admit he was lost.",
+   "start": 3.8323541666666667,
+   "end": 6.283708333333333
+  },
+  {
+   "text": "Here's the myth: in 1492, people thought the Earth was flat.",
+   "start": 6.423708333333333,
+   "end": 10.4248125
+  },
+  {
+   "text": "Nope.",
+   "start": 10.5648125,
+   "end": 11.121375
+  },
+  {
+   "text": "Educated Europeans knew it was round, and roughly how big.",
+   "start": 11.261375,
+   "end": 14.731166666666667
+  },
+  {
+   "text": "About twenty-five thousand miles around.",
+   "start": 14.871166666666667,
+   "end": 17.068395833333334
+  },
+  {
+   "text": "Huge.",
+   "start": 17.208395833333334,
+   "end": 17.850125
+  },
+  {
+   "text": "Columbus read an Arabic measurement, and used shorter Roman miles instead.",
+   "start": 17.990125,
+   "end": 22.256333333333334
+  },
+  {
+   "text": "Boom.",
+   "start": 22.396333333333335,
+   "end": 22.955354166666666
+  },
+  {
+   "text": "His Earth shrank by a quarter.",
+   "start": 23.095354166666667,
+   "end": 24.634458333333335
+  },
+  {
+   "text": "On his map, Japan sat just a few weeks west of the Canary Islands.",
+   "start": 24.77445833333333,
+   "end": 28.715666666666667
+  },
+  {
+   "text": "The royal experts checked his math, and said no.",
+   "start": 28.855666666666668,
+   "end": 31.593104166666667
+  },
+  {
+   "text": "Not because of a flat Earth.",
+   "start": 31.733104166666667,
+   "end": 33.24339583333333
+  },
+  {
+   "text": "Because his crew would starve in an empty ocean.",
+   "start": 33.38339583333333,
+   "end": 35.714708333333334
+  },
+  {
+   "text": "And they were right.",
+   "start": 35.854708333333335,
+   "end": 36.733333333333334
+  },
+  {
+   "text": "Except two continents nobody in Europe knew about were in the way.",
+   "start": 36.873333333333335,
+   "end": 40.48172916666667
+  },
+  {
+   "text": "He landed in the Bahamas, and called the people he met Indians.",
+   "start": 40.62172916666667,
+   "end": 44.236270833333336
+  },
+  {
+   "text": "Later, he made his crew swear that Cuba was part of Asia.",
+   "start": 44.376270833333336,
+   "end": 47.4559375
+  },
+  {
+   "text": "The worst math in history, and the luckiest wrong answer ever.",
+   "start": 47.5959375,
+   "end": 50.8825625
+  }
+ ]
+}

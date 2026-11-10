@@ -1,0 +1,106 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 46.05866666666667,
+ "voice": "af_heart",
+ "lang": "en",
+ "speed": 0.88,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "A guy caught his girlfriend cheating, because his bathroom floor snitched on her at three in the morning.",
+   "start": 0.06,
+   "end": 5.6710625
+  },
+  {
+   "text": "He was away on a business trip.",
+   "start": 5.8110625,
+   "end": 7.508375
+  },
+  {
+   "text": "His girlfriend texted: sleeping alone all weekend.",
+   "start": 7.648375,
+   "end": 10.9885625
+  },
+  {
+   "text": "Miss you.",
+   "start": 11.1285625,
+   "end": 11.936083333333332
+  },
+  {
+   "text": "She forgot one tiny detail.",
+   "start": 12.076083333333333,
+   "end": 13.9330625
+  },
+  {
+   "text": "His smart scale.",
+   "start": 14.0730625,
+   "end": 15.2158125
+  },
+  {
+   "text": "It syncs every single weigh-in to his phone.",
+   "start": 15.3558125,
+   "end": 17.684208333333334
+  },
+  {
+   "text": "At two forty-five in the morning, his phone dinged.",
+   "start": 17.824208333333335,
+   "end": 20.663354166666668
+  },
+  {
+   "text": "New weight recorded.",
+   "start": 20.803354166666665,
+   "end": 22.098
+  },
+  {
+   "text": "One hundred ninety-five pounds.",
+   "start": 22.238,
+   "end": 24.093208333333333
+  },
+  {
+   "text": "His girlfriend weighs one hundred fifteen.",
+   "start": 24.233208333333334,
+   "end": 26.739375
+  },
+  {
+   "text": "At eight in the morning, the scale saved a brand new guest profile.",
+   "start": 26.879375,
+   "end": 30.610416666666666
+  },
+  {
+   "text": "With body fat.",
+   "start": 30.750416666666666,
+   "end": 31.818104166666668
+  },
+  {
+   "text": "He didn't call.",
+   "start": 31.958104166666665,
+   "end": 32.947604166666665
+  },
+  {
+   "text": "He didn't yell.",
+   "start": 33.087604166666665,
+   "end": 34.01472916666667
+  },
+  {
+   "text": "He renamed the home Wi-Fi: Who weighs one ninety-five?",
+   "start": 34.15472916666667,
+   "end": 37.5535
+  },
+  {
+   "text": "Then he shipped all her stuff to her parents' house.",
+   "start": 37.6935,
+   "end": 40.024125
+  },
+  {
+   "text": "Before his flight even landed.",
+   "start": 40.164125,
+   "end": 41.96572916666667
+  },
+  {
+   "text": "Turns out, cheating is hard when even the floor keeps receipts.",
+   "start": 42.10572916666667,
+   "end": 45.91866666666667
+  }
+ ]
+}

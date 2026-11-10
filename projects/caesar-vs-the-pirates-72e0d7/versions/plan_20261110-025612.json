@@ -1,0 +1,663 @@
+{
+ "version": 1,
+ "title": "Caesar vs the Pirates",
+ "lang": "en",
+ "style": "storybook",
+ "environment": "ocean",
+ "seed": 23,
+ "cast": [
+  {
+   "id": "caesar",
+   "name": "Julius Caesar",
+   "role": "caesar",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "cap",
+   "name": "Pirate captain",
+   "role": "captain",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "pir",
+   "name": "Pirate",
+   "role": "pirate",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "pir2",
+   "name": "Pirate",
+   "role": "pirate",
+   "palette": "#2f5f6a",
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "legion",
+   "name": "Soldier",
+   "role": "greek",
+   "palette": "#9a2a3a",
+   "skin": null,
+   "hair": null,
+   "shades": null
+  }
+ ],
+ "beats": [
+  {
+   "narration": "Pirates kidnapped Julius Caesar and asked for twenty talents. He was offended. He told them to ask for fifty.",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "caesar",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": "scroll"
+    },
+    {
+     "id": "cap",
+     "action": "stand",
+     "expr": "grin",
+     "react": {
+      "word": "fifty",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "caesar",
+   "fx": [],
+   "impactWord": "fifty",
+   "transition": "cut",
+   "text": "50 TALENTS",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "ocean",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Around seventy-five B.C., young Caesar was sailing across the Aegean.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "caesar",
+     "action": "stand",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "caesar",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "ocean",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "Cilician pirates grabbed him, and set his price.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "cap",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "pir",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "caesar",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "cap",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "coins",
+     "color": null,
+     "word": "price",
+     "on": "cap"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "ocean",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 2,
+   "visual": null
+  },
+  {
+   "narration": "Twenty talents? For me? Do you know who I am?",
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "caesar",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "caesar",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "question",
+     "color": null,
+     "word": "who",
+     "on": "caesar"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "ocean",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "He sent his friends to raise the money, and stayed with the pirates for thirty-eight days.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "caesar",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "pir2",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "caesar",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "clock",
+     "color": null,
+     "word": "days",
+     "on": "caesar"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "38 DAYS",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "ocean",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 3,
+   "visual": null
+  },
+  {
+   "narration": "When he wanted to sleep, he told them to be quiet.",
+   "shot": "two_shot",
+   "light": "night",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "caesar",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "pir",
+     "action": "stand",
+     "expr": "nervous",
+     "react": {
+      "word": "quiet",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "caesar",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "color": null,
+     "word": "quiet",
+     "on": "caesar"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "cabin",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "He wrote poems, read them out loud, and called them illiterate barbarians if they didn't clap.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "caesar",
+     "action": "stand",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": "scroll"
+    },
+    {
+     "id": "pir",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "pir2",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "caesar",
+   "fx": [
+    {
+     "kind": "notes",
+     "product": null,
+     "color": null,
+     "word": "poems",
+     "on": "caesar"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "cabin",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "He joked he'd come back and punish them all. They laughed.",
+   "shot": "two_shot",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "caesar",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "cap",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "laughed",
+      "expr": "laugh"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "caesar",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "cabin",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "The ransom arrived. Fifty talents. They let him go.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "caesar",
+     "action": "stand",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "caesar",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "coins",
+     "color": null,
+     "word": "Fifty",
+     "on": "caesar"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "harbour",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Caesar raised a fleet, without any official command.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "caesar",
+     "action": "wave",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "legion",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "caesar",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "harbour",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "galley",
+     "where": "far",
+     "dx": -4.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null
+    },
+    {
+     "kind": "galley",
+     "where": "far",
+     "dx": 10.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 4,
+   "visual": null
+  },
+  {
+   "narration": "He found the pirates on the same island, took back the silver, and captured them all.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "cap",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "captured",
+      "expr": "shock"
+     },
+     "holding": null
+    },
+    {
+     "id": "pir",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "pir2",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "cap",
+   "fx": [
+    {
+     "kind": "burst",
+     "product": null,
+     "color": null,
+     "word": "captured",
+     "on": "cap"
+    }
+   ],
+   "impactWord": "captured",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "beach",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "galley",
+     "where": "right",
+     "dx": 0.0,
+     "dz": 6.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "And that joke about punishing them? It wasn't a joke.",
+   "shot": "close",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "cap",
+     "action": "stand",
+     "expr": "dazed",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "cap",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "beach",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Never let your hostage negotiate his own price.",
+   "shot": "close",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "caesar",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "price",
+      "expr": "smile_closed"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "caesar",
+   "fx": [
+    {
+     "kind": "sparkle",
+     "product": null,
+     "color": null,
+     "word": "price",
+     "on": "caesar"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "harbour",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Around 75 BC Cilician pirates captured young Caesar and asked 20 talents; he said he was worth at least 50.",
+   "status": "verified",
+   "source": "Plutarch, Life of Caesar 1-2; https://en.wikipedia.org/wiki/Julius_Caesar"
+  },
+  {
+   "text": "He was held about 38 days, wrote poems and speeches, read them to the pirates, called them illiterate barbarians, and told them to be quiet when he slept.",
+   "status": "verified",
+   "source": "Plutarch, Life of Caesar 1-2; https://en.wikipedia.org/wiki/Julius_Caesar"
+  },
+  {
+   "text": "He jokingly threatened to punish them; after the ransom he raised a fleet without public office, captured them and had them executed.",
+   "status": "verified",
+   "source": "Plutarch, Life of Caesar 1-2; https://en.wikipedia.org/wiki/Julius_Caesar"
+  }
+ ],
+ "creativeHooks": [
+  "Pirates kidnapped Julius Caesar and asked for twenty talents. He was offended. He told them to ask for fifty.",
+  "Never let your hostage negotiate his own price."
+ ],
+ "brand": null,
+ "cta": null,
+ "captions": false,
+ "graphics": "full"
+}

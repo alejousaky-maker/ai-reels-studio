@@ -1,0 +1,508 @@
+{
+ "title": "The Canal That Cut a Continent",
+ "environment": "canal",
+ "seed": 79,
+ "cast": [
+  {
+   "id": "cap",
+   "name": "Captain",
+   "role": "captain"
+  },
+  {
+   "id": "eng",
+   "name": "Engineer",
+   "role": "engineer"
+  },
+  {
+   "id": "wk",
+   "name": "1914 worker",
+   "role": "worker"
+  },
+  {
+   "id": "toll",
+   "name": "Toll man",
+   "role": "tollman"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "They spent over five billion dollars widening the Panama Canal, and the giant new ships still scrape by with barely any room on either wall.",
+   "shot": "wide",
+   "mood": "upbeat",
+   "environment": "canal",
+   "pieces": [
+    {
+     "kind": "containership",
+     "scale": 0.55,
+     "move": "away"
+    }
+   ],
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "giant",
+     "shot": "low",
+     "fx": [
+      {
+       "kind": "sparks",
+       "word": "scrape"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "containership",
+       "scale": 0.55,
+       "shake": 0.4
+      }
+     ],
+     "camMove": "truck_right"
+    },
+    {
+     "at": "either",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "cap",
+       "expr": "sweat"
+      }
+     ],
+     "pieces": [],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Back in nineteen fourteen, digging a ditch across the jungle connected two oceans and changed global trade forever.",
+   "shot": "wide",
+   "characters": [
+    {
+     "id": "wk",
+     "expr": "stern",
+     "holding": "shovel"
+    }
+   ],
+   "extras": 4,
+   "fx": [
+    {
+     "kind": "puff",
+     "word": "ditch",
+     "on": "wk"
+    }
+   ],
+   "transition": "dissolve",
+   "text": "1914",
+   "textStyle": "title",
+   "environment": "canal",
+   "envVariant": "dig",
+   "pieces": [
+    {
+     "kind": "steamshovel",
+     "where": "left"
+    }
+   ],
+   "extrasRole": "worker",
+   "camMove": "truck_left",
+   "look": "sepia",
+   "extrasHolding": "shovel",
+   "shots": [
+    {
+     "at": "connected",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "wk",
+       "action": "cheer",
+       "expr": "grin",
+       "holding": "shovel"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "The original cost? Over twenty-five thousand worker lives lost to malaria and yellow fever in the brutal tropical mud.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "wk",
+     "action": "sit",
+     "expr": "sleepy"
+    }
+   ],
+   "environment": "canal",
+   "envVariant": "dig",
+   "pieces": [
+    {
+     "kind": "mosquito",
+     "where": "right",
+     "y": 1.4,
+     "shake": 0.6
+    }
+   ],
+   "camMove": "push",
+   "look": "sepia",
+   "shots": [
+    {
+     "at": "malaria",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "wk",
+       "action": "sit",
+       "expr": "shock"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "mosquito",
+       "where": "right",
+       "scale": 1.6,
+       "y": 1.5,
+       "shake": 0.8
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": "Fast forward a century, and cargo ships got so big they couldn't even fit through the old locks anymore.",
+   "shot": "worm",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "cap",
+     "expr": "shock"
+    }
+   ],
+   "transition": "zoom",
+   "environment": "canal",
+   "pieces": [
+    {
+     "kind": "containership",
+     "scale": 0.7
+    }
+   ],
+   "camMove": "crane_up",
+   "shots": [
+    {
+     "at": "couldn't",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "cap",
+       "expr": "broken"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "So engineers launched a colossal project: brand new, gigantic concrete water elevators to lift floating cities.",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "eng",
+     "action": "point",
+     "expr": "grin"
+    }
+   ],
+   "environment": "canal",
+   "envVariant": "dig",
+   "pieces": [
+    {
+     "kind": "blueprint",
+     "where": "left",
+     "label": "NEW LOCKS"
+    },
+    {
+     "kind": "mixer",
+     "where": "far",
+     "move": "left"
+    }
+   ],
+   "camMove": "orbit",
+   "shots": [
+    {
+     "at": "gigantic",
+     "shot": "wide",
+     "characters": [
+      {
+       "id": "eng",
+       "action": "cheer",
+       "expr": "starry"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "mixer",
+       "where": "left"
+      },
+      {
+       "kind": "mixer",
+       "where": "right",
+       "mirror": true
+      }
+     ],
+     "camMove": "crane_up"
+    }
+   ]
+  },
+  {
+   "narration": "Instead of pumps, gravity does all the work, draining lake water to float ships uphill.",
+   "shot": "wide",
+   "fx": [
+    {
+     "kind": "splash",
+     "word": "gravity"
+    }
+   ],
+   "environment": "canal",
+   "pieces": [
+    {
+     "kind": "containership",
+     "scale": 0.55,
+     "y": -2.5,
+     "lift": 0.5
+    }
+   ],
+   "camMove": "crane_up",
+   "shots": [
+    {
+     "at": "float",
+     "shot": "low",
+     "fx": [
+      {
+       "kind": "splash",
+       "word": "uphill"
+      }
+     ],
+     "camMove": "truck_right"
+    }
+   ]
+  },
+  {
+   "narration": "The new ships are so wide they leave just a few meters on each side. There is zero room for bad steering.",
+   "shot": "close",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "cap",
+     "expr": "sweat"
+    }
+   ],
+   "environment": "canal",
+   "camMove": "push",
+   "hud": "panel",
+   "hudText": "CLEARANCE|≈ 3 METERS EACH SIDE!",
+   "shots": [
+    {
+     "at": "zero",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "cap",
+       "expr": "broken"
+      }
+     ],
+     "camMove": "whip"
+    }
+   ]
+  },
+  {
+   "narration": "Powerful tugboats tie onto both ends to guide the giant beast through safely.",
+   "shot": "wide",
+   "mood": "upbeat",
+   "environment": "canal",
+   "pieces": [
+    {
+     "kind": "containership",
+     "scale": 0.55,
+     "move": "away"
+    },
+    {
+     "kind": "tugboat",
+     "where": "left",
+     "y": -1.4
+    },
+    {
+     "kind": "tugboat",
+     "where": "right",
+     "y": -1.4,
+     "mirror": true
+    }
+   ],
+   "camMove": "truck_right",
+   "shots": [
+    {
+     "at": "guide",
+     "shot": "low",
+     "characters": [
+      {
+       "id": "cap",
+       "action": "point",
+       "expr": "grin"
+      }
+     ],
+     "camMove": "truck_left"
+    }
+   ]
+  },
+  {
+   "narration": "The funny part? The canal runs on rainwater, so when a drought hits, ships pay millions just to skip the line.",
+   "shot": "wide",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "cap",
+     "action": "shrug",
+     "expr": "nervous"
+    }
+   ],
+   "environment": "canal",
+   "envVariant": "dry",
+   "camMove": "pull",
+   "shots": [
+    {
+     "at": "ships",
+     "shot": "two_shot",
+     "characters": [
+      {
+       "id": "cap",
+       "expr": "grin",
+       "holding": "cash"
+      },
+      {
+       "id": "toll",
+       "expr": "starry"
+      }
+     ],
+     "focus": "cap",
+     "fx": [
+      {
+       "kind": "product",
+       "product": "ticket",
+       "word": "skip",
+       "on": "toll"
+      },
+      {
+       "kind": "money",
+       "word": "millions",
+       "on": "cap"
+      }
+     ],
+     "camMove": "orbit"
+    }
+   ]
+  },
+  {
+   "narration": "Around forty percent of all US container traffic squeezes through this exact tropical bottleneck.",
+   "shot": "wide",
+   "mood": "upbeat",
+   "transition": "zoom",
+   "environment": "canal",
+   "hud": "world"
+  },
+  {
+   "narration": "Instead of sailing all the way around South America, you cut about eight thousand miles off the trip in one afternoon.",
+   "shot": "wide",
+   "mood": "upbeat",
+   "environment": "canal",
+   "hud": "panama"
+  },
+  {
+   "narration": "Humanity literally cut a continent in half so your TV could arrive faster.",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "cap",
+     "action": "cheer",
+     "expr": "starry"
+    }
+   ],
+   "transition": "dissolve",
+   "environment": "apartment",
+   "pieces": [
+    {
+     "kind": "tv",
+     "where": "left",
+     "label": "~game"
+    },
+    {
+     "kind": "cardbox",
+     "where": "right"
+    }
+   ],
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "TV",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "cap",
+       "expr": "starry"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "sparkle",
+       "word": "arrive",
+       "on": "cap"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": "Send this to anyone who loves engineering marvels.",
+   "shot": "high",
+   "light": "golden",
+   "mood": "warm",
+   "transition": "dissolve",
+   "environment": "canal",
+   "pieces": [
+    {
+     "kind": "containership",
+     "where": "far",
+     "scale": 0.5
+    }
+   ],
+   "camMove": "crane_up"
+  },
+  {
+   "narration": "Hit follow for more megaproject breakdowns.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "warm",
+   "transition": "dissolve",
+   "environment": "shops",
+   "hud": "outro"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "The Panama Canal expansion (opened 2016) cost about $5.25 billion; Neopanamax ships pass with only a few metres to spare.",
+   "status": "verified"
+  },
+  {
+   "text": "The canal opened in 1914; over 25,000 workers died across the French and American construction eras, mostly of disease.",
+   "status": "verified"
+  },
+  {
+   "text": "New locks use gravity-fed water (with water-saving basins), not pumps; tugboats guide ships in the new locks.",
+   "status": "verified"
+  },
+  {
+   "text": "About 40 percent of US container traffic passes through the canal; New York to San Francisco is ~8,000 miles shorter.",
+   "status": "verified"
+  },
+  {
+   "text": "Droughts in 2023 forced draft limits; some ships paid millions in auctions to jump the queue.",
+   "status": "verified"
+  }
+ ]
+}

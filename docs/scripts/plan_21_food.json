@@ -1,0 +1,603 @@
+{
+ "title": "How Manhattan Eats Every Day",
+ "environment": "bridge",
+ "seed": 73,
+ "cast": [
+  {
+   "id": "drv",
+   "name": "Driver",
+   "role": "driver"
+  },
+  {
+   "id": "chef",
+   "name": "Chef",
+   "role": "chef"
+  },
+  {
+   "id": "cop",
+   "name": "Cop",
+   "role": "cop"
+  },
+  {
+   "id": "stk",
+   "name": "Stocker",
+   "role": "stocker"
+  },
+  {
+   "id": "bal",
+   "name": "Ballerina",
+   "role": "ballerina"
+  },
+  {
+   "id": "hat",
+   "name": "Hard hat",
+   "role": "engineer"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "How do you feed a city of eight million people when its heart is an island with zero farms? You don't. You pray the trucks don't stop.",
+   "shot": "wide",
+   "mood": "curious",
+   "environment": "bridge",
+   "camMove": "push",
+   "hud": "manhattan",
+   "hudText": "jam",
+   "shots": [
+    {
+     "at": "You",
+     "shot": "medium",
+     "characters": [
+      {
+       "id": "drv",
+       "expr": "sweat"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "semi",
+       "scale": 0.6
+      }
+     ],
+     "camMove": "push"
+    },
+    {
+     "at": "pray",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "drv",
+       "action": "cheer",
+       "expr": "nervous"
+      }
+     ],
+     "camMove": "orbit"
+    }
+   ]
+  },
+  {
+   "narration": "Every single morning, thousands of massive eighteen-wheelers converge on New York City before dawn, carrying millions of pounds of food.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "upbeat",
+   "transition": "whip",
+   "text": "4:00 AM",
+   "textStyle": "title",
+   "environment": "bridge",
+   "pieces": [
+    {
+     "kind": "semi",
+     "where": "left",
+     "scale": 0.6,
+     "move": "toward"
+    },
+    {
+     "kind": "semi",
+     "where": "right",
+     "scale": 0.6,
+     "mirror": true,
+     "move": "toward"
+    }
+   ],
+   "camMove": "truck_right",
+   "shots": [
+    {
+     "at": "converge",
+     "shot": "low",
+     "pieces": [
+      {
+       "kind": "semi",
+       "where": "front",
+       "scale": 0.6,
+       "move": "right"
+      },
+      {
+       "kind": "semi",
+       "where": "far",
+       "scale": 0.6
+      }
+     ],
+     "camMove": "truck_left"
+    }
+   ]
+  },
+  {
+   "narration": "If you run a restaurant in Times Square, your entire menu depends on a single truck crawling across the George Washington Bridge.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "chef",
+     "expr": "sweat"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "clock",
+     "word": "menu",
+     "on": "chef"
+    }
+   ],
+   "transition": "dissolve",
+   "environment": "kitchen",
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "single",
+     "shot": "wide",
+     "light": "night",
+     "environment": "bridge",
+     "characters": [],
+     "pieces": [
+      {
+       "kind": "semi",
+       "scale": 0.6
+      },
+      {
+       "kind": "car",
+       "where": "left"
+      },
+      {
+       "kind": "van",
+       "where": "right",
+       "mirror": true
+      }
+     ],
+     "camMove": "crane_up"
+    },
+    {
+     "at": "George",
+     "shot": "extreme",
+     "environment": "kitchen",
+     "characters": [
+      {
+       "id": "chef",
+       "expr": "sweat"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Manhattan was laid out in eighteen eleven for horse-drawn carriages, not eighty-foot trucks trying to deliver fifty crates of avocados.",
+   "shot": "wide",
+   "transition": "dissolve",
+   "text": "1811",
+   "textStyle": "title",
+   "environment": "street",
+   "pieces": [
+    {
+     "kind": "oldcar",
+     "where": "left"
+    }
+   ],
+   "camMove": "truck_right",
+   "look": "sepia",
+   "shots": [
+    {
+     "at": "eighty",
+     "shot": "wide",
+     "environment": "shops",
+     "characters": [
+      {
+       "id": "drv",
+       "expr": "shock"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "notes",
+       "word": "eighty",
+       "on": "drv"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "semi",
+       "where": "on",
+       "scale": 0.7,
+       "shake": 0.3
+      }
+     ],
+     "camMove": "push"
+    },
+    {
+     "at": "avocados",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "drv",
+       "action": "shrug",
+       "expr": "nervous",
+       "holding": "box"
+      }
+     ],
+     "camMove": "orbit"
+    }
+   ]
+  },
+  {
+   "narration": "Delivery drivers have to invent new laws of physics just to double-park without getting towed in thirty seconds.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "drv",
+     "action": "run",
+     "expr": "sweat",
+     "holding": "box"
+    }
+   ],
+   "environment": "shops",
+   "pieces": [
+    {
+     "kind": "boxes",
+     "where": "left"
+    }
+   ],
+   "camMove": "follow",
+   "shots": [
+    {
+     "at": "double",
+     "shot": "two_shot",
+     "characters": [
+      {
+       "id": "cop",
+       "action": "point",
+       "expr": "stern"
+      },
+      {
+       "id": "drv",
+       "action": "panic",
+       "expr": "shock",
+       "holding": "box"
+      }
+     ],
+     "focus": "cop",
+     "fx": [
+      {
+       "kind": "burst",
+       "word": "towed",
+       "on": "cop"
+      }
+     ],
+     "camMove": "orbit"
+    },
+    {
+     "at": "thirty",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "drv",
+       "expr": "sweat"
+      }
+     ],
+     "hud": "panel",
+     "hudText": "TOW TRUCK|ARRIVES IN 0:30!"
+    }
+   ]
+  },
+  {
+   "narration": "By six in the morning, the Hunts Point Market in the Bronx turns into a synchronized war zone of forklifts and crates.",
+   "shot": "wide",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "stk",
+     "action": "march",
+     "expr": "stern"
+    }
+   ],
+   "extras": 3,
+   "extrasAction": "march",
+   "transition": "zoom",
+   "text": "6:00 AM",
+   "textStyle": "title",
+   "environment": "warehouse",
+   "pieces": [
+    {
+     "kind": "forklift",
+     "where": "left",
+     "move": "right"
+    },
+    {
+     "kind": "fruitpile",
+     "where": "right"
+    },
+    {
+     "kind": "forklift",
+     "where": "far",
+     "mirror": true,
+     "move": "left"
+    }
+   ],
+   "extrasRole": "stocker",
+   "camMove": "truck_left",
+   "shots": [
+    {
+     "at": "war",
+     "shot": "low",
+     "pieces": [
+      {
+       "kind": "forklift",
+       "where": "front",
+       "move": "left"
+      },
+      {
+       "kind": "fruitpile",
+       "scale": 1.4
+      }
+     ],
+     "camMove": "whip"
+    }
+   ]
+  },
+  {
+   "narration": "If one bridge closes for maintenance, coffee shops downtown run out of milk before the morning rush even starts.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "cop",
+     "action": "point",
+     "expr": "stern"
+    }
+   ],
+   "environment": "bridge",
+   "pieces": [
+    {
+     "kind": "signs",
+     "where": "right",
+     "label": "BRIDGE|CLOSED|SORRY"
+    }
+   ],
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "coffee",
+     "shot": "wide",
+     "environment": "shops",
+     "characters": [
+      {
+       "id": "hat",
+       "expr": "dazed",
+       "holding": "coffee"
+      }
+     ],
+     "extras": 6,
+     "extrasRole": "officeguy",
+     "pieces": [],
+     "camMove": "truck_right",
+     "extrasHolding": "coffee"
+    },
+    {
+     "at": "morning",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "hat",
+       "expr": "dazed",
+       "holding": "coffee"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Fresh food has zero tolerance. Miss your delivery window, and thousands of meals turn into expensive dumpster juice.",
+   "shot": "close",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "chef",
+     "expr": "nervous",
+     "holding": "lettuce"
+    }
+   ],
+   "environment": "kitchen",
+   "camMove": "push",
+   "hud": "panel",
+   "hudText": "DELIVERY WINDOW|00:01",
+   "shots": [
+    {
+     "at": "thousands",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "chef",
+       "expr": "broken"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "puff",
+       "word": "dumpster",
+       "on": "chef"
+      }
+     ],
+     "camMove": "whip"
+    }
+   ]
+  },
+  {
+   "narration": "An army of night-shift stockers unloads everything in total darkness before the city wakes up.",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "stk",
+     "action": "walk",
+     "expr": "stern",
+     "holding": "box"
+    }
+   ],
+   "extras": 3,
+   "extrasAction": "march",
+   "transition": "dissolve",
+   "environment": "shops",
+   "pieces": [
+    {
+     "kind": "crates",
+     "where": "left"
+    }
+   ],
+   "extrasRole": "stocker",
+   "camMove": "follow"
+  },
+  {
+   "narration": "We're talking about moving billions of calories across concrete bridges every single day, like clockwork.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "hat",
+     "action": "cheer",
+     "expr": "starry"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "confetti",
+     "word": "billions",
+     "on": "hat"
+    }
+   ],
+   "environment": "bridge",
+   "camMove": "crane_up",
+   "hud": "panel",
+   "hudText": "EVERY DAY|BILLIONS OF CALORIES!"
+  },
+  {
+   "narration": "It's the most fragile, high-stakes logistics ballet on Earth, and it happens every twenty-four hours.",
+   "light": "golden",
+   "characters": [
+    {
+     "id": "bal",
+     "action": "cheer",
+     "expr": "nervous",
+     "y": 1.7
+    }
+   ],
+   "environment": "bridge",
+   "pieces": [
+    {
+     "kind": "crates",
+     "where": "on",
+     "scale": 1.0,
+     "shake": 0.5
+    }
+   ],
+   "camMove": "orbit",
+   "shots": [
+    {
+     "at": "every",
+     "shot": "worm",
+     "characters": [
+      {
+       "id": "bal",
+       "action": "stretch",
+       "expr": "sweat",
+       "y": 1.7
+      }
+     ],
+     "camMove": "crane_up"
+    }
+   ]
+  },
+  {
+   "narration": "Next time you bite into a bagel in Manhattan, remember it survived bridges, tunnels, and a parking ticket.",
+   "shot": "close",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "hat",
+     "expr": "starry",
+     "holding": "bagel"
+    }
+   ],
+   "transition": "zoom",
+   "environment": "shops",
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "survived",
+     "shot": "medium",
+     "characters": [
+      {
+       "id": "hat",
+       "action": "point",
+       "expr": "laugh",
+       "holding": "bagel"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "product",
+       "product": "ticket",
+       "word": "ticket",
+       "on": "hat"
+      }
+     ],
+     "camMove": "orbit"
+    }
+   ]
+  },
+  {
+   "narration": "Send this to anyone who thinks food magically appears on grocery shelves.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "warm",
+   "transition": "dissolve",
+   "environment": "bridge",
+   "hud": "manhattan",
+   "hudText": "night"
+  },
+  {
+   "narration": "Hit follow for more hidden infrastructure secrets.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "warm",
+   "transition": "dissolve",
+   "environment": "shops",
+   "hud": "outro"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "New York City has about 8.3 million people; Manhattan itself has no farms and relies on trucks over bridges and through tunnels.",
+   "status": "verified"
+  },
+  {
+   "text": "Manhattan's street grid comes from the Commissioners' Plan of 1811.",
+   "status": "verified"
+  },
+  {
+   "text": "Hunts Point Food Distribution Center in the Bronx is one of the largest food markets in the world.",
+   "status": "verified"
+  },
+  {
+   "text": "'Billions of calories a day' is a rounded estimate."
+  }
+ ]
+}

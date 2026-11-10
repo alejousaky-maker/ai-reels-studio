@@ -1,0 +1,161 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 48.08841666666667,
+ "voice": "af_heart",
+ "lang": "en",
+ "speed": 0.88,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "I woke up this morning and thought the zombie apocalypse finally happened.",
+   "start": 0.06,
+   "end": 4.3337916666666665
+  },
+  {
+   "text": "Turns out, it was something way more serious.",
+   "start": 4.473791666666667,
+   "end": 6.922854166666666
+  },
+  {
+   "text": "No traffic.",
+   "start": 7.062854166666667,
+   "end": 8.090145833333333
+  },
+  {
+   "text": "No dogs.",
+   "start": 8.230145833333333,
+   "end": 9.178104166666667
+  },
+  {
+   "text": "No neighbors yelling.",
+   "start": 9.318104166666666,
+   "end": 10.603145833333333
+  },
+  {
+   "text": "Nothing.",
+   "start": 10.743145833333333,
+   "end": 11.449666666666667
+  },
+  {
+   "text": "I opened the blinds.",
+   "start": 11.589666666666666,
+   "end": 12.9409375
+  },
+  {
+   "text": "The street was completely empty.",
+   "start": 13.0809375,
+   "end": 14.937875
+  },
+  {
+   "text": "So I went out in my slippers to find another human being.",
+   "start": 15.077875,
+   "end": 18.434083333333334
+  },
+  {
+   "text": "The coffee shop?",
+   "start": 18.574083333333334,
+   "end": 19.574270833333333
+  },
+  {
+   "text": "Closed.",
+   "start": 19.714270833333334,
+   "end": 20.430979166666667
+  },
+  {
+   "text": "The bank?",
+   "start": 20.570979166666667,
+   "end": 21.324145833333333
+  },
+  {
+   "text": "Closed.",
+   "start": 21.464145833333333,
+   "end": 22.180854166666666
+  },
+  {
+   "text": "Even the grocery store.",
+   "start": 22.320854166666667,
+   "end": 23.736958333333334
+  },
+  {
+   "text": "That's when I really started to panic.",
+   "start": 23.876958333333334,
+   "end": 25.801833333333335
+  },
+  {
+   "text": "Then I checked my phone.",
+   "start": 25.941833333333335,
+   "end": 27.406104166666665
+  },
+  {
+   "text": "November nineteenth.",
+   "start": 27.546104166666666,
+   "end": 28.941208333333332
+  },
+  {
+   "text": "GTA 6 release day.",
+   "start": 29.081208333333333,
+   "end": 30.924229166666667
+  },
+  {
+   "text": "The whole world wasn't gone.",
+   "start": 31.064229166666667,
+   "end": 32.64760416666667
+  },
+  {
+   "text": "It was just loading.",
+   "start": 32.78760416666667,
+   "end": 34.027
+  },
+  {
+   "text": "Curtains closed.",
+   "start": 34.167,
+   "end": 35.2605625
+  },
+  {
+   "text": "Console on.",
+   "start": 35.4005625,
+   "end": 36.33122916666667
+  },
+  {
+   "text": "Headset on.",
+   "start": 36.47122916666667,
+   "end": 37.408208333333334
+  },
+  {
+   "text": "Snacks stocked.",
+   "start": 37.548208333333335,
+   "end": 38.6078125
+  },
+  {
+   "text": "Phone on airplane mode.",
+   "start": 38.7478125,
+   "end": 40.206875
+  },
+  {
+   "text": "Day one.",
+   "start": 40.346875,
+   "end": 41.079229166666664
+  },
+  {
+   "text": "Day three.",
+   "start": 41.219229166666665,
+   "end": 42.07729166666667
+  },
+  {
+   "text": "Day seven.",
+   "start": 42.21729166666667,
+   "end": 43.0540625
+  },
+  {
+   "text": "The apocalypse was real.",
+   "start": 43.1940625,
+   "end": 44.751645833333335
+  },
+  {
+   "text": "We just did it to ourselves, one mission at a time.",
+   "start": 44.891645833333335,
+   "end": 47.94841666666667
+  }
+ ]
+}

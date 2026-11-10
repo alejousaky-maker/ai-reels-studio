@@ -1,0 +1,116 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 52.9145625,
+ "voice": "af_heart",
+ "lang": "en",
+ "speed": 0.913,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "Pirates kidnapped Julius Caesar and asked for twenty talents.",
+   "start": 0.06,
+   "end": 3.686541666666667
+  },
+  {
+   "text": "He was offended.",
+   "start": 3.8265416666666665,
+   "end": 4.830979166666666
+  },
+  {
+   "text": "He told them to ask for fifty.",
+   "start": 4.970979166666667,
+   "end": 6.7014375
+  },
+  {
+   "text": "Around seventy-five B.C., young Caesar was sailing across the Aegean.",
+   "start": 6.8414375,
+   "end": 11.585645833333333
+  },
+  {
+   "text": "Cilician pirates grabbed him, and set his price.",
+   "start": 11.725645833333333,
+   "end": 14.603979166666667
+  },
+  {
+   "text": "Twenty talents?",
+   "start": 14.743979166666668,
+   "end": 15.732375
+  },
+  {
+   "text": "For me?",
+   "start": 15.872375,
+   "end": 16.539666666666665
+  },
+  {
+   "text": "Do you know who I am?",
+   "start": 16.679666666666666,
+   "end": 17.886520833333332
+  },
+  {
+   "text": "He sent his friends to raise the money, and stayed with the pirates for thirty-eight days.",
+   "start": 18.026520833333333,
+   "end": 22.897833333333335
+  },
+  {
+   "text": "When he wanted to sleep, he told them to be quiet.",
+   "start": 23.03783333333333,
+   "end": 25.6433125
+  },
+  {
+   "text": "He wrote poems, read them out loud, and called them illiterate barbarians if they didn't clap.",
+   "start": 25.7833125,
+   "end": 31.304354166666666
+  },
+  {
+   "text": "He joked he'd come back and punish them all.",
+   "start": 31.444354166666667,
+   "end": 33.684895833333336
+  },
+  {
+   "text": "They laughed.",
+   "start": 33.824895833333336,
+   "end": 34.59545833333333
+  },
+  {
+   "text": "The ransom arrived.",
+   "start": 34.735458333333334,
+   "end": 35.95639583333333
+  },
+  {
+   "text": "Fifty talents.",
+   "start": 36.09639583333333,
+   "end": 37.149541666666664
+  },
+  {
+   "text": "They let him go.",
+   "start": 37.289541666666665,
+   "end": 38.3133125
+  },
+  {
+   "text": "Caesar raised a fleet, without any official command.",
+   "start": 38.4533125,
+   "end": 41.4364375
+  },
+  {
+   "text": "He found the pirates on the same island, took back the silver, and captured them all.",
+   "start": 41.5764375,
+   "end": 46.47602083333334
+  },
+  {
+   "text": "And that joke about punishing them?",
+   "start": 46.61602083333333,
+   "end": 48.367666666666665
+  },
+  {
+   "text": "It wasn't a joke.",
+   "start": 48.507666666666665,
+   "end": 49.572895833333334
+  },
+  {
+   "text": "Never let your hostage negotiate his own price.",
+   "start": 49.712895833333334,
+   "end": 52.7745625
+  }
+ ]
+}

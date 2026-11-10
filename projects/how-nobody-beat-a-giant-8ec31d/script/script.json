@@ -1,0 +1,644 @@
+{
+ "lang": "en",
+ "title": "How Nobody Beat a Giant",
+ "words": 149,
+ "beats": [
+  {
+   "narration": "This guy escaped being eaten alive, with the worst dad joke in history.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "cyclops",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "crew",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "crew2",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "cyclops",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "color": null,
+     "word": "eaten",
+     "on": "crew"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "cave",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": "A towering one-eyed giant grins down at two tiny terrified Greeks by the fire."
+  },
+  {
+   "narration": "Odysseus and his men were trapped in a cave with a giant Cyclops.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "ody",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "crew",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "crew2",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "ody",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "cave",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "sheep",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null
+    },
+    {
+     "kind": "sheep",
+     "where": "front",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "He blocked the door with a boulder, and started eating them.",
+   "shot": "close",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "cyclops",
+     "action": "stand",
+     "expr": "grin",
+     "react": {
+      "word": "eating",
+      "expr": "lick"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "burst",
+     "product": null,
+     "color": null,
+     "word": "boulder",
+     "on": "cyclops"
+    }
+   ],
+   "impactWord": "boulder",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "cave",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Easy fix: kill him while he sleeps, right?",
+   "shot": "two_shot",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "crew",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "ody",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "crew",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "question",
+     "color": null,
+     "word": "right",
+     "on": "crew"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "cave",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 2,
+   "visual": null
+  },
+  {
+   "narration": "Wrong. Only the giant could move that boulder. Kill him, and you starve inside.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "ody",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "crew",
+     "action": "stand",
+     "expr": "grin",
+     "react": {
+      "word": "starve",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "ody",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "color": null,
+     "word": "Wrong",
+     "on": "ody"
+    }
+   ],
+   "impactWord": "Wrong",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "cave",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 2,
+   "visual": null
+  },
+  {
+   "narration": "So Odysseus offered him wine. Strong wine. No water.",
+   "shot": "two_shot",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "ody",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": "wine"
+    },
+    {
+     "id": "cyclops",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "Strong",
+      "expr": "grin"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "ody",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "wine",
+     "color": null,
+     "word": "wine",
+     "on": "cyclops"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "cave",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "The giant asked his name. My name, he said, is Nobody.",
+   "shot": "close",
+   "light": "golden",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "ody",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "Nobody",
+      "expr": "smile"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "\"NOBODY\"",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "cave",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 2,
+   "visual": null
+  },
+  {
+   "narration": "Then the Cyclops passed out.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "cyclops",
+     "action": "stand",
+     "expr": "dazed",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "stars",
+     "product": null,
+     "color": null,
+     "word": "passed",
+     "on": "cyclops"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "cave",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "They heated a sharpened olive stake in the fire, and drove it into his one eye.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "ody",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": "stake"
+    },
+    {
+     "id": "crew",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": "stake"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "ody",
+   "fx": [
+    {
+     "kind": "burst",
+     "product": null,
+     "color": null,
+     "word": "eye",
+     "on": "ody"
+    }
+   ],
+   "impactWord": "eye",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "cave",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 2,
+   "visual": null
+  },
+  {
+   "narration": "He screamed for his Cyclops neighbors. Who's hurting you?",
+   "shot": "wide",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "nb1",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "nb2",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "nb1",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "question",
+     "color": null,
+     "word": "hurting",
+     "on": "nb1"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "cave",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 3,
+   "visual": null
+  },
+  {
+   "narration": "Nobody is killing me!",
+   "shot": "close",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "cyclops",
+     "action": "stand",
+     "expr": "pained",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "burst",
+     "product": null,
+     "color": null,
+     "word": "killing",
+     "on": "cyclops"
+    }
+   ],
+   "impactWord": "killing",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "cave",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Well, if nobody's hurting you, go back to sleep.",
+   "shot": "two_shot",
+   "light": "night",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "nb2",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "sleep",
+      "expr": "relief"
+     },
+     "holding": null
+    },
+    {
+     "id": "nb1",
+     "action": "stand",
+     "expr": "relief",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "nb2",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "cave",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 5,
+   "visual": null
+  },
+  {
+   "narration": "At dawn, the blind giant rolled the boulder away himself, and the men slipped out under his sheep.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "ody",
+     "action": "walk",
+     "expr": "relief",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "crew",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "ody",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "cave",
+   "envVariant": "open",
+   "pieces": [
+    {
+     "kind": "sheep",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": "toward"
+    },
+    {
+     "kind": "sheep",
+     "where": "front",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 3,
+   "visual": null
+  },
+  {
+   "narration": "Saved by a fake name. Nobody saw that coming.",
+   "shot": "close",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "ody",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "Nobody",
+      "expr": "grin"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "sparkle",
+     "product": null,
+     "color": null,
+     "word": "coming",
+     "on": "ody"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "cave",
+   "envVariant": "open",
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 3,
+   "visual": null
+  }
+ ]
+}

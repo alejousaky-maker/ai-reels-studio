@@ -1,0 +1,2336 @@
+{
+ "version": 1,
+ "title": "The Jet Engine Console",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1485,
+ "env": {
+  "preset": "gameroom",
+  "seed": 43,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "me",
+   "name": "Gamer",
+   "outfit": {
+    "jacket": "#2a9d8f",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#f5c9a0",
+    "hat": "cap",
+    "cap": "#1d1b22",
+    "capBack": true,
+    "headset": "#e2453c",
+    "pockets": false
+   }
+  },
+  {
+   "id": "wife",
+   "name": "Wife",
+   "outfit": {
+    "jacket": "#e06a9a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "dress": "#e06a9a",
+    "hat": "longhair",
+    "hair": "#7a4a2a"
+   }
+  },
+  {
+   "id": "meg",
+   "name": "Gamer (goggles)",
+   "outfit": {
+    "jacket": "#2a9d8f",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#ecd0b6",
+    "hat": "cap",
+    "cap": "#1d1b22",
+    "capBack": true,
+    "headset": "#e2453c",
+    "pockets": false,
+    "shades": true
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 103,
+   "narration": "Installing GTA 6 on a base PS5 won't just fill your storage. It will turn your console into a jet engine.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -1.107,
+     "z": -0.149,
+     "expr": "grin",
+     "mode": "sit",
+     "holding": "controller"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      -0.698,
+      1.68,
+      5.575
+     ],
+     "lookAt": [
+      1.942,
+      1.38,
+      0.384
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 0,
+     "position": [
+      -0.698,
+      1.68,
+      5.575
+     ],
+     "lookAt": [
+      -1.45,
+      1.38,
+      -0.2
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4300,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "console",
+     "x": -2.214,
+     "z": -1.453,
+     "scale": 1.4
+    }
+   ]
+  },
+  {
+   "sceneId": "b01a",
+   "startFrame": 103,
+   "endFrame": 168,
+   "narration": "Installing GTA 6 on a base PS5 won't just fill your storage. It will turn your console into a jet engine.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -1.292,
+     "z": -0.176,
+     "expr": "sweat",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 103,
+     "position": [
+      -2.266,
+      1.62,
+      2.61
+     ],
+     "lookAt": [
+      -1.292,
+      1.5,
+      -0.176
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4337,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "panel",
+    "text": "STORAGE|FULL!"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "console",
+     "x": -2.214,
+     "z": -1.453,
+     "scale": 1.4
+    }
+   ]
+  },
+  {
+   "sceneId": "b01b",
+   "startFrame": 168,
+   "endFrame": 195,
+   "narration": "Installing GTA 6 on a base PS5 won't just fill your storage. It will turn your console into a jet engine.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -1.151,
+     "z": -0.155,
+     "expr": "shock",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 168,
+     "position": [
+      -0.795,
+      0.32,
+      3.539
+     ],
+     "lookAt": [
+      -1.151,
+      1.55,
+      -0.155
+     ],
+     "fov": 50,
+     "roll": 0.0
+    },
+    {
+     "frame": 168,
+     "position": [
+      -0.937,
+      0.812,
+      2.061
+     ],
+     "lookAt": [
+      -1.151,
+      1.55,
+      -0.155
+     ],
+     "fov": 50,
+     "roll": 0.0,
+     "dur": 27
+    }
+   ],
+   "push": 0.0028,
+   "dof": {
+    "cInf": 7,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4374,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "console",
+     "x": -2.214,
+     "z": -1.453,
+     "scale": 1.4,
+     "label": "flames",
+     "shake": 1.5
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 170,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 168,
+     "dur": 27,
+     "at": [
+      -0.736,
+      2.28,
+      -0.093
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 195,
+   "endFrame": 304,
+   "narration": "First, the warning pops up. Required space: five hundred gigs.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "nervous",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 269,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 195,
+     "position": [
+      -0.55,
+      1.62,
+      3.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      1.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 195,
+     "position": [
+      -0.33,
+      1.572,
+      2.74
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      1.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 109
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4301,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "panel",
+    "text": "WARNING|REQUIRED SPACE: 500 GB|AVAILABLE: 12 GB!"
+   },
+   "sunEl": 68,
+   "sunAz": 35
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 304,
+   "endFrame": 390,
+   "narration": "A sweat drop the size of a grape rolls down his head.",
+   "light": "night",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.4,
+     "z": 0.8,
+     "expr": "sweat",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 304,
+     "position": [
+      3.148,
+      1.6,
+      2.392
+     ],
+     "lookAt": [
+      2.4,
+      1.6,
+      0.8
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 304,
+     "position": [
+      2.849,
+      1.6,
+      1.755
+     ],
+     "lookAt": [
+      2.4,
+      1.6,
+      0.8
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 86
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4302,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 390,
+   "endFrame": 451,
+   "narration": "So he starts deleting. Call of Duty, gone. Eight years of saves, gone.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -1.45,
+     "z": -0.2,
+     "expr": "stern",
+     "mode": "stand",
+     "pose": "point",
+     "holding": "controller"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 390,
+     "position": [
+      -4.658,
+      1.68,
+      4.739
+     ],
+     "lookAt": [
+      -2.245,
+      1.38,
+      -0.562
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 390,
+     "position": [
+      -3.068,
+      1.68,
+      5.463
+     ],
+     "lookAt": [
+      -0.655,
+      1.38,
+      0.162
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 61
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4303,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "panel",
+    "text": "DELETE?|Call of Duty  ✕"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 444,
+     "dur": 7,
+     "at": [
+      -1.035,
+      2.28,
+      -0.138
+     ],
+     "size": 0.42,
+     "product": "folder"
+    }
+   ]
+  },
+  {
+   "sceneId": "b04a",
+   "startFrame": 451,
+   "endFrame": 517,
+   "narration": "So he starts deleting. Call of Duty, gone. Eight years of saves, gone.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -1.45,
+     "z": -0.2,
+     "expr": "grin",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 451,
+     "position": [
+      -1.336,
+      1.62,
+      2.75
+     ],
+     "lookAt": [
+      -1.45,
+      1.5,
+      -0.2
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4340,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "panel",
+    "text": "DELETE?|Call of Duty  ✕"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "fx": [
+    {
+     "kind": "puff",
+     "frame": 451,
+     "dur": 60,
+     "at": [
+      -1.45,
+      1.0,
+      -0.2
+     ],
+     "size": 0.9
+    }
+   ]
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 517,
+   "endFrame": 559,
+   "narration": "System files, gone. Wedding photos, gone.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "crazy",
+     "mode": "stand",
+     "pose": "point"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 517,
+     "position": [
+      -0.55,
+      1.62,
+      3.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      1.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4304,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "panel",
+    "text": "DELETE?|System Files  ✕"
+   },
+   "sunEl": 68,
+   "sunAz": 35
+  },
+  {
+   "sceneId": "b05a",
+   "startFrame": 559,
+   "endFrame": 599,
+   "narration": "System files, gone. Wedding photos, gone.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "crazy",
+     "mode": "stand",
+     "pose": "point"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 559,
+     "position": [
+      1.6,
+      1.68,
+      6.6
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4341,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "panel",
+    "text": "DELETE?|Wedding Photos  ✕"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 559,
+     "dur": 40,
+     "at": [
+      0.42,
+      2.28,
+      1.0
+     ],
+     "size": 0.42,
+     "product": "camera"
+    }
+   ]
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 599,
+   "endFrame": 652,
+   "narration": "His wife gasps from the doorway.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "wife",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "shock",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 599,
+     "position": [
+      -0.18,
+      1.6,
+      2.75
+     ],
+     "lookAt": [
+      -1.02,
+      1.6,
+      1.204
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 599,
+     "position": [
+      -0.18,
+      1.6,
+      2.75
+     ],
+     "lookAt": [
+      0.0,
+      1.6,
+      1.0
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4305,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "kicks": [
+    {
+     "frame": 613,
+     "amp": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 652,
+   "endFrame": 720,
+   "narration": "Then the install finally begins, and the console starts to shake like a washing machine.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -1.292,
+     "z": -0.176,
+     "expr": "nervous",
+     "mode": "sit"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 652,
+     "position": [
+      -1.178,
+      1.62,
+      2.773
+     ],
+     "lookAt": [
+      -1.292,
+      1.5,
+      -0.176
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4306,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "bar",
+    "text": "INSTALLING GTA 6|1|45"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "console",
+     "x": -2.214,
+     "z": -1.453,
+     "scale": 1.4,
+     "shake": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b07a",
+   "startFrame": 720,
+   "endFrame": 795,
+   "narration": "Then the install finally begins, and the console starts to shake like a washing machine.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -1.45,
+     "z": -0.2,
+     "expr": "nervous",
+     "mode": "sit"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 720,
+     "position": [
+      -2.098,
+      1.55,
+      2.433
+     ],
+     "lookAt": [
+      -1.613,
+      1.32,
+      0.888
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 720,
+     "position": [
+      -1.904,
+      1.458,
+      1.815
+     ],
+     "lookAt": [
+      -1.613,
+      1.32,
+      0.888
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 75
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4343,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "bar",
+    "text": "INSTALLING GTA 6|1|45"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "console",
+     "x": -1.502,
+     "z": 0.146,
+     "scale": 1.0,
+     "shake": 1.2
+    }
+   ]
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 795,
+   "endFrame": 849,
+   "narration": "The side plates glow orange. The fans spin like turbines.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "shock",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 795,
+     "position": [
+      0.578,
+      1.55,
+      3.613
+     ],
+     "lookAt": [
+      0.0,
+      1.32,
+      2.1
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 795,
+     "position": [
+      -0.089,
+      1.55,
+      3.717
+     ],
+     "lookAt": [
+      0.0,
+      1.32,
+      2.1
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 54
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4307,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "console",
+     "x": 0.0,
+     "z": 1.35,
+     "label": "hot",
+     "shake": 1.6
+    }
+   ],
+   "fx": [
+    {
+     "kind": "steam",
+     "frame": 818,
+     "dur": 31,
+     "at": [
+      0.42,
+      1.32,
+      1.05
+     ],
+     "size": 0.32
+    }
+   ]
+  },
+  {
+   "sceneId": "b08a",
+   "startFrame": 849,
+   "endFrame": 896,
+   "narration": "The side plates glow orange. The fans spin like turbines.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.302,
+     "z": 1.0,
+     "expr": "shock",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 849,
+     "position": [
+      -0.598,
+      0.32,
+      4.6
+     ],
+     "lookAt": [
+      0.302,
+      1.55,
+      1.0
+     ],
+     "fov": 50,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0028,
+   "dof": {
+    "cInf": 7,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4344,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "console",
+     "x": -0.941,
+     "z": -0.126,
+     "scale": 1.4,
+     "label": "hot",
+     "shake": 2.0
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 871,
+     "dur": 25,
+     "at": [
+      0.722,
+      2.28,
+      1.0
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 896,
+   "endFrame": 1035,
+   "narration": "Pizza boxes fly across the room. The curtains are flapping. The cat is gone.",
+   "light": "night",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 3.085,
+     "z": 0.56,
+     "expr": "shock",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 896,
+     "position": [
+      7.915,
+      2.3,
+      4.75
+     ],
+     "lookAt": [
+      3.101,
+      1.2,
+      0.078
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 896,
+     "position": [
+      6.513,
+      2.3,
+      6.194
+     ],
+     "lookAt": [
+      1.699,
+      1.2,
+      1.522
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 139
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4308,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "snacks",
+     "x": 0.71,
+     "z": 0.163,
+     "moveTo": [
+      3.541,
+      -0.828
+     ],
+     "moveFrames": [
+      909,
+      1021
+     ]
+    },
+    {
+     "kind": "console",
+     "x": 3.339,
+     "z": -0.684,
+     "label": "hot",
+     "shake": 2.0
+    }
+   ],
+   "fx": [
+    {
+     "kind": "puff",
+     "frame": 917,
+     "dur": 60,
+     "at": [
+      3.085,
+      1.0,
+      0.56
+     ],
+     "size": 0.9
+    }
+   ]
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 1035,
+   "endFrame": 1086,
+   "narration": "Ninety-nine percent installed.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -1.45,
+     "z": -0.2,
+     "expr": "starry",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1035,
+     "position": [
+      -1.888,
+      1.6,
+      1.504
+     ],
+     "lookAt": [
+      -1.45,
+      1.6,
+      -0.2
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 1035,
+     "position": [
+      -1.713,
+      1.6,
+      0.822
+     ],
+     "lookAt": [
+      -1.45,
+      1.6,
+      -0.2
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 51
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4309,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "bar",
+    "text": "INSTALLING GTA 6|96|99"
+   },
+   "sunEl": 68,
+   "sunAz": 35
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 1086,
+   "endFrame": 1119,
+   "narration": "And then, liftoff!",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.302,
+     "z": 1.0,
+     "expr": "shock",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1086,
+     "position": [
+      1.202,
+      0.4,
+      4.6
+     ],
+     "lookAt": [
+      0.302,
+      1.55,
+      1.0
+     ],
+     "fov": 50,
+     "roll": 0.0
+    },
+    {
+     "frame": 1086,
+     "position": [
+      1.202,
+      2.175,
+      4.6
+     ],
+     "lookAt": [
+      0.302,
+      1.55,
+      1.0
+     ],
+     "fov": 50,
+     "roll": 0.0,
+     "dur": 33
+    }
+   ],
+   "push": 0.0028,
+   "dof": {
+    "cInf": 7,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4310,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "console",
+     "x": -0.941,
+     "z": -0.126,
+     "scale": 1.4,
+     "label": "flames",
+     "shake": 1.0,
+     "liftTo": 4.0,
+     "moveFrames": [
+      1090,
+      1119
+     ]
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 1103,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 1101,
+     "dur": 18,
+     "at": [
+      0.722,
+      2.28,
+      1.0
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 1119,
+   "endFrame": 1232,
+   "narration": "The console blasts straight through the ceiling and rockets into the night sky.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 1119,
+     "position": [
+      -3.0,
+      0.4,
+      13.0
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      2.5
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1119,
+     "position": [
+      -3.0,
+      7.76,
+      13.0
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      2.5
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 113
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4311,
+   "qualityNotes": "",
+   "env": {
+    "preset": "suburb",
+    "seed": 43,
+    "shop": null,
+    "variant": "tvglow"
+   },
+   "pieces": [
+    {
+     "kind": "console",
+     "x": 0.0,
+     "z": -2.65,
+     "scale": 2.0,
+     "y": 1.0,
+     "label": "flames",
+     "liftTo": 8.0,
+     "moveFrames": [
+      1135,
+      1232
+     ]
+    }
+   ]
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 1232,
+   "endFrame": 1354,
+   "narration": "And he is still hanging from the HDMI cable, wearing aviator goggles.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "meg",
+     "x": 0.0,
+     "z": 2.5,
+     "expr": "laugh",
+     "mode": "stand",
+     "pose": "up",
+     "y": 2.2
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1232,
+     "position": [
+      1.6,
+      2.424,
+      8.1
+     ],
+     "lookAt": [
+      0,
+      3.58,
+      2.5
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1232,
+     "position": [
+      1.6,
+      6.792,
+      8.1
+     ],
+     "lookAt": [
+      0,
+      3.58,
+      2.5
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 122
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4312,
+   "qualityNotes": "",
+   "env": {
+    "preset": "suburb",
+    "seed": 43,
+    "shop": null,
+    "variant": "tvglow"
+   },
+   "pieces": [
+    {
+     "kind": "console",
+     "x": 0.0,
+     "z": 2.85,
+     "scale": 1.6,
+     "y": 4.4,
+     "label": "flames"
+    }
+   ]
+  },
+  {
+   "sceneId": "b14",
+   "startFrame": 1354,
+   "endFrame": 1389,
+   "narration": "Totally worth it. Now, the day one patch: one hundred and fifty gigs.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "meg",
+     "x": 0.0,
+     "z": 2.5,
+     "expr": "starry",
+     "mode": "stand",
+     "pose": "up",
+     "y": 2.2
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1354,
+     "position": [
+      -1.142,
+      3.82,
+      5.222
+     ],
+     "lookAt": [
+      0.0,
+      3.7,
+      2.5
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1354,
+     "position": [
+      0.067,
+      3.82,
+      5.451
+     ],
+     "lookAt": [
+      0.0,
+      3.7,
+      2.5
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 35
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4313,
+   "qualityNotes": "",
+   "env": {
+    "preset": "suburb",
+    "seed": 43,
+    "shop": null,
+    "variant": "tvglow"
+   },
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 1365,
+     "dur": 24,
+     "at": [
+      0.274,
+      4.25,
+      2.5
+     ],
+     "size": 0.44330948811505755
+    }
+   ]
+  },
+  {
+   "sceneId": "b14a",
+   "startFrame": 1389,
+   "endFrame": 1485,
+   "narration": "Totally worth it. Now, the day one patch: one hundred and fifty gigs.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -1.4,
+     "z": -1.0,
+     "expr": "sweat",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1389,
+     "position": [
+      -1.22,
+      1.6,
+      0.75
+     ],
+     "lookAt": [
+      -1.4,
+      1.6,
+      -1.0
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 1389,
+     "position": [
+      -1.292,
+      1.6,
+      0.05
+     ],
+     "lookAt": [
+      -1.4,
+      1.6,
+      -1.0
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 96
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4350,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "panel",
+    "text": "DAY 1 PATCH|150 GB"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "gameroom",
+    "seed": 43,
+    "shop": null,
+    "variant": "tvglow"
+   }
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": true,
+  "words": [
+   {
+    "w": "Installing",
+    "s": 0.06,
+    "e": 0.5
+   },
+   {
+    "w": "GTA",
+    "s": 0.5,
+    "e": 1.0
+   },
+   {
+    "w": "6",
+    "s": 1.0,
+    "e": 1.42
+   },
+   {
+    "w": "on",
+    "s": 1.42,
+    "e": 1.62
+   },
+   {
+    "w": "a",
+    "s": 1.62,
+    "e": 1.7
+   },
+   {
+    "w": "base",
+    "s": 1.7,
+    "e": 1.88
+   },
+   {
+    "w": "PS5",
+    "s": 1.88,
+    "e": 2.58
+   },
+   {
+    "w": "won't",
+    "s": 2.58,
+    "e": 2.96
+   },
+   {
+    "w": "just",
+    "s": 2.96,
+    "e": 3.1
+   },
+   {
+    "w": "fill",
+    "s": 3.1,
+    "e": 3.36
+   },
+   {
+    "w": "your",
+    "s": 3.36,
+    "e": 3.5
+   },
+   {
+    "w": "storage.",
+    "s": 3.5,
+    "e": 3.9
+   },
+   {
+    "w": "It",
+    "s": 4.278,
+    "e": 4.338
+   },
+   {
+    "w": "will",
+    "s": 4.338,
+    "e": 4.418
+   },
+   {
+    "w": "turn",
+    "s": 4.418,
+    "e": 4.598
+   },
+   {
+    "w": "your",
+    "s": 4.598,
+    "e": 4.778
+   },
+   {
+    "w": "console",
+    "s": 4.778,
+    "e": 5.218
+   },
+   {
+    "w": "into",
+    "s": 5.218,
+    "e": 5.538
+   },
+   {
+    "w": "a",
+    "s": 5.538,
+    "e": 5.658
+   },
+   {
+    "w": "jet",
+    "s": 5.658,
+    "e": 5.858,
+    "hot": true
+   },
+   {
+    "w": "engine.",
+    "s": 5.858,
+    "e": 6.218
+   },
+   {
+    "w": "First,",
+    "s": 6.558,
+    "e": 6.798
+   },
+   {
+    "w": "the",
+    "s": 6.798,
+    "e": 6.978
+   },
+   {
+    "w": "warning",
+    "s": 6.978,
+    "e": 7.198
+   },
+   {
+    "w": "pops",
+    "s": 7.198,
+    "e": 7.498
+   },
+   {
+    "w": "up.",
+    "s": 7.498,
+    "e": 7.798
+   },
+   {
+    "w": "Required",
+    "s": 8.121,
+    "e": 8.656
+   },
+   {
+    "w": "space:",
+    "s": 8.666,
+    "e": 8.997
+   },
+   {
+    "w": "five",
+    "s": 9.007,
+    "e": 9.269
+   },
+   {
+    "w": "hundred",
+    "s": 9.279,
+    "e": 9.746
+   },
+   {
+    "w": "gigs.",
+    "s": 9.756,
+    "e": 10.018
+   },
+   {
+    "w": "A",
+    "s": 10.198,
+    "e": 10.298
+   },
+   {
+    "w": "sweat",
+    "s": 10.298,
+    "e": 10.518
+   },
+   {
+    "w": "drop",
+    "s": 10.518,
+    "e": 10.818
+   },
+   {
+    "w": "the",
+    "s": 10.818,
+    "e": 11.038
+   },
+   {
+    "w": "size",
+    "s": 11.038,
+    "e": 11.278
+   },
+   {
+    "w": "of",
+    "s": 11.278,
+    "e": 11.458
+   },
+   {
+    "w": "a",
+    "s": 11.458,
+    "e": 11.498
+   },
+   {
+    "w": "grape",
+    "s": 11.498,
+    "e": 11.718
+   },
+   {
+    "w": "rolls",
+    "s": 11.718,
+    "e": 12.078
+   },
+   {
+    "w": "down",
+    "s": 12.078,
+    "e": 12.358
+   },
+   {
+    "w": "his",
+    "s": 12.358,
+    "e": 12.578
+   },
+   {
+    "w": "head.",
+    "s": 12.578,
+    "e": 12.798
+   },
+   {
+    "w": "So",
+    "s": 13.076,
+    "e": 13.196
+   },
+   {
+    "w": "he",
+    "s": 13.196,
+    "e": 13.316
+   },
+   {
+    "w": "starts",
+    "s": 13.316,
+    "e": 13.556
+   },
+   {
+    "w": "deleting.",
+    "s": 13.556,
+    "e": 13.996
+   },
+   {
+    "w": "Call",
+    "s": 14.519,
+    "e": 14.679
+   },
+   {
+    "w": "of",
+    "s": 14.679,
+    "e": 14.839
+   },
+   {
+    "w": "Duty,",
+    "s": 14.839,
+    "e": 15.079,
+    "hot": true
+   },
+   {
+    "w": "gone.",
+    "s": 15.079,
+    "e": 15.399,
+    "hot": true
+   },
+   {
+    "w": "Eight",
+    "s": 15.797,
+    "e": 15.957
+   },
+   {
+    "w": "years",
+    "s": 15.957,
+    "e": 16.157
+   },
+   {
+    "w": "of",
+    "s": 16.157,
+    "e": 16.317
+   },
+   {
+    "w": "saves,",
+    "s": 16.317,
+    "e": 16.597
+   },
+   {
+    "w": "gone.",
+    "s": 16.597,
+    "e": 16.897
+   },
+   {
+    "w": "System",
+    "s": 17.31,
+    "e": 17.774
+   },
+   {
+    "w": "files,",
+    "s": 17.784,
+    "e": 18.169
+   },
+   {
+    "w": "gone.",
+    "s": 18.179,
+    "e": 18.485
+   },
+   {
+    "w": "Wedding",
+    "s": 18.665,
+    "e": 18.925,
+    "hot": true
+   },
+   {
+    "w": "photos,",
+    "s": 18.925,
+    "e": 19.265
+   },
+   {
+    "w": "gone.",
+    "s": 19.265,
+    "e": 19.605
+   },
+   {
+    "w": "His",
+    "s": 20.043,
+    "e": 20.163
+   },
+   {
+    "w": "wife",
+    "s": 20.163,
+    "e": 20.423
+   },
+   {
+    "w": "gasps",
+    "s": 20.423,
+    "e": 20.843,
+    "hot": true
+   },
+   {
+    "w": "from",
+    "s": 20.843,
+    "e": 20.983
+   },
+   {
+    "w": "the",
+    "s": 20.983,
+    "e": 21.123
+   },
+   {
+    "w": "doorway.",
+    "s": 21.123,
+    "e": 21.363
+   },
+   {
+    "w": "Then",
+    "s": 21.82,
+    "e": 21.96
+   },
+   {
+    "w": "the",
+    "s": 21.96,
+    "e": 22.12
+   },
+   {
+    "w": "install",
+    "s": 22.12,
+    "e": 22.54
+   },
+   {
+    "w": "finally",
+    "s": 22.54,
+    "e": 22.98
+   },
+   {
+    "w": "begins,",
+    "s": 22.98,
+    "e": 23.46
+   },
+   {
+    "w": "and",
+    "s": 23.46,
+    "e": 23.94
+   },
+   {
+    "w": "the",
+    "s": 23.94,
+    "e": 24.04
+   },
+   {
+    "w": "console",
+    "s": 24.04,
+    "e": 24.46
+   },
+   {
+    "w": "starts",
+    "s": 24.46,
+    "e": 24.78
+   },
+   {
+    "w": "to",
+    "s": 24.78,
+    "e": 25.02
+   },
+   {
+    "w": "shake",
+    "s": 25.02,
+    "e": 25.26
+   },
+   {
+    "w": "like",
+    "s": 25.26,
+    "e": 25.46
+   },
+   {
+    "w": "a",
+    "s": 25.46,
+    "e": 25.58
+   },
+   {
+    "w": "washing",
+    "s": 25.58,
+    "e": 25.9
+   },
+   {
+    "w": "machine.",
+    "s": 25.9,
+    "e": 26.26
+   },
+   {
+    "w": "The",
+    "s": 26.572,
+    "e": 26.672
+   },
+   {
+    "w": "side",
+    "s": 26.672,
+    "e": 26.932
+   },
+   {
+    "w": "plates",
+    "s": 26.932,
+    "e": 27.312
+   },
+   {
+    "w": "glow",
+    "s": 27.312,
+    "e": 27.492,
+    "hot": true
+   },
+   {
+    "w": "orange.",
+    "s": 27.492,
+    "e": 27.932
+   },
+   {
+    "w": "The",
+    "s": 28.261,
+    "e": 28.341
+   },
+   {
+    "w": "fans",
+    "s": 28.341,
+    "e": 28.601
+   },
+   {
+    "w": "spin",
+    "s": 28.601,
+    "e": 28.881
+   },
+   {
+    "w": "like",
+    "s": 28.881,
+    "e": 29.061
+   },
+   {
+    "w": "turbines.",
+    "s": 29.061,
+    "e": 29.381,
+    "hot": true
+   },
+   {
+    "w": "Pizza",
+    "s": 29.925,
+    "e": 30.145
+   },
+   {
+    "w": "boxes",
+    "s": 30.145,
+    "e": 30.605
+   },
+   {
+    "w": "fly",
+    "s": 30.605,
+    "e": 30.965,
+    "hot": true
+   },
+   {
+    "w": "across",
+    "s": 30.965,
+    "e": 31.285
+   },
+   {
+    "w": "the",
+    "s": 31.285,
+    "e": 31.525
+   },
+   {
+    "w": "room.",
+    "s": 31.525,
+    "e": 31.765
+   },
+   {
+    "w": "The",
+    "s": 32.068,
+    "e": 32.168
+   },
+   {
+    "w": "curtains",
+    "s": 32.168,
+    "e": 32.488
+   },
+   {
+    "w": "are",
+    "s": 32.488,
+    "e": 32.728
+   },
+   {
+    "w": "flapping.",
+    "s": 32.728,
+    "e": 33.108
+   },
+   {
+    "w": "The",
+    "s": 33.477,
+    "e": 33.577
+   },
+   {
+    "w": "cat",
+    "s": 33.577,
+    "e": 33.797
+   },
+   {
+    "w": "is",
+    "s": 33.797,
+    "e": 33.937
+   },
+   {
+    "w": "gone.",
+    "s": 33.937,
+    "e": 34.197
+   },
+   {
+    "w": "Ninety-nine",
+    "s": 34.57,
+    "e": 34.95
+   },
+   {
+    "w": "percent",
+    "s": 34.95,
+    "e": 35.37
+   },
+   {
+    "w": "installed.",
+    "s": 35.37,
+    "e": 35.89
+   },
+   {
+    "w": "And",
+    "s": 36.284,
+    "e": 36.47
+   },
+   {
+    "w": "then,",
+    "s": 36.48,
+    "e": 36.732
+   },
+   {
+    "w": "liftoff!",
+    "s": 36.742,
+    "e": 37.191,
+    "hot": true
+   },
+   {
+    "w": "The",
+    "s": 37.371,
+    "e": 37.451
+   },
+   {
+    "w": "console",
+    "s": 37.451,
+    "e": 37.871
+   },
+   {
+    "w": "blasts",
+    "s": 37.871,
+    "e": 38.391
+   },
+   {
+    "w": "straight",
+    "s": 38.391,
+    "e": 38.631
+   },
+   {
+    "w": "through",
+    "s": 38.631,
+    "e": 38.871
+   },
+   {
+    "w": "the",
+    "s": 38.871,
+    "e": 39.011
+   },
+   {
+    "w": "ceiling",
+    "s": 39.011,
+    "e": 39.351
+   },
+   {
+    "w": "and",
+    "s": 39.351,
+    "e": 39.591
+   },
+   {
+    "w": "rockets",
+    "s": 39.591,
+    "e": 39.871
+   },
+   {
+    "w": "into",
+    "s": 39.871,
+    "e": 40.131
+   },
+   {
+    "w": "the",
+    "s": 40.131,
+    "e": 40.271
+   },
+   {
+    "w": "night",
+    "s": 40.271,
+    "e": 40.431
+   },
+   {
+    "w": "sky.",
+    "s": 40.431,
+    "e": 40.771
+   },
+   {
+    "w": "And",
+    "s": 41.135,
+    "e": 41.235
+   },
+   {
+    "w": "he",
+    "s": 41.235,
+    "e": 41.315
+   },
+   {
+    "w": "is",
+    "s": 41.315,
+    "e": 41.415
+   },
+   {
+    "w": "still",
+    "s": 41.415,
+    "e": 41.615
+   },
+   {
+    "w": "hanging",
+    "s": 41.615,
+    "e": 41.935
+   },
+   {
+    "w": "from",
+    "s": 41.935,
+    "e": 42.155
+   },
+   {
+    "w": "the",
+    "s": 42.155,
+    "e": 42.355
+   },
+   {
+    "w": "HDMI",
+    "s": 42.355,
+    "e": 42.835
+   },
+   {
+    "w": "cable,",
+    "s": 42.835,
+    "e": 43.395
+   },
+   {
+    "w": "wearing",
+    "s": 43.655,
+    "e": 43.855
+   },
+   {
+    "w": "aviator",
+    "s": 43.855,
+    "e": 44.395
+   },
+   {
+    "w": "goggles.",
+    "s": 44.395,
+    "e": 44.735
+   },
+   {
+    "w": "Totally",
+    "s": 45.187,
+    "e": 45.507
+   },
+   {
+    "w": "worth",
+    "s": 45.507,
+    "e": 45.787,
+    "hot": true
+   },
+   {
+    "w": "it.",
+    "s": 45.787,
+    "e": 45.987
+   },
+   {
+    "w": "Now,",
+    "s": 46.308,
+    "e": 46.487
+   },
+   {
+    "w": "the",
+    "s": 46.497,
+    "e": 46.675
+   },
+   {
+    "w": "day",
+    "s": 46.685,
+    "e": 46.864
+   },
+   {
+    "w": "one",
+    "s": 46.874,
+    "e": 47.052
+   },
+   {
+    "w": "patch:",
+    "s": 47.062,
+    "e": 47.366
+   },
+   {
+    "w": "one",
+    "s": 47.376,
+    "e": 47.555
+   },
+   {
+    "w": "hundred",
+    "s": 47.565,
+    "e": 47.995
+   },
+   {
+    "w": "and",
+    "s": 48.005,
+    "e": 48.183
+   },
+   {
+    "w": "fifty",
+    "s": 48.193,
+    "e": 48.497
+   },
+   {
+    "w": "gigs.",
+    "s": 48.507,
+    "e": 48.749
+   }
+  ]
+ },
+ "style": "storybook",
+ "graphics": "full"
+}

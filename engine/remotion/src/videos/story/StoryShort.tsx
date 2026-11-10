@@ -18,6 +18,7 @@ import { StoryWorld } from "./world";
 import { GRADES3 } from "./looks";
 import type { Storyboard, LightName } from "./types";
 import { DEMO_STORYBOARD } from "./demo";
+import { MapScene, MAP_KINDS } from "./mapscenes";
 
 export type StoryProps = { storyboard: Storyboard; dpr?: number };
 
@@ -79,24 +80,48 @@ const Inner: React.FC<{ idx: number; world: StoryWorld; sb: Storyboard }> = ({ i
   return (<><primitive key={`world-${idx}`} object={world.root} dispose={null} />{post}</>);
 };
 
-const SceneView: React.FC<{ idx: number; kit: Kit; sb: Storyboard; alpha: number; dpr?: number }> = ({ idx, kit, sb, alpha, dpr }) => {
+/** film looks per scene (the past in sepia, black-and-white archive, cool / warm grades) */
+const LOOKS: Record<string, string> = {
+  sepia: "sepia(0.82) contrast(1.06) brightness(0.97) saturate(1.1)", bw: "grayscale(1) contrast(1.15) brightness(1.02)",
+  cool: "hue-rotate(-8deg) saturate(1.1) brightness(0.98)", warm: "sepia(0.18) saturate(1.2) brightness(1.03)",
+};
+const SceneView: React.FC<{ idx: number; kit: Kit; sb: Storyboard; alpha: number; dpr?: number; transform?: string; filter?: string }> = ({ idx, kit, sb, alpha, dpr, transform, filter }) => {
   const world = useMemo(() => new StoryWorld(kit, sb, idx), [kit, sb, idx]); // one world per scene (own sight-line culling)
+  const look = sb.scenes[idx]?.look;
+  const fl = [look ? LOOKS[look] : "", filter ?? ""].join(" ").trim();
   return (
-    <AbsoluteFill style={{ opacity: alpha }}>
+    <AbsoluteFill style={{ opacity: alpha, ...(transform ? { transform } : {}), ...(fl ? { filter: fl } : {}) }}>
       <ThreeCanvas width={sb.width} height={sb.height} {...(dpr ? { dpr } : {})} shadows
         gl={{ antialias: false, stencil: false, powerPreference: "high-performance", toneMappingExposure: 1.0 }}
         camera={{ fov: 40, near: 0.2, far: 1500 }}>
         <Inner idx={idx} world={world} sb={sb} />
       </ThreeCanvas>
+      {look === "sepia" || look === "bw" ? <AbsoluteFill style={{ boxShadow: `inset 0 0 ${sb.height * 0.12}px rgba(40,24,10,0.65)` }} /> : null}
     </AbsoluteFill>
   );
 };
 
-/** layers at frame f: base scene, plus the next scene fading in across an 8-frame crossfade */
-export const layersAt = (sb: Storyboard, f: number): { idx: number; alpha: number }[] => {
+type Layer = { idx: number; alpha: number; transform?: string; filter?: string };
+const ease = (x: number) => { const u = Math.max(0, Math.min(1, x)); return u * u * (3 - 2 * u); };
+/** layers at frame f: base scene plus the transition into the next one:
+ *  xfade 8 f crossfade; dissolve 14 f soft crossfade with a little blur; zoom = punch through the outgoing frame (scale + blur)
+ *  into the next; whip = a fast horizontal swipe with motion blur */
+export const layersAt = (sb: Storyboard, f: number): Layer[] => {
   for (let i = 1; i < sb.scenes.length; i++) {
-    const s = sb.scenes[i];
-    if (s.transitionIn === "xfade" && f >= s.startFrame - 4 && f < s.startFrame + 4) return [{ idx: i - 1, alpha: 1 }, { idx: i, alpha: (f - (s.startFrame - 4) + 1) / 9 }];
+    const s = sb.scenes[i], t = s.transitionIn, a = s.startFrame;
+    if (t === "xfade" && f >= a - 4 && f < a + 4) return [{ idx: i - 1, alpha: 1 }, { idx: i, alpha: (f - (a - 4) + 1) / 9 }];
+    if (t === "dissolve" && f >= a - 7 && f < a + 7) {
+      const u = ease((f - (a - 7) + 1) / 15);
+      return [{ idx: i - 1, alpha: 1, filter: `blur(${(u * 6 * sb.height / 1920).toFixed(1)}px)` }, { idx: i, alpha: u, filter: `blur(${((1 - u) * 6 * sb.height / 1920).toFixed(1)}px)` }];
+    }
+    if (t === "zoom" && f >= a - 6 && f < a + 6) {
+      if (f < a) { const u = ease((f - (a - 6) + 1) / 6); return [{ idx: i - 1, alpha: 1, transform: `scale(${1 + 0.45 * u})`, filter: `blur(${(u * 16 * sb.height / 1920).toFixed(1)}px) brightness(${1 + 0.3 * u})` }]; }
+      const u = ease((f - a + 1) / 6); return [{ idx: i, alpha: 1, transform: `scale(${1.3 - 0.3 * u})`, filter: `blur(${((1 - u) * 14 * sb.height / 1920).toFixed(1)}px)` }];
+    }
+    if (t === "whip" && f >= a - 5 && f < a + 5) {
+      if (f < a) { const u = ease((f - (a - 5) + 1) / 5); return [{ idx: i - 1, alpha: 1, transform: `translateX(${-70 * u}%) scaleX(${1 + 0.2 * u})`, filter: `blur(${(u * 22 * sb.height / 1920).toFixed(1)}px)` }]; }
+      const u = ease((f - a + 1) / 5); return [{ idx: i, alpha: 1, transform: `translateX(${70 * (1 - u)}%) scaleX(${1.2 - 0.2 * u})`, filter: `blur(${((1 - u) * 22 * sb.height / 1920).toFixed(1)}px)` }];
+    }
   }
   const i = sb.scenes.findIndex((s) => f >= s.startFrame && f < s.endFrame);
   return [{ idx: i < 0 ? sb.scenes.length - 1 : i, alpha: 1 }];
@@ -110,7 +135,8 @@ const Overlays: React.FC<{ sb: Storyboard }> = ({ sb }) => {
     if (f < o.frame || f >= o.frame + o.dur) return;
     const a = interpolate(f, [o.frame, o.frame + 6, o.frame + o.dur - 6, o.frame + o.dur], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
     // a phone banner / camcorder frame owns the top of the picture: the label drops below it
-    const y = o.position === "top" ? (s.hud && (s.hud.kind === "phone" || s.hud.kind === "rec") ? 0.2 : 0.12) : o.position === "center" ? 0.42 : 0.72;
+    const hk = s.hud?.kind;
+    const y = o.position === "top" ? (hk === "phone" || hk === "rec" ? 0.2 : hk === "panel" || hk === "bar" || hk === "news" ? 0.53 : 0.12) : o.position === "center" ? 0.42 : 0.72;
     const cta = o.style === "cta";
     items.push(
       <div key={`${s.sceneId}-${i}`} style={{ position: "absolute", left: 0, right: 0, top: H * y, display: "flex", justifyContent: "center", opacity: a,
@@ -131,12 +157,14 @@ const Overlays: React.FC<{ sb: Storyboard }> = ({ sb }) => {
     const t = f / sb.fps, g = groups.find((x) => t >= x.s - 0.05 && t < x.e);
     if (g) {
       const n = f - Math.round((g.s - 0.05) * sb.fps);
-      const pop = n < 0 ? 1 : n < 3 ? [1.28, 1.14, 1.04][n] : 1;
-      items.push(
-        <div key="cap" style={{ position: "absolute", left: 0, right: 0, top: H * 0.635, display: "flex", justifyContent: "center" }}>
-          <div style={{ fontFamily: '"Arial Black", "Segoe UI Black", Arial, sans-serif', fontWeight: 900, fontSize: 104 * k, letterSpacing: -1 * k,
-            color: g.hot ? "#ffe14d" : "#ffffff", WebkitTextStroke: `${14 * k}px #0d0b10`, paintOrder: "stroke fill",
-            textShadow: `0 ${6 * k}px ${10 * k}px rgba(0,0,0,0.45)`, transform: `scale(${pop}) rotate(${g.hot ? -2 : 0}deg)`, maxWidth: 0.9 * sb.width,
+      const pop = n < 0 ? 1 : n < 3 ? [1.2, 1.1, 1.03][n] : 1;
+      // low third of the frame (under the characters' feet / waist line), medium size: the action stays readable
+      const capY = cur?.hud && ["manhattan", "osaka", "panama", "world", "subway", "mud"].includes(cur.hud.kind) ? 0.84 : 0.765;
+      if (cur?.hud?.kind !== "outro") items.push(
+        <div key="cap" style={{ position: "absolute", left: 0, right: 0, top: H * capY, display: "flex", justifyContent: "center" }}>
+          <div style={{ fontFamily: '"Arial Black", "Segoe UI Black", Arial, sans-serif', fontWeight: 900, fontSize: 80 * k, letterSpacing: -0.5 * k,
+            color: g.hot ? "#ffe14d" : "#ffffff", WebkitTextStroke: `${11 * k}px #0d0b10`, paintOrder: "stroke fill",
+            textShadow: `0 ${5 * k}px ${8 * k}px rgba(0,0,0,0.4)`, transform: `scale(${pop}) rotate(${g.hot ? -2 : 0}deg)`, maxWidth: 0.9 * sb.width,
             textAlign: "center", lineHeight: 1.05 }}>{g.text}</div>
         </div>);
     }
@@ -211,6 +239,40 @@ const Hud: React.FC<{ kind: string; text?: string; f: number; f0: number; sb: St
         </div>
       </AbsoluteFill>);
   }
+  if (kind === "panel") {   // a floating UI window (store page, storage warning, clock): first line = title, rest = rows
+    const [title, ...rows] = (text ?? "").split("|");
+    const pop = interpolate(n, [0, 6], [0.6, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: (x) => 1 - (1 - x) ** 3 });
+    return (
+      <AbsoluteFill style={{ fontFamily: '"Segoe UI", Arial, sans-serif' }}>
+        <div style={{ position: "absolute", left: 0.08 * W, right: 0.08 * W, top: 0.14 * H, transform: `scale(${pop})`, background: "rgba(14,16,30,0.92)",
+          border: `${5 * k}px solid #39d9ff`, borderRadius: 30 * k, boxShadow: `0 0 ${50 * k}px rgba(57,217,255,0.55)`, overflow: "hidden" }}>
+          <div style={{ background: "#39d9ff", color: "#0d0f1e", fontWeight: 900, fontSize: 50 * k, padding: `${14 * k}px ${32 * k}px` }}>{title}</div>
+          {rows.map((r, i) => <div key={i} style={{ color: r.includes("!") || r.includes("$") ? "#ffe14d" : "#ffffff", fontWeight: 800, fontSize: 56 * k,
+            padding: `${14 * k}px ${32 * k}px`, borderTop: i ? `${2 * k}px solid rgba(255,255,255,0.12)` : "none" }}>{r}</div>)}
+        </div>
+      </AbsoluteFill>);
+  }
+  if (kind === "bar") {     // download / install progress bar: "LABEL|from|to" (percent), fills across the shot
+    const [label, a0, a1] = (text ?? "INSTALLING|0|99").split("|");
+    const span = Math.max(1, sb.scenes.find((s) => s.startFrame === f0)!.endFrame - f0 - 6);
+    const pc = Number(a0) + (Number(a1) - Number(a0)) * Math.min(1, Math.max(0, n / span)) ** 0.6;
+    return (
+      <AbsoluteFill style={{ fontFamily: '"Arial Black", Arial, sans-serif' }}>
+        <div style={{ position: "absolute", left: 0.08 * W, right: 0.08 * W, top: 0.15 * H, background: "rgba(14,16,30,0.9)", borderRadius: 26 * k, padding: 26 * k,
+          boxShadow: `0 ${10 * k}px ${40 * k}px rgba(0,0,0,0.45)` }}>
+          <div style={{ color: "#fff", fontSize: 44 * k, marginBottom: 16 * k }}>{label}</div>
+          <div style={{ height: 54 * k, background: "#2b2f45", borderRadius: 27 * k, overflow: "hidden" }}>
+            <div style={{ width: `${pc}%`, height: "100%", background: "linear-gradient(90deg,#39d98a,#39d9ff)" }} />
+          </div>
+          <div style={{ color: "#ffe14d", fontSize: 58 * k, marginTop: 12 * k, textAlign: "right" }}>{pc.toFixed(pc > 99 ? 1 : 0)}%</div>
+        </div>
+      </AbsoluteFill>);
+  }
+  if (MAP_KINDS.includes(kind)) return <AbsoluteFill style={{ opacity: Math.min(1, (n + 1) / 6) }}><MapScene kind={kind} n={n} text={text} /></AbsoluteFill>;
+  if (kind === "police") {  // red / blue police lights sweeping the room
+    const ph = Math.floor(f / 5) % 2;
+    return <AbsoluteFill style={{ background: ph ? "radial-gradient(circle at 15% 40%, rgba(255,40,40,0.45), transparent 60%)" : "radial-gradient(circle at 85% 40%, rgba(40,90,255,0.5), transparent 60%)", mixBlendMode: "screen" }} />;
+  }
   if (kind === "map") {     // GPS pin + route chip
     return (
       <AbsoluteFill style={{ fontFamily: '"Segoe UI", Arial, sans-serif' }}>
@@ -230,7 +292,7 @@ export const StoryShort: React.FC<StoryProps> = ({ storyboard: sb, dpr }) => {
   const sky = sb.scenes[0]?.light === "night" ? "#1a2550" : "#cfe3f2";
   return (
     <AbsoluteFill style={{ background: sky }}>
-      {layersAt(sb, f).map((l, i) => <SceneView key={i ? "over" : "base"} idx={l.idx} kit={kit} sb={sb} alpha={l.alpha} dpr={dpr} />)}
+      {layersAt(sb, f).map((l, i) => <SceneView key={i ? "over" : "base"} idx={l.idx} kit={kit} sb={sb} alpha={l.alpha} dpr={dpr} transform={l.transform} filter={l.filter} />)}
       {flash > 0 && <AbsoluteFill style={{ background: "#ffffff", opacity: flash }} />}
       <Overlays sb={sb} />
     </AbsoluteFill>

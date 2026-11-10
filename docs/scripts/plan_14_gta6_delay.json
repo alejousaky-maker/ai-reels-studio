@@ -1,0 +1,474 @@
+{
+ "title": "The Apocalyptic Delay",
+ "environment": "gameroom",
+ "seed": 41,
+ "cast": [
+  {
+   "id": "me",
+   "name": "Streamer",
+   "role": "streamer"
+  },
+  {
+   "id": "brk",
+   "name": "Broker",
+   "role": "broker"
+  },
+  {
+   "id": "me2",
+   "name": "Streamer (sign)",
+   "role": "streamer"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "If GTA 6 gets delayed one more time, society won't just complain. It will literally collapse in twenty-four hours.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "grin",
+     "holding": "controller"
+    }
+   ],
+   "impactWord": "collapse",
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "monitor",
+     "where": "left",
+     "label": "GTA 6|RELEASE SOON"
+    }
+   ],
+   "camMove": "whip",
+   "shots": [
+    {
+     "at": "delayed",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "broken"
+      }
+     ],
+     "hud": "news",
+     "hudText": "GTA 6 DELAYED AGAIN"
+    },
+    {
+     "at": "society",
+     "shot": "wide",
+     "light": "golden",
+     "environment": "suburb",
+     "spot": 0,
+     "characters": [],
+     "extras": 5,
+     "extrasAction": "walk",
+     "extrasRole": "streamer",
+     "camMove": "truck_right"
+    },
+    {
+     "at": "collapse",
+     "shot": "dutch",
+     "light": "night",
+     "environment": "gameroom",
+     "characters": [
+      {
+       "id": "me",
+       "action": "panic",
+       "expr": "shock"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "burst",
+       "word": "collapse",
+       "on": "me"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "It starts with one breaking news banner.",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sit",
+     "holding": "can"
+    }
+   ],
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "monitor",
+     "where": "left",
+     "label": "BREAKING|NEWS"
+    }
+   ],
+   "camMove": "push",
+   "hud": "news",
+   "hudText": "GTA 6 DELAYED TO 2028"
+  },
+  {
+   "narration": "His eyes shatter like glass. His jaw hits the floor.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "broken"
+    }
+   ],
+   "impactWord": "floor",
+   "environment": "gameroom",
+   "shots": [
+    {
+     "at": "His",
+     "shot": "worm",
+     "characters": [
+      {
+       "id": "me",
+       "action": "fall",
+       "expr": "shock"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "stars",
+       "word": "floor",
+       "on": "me"
+      }
+     ],
+     "camMove": "crane_up"
+    }
+   ]
+  },
+  {
+   "narration": "Hour two. Millions of gamers stumble outside for the first time in years.",
+   "shot": "wide",
+   "mood": "curious",
+   "extras": 7,
+   "extrasAction": "walk",
+   "text": "HOUR 2",
+   "textStyle": "title",
+   "environment": "suburb",
+   "extrasRole": "streamer",
+   "camMove": "pull",
+   "shots": [
+    {
+     "at": "outside",
+     "shot": "low",
+     "extras": 5,
+     "extrasRole": "streamer",
+     "camMove": "truck_left"
+    }
+   ]
+  },
+  {
+   "narration": "The sun burns. They touch grass, and nobody knows what it is.",
+   "shot": "extreme",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "squint"
+    }
+   ],
+   "environment": "suburb",
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "They",
+     "shot": "low",
+     "characters": [
+      {
+       "id": "me",
+       "action": "point",
+       "expr": "squint"
+      }
+     ],
+     "extras": 3,
+     "extrasRole": "streamer",
+     "camMove": "orbit"
+    },
+    {
+     "at": "nobody",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "me",
+       "action": "shrug",
+       "expr": "nervous"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "product",
+       "product": "question",
+       "word": "nobody",
+       "on": "me"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": "Hour six. Wall Street notices nobody is buying anything.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "brk",
+     "expr": "nervous"
+    }
+   ],
+   "extras": 4,
+   "text": "HOUR 6",
+   "textStyle": "title",
+   "environment": "trading",
+   "pieces": [
+    {
+     "kind": "ticker",
+     "label": "GAMING INDEX ▼ 87%"
+    }
+   ],
+   "extrasRole": "broker",
+   "camMove": "truck_right"
+  },
+  {
+   "narration": "Brokers loosen their ties. Their eyes start spinning.",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "brk",
+     "action": "panic",
+     "expr": "nervous"
+    }
+   ],
+   "extras": 2,
+   "environment": "trading",
+   "extrasRole": "broker",
+   "shots": [
+    {
+     "at": "Their",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "brk",
+       "expr": "dazed"
+      }
+     ],
+     "camMove": "orbit"
+    }
+   ]
+  },
+  {
+   "narration": "Then a giant red arrow smashes straight through the floor.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "brk",
+     "action": "fall",
+     "expr": "shock"
+    }
+   ],
+   "extras": 3,
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "smashes",
+     "on": "brk"
+    }
+   ],
+   "impactWord": "smashes",
+   "environment": "trading",
+   "pieces": [
+    {
+     "kind": "redarrow",
+     "where": "left",
+     "scale": 1.2
+    }
+   ],
+   "extrasRole": "broker",
+   "camMove": "whip"
+  },
+  {
+   "narration": "Hour twelve. Traffic stops. Cars are abandoned in the middle of the road.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "tense",
+   "text": "HOUR 12",
+   "textStyle": "title",
+   "environment": "street",
+   "pieces": [
+    {
+     "kind": "car",
+     "where": "left"
+    },
+    {
+     "kind": "van",
+     "where": "right",
+     "mirror": true
+    }
+   ],
+   "camMove": "crane_up",
+   "shots": [
+    {
+     "at": "Cars",
+     "shot": "low",
+     "pieces": [
+      {
+       "kind": "car",
+       "where": "front"
+      },
+      {
+       "kind": "car",
+       "mirror": true
+      }
+     ],
+     "camMove": "truck_left"
+    }
+   ]
+  },
+  {
+   "narration": "Everyone marches to the game studio with cardboard signs.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me2",
+     "action": "march",
+     "expr": "stern"
+    }
+   ],
+   "extras": 6,
+   "extrasAction": "march",
+   "environment": "street",
+   "pieces": [
+    {
+     "kind": "signs",
+     "label": "JUST DROP IT|TAKE MY KIDNEY|2028?? NO"
+    }
+   ],
+   "extrasRole": "streamer",
+   "camMove": "follow"
+  },
+  {
+   "narration": "Take my kidney, just drop it!",
+   "shot": "close",
+   "light": "golden",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me2",
+     "action": "cheer",
+     "expr": "crazy"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "drop",
+     "on": "me2"
+    }
+   ],
+   "impactWord": "drop",
+   "environment": "street",
+   "pieces": [
+    {
+     "kind": "signs",
+     "label": "TAKE MY KIDNEY|JUST DROP IT|PLEASE"
+    }
+   ],
+   "camMove": "push"
+  },
+  {
+   "narration": "Hour twenty-four. One man has had enough.",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "hips",
+     "expr": "stern"
+    }
+   ],
+   "text": "HOUR 24",
+   "textStyle": "title",
+   "environment": "gameroom",
+   "camMove": "push"
+  },
+  {
+   "narration": "He climbs into a cryo tube that says: wake me in twenty twenty-eight.",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "smile_closed"
+    }
+   ],
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "cryo",
+     "where": "on",
+     "label": "WAKE ME IN 2028"
+    }
+   ],
+   "camMove": "orbit",
+   "shots": [
+    {
+     "at": "wake",
+     "shot": "close",
+     "text": "WAKE ME IN 2028",
+     "textStyle": "label",
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "See you in four years, Vice City.",
+   "shot": "close",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "sleepy"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "Vice",
+     "on": "me"
+    }
+   ],
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "cryo",
+     "where": "on",
+     "label": "WAKE ME IN 2028"
+    }
+   ],
+   "camMove": "pull"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Comedy fiction about GTA 6 (hypothetical delay / size / price / release-day scenarios); the game, console and studio appear only as generic unbranded props.",
+   "status": "fiction"
+  }
+ ]
+}

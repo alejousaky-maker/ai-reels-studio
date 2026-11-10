@@ -1,0 +1,190 @@
+{
+ "id": "the-vice-city-flu-93247d",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 146,
+   "beats": 14,
+   "at": "2026-11-10T14:25:57"
+  },
+  "voice": {
+   "duration": 48.1868125,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 17.3,
+   "status": "done",
+   "voice": "am_eric*0.6+am_fenrir*0.4",
+   "speed": 0.974,
+   "at": "2026-11-10T14:26:30"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 12.1,
+   "method": {
+    "whisper": 14,
+    "spread": 4
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T14:26:42"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1462,
+   "seconds_video": 48.733333333333334,
+   "scenes": 21,
+   "at": "2026-11-10T14:26:42"
+  },
+  "stills": {
+   "status": "done",
+   "count": 63,
+   "at": "2026-11-10T14:29:12"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 273.1,
+   "frames": 1462,
+   "renderedScenes": [
+    "b01",
+    "b01a",
+    "b01b",
+    "b01c",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b06a",
+    "b07",
+    "b08",
+    "b08a",
+    "b09",
+    "b10",
+    "b11",
+    "b12",
+    "b12a",
+    "b13",
+    "b14",
+    "b14a"
+   ],
+   "reusedScenes": [],
+   "fps_render": 5.35,
+   "at": "2026-11-10T14:33:45"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 13.5,
+   "integratedLUFS": -14.01,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.08,
+   "maxGainReductionDB": 2.36,
+   "voiceLUFS": -14.03,
+   "musicLUFS": -29.88,
+   "sfxLUFS": -29.52,
+   "at": "2026-11-10T14:33:59"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\the-vice-city-flu-93247d\\output\\the-vice-city-flu_master_v1.mp4",
+   "at": "2026-11-10T14:34:00"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-10T14:34:14"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T14:08:57",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T14:25:57",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T14:26:13",
+   "seconds": 15.9,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T14:26:30",
+   "seconds": 17.3,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T14:26:42",
+   "status": "done",
+   "seconds": 12.1
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T14:26:42",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T14:29:12",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T14:33:45",
+   "status": "done",
+   "seconds": 273.1
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T14:33:59",
+   "status": "done",
+   "seconds": 13.5
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T14:34:00",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T14:34:14",
+   "status": "done"
+  }
+ ],
+ "title": "The Vice City Flu",
+ "created": "2026-11-10T14:08:57",
+ "request": {
+  "title": "The Vice City Flu",
+  "idea": "The Vice City Flu",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 55,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "bedroom",
+  "voice": "am_eric*0.6+am_fenrir*0.4",
+  "speed": 1.12,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": true,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "auto",
+  "review": "auto_qa",
+  "seed": 7,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "",
+ "requestedSeconds": 55
+}

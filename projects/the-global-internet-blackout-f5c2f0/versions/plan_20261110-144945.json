@@ -1,0 +1,897 @@
+{
+ "version": 1,
+ "title": "The Global Internet Blackout",
+ "lang": "en",
+ "style": "storybook",
+ "environment": "gameroom",
+ "seed": 61,
+ "cast": [
+  {
+   "id": "me",
+   "name": "Esports gamer",
+   "role": "esports",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "tech",
+   "name": "Technician",
+   "role": "technician",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  }
+ ],
+ "beats": [
+  {
+   "narration": "The second GTA 6 unlocks at midnight, a hundred million downloads will literally melt the global internet.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "sweat",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "whip",
+   "hud": "panel",
+   "hudText": "11:59:59 PM",
+   "shots": [
+    {
+     "at": "hundred",
+     "shot": "wide",
+     "light": null,
+     "environment": "datacenter",
+     "envVariant": "red",
+     "spot": null,
+     "characters": [],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": "100,000,000",
+     "textStyle": "title",
+     "pieces": null,
+     "camMove": "truck_right",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    },
+    {
+     "at": "melt",
+     "shot": "low",
+     "light": null,
+     "environment": "datacenter",
+     "envVariant": "red",
+     "spot": null,
+     "characters": [
+      {
+       "id": "tech",
+       "action": "panic",
+       "expr": "shock",
+       "react": null,
+       "holding": "extinguisher",
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "burst",
+       "product": null,
+       "color": null,
+       "word": "melt",
+       "on": "tech"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "Eleven fifty-nine and fifty-nine seconds. His heart is louder than his fans.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "sweat",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": "panel",
+   "hudText": "11:59:59 PM",
+   "shots": []
+  },
+  {
+   "narration": "His trembling finger hovers over the download button, sweat pouring down his face.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "nervous",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "monitor",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "[ DOWNLOAD ]",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "orbit",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Midnight. Click.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "starry",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "burst",
+     "product": null,
+     "color": null,
+     "word": "Click",
+     "on": "me"
+    }
+   ],
+   "impactWord": "Click",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "whip",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Across the world, data centers start glowing red like toasters.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "tense",
+   "characters": [],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "datacenter",
+   "envVariant": "red",
+   "pieces": [
+    {
+     "kind": "rack",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "red",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    },
+    {
+     "kind": "rack",
+     "where": "right",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "red",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "truck_left",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Lightning shoots out of the servers.",
+   "shot": "worm",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "tech",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "burst",
+     "product": null,
+     "color": null,
+     "word": "Lightning",
+     "on": "tech"
+    }
+   ],
+   "impactWord": "Lightning",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "datacenter",
+   "envVariant": "red",
+   "pieces": [
+    {
+     "kind": "rack",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "red",
+     "spin": null,
+     "lift": null,
+     "shake": 1.0
+    },
+    {
+     "kind": "rack",
+     "where": "right",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "red",
+     "spin": null,
+     "lift": null,
+     "shake": 1.0
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "crane_up",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Technicians in hard hats run around with fire extinguishers.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "tech",
+     "action": "run",
+     "expr": "shock",
+     "react": null,
+     "holding": "extinguisher",
+     "y": null
+    }
+   ],
+   "extras": 3,
+   "extrasAction": "march",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "datacenter",
+   "envVariant": "red",
+   "pieces": [],
+   "extrasRole": "technician",
+   "spot": null,
+   "visual": null,
+   "camMove": "follow",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Gauges explode, one by one.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "tech",
+     "action": "stand",
+     "expr": "broken",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "burst",
+     "product": null,
+     "color": null,
+     "word": "explode",
+     "on": "tech"
+    },
+    {
+     "kind": "puff",
+     "product": null,
+     "color": null,
+     "word": "one",
+     "on": "tech"
+    }
+   ],
+   "impactWord": "explode",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "datacenter",
+   "envVariant": "red",
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "whip",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Back in the bedroom, the download bar crawls to ninety-nine point nine percent.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sit",
+     "expr": "starry",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": "bar",
+   "hudText": "DOWNLOADING GTA 6|98|99.9",
+   "shots": []
+  },
+  {
+   "narration": "One second remaining.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "sweat",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": "bar",
+   "hudText": "1 SECOND REMAINING|99.9|99.9",
+   "shots": []
+  },
+  {
+   "narration": "Then the router on the desk bursts into a cloud of black smoke.",
+   "shot": "insert",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": "router",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "puff",
+     "product": null,
+     "color": null,
+     "word": "bursts",
+     "on": "me"
+    },
+    {
+     "kind": "burst",
+     "product": null,
+     "color": null,
+     "word": "smoke",
+     "on": "me"
+    }
+   ],
+   "impactWord": "bursts",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": null,
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "No internet. Not on his street, not in his city, not anywhere.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "broken",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "tv",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "~nointernet",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "Not",
+     "shot": "extreme",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": null,
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    },
+    {
+     "at": "anywhere",
+     "shot": "high",
+     "light": null,
+     "environment": "street",
+     "envVariant": null,
+     "spot": null,
+     "characters": [],
+     "extras": 4,
+     "extrasAction": null,
+     "extrasRole": "streamer",
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "crane_up",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "Total blackout. Millions of gamers flood the streets in their headsets.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "run",
+     "expr": "crazy",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 6,
+   "extrasAction": "march",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "street",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": "streamer",
+   "spot": null,
+   "visual": null,
+   "camMove": "crane_up",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "They climb telephone poles and plug ethernet cables into potatoes and car batteries.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "crazy",
+     "react": null,
+     "holding": "potato",
+     "y": 2.4
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "product",
+     "product": "potato",
+     "color": null,
+     "word": "potatoes",
+     "on": "me"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "street",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "pole",
+     "where": "on",
+     "dx": 0.0,
+     "dz": 0.7,
+     "scale": 0.8,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "crane_up",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "car",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "point",
+       "expr": "grin",
+       "react": null,
+       "holding": "battery",
+       "y": 2.4
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "product",
+       "product": "battery",
+       "color": null,
+       "word": "batteries",
+       "on": "me"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": [
+      {
+       "kind": "pole",
+       "where": "on",
+       "dx": 0.0,
+       "dz": 0.7,
+       "scale": 0.8,
+       "y": null,
+       "mirror": false,
+       "move": null,
+       "label": null,
+       "spin": null,
+       "lift": null,
+       "shake": null
+      }
+     ],
+     "camMove": null,
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "Just one more megabyte. Please.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "crazy",
+     "react": null,
+     "holding": null,
+     "y": 2.4
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "street",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "pole",
+     "where": "on",
+     "dx": 0.0,
+     "dz": 0.7,
+     "scale": 0.8,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "pull",
+   "hud": "bar",
+   "hudText": "DOWNLOADING|99.9|99.9",
+   "shots": []
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Comedy fiction about GTA 6 (hypothetical delay / size / price / release-day scenarios); the game, console and studio appear only as generic unbranded props.",
+   "status": "fiction",
+   "source": null
+  }
+ ],
+ "creativeHooks": [],
+ "brand": null,
+ "cta": null,
+ "captions": true,
+ "graphics": "full"
+}

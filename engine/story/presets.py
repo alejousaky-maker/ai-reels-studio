@@ -104,17 +104,78 @@ def outfit(role: str, i: int, palette: str | None = None) -> dict:
         return {**base, "jacket": palette or "#7fa8d9", "pants": "#7fa8d9", "boots": "#ff9fc8", "stripes": "#f2efe8", "hat": "hair", "hair": "#3a2a1e"}
     if role == "gamer":
         return {**base, "jacket": palette or "#3a2a6a", "pants": "#2b2b38", "boots": "#ff9fc8", "hat": "hair", "hair": "#3a2a1e", "headset": "#1d1b22", "pockets": False}
+    # ---- GTA-6 shorts wardrobe ----
+    if role == "streamer":   # oversized black hoodie + glowing RGB headset
+        return {**base, "jacket": palette or "#1d1b22", "pants": "#2b2b38", "boots": "#f2efe8", "hat": "hair", "hair": "#3a2a1e", "hoodie": True, "headset": "#7a3aff"}
+    if role == "broker":
+        return {**base, "jacket": palette or "#2a3350", "pants": "#232a42", "boots": "#1d1b22", "hat": "hair", "hair": ["#3a2a1e", "#8a6a3a", "#1d1b22"][i % 3], "tie": "#c8323a", "stripes": "#3a4566"}
+    if role == "doctor":
+        return {**base, "jacket": palette or "#8fc9e6", "pants": "#3b5b9a", "boots": "#1d1b22", "hat": "hair", "hair": "#5a3b2a", "coat": "#ffffff",
+                "stethoscope": True, "headMirror": True, "headset": "#1d1b22"}
+    if role == "technician":
+        return {**base, "jacket": palette or "#f28c28", "pants": "#3b5b9a", "boots": "#5a3b2a", "hat": "pith", "cap": "#ffd23f", "pockets": True}
+    if role == "esports":
+        return {**base, "jacket": palette or "#1b3a8a", "pants": "#1d1b22", "boots": "#f2efe8", "hat": "headband", "cap": "#e2453c", "hair": "#3a2a1e", "jersey": "#ffd23f", "headset": "#e2453c"}
+    if role == "oldgamer":   # the same man 60 years later: wizard beard, glasses, cardigan, vintage headphones
+        return {**base, "jacket": palette or "#8a6a4a", "pants": "#5a4a3a", "boots": "#3a2a20", "hat": "hair", "hair": "#e6e2da", "beard": "#f2efe8", "beardLong": True,
+                "glasses": True, "headset": "#5a4a3a", "build": "stout"}
+    if role == "graduate":
+        return {**base, "jacket": palette or "#1d1b22", "dress": palette or "#1d1b22", "hat": "gradcap", "hair": "#3a2a1e"}
+    if role == "teen":       # backwards propeller cap + chunky headphones
+        return {**base, "jacket": palette or "#e2453c", "pants": "#3b5b9a", "boots": "#f2efe8", "hat": "cap", "cap": "#3f6fb5", "capBack": True, "propeller": True, "headset": "#2b2b38"}
+    if role == "officeguy":
+        return {**base, "jacket": palette or "#3a4566", "pants": "#2b2b38", "boots": "#1d1b22", "hat": "hair", "hair": "#3a2a1e", "tie": "#3f6fb5"}
+    if role == "bathrobe":   # silk robe, slippers, headphones round the neck (drawn on)
+        return {**base, "jacket": palette or "#8c3b6a", "pants": "#8c3b6a", "boots": "#ff9fc8", "sash": "#e8b83a", "hat": "hair", "hair": "#3a2a1e", "headset": "#2b2b38"}
+    if role == "brokeguy":   # patched tee + wired headphones
+        return {**base, "jacket": palette or "#9a9a8a", "pants": "#3b5b9a", "boots": "#f2efe8", "hat": "cap", "cap": "#5d7a3a", "capBack": True, "patches": True, "headset": "#f2efe8"}
+    if role == "capgamer":   # backwards cap + gaming headset, teal tee
+        return {**base, "jacket": palette or "#2a9d8f", "pants": "#2b2b38", "boots": "#f2efe8", "hat": "cap", "cap": "#1d1b22", "capBack": True, "headset": "#e2453c", "pockets": False}
+    # ---- megaproject documentaries ----
+    if role == "engineer":   # hard hat + neon vest + engineer glasses
+        return {**base, "jacket": palette or "#ff7a1a", "pants": "#3b5b9a", "boots": "#5a3b2a", "hat": "pith", "cap": "#ffd23f", "vest": "#d7ff3a", "glasses": True}
+    if role == "accountant":
+        return {**base, "jacket": palette or "#f2efe8", "pants": "#3a3d47", "boots": "#1d1b22", "hat": "hair", "hair": "#5a3b2a", "tie": "#3f6fb5", "glasses": True}
+    if role == "driver":     # delivery cap + hi-vis vest
+        return {**base, "jacket": palette or "#3f6fb5", "pants": "#2b2b38", "boots": "#1d1b22", "hat": "cap", "cap": "#e2453c", "vest": "#d7ff3a"}
+    if role == "cop":
+        return {**base, "jacket": palette or "#1f3a6a", "pants": "#1f3a6a", "boots": "#1d1b22", "hat": "police", "cap": "#1f3a6a", "pockets": True}
+    if role == "chef":
+        return {**base, "jacket": palette or "#ffffff", "pants": "#3a3d47", "boots": "#1d1b22", "hat": "chef", "apron": "#f2efe8"}
+    if role == "stocker":    # beanie + work jacket
+        return {**base, "jacket": palette or "#5d7a3a", "pants": "#3b5b9a", "boots": "#5a3b2a", "hat": "beanie", "cap": "#c8323a", "pockets": True}
+    if role == "ballerina":
+        return {**base, "jacket": palette or "#ff9fc8", "dress": palette or "#ff9fc8", "tutu": "#ffc6e0", "hat": "bun", "hair": "#5a3b2a", "boots": "#ff9fc8"}
+    if role == "tollman":
+        return {**base, "jacket": palette or "#e8b83a", "pants": "#3a3d47", "boots": "#1d1b22", "hat": "cap", "cap": "#3a3d47", "vest": "#ff7a1a"}
+    if role == "pilot":
+        return {**base, "jacket": palette or "#1d2a50", "pants": "#1d2a50", "boots": "#1d1b22", "hat": "pilot", "cap": "#1d2a50", "tie": "#1d1b22"}
+    if role == "sleeper":    # pyjamas + floppy night cap
+        return {**base, "jacket": palette or "#8fb8e6", "pants": "#8fb8e6", "boots": "#f2efe8", "stripes": "#f2efe8", "hat": "nightcap", "cap": "#3f6fb5"}
+    if role == "commuter":   # 1929 suit + flat cap
+        return {**base, "jacket": palette or COATS[i % len(COATS)], "pants": "#3a3440", "boots": "#1d1b22", "hat": "cap", "cap": "#5a4a3a", "tie": "#8a2a2a"}
+    if role == "wife":
+        return {**base, "jacket": palette or "#e06a9a", "dress": palette or "#e06a9a", "hat": "longhair", "hair": "#7a4a2a"}
     return {**base, "hat": "cap", "cap": COATS[(i + 4) % len(COATS)]}
 
 
 # world scale per role (kids 0.72 come from their build); a cyclops is ~2.6 x a person
 ROLE_SCALE = {"giant": 2.6}
 # set pieces: world width, height in metres (engine pieces.ts)
-PIECE_SIZE = {"tumbleweed": (1.3, 1.3), "trafficlight": (1.2, 4.0), "snacks": (1.6, 1.7), "lewis": (1.7, 1.6), "crates": (2.0, 1.77), "snakes": (3.2, 1.1), "board": (1.9, 2.47), "screen": (6.0, 5.0), "finish": (4.4, 2.48),
+PIECE_SIZE = {"semi": (9.0, 3.2), "forklift": (2.6, 1.85), "fruitpile": (2.4, 1.8), "containership": (36.0, 14.6), "tugboat": (6.0, 3.2),
+              "steamshovel": (6.0, 4.1), "mosquito": (1.6, 1.5), "mixer": (5.0, 2.45), "airplane": (16.0, 5.3), "excavator": (6.0, 3.35),
+              "rockpile": (5.0, 3.5), "tetrapods": (6.0, 2.5), "departures": (3.6, 2.3), "escalator": (4.0, 3.36), "pipes": (5.0, 3.2),
+              "cashcounter": (1.2, 2.16), "blueprint": (2.2, 2.0), "subwaymap": (3.0, 2.25), "ribbon": (4.0, 2.7), "oldcar": (4.2, 2.6),
+              "cryo": (1.5, 2.5), "redarrow": (3.5, 5.0), "console": (0.9, 1.5), "sofa": (2.4, 1.8), "fridge": (1.0, 1.9), "bed": (2.4, 1.62),
+              "doghouse": (1.5, 1.6), "tv": (3.4, 2.38), "calendar": (1.5, 1.5), "hospitalbed": (2.4, 1.84), "heartmonitor": (0.7, 1.75), "pole": (3.0, 7.0),
+              "monitor": (2.2, 1.54), "cardbox": (0.9, 0.76), "desk": (1.9, 1.19), "rack": (1.1, 2.2), "signs": (3.2, 2.88), "ticker": (4.6, 2.6),
+              "tumbleweed": (1.3, 1.3), "trafficlight": (1.2, 4.0), "snacks": (1.6, 1.7), "lewis": (1.7, 1.6), "crates": (2.0, 1.77), "snakes": (3.2, 1.1), "board": (1.9, 2.47), "screen": (6.0, 5.0), "finish": (4.4, 2.48),
               "truck": (5.6, 3.2), "booth": (3.2, 2.64), "scale": (0.75, 0.45), "boxes": (1.9, 1.96), "car": (4.5, 2.5), "van": (5.4, 3.0), "poster": (1.9, 2.47), "horse": (8.0, 8.0), "ship": (14.0, 13.4), "galley": (13.0, 12.5), "chalkboard": (1.9, 2.47), "sheep": (1.35, 1.03), "tent": (5.0, 3.67)}
 # max lens distance in rooms / chambers (stay inside or just outside the walls)
-INDOOR_D = {"interior": 7.0, "throne": 8.0, "cave": 7.2, "ocean": 4.6, "apartment": 6.5, "bathroom": 5.0, "office": 7.0, "hotel": 6.0, "airport": 10.0, "cabin": 5.0, "bedroom": 6.0, "kitchen": 6.0, "banquet": 10.0, "gameroom": 6.0}
-ROOMS = ("interior", "throne", "apartment", "bathroom", "office", "hotel", "airport", "cabin", "bedroom", "kitchen", "banquet", "gameroom")
+INDOOR_D = {"interior": 7.0, "throne": 8.0, "cave": 7.2, "ocean": 4.6, "apartment": 6.5, "bathroom": 5.0, "office": 7.0, "hotel": 6.0, "airport": 10.0, "cabin": 5.0, "bedroom": 6.0, "kitchen": 6.0, "banquet": 10.0, "gameroom": 6.0,
+            "trading": 9.0, "clinic": 6.0, "datacenter": 9.0, "tunnel": 7.0, "warehouse": 11.0}
+ROOMS = ("interior", "throne", "apartment", "bathroom", "office", "hotel", "airport", "cabin", "bedroom", "kitchen", "banquet", "gameroom",
+         "trading", "clinic", "datacenter", "tunnel", "warehouse")
 
 
 def _rot(x: float, z: float, a: float) -> tuple[float, float]:
@@ -170,8 +231,30 @@ def anchors(env: str, shop: dict | None = None) -> list[dict]:
         for (cx, cz, ux, uz) in [(0, -2.4, 0, -1), (-1.8, -0.8, 0.3, -1), (1.8, -1.0, -0.3, -1), (0, 0.5, 0, -1), (-2.2, 1.6, 0.35, -1), (2.0, 1.8, -0.3, -1)]:
             n = math.hypot(ux, uz)
             out.append({"C": (cx, cz), "u": (ux / n, uz / n)})
-    elif env in ("apartment", "bathroom", "office", "hotel", "airport", "cabin", "bedroom", "kitchen", "banquet", "gameroom"):
+    elif env in ("canal", "island", "bridge"):
         table = {
+            # canal: water channel |x| < 7 along z, quays at |x| > 7.5 (jungle beyond); stand on the quay looking across / along
+            "canal": [(-9.5, 0, 1, 0.05), (9.5, -4, -1, 0.1), (-9.5, -12, 0.6, -0.8), (-10, 10, 0.3, -1), (9.5, 8, -0.4, -1), (0, 30, 0, -1)],
+            # island airport: runway along x at z 10..30, apron z -10..8, terminal (glass roof) at z -22; sea beyond the edge
+            "island": [(0, 0, 0, -1), (-14, 4, 0.5, -1), (0, 6, 0, 1), (18, 2, -0.6, -1), (30, 6, 1, 0.2), (-30, 12, -1, 0.1)],
+            # bridge deck along z, walkway at x 7, river below, city skyline at -z
+            "bridge": [(6.5, 0, -0.2, -1), (6.5, -10, -1, 0.15), (-6.5, 4, 0.2, -1), (6.5, 10, -0.3, 1), (0, 0, 0, -1), (6.5, -20, -0.1, -1)],
+        }[env]
+        for (cx, cz, ux, uz) in table:
+            n = math.hypot(ux, uz)
+            out.append({"C": (cx, cz), "u": (ux / n, uz / n)})
+    elif env in ("apartment", "bathroom", "office", "hotel", "airport", "cabin", "bedroom", "kitchen", "banquet", "gameroom", "trading", "clinic", "datacenter", "tunnel", "warehouse"):
+        table = {
+            # tunnel: arch along -z (rails in the middle, walkways at x +-2.6); station variant = a wide marble hall
+            "tunnel": [(0, 2.0, 0, -1), (-2.2, 0, 0.25, -1), (2.2, 0, -0.25, -1), (0, 6, 0, -1), (-2.4, 4, 0.1, -1), (2.4, -4, -0.1, -1)],
+            # warehouse: aisles of pallets, loading doors at the back
+            "warehouse": [(0, 0, 0, -1), (-5, 2, 0.3, -1), (5, 2, -0.3, -1), (0, 5, 0, -1), (-7, -3, 1, -0.2), (7, 4, -0.4, -1)],
+            # trading floor: desks rows at z -3.6 / -0.6, ticker walls at the back (z -7)
+            "trading": [(0, 1.6, 0, -1), (-4, 1.8, 0.25, -1), (4, 1.8, -0.25, -1), (0, -2.1, 0, -1), (-6, -2.1, 0.3, -1), (6, -2.1, -0.3, -1)],
+            # clinic: exam table at the back (z -3.1), eye chart left, cabinets right
+            "clinic": [(0, -1.6, 0, -1), (-2.2, -1.0, 0.25, -1), (2.2, -1.0, -0.25, -1), (0, 0.8, 0, -1), (-2.6, 0.8, 0.3, -1), (2.6, 0.6, -0.3, -1)],
+            # data centre: aisles between rack rows (x = -4.1, 0, 4.1) looking down the rows (-z)
+            "datacenter": [(0, 3.5, 0, -1), (-4.1, 3.5, 0, -1), (4.1, 3.5, 0, -1), (0, 0.5, 0, -1), (-4.1, -1, 0.1, -1), (0, 6.0, 0, -1)],
             "gameroom": [(-1.4, -1.0, 0, -1), (-1.45, -0.2, 0.15, -1), (1.6, -0.6, -0.3, -1), (0, 1.0, 0, -1), (-2.6, 0.8, 0.3, -1), (2.4, 0.8, -0.35, -1)],
             "cabin": [(0, -0.8, 0, -1), (-1.6, -0.4, -0.3, -1), (1.6, -0.2, 0.3, -1), (0, 0.8, 0, -1), (-1.2, 0.8, -0.2, -1), (1.2, 0.8, 0.2, -1)],
             "bedroom": [(-0.5, -0.3, 0, -1), (2.4, 0.0, -0.3, -1), (0, 1.0, 0, -1), (-2.6, 0.6, 0.25, -1), (1.6, 1.2, -0.2, -1), (-1.5, 1.4, 0.1, -1)],

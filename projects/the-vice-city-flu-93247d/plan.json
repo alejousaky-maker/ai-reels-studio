@@ -1,0 +1,910 @@
+{
+ "version": 1,
+ "title": "The Vice City Flu",
+ "lang": "en",
+ "style": "storybook",
+ "environment": "bedroom",
+ "seed": 47,
+ "cast": [
+  {
+   "id": "me",
+   "name": "Employee",
+   "role": "bathrobe",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "boss",
+   "name": "Boss",
+   "role": "boss",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "doc",
+   "name": "Doctor",
+   "role": "doctor",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  }
+ ],
+ "beats": [
+  {
+   "narration": "The day GTA 6 drops, forty million men will mysteriously catch the exact same fake illness at eight AM.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": "thermometer",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": "day",
+   "pieces": [
+    {
+     "kind": "tv",
+     "where": "right",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "~game|LOADING...",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "whip",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "forty",
+     "shot": "wide",
+     "light": null,
+     "environment": "suburb",
+     "envVariant": null,
+     "spot": null,
+     "characters": [],
+     "extras": 7,
+     "extrasAction": null,
+     "extrasRole": "bathrobe",
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": "40,000,000",
+     "textStyle": "title",
+     "pieces": null,
+     "camMove": "pull",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    },
+    {
+     "at": "fake",
+     "shot": "close",
+     "light": null,
+     "environment": "bedroom",
+     "envVariant": "day",
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "stand",
+       "expr": "pained",
+       "react": null,
+       "holding": "thermometer",
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": null,
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    },
+    {
+     "at": "eight",
+     "shot": "extreme",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "stand",
+       "expr": "smile_closed",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": "panel",
+     "hudText": "8:00 AM|CALL IN SICK",
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "He holds the thermometer over a steaming cup of coffee. One hundred and three degrees.",
+   "shot": "insert",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": "thermometer",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "steam",
+     "product": null,
+     "color": null,
+     "word": "coffee",
+     "on": "me"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": "day",
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Then the weakest cough in human history.",
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "pained",
+     "react": null,
+     "holding": "phone",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "puff",
+     "product": null,
+     "color": null,
+     "word": "cough",
+     "on": "me"
+    }
+   ],
+   "impactWord": "cough",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": "day",
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": null,
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Boss, I think I'm dying.",
+   "shot": "extreme",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": "phone",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": "day",
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": "phone",
+   "hudText": "Calling BOSS...",
+   "shots": []
+  },
+  {
+   "narration": "Meanwhile, at nine o'clock, the office is a ghost town.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "boss",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "9:00 AM",
+   "textStyle": "title",
+   "atShop": false,
+   "environment": "office",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "desk",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    },
+    {
+     "kind": "desk",
+     "where": "right",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": true,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 3,
+   "visual": null,
+   "camMove": "truck_right",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Fifty empty desks. Twenty phones ringing at once.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "boss",
+     "action": "panic",
+     "expr": "shock",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "product",
+     "product": "phone",
+     "color": null,
+     "word": "phones",
+     "on": "boss"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "office",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "desk",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "ring",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    },
+    {
+     "kind": "desk",
+     "where": "right",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": true,
+     "move": null,
+     "label": "ring",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "orbit",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "Twenty",
+     "shot": "low",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": null,
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": [
+      {
+       "kind": "desk",
+       "where": "front",
+       "dx": 0.0,
+       "dz": 0.0,
+       "scale": null,
+       "y": null,
+       "mirror": false,
+       "move": null,
+       "label": "ring",
+       "spin": null,
+       "lift": null,
+       "shake": null
+      },
+      {
+       "kind": "desk",
+       "where": "left",
+       "dx": 0.0,
+       "dz": 0.0,
+       "scale": null,
+       "y": null,
+       "mirror": false,
+       "move": null,
+       "label": "ring",
+       "spin": null,
+       "lift": null,
+       "shake": null
+      }
+     ],
+     "camMove": "truck_left",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "The boss picks up.",
+   "shot": "close",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "boss",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": "phone",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "office",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "I'm in bed with a fever, says the employee, controller in hand.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sit",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": "controller",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "pull",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "says",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "stand",
+       "expr": "grin",
+       "react": null,
+       "holding": "controller",
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": null,
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "But behind him, police lights flash across the walls,",
+   "shot": "medium",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "crazy",
+     "react": null,
+     "holding": "controller",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "orbit",
+   "hud": "police",
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "and a helicopter roars through his headset.",
+   "shot": "extreme",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "boss",
+     "action": "stand",
+     "expr": "broken",
+     "react": null,
+     "holding": "phone",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "burst",
+     "product": null,
+     "color": null,
+     "word": "helicopter",
+     "on": "boss"
+    }
+   ],
+   "impactWord": "helicopter",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "office",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "whip",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "So the boss storms across town into the clinic for a real doctor's note.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "boss",
+     "action": "run",
+     "expr": "stern",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "clinic",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "follow",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "The doctor has his feet up, playing GTA 6 on a portable screen.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "doc",
+     "action": "sit",
+     "expr": "grin",
+     "react": null,
+     "holding": "tablet",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "clinic",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "playing",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "doc",
+       "action": "sit",
+       "expr": "starry",
+       "react": null,
+       "holding": "tablet",
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": null,
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "Without looking up, he hands over a pre-signed sick note.",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "doc",
+     "action": "sit",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": "sicknote",
+     "y": null
+    },
+    {
+     "id": "boss",
+     "action": "stand",
+     "expr": "broken",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "doc",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "sicknote",
+     "color": null,
+     "word": "note",
+     "on": "doc"
+    }
+   ],
+   "impactWord": "pre-signed",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "clinic",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": null,
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Get well soon. Next! The waiting room is full of men in bathrobes.",
+   "shot": "extreme",
+   "light": "day",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "boss",
+     "action": "stand",
+     "expr": "dazed",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "stars",
+     "product": null,
+     "color": null,
+     "word": "well",
+     "on": "boss"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "clinic",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "pull",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "waiting",
+     "shot": "wide",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "doc",
+       "action": "sit",
+       "expr": "grin",
+       "react": null,
+       "holding": "tablet",
+       "y": null
+      }
+     ],
+     "extras": 6,
+     "extrasAction": null,
+     "extrasRole": "bathrobe",
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "truck_right",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Comedy fiction about GTA 6 (hypothetical delay / size / price / release-day scenarios); the game, console and studio appear only as generic unbranded props.",
+   "status": "fiction",
+   "source": null
+  }
+ ],
+ "creativeHooks": [],
+ "brand": null,
+ "cta": null,
+ "captions": true,
+ "graphics": "full"
+}

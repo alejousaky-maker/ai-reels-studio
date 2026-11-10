@@ -1,0 +1,111 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 49.488625,
+ "voice": "am_eric*0.6+am_fenrir*0.4",
+ "lang": "en",
+ "speed": 1.12,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "The second GTA 6 unlocks at midnight, a hundred million downloads will literally melt the global internet.",
+   "start": 0.06,
+   "end": 6.319083333333333
+  },
+  {
+   "text": "Eleven fifty-nine and fifty-nine seconds.",
+   "start": 6.459083333333333,
+   "end": 8.746166666666667
+  },
+  {
+   "text": "His heart is louder than his fans.",
+   "start": 8.886166666666666,
+   "end": 10.626895833333334
+  },
+  {
+   "text": "His trembling finger hovers over the download button, sweat pouring down his face.",
+   "start": 10.766895833333333,
+   "end": 14.8780625
+  },
+  {
+   "text": "Midnight.",
+   "start": 15.0180625,
+   "end": 15.672041666666667
+  },
+  {
+   "text": "Click.",
+   "start": 15.812041666666667,
+   "end": 16.2513125
+  },
+  {
+   "text": "Across the world, data centers start glowing red like toasters.",
+   "start": 16.3913125,
+   "end": 19.648479166666668
+  },
+  {
+   "text": "Lightning shoots out of the servers.",
+   "start": 19.788479166666665,
+   "end": 21.420375
+  },
+  {
+   "text": "Technicians in hard hats run around with fire extinguishers.",
+   "start": 21.560375,
+   "end": 24.8265625
+  },
+  {
+   "text": "Gauges explode, one by one.",
+   "start": 24.9665625,
+   "end": 26.684958333333334
+  },
+  {
+   "text": "Back in the bedroom, the download bar crawls to ninety-nine point nine percent.",
+   "start": 26.824958333333335,
+   "end": 30.661041666666666
+  },
+  {
+   "text": "One second remaining.",
+   "start": 30.801041666666666,
+   "end": 31.9931875
+  },
+  {
+   "text": "Then the router on the desk bursts into a cloud of black smoke.",
+   "start": 32.1331875,
+   "end": 35.14595833333333
+  },
+  {
+   "text": "No internet.",
+   "start": 35.28595833333333,
+   "end": 36.14877083333333
+  },
+  {
+   "text": "Not on his street, not in his city, not anywhere.",
+   "start": 36.28877083333333,
+   "end": 38.63729166666667
+  },
+  {
+   "text": "Total blackout.",
+   "start": 38.77729166666666,
+   "end": 39.7656875
+  },
+  {
+   "text": "Millions of gamers flood the streets in their headsets.",
+   "start": 39.9056875,
+   "end": 42.389604166666665
+  },
+  {
+   "text": "They climb telephone poles and plug ethernet cables into potatoes and car batteries.",
+   "start": 42.529604166666665,
+   "end": 47.14477083333333
+  },
+  {
+   "text": "Just one more megabyte.",
+   "start": 47.28477083333333,
+   "end": 48.642583333333334
+  },
+  {
+   "text": "Please.",
+   "start": 48.782583333333335,
+   "end": 49.348625
+  }
+ ]
+}

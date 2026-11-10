@@ -1,0 +1,259 @@
+{
+ "id": "how-nobody-beat-a-giant-8ec31d",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 149,
+   "beats": 14,
+   "at": "2026-11-10T02:36:24"
+  },
+  "voice": {
+   "duration": 47.56575,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 17.6,
+   "status": "done",
+   "voice": "af_heart",
+   "speed": 1.0,
+   "at": "2026-11-10T02:36:41"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 13.6,
+   "method": {
+    "whisper": 21,
+    "spread": 0
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T01:58:11"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1573,
+   "seconds_video": 52.43333333333333,
+   "scenes": 14,
+   "at": "2026-11-10T01:58:11"
+  },
+  "stills": {
+   "status": "done",
+   "count": 42,
+   "at": "2026-11-10T01:59:49"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 208.4,
+   "frames": 1573,
+   "renderedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b07",
+    "b08",
+    "b09",
+    "b10",
+    "b11",
+    "b12",
+    "b13",
+    "b14"
+   ],
+   "reusedScenes": [],
+   "fps_render": 7.55,
+   "at": "2026-11-10T02:03:17"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 14.9,
+   "integratedLUFS": -14.01,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.05,
+   "maxGainReductionDB": 5.15,
+   "voiceLUFS": -14.07,
+   "musicLUFS": -29.88,
+   "sfxLUFS": -28.54,
+   "at": "2026-11-10T02:03:32"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\how-nobody-beat-a-giant-8ec31d\\output\\how-nobody-beat-a-giant_master_v2.mp4",
+   "at": "2026-11-10T02:03:34"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-10T02:03:49"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T01:15:11",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T01:29:28",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T01:29:45",
+   "seconds": 17.6,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T01:30:06",
+   "seconds": 20.2,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T01:30:19",
+   "status": "done",
+   "seconds": 13.5
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T01:30:19",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T01:31:55",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T01:35:28",
+   "status": "done",
+   "seconds": 213.0
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T01:35:44",
+   "status": "done",
+   "seconds": 16.0
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T01:35:46",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T01:36:01",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T01:43:15",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T01:57:19",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T01:57:37",
+   "seconds": 18.2,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T01:57:57",
+   "seconds": 20.0,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T01:58:11",
+   "status": "done",
+   "seconds": 13.6
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T01:58:11",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T01:59:49",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T02:03:17",
+   "status": "done",
+   "seconds": 208.4
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T02:03:32",
+   "status": "done",
+   "seconds": 14.9
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T02:03:34",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T02:03:49",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T02:25:11",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T02:36:24",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T02:36:41",
+   "seconds": 17.6,
+   "status": "done"
+  }
+ ],
+ "title": "How Nobody Beat a Giant",
+ "created": "2026-11-10T01:15:11",
+ "request": {
+  "title": "How Nobody Beat a Giant",
+  "idea": "Odysseus outsmarts the Cyclops with the name Nobody",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 60,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "village_square",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": false,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "claude",
+  "review": "auto_qa",
+  "seed": 8,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "",
+ "requestedSeconds": 60
+}

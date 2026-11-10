@@ -1,0 +1,248 @@
+{
+ "id": "the-promotion-loophole-5362c0",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 140,
+   "beats": 14,
+   "at": "2026-11-10T03:02:18"
+  },
+  "voice": {
+   "duration": 50.750229166666664,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 17.6,
+   "status": "done",
+   "voice": "af_heart",
+   "speed": 0.88,
+   "at": "2026-11-10T03:02:52"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 11.6,
+   "method": {
+    "whisper": 16,
+    "spread": 2
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T03:03:04"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1531,
+   "seconds_video": 51.03333333333333,
+   "scenes": 14,
+   "at": "2026-11-10T03:03:04"
+  },
+  "stills": {
+   "status": "done",
+   "count": 42,
+   "at": "2026-11-10T03:04:43"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 205.9,
+   "frames": 1531,
+   "renderedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b07",
+    "b08",
+    "b09",
+    "b10",
+    "b11",
+    "b12",
+    "b13",
+    "b14"
+   ],
+   "reusedScenes": [],
+   "fps_render": 7.44,
+   "at": "2026-11-10T03:08:09"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 15.1,
+   "integratedLUFS": -14.01,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.35,
+   "maxGainReductionDB": 7.85,
+   "voiceLUFS": -14.02,
+   "musicLUFS": -29.72,
+   "sfxLUFS": -27.31,
+   "at": "2026-11-10T03:08:24"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\the-promotion-loophole-5362c0\\output\\the-promotion-loophole_master_v2.mp4",
+   "at": "2026-11-10T03:08:26"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-10T03:08:39"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T01:43:51",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T02:09:48",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T02:10:04",
+   "seconds": 16.5,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T02:10:24",
+   "seconds": 19.3,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T02:10:36",
+   "status": "done",
+   "seconds": 12.5
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T02:10:36",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T02:12:23",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T02:15:53",
+   "status": "done",
+   "seconds": 209.9
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T02:16:08",
+   "status": "done",
+   "seconds": 15.6
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T02:16:10",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T02:16:24",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T02:25:12",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T02:56:12",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T03:02:18",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T03:02:35",
+   "seconds": 16.2,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T03:02:52",
+   "seconds": 17.6,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T03:03:04",
+   "status": "done",
+   "seconds": 11.6
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T03:03:04",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T03:04:43",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T03:08:09",
+   "status": "done",
+   "seconds": 205.9
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T03:08:24",
+   "status": "done",
+   "seconds": 15.1
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T03:08:26",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T03:08:39",
+   "status": "done"
+  }
+ ],
+ "title": "The Promotion Loophole",
+ "created": "2026-11-10T01:43:51",
+ "request": {
+  "title": "The Promotion Loophole",
+  "idea": "Revenge promotion on the boss",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 60,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "village_square",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": false,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "claude",
+  "review": "auto_qa",
+  "seed": 14,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "Narration is 51s for a 60s request: add beats/sentences to reach it.",
+ "requestedSeconds": 60
+}

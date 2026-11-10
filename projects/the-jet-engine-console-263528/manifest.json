@@ -1,0 +1,184 @@
+{
+ "id": "the-jet-engine-console-263528",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 151,
+   "beats": 14,
+   "at": "2026-11-10T14:17:58"
+  },
+  "voice": {
+   "duration": 48.9285625,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 16.4,
+   "status": "done",
+   "voice": "am_eric*0.6+am_fenrir*0.4",
+   "speed": 1.12,
+   "at": "2026-11-10T14:18:15"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 13.7,
+   "method": {
+    "whisper": 19,
+    "spread": 4
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T14:18:28"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1485,
+   "seconds_video": 49.5,
+   "scenes": 21,
+   "at": "2026-11-10T14:18:28"
+  },
+  "stills": {
+   "status": "done",
+   "count": 63,
+   "at": "2026-11-10T14:20:55"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 271.9,
+   "frames": 1485,
+   "renderedScenes": [
+    "b01",
+    "b01a",
+    "b01b",
+    "b02",
+    "b03",
+    "b04",
+    "b04a",
+    "b05",
+    "b05a",
+    "b06",
+    "b07",
+    "b07a",
+    "b08",
+    "b08a",
+    "b09",
+    "b10",
+    "b11",
+    "b12",
+    "b13",
+    "b14",
+    "b14a"
+   ],
+   "reusedScenes": [],
+   "fps_render": 5.46,
+   "at": "2026-11-10T14:25:27"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 13.6,
+   "integratedLUFS": -14.01,
+   "truePeakDBTP": -2.0,
+   "LRA": 0.94,
+   "maxGainReductionDB": 2.16,
+   "voiceLUFS": -14.11,
+   "musicLUFS": -29.92,
+   "sfxLUFS": -29.92,
+   "at": "2026-11-10T14:25:40"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\the-jet-engine-console-263528\\output\\the-jet-engine-console_master_v1.mp4",
+   "at": "2026-11-10T14:25:42"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-10T14:25:57"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T14:08:57",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T14:17:58",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T14:18:15",
+   "seconds": 16.4,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T14:18:28",
+   "status": "done",
+   "seconds": 13.7
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T14:18:28",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T14:20:55",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T14:25:27",
+   "status": "done",
+   "seconds": 271.9
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T14:25:40",
+   "status": "done",
+   "seconds": 13.6
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T14:25:42",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T14:25:57",
+   "status": "done"
+  }
+ ],
+ "title": "The Jet Engine Console",
+ "created": "2026-11-10T14:08:57",
+ "request": {
+  "title": "The Jet Engine Console",
+  "idea": "The Jet Engine Console",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 55,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "gameroom",
+  "voice": "am_eric*0.6+am_fenrir*0.4",
+  "speed": 1.12,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": true,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "auto",
+  "review": "auto_qa",
+  "seed": 7,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "",
+ "requestedSeconds": 55
+}

@@ -1,0 +1,106 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 52.638958333333335,
+ "voice": "af_heart",
+ "lang": "en",
+ "speed": 0.881,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "In 1932, Australia sent soldiers with machine guns to fight birds.",
+   "start": 0.06,
+   "end": 5.282541666666667
+  },
+  {
+   "text": "The birds won.",
+   "start": 5.422541666666667,
+   "end": 6.373645833333334
+  },
+  {
+   "text": "About twenty thousand emus were eating the farmers' wheat.",
+   "start": 6.513645833333333,
+   "end": 9.938583333333334
+  },
+  {
+   "text": "So the army sent Major Meredith, two soldiers, two machine guns, and ten thousand bullets.",
+   "start": 10.078583333333333,
+   "end": 16.073916666666666
+  },
+  {
+   "text": "Plan: wait at a dam, let a thousand emus walk in, and open fire.",
+   "start": 16.213916666666666,
+   "end": 20.934916666666666
+  },
+  {
+   "text": "The gun jammed after a dozen shots.",
+   "start": 21.074916666666667,
+   "end": 23.292416666666668
+  },
+  {
+   "text": "And the emus scattered in every direction, at fifty kilometers an hour.",
+   "start": 23.432416666666665,
+   "end": 27.737854166666665
+  },
+  {
+   "text": "Meredith said they could face machine guns like tanks.",
+   "start": 27.877854166666665,
+   "end": 30.7640625
+  },
+  {
+   "text": "Newspapers laughed.",
+   "start": 30.9040625,
+   "end": 32.23670833333333
+  },
+  {
+   "text": "Parliament asked questions.",
+   "start": 32.37670833333333,
+   "end": 33.956125
+  },
+  {
+   "text": "The soldiers were pulled out within a week.",
+   "start": 34.096125,
+   "end": 36.274458333333335
+  },
+  {
+   "text": "They came back for round two, and used nearly ten bullets per bird.",
+   "start": 36.414458333333336,
+   "end": 40.23908333333333
+  },
+  {
+   "text": "The emus?",
+   "start": 40.379083333333334,
+   "end": 41.25304166666667
+  },
+  {
+   "text": "Still there.",
+   "start": 41.39304166666667,
+   "end": 42.158625
+  },
+  {
+   "text": "Still eating wheat.",
+   "start": 42.298625,
+   "end": 43.5166875
+  },
+  {
+   "text": "In the end, farmers got fences and ammo for themselves.",
+   "start": 43.6566875,
+   "end": 47.13041666666667
+  },
+  {
+   "text": "A modern army.",
+   "start": 47.27041666666667,
+   "end": 48.331854166666666
+  },
+  {
+   "text": "Machine guns.",
+   "start": 48.47185416666667,
+   "end": 49.49133333333333
+  },
+  {
+   "text": "And the only war Australia ever lost to a bird.",
+   "start": 49.63133333333333,
+   "end": 52.498958333333334
+  }
+ ]
+}

@@ -1,0 +1,184 @@
+{
+ "id": "the-day-the-earth-stood-still-cd0c42",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 120,
+   "beats": 15,
+   "at": "2026-11-10T11:53:10"
+  },
+  "voice": {
+   "duration": 48.08841666666667,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 18.3,
+   "status": "done",
+   "voice": "af_heart",
+   "speed": 0.88,
+   "at": "2026-11-10T11:54:01"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 20.1,
+   "method": {
+    "whisper": 27,
+    "spread": 3
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T11:54:21"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1455,
+   "seconds_video": 48.5,
+   "scenes": 15,
+   "at": "2026-11-10T11:54:21"
+  },
+  "stills": {
+   "status": "done",
+   "count": 45,
+   "at": "2026-11-10T11:56:08"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 247.4,
+   "frames": 1455,
+   "renderedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b07",
+    "b08",
+    "b09",
+    "b10",
+    "b11",
+    "b12",
+    "b13",
+    "b14",
+    "b15"
+   ],
+   "reusedScenes": [],
+   "fps_render": 5.88,
+   "at": "2026-11-10T12:00:15"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 14.0,
+   "integratedLUFS": -14.02,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.2,
+   "maxGainReductionDB": 5.03,
+   "voiceLUFS": -14.09,
+   "musicLUFS": -29.76,
+   "sfxLUFS": -26.6,
+   "at": "2026-11-10T12:00:29"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\the-day-the-earth-stood-still-cd0c42\\output\\the-day-the-earth-stood-still_master_v1.mp4",
+   "at": "2026-11-10T12:00:31"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-10T12:00:44"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T11:53:10",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T11:53:10",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T11:53:42",
+   "seconds": 20.8,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T11:54:01",
+   "seconds": 18.3,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T11:54:21",
+   "status": "done",
+   "seconds": 20.1
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T11:54:21",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T11:56:08",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T12:00:15",
+   "status": "done",
+   "seconds": 247.4
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T12:00:29",
+   "status": "done",
+   "seconds": 14.0
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T12:00:31",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T12:00:44",
+   "status": "done"
+  }
+ ],
+ "title": "The Day the Earth Stood Still",
+ "created": "2026-11-10T11:53:10",
+ "request": {
+  "title": "The Day the Earth Stood Still",
+  "idea": "GTA 6 release day",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 60,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "village_square",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": false,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "claude",
+  "review": "auto_qa",
+  "seed": 33,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "Narration is 48s for a 60s request: add beats/sentences to reach it.",
+ "requestedSeconds": 60
+}

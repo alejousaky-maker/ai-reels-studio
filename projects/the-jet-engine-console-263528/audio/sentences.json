@@ -1,0 +1,126 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 48.9285625,
+ "voice": "am_eric*0.6+am_fenrir*0.4",
+ "lang": "en",
+ "speed": 1.12,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "Installing GTA 6 on a base PS5 won't just fill your storage.",
+   "start": 0.06,
+   "end": 4.137520833333333
+  },
+  {
+   "text": "It will turn your console into a jet engine.",
+   "start": 4.277520833333333,
+   "end": 6.418166666666667
+  },
+  {
+   "text": "First, the warning pops up.",
+   "start": 6.558166666666667,
+   "end": 7.961125
+  },
+  {
+   "text": "Required space: five hundred gigs.",
+   "start": 8.101125,
+   "end": 10.058395833333334
+  },
+  {
+   "text": "A sweat drop the size of a grape rolls down his head.",
+   "start": 10.198395833333333,
+   "end": 12.936083333333332
+  },
+  {
+   "text": "So he starts deleting.",
+   "start": 13.076083333333333,
+   "end": 14.379270833333333
+  },
+  {
+   "text": "Call of Duty, gone.",
+   "start": 14.519270833333334,
+   "end": 15.657208333333333
+  },
+  {
+   "text": "Eight years of saves, gone.",
+   "start": 15.797208333333334,
+   "end": 17.150166666666667
+  },
+  {
+   "text": "System files, gone.",
+   "start": 17.290166666666668,
+   "end": 18.524729166666667
+  },
+  {
+   "text": "Wedding photos, gone.",
+   "start": 18.664729166666667,
+   "end": 19.902729166666667
+  },
+  {
+   "text": "His wife gasps from the doorway.",
+   "start": 20.042729166666668,
+   "end": 21.679916666666667
+  },
+  {
+   "text": "Then the install finally begins, and the console starts to shake like a washing machine.",
+   "start": 21.819916666666668,
+   "end": 26.431770833333335
+  },
+  {
+   "text": "The side plates glow orange.",
+   "start": 26.571770833333332,
+   "end": 28.120625
+  },
+  {
+   "text": "The fans spin like turbines.",
+   "start": 28.260625,
+   "end": 29.784625
+  },
+  {
+   "text": "Pizza boxes fly across the room.",
+   "start": 29.924625,
+   "end": 31.927875
+  },
+  {
+   "text": "The curtains are flapping.",
+   "start": 32.067875,
+   "end": 33.3365
+  },
+  {
+   "text": "The cat is gone.",
+   "start": 33.4765,
+   "end": 34.429916666666664
+  },
+  {
+   "text": "Ninety-nine percent installed.",
+   "start": 34.569916666666664,
+   "end": 36.1239375
+  },
+  {
+   "text": "And then, liftoff!",
+   "start": 36.2639375,
+   "end": 37.230604166666666
+  },
+  {
+   "text": "The console blasts straight through the ceiling and rockets into the night sky.",
+   "start": 37.370604166666666,
+   "end": 40.99522916666667
+  },
+  {
+   "text": "And he is still hanging from the HDMI cable, wearing aviator goggles.",
+   "start": 41.13522916666667,
+   "end": 45.04654166666667
+  },
+  {
+   "text": "Totally worth it.",
+   "start": 45.18654166666666,
+   "end": 46.14847916666667
+  },
+  {
+   "text": "Now, the day one patch: one hundred and fifty gigs.",
+   "start": 46.28847916666667,
+   "end": 48.7885625
+  }
+ ]
+}

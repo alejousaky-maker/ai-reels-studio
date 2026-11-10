@@ -1,0 +1,107 @@
+{
+ "id": "the-global-internet-blackout-f5c2f0",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 144,
+   "beats": 15,
+   "at": "2026-11-10T14:49:45"
+  },
+  "voice": {
+   "duration": 49.488625,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 16.6,
+   "status": "done",
+   "voice": "am_eric*0.6+am_fenrir*0.4",
+   "speed": 1.12,
+   "at": "2026-11-10T14:50:02"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 12.4,
+   "method": {
+    "whisper": 17,
+    "spread": 3
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T14:50:14"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1495,
+   "seconds_video": 49.833333333333336,
+   "scenes": 20,
+   "at": "2026-11-10T14:50:14"
+  },
+  "stills": {
+   "status": "done",
+   "count": 60,
+   "at": "2026-11-10T14:52:44"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T14:08:57",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T14:49:45",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T14:50:02",
+   "seconds": 16.6,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T14:50:14",
+   "status": "done",
+   "seconds": 12.4
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T14:50:14",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T14:52:44",
+   "status": "done"
+  }
+ ],
+ "title": "The Global Internet Blackout",
+ "created": "2026-11-10T14:08:57",
+ "request": {
+  "title": "The Global Internet Blackout",
+  "idea": "The Global Internet Blackout",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 55,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "gameroom",
+  "voice": "am_eric*0.6+am_fenrir*0.4",
+  "speed": 1.12,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": true,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "auto",
+  "review": "auto_qa",
+  "seed": 7,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "",
+ "requestedSeconds": 55
+}

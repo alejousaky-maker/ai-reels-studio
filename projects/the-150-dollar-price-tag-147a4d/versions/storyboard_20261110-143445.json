@@ -1,0 +1,2504 @@
+{
+ "version": 1,
+ "title": "The 150 Dollar Price Tag",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1446,
+ "env": {
+  "preset": "apartment",
+  "seed": 53,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "me",
+   "name": "Broke gamer",
+   "outfit": {
+    "jacket": "#9a9a8a",
+    "pants": "#3b5b9a",
+    "boots": "#f2efe8",
+    "skin": "#f5c9a0",
+    "hat": "cap",
+    "cap": "#5d7a3a",
+    "capBack": true,
+    "patches": true,
+    "headset": "#f2efe8"
+   }
+  },
+  {
+   "id": "extra0",
+   "name": "",
+   "outfit": {
+    "jacket": "#b5653f",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "hat": "cap",
+    "cap": "#7b5ac9"
+   }
+  },
+  {
+   "id": "extra1",
+   "name": "",
+   "outfit": {
+    "jacket": "#2f5f6a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ecd0b6",
+    "hat": "tophat",
+    "cap": "#c25a7a",
+    "moustache": "#4a3426"
+   }
+  },
+  {
+   "id": "extra2",
+   "name": "",
+   "outfit": {
+    "jacket": "#7b5ac9",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ffe2c2",
+    "hat": "cap",
+    "cap": "#d9a441"
+   }
+  },
+  {
+   "id": "extra3",
+   "name": "",
+   "outfit": {
+    "jacket": "#b5653f",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "hat": "cap",
+    "cap": "#7b5ac9"
+   }
+  },
+  {
+   "id": "extra4",
+   "name": "",
+   "outfit": {
+    "jacket": "#2f5f6a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ecd0b6",
+    "hat": "tophat",
+    "cap": "#c25a7a",
+    "moustache": "#4a3426"
+   }
+  },
+  {
+   "id": "extra5",
+   "name": "",
+   "outfit": {
+    "jacket": "#7b5ac9",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ffe2c2",
+    "hat": "cap",
+    "cap": "#d9a441"
+   }
+  },
+  {
+   "id": "extra6",
+   "name": "",
+   "outfit": {
+    "jacket": "#c25a7a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#c99067",
+    "hat": "tophat",
+    "cap": "#3f6fb5"
+   }
+  },
+  {
+   "id": "extra7",
+   "name": "",
+   "outfit": {
+    "jacket": "#d9a441",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#f5c9a0",
+    "hat": "cap",
+    "cap": "#8c3b4a",
+    "moustache": "#4a3426"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 131,
+   "narration": "Rumors say GTA 6 might cost a hundred and fifty dollars, and gamers are already selling their furniture just to pre-order the base edition.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.8,
+     "z": 0.4,
+     "expr": "shock",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      4.388,
+      1.62,
+      2.888
+     ],
+     "lookAt": [
+      4.482,
+      1.5,
+      -0.062
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 0,
+     "position": [
+      4.388,
+      1.62,
+      2.888
+     ],
+     "lookAt": [
+      2.8,
+      1.5,
+      0.4
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5300,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "panel",
+    "text": "GTA 6|STANDARD: $150|COLLECTOR'S: $500!"
+   },
+   "sunEl": 68,
+   "sunAz": 35
+  },
+  {
+   "sceneId": "b01a",
+   "startFrame": 131,
+   "endFrame": 185,
+   "narration": "Rumors say GTA 6 might cost a hundred and fifty dollars, and gamers are already selling their furniture just to pre-order the base edition.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -5.296,
+     "z": 4.824,
+     "expr": "grin",
+     "mode": "stand",
+     "pose": "point"
+    },
+    {
+     "castId": "extra0",
+     "x": -4.472,
+     "z": 1.526,
+     "mode": "stand",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra1",
+     "x": -7.067,
+     "z": 1.04,
+     "mode": "stand",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra2",
+     "x": -3.744,
+     "z": -0.924,
+     "mode": "stand",
+     "expr": "nervous"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 131,
+     "position": [
+      -8.001,
+      2.3,
+      15.859
+     ],
+     "lookAt": [
+      -7.637,
+      1.2,
+      4.945
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 131,
+     "position": [
+      -4.727,
+      2.3,
+      15.969
+     ],
+     "lookAt": [
+      -4.363,
+      1.2,
+      5.055
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 54
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5337,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "panel",
+    "text": "GTA 6|STANDARD: $150|COLLECTOR'S: $500!"
+   },
+   "env": {
+    "preset": "suburb",
+    "seed": 53,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "sofa",
+     "x": -7.653,
+     "z": 4.135,
+     "label": "SOLD"
+    },
+    {
+     "kind": "fridge",
+     "x": -4.93,
+     "z": 3.599,
+     "label": "SOLD"
+    }
+   ]
+  },
+  {
+   "sceneId": "b01b",
+   "startFrame": 185,
+   "endFrame": 233,
+   "narration": "Rumors say GTA 6 might cost a hundred and fifty dollars, and gamers are already selling their furniture just to pre-order the base edition.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.8,
+     "z": 0.4,
+     "expr": "starry",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 185,
+     "position": [
+      3.617,
+      1.6,
+      1.958
+     ],
+     "lookAt": [
+      2.8,
+      1.6,
+      0.4
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 185,
+     "position": [
+      3.29,
+      1.6,
+      1.335
+     ],
+     "lookAt": [
+      2.8,
+      1.6,
+      0.4
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 48
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5374,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "panel",
+    "text": "GTA 6|STANDARD: $150|COLLECTOR'S: $500!"
+   },
+   "sunEl": 68,
+   "sunAz": 35
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 233,
+   "endFrame": 303,
+   "narration": "He checks his pockets. Both of them.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -2.2,
+     "z": -0.8,
+     "expr": "nervous",
+     "mode": "stand",
+     "pose": "shrug"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 233,
+     "position": [
+      -5.342,
+      1.68,
+      4.104
+     ],
+     "lookAt": [
+      -2.2,
+      1.38,
+      -0.8
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 233,
+     "position": [
+      -4.085,
+      1.56,
+      2.142
+     ],
+     "lookAt": [
+      -2.2,
+      1.38,
+      -0.8
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 70
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5301,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 303,
+   "endFrame": 350,
+   "narration": "Only a moth flies out.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "broken",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 303,
+     "position": [
+      0.18,
+      1.6,
+      2.75
+     ],
+     "lookAt": [
+      0.0,
+      1.6,
+      1.0
+     ],
+     "fov": 30,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5302,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "kicks": [
+    {
+     "frame": 317,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 315,
+     "dur": 35,
+     "at": [
+      0.145,
+      1.891,
+      1.0
+     ],
+     "size": 0.1500515477614287,
+     "product": "moth"
+    }
+   ]
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 350,
+   "endFrame": 462,
+   "narration": "So he drags everything he owns onto the front lawn for a yard sale.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -7.992,
+     "z": 5.498,
+     "expr": "stern",
+     "mode": "stroll",
+     "walkTo": [
+      -5.663,
+      4.916
+     ],
+     "walkFrames": [
+      350,
+      428
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 350,
+     "position": [
+      -8.523,
+      1.68,
+      11.403
+     ],
+     "lookAt": [
+      -8.329,
+      1.38,
+      5.582
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 350,
+     "position": [
+      -6.194,
+      1.68,
+      10.821
+     ],
+     "lookAt": [
+      -6,
+      1.38,
+      5
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 78
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5303,
+   "qualityNotes": "",
+   "env": {
+    "preset": "suburb",
+    "seed": 53,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "sofa",
+     "x": -7.601,
+     "z": 4.122
+    }
+   ]
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 462,
+   "endFrame": 496,
+   "narration": "Sofa, sold. Fridge, sold. Bed, sold.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 16.345,
+     "z": 2.965,
+     "expr": "grin",
+     "mode": "stand",
+     "pose": "point"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 462,
+     "position": [
+      18.149,
+      1.68,
+      8.413
+     ],
+     "lookAt": [
+      19.432,
+      1.38,
+      2.732
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 462,
+     "position": [
+      18.149,
+      1.68,
+      8.413
+     ],
+     "lookAt": [
+      16,
+      1.38,
+      3
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5304,
+   "qualityNotes": "",
+   "env": {
+    "preset": "suburb",
+    "seed": 53,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "sofa",
+     "x": 14.543,
+     "z": 1.899,
+     "label": "SOLD"
+    }
+   ]
+  },
+  {
+   "sceneId": "b05a",
+   "startFrame": 496,
+   "endFrame": 526,
+   "narration": "Sofa, sold. Fridge, sold. Bed, sold.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 16.345,
+     "z": 2.965,
+     "expr": "grin",
+     "mode": "stand",
+     "pose": "hips"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 496,
+     "position": [
+      14.965,
+      1.68,
+      8.731
+     ],
+     "lookAt": [
+      12.583,
+      1.38,
+      3.417
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 496,
+     "position": [
+      14.965,
+      1.68,
+      8.731
+     ],
+     "lookAt": [
+      16,
+      1.38,
+      3
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5341,
+   "qualityNotes": "",
+   "sub": true,
+   "env": {
+    "preset": "suburb",
+    "seed": 53,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "fridge",
+     "x": 15.045,
+     "z": 1.99,
+     "label": "SOLD"
+    }
+   ]
+  },
+  {
+   "sceneId": "b05b",
+   "startFrame": 526,
+   "endFrame": 552,
+   "narration": "Sofa, sold. Fridge, sold. Bed, sold.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 16.345,
+     "z": 2.965,
+     "expr": "laugh",
+     "mode": "stand",
+     "pose": "up",
+     "holding": "cash"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 526,
+     "position": [
+      18.149,
+      1.68,
+      8.413
+     ],
+     "lookAt": [
+      19.432,
+      1.38,
+      2.732
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 526,
+     "position": [
+      18.149,
+      1.68,
+      8.413
+     ],
+     "lookAt": [
+      16,
+      1.38,
+      3
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5378,
+   "qualityNotes": "",
+   "sub": true,
+   "env": {
+    "preset": "suburb",
+    "seed": 53,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "bed",
+     "x": 14.543,
+     "z": 1.899,
+     "label": "SOLD"
+    }
+   ]
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 552,
+   "endFrame": 610,
+   "narration": "Even the dog house. Sold.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.16,
+     "z": 11.0,
+     "expr": "crazy",
+     "mode": "stand",
+     "pose": "point",
+     "holding": "cash"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 552,
+     "position": [
+      -0.39,
+      1.62,
+      13.9
+     ],
+     "lookAt": [
+      0.16,
+      1.5,
+      11.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 552,
+     "position": [
+      -0.17,
+      1.572,
+      12.74
+     ],
+     "lookAt": [
+      0.16,
+      1.5,
+      11.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 58
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5305,
+   "qualityNotes": "",
+   "env": {
+    "preset": "suburb",
+    "seed": 53,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "doghouse",
+     "x": -1.025,
+     "z": 9.85,
+     "label": "SOLD"
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 592,
+     "amp": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 610,
+   "endFrame": 710,
+   "narration": "Neighbors walk away with his whole life, piece by piece, for cash.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -6.0,
+     "z": 5.0,
+     "expr": "smile",
+     "mode": "stand"
+    },
+    {
+     "castId": "extra3",
+     "x": -5.222,
+     "z": 1.729,
+     "mode": "stroll",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra4",
+     "x": -7.771,
+     "z": 1.216,
+     "mode": "stroll",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra5",
+     "x": -5.838,
+     "z": 0.054,
+     "mode": "stroll",
+     "expr": "nervous"
+    },
+    {
+     "castId": "extra6",
+     "x": -8.765,
+     "z": 2.599,
+     "mode": "stroll",
+     "expr": "neutral"
+    },
+    {
+     "castId": "extra7",
+     "x": -5.342,
+     "z": 1.401,
+     "mode": "stroll",
+     "expr": "laugh"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 610,
+     "position": [
+      -2.999,
+      1.805,
+      10.202
+     ],
+     "lookAt": [
+      -6,
+      1.2,
+      5
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 610,
+     "position": [
+      -0.543,
+      2.3,
+      14.459
+     ],
+     "lookAt": [
+      -6,
+      1.2,
+      5
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 100
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5306,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150,
+   "env": {
+    "preset": "suburb",
+    "seed": 53,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "sofa",
+     "x": -9.347,
+     "z": -8.388,
+     "moveTo": [
+      -6.437,
+      -9.116
+     ],
+     "moveFrames": [
+      620,
+      700
+     ]
+    }
+   ]
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 710,
+   "endFrame": 767,
+   "narration": "Then he trades his car keys for a single gift card.",
+   "light": "golden",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 16.345,
+     "z": 2.965,
+     "expr": "grin",
+     "mode": "stand",
+     "holding": "key"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 710,
+     "position": [
+      13.793,
+      1.68,
+      8.389
+     ],
+     "lookAt": [
+      16,
+      1.38,
+      3
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 710,
+     "position": [
+      16.182,
+      1.68,
+      8.821
+     ],
+     "lookAt": [
+      16,
+      1.38,
+      3
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 57
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5307,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150,
+   "env": {
+    "preset": "suburb",
+    "seed": 53,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "car",
+     "x": 13.791,
+     "z": 1.764
+    }
+   ]
+  },
+  {
+   "sceneId": "b08a",
+   "startFrame": 767,
+   "endFrame": 794,
+   "narration": "Then he trades his car keys for a single gift card.",
+   "light": "golden",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 16.159,
+     "z": 2.984,
+     "expr": "starry",
+     "mode": "stand",
+     "holding": "card"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 767,
+     "position": [
+      16.995,
+      1.62,
+      5.815
+     ],
+     "lookAt": [
+      16.159,
+      1.5,
+      2.984
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5344,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 18,
+   "sunAz": 150,
+   "env": {
+    "preset": "suburb",
+    "seed": 53,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "car",
+     "x": 13.791,
+     "z": 1.764
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 767,
+     "dur": 27,
+     "at": [
+      16.432,
+      2.05,
+      2.957
+     ],
+     "size": 0.28371807239363683,
+     "product": "card"
+    }
+   ]
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 794,
+   "endFrame": 910,
+   "narration": "He walks back inside in his socks and headphones, smiling like a millionaire.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -2.4,
+     "z": 11.0,
+     "expr": "smile_closed",
+     "mode": "stroll",
+     "walkTo": [
+      0.0,
+      11.0
+     ],
+     "walkFrames": [
+      794,
+      875
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 794,
+     "position": [
+      -4.0,
+      1.68,
+      16.6
+     ],
+     "lookAt": [
+      -2.4,
+      1.38,
+      11.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 794,
+     "position": [
+      -1.6,
+      1.68,
+      16.6
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      11
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 81
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5308,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150,
+   "env": {
+    "preset": "suburb",
+    "seed": 53,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 910,
+   "endFrame": 986,
+   "narration": "Rent is due tomorrow. He does not care.",
+   "light": "night",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.8,
+     "z": 0.4,
+     "expr": "smile_closed",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 910,
+     "position": [
+      4.388,
+      1.62,
+      2.888
+     ],
+     "lookAt": [
+      2.8,
+      1.5,
+      0.4
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 910,
+     "position": [
+      3.753,
+      1.572,
+      1.893
+     ],
+     "lookAt": [
+      2.8,
+      1.5,
+      0.4
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 76
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5309,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "phone",
+    "text": "RENT DUE TOMORROW"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "apartment",
+    "seed": 53,
+    "shop": null,
+    "variant": "empty"
+   }
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 986,
+   "endFrame": 1051,
+   "narration": "The apartment is now completely empty.",
+   "light": "night",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -2.2,
+     "z": -0.8,
+     "expr": "neutral",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 986,
+     "position": [
+      -4.808,
+      1.805,
+      2.15
+     ],
+     "lookAt": [
+      -2.2,
+      1.2,
+      -0.8
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 986,
+     "position": [
+      -6.941,
+      2.3,
+      4.564
+     ],
+     "lookAt": [
+      -2.2,
+      1.2,
+      -0.8
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 65
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5310,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "apartment",
+    "seed": 53,
+    "shop": null,
+    "variant": "empty"
+   }
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 1051,
+   "endFrame": 1077,
+   "narration": "Bare brick. One light bulb. No furniture.",
+   "light": "night",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "neutral",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1051,
+     "position": [
+      3.507,
+      7.6,
+      6.899
+     ],
+     "lookAt": [
+      0,
+      0.6,
+      1.0
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1051,
+     "position": [
+      0.797,
+      7.6,
+      7.816
+     ],
+     "lookAt": [
+      0,
+      0.6,
+      1.0
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 26
+    }
+   ],
+   "push": 0.0018,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5311,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "apartment",
+    "seed": 53,
+    "shop": null,
+    "variant": "empty"
+   }
+  },
+  {
+   "sceneId": "b12a",
+   "startFrame": 1077,
+   "endFrame": 1111,
+   "narration": "Bare brick. One light bulb. No furniture.",
+   "light": "night",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "neutral",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1077,
+     "position": [
+      -0.9,
+      0.4,
+      4.6
+     ],
+     "lookAt": [
+      0.0,
+      1.55,
+      1.0
+     ],
+     "fov": 50,
+     "roll": 0.0
+    },
+    {
+     "frame": 1077,
+     "position": [
+      -0.9,
+      2.175,
+      4.6
+     ],
+     "lookAt": [
+      0.0,
+      1.55,
+      1.0
+     ],
+     "fov": 50,
+     "roll": 0.0,
+     "dur": 34
+    }
+   ],
+   "push": 0.0028,
+   "dof": {
+    "cInf": 7,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5348,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "apartment",
+    "seed": 53,
+    "shop": null,
+    "variant": "empty"
+   }
+  },
+  {
+   "sceneId": "b12b",
+   "startFrame": 1111,
+   "endFrame": 1142,
+   "narration": "Bare brick. One light bulb. No furniture.",
+   "light": "night",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "neutral",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1111,
+     "position": [
+      3.975,
+      2.3,
+      7.05
+     ],
+     "lookAt": [
+      0.975,
+      1.2,
+      0.55
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1111,
+     "position": [
+      2.025,
+      2.3,
+      7.95
+     ],
+     "lookAt": [
+      -0.975,
+      1.2,
+      1.45
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 31
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5385,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "apartment",
+    "seed": 53,
+    "shop": null,
+    "variant": "empty"
+   }
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 1142,
+   "endFrame": 1239,
+   "narration": "He sits on a cardboard box, eating cold instant noodles,",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.8,
+     "z": 0.4,
+     "expr": "smile_closed",
+     "mode": "sit",
+     "holding": "noodles"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1142,
+     "position": [
+      3.394,
+      1.68,
+      6.194
+     ],
+     "lookAt": [
+      2.8,
+      1.38,
+      0.4
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1142,
+     "position": [
+      3.156,
+      1.56,
+      3.876
+     ],
+     "lookAt": [
+      2.8,
+      1.38,
+      0.4
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 97
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5312,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "apartment",
+    "seed": 53,
+    "shop": null,
+    "variant": "empty"
+   },
+   "pieces": [
+    {
+     "kind": "cardbox",
+     "x": 2.93,
+     "z": 0.725
+    }
+   ]
+  },
+  {
+   "sceneId": "b14",
+   "startFrame": 1239,
+   "endFrame": 1338,
+   "narration": "in front of an eighty-five inch TV running GTA 6.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -1.505,
+     "z": -0.592,
+     "expr": "starry",
+     "mode": "sit",
+     "holding": "noodles"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1239,
+     "position": [
+      -2.257,
+      2.3,
+      6.439
+     ],
+     "lookAt": [
+      -3.263,
+      1.2,
+      -0.649
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1239,
+     "position": [
+      -0.131,
+      2.3,
+      6.137
+     ],
+     "lookAt": [
+      -1.137,
+      1.2,
+      -0.951
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 99
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5313,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "apartment",
+    "seed": 53,
+    "shop": null,
+    "variant": "empty"
+   },
+   "pieces": [
+    {
+     "kind": "tv",
+     "x": -4.059,
+     "z": -2.97,
+     "scale": 1.6,
+     "label": "~game"
+    }
+   ]
+  },
+  {
+   "sceneId": "b15",
+   "startFrame": 1338,
+   "endFrame": 1446,
+   "narration": "Happiest man alive. No couch, no bed, no regrets.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "starry",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1338,
+     "position": [
+      -0.18,
+      1.6,
+      2.75
+     ],
+     "lookAt": [
+      0.0,
+      1.6,
+      1.0
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 1338,
+     "position": [
+      -0.108,
+      1.6,
+      2.05
+     ],
+     "lookAt": [
+      0.0,
+      1.6,
+      1.0
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 108
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5314,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "apartment",
+    "seed": 53,
+    "shop": null,
+    "variant": "empty"
+   },
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 1339,
+     "dur": 60,
+     "at": [
+      0.145,
+      1.891,
+      1.0
+     ],
+     "size": 0.23445554337723234
+    }
+   ]
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": true,
+  "words": [
+   {
+    "w": "Rumors",
+    "s": 0.08,
+    "e": 0.467
+   },
+   {
+    "w": "say",
+    "s": 0.477,
+    "e": 0.666
+   },
+   {
+    "w": "GTA",
+    "s": 0.676,
+    "e": 0.864
+   },
+   {
+    "w": "6",
+    "s": 0.874,
+    "e": 0.997
+   },
+   {
+    "w": "might",
+    "s": 1.007,
+    "e": 1.328
+   },
+   {
+    "w": "cost",
+    "s": 1.338,
+    "e": 1.592
+   },
+   {
+    "w": "a",
+    "s": 1.602,
+    "e": 1.725
+   },
+   {
+    "w": "hundred",
+    "s": 1.735,
+    "e": 2.188
+   },
+   {
+    "w": "and",
+    "s": 2.198,
+    "e": 2.387
+   },
+   {
+    "w": "fifty",
+    "s": 2.397,
+    "e": 2.718
+   },
+   {
+    "w": "dollars,",
+    "s": 2.728,
+    "e": 3.181
+   },
+   {
+    "w": "and",
+    "s": 3.191,
+    "e": 3.38
+   },
+   {
+    "w": "gamers",
+    "s": 3.39,
+    "e": 3.777
+   },
+   {
+    "w": "are",
+    "s": 3.787,
+    "e": 3.975
+   },
+   {
+    "w": "already",
+    "s": 3.985,
+    "e": 4.439
+   },
+   {
+    "w": "selling",
+    "s": 4.449,
+    "e": 4.902
+   },
+   {
+    "w": "their",
+    "s": 4.912,
+    "e": 5.233
+   },
+   {
+    "w": "furniture",
+    "s": 5.243,
+    "e": 5.829
+   },
+   {
+    "w": "just",
+    "s": 5.839,
+    "e": 6.093
+   },
+   {
+    "w": "to",
+    "s": 6.103,
+    "e": 6.226
+   },
+   {
+    "w": "pre-order",
+    "s": 6.236,
+    "e": 6.755
+   },
+   {
+    "w": "the",
+    "s": 6.765,
+    "e": 6.954
+   },
+   {
+    "w": "base",
+    "s": 6.964,
+    "e": 7.219
+   },
+   {
+    "w": "edition.",
+    "s": 7.229,
+    "e": 7.682
+   },
+   {
+    "w": "He",
+    "s": 7.862,
+    "e": 7.962
+   },
+   {
+    "w": "checks",
+    "s": 7.962,
+    "e": 8.262
+   },
+   {
+    "w": "his",
+    "s": 8.262,
+    "e": 8.422
+   },
+   {
+    "w": "pockets.",
+    "s": 8.422,
+    "e": 8.742
+   },
+   {
+    "w": "Both",
+    "s": 9.198,
+    "e": 9.398
+   },
+   {
+    "w": "of",
+    "s": 9.398,
+    "e": 9.598
+   },
+   {
+    "w": "them.",
+    "s": 9.598,
+    "e": 9.838
+   },
+   {
+    "w": "Only",
+    "s": 10.197,
+    "e": 10.437
+   },
+   {
+    "w": "a",
+    "s": 10.437,
+    "e": 10.557
+   },
+   {
+    "w": "moth",
+    "s": 10.557,
+    "e": 10.817,
+    "hot": true
+   },
+   {
+    "w": "flies",
+    "s": 10.817,
+    "e": 11.077
+   },
+   {
+    "w": "out.",
+    "s": 11.077,
+    "e": 11.437
+   },
+   {
+    "w": "So",
+    "s": 11.762,
+    "e": 11.882
+   },
+   {
+    "w": "he",
+    "s": 11.882,
+    "e": 11.982
+   },
+   {
+    "w": "drags",
+    "s": 11.982,
+    "e": 12.422
+   },
+   {
+    "w": "everything",
+    "s": 12.422,
+    "e": 12.862
+   },
+   {
+    "w": "he",
+    "s": 12.862,
+    "e": 13.102
+   },
+   {
+    "w": "owns",
+    "s": 13.102,
+    "e": 13.422
+   },
+   {
+    "w": "onto",
+    "s": 13.422,
+    "e": 13.662
+   },
+   {
+    "w": "the",
+    "s": 13.662,
+    "e": 13.802
+   },
+   {
+    "w": "front",
+    "s": 13.802,
+    "e": 13.982
+   },
+   {
+    "w": "lawn",
+    "s": 13.982,
+    "e": 14.242
+   },
+   {
+    "w": "for",
+    "s": 14.242,
+    "e": 14.462
+   },
+   {
+    "w": "a",
+    "s": 14.462,
+    "e": 14.582
+   },
+   {
+    "w": "yard",
+    "s": 14.582,
+    "e": 14.842
+   },
+   {
+    "w": "sale.",
+    "s": 14.842,
+    "e": 15.222
+   },
+   {
+    "w": "Sofa,",
+    "s": 15.507,
+    "e": 15.907
+   },
+   {
+    "w": "sold.",
+    "s": 15.907,
+    "e": 16.227
+   },
+   {
+    "w": "Fridge,",
+    "s": 16.592,
+    "e": 16.852
+   },
+   {
+    "w": "sold.",
+    "s": 16.852,
+    "e": 17.232
+   },
+   {
+    "w": "Bed,",
+    "s": 17.607,
+    "e": 17.787
+   },
+   {
+    "w": "sold.",
+    "s": 17.787,
+    "e": 18.147
+   },
+   {
+    "w": "Even",
+    "s": 18.521,
+    "e": 18.721
+   },
+   {
+    "w": "the",
+    "s": 18.721,
+    "e": 18.841
+   },
+   {
+    "w": "dog",
+    "s": 18.841,
+    "e": 19.061
+   },
+   {
+    "w": "house.",
+    "s": 19.061,
+    "e": 19.361
+   },
+   {
+    "w": "Sold.",
+    "s": 19.756,
+    "e": 20.016,
+    "hot": true
+   },
+   {
+    "w": "Neighbors",
+    "s": 20.439,
+    "e": 20.799
+   },
+   {
+    "w": "walk",
+    "s": 20.799,
+    "e": 20.999
+   },
+   {
+    "w": "away",
+    "s": 20.999,
+    "e": 21.239
+   },
+   {
+    "w": "with",
+    "s": 21.239,
+    "e": 21.439
+   },
+   {
+    "w": "his",
+    "s": 21.439,
+    "e": 21.579
+   },
+   {
+    "w": "whole",
+    "s": 21.579,
+    "e": 21.739
+   },
+   {
+    "w": "life,",
+    "s": 21.739,
+    "e": 22.139
+   },
+   {
+    "w": "piece",
+    "s": 22.299,
+    "e": 22.459
+   },
+   {
+    "w": "by",
+    "s": 22.459,
+    "e": 22.659
+   },
+   {
+    "w": "piece,",
+    "s": 22.659,
+    "e": 22.919
+   },
+   {
+    "w": "for",
+    "s": 22.919,
+    "e": 23.139
+   },
+   {
+    "w": "cash.",
+    "s": 23.139,
+    "e": 23.499
+   },
+   {
+    "w": "Then",
+    "s": 23.776,
+    "e": 23.876
+   },
+   {
+    "w": "he",
+    "s": 23.876,
+    "e": 23.976
+   },
+   {
+    "w": "trades",
+    "s": 23.976,
+    "e": 24.276
+   },
+   {
+    "w": "his",
+    "s": 24.276,
+    "e": 24.456
+   },
+   {
+    "w": "car",
+    "s": 24.456,
+    "e": 24.696
+   },
+   {
+    "w": "keys",
+    "s": 24.696,
+    "e": 24.996
+   },
+   {
+    "w": "for",
+    "s": 24.996,
+    "e": 25.256
+   },
+   {
+    "w": "a",
+    "s": 25.256,
+    "e": 25.376
+   },
+   {
+    "w": "single",
+    "s": 25.376,
+    "e": 25.636
+   },
+   {
+    "w": "gift",
+    "s": 25.636,
+    "e": 25.876,
+    "hot": true
+   },
+   {
+    "w": "card.",
+    "s": 25.876,
+    "e": 26.236
+   },
+   {
+    "w": "He",
+    "s": 26.56,
+    "e": 26.64
+   },
+   {
+    "w": "walks",
+    "s": 26.64,
+    "e": 26.84
+   },
+   {
+    "w": "back",
+    "s": 26.84,
+    "e": 27.1
+   },
+   {
+    "w": "inside",
+    "s": 27.1,
+    "e": 27.48
+   },
+   {
+    "w": "in",
+    "s": 27.48,
+    "e": 27.7
+   },
+   {
+    "w": "his",
+    "s": 27.7,
+    "e": 27.8
+   },
+   {
+    "w": "socks",
+    "s": 27.8,
+    "e": 28.08
+   },
+   {
+    "w": "and",
+    "s": 28.08,
+    "e": 28.28
+   },
+   {
+    "w": "headphones,",
+    "s": 28.28,
+    "e": 28.66
+   },
+   {
+    "w": "smiling",
+    "s": 29.04,
+    "e": 29.36
+   },
+   {
+    "w": "like",
+    "s": 29.36,
+    "e": 29.58
+   },
+   {
+    "w": "a",
+    "s": 29.58,
+    "e": 29.7
+   },
+   {
+    "w": "millionaire.",
+    "s": 29.7,
+    "e": 30.02
+   },
+   {
+    "w": "Rent",
+    "s": 30.426,
+    "e": 30.646
+   },
+   {
+    "w": "is",
+    "s": 30.646,
+    "e": 30.826
+   },
+   {
+    "w": "due",
+    "s": 30.826,
+    "e": 31.026
+   },
+   {
+    "w": "tomorrow.",
+    "s": 31.026,
+    "e": 31.346
+   },
+   {
+    "w": "He",
+    "s": 31.834,
+    "e": 31.974
+   },
+   {
+    "w": "does",
+    "s": 31.974,
+    "e": 32.094
+   },
+   {
+    "w": "not",
+    "s": 32.094,
+    "e": 32.274
+   },
+   {
+    "w": "care.",
+    "s": 32.274,
+    "e": 32.574
+   },
+   {
+    "w": "The",
+    "s": 32.944,
+    "e": 33.024
+   },
+   {
+    "w": "apartment",
+    "s": 33.024,
+    "e": 33.404
+   },
+   {
+    "w": "is",
+    "s": 33.404,
+    "e": 33.624
+   },
+   {
+    "w": "now",
+    "s": 33.624,
+    "e": 33.824
+   },
+   {
+    "w": "completely",
+    "s": 33.824,
+    "e": 34.244
+   },
+   {
+    "w": "empty.",
+    "s": 34.244,
+    "e": 34.784
+   },
+   {
+    "w": "Bare",
+    "s": 35.104,
+    "e": 35.324
+   },
+   {
+    "w": "brick.",
+    "s": 35.324,
+    "e": 35.684
+   },
+   {
+    "w": "One",
+    "s": 35.929,
+    "e": 36.089
+   },
+   {
+    "w": "light",
+    "s": 36.089,
+    "e": 36.329
+   },
+   {
+    "w": "bulb.",
+    "s": 36.329,
+    "e": 36.669
+   },
+   {
+    "w": "No",
+    "s": 37.068,
+    "e": 37.248
+   },
+   {
+    "w": "furniture.",
+    "s": 37.248,
+    "e": 37.748
+   },
+   {
+    "w": "He",
+    "s": 38.134,
+    "e": 38.234
+   },
+   {
+    "w": "sits",
+    "s": 38.234,
+    "e": 38.414
+   },
+   {
+    "w": "on",
+    "s": 38.414,
+    "e": 38.574
+   },
+   {
+    "w": "a",
+    "s": 38.574,
+    "e": 38.654
+   },
+   {
+    "w": "cardboard",
+    "s": 38.654,
+    "e": 38.954
+   },
+   {
+    "w": "box,",
+    "s": 38.954,
+    "e": 39.454
+   },
+   {
+    "w": "eating",
+    "s": 39.454,
+    "e": 39.834
+   },
+   {
+    "w": "cold",
+    "s": 39.834,
+    "e": 40.214
+   },
+   {
+    "w": "instant",
+    "s": 40.214,
+    "e": 40.614
+   },
+   {
+    "w": "noodles,",
+    "s": 40.614,
+    "e": 40.934
+   },
+   {
+    "w": "in",
+    "s": 41.377,
+    "e": 41.477
+   },
+   {
+    "w": "front",
+    "s": 41.477,
+    "e": 41.637
+   },
+   {
+    "w": "of",
+    "s": 41.637,
+    "e": 41.757
+   },
+   {
+    "w": "an",
+    "s": 41.757,
+    "e": 41.857
+   },
+   {
+    "w": "eighty-five",
+    "s": 41.857,
+    "e": 42.237
+   },
+   {
+    "w": "inch",
+    "s": 42.237,
+    "e": 42.657
+   },
+   {
+    "w": "TV",
+    "s": 42.657,
+    "e": 43.017
+   },
+   {
+    "w": "running",
+    "s": 43.017,
+    "e": 43.337
+   },
+   {
+    "w": "GTA",
+    "s": 43.337,
+    "e": 43.817
+   },
+   {
+    "w": "6.",
+    "s": 43.817,
+    "e": 44.257
+   },
+   {
+    "w": "Happiest",
+    "s": 44.664,
+    "e": 44.904,
+    "hot": true
+   },
+   {
+    "w": "man",
+    "s": 44.904,
+    "e": 45.264
+   },
+   {
+    "w": "alive.",
+    "s": 45.264,
+    "e": 45.584
+   },
+   {
+    "w": "No",
+    "s": 45.986,
+    "e": 46.126
+   },
+   {
+    "w": "couch,",
+    "s": 46.126,
+    "e": 46.446
+   },
+   {
+    "w": "no",
+    "s": 46.606,
+    "e": 46.706
+   },
+   {
+    "w": "bed,",
+    "s": 46.706,
+    "e": 46.926
+   },
+   {
+    "w": "no",
+    "s": 47.046,
+    "e": 47.126
+   },
+   {
+    "w": "regrets.",
+    "s": 47.126,
+    "e": 47.446
+   }
+  ]
+ },
+ "style": "storybook",
+ "graphics": "full"
+}

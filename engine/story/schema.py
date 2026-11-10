@@ -6,30 +6,38 @@ from typing import Literal, Optional
 
 from pydantic import BaseModel, Field, field_validator
 
-Expr = Literal["neutral", "stern", "grin", "laugh", "whistle", "nervous", "shock", "relief", "relief_open", "dazed", "pained", "smile", "smile_closed", "lick", "starry", "crazy"]
+Expr = Literal["neutral", "stern", "grin", "laugh", "whistle", "nervous", "shock", "relief", "relief_open", "dazed", "pained", "smile", "smile_closed", "lick", "starry", "crazy", "squint", "broken", "sweat", "sleepy"]
 Action = Literal["stand", "walk", "dance", "sit", "wave", "march", "stroll", "fall", "stretch", "cheer", "point",
                  "run", "jump", "panic", "shrug", "hips"]
 Shot = Literal["wide", "medium", "close", "low", "high", "two_shot", "insert", "extreme", "worm", "dutch"]
 Light = Literal["day", "golden", "night"]
 Mood = Literal["whimsical", "curious", "tense", "warm", "upbeat"]
 Product = Literal["coffee", "croissant", "bread", "cake", "lightbulb", "question", "exclaim", "heart", "clock", "book", "note", "scroll", "map", "globe", "wine", "spear", "stake", "phone", "tablet", "wifi", "key", "camera", "card", "fish", "receipt", "box",
-                  "snake", "coins", "mic", "earbuds", "gpsmap", "suitcase", "folder", "ticket", "controller", "can", "pizza"]
+                  "snake", "coins", "mic", "earbuds", "gpsmap", "suitcase", "folder", "ticket", "controller", "can", "pizza",
+                  "thermometer", "moth", "cash", "noodles", "extinguisher", "potato", "battery", "diploma", "sicknote", "router",
+                  "newspaper", "pickaxe", "shovel", "bagel", "lettuce", "pillow", "wrench", "check", "trident", "clipboard"]
 Role = Literal["villager_woman", "villager_man", "kid", "official", "musician", "baker", "barista", "scholar", "customer", "elder", "worker",
               "explorer", "king", "queen", "sailor", "islander", "greek", "hero", "trojan", "prisoner", "giant",
               "businessman", "boss", "woman", "towelguy", "lawyer", "fisher", "tourist",
               "soldier", "major", "emu", "farmer", "caesar", "pirate", "captain", "raj_official", "local", "athlete",
-              "hoodie", "robe", "groom", "bride", "guest", "pajamas", "gamer"]
+              "hoodie", "robe", "groom", "bride", "guest", "pajamas", "gamer",
+              "streamer", "broker", "doctor", "technician", "esports", "oldgamer", "graduate", "teen", "officeguy", "bathrobe", "brokeguy", "wife", "capgamer",
+              "engineer", "accountant", "driver", "cop", "chef", "stocker", "ballerina", "tollman", "pilot", "sleeper", "commuter"]
 Env = Literal["village_square", "park", "street", "market", "interior", "harbour", "beach", "ocean", "troy", "cave", "throne",
               "apartment", "bathroom", "office", "hotel", "airport", "suburb", "lake", "resort",
-              "outback", "cabin", "bedroom", "kitchen", "banquet", "gameroom", "shops"]
+              "outback", "cabin", "bedroom", "kitchen", "banquet", "gameroom", "shops", "trading", "clinic", "datacenter", "tunnel", "warehouse", "canal", "island", "bridge"]
 PieceKind = Literal["horse", "ship", "galley", "chalkboard", "sheep", "tent", "scale", "boxes", "car", "van", "poster",
-                    "lewis", "crates", "snakes", "board", "screen", "finish", "truck", "booth", "tumbleweed", "trafficlight", "snacks"]
+                    "lewis", "crates", "snakes", "board", "screen", "finish", "truck", "booth", "tumbleweed", "trafficlight", "snacks",
+                    "cryo", "redarrow", "console", "sofa", "fridge", "bed", "doghouse", "tv", "calendar", "hospitalbed", "heartmonitor",
+                    "pole", "monitor", "cardbox", "desk", "rack", "signs", "ticker",
+                    "semi", "forklift", "fruitpile", "containership", "tugboat", "steamshovel", "mosquito", "mixer", "airplane", "excavator",
+                    "rockpile", "tetrapods", "departures", "escalator", "pipes", "cashcounter", "blueprint", "subwaymap", "ribbon", "oldcar"]
 
 
 class Piece(BaseModel):
     """a big painted set piece in the shot, placed relative to the stage: behind / left / right / far / front"""
     kind: PieceKind
-    where: Literal["behind", "left", "right", "far", "front"] = "behind"
+    where: Literal["behind", "left", "right", "far", "front", "on"] = "behind"
     dx: float = 0.0   # extra lateral offset (m, + = screen right)
     dz: float = 0.0   # extra depth offset (m, + = away from the camera)
     scale: Optional[float] = Field(None, ge=0.3, le=3.0)
@@ -37,7 +45,9 @@ class Piece(BaseModel):
     mirror: bool = False
     move: Optional[Literal["left", "right", "toward", "away"]] = None
     label: Optional[str] = Field(None, max_length=40)
-    spin: Optional[float] = None   # rad/s, rolling pieces (tumbleweed)   # text on a board / booth / crates; screen picture "photos" | "hallway"
+    spin: Optional[float] = None   # rad/s, rolling pieces (tumbleweed)
+    lift: Optional[float] = None   # rise to this height across the shot (blast-off)
+    shake: Optional[float] = Field(None, ge=0, le=2)   # violent vibration   # text on a board / booth / crates; screen picture "photos" | "hallway"
 
 
 class Reaction(BaseModel):
@@ -51,10 +61,11 @@ class BeatCharacter(BaseModel):
     expr: Expr = "neutral"
     react: Optional[Reaction] = None
     holding: Optional[Product] = None
+    y: Optional[float] = Field(None, ge=0, le=8)   # standing height (up a pole, on a bed)
 
 
 class BeatFx(BaseModel):
-    kind: Literal["burst", "stars", "notes", "puff", "product", "steam", "sparkle", "splash"]
+    kind: Literal["burst", "stars", "notes", "puff", "product", "steam", "sparkle", "splash", "money", "confetti", "sparks", "dust"]
     product: Optional[Product] = None
     color: Optional[str] = Field(None, pattern=r"^#[0-9a-fA-F]{6}$")
     word: Optional[str] = None
@@ -62,7 +73,8 @@ class BeatFx(BaseModel):
 
 
 CamMove = Literal["push", "pull", "truck_left", "truck_right", "orbit", "crane_up", "follow", "whip"]
-Hud = Literal["rec", "phone", "news", "map"]
+Hud = Literal["rec", "phone", "news", "map", "panel", "bar", "police",
+            "manhattan", "osaka", "panama", "world", "subway", "mud", "outro"]   # full-screen animated 2D maps / cross-sections / outro   # panel: "TITLE|row|row"; bar: "LABEL|from|to"
 
 
 class SubShot(BaseModel):
@@ -72,7 +84,7 @@ class SubShot(BaseModel):
     shot: Optional[Shot] = None
     light: Optional[Light] = None
     environment: Optional[Env] = None
-    envVariant: Optional[Literal["breach", "open", "day", "tvglow"]] = None
+    envVariant: Optional[Literal["breach", "open", "day", "tvglow", "empty", "ward", "red", "night", "station", "dig", "dry", "aquarium", "build", "jam"]] = None
     spot: Optional[int] = Field(None, ge=0, le=9)
     characters: Optional[list[BeatCharacter]] = None
     extras: Optional[int] = Field(None, ge=0, le=10)
@@ -81,14 +93,16 @@ class SubShot(BaseModel):
     focus: Optional[str] = None
     fx: Optional[list[BeatFx]] = None
     impactWord: Optional[str] = None
-    transition: Optional[Literal["cut", "flash", "xfade"]] = None
+    transition: Optional[Literal["cut", "flash", "xfade", "dissolve", "zoom", "whip"]] = None
     text: Optional[str] = None
     textStyle: Optional[Literal["title", "cta", "label"]] = None
     pieces: Optional[list[Piece]] = None
     camMove: Optional[CamMove] = None
     hud: Optional[Hud] = None
-    hudText: Optional[str] = Field(None, max_length=60)
+    hudText: Optional[str] = Field(None, max_length=140)
     visual: Optional[str] = None
+    look: Optional[Literal["sepia", "bw", "cool", "warm"]] = None
+    extrasHolding: Optional[Product] = None
 
 
 class Beat(BaseModel):
@@ -102,19 +116,21 @@ class Beat(BaseModel):
     focus: Optional[str] = None
     fx: list[BeatFx] = Field(default_factory=list)
     impactWord: Optional[str] = None
-    transition: Literal["cut", "flash", "xfade"] = "cut"
+    transition: Literal["cut", "flash", "xfade", "dissolve", "zoom", "whip"] = "cut"
     text: Optional[str] = None
     textStyle: Literal["title", "cta", "label"] = "label"
     atShop: bool = False
     environment: Optional[Env] = None  # per-beat location
-    envVariant: Optional[Literal["breach", "open", "day", "tvglow"]] = None   # troy: torn wall; cave: boulder rolled aside
+    envVariant: Optional[Literal["breach", "open", "day", "tvglow", "empty", "ward", "red", "night", "station", "dig", "dry", "aquarium", "build", "jam"]] = None   # troy: torn wall; cave: boulder rolled aside
     pieces: list[Piece] = Field(default_factory=list)
     extrasRole: Optional[Role] = None
     spot: Optional[int] = Field(None, ge=0, le=9)   # which staging spot of the location (camera side / view direction)
     visual: Optional[str] = None  # free description for humans / QA (what we should SEE)
     camMove: Optional[CamMove] = None   # a real camera move across the shot (push / pull reveal / truck / orbit / crane / follow / whip)
     hud: Optional[Hud] = None           # diegetic screen layer: camcorder REC, phone notification, breaking news, map
-    hudText: Optional[str] = Field(None, max_length=60)
+    hudText: Optional[str] = Field(None, max_length=140)
+    look: Optional[Literal["sepia", "bw", "cool", "warm"]] = None   # film look of the shot (sepia = the past)
+    extrasHolding: Optional[Product] = None
     shots: list[SubShot] = Field(default_factory=list, max_length=6)   # extra cuts inside the sentence, one per clause
 
     @field_validator("narration")

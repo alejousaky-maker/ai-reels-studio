@@ -1,0 +1,556 @@
+{
+ "lang": "en",
+ "title": "The Great Emu War",
+ "words": 138,
+ "beats": [
+  {
+   "narration": "In 1932, Australia sent soldiers with machine guns to fight birds. The birds won.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "sold",
+     "action": "stand",
+     "expr": "nervous",
+     "react": {
+      "word": "won",
+      "expr": "shock"
+     },
+     "holding": null
+    },
+    {
+     "id": "emu",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "sold",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "color": null,
+     "word": "won",
+     "on": "sold"
+    }
+   ],
+   "impactWord": "won",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "outback",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "lewis",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "About twenty thousand emus were eating the farmers' wheat.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "farmer",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 4,
+   "extrasAction": "stand",
+   "focus": "farmer",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "≈ 20,000 EMUS",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "outback",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": "emu",
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "So the army sent Major Meredith, two soldiers, two machine guns, and ten thousand bullets.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "major",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "sold",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "sold2",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "major",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "10,000 BULLETS",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "outback",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "truck",
+     "where": "far",
+     "dx": 4.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 3,
+   "visual": null
+  },
+  {
+   "narration": "Plan: wait at a dam, let a thousand emus walk in, and open fire.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "sold",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "sold2",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 4,
+   "extrasAction": "walk",
+   "focus": "sold",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "outback",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "lewis",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null
+    }
+   ],
+   "extrasRole": "emu",
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "The gun jammed after a dozen shots.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "sold",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "jammed",
+      "expr": "dazed"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "sold",
+   "fx": [
+    {
+     "kind": "puff",
+     "product": null,
+     "color": null,
+     "word": "jammed",
+     "on": "sold"
+    }
+   ],
+   "impactWord": "jammed",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "outback",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "lewis",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "And the emus scattered in every direction, at fifty kilometers an hour.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "emu",
+     "action": "walk",
+     "expr": "shock",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 6,
+   "extrasAction": "walk",
+   "focus": "emu",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "50 KM/H",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "outback",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": "emu",
+   "spot": 2,
+   "visual": null
+  },
+  {
+   "narration": "Meredith said they could face machine guns like tanks.",
+   "shot": "close",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "major",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "major",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "color": null,
+     "word": "tanks",
+     "on": "major"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "outback",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Newspapers laughed. Parliament asked questions.",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "pol",
+     "action": "stand",
+     "expr": "laugh",
+     "react": null,
+     "holding": "book"
+    },
+    {
+     "id": "pol2",
+     "action": "stand",
+     "expr": "laugh",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "pol",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "question",
+     "color": null,
+     "word": "questions",
+     "on": "pol2"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "office",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "The soldiers were pulled out within a week.",
+   "shot": "close",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "major",
+     "action": "stand",
+     "expr": "dazed",
+     "react": null,
+     "holding": "folder"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "major",
+   "fx": [
+    {
+     "kind": "burst",
+     "product": null,
+     "color": null,
+     "word": "pulled",
+     "on": "major"
+    }
+   ],
+   "impactWord": "pulled",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "office",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "They came back for round two, and used nearly ten bullets per bird.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "sold",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "emu",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "sold",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": "≈ 10 BULLETS PER BIRD",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "outback",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "lewis",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "The emus? Still there. Still eating wheat.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "emu",
+     "action": "stand",
+     "expr": "laugh",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 2,
+   "extrasAction": "stand",
+   "focus": "emu",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "outback",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": "emu",
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "In the end, farmers got fences and ammo for themselves.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "farmer",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "farmer",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "outback",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 4,
+   "visual": null
+  },
+  {
+   "narration": "A modern army. Machine guns. And the only war Australia ever lost to a bird.",
+   "shot": "close",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "emu",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "bird",
+      "expr": "laugh"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "emu",
+   "fx": [
+    {
+     "kind": "sparkle",
+     "product": null,
+     "color": null,
+     "word": "bird",
+     "on": "emu"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "outback",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  }
+ ]
+}

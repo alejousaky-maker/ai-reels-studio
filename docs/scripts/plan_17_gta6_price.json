@@ -1,0 +1,411 @@
+{
+ "title": "The 150 Dollar Price Tag",
+ "environment": "apartment",
+ "seed": 53,
+ "cast": [
+  {
+   "id": "me",
+   "name": "Broke gamer",
+   "role": "brokeguy"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "Rumors say GTA 6 might cost a hundred and fifty dollars, and gamers are already selling their furniture just to pre-order the base edition.",
+   "shot": "close",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "shock"
+    }
+   ],
+   "environment": "apartment",
+   "camMove": "whip",
+   "hud": "panel",
+   "hudText": "GTA 6|STANDARD: $150|COLLECTOR'S: $500!",
+   "shots": [
+    {
+     "at": "selling",
+     "shot": "wide",
+     "environment": "suburb",
+     "characters": [
+      {
+       "id": "me",
+       "action": "point",
+       "expr": "grin"
+      }
+     ],
+     "extras": 3,
+     "extrasRole": "villager_man",
+     "pieces": [
+      {
+       "kind": "sofa",
+       "where": "left",
+       "label": "SOLD"
+      },
+      {
+       "kind": "fridge",
+       "where": "right",
+       "label": "SOLD"
+      }
+     ],
+     "camMove": "truck_right"
+    },
+    {
+     "at": "pre-order",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "starry"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "He checks his pockets. Both of them.",
+   "characters": [
+    {
+     "id": "me",
+     "action": "shrug",
+     "expr": "nervous"
+    }
+   ],
+   "environment": "apartment",
+   "camMove": "push"
+  },
+  {
+   "narration": "Only a moth flies out.",
+   "shot": "extreme",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "broken"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "moth",
+     "word": "moth",
+     "on": "me"
+    }
+   ],
+   "impactWord": "moth",
+   "environment": "apartment"
+  },
+  {
+   "narration": "So he drags everything he owns onto the front lawn for a yard sale.",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "walk",
+     "expr": "stern"
+    }
+   ],
+   "environment": "suburb",
+   "pieces": [
+    {
+     "kind": "sofa",
+     "where": "left"
+    }
+   ],
+   "camMove": "follow"
+  },
+  {
+   "narration": "Sofa, sold. Fridge, sold. Bed, sold.",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "grin"
+    }
+   ],
+   "environment": "suburb",
+   "pieces": [
+    {
+     "kind": "sofa",
+     "where": "left",
+     "label": "SOLD"
+    }
+   ],
+   "camMove": "whip",
+   "shots": [
+    {
+     "at": "Fridge",
+     "characters": [
+      {
+       "id": "me",
+       "action": "hips",
+       "expr": "grin"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "fridge",
+       "where": "left",
+       "label": "SOLD"
+      }
+     ],
+     "camMove": "whip"
+    },
+    {
+     "at": "Bed",
+     "characters": [
+      {
+       "id": "me",
+       "action": "cheer",
+       "expr": "laugh",
+       "holding": "cash"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "bed",
+       "where": "left",
+       "label": "SOLD"
+      }
+     ],
+     "camMove": "whip"
+    }
+   ]
+  },
+  {
+   "narration": "Even the dog house. Sold.",
+   "shot": "close",
+   "characters": [
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "crazy",
+     "holding": "cash"
+    }
+   ],
+   "impactWord": "Sold",
+   "environment": "suburb",
+   "pieces": [
+    {
+     "kind": "doghouse",
+     "where": "left",
+     "label": "SOLD"
+    }
+   ],
+   "camMove": "push"
+  },
+  {
+   "narration": "Neighbors walk away with his whole life, piece by piece, for cash.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "smile"
+    }
+   ],
+   "extras": 5,
+   "extrasAction": "walk",
+   "environment": "suburb",
+   "pieces": [
+    {
+     "kind": "sofa",
+     "where": "far",
+     "move": "right"
+    }
+   ],
+   "extrasRole": "villager_man",
+   "camMove": "pull"
+  },
+  {
+   "narration": "Then he trades his car keys for a single gift card.",
+   "light": "golden",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "grin",
+     "holding": "key"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "card",
+     "word": "gift",
+     "on": "me"
+    }
+   ],
+   "environment": "suburb",
+   "pieces": [
+    {
+     "kind": "car",
+     "where": "left"
+    }
+   ],
+   "camMove": "orbit",
+   "shots": [
+    {
+     "at": "gift",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "starry",
+       "holding": "card"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": "He walks back inside in his socks and headphones, smiling like a millionaire.",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "walk",
+     "expr": "smile_closed"
+    }
+   ],
+   "environment": "suburb",
+   "camMove": "follow"
+  },
+  {
+   "narration": "Rent is due tomorrow. He does not care.",
+   "shot": "close",
+   "light": "night",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "smile_closed"
+    }
+   ],
+   "environment": "apartment",
+   "envVariant": "empty",
+   "camMove": "push",
+   "hud": "phone",
+   "hudText": "RENT DUE TOMORROW"
+  },
+  {
+   "narration": "The apartment is now completely empty.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "me"
+    }
+   ],
+   "environment": "apartment",
+   "envVariant": "empty",
+   "camMove": "pull"
+  },
+  {
+   "narration": "Bare brick. One light bulb. No furniture.",
+   "shot": "high",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "me"
+    }
+   ],
+   "environment": "apartment",
+   "envVariant": "empty",
+   "camMove": "orbit",
+   "shots": [
+    {
+     "at": "One",
+     "shot": "worm",
+     "camMove": "crane_up"
+    },
+    {
+     "at": "No",
+     "shot": "wide",
+     "camMove": "truck_left"
+    }
+   ]
+  },
+  {
+   "narration": "He sits on a cardboard box, eating cold instant noodles,",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sit",
+     "expr": "smile_closed",
+     "holding": "noodles"
+    }
+   ],
+   "environment": "apartment",
+   "envVariant": "empty",
+   "pieces": [
+    {
+     "kind": "cardbox",
+     "where": "on"
+    }
+   ],
+   "camMove": "push"
+  },
+  {
+   "narration": "in front of an eighty-five inch TV running GTA 6.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sit",
+     "expr": "starry",
+     "holding": "noodles"
+    }
+   ],
+   "environment": "apartment",
+   "envVariant": "empty",
+   "pieces": [
+    {
+     "kind": "tv",
+     "where": "left",
+     "scale": 1.6,
+     "label": "~game"
+    }
+   ],
+   "camMove": "truck_right"
+  },
+  {
+   "narration": "Happiest man alive. No couch, no bed, no regrets.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "starry"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "Happiest",
+     "on": "me"
+    }
+   ],
+   "environment": "apartment",
+   "envVariant": "empty",
+   "camMove": "push"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Comedy fiction about GTA 6 (hypothetical delay / size / price / release-day scenarios); the game, console and studio appear only as generic unbranded props.",
+   "status": "fiction"
+  }
+ ]
+}

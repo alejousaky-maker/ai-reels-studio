@@ -1,0 +1,616 @@
+{
+ "lang": "en",
+ "title": "The Day the Earth Stood Still",
+ "words": 120,
+ "beats": [
+  {
+   "narration": "I woke up this morning and thought the zombie apocalypse finally happened. Turns out, it was something way more serious.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "cheer",
+     "expr": "laugh",
+     "react": {
+      "word": "zombie",
+      "expr": "neutral"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "me",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "color": null,
+     "word": "serious",
+     "on": "me"
+    }
+   ],
+   "impactWord": "serious",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": "day",
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "No traffic. No dogs. No neighbors yelling. Nothing.",
+   "shot": "close",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "Nothing",
+      "expr": "nervous"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "me",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "question",
+     "color": null,
+     "word": "Nothing",
+     "on": "me"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": "day",
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 2,
+   "visual": null
+  },
+  {
+   "narration": "I opened the blinds. The street was completely empty.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "tense",
+   "characters": [],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "tumbleweed",
+     "where": "front",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": "right",
+     "label": null,
+     "spin": 5.0
+    },
+    {
+     "kind": "trafficlight",
+     "where": "right",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 3,
+   "visual": null
+  },
+  {
+   "narration": "So I went out in my slippers to find another human being.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "me",
+     "action": "walk",
+     "expr": "neutral",
+     "react": null,
+     "holding": "coffee"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "me",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "shops",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 3,
+   "visual": null
+  },
+  {
+   "narration": "The coffee shop? Closed. The bank? Closed. Even the grocery store.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "nervous",
+     "react": {
+      "word": "grocery",
+      "expr": "shock"
+     },
+     "holding": "coffee"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "me",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "color": null,
+     "word": "grocery",
+     "on": "me"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "shops",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "That's when I really started to panic.",
+   "shot": "close",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "nervous",
+     "react": {
+      "word": "panic",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "me",
+   "fx": [
+    {
+     "kind": "burst",
+     "product": null,
+     "color": null,
+     "word": "panic",
+     "on": "me"
+    }
+   ],
+   "impactWord": "panic",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "shops",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "Then I checked my phone. November nineteenth.",
+   "shot": "close",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "nineteenth",
+      "expr": "shock"
+     },
+     "holding": "phone"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "me",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": "NOV 19 — RELEASE DAY",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": "day",
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "GTA 6 release day.",
+   "shot": "close",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "starry",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "me",
+   "fx": [
+    {
+     "kind": "sparkle",
+     "product": null,
+     "color": null,
+     "word": "release",
+     "on": "me"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "RELEASE DAY",
+   "textStyle": "title",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": "day",
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "The whole world wasn't gone. It was just loading.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "me",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "lightbulb",
+     "color": null,
+     "word": "loading",
+     "on": "me"
+    }
+   ],
+   "impactWord": "loading",
+   "transition": "xfade",
+   "text": "LOADING...",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": "tvglow",
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Curtains closed. Console on.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "meg",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": "controller"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "meg",
+   "fx": [
+    {
+     "kind": "burst",
+     "product": null,
+     "color": null,
+     "word": "Console",
+     "on": "meg"
+    }
+   ],
+   "impactWord": "Console",
+   "transition": "flash",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  },
+  {
+   "narration": "Headset on. Snacks stocked. Phone on airplane mode.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "meg",
+     "action": "stand",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": "can"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "meg",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "pizza",
+     "color": null,
+     "word": "Snacks",
+     "on": "meg"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "snacks",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 0.7,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "Day one.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "meg",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": "controller"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "meg",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "DAY 1",
+   "textStyle": "title",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "snacks",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 0.8,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "Day three.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "meg",
+     "action": "stand",
+     "expr": "crazy",
+     "react": null,
+     "holding": "controller"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "meg",
+   "fx": [],
+   "impactWord": null,
+   "transition": "flash",
+   "text": "DAY 3",
+   "textStyle": "title",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "snacks",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 1.1,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "Day seven.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "meg",
+     "action": "stand",
+     "expr": "crazy",
+     "react": null,
+     "holding": "controller"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "meg",
+   "fx": [],
+   "impactWord": null,
+   "transition": "flash",
+   "text": "DAY 7",
+   "textStyle": "title",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "snacks",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 1.5,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 1,
+   "visual": null
+  },
+  {
+   "narration": "The apocalypse was real. We just did it to ourselves, one mission at a time.",
+   "shot": "close",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "meg",
+     "action": "stand",
+     "expr": "crazy",
+     "react": {
+      "word": "mission",
+      "expr": "starry"
+     },
+     "holding": "controller"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "meg",
+   "fx": [
+    {
+     "kind": "sparkle",
+     "product": null,
+     "color": null,
+     "word": "time",
+     "on": "meg"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null
+  }
+ ]
+}

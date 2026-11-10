@@ -1,0 +1,116 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 47.56575,
+ "voice": "af_heart",
+ "lang": "en",
+ "speed": 1.0,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "This guy escaped being eaten alive, with the worst dad joke in history.",
+   "start": 0.06,
+   "end": 4.093708333333334
+  },
+  {
+   "text": "Odysseus and his men were trapped in a cave with a giant Cyclops.",
+   "start": 4.233708333333333,
+   "end": 8.114875
+  },
+  {
+   "text": "He blocked the door with a boulder, and started eating them.",
+   "start": 8.254875,
+   "end": 11.066125
+  },
+  {
+   "text": "Easy fix: kill him while he sleeps, right?",
+   "start": 11.206125,
+   "end": 13.4365
+  },
+  {
+   "text": "Wrong.",
+   "start": 13.5765,
+   "end": 14.10425
+  },
+  {
+   "text": "Only the giant could move that boulder.",
+   "start": 14.24425,
+   "end": 16.244395833333332
+  },
+  {
+   "text": "Kill him, and you starve inside.",
+   "start": 16.384395833333333,
+   "end": 18.147020833333332
+  },
+  {
+   "text": "So Odysseus offered him wine.",
+   "start": 18.287020833333333,
+   "end": 19.952354166666666
+  },
+  {
+   "text": "Strong wine.",
+   "start": 20.092354166666667,
+   "end": 20.984875
+  },
+  {
+   "text": "No water.",
+   "start": 21.124875,
+   "end": 21.914895833333333
+  },
+  {
+   "text": "The giant asked his name.",
+   "start": 22.054895833333333,
+   "end": 23.483375
+  },
+  {
+   "text": "My name, he said, is Nobody.",
+   "start": 23.623375,
+   "end": 25.4238125
+  },
+  {
+   "text": "Then the Cyclops passed out.",
+   "start": 25.5638125,
+   "end": 27.003229166666667
+  },
+  {
+   "text": "They heated a sharpened olive stake in the fire, and drove it into his one eye.",
+   "start": 27.143229166666668,
+   "end": 31.427375
+  },
+  {
+   "text": "He screamed for his Cyclops neighbors.",
+   "start": 31.567375,
+   "end": 33.51354166666667
+  },
+  {
+   "text": "Who's hurting you?",
+   "start": 33.65354166666667,
+   "end": 34.592708333333334
+  },
+  {
+   "text": "Nobody is killing me!",
+   "start": 34.732708333333335,
+   "end": 35.9895625
+  },
+  {
+   "text": "Well, if nobody's hurting you, go back to sleep.",
+   "start": 36.1295625,
+   "end": 38.84664583333333
+  },
+  {
+   "text": "At dawn, the blind giant rolled the boulder away himself, and the men slipped out under his sheep.",
+   "start": 38.986645833333334,
+   "end": 44.454229166666664
+  },
+  {
+   "text": "Saved by a fake name.",
+   "start": 44.594229166666665,
+   "end": 45.9434375
+  },
+  {
+   "text": "Nobody saw that coming.",
+   "start": 46.0834375,
+   "end": 47.42575
+  }
+ ]
+}

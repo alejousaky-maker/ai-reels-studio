@@ -1,0 +1,183 @@
+{
+ "id": "the-generational-pre-order-acd718",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 142,
+   "beats": 14,
+   "at": "2026-11-10T14:42:05"
+  },
+  "voice": {
+   "duration": 47.693666666666665,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 17.0,
+   "status": "done",
+   "voice": "am_eric*0.6+am_fenrir*0.4",
+   "speed": 1.12,
+   "at": "2026-11-10T14:42:22"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 16.8,
+   "method": {
+    "whisper": 22,
+    "spread": 5
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T14:42:39"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1442,
+   "seconds_video": 48.06666666666667,
+   "scenes": 20,
+   "at": "2026-11-10T14:42:39"
+  },
+  "stills": {
+   "status": "done",
+   "count": 60,
+   "at": "2026-11-10T14:45:03"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 254.7,
+   "frames": 1442,
+   "renderedScenes": [
+    "b01",
+    "b01a",
+    "b01b",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b06a",
+    "b07",
+    "b07a",
+    "b07b",
+    "b08",
+    "b09",
+    "b10",
+    "b11",
+    "b12",
+    "b13",
+    "b14",
+    "b14a"
+   ],
+   "reusedScenes": [],
+   "fps_render": 5.66,
+   "at": "2026-11-10T14:49:18"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 12.0,
+   "integratedLUFS": -14.01,
+   "truePeakDBTP": -2.0,
+   "LRA": 0.88,
+   "maxGainReductionDB": 2.96,
+   "voiceLUFS": -14.0,
+   "musicLUFS": -29.82,
+   "sfxLUFS": -32.32,
+   "at": "2026-11-10T14:49:30"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\the-generational-pre-order-acd718\\output\\the-generational-pre-order_master_v1.mp4",
+   "at": "2026-11-10T14:49:31"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-10T14:49:45"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T14:08:57",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T14:42:05",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T14:42:22",
+   "seconds": 17.0,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T14:42:39",
+   "status": "done",
+   "seconds": 16.8
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T14:42:39",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T14:45:03",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T14:49:18",
+   "status": "done",
+   "seconds": 254.7
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T14:49:30",
+   "status": "done",
+   "seconds": 12.0
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T14:49:31",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T14:49:45",
+   "status": "done"
+  }
+ ],
+ "title": "The Generational Pre-Order",
+ "created": "2026-11-10T14:08:57",
+ "request": {
+  "title": "The Generational Pre-Order",
+  "idea": "The Generational Pre-Order",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 55,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "bedroom",
+  "voice": "am_eric*0.6+am_fenrir*0.4",
+  "speed": 1.12,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": true,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "auto",
+  "review": "auto_qa",
+  "seed": 7,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "",
+ "requestedSeconds": 55
+}

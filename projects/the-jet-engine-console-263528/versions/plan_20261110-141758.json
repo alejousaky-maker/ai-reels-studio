@@ -1,0 +1,974 @@
+{
+ "version": 1,
+ "title": "The Jet Engine Console",
+ "lang": "en",
+ "style": "storybook",
+ "environment": "gameroom",
+ "seed": 43,
+ "cast": [
+  {
+   "id": "me",
+   "name": "Gamer",
+   "role": "capgamer",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "wife",
+   "name": "Wife",
+   "role": "wife",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "meg",
+   "name": "Gamer (goggles)",
+   "role": "capgamer",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": true
+  }
+ ],
+ "beats": [
+  {
+   "narration": "Installing GTA 6 on a base PS5 won't just fill your storage. It will turn your console into a jet engine.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sit",
+     "expr": "grin",
+     "react": null,
+     "holding": "controller",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": "jet",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "console",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 1.4,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "whip",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "storage",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "stand",
+       "expr": "sweat",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": null,
+     "hud": "panel",
+     "hudText": "STORAGE|FULL!",
+     "visual": null
+    },
+    {
+     "at": "jet",
+     "shot": "worm",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "panic",
+       "expr": "shock",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "burst",
+       "product": null,
+       "color": null,
+       "word": "jet",
+       "on": "me"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": [
+      {
+       "kind": "console",
+       "where": "left",
+       "dx": 0.0,
+       "dz": 0.0,
+       "scale": 1.4,
+       "y": null,
+       "mirror": false,
+       "move": null,
+       "label": "flames",
+       "spin": null,
+       "lift": null,
+       "shake": 1.5
+      }
+     ],
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "First, the warning pops up. Required space: five hundred gigs.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "nervous",
+     "react": {
+      "word": "five",
+      "expr": "shock"
+     },
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": "panel",
+   "hudText": "WARNING|REQUIRED SPACE: 500 GB|AVAILABLE: 12 GB!",
+   "shots": []
+  },
+  {
+   "narration": "A sweat drop the size of a grape rolls down his head.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "sweat",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "So he starts deleting. Call of Duty, gone. Eight years of saves, gone.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "stern",
+     "react": null,
+     "holding": "controller",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "product",
+     "product": "folder",
+     "color": null,
+     "word": "Duty",
+     "on": "me"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "truck_right",
+   "hud": "panel",
+   "hudText": "DELETE?|Call of Duty  ✕",
+   "shots": [
+    {
+     "at": "gone",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "stand",
+       "expr": "grin",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "puff",
+       "product": null,
+       "color": null,
+       "word": "gone",
+       "on": "me"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": null,
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "System files, gone. Wedding photos, gone.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "crazy",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": null,
+   "hud": "panel",
+   "hudText": "DELETE?|System Files  ✕",
+   "shots": [
+    {
+     "at": "Wedding",
+     "shot": "medium",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": null,
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "product",
+       "product": "camera",
+       "color": null,
+       "word": "Wedding",
+       "on": "me"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": null,
+     "hud": "panel",
+     "hudText": "DELETE?|Wedding Photos  ✕",
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "His wife gasps from the doorway.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "wife",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": "gasps",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 3,
+   "visual": null,
+   "camMove": "whip",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Then the install finally begins, and the console starts to shake like a washing machine.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sit",
+     "expr": "nervous",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "console",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 1.4,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": 0.8
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": null,
+   "hud": "bar",
+   "hudText": "INSTALLING GTA 6|1|45",
+   "shots": [
+    {
+     "at": "console",
+     "shot": "insert",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": null,
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": [
+      {
+       "kind": "console",
+       "where": "on",
+       "dx": 0.0,
+       "dz": 0.0,
+       "scale": 1.0,
+       "y": null,
+       "mirror": false,
+       "move": null,
+       "label": null,
+       "spin": null,
+       "lift": null,
+       "shake": 1.2
+      }
+     ],
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "The side plates glow orange. The fans spin like turbines.",
+   "shot": "insert",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "steam",
+     "product": null,
+     "color": null,
+     "word": "glow",
+     "on": "me"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "console",
+     "where": "on",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "hot",
+     "spin": null,
+     "lift": null,
+     "shake": 1.6
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "orbit",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "fans",
+     "shot": "worm",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": null,
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "burst",
+       "product": null,
+       "color": null,
+       "word": "turbines",
+       "on": "me"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": [
+      {
+       "kind": "console",
+       "where": "left",
+       "dx": 0.0,
+       "dz": 0.0,
+       "scale": 1.4,
+       "y": null,
+       "mirror": false,
+       "move": null,
+       "label": "hot",
+       "spin": null,
+       "lift": null,
+       "shake": 2.0
+      }
+     ],
+     "camMove": null,
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "Pizza boxes fly across the room. The curtains are flapping. The cat is gone.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "me",
+     "action": "panic",
+     "expr": "shock",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "puff",
+     "product": null,
+     "color": null,
+     "word": "fly",
+     "on": "me"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "snacks",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": "right",
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    },
+    {
+     "kind": "console",
+     "where": "right",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "hot",
+     "spin": null,
+     "lift": null,
+     "shake": 2.0
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "truck_left",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Ninety-nine percent installed.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "starry",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": "bar",
+   "hudText": "INSTALLING GTA 6|96|99",
+   "shots": []
+  },
+  {
+   "narration": "And then, liftoff!",
+   "shot": "worm",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "panic",
+     "expr": "shock",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "burst",
+     "product": null,
+     "color": null,
+     "word": "liftoff",
+     "on": "me"
+    }
+   ],
+   "impactWord": "liftoff",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "console",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 1.4,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "flames",
+     "spin": null,
+     "lift": 4.0,
+     "shake": 1.0
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "crane_up",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "The console blasts straight through the ceiling and rockets into the night sky.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": "tvglow",
+   "pieces": [
+    {
+     "kind": "console",
+     "where": "behind",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 2.0,
+     "y": 1.0,
+     "mirror": false,
+     "move": null,
+     "label": "flames",
+     "spin": null,
+     "lift": 8.0,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null,
+   "camMove": "crane_up",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "And he is still hanging from the HDMI cable, wearing aviator goggles.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "meg",
+     "action": "cheer",
+     "expr": "laugh",
+     "react": null,
+     "holding": null,
+     "y": 2.2
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": "tvglow",
+   "pieces": [
+    {
+     "kind": "console",
+     "where": "on",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 1.6,
+     "y": 4.4,
+     "mirror": false,
+     "move": null,
+     "label": "flames",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null,
+   "camMove": "crane_up",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Totally worth it. Now, the day one patch: one hundred and fifty gigs.",
+   "shot": "close",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "meg",
+     "action": "cheer",
+     "expr": "starry",
+     "react": null,
+     "holding": null,
+     "y": 2.2
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "sparkle",
+     "product": null,
+     "color": null,
+     "word": "worth",
+     "on": "meg"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": "tvglow",
+   "pieces": [],
+   "extrasRole": null,
+   "spot": 0,
+   "visual": null,
+   "camMove": "orbit",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "Now",
+     "shot": "extreme",
+     "light": null,
+     "environment": "gameroom",
+     "envVariant": null,
+     "spot": 0,
+     "characters": [
+      {
+       "id": "me",
+       "action": "stand",
+       "expr": "sweat",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": "panel",
+     "hudText": "DAY 1 PATCH|150 GB",
+     "visual": null
+    }
+   ]
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Comedy fiction about GTA 6 (hypothetical delay / size / price / release-day scenarios); the game, console and studio appear only as generic unbranded props.",
+   "status": "fiction",
+   "source": null
+  }
+ ],
+ "creativeHooks": [],
+ "brand": null,
+ "cta": null,
+ "captions": true,
+ "graphics": "full"
+}

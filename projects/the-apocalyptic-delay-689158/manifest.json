@@ -1,0 +1,193 @@
+{
+ "id": "the-apocalyptic-delay-689158",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 143,
+   "beats": 14,
+   "at": "2026-11-10T14:08:57"
+  },
+  "voice": {
+   "duration": 48.442145833333335,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 16.5,
+   "status": "done",
+   "voice": "am_eric*0.6+am_fenrir*0.4",
+   "speed": 1.013,
+   "at": "2026-11-10T14:09:31"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 16.6,
+   "method": {
+    "whisper": 21,
+    "spread": 2
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T14:09:48"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1466,
+   "seconds_video": 48.86666666666667,
+   "scenes": 24,
+   "at": "2026-11-10T14:09:48"
+  },
+  "stills": {
+   "status": "done",
+   "count": 72,
+   "at": "2026-11-10T14:12:47"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 280.4,
+   "frames": 1466,
+   "renderedScenes": [
+    "b01",
+    "b01a",
+    "b01b",
+    "b01c",
+    "b02",
+    "b03",
+    "b03a",
+    "b04",
+    "b04a",
+    "b05",
+    "b05a",
+    "b05b",
+    "b06",
+    "b07",
+    "b07a",
+    "b08",
+    "b09",
+    "b09a",
+    "b10",
+    "b11",
+    "b12",
+    "b13",
+    "b13a",
+    "b14"
+   ],
+   "reusedScenes": [],
+   "fps_render": 5.23,
+   "at": "2026-11-10T14:17:28"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 14.9,
+   "integratedLUFS": -14.01,
+   "truePeakDBTP": -2.0,
+   "LRA": 0.96,
+   "maxGainReductionDB": 2.53,
+   "voiceLUFS": -14.05,
+   "musicLUFS": -29.87,
+   "sfxLUFS": -29.5,
+   "at": "2026-11-10T14:17:43"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\the-apocalyptic-delay-689158\\output\\the-apocalyptic-delay_master_v1.mp4",
+   "at": "2026-11-10T14:17:44"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-10T14:17:58"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T14:08:57",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T14:08:57",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T14:09:15",
+   "seconds": 18.0,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T14:09:31",
+   "seconds": 16.5,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T14:09:48",
+   "status": "done",
+   "seconds": 16.6
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T14:09:48",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T14:12:47",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T14:17:28",
+   "status": "done",
+   "seconds": 280.4
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T14:17:43",
+   "status": "done",
+   "seconds": 14.9
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T14:17:44",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T14:17:58",
+   "status": "done"
+  }
+ ],
+ "title": "The Apocalyptic Delay",
+ "created": "2026-11-10T14:08:57",
+ "request": {
+  "title": "The Apocalyptic Delay",
+  "idea": "The Apocalyptic Delay",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 55,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "gameroom",
+  "voice": "am_eric*0.6+am_fenrir*0.4",
+  "speed": 1.12,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": true,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "auto",
+  "review": "auto_qa",
+  "seed": 7,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "",
+ "requestedSeconds": 55
+}

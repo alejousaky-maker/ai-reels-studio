@@ -1,0 +1,237 @@
+{
+ "duration": 53.03333333333333,
+ "sampleRate": 48000,
+ "targetLUFS": -14.0,
+ "ceilingDBTP": -2.0,
+ "measured": {
+  "integratedLUFS": -14.02,
+  "truePeakDBTP": -2.0,
+  "LRA": 1.17,
+  "maxGainReductionDB": 5.74,
+  "voiceLUFS": -13.99,
+  "musicLUFS": -29.71,
+  "sfxLUFS": -29.28
+ },
+ "ffmpegEbur128": {
+  "I": -14.0,
+  "LRA": 1.2,
+  "truePeak": -2.0
+ },
+ "musicSections": [
+  {
+   "start": 0.0,
+   "end": 6.47,
+   "mood": "upbeat"
+  },
+  {
+   "start": 6.47,
+   "end": 10.03,
+   "mood": "whimsical"
+  },
+  {
+   "start": 10.03,
+   "end": 16.17,
+   "mood": "upbeat"
+  },
+  {
+   "start": 16.17,
+   "end": 23.4,
+   "mood": "tense"
+  },
+  {
+   "start": 23.4,
+   "end": 27.83,
+   "mood": "upbeat"
+  },
+  {
+   "start": 27.83,
+   "end": 30.87,
+   "mood": "curious"
+  },
+  {
+   "start": 30.87,
+   "end": 34.07,
+   "mood": "whimsical"
+  },
+  {
+   "start": 34.07,
+   "end": 36.4,
+   "mood": "tense"
+  },
+  {
+   "start": 36.4,
+   "end": 43.63,
+   "mood": "whimsical"
+  },
+  {
+   "start": 43.63,
+   "end": 53.03,
+   "mood": "warm"
+  }
+ ],
+ "musicCues": [
+  "0.00s section 1: upbeat (118 bpm)",
+  "6.47s section 2: whimsical (108 bpm)",
+  "10.03s section 3: upbeat (118 bpm)",
+  "16.17s section 4: tense (92 bpm)",
+  "23.40s section 5: upbeat (118 bpm)",
+  "27.83s section 6: curious (96 bpm)",
+  "30.87s section 7: whimsical (108 bpm)",
+  "34.07s section 8: tense (92 bpm)",
+  "36.40s section 9: whimsical (108 bpm)",
+  "43.63s section 10: warm (84 bpm)"
+ ],
+ "sfxCues": [
+  {
+   "t": 0.0,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 5.8,
+   "kind": "impact",
+   "what": "impact thump"
+  },
+  {
+   "t": 5.733,
+   "kind": "product",
+   "what": "product exclaim"
+  },
+  {
+   "t": 6.467,
+   "kind": "bed",
+   "what": "day ambience + crowd"
+  },
+  {
+   "t": 8.28,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 10.033,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 16.167,
+   "kind": "bed",
+   "what": "golden ambience + crowd"
+  },
+  {
+   "t": 16.047,
+   "kind": "whoosh",
+   "what": "xfade into b04"
+  },
+  {
+   "t": 21.033,
+   "kind": "bed",
+   "what": "golden ambience"
+  },
+  {
+   "t": 21.433,
+   "kind": "impact",
+   "what": "impact thump"
+  },
+  {
+   "t": 21.367,
+   "kind": "puff",
+   "what": "puff"
+  },
+  {
+   "t": 23.4,
+   "kind": "bed",
+   "what": "day ambience + crowd"
+  },
+  {
+   "t": 25.713,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 27.833,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 30.2,
+   "kind": "product",
+   "what": "product exclaim"
+  },
+  {
+   "t": 30.867,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 30.747,
+   "kind": "whoosh",
+   "what": "xfade into b08"
+  },
+  {
+   "t": 32.48,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 33.167,
+   "kind": "product",
+   "what": "product question"
+  },
+  {
+   "t": 34.067,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 35.067,
+   "kind": "impact",
+   "what": "impact thump"
+  },
+  {
+   "t": 35.0,
+   "kind": "burst",
+   "what": "burst"
+  },
+  {
+   "t": 36.4,
+   "kind": "bed",
+   "what": "golden ambience"
+  },
+  {
+   "t": 36.28,
+   "kind": "whoosh",
+   "what": "xfade into b10"
+  },
+  {
+   "t": 40.367,
+   "kind": "bed",
+   "what": "golden ambience"
+  },
+  {
+   "t": 42.013,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 43.633,
+   "kind": "bed",
+   "what": "golden ambience"
+  },
+  {
+   "t": 45.48,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 47.233,
+   "kind": "bed",
+   "what": "golden ambience"
+  },
+  {
+   "t": 52.033,
+   "kind": "sparkle",
+   "what": "sparkle"
+  }
+ ],
+ "license": "All music and SFX synthesized locally (numpy/scipy), original; voice from local TTS or user import."
+}

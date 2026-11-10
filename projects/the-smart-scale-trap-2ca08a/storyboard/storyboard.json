@@ -1,0 +1,1173 @@
+{
+ "version": 1,
+ "title": "The Smart Scale Trap",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1396,
+ "env": {
+  "preset": "apartment",
+  "seed": 12,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "guy",
+   "name": "Him",
+   "outfit": {
+    "jacket": "#2f3f6a",
+    "pants": "#26304f",
+    "boots": "#1d1b22",
+    "skin": "#f5c9a0",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "tie": "#c8323a"
+   }
+  },
+  {
+   "id": "gf",
+   "name": "Girlfriend",
+   "outfit": {
+    "jacket": "#e06a9a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "dress": "#e06a9a",
+    "hat": "longhair",
+    "hair": "#e8c46a"
+   }
+  },
+  {
+   "id": "towel",
+   "name": "Towel guy",
+   "outfit": {
+    "jacket": "#f7f5f0",
+    "pants": "#f7f5f0",
+    "boots": "#e8d2b8",
+    "skin": "#ecd0b6",
+    "hat": "hair",
+    "hair": "#2a201a",
+    "belt": "#7fc4d9"
+   }
+  },
+  {
+   "id": "mom",
+   "name": "Her mom",
+   "outfit": {
+    "jacket": "#5d7a3a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ffe2c2",
+    "hat": "bonnet",
+    "hair": "#7a4a2a",
+    "dress": "#c25a7a"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 173,
+   "narration": "A guy caught his girlfriend cheating, because his bathroom floor snitched on her at three in the morning.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "guy",
+     "x": 0.0,
+     "z": -1.0,
+     "expr": "smile",
+     "mode": "stand",
+     "holding": "receipt"
+    },
+    {
+     "castId": "towel",
+     "x": -1.838,
+     "z": -1.612,
+     "expr": "nervous",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 107,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      3.0,
+      2.3,
+      4.0
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      -1.0
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 107,
+     "cut": true,
+     "position": [
+      -1.6,
+      1.68,
+      4.0
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      -1.0
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1200,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "bathroom",
+    "seed": 12,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "scale",
+     "x": -1.004,
+     "z": 0.2,
+     "scale": 2.0
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 109,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 107,
+     "dur": 60,
+     "at": [
+      -1.418,
+      2.28,
+      -1.612
+     ],
+     "size": 0.42,
+     "product": "exclaim"
+    }
+   ]
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 173,
+   "endFrame": 228,
+   "narration": "He was away on a business trip.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "guy",
+     "x": -2.4,
+     "z": -0.2,
+     "expr": "neutral",
+     "mode": "stroll",
+     "walkTo": [
+      0.0,
+      -0.2
+     ],
+     "walkFrames": [
+      173,
+      211
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 173,
+     "position": [
+      -3.0,
+      2.3,
+      9.8
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      -0.2
+     ],
+     "fov": 42,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1201,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "airport",
+    "seed": 12,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 228,
+   "endFrame": 361,
+   "narration": "His girlfriend texted: sleeping alone all weekend. Miss you.",
+   "light": "golden",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "gf",
+     "x": 0.0,
+     "z": -1.2,
+     "expr": "smile",
+     "mode": "stand",
+     "holding": "phone"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 228,
+     "position": [
+      1.6,
+      1.68,
+      4.4
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      -1.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 289,
+     "dur": 24,
+     "position": [
+      0.55,
+      1.62,
+      1.7
+     ],
+     "lookAt": [
+      0,
+      1.5,
+      -1.2
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 1202,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 333,
+     "dur": 28,
+     "at": [
+      0.42,
+      2.28,
+      -1.2
+     ],
+     "size": 0.42,
+     "product": "heart"
+    }
+   ]
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 361,
+   "endFrame": 459,
+   "narration": "She forgot one tiny detail. His smart scale.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "guy",
+     "x": 0.0,
+     "z": -1.0,
+     "expr": "smile_closed",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 361,
+     "position": [
+      -1.6,
+      1.68,
+      4.0
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      -1.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 402,
+     "dur": 24,
+     "position": [
+      -0.55,
+      1.62,
+      1.9
+     ],
+     "lookAt": [
+      0,
+      1.5,
+      -1.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1203,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "bathroom",
+    "seed": 12,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "scale",
+     "x": 0.426,
+     "z": 0.2,
+     "scale": 2.0
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 436,
+     "dur": 23,
+     "at": [
+      0.42,
+      2.28,
+      -1.0
+     ],
+     "size": 0.42,
+     "product": "wifi"
+    }
+   ]
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 459,
+   "endFrame": 534,
+   "narration": "It syncs every single weigh-in to his phone.",
+   "light": "night",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "guy",
+     "x": -1.9,
+     "z": -0.6,
+     "expr": "neutral",
+     "mode": "stand",
+     "holding": "phone"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 459,
+     "position": [
+      -0.582,
+      1.68,
+      5.073
+     ],
+     "lookAt": [
+      -1.9,
+      1.38,
+      -0.6
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 1204,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "hotel",
+    "seed": 12,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 516,
+     "dur": 18,
+     "at": [
+      -1.481,
+      2.28,
+      -0.579
+     ],
+     "size": 0.42,
+     "product": "phone"
+    }
+   ]
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 534,
+   "endFrame": 623,
+   "narration": "At two forty-five in the morning, his phone dinged.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "guy",
+     "x": -1.9,
+     "z": -0.6,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 606,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 534,
+     "position": [
+      -2.594,
+      1.62,
+      2.269
+     ],
+     "lookAt": [
+      -1.9,
+      1.5,
+      -0.6
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 582,
+     "cut": true,
+     "position": [
+      -1.496,
+      1.62,
+      2.324
+     ],
+     "lookAt": [
+      -1.9,
+      1.5,
+      -0.6
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1205,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "hotel",
+    "seed": 12,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 606,
+     "dur": 17,
+     "at": [
+      -1.626,
+      2.05,
+      -0.586
+     ],
+     "size": 0.28371807239363683,
+     "product": "clock"
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "2:45 AM",
+     "frame": 537,
+     "dur": 83,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 623,
+   "endFrame": 726,
+   "narration": "New weight recorded. One hundred ninety-five pounds.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "guy",
+     "x": -1.9,
+     "z": -0.6,
+     "expr": "stern",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 623,
+     "position": [
+      -1.496,
+      1.62,
+      2.324
+     ],
+     "lookAt": [
+      -1.9,
+      1.5,
+      -0.6
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 708,
+     "cut": true,
+     "position": [
+      -2.594,
+      1.62,
+      2.269
+     ],
+     "lookAt": [
+      -1.9,
+      1.5,
+      -0.6
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1206,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "hotel",
+    "seed": 12,
+    "shop": null
+   },
+   "kicks": [
+    {
+     "frame": 711,
+     "amp": 0.8
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "NEW WEIGHT: 195 lbs",
+     "frame": 626,
+     "dur": 97,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 726,
+   "endFrame": 805,
+   "narration": "His girlfriend weighs one hundred fifteen.",
+   "light": "golden",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "gf",
+     "x": 0.0,
+     "z": -1.2,
+     "expr": "smile",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 786,
+       "expr": "nervous"
+      }
+     ],
+     "holding": "phone"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 726,
+     "position": [
+      -1.6,
+      1.68,
+      4.4
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      -1.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 757,
+     "dur": 24,
+     "position": [
+      -0.55,
+      1.62,
+      1.7
+     ],
+     "lookAt": [
+      0,
+      1.5,
+      -1.2
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1207,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "textOverlays": [
+    {
+     "text": "SHE: 115 lbs",
+     "frame": 729,
+     "dur": 73,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 805,
+   "endFrame": 957,
+   "narration": "At eight in the morning, the scale saved a brand new guest profile. With body fat.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "towel",
+     "x": 1.4,
+     "z": -0.6,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 890,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 805,
+     "position": [
+      1.258,
+      1.68,
+      4.648
+     ],
+     "lookAt": [
+      1.4,
+      1.38,
+      -0.6
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 888,
+     "cut": true,
+     "position": [
+      -0.077,
+      1.62,
+      1.955
+     ],
+     "lookAt": [
+      1.4,
+      1.5,
+      -0.6
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1208,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "bathroom",
+    "seed": 12,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "scale",
+     "x": 0.601,
+     "z": 0.392,
+     "scale": 2.0
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 890,
+     "dur": 60,
+     "at": [
+      1.796,
+      2.28,
+      -0.461
+     ],
+     "size": 0.42,
+     "product": "exclaim"
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "GUEST PROFILE SAVED",
+     "frame": 808,
+     "dur": 146,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 957,
+   "endFrame": 1023,
+   "narration": "He didn't call. He didn't yell.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "guy",
+     "x": -1.9,
+     "z": -0.6,
+     "expr": "neutral",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 957,
+     "position": [
+      -2.594,
+      1.62,
+      2.269
+     ],
+     "lookAt": [
+      -1.9,
+      1.5,
+      -0.6
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1209,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "hotel",
+    "seed": 12,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 1023,
+   "endFrame": 1129,
+   "narration": "He renamed the home Wi-Fi: Who weighs one ninety-five?",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "gf",
+     "x": 0.0,
+     "z": -1.2,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1058,
+       "expr": "shock"
+      }
+     ],
+     "holding": "phone"
+    },
+    {
+     "castId": "towel",
+     "x": -0.72,
+     "z": -2.1,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1082,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1023,
+     "position": [
+      1.0,
+      1.66,
+      3.1
+     ],
+     "lookAt": [
+      0.0,
+      1.42,
+      -1.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1069,
+     "dur": 24,
+     "position": [
+      0.55,
+      1.62,
+      1.7
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -1.2
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 1210,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 1050,
+     "dur": 60,
+     "at": [
+      0.42,
+      2.28,
+      -1.2
+     ],
+     "size": 0.42,
+     "product": "wifi"
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "WI-FI: WHO WEIGHS 195?",
+     "frame": 1026,
+     "dur": 100,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 1129,
+   "endFrame": 1203,
+   "narration": "Then he shipped all her stuff to her parents' house.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "mom",
+     "x": 0.726,
+     "z": 2.5,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1175,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1129,
+     "position": [
+      -3.0,
+      2.3,
+      13.0
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      2.5
+     ],
+     "fov": 42,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 1211,
+   "qualityNotes": "",
+   "env": {
+    "preset": "suburb",
+    "seed": 12,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "boxes",
+     "x": -1.388,
+     "z": 1.31
+    },
+    {
+     "kind": "van",
+     "x": 2.726,
+     "z": -2.65
+    }
+   ]
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 1203,
+   "endFrame": 1261,
+   "narration": "Before his flight even landed.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "guy",
+     "x": -2.4,
+     "z": -0.2,
+     "expr": "smile",
+     "mode": "stroll",
+     "walkTo": [
+      0.0,
+      -0.2
+     ],
+     "walkFrames": [
+      1203,
+      1243
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1203,
+     "position": [
+      3.0,
+      2.3,
+      9.8
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      -0.2
+     ],
+     "fov": 42,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1212,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "airport",
+    "seed": 12,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b14",
+   "startFrame": 1261,
+   "endFrame": 1396,
+   "narration": "Turns out, cheating is hard when even the floor keeps receipts.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "guy",
+     "x": 0.0,
+     "z": -0.2,
+     "expr": "smile",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1352,
+       "expr": "smile_closed"
+      }
+     ],
+     "holding": "receipt"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1261,
+     "position": [
+      -0.55,
+      1.62,
+      2.7
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -0.2
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1335,
+     "cut": true,
+     "position": [
+      0.55,
+      1.62,
+      2.7
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -0.2
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1213,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "airport",
+    "seed": 12,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 1352,
+     "dur": 44,
+     "at": [
+      0.274,
+      2.05,
+      -0.2
+     ],
+     "size": 0.44330948811505755
+    }
+   ]
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": false,
+  "words": []
+ },
+ "style": "storybook",
+ "graphics": "full"
+}

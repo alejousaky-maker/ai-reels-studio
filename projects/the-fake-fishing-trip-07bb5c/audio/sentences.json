@@ -1,0 +1,111 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 43.787729166666665,
+ "voice": "af_heart",
+ "lang": "en",
+ "speed": 0.88,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "This husband faked a fishing trip perfectly.",
+   "start": 0.06,
+   "end": 2.642875
+  },
+  {
+   "text": "He just forgot how sunglasses work.",
+   "start": 2.782875,
+   "end": 4.7999375
+  },
+  {
+   "text": "He told his wife: zero signal, a weekend at the lake with the boys.",
+   "start": 4.9399375,
+   "end": 9.418166666666666
+  },
+  {
+   "text": "Then he sent live photos every few hours.",
+   "start": 9.558166666666667,
+   "end": 12.111416666666667
+  },
+  {
+   "text": "Fishing vest.",
+   "start": 12.251416666666668,
+   "end": 13.244791666666666
+  },
+  {
+   "text": "Rods.",
+   "start": 13.384791666666667,
+   "end": 14.100833333333334
+  },
+  {
+   "text": "Beer by the cabin.",
+   "start": 14.240833333333333,
+   "end": 15.432625
+  },
+  {
+   "text": "But his wife zoomed in.",
+   "start": 15.572625,
+   "end": 16.9093125
+  },
+  {
+   "text": "In every photo, the sun was in the exact same spot.",
+   "start": 17.0493125,
+   "end": 20.4736875
+  },
+  {
+   "text": "Because he took them all the week before.",
+   "start": 20.6136875,
+   "end": 22.637833333333333
+  },
+  {
+   "text": "Except the last selfie.",
+   "start": 22.777833333333334,
+   "end": 24.22175
+  },
+  {
+   "text": "From the boat.",
+   "start": 24.36175,
+   "end": 25.264833333333332
+  },
+  {
+   "text": "His sunglasses reflected a neon palm tree, and a pool bar.",
+   "start": 25.404833333333332,
+   "end": 29.44525
+  },
+  {
+   "text": "In Cancun.",
+   "start": 29.58525,
+   "end": 30.544291666666666
+  },
+  {
+   "text": "And a woman holding the phone, taking the picture.",
+   "start": 30.684291666666667,
+   "end": 33.31720833333333
+  },
+  {
+   "text": "Sunday night, he came home with a suspicious tan.",
+   "start": 33.457208333333334,
+   "end": 36.54202083333333
+  },
+  {
+   "text": "His wife opened the door wearing a fishing vest.",
+   "start": 36.68202083333333,
+   "end": 39.20164583333333
+  },
+  {
+   "text": "Next to her lawyer.",
+   "start": 39.34164583333333,
+   "end": 40.451875
+  },
+  {
+   "text": "Holding his credit card statement.",
+   "start": 40.591875,
+   "end": 42.49633333333333
+  },
+  {
+   "text": "Catch of the day.",
+   "start": 42.63633333333333,
+   "end": 43.647729166666664
+  }
+ ]
+}

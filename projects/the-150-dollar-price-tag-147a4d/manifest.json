@@ -1,0 +1,185 @@
+{
+ "id": "the-150-dollar-price-tag-147a4d",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 147,
+   "beats": 15,
+   "at": "2026-11-10T14:34:14"
+  },
+  "voice": {
+   "duration": 47.870875,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 16.3,
+   "status": "done",
+   "voice": "am_eric*0.6+am_fenrir*0.4",
+   "speed": 1.12,
+   "at": "2026-11-10T14:34:31"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 14.7,
+   "method": {
+    "whisper": 22,
+    "spread": 1
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T14:34:45"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1446,
+   "seconds_video": 48.2,
+   "scenes": 22,
+   "at": "2026-11-10T14:34:45"
+  },
+  "stills": {
+   "status": "done",
+   "count": 66,
+   "at": "2026-11-10T14:37:16"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 257.9,
+   "frames": 1446,
+   "renderedScenes": [
+    "b01",
+    "b01a",
+    "b01b",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b05a",
+    "b05b",
+    "b06",
+    "b07",
+    "b08",
+    "b08a",
+    "b09",
+    "b10",
+    "b11",
+    "b12",
+    "b12a",
+    "b12b",
+    "b13",
+    "b14",
+    "b15"
+   ],
+   "reusedScenes": [],
+   "fps_render": 5.61,
+   "at": "2026-11-10T14:41:34"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 13.8,
+   "integratedLUFS": -14.01,
+   "truePeakDBTP": -2.0,
+   "LRA": 0.99,
+   "maxGainReductionDB": 3.04,
+   "voiceLUFS": -14.03,
+   "musicLUFS": -29.81,
+   "sfxLUFS": -31.49,
+   "at": "2026-11-10T14:41:48"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\the-150-dollar-price-tag-147a4d\\output\\the-150-dollar-price-tag_master_v1.mp4",
+   "at": "2026-11-10T14:41:49"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-10T14:42:05"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T14:08:57",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T14:34:14",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T14:34:31",
+   "seconds": 16.3,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T14:34:45",
+   "status": "done",
+   "seconds": 14.7
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T14:34:45",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T14:37:16",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T14:41:34",
+   "status": "done",
+   "seconds": 257.9
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T14:41:48",
+   "status": "done",
+   "seconds": 13.8
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T14:41:49",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T14:42:05",
+   "status": "done"
+  }
+ ],
+ "title": "The 150 Dollar Price Tag",
+ "created": "2026-11-10T14:08:57",
+ "request": {
+  "title": "The 150 Dollar Price Tag",
+  "idea": "The 150 Dollar Price Tag",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 55,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "apartment",
+  "voice": "am_eric*0.6+am_fenrir*0.4",
+  "speed": 1.12,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": true,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "auto",
+  "review": "auto_qa",
+  "seed": 7,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "",
+ "requestedSeconds": 55
+}

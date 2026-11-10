@@ -1,0 +1,2825 @@
+{
+ "version": 1,
+ "title": "The Apocalyptic Delay",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1466,
+ "env": {
+  "preset": "gameroom",
+  "seed": 41,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "me",
+   "name": "Streamer",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#f5c9a0",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "brk",
+   "name": "Broker",
+   "outfit": {
+    "jacket": "#2a3350",
+    "pants": "#232a42",
+    "boots": "#1d1b22",
+    "skin": "#8d5a3b",
+    "hat": "hair",
+    "hair": "#8a6a3a",
+    "tie": "#c8323a",
+    "stripes": "#3a4566"
+   }
+  },
+  {
+   "id": "me2",
+   "name": "Streamer (sign)",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#ecd0b6",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "extra0",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#8d5a3b",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "extra1",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#ecd0b6",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "extra2",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#ffe2c2",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "extra3",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#c99067",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "extra4",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#f5c9a0",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "extra5",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#8d5a3b",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "extra6",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#ecd0b6",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "extra7",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#ffe2c2",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 36,
+   "narration": "If GTA 6 gets delayed one more time, society won't just complain. It will literally collapse in twenty-four hours.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.551,
+     "z": 0.747,
+     "expr": "grin",
+     "mode": "stand",
+     "holding": "controller"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      4.028,
+      1.62,
+      3.303
+     ],
+     "lookAt": [
+      4.252,
+      1.5,
+      0.359
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 0,
+     "position": [
+      4.028,
+      1.62,
+      3.303
+     ],
+     "lookAt": [
+      2.551,
+      1.5,
+      0.747
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4100,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "monitor",
+     "x": 0.798,
+     "z": 0.068,
+     "label": "GTA 6|RELEASE SOON"
+    }
+   ]
+  },
+  {
+   "sceneId": "b01a",
+   "startFrame": 36,
+   "endFrame": 79,
+   "narration": "If GTA 6 gets delayed one more time, society won't just complain. It will literally collapse in twenty-four hours.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.48,
+     "z": 0.772,
+     "expr": "broken",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 36,
+     "position": [
+      2.888,
+      1.6,
+      2.483
+     ],
+     "lookAt": [
+      2.48,
+      1.6,
+      0.772
+     ],
+     "fov": 30,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4137,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "news",
+    "text": "GTA 6 DELAYED AGAIN"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "monitor",
+     "x": 0.798,
+     "z": 0.068,
+     "label": "GTA 6|RELEASE SOON"
+    }
+   ]
+  },
+  {
+   "sceneId": "b01b",
+   "startFrame": 79,
+   "endFrame": 146,
+   "narration": "If GTA 6 gets delayed one more time, society won't just complain. It will literally collapse in twenty-four hours.",
+   "light": "golden",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "extra0",
+     "x": 2.326,
+     "z": -0.5,
+     "mode": "stroll",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra1",
+     "x": -0.074,
+     "z": -1.6,
+     "mode": "stroll",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra2",
+     "x": 1.379,
+     "z": -2.058,
+     "mode": "stroll",
+     "expr": "nervous"
+    },
+    {
+     "castId": "extra3",
+     "x": -1.374,
+     "z": -0.5,
+     "mode": "stroll",
+     "expr": "neutral"
+    },
+    {
+     "castId": "extra4",
+     "x": 1.533,
+     "z": -0.63,
+     "mode": "stroll",
+     "expr": "laugh"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 79,
+     "position": [
+      1.425,
+      2.3,
+      13.45
+     ],
+     "lookAt": [
+      -1.575,
+      1.2,
+      2.95
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 79,
+     "position": [
+      4.575,
+      2.3,
+      12.55
+     ],
+     "lookAt": [
+      1.575,
+      1.2,
+      2.05
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 67
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4174,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 18,
+   "sunAz": 150,
+   "env": {
+    "preset": "suburb",
+    "seed": 41,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "monitor",
+     "x": -1.392,
+     "z": 1.28,
+     "label": "GTA 6|RELEASE SOON"
+    }
+   ]
+  },
+  {
+   "sceneId": "b01c",
+   "startFrame": 146,
+   "endFrame": 205,
+   "narration": "If GTA 6 gets delayed one more time, society won't just complain. It will literally collapse in twenty-four hours.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.684,
+     "z": 0.7,
+     "expr": "shock",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 146,
+     "position": [
+      2.977,
+      1.55,
+      5.472
+     ],
+     "lookAt": [
+      2.684,
+      1.4,
+      0.7
+     ],
+     "fov": 40,
+     "roll": -0.16
+    },
+    {
+     "frame": 146,
+     "position": [
+      2.86,
+      1.49,
+      3.563
+     ],
+     "lookAt": [
+      2.684,
+      1.4,
+      0.7
+     ],
+     "fov": 40,
+     "roll": -0.16,
+     "dur": 59
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4211,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "monitor",
+     "x": 0.798,
+     "z": 0.068,
+     "label": "GTA 6|RELEASE SOON"
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 148,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 146,
+     "dur": 59,
+     "at": [
+      3.081,
+      2.28,
+      0.562
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 205,
+   "endFrame": 271,
+   "narration": "It starts with one breaking news banner.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -1.107,
+     "z": -0.149,
+     "expr": "neutral",
+     "mode": "sit",
+     "holding": "can"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 205,
+     "position": [
+      -0.698,
+      1.68,
+      5.575
+     ],
+     "lookAt": [
+      -1.45,
+      1.38,
+      -0.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 205,
+     "position": [
+      -0.999,
+      1.56,
+      3.265
+     ],
+     "lookAt": [
+      -1.45,
+      1.38,
+      -0.2
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 66
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4101,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "news",
+    "text": "GTA 6 DELAYED TO 2028"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "monitor",
+     "x": -2.525,
+     "z": -1.595,
+     "label": "BREAKING|NEWS"
+    }
+   ]
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 271,
+   "endFrame": 324,
+   "narration": "His eyes shatter like glass. His jaw hits the floor.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "broken",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 271,
+     "position": [
+      -0.18,
+      1.6,
+      2.75
+     ],
+     "lookAt": [
+      0.0,
+      1.6,
+      1.0
+     ],
+     "fov": 30,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4102,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35
+  },
+  {
+   "sceneId": "b03a",
+   "startFrame": 324,
+   "endFrame": 370,
+   "narration": "His eyes shatter like glass. His jaw hits the floor.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "shock",
+     "mode": "fall"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 324,
+     "position": [
+      0.9,
+      0.4,
+      4.6
+     ],
+     "lookAt": [
+      0.0,
+      1.55,
+      1.0
+     ],
+     "fov": 50,
+     "roll": 0.0
+    },
+    {
+     "frame": 324,
+     "position": [
+      0.9,
+      2.175,
+      4.6
+     ],
+     "lookAt": [
+      0.0,
+      1.55,
+      1.0
+     ],
+     "fov": 50,
+     "roll": 0.0,
+     "dur": 46
+    }
+   ],
+   "push": 0.0028,
+   "dof": {
+    "cInf": 7,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4139,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "kicks": [
+    {
+     "frame": 352,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "stars",
+     "frame": 350,
+     "dur": 20,
+     "at": [
+      0.42,
+      2.28,
+      1.0
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 370,
+   "endFrame": 435,
+   "narration": "Hour two. Millions of gamers stumble outside for the first time in years.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "extra5",
+     "x": -5.175,
+     "z": 1.702,
+     "mode": "stroll",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra6",
+     "x": -7.771,
+     "z": 1.216,
+     "mode": "stroll",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra7",
+     "x": -4.448,
+     "z": -0.748,
+     "mode": "stroll",
+     "expr": "nervous"
+    },
+    {
+     "castId": "extra0",
+     "x": -8.207,
+     "z": 2.618,
+     "mode": "stroll",
+     "expr": "neutral"
+    },
+    {
+     "castId": "extra1",
+     "x": -3.065,
+     "z": -0.001,
+     "mode": "stroll",
+     "expr": "laugh"
+    },
+    {
+     "castId": "extra2",
+     "x": -8.452,
+     "z": 0.85,
+     "mode": "stroll",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra3",
+     "x": -3.209,
+     "z": 0.695,
+     "mode": "stroll",
+     "expr": "grin"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 370,
+     "position": [
+      -6.2,
+      1.805,
+      11.003
+     ],
+     "lookAt": [
+      -6,
+      1.2,
+      5
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 370,
+     "position": [
+      -6.364,
+      2.3,
+      15.914
+     ],
+     "lookAt": [
+      -6,
+      1.2,
+      5
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 65
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4103,
+   "qualityNotes": "",
+   "env": {
+    "preset": "suburb",
+    "seed": 41,
+    "shop": null
+   },
+   "textOverlays": [
+    {
+     "text": "HOUR 2",
+     "frame": 373,
+     "dur": 59,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b04a",
+   "startFrame": 435,
+   "endFrame": 502,
+   "narration": "Hour two. Millions of gamers stumble outside for the first time in years.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "extra4",
+     "x": -5.175,
+     "z": 1.702,
+     "mode": "stroll",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra5",
+     "x": -7.398,
+     "z": 1.263,
+     "mode": "stroll",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra6",
+     "x": -4.448,
+     "z": -0.748,
+     "mode": "stroll",
+     "expr": "nervous"
+    },
+    {
+     "castId": "extra7",
+     "x": -7.314,
+     "z": 2.78,
+     "mode": "stroll",
+     "expr": "neutral"
+    },
+    {
+     "castId": "extra0",
+     "x": -3.175,
+     "z": -0.028,
+     "mode": "stroll",
+     "expr": "laugh"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 435,
+     "position": [
+      -5.835,
+      0.85,
+      11.721
+     ],
+     "lookAt": [
+      -5.01,
+      1.5,
+      5.124
+     ],
+     "fov": 44,
+     "roll": 0.0
+    },
+    {
+     "frame": 435,
+     "position": [
+      -7.815,
+      0.85,
+      11.473
+     ],
+     "lookAt": [
+      -6.99,
+      1.5,
+      4.876
+     ],
+     "fov": 44,
+     "roll": 0.0,
+     "dur": 67
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 6,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4140,
+   "qualityNotes": "",
+   "sub": true,
+   "env": {
+    "preset": "suburb",
+    "seed": 41,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 502,
+   "endFrame": 538,
+   "narration": "The sun burns. They touch grass, and nobody knows what it is.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 16.0,
+     "z": 3.0,
+     "expr": "squint",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 502,
+     "position": [
+      15.995,
+      1.6,
+      4.759
+     ],
+     "lookAt": [
+      16.0,
+      1.6,
+      3.0
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 502,
+     "position": [
+      15.997,
+      1.6,
+      4.055
+     ],
+     "lookAt": [
+      16.0,
+      1.6,
+      3.0
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 36
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4104,
+   "qualityNotes": "",
+   "env": {
+    "preset": "suburb",
+    "seed": 41,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b05a",
+   "startFrame": 538,
+   "endFrame": 568,
+   "narration": "The sun burns. They touch grass, and nobody knows what it is.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 16.0,
+     "z": 3.0,
+     "expr": "squint",
+     "mode": "stand",
+     "pose": "point"
+    },
+    {
+     "castId": "extra1",
+     "x": 17.294,
+     "z": -0.144,
+     "mode": "stand",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra2",
+     "x": 15.157,
+     "z": -0.9,
+     "mode": "stand",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra3",
+     "x": 18.368,
+     "z": -2.463,
+     "mode": "stand",
+     "expr": "nervous"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 538,
+     "position": [
+      15.604,
+      0.85,
+      9.636
+     ],
+     "lookAt": [
+      16,
+      1.5,
+      3
+     ],
+     "fov": 44,
+     "roll": 0.0
+    },
+    {
+     "frame": 538,
+     "position": [
+      12.932,
+      0.85,
+      8.898
+     ],
+     "lookAt": [
+      16,
+      1.5,
+      3
+     ],
+     "fov": 44,
+     "roll": 0.0,
+     "dur": 30
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 6,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4141,
+   "qualityNotes": "",
+   "sub": true,
+   "env": {
+    "preset": "suburb",
+    "seed": 41,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b05b",
+   "startFrame": 568,
+   "endFrame": 612,
+   "narration": "The sun burns. They touch grass, and nobody knows what it is.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 16.0,
+     "z": 3.0,
+     "expr": "nervous",
+     "mode": "stand",
+     "pose": "shrug"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 568,
+     "position": [
+      15.741,
+      1.62,
+      5.94
+     ],
+     "lookAt": [
+      16.0,
+      1.5,
+      3.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4178,
+   "qualityNotes": "",
+   "sub": true,
+   "env": {
+    "preset": "suburb",
+    "seed": 41,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 568,
+     "dur": 44,
+     "at": [
+      16.273,
+      2.05,
+      2.973
+     ],
+     "size": 0.28371807239363683,
+     "product": "question"
+    }
+   ]
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 612,
+   "endFrame": 725,
+   "narration": "Hour six. Wall Street notices nobody is buying anything.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "brk",
+     "x": 0.0,
+     "z": -2.1,
+     "expr": "nervous",
+     "mode": "stand"
+    },
+    {
+     "castId": "extra4",
+     "x": 1.198,
+     "z": -4.966,
+     "mode": "stand",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra5",
+     "x": -0.8,
+     "z": -6.2,
+     "mode": "stand",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra6",
+     "x": 0.943,
+     "z": -6.648,
+     "mode": "stand",
+     "expr": "nervous"
+    },
+    {
+     "castId": "extra7",
+     "x": -2.1,
+     "z": -5.1,
+     "mode": "stand",
+     "expr": "neutral"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 612,
+     "position": [
+      1.65,
+      2.3,
+      7.35
+     ],
+     "lookAt": [
+      -1.35,
+      1.2,
+      -1.65
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 612,
+     "position": [
+      4.35,
+      2.3,
+      6.45
+     ],
+     "lookAt": [
+      1.35,
+      1.2,
+      -2.55
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 113
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4105,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "trading",
+    "seed": 41,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "ticker",
+     "x": 0.0,
+     "z": -7.03,
+     "label": "GAMING INDEX ▼ 87%"
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "HOUR 6",
+     "frame": 615,
+     "dur": 107,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 725,
+   "endFrame": 747,
+   "narration": "Brokers loosen their ties. Their eyes start spinning.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "brk",
+     "x": 6.0,
+     "z": -2.1,
+     "expr": "nervous",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0
+    },
+    {
+     "castId": "extra0",
+     "x": 6.67,
+     "z": -5.433,
+     "mode": "stand",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra1",
+     "x": 4.472,
+     "z": -5.802,
+     "mode": "stand",
+     "expr": "grin"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 725,
+     "position": [
+      6.077,
+      1.68,
+      3.724
+     ],
+     "lookAt": [
+      6,
+      1.38,
+      -2.1
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4106,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "trading",
+    "seed": 41,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b07a",
+   "startFrame": 747,
+   "endFrame": 824,
+   "narration": "Brokers loosen their ties. Their eyes start spinning.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "brk",
+     "x": 6.0,
+     "z": -2.1,
+     "expr": "dazed",
+     "mode": "stand"
+    },
+    {
+     "castId": "extra2",
+     "x": 6.67,
+     "z": -5.433,
+     "mode": "stand",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra3",
+     "x": 4.056,
+     "z": -5.797,
+     "mode": "stand",
+     "expr": "grin"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 747,
+     "position": [
+      6.999,
+      1.6,
+      -0.652
+     ],
+     "lookAt": [
+      6.0,
+      1.6,
+      -2.1
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 747,
+     "position": [
+      6.322,
+      1.6,
+      -0.371
+     ],
+     "lookAt": [
+      6.0,
+      1.6,
+      -2.1
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 77
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4143,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "trading",
+    "seed": 41,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 824,
+   "endFrame": 912,
+   "narration": "Then a giant red arrow smashes straight through the floor.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "brk",
+     "x": -3.296,
+     "z": 1.976,
+     "expr": "shock",
+     "mode": "fall"
+    },
+    {
+     "castId": "extra4",
+     "x": -1.016,
+     "z": -0.546,
+     "mode": "stand",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra5",
+     "x": -3.078,
+     "z": -2.196,
+     "mode": "stand",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra6",
+     "x": 0.778,
+     "z": -2.365,
+     "mode": "stand",
+     "expr": "nervous"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 824,
+     "position": [
+      -9.093,
+      2.3,
+      9.804
+     ],
+     "lookAt": [
+      -9.409,
+      1.2,
+      0.322
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 824,
+     "position": [
+      -9.093,
+      2.3,
+      9.804
+     ],
+     "lookAt": [
+      -4,
+      1.2,
+      1.8
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4107,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "trading",
+    "seed": 41,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "redarrow",
+     "x": -5.567,
+     "z": -0.055,
+     "scale": 1.2
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 859,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 857,
+     "dur": 55,
+     "at": [
+      -2.889,
+      2.28,
+      2.078
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 912,
+   "endFrame": 975,
+   "narration": "Hour twelve. Traffic stops. Cars are abandoned in the middle of the road.",
+   "light": "golden",
+   "mood": "tense",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 912,
+     "position": [
+      -3.0,
+      0.4,
+      -56.5
+     ],
+     "lookAt": [
+      0.0,
+      1.2,
+      -46
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 912,
+     "position": [
+      -3.0,
+      7.76,
+      -56.5
+     ],
+     "lookAt": [
+      0.0,
+      1.2,
+      -46
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 63
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4108,
+   "qualityNotes": "",
+   "env": {
+    "preset": "street",
+    "seed": 41,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "car",
+     "x": 2.075,
+     "z": -44.55
+    },
+    {
+     "kind": "van",
+     "x": -2.39,
+     "z": -44.46,
+     "mirror": true
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "HOUR 12",
+     "frame": 915,
+     "dur": 57,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b09a",
+   "startFrame": 975,
+   "endFrame": 1043,
+   "narration": "Hour twelve. Traffic stops. Cars are abandoned in the middle of the road.",
+   "light": "golden",
+   "mood": "tense",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 975,
+     "position": [
+      -3.33,
+      0.85,
+      -51.84
+     ],
+     "lookAt": [
+      -0.93,
+      1.5,
+      -45.64
+     ],
+     "fov": 44,
+     "roll": 0.0
+    },
+    {
+     "frame": 975,
+     "position": [
+      -1.47,
+      0.85,
+      -52.56
+     ],
+     "lookAt": [
+      0.93,
+      1.5,
+      -46.36
+     ],
+     "fov": 44,
+     "roll": 0.0,
+     "dur": 68
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 6
+   },
+   "transitionIn": "cut",
+   "seed": 4145,
+   "qualityNotes": "",
+   "sub": true,
+   "env": {
+    "preset": "street",
+    "seed": 41,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "car",
+     "x": -0.568,
+     "z": -47.2
+    },
+    {
+     "kind": "car",
+     "x": 0.0,
+     "z": -41.125,
+     "mirror": true
+    }
+   ]
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 1043,
+   "endFrame": 1144,
+   "narration": "Everyone marches to the game studio with cardboard signs.",
+   "light": "golden",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me2",
+     "x": 0.0,
+     "z": -12.0,
+     "expr": "stern",
+     "mode": "march"
+    },
+    {
+     "castId": "extra7",
+     "x": -1.548,
+     "z": -9.015,
+     "mode": "march",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra0",
+     "x": 0.8,
+     "z": -7.9,
+     "mode": "march",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra1",
+     "x": -1.357,
+     "z": -7.241,
+     "mode": "march",
+     "expr": "nervous"
+    },
+    {
+     "castId": "extra2",
+     "x": 2.1,
+     "z": -9.0,
+     "mode": "march",
+     "expr": "neutral"
+    },
+    {
+     "castId": "extra3",
+     "x": -1.511,
+     "z": -8.668,
+     "mode": "march",
+     "expr": "laugh"
+    },
+    {
+     "castId": "extra4",
+     "x": 3.4,
+     "z": -6.8,
+     "mode": "march",
+     "expr": "smile"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1043,
+     "position": [
+      -3.0,
+      2.3,
+      -22.5
+     ],
+     "lookAt": [
+      0.0,
+      1.2,
+      -12
+     ],
+     "fov": 42,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4109,
+   "qualityNotes": "",
+   "env": {
+    "preset": "street",
+    "seed": 41,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "signs",
+     "x": 0.0,
+     "z": -6.916,
+     "label": "JUST DROP IT|TAKE MY KIDNEY|2028?? NO"
+    }
+   ]
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 1144,
+   "endFrame": 1201,
+   "narration": "Take my kidney, just drop it!",
+   "light": "golden",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me2",
+     "x": 0.0,
+     "z": -24.0,
+     "expr": "crazy",
+     "mode": "stand",
+     "pose": "up"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1144,
+     "position": [
+      0.55,
+      1.62,
+      -26.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -24.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1144,
+     "position": [
+      0.33,
+      1.572,
+      -25.74
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -24.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 57
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4110,
+   "qualityNotes": "",
+   "env": {
+    "preset": "street",
+    "seed": 41,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "signs",
+     "x": 0.0,
+     "z": -18.916,
+     "label": "TAKE MY KIDNEY|JUST DROP IT|PLEASE"
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 1185,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 1183,
+     "dur": 18,
+     "at": [
+      -0.274,
+      2.05,
+      -24.0
+     ],
+     "size": 0.44330948811505755
+    }
+   ]
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 1201,
+   "endFrame": 1282,
+   "narration": "Hour twenty-four. One man has had enough.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "stern",
+     "mode": "stand",
+     "pose": "hips"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1201,
+     "position": [
+      1.6,
+      1.68,
+      6.6
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1201,
+     "position": [
+      0.96,
+      1.56,
+      4.36
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.0
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 81
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4111,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "textOverlays": [
+    {
+     "text": "HOUR 24",
+     "frame": 1204,
+     "dur": 75,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 1282,
+   "endFrame": 1342,
+   "narration": "He climbs into a cryo tube that says: wake me in twenty twenty-eight.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.4,
+     "z": 0.8,
+     "expr": "smile_closed",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1282,
+     "position": [
+      1.521,
+      1.68,
+      6.557
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      0.8
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1282,
+     "position": [
+      3.945,
+      1.68,
+      6.415
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      0.8
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 60
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4112,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "cryo",
+     "x": 2.516,
+     "z": 1.13,
+     "label": "WAKE ME IN 2028"
+    }
+   ]
+  },
+  {
+   "sceneId": "b13a",
+   "startFrame": 1342,
+   "endFrame": 1395,
+   "narration": "He climbs into a cryo tube that says: wake me in twenty twenty-eight.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.4,
+     "z": 0.8,
+     "expr": "smile_closed",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1342,
+     "position": [
+      3.877,
+      1.62,
+      3.355
+     ],
+     "lookAt": [
+      2.4,
+      1.5,
+      0.8
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1342,
+     "position": [
+      3.286,
+      1.572,
+      2.333
+     ],
+     "lookAt": [
+      2.4,
+      1.5,
+      0.8
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 53
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4149,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "cryo",
+     "x": 2.516,
+     "z": 1.13,
+     "label": "WAKE ME IN 2028"
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "WAKE ME IN 2028",
+     "frame": 1345,
+     "dur": 47,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b14",
+   "startFrame": 1395,
+   "endFrame": 1466,
+   "narration": "See you in four years, Vice City.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -1.45,
+     "z": -0.2,
+     "expr": "sleepy",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1395,
+     "position": [
+      -1.986,
+      1.566,
+      1.332
+     ],
+     "lookAt": [
+      -1.45,
+      1.5,
+      -0.2
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1395,
+     "position": [
+      -2.424,
+      1.62,
+      2.586
+     ],
+     "lookAt": [
+      -1.45,
+      1.5,
+      -0.2
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 71
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 4113,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "cryo",
+     "x": -1.502,
+     "z": 0.146,
+     "label": "WAKE ME IN 2028"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 1424,
+     "dur": 42,
+     "at": [
+      -1.179,
+      2.05,
+      -0.159
+     ],
+     "size": 0.44330948811505755
+    }
+   ]
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": true,
+  "words": [
+   {
+    "w": "If",
+    "s": 0.06,
+    "e": 0.18
+   },
+   {
+    "w": "GTA",
+    "s": 0.18,
+    "e": 0.56
+   },
+   {
+    "w": "6",
+    "s": 0.56,
+    "e": 0.96
+   },
+   {
+    "w": "gets",
+    "s": 0.96,
+    "e": 1.26
+   },
+   {
+    "w": "delayed",
+    "s": 1.26,
+    "e": 1.62
+   },
+   {
+    "w": "one",
+    "s": 1.62,
+    "e": 1.88
+   },
+   {
+    "w": "more",
+    "s": 1.88,
+    "e": 2.1
+   },
+   {
+    "w": "time,",
+    "s": 2.1,
+    "e": 2.48
+   },
+   {
+    "w": "society",
+    "s": 2.7,
+    "e": 3.1
+   },
+   {
+    "w": "won't",
+    "s": 3.1,
+    "e": 3.44
+   },
+   {
+    "w": "just",
+    "s": 3.44,
+    "e": 3.64
+   },
+   {
+    "w": "complain.",
+    "s": 3.64,
+    "e": 4.02
+   },
+   {
+    "w": "It",
+    "s": 4.439,
+    "e": 4.539
+   },
+   {
+    "w": "will",
+    "s": 4.539,
+    "e": 4.659
+   },
+   {
+    "w": "literally",
+    "s": 4.659,
+    "e": 4.919
+   },
+   {
+    "w": "collapse",
+    "s": 4.919,
+    "e": 5.339,
+    "hot": true
+   },
+   {
+    "w": "in",
+    "s": 5.339,
+    "e": 5.619
+   },
+   {
+    "w": "twenty-four",
+    "s": 5.619,
+    "e": 6.079
+   },
+   {
+    "w": "hours.",
+    "s": 6.079,
+    "e": 6.459
+   },
+   {
+    "w": "It",
+    "s": 6.879,
+    "e": 6.979
+   },
+   {
+    "w": "starts",
+    "s": 6.979,
+    "e": 7.259
+   },
+   {
+    "w": "with",
+    "s": 7.259,
+    "e": 7.519
+   },
+   {
+    "w": "one",
+    "s": 7.519,
+    "e": 7.699
+   },
+   {
+    "w": "breaking",
+    "s": 7.699,
+    "e": 8.059
+   },
+   {
+    "w": "news",
+    "s": 8.059,
+    "e": 8.359
+   },
+   {
+    "w": "banner.",
+    "s": 8.359,
+    "e": 8.739
+   },
+   {
+    "w": "His",
+    "s": 9.07,
+    "e": 9.21
+   },
+   {
+    "w": "eyes",
+    "s": 9.21,
+    "e": 9.47
+   },
+   {
+    "w": "shatter",
+    "s": 9.47,
+    "e": 9.89
+   },
+   {
+    "w": "like",
+    "s": 9.89,
+    "e": 10.07
+   },
+   {
+    "w": "glass.",
+    "s": 10.07,
+    "e": 10.37
+   },
+   {
+    "w": "His",
+    "s": 10.796,
+    "e": 10.936
+   },
+   {
+    "w": "jaw",
+    "s": 10.936,
+    "e": 11.236
+   },
+   {
+    "w": "hits",
+    "s": 11.236,
+    "e": 11.496
+   },
+   {
+    "w": "the",
+    "s": 11.496,
+    "e": 11.676
+   },
+   {
+    "w": "floor.",
+    "s": 11.676,
+    "e": 11.936,
+    "hot": true
+   },
+   {
+    "w": "Hour",
+    "s": 12.358,
+    "e": 12.578
+   },
+   {
+    "w": "two.",
+    "s": 12.578,
+    "e": 12.878
+   },
+   {
+    "w": "Millions",
+    "s": 13.262,
+    "e": 13.622
+   },
+   {
+    "w": "of",
+    "s": 13.622,
+    "e": 13.722
+   },
+   {
+    "w": "gamers",
+    "s": 13.722,
+    "e": 14.042
+   },
+   {
+    "w": "stumble",
+    "s": 14.042,
+    "e": 14.502
+   },
+   {
+    "w": "outside",
+    "s": 14.502,
+    "e": 15.102
+   },
+   {
+    "w": "for",
+    "s": 15.102,
+    "e": 15.342
+   },
+   {
+    "w": "the",
+    "s": 15.342,
+    "e": 15.442
+   },
+   {
+    "w": "first",
+    "s": 15.442,
+    "e": 15.662
+   },
+   {
+    "w": "time",
+    "s": 15.662,
+    "e": 15.922
+   },
+   {
+    "w": "in",
+    "s": 15.922,
+    "e": 16.082
+   },
+   {
+    "w": "years.",
+    "s": 16.082,
+    "e": 16.382
+   },
+   {
+    "w": "The",
+    "s": 16.748,
+    "e": 16.888
+   },
+   {
+    "w": "sun",
+    "s": 16.888,
+    "e": 17.128
+   },
+   {
+    "w": "burns.",
+    "s": 17.128,
+    "e": 17.408
+   },
+   {
+    "w": "They",
+    "s": 17.907,
+    "e": 18.027
+   },
+   {
+    "w": "touch",
+    "s": 18.027,
+    "e": 18.267
+   },
+   {
+    "w": "grass,",
+    "s": 18.267,
+    "e": 18.647
+   },
+   {
+    "w": "and",
+    "s": 18.647,
+    "e": 18.907
+   },
+   {
+    "w": "nobody",
+    "s": 18.907,
+    "e": 19.227,
+    "hot": true
+   },
+   {
+    "w": "knows",
+    "s": 19.227,
+    "e": 19.527
+   },
+   {
+    "w": "what",
+    "s": 19.527,
+    "e": 19.787
+   },
+   {
+    "w": "it",
+    "s": 19.787,
+    "e": 19.907
+   },
+   {
+    "w": "is.",
+    "s": 19.907,
+    "e": 20.087
+   },
+   {
+    "w": "Hour",
+    "s": 20.425,
+    "e": 20.645
+   },
+   {
+    "w": "six.",
+    "s": 20.645,
+    "e": 21.005
+   },
+   {
+    "w": "Wall",
+    "s": 21.324,
+    "e": 21.484
+   },
+   {
+    "w": "Street",
+    "s": 21.484,
+    "e": 21.864
+   },
+   {
+    "w": "notices",
+    "s": 21.864,
+    "e": 22.344
+   },
+   {
+    "w": "nobody",
+    "s": 22.344,
+    "e": 22.844
+   },
+   {
+    "w": "is",
+    "s": 22.844,
+    "e": 23.144
+   },
+   {
+    "w": "buying",
+    "s": 23.144,
+    "e": 23.444
+   },
+   {
+    "w": "anything.",
+    "s": 23.444,
+    "e": 23.904
+   },
+   {
+    "w": "Brokers",
+    "s": 24.193,
+    "e": 24.573
+   },
+   {
+    "w": "loosen",
+    "s": 24.573,
+    "e": 24.893
+   },
+   {
+    "w": "their",
+    "s": 24.893,
+    "e": 25.173
+   },
+   {
+    "w": "ties.",
+    "s": 25.173,
+    "e": 25.493
+   },
+   {
+    "w": "Their",
+    "s": 25.953,
+    "e": 26.093
+   },
+   {
+    "w": "eyes",
+    "s": 26.093,
+    "e": 26.413
+   },
+   {
+    "w": "start",
+    "s": 26.413,
+    "e": 26.673
+   },
+   {
+    "w": "spinning.",
+    "s": 26.673,
+    "e": 27.053
+   },
+   {
+    "w": "Then",
+    "s": 27.487,
+    "e": 27.587
+   },
+   {
+    "w": "a",
+    "s": 27.587,
+    "e": 27.667
+   },
+   {
+    "w": "giant",
+    "s": 27.667,
+    "e": 27.967
+   },
+   {
+    "w": "red",
+    "s": 27.967,
+    "e": 28.207
+   },
+   {
+    "w": "arrow",
+    "s": 28.207,
+    "e": 28.547
+   },
+   {
+    "w": "smashes",
+    "s": 28.547,
+    "e": 29.067,
+    "hot": true
+   },
+   {
+    "w": "straight",
+    "s": 29.067,
+    "e": 29.407
+   },
+   {
+    "w": "through",
+    "s": 29.407,
+    "e": 29.667
+   },
+   {
+    "w": "the",
+    "s": 29.667,
+    "e": 29.787
+   },
+   {
+    "w": "floor.",
+    "s": 29.787,
+    "e": 30.047
+   },
+   {
+    "w": "Hour",
+    "s": 30.405,
+    "e": 30.605
+   },
+   {
+    "w": "twelve.",
+    "s": 30.605,
+    "e": 30.945
+   },
+   {
+    "w": "Traffic",
+    "s": 31.328,
+    "e": 31.688
+   },
+   {
+    "w": "stops.",
+    "s": 31.688,
+    "e": 32.168
+   },
+   {
+    "w": "Cars",
+    "s": 32.469,
+    "e": 32.789
+   },
+   {
+    "w": "are",
+    "s": 32.789,
+    "e": 32.969
+   },
+   {
+    "w": "abandoned",
+    "s": 32.969,
+    "e": 33.409
+   },
+   {
+    "w": "in",
+    "s": 33.409,
+    "e": 33.649
+   },
+   {
+    "w": "the",
+    "s": 33.649,
+    "e": 33.749
+   },
+   {
+    "w": "middle",
+    "s": 33.749,
+    "e": 33.929
+   },
+   {
+    "w": "of",
+    "s": 33.929,
+    "e": 34.089
+   },
+   {
+    "w": "the",
+    "s": 34.089,
+    "e": 34.149
+   },
+   {
+    "w": "road.",
+    "s": 34.149,
+    "e": 34.429
+   },
+   {
+    "w": "Everyone",
+    "s": 34.768,
+    "e": 35.148
+   },
+   {
+    "w": "marches",
+    "s": 35.148,
+    "e": 35.668
+   },
+   {
+    "w": "to",
+    "s": 35.668,
+    "e": 35.788
+   },
+   {
+    "w": "the",
+    "s": 35.788,
+    "e": 35.868
+   },
+   {
+    "w": "game",
+    "s": 35.868,
+    "e": 36.048
+   },
+   {
+    "w": "studio",
+    "s": 36.048,
+    "e": 36.468
+   },
+   {
+    "w": "with",
+    "s": 36.468,
+    "e": 36.748
+   },
+   {
+    "w": "cardboard",
+    "s": 36.748,
+    "e": 37.148
+   },
+   {
+    "w": "signs.",
+    "s": 37.148,
+    "e": 37.708
+   },
+   {
+    "w": "Take",
+    "s": 38.136,
+    "e": 38.444
+   },
+   {
+    "w": "my",
+    "s": 38.454,
+    "e": 38.602
+   },
+   {
+    "w": "kidney,",
+    "s": 38.612,
+    "e": 39.078
+   },
+   {
+    "w": "just",
+    "s": 39.088,
+    "e": 39.395
+   },
+   {
+    "w": "drop",
+    "s": 39.405,
+    "e": 39.712,
+    "hot": true
+   },
+   {
+    "w": "it!",
+    "s": 39.722,
+    "e": 39.871
+   },
+   {
+    "w": "Hour",
+    "s": 40.051,
+    "e": 40.271
+   },
+   {
+    "w": "twenty-four.",
+    "s": 40.271,
+    "e": 40.691
+   },
+   {
+    "w": "One",
+    "s": 41.21,
+    "e": 41.43
+   },
+   {
+    "w": "man",
+    "s": 41.43,
+    "e": 41.67
+   },
+   {
+    "w": "has",
+    "s": 41.67,
+    "e": 41.89
+   },
+   {
+    "w": "had",
+    "s": 41.89,
+    "e": 42.09
+   },
+   {
+    "w": "enough.",
+    "s": 42.09,
+    "e": 42.33
+   },
+   {
+    "w": "He",
+    "s": 42.745,
+    "e": 42.866
+   },
+   {
+    "w": "climbs",
+    "s": 42.876,
+    "e": 43.259
+   },
+   {
+    "w": "into",
+    "s": 43.269,
+    "e": 43.522
+   },
+   {
+    "w": "a",
+    "s": 43.532,
+    "e": 43.653
+   },
+   {
+    "w": "cryo",
+    "s": 43.663,
+    "e": 43.916
+   },
+   {
+    "w": "tube",
+    "s": 43.926,
+    "e": 44.178
+   },
+   {
+    "w": "that",
+    "s": 44.188,
+    "e": 44.44
+   },
+   {
+    "w": "says:",
+    "s": 44.45,
+    "e": 44.703
+   },
+   {
+    "w": "wake",
+    "s": 44.713,
+    "e": 44.965
+   },
+   {
+    "w": "me",
+    "s": 44.975,
+    "e": 45.097
+   },
+   {
+    "w": "in",
+    "s": 45.107,
+    "e": 45.228
+   },
+   {
+    "w": "twenty",
+    "s": 45.238,
+    "e": 45.621
+   },
+   {
+    "w": "twenty-eight.",
+    "s": 45.631,
+    "e": 46.343
+   },
+   {
+    "w": "See",
+    "s": 46.523,
+    "e": 46.683
+   },
+   {
+    "w": "you",
+    "s": 46.683,
+    "e": 46.843
+   },
+   {
+    "w": "in",
+    "s": 46.843,
+    "e": 46.943
+   },
+   {
+    "w": "four",
+    "s": 46.943,
+    "e": 47.183
+   },
+   {
+    "w": "years,",
+    "s": 47.183,
+    "e": 47.463
+   },
+   {
+    "w": "Vice",
+    "s": 47.463,
+    "e": 47.703,
+    "hot": true
+   },
+   {
+    "w": "City.",
+    "s": 47.703,
+    "e": 48.083
+   }
+  ]
+ },
+ "style": "storybook",
+ "graphics": "full"
+}

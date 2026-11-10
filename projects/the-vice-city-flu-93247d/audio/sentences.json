@@ -1,0 +1,101 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 48.1868125,
+ "voice": "am_eric*0.6+am_fenrir*0.4",
+ "lang": "en",
+ "speed": 0.974,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "The day GTA 6 drops, forty million men will mysteriously catch the exact same fake illness at eight AM.",
+   "start": 0.06,
+   "end": 6.822708333333333
+  },
+  {
+   "text": "He holds the thermometer over a steaming cup of coffee.",
+   "start": 6.9627083333333335,
+   "end": 9.9638125
+  },
+  {
+   "text": "One hundred and three degrees.",
+   "start": 10.1038125,
+   "end": 11.793375
+  },
+  {
+   "text": "Then the weakest cough in human history.",
+   "start": 11.933375,
+   "end": 14.018458333333333
+  },
+  {
+   "text": "Boss, I think I'm dying.",
+   "start": 14.158458333333334,
+   "end": 15.573375
+  },
+  {
+   "text": "Meanwhile, at nine o'clock, the office is a ghost town.",
+   "start": 15.713375,
+   "end": 18.6669375
+  },
+  {
+   "text": "Fifty empty desks.",
+   "start": 18.8069375,
+   "end": 20.162
+  },
+  {
+   "text": "Twenty phones ringing at once.",
+   "start": 20.302,
+   "end": 22.007375
+  },
+  {
+   "text": "The boss picks up.",
+   "start": 22.147375,
+   "end": 23.2621875
+  },
+  {
+   "text": "I'm in bed with a fever, says the employee, controller in hand.",
+   "start": 23.4021875,
+   "end": 26.894625
+  },
+  {
+   "text": "But behind him, police lights flash across the walls,",
+   "start": 27.034625,
+   "end": 29.910958333333333
+  },
+  {
+   "text": "and a helicopter roars through his headset.",
+   "start": 30.050958333333334,
+   "end": 32.20275
+  },
+  {
+   "text": "So the boss storms across town into the clinic for a real doctor's note.",
+   "start": 32.34275,
+   "end": 36.2673125
+  },
+  {
+   "text": "The doctor has his feet up, playing GTA 6 on a portable screen.",
+   "start": 36.4073125,
+   "end": 40.36108333333333
+  },
+  {
+   "text": "Without looking up, he hands over a pre-signed sick note.",
+   "start": 40.501083333333334,
+   "end": 43.54927083333333
+  },
+  {
+   "text": "Get well soon.",
+   "start": 43.68927083333333,
+   "end": 44.697520833333336
+  },
+  {
+   "text": "Next!",
+   "start": 44.837520833333336,
+   "end": 45.447375
+  },
+  {
+   "text": "The waiting room is full of men in bathrobes.",
+   "start": 45.587375,
+   "end": 48.0468125
+  }
+ ]
+}

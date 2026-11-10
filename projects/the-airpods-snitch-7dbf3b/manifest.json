@@ -1,0 +1,182 @@
+{
+ "id": "the-airpods-snitch-7dbf3b",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 112,
+   "beats": 13,
+   "at": "2026-11-10T03:33:51"
+  },
+  "voice": {
+   "duration": 39.54975,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 14.3,
+   "status": "done",
+   "voice": "af_heart",
+   "speed": 0.88,
+   "at": "2026-11-10T03:34:18"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 10.7,
+   "method": {
+    "whisper": 15,
+    "spread": 2
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T03:34:29"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1198,
+   "seconds_video": 39.93333333333333,
+   "scenes": 13,
+   "at": "2026-11-10T03:34:29"
+  },
+  "stills": {
+   "status": "done",
+   "count": 39,
+   "at": "2026-11-10T03:35:58"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 164.0,
+   "frames": 1198,
+   "renderedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b07",
+    "b08",
+    "b09",
+    "b10",
+    "b11",
+    "b12",
+    "b13"
+   ],
+   "reusedScenes": [],
+   "fps_render": 7.3,
+   "at": "2026-11-10T03:38:42"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 12.0,
+   "integratedLUFS": -14.01,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.05,
+   "maxGainReductionDB": 5.2,
+   "voiceLUFS": -14.06,
+   "musicLUFS": -29.83,
+   "sfxLUFS": -29.86,
+   "at": "2026-11-10T03:38:54"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\the-airpods-snitch-7dbf3b\\output\\the-airpods-snitch_master_v1.mp4",
+   "at": "2026-11-10T03:38:55"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-10T03:39:08"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T02:56:12",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T03:33:51",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T03:34:04",
+   "seconds": 13.1,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T03:34:18",
+   "seconds": 14.3,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T03:34:29",
+   "status": "done",
+   "seconds": 10.7
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T03:34:29",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T03:35:58",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T03:38:42",
+   "status": "done",
+   "seconds": 164.0
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T03:38:54",
+   "status": "done",
+   "seconds": 12.0
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T03:38:55",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T03:39:08",
+   "status": "done"
+  }
+ ],
+ "title": "The AirPods Snitch",
+ "created": "2026-11-10T02:56:12",
+ "request": {
+  "title": "The AirPods Snitch",
+  "idea": "The AirPods Snitch",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 60,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "village_square",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": false,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "claude",
+  "review": "auto_qa",
+  "seed": 27,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "Narration is 40s for a 60s request: add beats/sentences to reach it.",
+ "requestedSeconds": 60
+}

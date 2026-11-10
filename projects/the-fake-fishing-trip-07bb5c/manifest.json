@@ -1,0 +1,248 @@
+{
+ "id": "the-fake-fishing-trip-07bb5c",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 126,
+   "beats": 14,
+   "at": "2026-11-10T03:08:39"
+  },
+  "voice": {
+   "duration": 43.787729166666665,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 16.1,
+   "status": "done",
+   "voice": "af_heart",
+   "speed": 0.88,
+   "at": "2026-11-10T03:09:10"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 12.6,
+   "method": {
+    "whisper": 19,
+    "spread": 1
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T03:09:23"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1324,
+   "seconds_video": 44.13333333333333,
+   "scenes": 14,
+   "at": "2026-11-10T03:09:23"
+  },
+  "stills": {
+   "status": "done",
+   "count": 42,
+   "at": "2026-11-10T03:11:01"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 181.1,
+   "frames": 1324,
+   "renderedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b07",
+    "b08",
+    "b09",
+    "b10",
+    "b11",
+    "b12",
+    "b13",
+    "b14"
+   ],
+   "reusedScenes": [],
+   "fps_render": 7.31,
+   "at": "2026-11-10T03:14:02"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 13.8,
+   "integratedLUFS": -14.02,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.24,
+   "maxGainReductionDB": 5.77,
+   "voiceLUFS": -14.02,
+   "musicLUFS": -29.71,
+   "sfxLUFS": -27.07,
+   "at": "2026-11-10T03:14:16"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\the-fake-fishing-trip-07bb5c\\output\\the-fake-fishing-trip_master_v2.mp4",
+   "at": "2026-11-10T03:14:17"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-10T03:14:29"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T01:43:51",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T02:16:24",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T02:16:39",
+   "seconds": 15.1,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T02:16:56",
+   "seconds": 16.3,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T02:17:08",
+   "status": "done",
+   "seconds": 12.7
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T02:17:08",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T02:18:46",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T02:21:47",
+   "status": "done",
+   "seconds": 181.5
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T02:22:01",
+   "status": "done",
+   "seconds": 13.6
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T02:22:02",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T02:22:16",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T02:25:12",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T02:56:12",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T03:08:39",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T03:08:54",
+   "seconds": 14.8,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T03:09:10",
+   "seconds": 16.1,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T03:09:23",
+   "status": "done",
+   "seconds": 12.6
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T03:09:23",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T03:11:01",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T03:14:02",
+   "status": "done",
+   "seconds": 181.1
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T03:14:16",
+   "status": "done",
+   "seconds": 13.8
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T03:14:17",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T03:14:29",
+   "status": "done"
+  }
+ ],
+ "title": "The Fake Fishing Trip",
+ "created": "2026-11-10T01:43:51",
+ "request": {
+  "title": "The Fake Fishing Trip",
+  "idea": "Fake fishing trip exposed by sunglasses",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 60,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "village_square",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": false,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "claude",
+  "review": "auto_qa",
+  "seed": 16,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "Narration is 44s for a 60s request: add beats/sentences to reach it.",
+ "requestedSeconds": 60
+}

@@ -1,0 +1,996 @@
+{
+ "lang": "en",
+ "title": "The Apocalyptic Delay",
+ "words": 143,
+ "beats": [
+  {
+   "narration": "If GTA 6 gets delayed one more time, society won't just complain. It will literally collapse in twenty-four hours.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": "controller",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": "collapse",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "monitor",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "GTA 6|RELEASE SOON",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "whip",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "delayed",
+     "shot": "extreme",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "stand",
+       "expr": "broken",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": null,
+     "hud": "news",
+     "hudText": "GTA 6 DELAYED AGAIN",
+     "visual": null
+    },
+    {
+     "at": "society",
+     "shot": "wide",
+     "light": "golden",
+     "environment": "suburb",
+     "envVariant": null,
+     "spot": 0,
+     "characters": [],
+     "extras": 5,
+     "extrasAction": "walk",
+     "extrasRole": "streamer",
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "truck_right",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    },
+    {
+     "at": "collapse",
+     "shot": "dutch",
+     "light": "night",
+     "environment": "gameroom",
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "panic",
+       "expr": "shock",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "burst",
+       "product": null,
+       "color": null,
+       "word": "collapse",
+       "on": "me"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "It starts with one breaking news banner.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sit",
+     "expr": "neutral",
+     "react": null,
+     "holding": "can",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "monitor",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "BREAKING|NEWS",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": "news",
+   "hudText": "GTA 6 DELAYED TO 2028",
+   "shots": []
+  },
+  {
+   "narration": "His eyes shatter like glass. His jaw hits the floor.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "broken",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": "floor",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": null,
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "His",
+     "shot": "worm",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "fall",
+       "expr": "shock",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "stars",
+       "product": null,
+       "color": null,
+       "word": "floor",
+       "on": "me"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "crane_up",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "Hour two. Millions of gamers stumble outside for the first time in years.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "curious",
+   "characters": [],
+   "extras": 7,
+   "extrasAction": "walk",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "HOUR 2",
+   "textStyle": "title",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": "streamer",
+   "spot": null,
+   "visual": null,
+   "camMove": "pull",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "outside",
+     "shot": "low",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": null,
+     "extras": 5,
+     "extrasAction": null,
+     "extrasRole": "streamer",
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "truck_left",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "The sun burns. They touch grass, and nobody knows what it is.",
+   "shot": "extreme",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "squint",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "They",
+     "shot": "low",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "point",
+       "expr": "squint",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": 3,
+     "extrasAction": null,
+     "extrasRole": "streamer",
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "orbit",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    },
+    {
+     "at": "nobody",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "shrug",
+       "expr": "nervous",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "product",
+       "product": "question",
+       "color": null,
+       "word": "nobody",
+       "on": "me"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": null,
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "Hour six. Wall Street notices nobody is buying anything.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "brk",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 4,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "HOUR 6",
+   "textStyle": "title",
+   "atShop": false,
+   "environment": "trading",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "ticker",
+     "where": "behind",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "GAMING INDEX ▼ 87%",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": "broker",
+   "spot": null,
+   "visual": null,
+   "camMove": "truck_right",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Brokers loosen their ties. Their eyes start spinning.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "brk",
+     "action": "panic",
+     "expr": "nervous",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 2,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "trading",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": "broker",
+   "spot": null,
+   "visual": null,
+   "camMove": null,
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "Their",
+     "shot": "extreme",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "brk",
+       "action": "stand",
+       "expr": "dazed",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "orbit",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "Then a giant red arrow smashes straight through the floor.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "brk",
+     "action": "fall",
+     "expr": "shock",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 3,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "burst",
+     "product": null,
+     "color": null,
+     "word": "smashes",
+     "on": "brk"
+    }
+   ],
+   "impactWord": "smashes",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "trading",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "redarrow",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 1.2,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": "broker",
+   "spot": null,
+   "visual": null,
+   "camMove": "whip",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Hour twelve. Traffic stops. Cars are abandoned in the middle of the road.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "HOUR 12",
+   "textStyle": "title",
+   "atShop": false,
+   "environment": "street",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "car",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    },
+    {
+     "kind": "van",
+     "where": "right",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": true,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "crane_up",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "Cars",
+     "shot": "low",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": null,
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": [
+      {
+       "kind": "car",
+       "where": "front",
+       "dx": 0.0,
+       "dz": 0.0,
+       "scale": null,
+       "y": null,
+       "mirror": false,
+       "move": null,
+       "label": null,
+       "spin": null,
+       "lift": null,
+       "shake": null
+      },
+      {
+       "kind": "car",
+       "where": "behind",
+       "dx": 0.0,
+       "dz": 0.0,
+       "scale": null,
+       "y": null,
+       "mirror": true,
+       "move": null,
+       "label": null,
+       "spin": null,
+       "lift": null,
+       "shake": null
+      }
+     ],
+     "camMove": "truck_left",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "Everyone marches to the game studio with cardboard signs.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me2",
+     "action": "march",
+     "expr": "stern",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 6,
+   "extrasAction": "march",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "street",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "signs",
+     "where": "behind",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "JUST DROP IT|TAKE MY KIDNEY|2028?? NO",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": "streamer",
+   "spot": null,
+   "visual": null,
+   "camMove": "follow",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Take my kidney, just drop it!",
+   "shot": "close",
+   "light": "golden",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me2",
+     "action": "cheer",
+     "expr": "crazy",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "burst",
+     "product": null,
+     "color": null,
+     "word": "drop",
+     "on": "me2"
+    }
+   ],
+   "impactWord": "drop",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "street",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "signs",
+     "where": "behind",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "TAKE MY KIDNEY|JUST DROP IT|PLEASE",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Hour twenty-four. One man has had enough.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "hips",
+     "expr": "stern",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "HOUR 24",
+   "textStyle": "title",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "He climbs into a cryo tube that says: wake me in twenty twenty-eight.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "cryo",
+     "where": "on",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "WAKE ME IN 2028",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "orbit",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "wake",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": null,
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": "WAKE ME IN 2028",
+     "textStyle": "label",
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "See you in four years, Vice City.",
+   "shot": "close",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "sleepy",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "sparkle",
+     "product": null,
+     "color": null,
+     "word": "Vice",
+     "on": "me"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "cryo",
+     "where": "on",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "WAKE ME IN 2028",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "pull",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  }
+ ]
+}

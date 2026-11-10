@@ -1,0 +1,182 @@
+{
+ "id": "the-cobra-effect-0e82d5",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 119,
+   "beats": 13,
+   "at": "2026-11-10T03:27:17"
+  },
+  "voice": {
+   "duration": 40.38635416666666,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 14.3,
+   "status": "done",
+   "voice": "af_heart",
+   "speed": 0.88,
+   "at": "2026-11-10T03:27:44"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 10.2,
+   "method": {
+    "whisper": 16,
+    "spread": 0
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T03:27:55"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1224,
+   "seconds_video": 40.8,
+   "scenes": 13,
+   "at": "2026-11-10T03:27:55"
+  },
+  "stills": {
+   "status": "done",
+   "count": 39,
+   "at": "2026-11-10T03:29:53"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 210.1,
+   "frames": 1224,
+   "renderedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b07",
+    "b08",
+    "b09",
+    "b10",
+    "b11",
+    "b12",
+    "b13"
+   ],
+   "reusedScenes": [],
+   "fps_render": 5.83,
+   "at": "2026-11-10T03:33:23"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 13.1,
+   "integratedLUFS": -14.01,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.03,
+   "maxGainReductionDB": 5.85,
+   "voiceLUFS": -14.02,
+   "musicLUFS": -29.76,
+   "sfxLUFS": -29.03,
+   "at": "2026-11-10T03:33:36"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\the-cobra-effect-0e82d5\\output\\the-cobra-effect_master_v1.mp4",
+   "at": "2026-11-10T03:33:37"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-10T03:33:50"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T02:56:12",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T03:27:17",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T03:27:30",
+   "seconds": 13.2,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T03:27:44",
+   "seconds": 14.3,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T03:27:55",
+   "status": "done",
+   "seconds": 10.2
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T03:27:55",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T03:29:53",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T03:33:23",
+   "status": "done",
+   "seconds": 210.1
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T03:33:36",
+   "status": "done",
+   "seconds": 13.1
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T03:33:37",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T03:33:50",
+   "status": "done"
+  }
+ ],
+ "title": "The Cobra Effect",
+ "created": "2026-11-10T02:56:12",
+ "request": {
+  "title": "The Cobra Effect",
+  "idea": "The Cobra Effect",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 60,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "village_square",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": false,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "claude",
+  "review": "auto_qa",
+  "seed": 25,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "Narration is 40s for a 60s request: add beats/sentences to reach it.",
+ "requestedSeconds": 60
+}

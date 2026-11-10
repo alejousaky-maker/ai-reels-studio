@@ -1,0 +1,281 @@
+{
+ "id": "the-trojan-horse-trick-5eed92",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 150,
+   "beats": 14,
+   "at": "2026-11-10T02:32:32"
+  },
+  "voice": {
+   "duration": 52.36566666666667,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 20.0,
+   "status": "done",
+   "voice": "af_heart",
+   "speed": 0.88,
+   "at": "2026-11-10T02:33:10"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 14.9,
+   "method": {
+    "whisper": 21,
+    "spread": 1
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T02:33:25"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1588,
+   "seconds_video": 52.93333333333333,
+   "scenes": 14,
+   "at": "2026-11-10T02:33:25"
+  },
+  "stills": {
+   "status": "done",
+   "count": 42,
+   "at": "2026-11-10T02:35:19"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 225.9,
+   "frames": 1588,
+   "renderedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b07",
+    "b08",
+    "b09",
+    "b10",
+    "b11",
+    "b12",
+    "b13",
+    "b14"
+   ],
+   "reusedScenes": [],
+   "fps_render": 7.03,
+   "at": "2026-11-10T01:56:44"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 14.9,
+   "integratedLUFS": -14.01,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.1,
+   "maxGainReductionDB": 5.68,
+   "voiceLUFS": -14.08,
+   "musicLUFS": -29.85,
+   "sfxLUFS": -26.67,
+   "at": "2026-11-10T01:56:59"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\the-trojan-horse-trick-5eed92\\output\\the-trojan-horse-trick_master_v2.mp4",
+   "at": "2026-11-10T01:57:01"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-10T01:57:19"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T01:15:11",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T01:22:23",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T01:22:40",
+   "seconds": 17.8,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T01:23:00",
+   "seconds": 19.2,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T01:23:14",
+   "status": "done",
+   "seconds": 14.0
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T01:23:14",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T01:25:03",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T01:28:55",
+   "status": "done",
+   "seconds": 232.5
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T01:29:11",
+   "status": "done",
+   "seconds": 15.3
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T01:29:12",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T01:29:27",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T01:43:15",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T01:50:15",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T01:50:33",
+   "seconds": 17.7,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T01:50:52",
+   "seconds": 19.0,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T01:51:06",
+   "status": "done",
+   "seconds": 14.0
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T01:51:06",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T01:52:58",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T01:56:44",
+   "status": "done",
+   "seconds": 225.9
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T01:56:59",
+   "status": "done",
+   "seconds": 14.9
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T01:57:01",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T01:57:19",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T02:25:11",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T02:32:32",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T02:32:50",
+   "seconds": 18.7,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T02:33:10",
+   "seconds": 20.0,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T02:33:25",
+   "status": "done",
+   "seconds": 14.9
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T02:33:25",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T02:35:19",
+   "status": "done"
+  }
+ ],
+ "title": "The Trojan Horse Trick",
+ "created": "2026-11-10T01:15:10",
+ "request": {
+  "title": "The Trojan Horse Trick",
+  "idea": "The Trojan horse: reverse psychology",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 60,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "village_square",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": false,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "claude",
+  "review": "auto_qa",
+  "seed": 6,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "",
+ "requestedSeconds": 60
+}

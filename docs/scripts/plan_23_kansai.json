@@ -1,0 +1,461 @@
+{
+ "title": "The Airport That Is Sinking",
+ "environment": "island",
+ "seed": 83,
+ "cast": [
+  {
+   "id": "eng",
+   "name": "Engineer",
+   "role": "engineer"
+  },
+  {
+   "id": "slp",
+   "name": "Resident",
+   "role": "sleeper"
+  },
+  {
+   "id": "plt",
+   "name": "Director",
+   "role": "pilot"
+  },
+  {
+   "id": "pax",
+   "name": "Passenger",
+   "role": "tourist"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "Japan needed a massive international airport, but there was no room on land, so they built an island in the ocean, which is slowly swallowing itself.",
+   "shot": "wide",
+   "mood": "upbeat",
+   "environment": "island",
+   "pieces": [
+    {
+     "kind": "airplane",
+     "scale": 0.6,
+     "y": 3.0,
+     "move": "right"
+    }
+   ],
+   "camMove": "truck_right",
+   "shots": [
+    {
+     "at": "island",
+     "shot": "high",
+     "pieces": [
+      {
+       "kind": "airplane",
+       "where": "far",
+       "scale": 0.6,
+       "y": 2.0,
+       "move": "left"
+      }
+     ],
+     "camMove": "crane_up"
+    },
+    {
+     "at": "swallowing",
+     "shot": "low",
+     "characters": [
+      {
+       "id": "eng",
+       "action": "panic",
+       "expr": "shock"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "splash",
+       "word": "swallowing",
+       "on": "eng"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "In the nineteen eighties, Osaka was running out of space, and residents hated noisy flights over the city.",
+   "light": "night",
+   "characters": [
+    {
+     "id": "slp",
+     "action": "point",
+     "expr": "stern",
+     "holding": "pillow"
+    }
+   ],
+   "extras": 3,
+   "transition": "dissolve",
+   "text": "1980s",
+   "textStyle": "title",
+   "environment": "suburb",
+   "pieces": [
+    {
+     "kind": "airplane",
+     "scale": 0.4,
+     "y": 7.0,
+     "move": "right"
+    }
+   ],
+   "extrasRole": "sleeper",
+   "camMove": "push",
+   "extrasHolding": "pillow",
+   "shots": [
+    {
+     "at": "hated",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "slp",
+       "action": "panic",
+       "expr": "crazy",
+       "holding": "pillow"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "notes",
+       "word": "noisy",
+       "on": "slp"
+      }
+     ],
+     "camMove": "whip"
+    }
+   ]
+  },
+  {
+   "narration": "The solution? Build a brand new artificial island five kilometers out in Osaka Bay, where nobody can complain.",
+   "shot": "wide",
+   "mood": "upbeat",
+   "transition": "zoom",
+   "environment": "island",
+   "hud": "osaka"
+  },
+  {
+   "narration": "Engineers flattened entire mountains, loaded millions of tons of rock onto barges, and dumped it into the sea.",
+   "shot": "wide",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "eng",
+     "action": "point",
+     "expr": "grin"
+    }
+   ],
+   "environment": "island",
+   "envVariant": "build",
+   "pieces": [
+    {
+     "kind": "excavator",
+     "where": "left"
+    },
+    {
+     "kind": "rockpile",
+     "where": "right"
+    }
+   ],
+   "camMove": "truck_left",
+   "shots": [
+    {
+     "at": "dumped",
+     "shot": "low",
+     "characters": [],
+     "fx": [
+      {
+       "kind": "splash",
+       "word": "sea"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "rockpile",
+       "scale": 1.2,
+       "y": 1.5,
+       "lift": -1.5
+      }
+     ],
+     "camMove": "whip"
+    }
+   ]
+  },
+  {
+   "narration": "The small oversight? The sea floor was made of about sixty feet of ultra-soft marine clay.",
+   "shot": "wide",
+   "mood": "curious",
+   "transition": "dissolve",
+   "environment": "island",
+   "hud": "mud"
+  },
+  {
+   "narration": "Instead of settling slightly, the island kept sinking, year after year, way faster than predicted.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "eng",
+     "expr": "sweat"
+    }
+   ],
+   "environment": "island",
+   "camMove": "push",
+   "hud": "bar",
+   "hudText": "ISLAND SINKING|0|38|FT",
+   "shots": [
+    {
+     "at": "year",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "eng",
+       "expr": "broken"
+      }
+     ],
+     "camMove": "push"
+    },
+    {
+     "at": "faster",
+     "shot": "dutch",
+     "characters": [
+      {
+       "id": "eng",
+       "action": "panic",
+       "expr": "shock"
+      }
+     ],
+     "camMove": "orbit"
+    }
+   ]
+  },
+  {
+   "narration": "To keep the terminal from flooding, engineers put hydraulic jacks under the building to lift it up by hand.",
+   "shot": "wide",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "eng",
+     "expr": "stern",
+     "holding": "wrench"
+    }
+   ],
+   "extras": 5,
+   "transition": "zoom",
+   "environment": "airport",
+   "extrasRole": "engineer",
+   "camMove": "truck_right",
+   "extrasHolding": "wrench",
+   "shots": [
+    {
+     "at": "lift",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "eng",
+       "action": "cheer",
+       "expr": "laugh",
+       "holding": "wrench"
+      }
+     ],
+     "camMove": "crane_up"
+    }
+   ]
+  },
+  {
+   "narration": "They surrounded the island with massive seawalls and armor blocks to stop typhoons from washing it away.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "tense",
+   "fx": [
+    {
+     "kind": "splash",
+     "word": "typhoons"
+    }
+   ],
+   "environment": "island",
+   "pieces": [
+    {
+     "kind": "tetrapods",
+     "where": "front"
+    },
+    {
+     "kind": "tetrapods"
+    }
+   ],
+   "camMove": "whip",
+   "shots": [
+    {
+     "at": "typhoons",
+     "shot": "low",
+     "fx": [
+      {
+       "kind": "splash",
+       "word": "washing"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Pumping billions of dollars into keeping an airport above water is the ultimate engineering flex.",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "plt",
+     "expr": "grin",
+     "holding": "check"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "money",
+     "word": "billions",
+     "on": "plt"
+    }
+   ],
+   "environment": "office",
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "ultimate",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "plt",
+       "expr": "starry"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "sparkle",
+       "word": "flex",
+       "on": "plt"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": "Despite sinking into the abyss, Kansai is still one of the most punctual airports on Earth.",
+   "shot": "wide",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "pax",
+     "action": "walk",
+     "expr": "smile",
+     "holding": "suitcase"
+    }
+   ],
+   "extras": 4,
+   "extrasAction": "walk",
+   "transition": "dissolve",
+   "environment": "airport",
+   "pieces": [
+    {
+     "kind": "departures"
+    }
+   ],
+   "extrasRole": "tourist",
+   "camMove": "follow",
+   "extrasHolding": "suitcase"
+  },
+  {
+   "narration": "With sea levels rising, engineers are now in a high-stakes race against Neptune himself.",
+   "shot": "wide",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "eng",
+     "action": "run",
+     "expr": "shock"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "trident",
+     "word": "Neptune",
+     "on": "eng"
+    },
+    {
+     "kind": "splash",
+     "word": "rising",
+     "on": "eng"
+    }
+   ],
+   "environment": "island",
+   "pieces": [
+    {
+     "kind": "airplane",
+     "scale": 0.6,
+     "move": "left"
+    }
+   ],
+   "camMove": "follow"
+  },
+  {
+   "narration": "Next time your flight is delayed, remember the runway under you is slowly drowning.",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "pax",
+     "holding": "coffee"
+    }
+   ],
+   "environment": "airport",
+   "envVariant": "aquarium",
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "runway",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "pax",
+       "expr": "shock",
+       "holding": "coffee"
+      }
+     ],
+     "camMove": "orbit"
+    }
+   ]
+  },
+  {
+   "narration": "Send this to anyone who loves extreme civil engineering.",
+   "shot": "high",
+   "light": "night",
+   "mood": "warm",
+   "transition": "dissolve",
+   "environment": "island",
+   "camMove": "crane_up"
+  },
+  {
+   "narration": "Hit follow for more engineering wonders.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "warm",
+   "transition": "dissolve",
+   "environment": "shops",
+   "hud": "outro"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Kansai International Airport (opened 1994) sits on an artificial island about 5 km off the coast in Osaka Bay.",
+   "status": "verified"
+  },
+  {
+   "text": "Fill came from cut-down mountains; the seabed holds ~18-20 m of soft alluvial clay.",
+   "status": "verified"
+  },
+  {
+   "text": "The island has sunk about 11-12 m since construction, faster than predicted; terminal columns are adjustable with jacks.",
+   "status": "verified"
+  },
+  {
+   "text": "Seawalls protect the island (Typhoon Jebi flooded it in 2018); Kansai is repeatedly ranked among the most punctual airports.",
+   "status": "verified"
+  }
+ ]
+}

@@ -1,0 +1,1177 @@
+{
+ "version": 1,
+ "title": "The Cobra Effect",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1224,
+ "env": {
+  "preset": "market",
+  "seed": 25,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "raj",
+   "name": "Official",
+   "outfit": {
+    "jacket": "#c8323a",
+    "pants": "#f2efe8",
+    "boots": "#2b2b38",
+    "skin": "#ffe2c2",
+    "hat": "pith",
+    "buttons": "#e8b83a",
+    "belt": "#ffffff",
+    "moustache": "#8a5a34"
+   }
+  },
+  {
+   "id": "loc",
+   "name": "Snake catcher",
+   "outfit": {
+    "jacket": "#e8d9b0",
+    "pants": "#f2efe8",
+    "boots": "#8d5a3b",
+    "skin": "#8d5a3b",
+    "hat": "hair",
+    "hair": "#1d1b22",
+    "moustache": "#1d1b22"
+   }
+  },
+  {
+   "id": "ent",
+   "name": "Entrepreneur",
+   "outfit": {
+    "jacket": "#c9a66b",
+    "pants": "#f2efe8",
+    "boots": "#8d5a3b",
+    "skin": "#c99067",
+    "hat": "hair",
+    "hair": "#1d1b22"
+   }
+  },
+  {
+   "id": "prof",
+   "name": "Economist",
+   "outfit": {
+    "jacket": "#4a3b6a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ffe2c2",
+    "hat": "hair",
+    "hair": "#d9d4cc",
+    "moustache": "#d9d4cc"
+   }
+  },
+  {
+   "id": "extra0",
+   "name": "",
+   "outfit": {
+    "jacket": "#e8d9b0",
+    "pants": "#f2efe8",
+    "boots": "#8d5a3b",
+    "skin": "#8d5a3b",
+    "hat": "hair",
+    "hair": "#1d1b22",
+    "moustache": "#1d1b22"
+   }
+  },
+  {
+   "id": "extra1",
+   "name": "",
+   "outfit": {
+    "jacket": "#e8d9b0",
+    "pants": "#f2efe8",
+    "boots": "#8d5a3b",
+    "skin": "#c99067",
+    "hat": "hair",
+    "hair": "#1d1b22"
+   }
+  },
+  {
+   "id": "extra2",
+   "name": "",
+   "outfit": {
+    "jacket": "#e8d9b0",
+    "pants": "#f2efe8",
+    "boots": "#8d5a3b",
+    "skin": "#8d5a3b",
+    "hat": "hair",
+    "hair": "#1d1b22",
+    "moustache": "#1d1b22"
+   }
+  },
+  {
+   "id": "extra3",
+   "name": "",
+   "outfit": {
+    "jacket": "#e8d9b0",
+    "pants": "#f2efe8",
+    "boots": "#8d5a3b",
+    "skin": "#8d5a3b",
+    "hat": "hair",
+    "hair": "#1d1b22",
+    "moustache": "#1d1b22"
+   }
+  },
+  {
+   "id": "extra4",
+   "name": "",
+   "outfit": {
+    "jacket": "#e8d9b0",
+    "pants": "#f2efe8",
+    "boots": "#8d5a3b",
+    "skin": "#c99067",
+    "hat": "hair",
+    "hair": "#1d1b22"
+   }
+  },
+  {
+   "id": "extra5",
+   "name": "",
+   "outfit": {
+    "jacket": "#e8d9b0",
+    "pants": "#f2efe8",
+    "boots": "#8d5a3b",
+    "skin": "#8d5a3b",
+    "hat": "hair",
+    "hair": "#1d1b22",
+    "moustache": "#1d1b22"
+   }
+  },
+  {
+   "id": "extra6",
+   "name": "",
+   "outfit": {
+    "jacket": "#e8d9b0",
+    "pants": "#f2efe8",
+    "boots": "#8d5a3b",
+    "skin": "#8d5a3b",
+    "hat": "hair",
+    "hair": "#1d1b22",
+    "moustache": "#1d1b22"
+   }
+  },
+  {
+   "id": "extra7",
+   "name": "",
+   "outfit": {
+    "jacket": "#e8d9b0",
+    "pants": "#f2efe8",
+    "boots": "#8d5a3b",
+    "skin": "#c99067",
+    "hat": "hair",
+    "hair": "#1d1b22"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 149,
+   "narration": "A government paid cash for dead cobras, and somehow ended up with more cobras.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "raj",
+     "x": 0.0,
+     "z": 9.5,
+     "expr": "smile",
+     "mode": "stand"
+    },
+    {
+     "castId": "loc",
+     "x": -0.937,
+     "z": 8.6,
+     "expr": "grin",
+     "mode": "stand",
+     "holding": "snake"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      1.6,
+      1.68,
+      15.1
+     ],
+     "lookAt": [
+      0.0,
+      1.38,
+      9.5
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 81,
+     "cut": true,
+     "position": [
+      -0.55,
+      1.62,
+      12.4
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      9.5
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2500,
+   "qualityNotes": "",
+   "pieces": [
+    {
+     "kind": "booth",
+     "x": 0.0,
+     "z": 4.548,
+     "label": "REWARD"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 25,
+     "dur": 60,
+     "at": [
+      0.42,
+      2.28,
+      9.5
+     ],
+     "size": 0.42,
+     "product": "coins"
+    }
+   ]
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 149,
+   "endFrame": 255,
+   "narration": "The story goes: colonial Delhi had a cobra problem.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "loc",
+     "x": 0.0,
+     "z": 0.0,
+     "expr": "shock",
+     "mode": "stand"
+    },
+    {
+     "castId": "extra0",
+     "x": 1.6,
+     "z": -3.0,
+     "mode": "stand",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra1",
+     "x": -0.8,
+     "z": -4.1,
+     "mode": "stand",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra2",
+     "x": 2.9,
+     "z": -5.2,
+     "mode": "stand",
+     "expr": "nervous"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 149,
+     "position": [
+      -3.0,
+      2.3,
+      10.5
+     ],
+     "lookAt": [
+      0.0,
+      1.2,
+      0
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 195,
+     "dur": 24,
+     "position": [
+      -1.6,
+      1.68,
+      5.6
+     ],
+     "lookAt": [
+      0.0,
+      1.38,
+      0
+     ],
+     "fov": 38,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2501,
+   "qualityNotes": "",
+   "env": {
+    "preset": "street",
+    "seed": 25,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "snakes",
+     "x": 1.004,
+     "z": 1.2
+    }
+   ]
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 255,
+   "endFrame": 356,
+   "narration": "So the officials offered a reward for every dead cobra.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "raj",
+     "x": 0.0,
+     "z": 9.5,
+     "expr": "smile_closed",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 255,
+     "position": [
+      1.6,
+      1.68,
+      15.1
+     ],
+     "lookAt": [
+      0.0,
+      1.38,
+      9.5
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 298,
+     "dur": 24,
+     "position": [
+      0.55,
+      1.62,
+      12.4
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      9.5
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2502,
+   "qualityNotes": "",
+   "pieces": [
+    {
+     "kind": "booth",
+     "x": 0.0,
+     "z": 4.548,
+     "label": "REWARD"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 298,
+     "dur": 58,
+     "at": [
+      0.42,
+      2.28,
+      9.5
+     ],
+     "size": 0.42,
+     "product": "scroll"
+    }
+   ]
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 356,
+   "endFrame": 461,
+   "narration": "At first, it worked. Dead snakes came in by the basket.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "raj",
+     "x": 0.0,
+     "z": 9.5,
+     "expr": "grin",
+     "mode": "stand"
+    },
+    {
+     "castId": "loc",
+     "x": -1.816,
+     "z": 9.001,
+     "expr": "smile",
+     "mode": "stand",
+     "holding": "snake"
+    },
+    {
+     "castId": "extra3",
+     "x": 1.6,
+     "z": 6.5,
+     "mode": "stand",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra4",
+     "x": -0.8,
+     "z": 5.4,
+     "mode": "stand",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra5",
+     "x": 2.9,
+     "z": 4.3,
+     "mode": "stand",
+     "expr": "nervous"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 356,
+     "position": [
+      -3.0,
+      2.3,
+      20.0
+     ],
+     "lookAt": [
+      0.0,
+      1.2,
+      9.5
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 401,
+     "dur": 24,
+     "position": [
+      -1.6,
+      1.68,
+      15.1
+     ],
+     "lookAt": [
+      0.0,
+      1.38,
+      9.5
+     ],
+     "fov": 38,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2503,
+   "qualityNotes": "",
+   "pieces": [
+    {
+     "kind": "booth",
+     "x": 0.0,
+     "z": 4.548,
+     "label": "REWARD"
+    }
+   ]
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 461,
+   "endFrame": 511,
+   "narration": "Then somebody did the math.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "ent",
+     "x": -9.5,
+     "z": 0.0,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 493,
+       "expr": "grin"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 461,
+     "position": [
+      -12.4,
+      1.62,
+      0.55
+     ],
+     "lookAt": [
+      -9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2504,
+   "qualityNotes": "",
+   "env": {
+    "preset": "village_square",
+    "seed": 25,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 493,
+     "dur": 18,
+     "at": [
+      -9.5,
+      2.05,
+      0.274
+     ],
+     "size": 0.28371807239363683,
+     "product": "lightbulb"
+    }
+   ]
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 511,
+   "endFrame": 585,
+   "narration": "Why hunt cobras, when you can farm them?",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "ent",
+     "x": -9.5,
+     "z": -0.347,
+     "expr": "laugh",
+     "mode": "stand",
+     "holding": "snake"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 511,
+     "position": [
+      -15.1,
+      1.68,
+      -1.6
+     ],
+     "lookAt": [
+      -9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2505,
+   "qualityNotes": "",
+   "env": {
+    "preset": "village_square",
+    "seed": 25,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "crates",
+     "x": -8.3,
+     "z": 1.2,
+     "label": "COBRA FARM"
+    }
+   ]
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 585,
+   "endFrame": 675,
+   "narration": "More snakes, more cash. Business was booming.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "raj",
+     "x": 0.0,
+     "z": 9.5,
+     "expr": "grin",
+     "mode": "stand"
+    },
+    {
+     "castId": "ent",
+     "x": -0.72,
+     "z": 8.6,
+     "expr": "smile_closed",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 585,
+     "position": [
+      1.0,
+      1.66,
+      13.8
+     ],
+     "lookAt": [
+      0.0,
+      1.42,
+      9.5
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 622,
+     "dur": 24,
+     "position": [
+      0.55,
+      1.62,
+      12.4
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      9.5
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2506,
+   "qualityNotes": "",
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 611,
+     "dur": 60,
+     "at": [
+      -0.3,
+      2.28,
+      8.6
+     ],
+     "size": 0.42,
+     "product": "coins"
+    }
+   ]
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 675,
+   "endFrame": 758,
+   "narration": "The officials noticed the numbers made no sense.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "raj",
+     "x": -2.0,
+     "z": 1.2,
+     "expr": "nervous",
+     "mode": "stand",
+     "holding": "book"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 675,
+     "position": [
+      -4.149,
+      1.68,
+      6.613
+     ],
+     "lookAt": [
+      -2.0,
+      1.38,
+      1.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 708,
+     "dur": 24,
+     "position": [
+      -2.836,
+      1.62,
+      4.031
+     ],
+     "lookAt": [
+      -2.0,
+      1.5,
+      1.2
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 2507,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "interior",
+    "seed": 25,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 738,
+     "dur": 20,
+     "at": [
+      -1.582,
+      2.28,
+      1.242
+     ],
+     "size": 0.42,
+     "product": "question"
+    }
+   ]
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 758,
+   "endFrame": 808,
+   "narration": "So they cancelled the reward.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "raj",
+     "x": -0.347,
+     "z": 9.5,
+     "expr": "stern",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 758,
+     "position": [
+      1.6,
+      1.68,
+      15.1
+     ],
+     "lookAt": [
+      0.0,
+      1.38,
+      9.5
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2508,
+   "qualityNotes": "",
+   "pieces": [
+    {
+     "kind": "board",
+     "x": 1.165,
+     "z": 8.31,
+     "label": "~REWARD|CANCELLED"
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 770,
+     "amp": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 808,
+   "endFrame": 933,
+   "narration": "Now the breeders had crates of worthless snakes. So they let them go.",
+   "light": "golden",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "ent",
+     "x": 0.726,
+     "z": 0.0,
+     "expr": "grin",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 808,
+     "position": [
+      -3.0,
+      2.3,
+      10.5
+     ],
+     "lookAt": [
+      0.0,
+      1.2,
+      0
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 876,
+     "cut": true,
+     "position": [
+      3.0,
+      2.3,
+      10.5
+     ],
+     "lookAt": [
+      0.0,
+      1.2,
+      0
+     ],
+     "fov": 42,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 2509,
+   "qualityNotes": "",
+   "env": {
+    "preset": "street",
+    "seed": 25,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "crates",
+     "x": -1.389,
+     "z": -1.2,
+     "label": "COBRA FARM"
+    },
+    {
+     "kind": "snakes",
+     "x": 1.73,
+     "z": 1.2
+    }
+   ]
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 933,
+   "endFrame": 1018,
+   "narration": "The city ended up with more cobras than before.",
+   "light": "golden",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "raj",
+     "x": 0.726,
+     "z": 22.0,
+     "expr": "dazed",
+     "mode": "stand"
+    },
+    {
+     "castId": "extra6",
+     "x": 1.57,
+     "z": 19.216,
+     "mode": "stroll",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra7",
+     "x": -0.074,
+     "z": 17.9,
+     "mode": "stroll",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra0",
+     "x": 1.379,
+     "z": 17.442,
+     "mode": "stroll",
+     "expr": "nervous"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 933,
+     "position": [
+      3.0,
+      2.3,
+      32.5
+     ],
+     "lookAt": [
+      0.0,
+      1.2,
+      22
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 979,
+     "cut": true,
+     "position": [
+      -3.0,
+      2.3,
+      32.5
+     ],
+     "lookAt": [
+      0.0,
+      1.2,
+      22
+     ],
+     "fov": 42,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2510,
+   "qualityNotes": "",
+   "env": {
+    "preset": "street",
+    "seed": 25,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "snakes",
+     "x": -0.279,
+     "z": 23.2
+    },
+    {
+     "kind": "snakes",
+     "x": -1.62,
+     "z": 20.68
+    }
+   ]
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 1018,
+   "endFrame": 1094,
+   "narration": "Economists still call it the Cobra Effect.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "prof",
+     "x": -0.347,
+     "z": 1.8,
+     "expr": "smile",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1018,
+     "position": [
+      -1.6,
+      1.68,
+      7.4
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.8
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 2511,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "interior",
+    "seed": 25,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "board",
+     "x": 1.165,
+     "z": 0.61,
+     "label": "COBRA|EFFECT"
+    }
+   ]
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 1094,
+   "endFrame": 1224,
+   "narration": "Pay people to solve a problem, and they'll make sure it never ends.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "ent",
+     "x": -9.5,
+     "z": 0.0,
+     "expr": "smile",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1188,
+       "expr": "smile_closed"
+      }
+     ],
+     "holding": "snake"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1094,
+     "position": [
+      -12.4,
+      1.62,
+      0.55
+     ],
+     "lookAt": [
+      -9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1165,
+     "cut": true,
+     "position": [
+      -12.4,
+      1.62,
+      -0.55
+     ],
+     "lookAt": [
+      -9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 2512,
+   "qualityNotes": "",
+   "env": {
+    "preset": "village_square",
+    "seed": 25,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 1188,
+     "dur": 36,
+     "at": [
+      -9.5,
+      2.05,
+      0.274
+     ],
+     "size": 0.44330948811505755
+    }
+   ]
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": false,
+  "words": []
+ },
+ "style": "storybook",
+ "graphics": "full"
+}

@@ -1,0 +1,182 @@
+{
+ "id": "the-wedding-slideshow-426518",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 117,
+   "beats": 13,
+   "at": "2026-11-10T11:36:34"
+  },
+  "voice": {
+   "duration": 42.770604166666665,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 15.7,
+   "status": "done",
+   "voice": "af_heart",
+   "speed": 0.88,
+   "at": "2026-11-10T11:37:04"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 14.6,
+   "method": {
+    "whisper": 19,
+    "spread": 3
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T11:37:19"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1292,
+   "seconds_video": 43.06666666666667,
+   "scenes": 13,
+   "at": "2026-11-10T11:37:19"
+  },
+  "stills": {
+   "status": "done",
+   "count": 39,
+   "at": "2026-11-10T11:38:54"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 182.7,
+   "frames": 1292,
+   "renderedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b07",
+    "b08",
+    "b09",
+    "b10",
+    "b11",
+    "b12",
+    "b13"
+   ],
+   "reusedScenes": [],
+   "fps_render": 7.07,
+   "at": "2026-11-10T11:41:57"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 15.8,
+   "integratedLUFS": -14.02,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.07,
+   "maxGainReductionDB": 6.56,
+   "voiceLUFS": -13.97,
+   "musicLUFS": -29.7,
+   "sfxLUFS": -27.07,
+   "at": "2026-11-10T11:42:13"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\the-wedding-slideshow-426518\\output\\the-wedding-slideshow_master_v1.mp4",
+   "at": "2026-11-10T11:42:15"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-10T11:42:29"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T02:56:13",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T11:36:34",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T11:36:48",
+   "seconds": 14.6,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T11:37:04",
+   "seconds": 15.7,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T11:37:19",
+   "status": "done",
+   "seconds": 14.6
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T11:37:19",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T11:38:54",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T11:41:57",
+   "status": "done",
+   "seconds": 182.7
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T11:42:13",
+   "status": "done",
+   "seconds": 15.8
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T11:42:15",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T11:42:29",
+   "status": "done"
+  }
+ ],
+ "title": "The Wedding Slideshow",
+ "created": "2026-11-10T02:56:13",
+ "request": {
+  "title": "The Wedding Slideshow",
+  "idea": "The Wedding Slideshow",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 60,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "village_square",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": false,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "claude",
+  "review": "auto_qa",
+  "seed": 31,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "Narration is 43s for a 60s request: add beats/sentences to reach it.",
+ "requestedSeconds": 60
+}

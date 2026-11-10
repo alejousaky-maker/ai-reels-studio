@@ -1,0 +1,2319 @@
+{
+ "version": 1,
+ "title": "The Generational Pre-Order",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1442,
+ "env": {
+  "preset": "bedroom",
+  "seed": 59,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "teen",
+   "name": "Me at 16",
+   "outfit": {
+    "jacket": "#e2453c",
+    "pants": "#3b5b9a",
+    "boots": "#f2efe8",
+    "skin": "#f5c9a0",
+    "hat": "cap",
+    "cap": "#3f6fb5",
+    "capBack": true,
+    "propeller": true,
+    "headset": "#2b2b38"
+   }
+  },
+  {
+   "id": "uni",
+   "name": "Me at 20",
+   "outfit": {
+    "jacket": "#3f6fb5",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#8d5a3b",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "job",
+   "name": "Me at 30",
+   "outfit": {
+    "jacket": "#3a4566",
+    "pants": "#2b2b38",
+    "boots": "#1d1b22",
+    "skin": "#ecd0b6",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "tie": "#3f6fb5"
+   }
+  },
+  {
+   "id": "wife",
+   "name": "Wife",
+   "outfit": {
+    "jacket": "#e06a9a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ffe2c2",
+    "dress": "#e06a9a",
+    "hat": "longhair",
+    "hair": "#7a4a2a"
+   }
+  },
+  {
+   "id": "old",
+   "name": "Me at 70",
+   "outfit": {
+    "jacket": "#8a6a4a",
+    "pants": "#5a4a3a",
+    "boots": "#3a2a20",
+    "skin": "#c99067",
+    "hat": "hair",
+    "hair": "#e6e2da",
+    "beard": "#f2efe8",
+    "beardLong": true,
+    "glasses": true,
+    "headset": "#5a4a3a",
+    "build": "stout"
+   }
+  },
+  {
+   "id": "son",
+   "name": "Son",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#f5c9a0",
+    "dress": "#1d1b22",
+    "hat": "gradcap",
+    "hair": "#3a2a1e"
+   }
+  },
+  {
+   "id": "kid",
+   "name": "Grandson",
+   "outfit": {
+    "jacket": "#c25a7a",
+    "pants": "#3b5b9a",
+    "boots": "#f4f1ea",
+    "skin": "#8d5a3b",
+    "hat": "cap",
+    "cap": "#e2453c",
+    "build": "kid"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 73,
+   "narration": "I pre-ordered GTA 6 as a teenager, and by the time it finally loaded, my son was graduating college.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "teen",
+     "x": -1.5,
+     "z": 1.4,
+     "expr": "starry",
+     "mode": "jump"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      -0.465,
+      1.68,
+      7.131
+     ],
+     "lookAt": [
+      1.917,
+      1.38,
+      1.817
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 0,
+     "position": [
+      -0.465,
+      1.68,
+      7.131
+     ],
+     "lookAt": [
+      -1.5,
+      1.38,
+      1.4
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5900,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "panel",
+    "text": "PRE-ORDER CONFIRMED|GTA 6"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "bedroom",
+    "seed": 59,
+    "shop": null,
+    "variant": "day"
+   }
+  },
+  {
+   "sceneId": "b01a",
+   "startFrame": 73,
+   "endFrame": 132,
+   "narration": "I pre-ordered GTA 6 as a teenager, and by the time it finally loaded, my son was graduating college.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "old",
+     "x": -1.5,
+     "z": 1.4,
+     "expr": "sleepy",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 73,
+     "position": [
+      -1.853,
+      1.6,
+      3.123
+     ],
+     "lookAt": [
+      -1.5,
+      1.6,
+      1.4
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 73,
+     "position": [
+      -1.712,
+      1.6,
+      2.434
+     ],
+     "lookAt": [
+      -1.5,
+      1.6,
+      1.4
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 59
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5937,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "panel",
+    "text": "PRE-ORDER CONFIRMED|GTA 6"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "bedroom",
+    "seed": 59,
+    "shop": null,
+    "variant": "day"
+   }
+  },
+  {
+   "sceneId": "b01b",
+   "startFrame": 132,
+   "endFrame": 190,
+   "narration": "I pre-ordered GTA 6 as a teenager, and by the time it finally loaded, my son was graduating college.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "son",
+     "x": -1.5,
+     "z": 1.4,
+     "expr": "laugh",
+     "mode": "stand",
+     "pose": "up",
+     "holding": "diploma"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 132,
+     "position": [
+      0.707,
+      1.68,
+      6.789
+     ],
+     "lookAt": [
+      -1.5,
+      1.38,
+      1.4
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 132,
+     "position": [
+      -1.682,
+      1.68,
+      7.221
+     ],
+     "lookAt": [
+      -1.5,
+      1.38,
+      1.4
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 58
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5974,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "panel",
+    "text": "PRE-ORDER CONFIRMED|GTA 6"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "bedroom",
+    "seed": 59,
+    "shop": null,
+    "variant": "day"
+   },
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 145,
+     "dur": 45,
+     "at": [
+      -1.082,
+      2.28,
+      1.442
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 190,
+   "endFrame": 302,
+   "narration": "Twenty thirteen. I clicked pre-order and bounced in my chair for an hour.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "teen",
+     "x": 2.068,
+     "z": 0.1,
+     "expr": "starry",
+     "mode": "jump"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 190,
+     "position": [
+      2.477,
+      1.68,
+      5.824
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 190,
+     "position": [
+      2.446,
+      1.56,
+      3.494
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 112
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5901,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "bedroom",
+    "seed": 59,
+    "shop": null,
+    "variant": "day"
+   },
+   "pieces": [
+    {
+     "kind": "calendar",
+     "x": 3.051,
+     "z": -1.396,
+     "label": "2013"
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "2013",
+     "frame": 193,
+     "dur": 106,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 302,
+   "endFrame": 364,
+   "narration": "Then the calendar pages started flying.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "teen",
+     "x": -2.755,
+     "z": 0.561,
+     "expr": "shock",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 302,
+     "position": [
+      -2.925,
+      1.62,
+      3.508
+     ],
+     "lookAt": [
+      -1.121,
+      1.5,
+      1.172
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 302,
+     "position": [
+      -2.925,
+      1.62,
+      3.508
+     ],
+     "lookAt": [
+      -2.755,
+      1.5,
+      0.561
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5902,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "bedroom",
+    "seed": 59,
+    "shop": null,
+    "variant": "day"
+   },
+   "pieces": [
+    {
+     "kind": "calendar",
+     "x": -1.327,
+     "z": -0.267,
+     "label": "2016"
+    }
+   ]
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 364,
+   "endFrame": 469,
+   "narration": "College. Exams, parties, heartbreak. Still waiting.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "uni",
+     "x": -1.845,
+     "z": 1.365,
+     "expr": "sleepy",
+     "mode": "sit"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 364,
+     "position": [
+      -3.649,
+      1.68,
+      6.813
+     ],
+     "lookAt": [
+      -1.5,
+      1.38,
+      1.4
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 421,
+     "cut": true,
+     "position": [
+      -0.465,
+      1.68,
+      7.131
+     ],
+     "lookAt": [
+      -1.5,
+      1.38,
+      1.4
+     ],
+     "fov": 38,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5903,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "bedroom",
+    "seed": 59,
+    "shop": null,
+    "variant": "day"
+   },
+   "pieces": [
+    {
+     "kind": "calendar",
+     "x": -0.366,
+     "z": 0.358,
+     "label": "2018"
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "2018",
+     "frame": 367,
+     "dur": 99,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 469,
+   "endFrame": 569,
+   "narration": "First job. A suit, a tie, a beard. Still waiting.",
+   "light": "golden",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "job",
+     "x": 2.068,
+     "z": 0.1,
+     "expr": "neutral",
+     "mode": "stand",
+     "pose": "hips"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 469,
+     "position": [
+      6.495,
+      1.68,
+      4.141
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 469,
+     "position": [
+      4.451,
+      1.68,
+      5.451
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 100
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5904,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "calendar",
+     "x": 3.051,
+     "z": -1.396,
+     "label": "2024"
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "2024",
+     "frame": 472,
+     "dur": 94,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 569,
+   "endFrame": 619,
+   "narration": "And the TV never changed. Trailer two, coming soon.",
+   "light": "golden",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "job",
+     "x": -2.263,
+     "z": 0.684,
+     "expr": "sleepy",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 569,
+     "position": [
+      -4.753,
+      1.68,
+      6.081
+     ],
+     "lookAt": [
+      -1.843,
+      1.38,
+      1.036
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 569,
+     "position": [
+      -6.267,
+      1.68,
+      5.208
+     ],
+     "lookAt": [
+      -3.357,
+      1.38,
+      0.164
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 50
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5905,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "tv",
+     "x": -3.915,
+     "z": -1.11,
+     "label": "TRAILER 2|COMING SOON"
+    }
+   ]
+  },
+  {
+   "sceneId": "b06a",
+   "startFrame": 619,
+   "endFrame": 664,
+   "narration": "And the TV never changed. Trailer two, coming soon.",
+   "light": "golden",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "job",
+     "x": -2.6,
+     "z": 0.6,
+     "expr": "sleepy",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 619,
+     "position": [
+      -3.012,
+      1.55,
+      3.28
+     ],
+     "lookAt": [
+      -2.867,
+      1.32,
+      1.667
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 619,
+     "position": [
+      -2.954,
+      1.458,
+      2.635
+     ],
+     "lookAt": [
+      -2.867,
+      1.32,
+      1.667
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 45
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5942,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "tv",
+     "x": -1.307,
+     "z": -4.573,
+     "scale": 1.4,
+     "label": "TRAILER 2|COMING SOON"
+    }
+   ]
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 664,
+   "endFrame": 696,
+   "narration": "I got married. We had a kid. My hair turned gray.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "job",
+     "x": -1.5,
+     "z": 1.4,
+     "expr": "smile_closed",
+     "mode": "stand"
+    },
+    {
+     "castId": "wife",
+     "x": -2.022,
+     "z": 0.469,
+     "expr": "smile",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 664,
+     "position": [
+      -3.763,
+      1.66,
+      5.191
+     ],
+     "lookAt": [
+      -1.5,
+      1.42,
+      1.4
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 664,
+     "position": [
+      -2.021,
+      1.66,
+      5.784
+     ],
+     "lookAt": [
+      -1.5,
+      1.42,
+      1.4
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 32
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5906,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35
+  },
+  {
+   "sceneId": "b07a",
+   "startFrame": 696,
+   "endFrame": 724,
+   "narration": "I got married. We had a kid. My hair turned gray.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "kid",
+     "x": -1.5,
+     "z": 1.4,
+     "expr": "laugh",
+     "mode": "jump"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 696,
+     "position": [
+      -0.465,
+      1.308,
+      7.131
+     ],
+     "lookAt": [
+      -1.5,
+      0.994,
+      1.4
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 696,
+     "position": [
+      -0.879,
+      1.182,
+      4.839
+     ],
+     "lookAt": [
+      -1.5,
+      0.994,
+      1.4
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 28
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5943,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35
+  },
+  {
+   "sceneId": "b07b",
+   "startFrame": 724,
+   "endFrame": 762,
+   "narration": "I got married. We had a kid. My hair turned gray.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "old",
+     "x": -1.5,
+     "z": 1.4,
+     "expr": "sleepy",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 724,
+     "position": [
+      -1.853,
+      1.6,
+      3.123
+     ],
+     "lookAt": [
+      -1.5,
+      1.6,
+      1.4
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 724,
+     "position": [
+      -1.712,
+      1.6,
+      2.434
+     ],
+     "lookAt": [
+      -1.5,
+      1.6,
+      1.4
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 38
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5980,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 762,
+   "endFrame": 835,
+   "narration": "Now I have a wizard beard and reading glasses.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "old",
+     "x": 2.247,
+     "z": 0.046,
+     "expr": "neutral",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 762,
+     "position": [
+      3.607,
+      1.62,
+      2.666
+     ],
+     "lookAt": [
+      2.247,
+      1.5,
+      0.046
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 762,
+     "position": [
+      3.063,
+      1.572,
+      1.618
+     ],
+     "lookAt": [
+      2.247,
+      1.5,
+      0.046
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 73
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5907,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "calendar",
+     "x": 3.051,
+     "z": -1.396,
+     "label": "2061"
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "2061",
+     "frame": 765,
+     "dur": 67,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 835,
+   "endFrame": 894,
+   "narration": "My son walks in with his diploma.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "son",
+     "x": -4.928,
+     "z": 0.018,
+     "expr": "smile_closed",
+     "mode": "stroll",
+     "walkTo": [
+      -2.6,
+      0.6
+     ],
+     "walkFrames": [
+      835,
+      876
+     ],
+     "holding": "diploma"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 835,
+     "position": [
+      -7.838,
+      1.68,
+      5.063
+     ],
+     "lookAt": [
+      -4.928,
+      1.38,
+      0.018
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 835,
+     "position": [
+      -5.51,
+      1.68,
+      5.645
+     ],
+     "lookAt": [
+      -2.6,
+      1.38,
+      0.6
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 41
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5908,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 894,
+   "endFrame": 986,
+   "narration": "Dad, is it out yet? Asking for my whole generation.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "son",
+     "x": -1.5,
+     "z": 1.4,
+     "expr": "smile",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 894,
+     "position": [
+      -1.241,
+      1.62,
+      4.34
+     ],
+     "lookAt": [
+      -1.5,
+      1.5,
+      1.4
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 894,
+     "position": [
+      -1.345,
+      1.572,
+      3.164
+     ],
+     "lookAt": [
+      -1.5,
+      1.5,
+      1.4
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 92
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5909,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 986,
+   "endFrame": 1075,
+   "narration": "Not yet, son. Not yet. Go get a job.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "old",
+     "x": 2.4,
+     "z": 0.0,
+     "expr": "nervous",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 986,
+     "position": [
+      2.582,
+      1.6,
+      0.95
+     ],
+     "lookAt": [
+      2.4,
+      1.6,
+      0.0
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 986,
+     "position": [
+      2.73,
+      1.6,
+      1.728
+     ],
+     "lookAt": [
+      2.4,
+      1.6,
+      0.0
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 89
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5910,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 1075,
+   "endFrame": 1191,
+   "narration": "Years later, lying in a hospital bed, the heart monitor beeping slowly,",
+   "light": "day",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "old",
+     "x": -0.347,
+     "z": 0.8,
+     "expr": "sleepy",
+     "mode": "sit"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1075,
+     "position": [
+      1.6,
+      1.68,
+      6.4
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      0.8
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1075,
+     "position": [
+      0.96,
+      1.56,
+      4.16
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      0.8
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 116
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5911,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "clinic",
+    "seed": 59,
+    "shop": null,
+    "variant": "ward"
+   },
+   "pieces": [
+    {
+     "kind": "hospitalbed",
+     "x": -0.347,
+     "z": 1.15,
+     "scale": 0.6
+    },
+    {
+     "kind": "heartmonitor",
+     "x": 0.745,
+     "z": -0.27
+    }
+   ]
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 1191,
+   "endFrame": 1295,
+   "narration": "I pass my dusty, cobweb-covered controller to my grandson.",
+   "light": "day",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "old",
+     "x": 2.6,
+     "z": 0.6,
+     "expr": "smile_closed",
+     "mode": "sit",
+     "holding": "controller"
+    },
+    {
+     "castId": "kid",
+     "x": 1.762,
+     "z": -0.062,
+     "expr": "smile",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1191,
+     "position": [
+      1.953,
+      1.66,
+      4.967
+     ],
+     "lookAt": [
+      2.6,
+      1.42,
+      0.6
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1191,
+     "position": [
+      3.79,
+      1.66,
+      4.851
+     ],
+     "lookAt": [
+      2.6,
+      1.42,
+      0.6
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 104
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5912,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "clinic",
+    "seed": 59,
+    "shop": null,
+    "variant": "ward"
+   },
+   "pieces": [
+    {
+     "kind": "hospitalbed",
+     "x": 2.701,
+     "z": 0.935,
+     "scale": 0.6
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 1246,
+     "dur": 49,
+     "at": [
+      3.002,
+      2.28,
+      0.479
+     ],
+     "size": 0.42,
+     "product": "controller"
+    }
+   ]
+  },
+  {
+   "sceneId": "b14",
+   "startFrame": 1295,
+   "endFrame": 1350,
+   "narration": "And right then, the TV dings. GTA 6, ready to start. Finally.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "kid",
+     "x": -1.863,
+     "z": -0.916,
+     "expr": "starry",
+     "mode": "jump",
+     "holding": "controller"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1295,
+     "position": [
+      -2.006,
+      1.308,
+      4.821
+     ],
+     "lookAt": [
+      1.121,
+      0.994,
+      -0.093
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1295,
+     "position": [
+      -2.006,
+      1.308,
+      4.821
+     ],
+     "lookAt": [
+      -2.2,
+      0.994,
+      -1.0
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5913,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "clinic",
+    "seed": 59,
+    "shop": null,
+    "variant": "ward"
+   },
+   "pieces": [
+    {
+     "kind": "tv",
+     "x": -3.515,
+     "z": -2.71,
+     "label": "~game|READY TO START"
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 1330,
+     "amp": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b14a",
+   "startFrame": 1350,
+   "endFrame": 1442,
+   "narration": "And right then, the TV dings. GTA 6, ready to start. Finally.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "old",
+     "x": -2.118,
+     "z": -0.98,
+     "expr": "relief",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1350,
+     "position": [
+      -2.717,
+      1.6,
+      0.675
+     ],
+     "lookAt": [
+      -2.118,
+      1.6,
+      -0.98
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 1350,
+     "position": [
+      -2.477,
+      1.6,
+      0.013
+     ],
+     "lookAt": [
+      -2.118,
+      1.6,
+      -0.98
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 92
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 5950,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "clinic",
+    "seed": 59,
+    "shop": null,
+    "variant": "ward"
+   },
+   "pieces": [
+    {
+     "kind": "tv",
+     "x": -3.515,
+     "z": -2.71,
+     "label": "~game|READY TO START"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 1372,
+     "dur": 60,
+     "at": [
+      -1.977,
+      1.891,
+      -0.944
+     ],
+     "size": 0.23445554337723234
+    }
+   ]
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": true,
+  "words": [
+   {
+    "w": "I",
+    "s": 0.08,
+    "e": 0.221
+   },
+   {
+    "w": "pre-ordered",
+    "s": 0.231,
+    "e": 0.978
+   },
+   {
+    "w": "GTA",
+    "s": 0.988,
+    "e": 1.205
+   },
+   {
+    "w": "6",
+    "s": 1.215,
+    "e": 1.356
+   },
+   {
+    "w": "as",
+    "s": 1.366,
+    "e": 1.508
+   },
+   {
+    "w": "a",
+    "s": 1.518,
+    "e": 1.659
+   },
+   {
+    "w": "teenager,",
+    "s": 1.669,
+    "e": 2.264
+   },
+   {
+    "w": "and",
+    "s": 2.274,
+    "e": 2.491
+   },
+   {
+    "w": "by",
+    "s": 2.501,
+    "e": 2.643
+   },
+   {
+    "w": "the",
+    "s": 2.653,
+    "e": 2.87
+   },
+   {
+    "w": "time",
+    "s": 2.88,
+    "e": 3.172
+   },
+   {
+    "w": "it",
+    "s": 3.182,
+    "e": 3.324
+   },
+   {
+    "w": "finally",
+    "s": 3.334,
+    "e": 3.853
+   },
+   {
+    "w": "loaded,",
+    "s": 3.863,
+    "e": 4.307
+   },
+   {
+    "w": "my",
+    "s": 4.317,
+    "e": 4.459
+   },
+   {
+    "w": "son",
+    "s": 4.469,
+    "e": 4.686
+   },
+   {
+    "w": "was",
+    "s": 4.696,
+    "e": 4.913
+   },
+   {
+    "w": "graduating",
+    "s": 4.923,
+    "e": 5.669,
+    "hot": true
+   },
+   {
+    "w": "college.",
+    "s": 5.679,
+    "e": 6.199
+   },
+   {
+    "w": "Twenty",
+    "s": 6.399,
+    "e": 6.76
+   },
+   {
+    "w": "thirteen.",
+    "s": 6.77,
+    "e": 7.254
+   },
+   {
+    "w": "I",
+    "s": 7.454,
+    "e": 7.555
+   },
+   {
+    "w": "clicked",
+    "s": 7.565,
+    "e": 7.943
+   },
+   {
+    "w": "pre-order",
+    "s": 7.953,
+    "e": 8.386
+   },
+   {
+    "w": "and",
+    "s": 8.396,
+    "e": 8.552
+   },
+   {
+    "w": "bounced",
+    "s": 8.562,
+    "e": 8.94
+   },
+   {
+    "w": "in",
+    "s": 8.95,
+    "e": 9.05
+   },
+   {
+    "w": "my",
+    "s": 9.06,
+    "e": 9.161
+   },
+   {
+    "w": "chair",
+    "s": 9.171,
+    "e": 9.438
+   },
+   {
+    "w": "for",
+    "s": 9.448,
+    "e": 9.604
+   },
+   {
+    "w": "an",
+    "s": 9.614,
+    "e": 9.715
+   },
+   {
+    "w": "hour.",
+    "s": 9.725,
+    "e": 9.937
+   },
+   {
+    "w": "Then",
+    "s": 10.117,
+    "e": 10.237
+   },
+   {
+    "w": "the",
+    "s": 10.237,
+    "e": 10.357
+   },
+   {
+    "w": "calendar",
+    "s": 10.357,
+    "e": 10.637
+   },
+   {
+    "w": "pages",
+    "s": 10.637,
+    "e": 11.057
+   },
+   {
+    "w": "started",
+    "s": 11.057,
+    "e": 11.377
+   },
+   {
+    "w": "flying.",
+    "s": 11.377,
+    "e": 11.797
+   },
+   {
+    "w": "College.",
+    "s": 12.193,
+    "e": 12.533
+   },
+   {
+    "w": "Exams,",
+    "s": 12.944,
+    "e": 13.424
+   },
+   {
+    "w": "parties,",
+    "s": 13.424,
+    "e": 13.944
+   },
+   {
+    "w": "heartbreak.",
+    "s": 13.944,
+    "e": 14.344
+   },
+   {
+    "w": "Still",
+    "s": 14.695,
+    "e": 14.935
+   },
+   {
+    "w": "waiting.",
+    "s": 14.935,
+    "e": 15.275
+   },
+   {
+    "w": "First",
+    "s": 15.677,
+    "e": 15.917
+   },
+   {
+    "w": "job.",
+    "s": 15.917,
+    "e": 16.237
+   },
+   {
+    "w": "A",
+    "s": 16.663,
+    "e": 16.786
+   },
+   {
+    "w": "suit,",
+    "s": 16.796,
+    "e": 17.052
+   },
+   {
+    "w": "a",
+    "s": 17.062,
+    "e": 17.185
+   },
+   {
+    "w": "tie,",
+    "s": 17.195,
+    "e": 17.385
+   },
+   {
+    "w": "a",
+    "s": 17.395,
+    "e": 17.518
+   },
+   {
+    "w": "beard.",
+    "s": 17.528,
+    "e": 17.851
+   },
+   {
+    "w": "Still",
+    "s": 18.031,
+    "e": 18.271
+   },
+   {
+    "w": "waiting.",
+    "s": 18.271,
+    "e": 18.611
+   },
+   {
+    "w": "And",
+    "s": 19.014,
+    "e": 19.114
+   },
+   {
+    "w": "the",
+    "s": 19.114,
+    "e": 19.194
+   },
+   {
+    "w": "TV",
+    "s": 19.194,
+    "e": 19.514
+   },
+   {
+    "w": "never",
+    "s": 19.514,
+    "e": 19.834
+   },
+   {
+    "w": "changed.",
+    "s": 19.834,
+    "e": 20.354
+   },
+   {
+    "w": "Trailer",
+    "s": 20.659,
+    "e": 20.879
+   },
+   {
+    "w": "two,",
+    "s": 20.879,
+    "e": 21.139
+   },
+   {
+    "w": "coming",
+    "s": 21.139,
+    "e": 21.419
+   },
+   {
+    "w": "soon.",
+    "s": 21.419,
+    "e": 21.779
+   },
+   {
+    "w": "I",
+    "s": 22.164,
+    "e": 22.264
+   },
+   {
+    "w": "got",
+    "s": 22.264,
+    "e": 22.424
+   },
+   {
+    "w": "married.",
+    "s": 22.424,
+    "e": 22.784
+   },
+   {
+    "w": "We",
+    "s": 23.185,
+    "e": 23.305
+   },
+   {
+    "w": "had",
+    "s": 23.305,
+    "e": 23.445
+   },
+   {
+    "w": "a",
+    "s": 23.445,
+    "e": 23.525
+   },
+   {
+    "w": "kid.",
+    "s": 23.525,
+    "e": 23.765
+   },
+   {
+    "w": "My",
+    "s": 24.135,
+    "e": 24.255
+   },
+   {
+    "w": "hair",
+    "s": 24.255,
+    "e": 24.475
+   },
+   {
+    "w": "turned",
+    "s": 24.475,
+    "e": 24.715
+   },
+   {
+    "w": "gray.",
+    "s": 24.715,
+    "e": 24.995
+   },
+   {
+    "w": "Now",
+    "s": 25.429,
+    "e": 25.569
+   },
+   {
+    "w": "I",
+    "s": 25.569,
+    "e": 25.789
+   },
+   {
+    "w": "have",
+    "s": 25.789,
+    "e": 25.949
+   },
+   {
+    "w": "a",
+    "s": 25.949,
+    "e": 26.049
+   },
+   {
+    "w": "wizard",
+    "s": 26.049,
+    "e": 26.249
+   },
+   {
+    "w": "beard",
+    "s": 26.249,
+    "e": 26.629
+   },
+   {
+    "w": "and",
+    "s": 26.629,
+    "e": 26.829
+   },
+   {
+    "w": "reading",
+    "s": 26.829,
+    "e": 27.049
+   },
+   {
+    "w": "glasses.",
+    "s": 27.049,
+    "e": 27.409
+   },
+   {
+    "w": "My",
+    "s": 27.871,
+    "e": 27.971
+   },
+   {
+    "w": "son",
+    "s": 27.971,
+    "e": 28.251
+   },
+   {
+    "w": "walks",
+    "s": 28.251,
+    "e": 28.531
+   },
+   {
+    "w": "in",
+    "s": 28.531,
+    "e": 28.731
+   },
+   {
+    "w": "with",
+    "s": 28.731,
+    "e": 28.871
+   },
+   {
+    "w": "his",
+    "s": 28.871,
+    "e": 29.051
+   },
+   {
+    "w": "diploma.",
+    "s": 29.051,
+    "e": 29.411
+   },
+   {
+    "w": "Dad,",
+    "s": 29.825,
+    "e": 30.005
+   },
+   {
+    "w": "is",
+    "s": 30.005,
+    "e": 30.205
+   },
+   {
+    "w": "it",
+    "s": 30.205,
+    "e": 30.305
+   },
+   {
+    "w": "out",
+    "s": 30.305,
+    "e": 30.445
+   },
+   {
+    "w": "yet?",
+    "s": 30.445,
+    "e": 30.645
+   },
+   {
+    "w": "Asking",
+    "s": 31.029,
+    "e": 31.349
+   },
+   {
+    "w": "for",
+    "s": 31.349,
+    "e": 31.529
+   },
+   {
+    "w": "my",
+    "s": 31.529,
+    "e": 31.709
+   },
+   {
+    "w": "whole",
+    "s": 31.709,
+    "e": 31.929
+   },
+   {
+    "w": "generation.",
+    "s": 31.929,
+    "e": 32.529
+   },
+   {
+    "w": "Not",
+    "s": 32.898,
+    "e": 33.038
+   },
+   {
+    "w": "yet,",
+    "s": 33.038,
+    "e": 33.258
+   },
+   {
+    "w": "son.",
+    "s": 33.258,
+    "e": 33.558
+   },
+   {
+    "w": "Not",
+    "s": 33.94,
+    "e": 34.14
+   },
+   {
+    "w": "yet.",
+    "s": 34.14,
+    "e": 34.42
+   },
+   {
+    "w": "Go",
+    "s": 34.766,
+    "e": 34.906
+   },
+   {
+    "w": "get",
+    "s": 34.906,
+    "e": 35.086
+   },
+   {
+    "w": "a",
+    "s": 35.086,
+    "e": 35.186
+   },
+   {
+    "w": "job.",
+    "s": 35.186,
+    "e": 35.486
+   },
+   {
+    "w": "Years",
+    "s": 35.874,
+    "e": 36.074
+   },
+   {
+    "w": "later,",
+    "s": 36.074,
+    "e": 36.414
+   },
+   {
+    "w": "lying",
+    "s": 36.574,
+    "e": 36.774
+   },
+   {
+    "w": "in",
+    "s": 36.774,
+    "e": 36.914
+   },
+   {
+    "w": "a",
+    "s": 36.914,
+    "e": 36.994
+   },
+   {
+    "w": "hospital",
+    "s": 36.994,
+    "e": 37.374
+   },
+   {
+    "w": "bed,",
+    "s": 37.374,
+    "e": 37.754
+   },
+   {
+    "w": "the",
+    "s": 37.994,
+    "e": 38.054
+   },
+   {
+    "w": "heart",
+    "s": 38.054,
+    "e": 38.254
+   },
+   {
+    "w": "monitor",
+    "s": 38.254,
+    "e": 38.594
+   },
+   {
+    "w": "beeping",
+    "s": 38.594,
+    "e": 38.874
+   },
+   {
+    "w": "slowly,",
+    "s": 38.874,
+    "e": 39.314
+   },
+   {
+    "w": "I",
+    "s": 39.739,
+    "e": 39.867
+   },
+   {
+    "w": "pass",
+    "s": 39.877,
+    "e": 40.142
+   },
+   {
+    "w": "my",
+    "s": 40.152,
+    "e": 40.28
+   },
+   {
+    "w": "dusty,",
+    "s": 40.29,
+    "e": 40.625
+   },
+   {
+    "w": "cobweb-covered",
+    "s": 40.635,
+    "e": 41.521
+   },
+   {
+    "w": "controller",
+    "s": 41.531,
+    "e": 42.21,
+    "hot": true
+   },
+   {
+    "w": "to",
+    "s": 42.22,
+    "e": 42.348
+   },
+   {
+    "w": "my",
+    "s": 42.358,
+    "e": 42.486
+   },
+   {
+    "w": "grandson.",
+    "s": 42.496,
+    "e": 43.037
+   },
+   {
+    "w": "And",
+    "s": 43.217,
+    "e": 43.317
+   },
+   {
+    "w": "right",
+    "s": 43.317,
+    "e": 43.497
+   },
+   {
+    "w": "then,",
+    "s": 43.497,
+    "e": 43.777
+   },
+   {
+    "w": "the",
+    "s": 43.777,
+    "e": 43.977
+   },
+   {
+    "w": "TV",
+    "s": 43.977,
+    "e": 44.297
+   },
+   {
+    "w": "dings.",
+    "s": 44.297,
+    "e": 44.597,
+    "hot": true
+   },
+   {
+    "w": "GTA",
+    "s": 45.025,
+    "e": 45.305
+   },
+   {
+    "w": "6,",
+    "s": 45.305,
+    "e": 45.765
+   },
+   {
+    "w": "ready",
+    "s": 45.765,
+    "e": 46.085,
+    "hot": true
+   },
+   {
+    "w": "to",
+    "s": 46.085,
+    "e": 46.245
+   },
+   {
+    "w": "start.",
+    "s": 46.245,
+    "e": 46.505
+   },
+   {
+    "w": "Finally.",
+    "s": 46.87,
+    "e": 47.31
+   }
+  ]
+ },
+ "style": "storybook",
+ "graphics": "full"
+}

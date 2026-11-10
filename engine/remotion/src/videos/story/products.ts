@@ -289,6 +289,130 @@ export const drawProduct = (p: Pen, kind: ProductKind, col = "#c8553d") => {
       p.ell(352, 90, 16, 14, "#fff1a0", 0);
       break;
     }
+    case "thermometer": {   // glass thermometer, red line maxed out
+      p.poly(rr(170, 40, 230, 320, 28), "#eef6fb", 9);
+      p.ell(200, 330, 44, 44, "#e2453c", 9);
+      p.poly([[192, 90], [208, 90], [208, 320], [192, 320]], "#e2453c", 0);
+      for (let y = 100; y < 300; y += 30) p.stroke([[215, y], [228, y]], 4);
+      break;
+    }
+    case "moth": {   // a dusty moth fluttering out of an empty pocket
+      for (const s of [-1, 1]) { p.ell(200 + s * 80, 170, 80, 60, "#b8ab94", 8); p.ell(200 + s * 60, 250, 50, 40, "#a39780", 8); p.ell(200 + s * 85, 165, 18, 14, "#8a7f6a", 0); }
+      p.ell(200, 210, 22, 70, "#6b604f", 8);
+      for (const s of [-1, 1]) p.stroke([[195, 150], [195 + s * 50, 90]], 5);
+      break;
+    }
+    case "cash": {   // a fat banded stack of bills
+      for (let k = 0; k < 4; k++) p.poly([[70 + k * 6, 260 - k * 34], [330 + k * 6, 260 - k * 34], [330 + k * 6, 300 - k * 34], [70 + k * 6, 300 - k * 34]], k % 2 ? "#5fae5a" : "#79c472", 7);
+      p.poly([[180, 150], [230, 150], [230, 300], [180, 300]], "#f2e6cf", 6);
+      p.ell(130, 165, 22, 14, "#3f7a3a", 0); p.ell(290, 165, 22, 14, "#3f7a3a", 0);
+      break;
+    }
+    case "noodles": {   // instant noodle cup with a fork
+      p.poly([[90, 140], [310, 140], [280, 350], [120, 350]], "#f7f5f0", 9);
+      p.poly([[98, 190], [302, 190], [295, 240], [105, 240]], "#e2453c", 0);
+      for (let k = 0; k < 7; k++) p.arc(130 + k * 24, 130, 18, 22, 180, 360, 6, "#f2d29a");
+      p.stroke([[250, 140], [300, 40]], 9, "#c9ccd2");
+      break;
+    }
+    case "extinguisher": {
+      p.poly(rr(140, 110, 260, 360, 40), "#e2453c", 10);
+      p.poly([[175, 60], [225, 60], [225, 110], [175, 110]], "#2b2b38", 7);
+      p.stroke([[225, 75], [300, 70], [320, 120]], 12, "#2b2b38");
+      p.poly([[160, 200], [240, 200], [240, 250], [160, 250]], "#f2efe8", 5);
+      break;
+    }
+    case "potato": {   // a raw potato with an ethernet cable plugged in
+      p.ell(190, 230, 140, 100, "#c8a06a", 9);
+      for (const [x, y] of [[120, 200], [210, 270], [260, 200]]) p.ell(x, y, 8, 6, "#8a6a3a", 0);
+      p.poly([[300, 200], [345, 200], [345, 240], [300, 240]], "#3f6fb5", 6);
+      p.stroke([[345, 220], [390, 160]], 9, "#3f6fb5");
+      break;
+    }
+    case "battery": {   // car battery with clamps
+      p.poly(rr(70, 150, 330, 340, 14), "#2b2b38", 10);
+      p.poly([[95, 120], [145, 120], [145, 150], [95, 150]], "#e2453c", 6); p.poly([[255, 120], [305, 120], [305, 150], [255, 150]], "#c9ccd2", 6);
+      p.stroke([[150, 250], [250, 250]], 12, "#ffd23f"); p.stroke([[200, 200], [200, 300]], 12, "#ffd23f");
+      break;
+    }
+    case "diploma": {   // rolled diploma with a red ribbon
+      p.poly([[70, 170], [330, 140], [340, 240], [80, 270]], "#f6efe0", 9);
+      p.ell(75, 220, 22, 52, "#e9dfc6", 7); p.ell(335, 190, 22, 52, "#e9dfc6", 7);
+      p.poly([[190, 155], [220, 152], [228, 255], [198, 258]], "#c8323a", 4);
+      break;
+    }
+    case "sicknote": {   // pre-signed doctor's note with a red cross
+      p.poly([[90, 60], [310, 60], [310, 360], [90, 360]], "#ffffff", 9);
+      p.poly([[185, 90], [215, 90], [215, 120], [245, 120], [245, 150], [215, 150], [215, 180], [185, 180], [185, 150], [155, 150], [155, 120], [185, 120]], "#e2453c", 4);
+      for (let y = 210; y < 300; y += 26) p.stroke([[120, y], [280, y]], 5, "#9aa4ad");
+      p.stroke([[150, 330], [180, 310], [200, 335], [240, 305], [270, 330]], 6, "#2f4a9a");
+      break;
+    }
+    case "router": {   // wifi router with antennas
+      p.poly(rr(70, 230, 330, 320, 16), "#2b2b38", 10);
+      for (const x of [110, 290]) p.stroke([[x, 235], [x + (x < 200 ? -20 : 20), 100]], 12, "#2b2b38");
+      for (let k = 0; k < 5; k++) p.ell(130 + k * 35, 285, 7, 7, k < 3 ? "#39d98a" : "#ffd23f", 0);
+      break;
+    }
+    case "newspaper": {   // folded broadsheet with a headline and columns
+      p.poly([[60, 90], [340, 70], [350, 330], [70, 350]], "#f2efe8", 9);
+      p.poly([[85, 110], [320, 95], [323, 150], [88, 165]], "#2b2b38", 0);
+      for (let k = 0; k < 6; k++) { p.stroke([[95, 190 + k * 22], [200, 183 + k * 22]], 6, "#9aa4ad"); p.stroke([[220, 182 + k * 22], [325, 175 + k * 22]], 6, "#9aa4ad"); }
+      break;
+    }
+    case "pickaxe": {
+      p.stroke([[110, 360], [270, 110]], 22, "#8a5a34");
+      p.poly([[120, 90], [200, 60], [330, 90], [400, 170], [300, 120], [210, 100], [130, 130]], "#9aa4ad", 9);
+      break;
+    }
+    case "shovel": {   // a tiny plastic shovel
+      p.stroke([[200, 40], [200, 250]], 18, "#ff7a1a");
+      p.poly([[140, 250], [260, 250], [250, 330], [200, 370], [150, 330]], "#ffd23f", 9);
+      p.poly([[160, 30], [240, 30], [240, 60], [160, 60]], "#ff7a1a", 7);
+      break;
+    }
+    case "bagel": {
+      p.ell(200, 220, 160, 120, "#d9944a", 10); p.ell(200, 220, 50, 34, "#ffffff", 8);
+      for (let k = 0; k < 18; k++) { const a = k * 0.35; p.ell(200 + 120 * Math.cos(a), 220 + 80 * Math.sin(a), 6, 3, "#f7efe0", 0); }
+      p.ell(250, 180, 30, 14, "rgba(255,255,255,0.35)", 0);
+      break;
+    }
+    case "lettuce": {
+      for (let k = 0; k < 7; k++) { const a = (k / 7) * Math.PI * 2; p.ell(200 + 70 * Math.cos(a), 220 + 50 * Math.sin(a), 90, 70, k % 2 ? "#7cc46a" : "#5fae5a", 7); }
+      p.ell(200, 220, 70, 55, "#a8dd8e", 7);
+      break;
+    }
+    case "pillow": {
+      p.poly([[50, 140], [200, 110], [350, 140], [360, 290], [200, 320], [40, 290]], "#f2efe8", 10);
+      p.stroke([[120, 200], [280, 200]], 5, "#c9ccd2");
+      break;
+    }
+    case "wrench": {
+      p.stroke([[110, 330], [280, 130]], 34, "#9aa4ad"); p.stroke([[110, 330], [280, 130]], 18, "#c9ccd2");
+      p.poly([[250, 70], [330, 90], [350, 170], [300, 150], [280, 110]], "#9aa4ad", 9);
+      break;
+    }
+    case "check": {   // a giant signed cheque
+      p.poly([[30, 120], [370, 120], [370, 300], [30, 300]], "#e6f2dc", 9);
+      p.stroke([[60, 170], [200, 170]], 8, "#3f7a3a"); p.stroke([[60, 260], [340, 260]], 5, "#3a3d47");
+      const g = p.g; g.fillStyle = "#3f7a3a"; g.font = "bold 46px Arial Black, Arial"; g.textAlign = "right"; g.fillText("$1,000,000,000", 360, 230);
+      p.stroke([[220, 290], [260, 270], [290, 292], [330, 265]], 5, "#2f4a9a");
+      break;
+    }
+    case "trident": {   // Neptune's golden trident
+      p.stroke([[200, 380], [200, 120]], 18, "#e8b83a");
+      p.stroke([[120, 140], [120, 60]], 16, "#e8b83a"); p.stroke([[280, 140], [280, 60]], 16, "#e8b83a"); p.stroke([[200, 120], [200, 30]], 16, "#e8b83a");
+      p.stroke([[110, 140], [290, 140]], 18, "#e8b83a");
+      for (const x of [120, 200, 280]) p.poly([[x - 18, x === 200 ? 40 : 70], [x, x === 200 ? 0 : 30], [x + 18, x === 200 ? 40 : 70]], "#ffd23f", 6);
+      break;
+    }
+    case "clipboard": {
+      p.poly(rr(90, 60, 310, 370, 14), "#a8784a", 9);
+      p.poly([[115, 100], [285, 100], [285, 350], [115, 350]], "#ffffff", 6);
+      p.poly(rr(160, 40, 240, 90, 10), "#9aa4ad", 7);
+      for (let k = 0; k < 6; k++) p.stroke([[135, 140 + k * 34], [265, 140 + k * 34]], 6, "#9aa4ad");
+      break;
+    }
     default: break;
   }
 };

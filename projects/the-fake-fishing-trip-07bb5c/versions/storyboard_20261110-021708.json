@@ -1,0 +1,1156 @@
+{
+ "version": 1,
+ "title": "The Fake Fishing Trip",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1324,
+ "env": {
+  "preset": "suburb",
+  "seed": 16,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "hubby",
+   "name": "Husband",
+   "outfit": {
+    "jacket": "#7a8a4a",
+    "pants": "#5a5f6a",
+    "boots": "#3a2f2a",
+    "skin": "#f5c9a0",
+    "hat": "bucket",
+    "cap": "#9aa06a",
+    "shades": true,
+    "pockets": true
+   }
+  },
+  {
+   "id": "wife",
+   "name": "Wife",
+   "outfit": {
+    "jacket": "#3f6fb5",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "dress": "#3f6fb5",
+    "hat": "longhair",
+    "hair": "#e8c46a"
+   }
+  },
+  {
+   "id": "friend",
+   "name": "Friend",
+   "outfit": {
+    "jacket": "#b5653f",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ecd0b6",
+    "hat": "tophat",
+    "cap": "#2f5f6a"
+   }
+  },
+  {
+   "id": "tourist",
+   "name": "Woman at the resort",
+   "outfit": {
+    "jacket": "#ff7a59",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ffe2c2",
+    "dress": "#ff7a59",
+    "hat": "sunhat",
+    "hair": "#2a201a",
+    "shades": true
+   }
+  },
+  {
+   "id": "wifevest",
+   "name": "Wife (fishing vest)",
+   "outfit": {
+    "jacket": "#6a7a3a",
+    "pants": "#5a5f6a",
+    "boots": "#3a2f2a",
+    "skin": "#c99067",
+    "hat": "bucket",
+    "cap": "#9aa06a",
+    "shades": true,
+    "pockets": true
+   }
+  },
+  {
+   "id": "lawyer",
+   "name": "Divorce lawyer",
+   "outfit": {
+    "jacket": "#5a6170",
+    "pants": "#4a4f5a",
+    "boots": "#1d1b22",
+    "skin": "#f5c9a0",
+    "hat": "longhair",
+    "hair": "#2a201a",
+    "tie": "#c8323a",
+    "dress": "#5a6170"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 146,
+   "narration": "This husband faked a fishing trip perfectly. He just forgot how sunglasses work.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "hubby",
+     "x": 7.66,
+     "z": 3.932,
+     "expr": "grin",
+     "mode": "stand",
+     "holding": "fish"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      8.471,
+      1.68,
+      9.805
+     ],
+     "lookAt": [
+      8,
+      1.38,
+      4
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 106,
+     "cut": true,
+     "position": [
+      5.333,
+      1.68,
+      9.177
+     ],
+     "lookAt": [
+      8,
+      1.38,
+      4
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1600,
+   "qualityNotes": "",
+   "pieces": [
+    {
+     "kind": "poster",
+     "x": 9.376,
+     "z": 3.062
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 108,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 106,
+     "dur": 40,
+     "at": [
+      8.072,
+      2.28,
+      4.014
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 146,
+   "endFrame": 285,
+   "narration": "He told his wife: zero signal, a weekend at the lake with the boys.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "hubby",
+     "x": 0.726,
+     "z": 2.5,
+     "expr": "grin",
+     "mode": "stand",
+     "wave": true
+    },
+    {
+     "castId": "wife",
+     "x": -1.234,
+     "z": 1.96,
+     "expr": "smile",
+     "mode": "stand",
+     "wave": true
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 146,
+     "position": [
+      -3.0,
+      2.3,
+      13.0
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      2.5
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 222,
+     "cut": true,
+     "position": [
+      3.0,
+      2.3,
+      13.0
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      2.5
+     ],
+     "fov": 42,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1601,
+   "qualityNotes": "",
+   "pieces": [
+    {
+     "kind": "car",
+     "x": -2.075,
+     "z": 1.05
+    }
+   ]
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 285,
+   "endFrame": 366,
+   "narration": "Then he sent live photos every few hours.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "wife",
+     "x": 0.0,
+     "z": -1.2,
+     "expr": "smile",
+     "mode": "stand",
+     "holding": "phone"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 285,
+     "position": [
+      1.6,
+      1.68,
+      4.4
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      -1.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 317,
+     "dur": 24,
+     "position": [
+      0.55,
+      1.62,
+      1.7
+     ],
+     "lookAt": [
+      0,
+      1.5,
+      -1.2
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 1602,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "apartment",
+    "seed": 16,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 310,
+     "dur": 56,
+     "at": [
+      0.42,
+      2.28,
+      -1.2
+     ],
+     "size": 0.42,
+     "product": "camera"
+    }
+   ]
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 366,
+   "endFrame": 466,
+   "narration": "Fishing vest. Rods. Beer by the cabin.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "hubby",
+     "x": -4.5,
+     "z": 0.5,
+     "expr": "grin",
+     "mode": "stand",
+     "holding": "fish"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 366,
+     "position": [
+      -7.5,
+      2.3,
+      11.0
+     ],
+     "lookAt": [
+      -4.5,
+      1.2,
+      0.5
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 409,
+     "dur": 24,
+     "position": [
+      -6.1,
+      1.68,
+      6.1
+     ],
+     "lookAt": [
+      -4.5,
+      1.38,
+      0.5
+     ],
+     "fov": 38,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 1603,
+   "qualityNotes": "",
+   "env": {
+    "preset": "lake",
+    "seed": 16,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 466,
+   "endFrame": 510,
+   "narration": "But his wife zoomed in.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "wife",
+     "x": 0.0,
+     "z": -1.2,
+     "expr": "smile",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 481,
+       "expr": "stern"
+      }
+     ],
+     "holding": "phone"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 466,
+     "position": [
+      0.55,
+      1.62,
+      1.7
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -1.2
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1604,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "apartment",
+    "seed": 16,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 510,
+   "endFrame": 617,
+   "narration": "In every photo, the sun was in the exact same spot.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "hubby",
+     "x": 4.1,
+     "z": 15.0,
+     "expr": "grin",
+     "mode": "stand",
+     "holding": "fish"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 510,
+     "position": [
+      5.7,
+      1.68,
+      9.4
+     ],
+     "lookAt": [
+      4.1,
+      1.38,
+      15
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 556,
+     "dur": 24,
+     "position": [
+      4.65,
+      1.62,
+      12.1
+     ],
+     "lookAt": [
+      4.1,
+      1.5,
+      15
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1605,
+   "qualityNotes": "",
+   "env": {
+    "preset": "lake",
+    "seed": 16,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 583,
+     "dur": 34,
+     "at": [
+      3.68,
+      2.28,
+      15.0
+     ],
+     "size": 0.42,
+     "product": "question"
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "SAME SUN. EVERY PHOTO.",
+     "frame": 513,
+     "dur": 101,
+     "position": "top",
+     "style": "label"
+    }
+   ]
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 617,
+   "endFrame": 682,
+   "narration": "Because he took them all the week before.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "hubby",
+     "x": 7.739,
+     "z": 3.948,
+     "expr": "grin",
+     "mode": "stand",
+     "holding": "fish"
+    },
+    {
+     "castId": "friend",
+     "x": 7.209,
+     "z": 2.924,
+     "expr": "smile",
+     "mode": "stand",
+     "holding": "phone"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 617,
+     "position": [
+      7.876,
+      1.66,
+      8.36
+     ],
+     "lookAt": [
+      7.739,
+      1.42,
+      3.948
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1606,
+   "qualityNotes": "",
+   "pieces": [
+    {
+     "kind": "poster",
+     "x": 9.376,
+     "z": 3.062
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 653,
+     "dur": 29,
+     "at": [
+      7.621,
+      2.28,
+      3.006
+     ],
+     "size": 0.42,
+     "product": "camera"
+    }
+   ]
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 682,
+   "endFrame": 761,
+   "narration": "Except the last selfie. From the boat.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "hubby",
+     "x": 2.0,
+     "z": 11.2,
+     "expr": "grin",
+     "mode": "stand",
+     "holding": "phone"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 682,
+     "position": [
+      1.45,
+      1.62,
+      14.1
+     ],
+     "lookAt": [
+      2.0,
+      1.5,
+      11.2
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 725,
+     "cut": true,
+     "position": [
+      2.55,
+      1.62,
+      14.1
+     ],
+     "lookAt": [
+      2.0,
+      1.5,
+      11.2
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 1607,
+   "qualityNotes": "",
+   "env": {
+    "preset": "resort",
+    "seed": 16,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 761,
+   "endFrame": 886,
+   "narration": "His sunglasses reflected a neon palm tree, and a pool bar.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "hubby",
+     "x": 2.0,
+     "z": 11.2,
+     "expr": "grin",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 761,
+     "position": [
+      2.55,
+      1.62,
+      14.1
+     ],
+     "lookAt": [
+      2.0,
+      1.5,
+      11.2
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 829,
+     "cut": true,
+     "position": [
+      1.45,
+      1.62,
+      14.1
+     ],
+     "lookAt": [
+      2.0,
+      1.5,
+      11.2
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1608,
+   "qualityNotes": "",
+   "env": {
+    "preset": "resort",
+    "seed": 16,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 811,
+     "dur": 60,
+     "at": [
+      2.274,
+      2.05,
+      11.2
+     ],
+     "size": 0.44330948811505755
+    }
+   ]
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 886,
+   "endFrame": 919,
+   "narration": "In Cancun.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "hubby",
+     "x": -11.0,
+     "z": -4.5,
+     "expr": "grin",
+     "mode": "stand"
+    },
+    {
+     "castId": "tourist",
+     "x": -12.816,
+     "z": -4.999,
+     "expr": "smile",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 886,
+     "position": [
+      -14.0,
+      2.3,
+      6.0
+     ],
+     "lookAt": [
+      -11,
+      1.2,
+      -4.5
+     ],
+     "fov": 42,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1609,
+   "qualityNotes": "",
+   "env": {
+    "preset": "resort",
+    "seed": 16,
+    "shop": null
+   },
+   "kicks": [
+    {
+     "frame": 894,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 892,
+     "dur": 27,
+     "at": [
+      -10.58,
+      2.28,
+      -4.5
+     ],
+     "size": 0.8
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "CANCUN",
+     "frame": 889,
+     "dur": 27,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 919,
+   "endFrame": 1002,
+   "narration": "And a woman holding the phone, taking the picture.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "tourist",
+     "x": 2.0,
+     "z": 11.2,
+     "expr": "smile",
+     "mode": "stand",
+     "holding": "phone"
+    },
+    {
+     "castId": "hubby",
+     "x": 1.28,
+     "z": 10.3,
+     "expr": "grin",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 919,
+     "position": [
+      3.0,
+      1.66,
+      15.5
+     ],
+     "lookAt": [
+      2.0,
+      1.42,
+      11.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 952,
+     "dur": 24,
+     "position": [
+      2.55,
+      1.62,
+      14.1
+     ],
+     "lookAt": [
+      2.0,
+      1.5,
+      11.2
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1610,
+   "qualityNotes": "",
+   "env": {
+    "preset": "resort",
+    "seed": 16,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 981,
+     "dur": 21,
+     "at": [
+      2.42,
+      2.28,
+      11.2
+     ],
+     "size": 0.42,
+     "product": "camera"
+    }
+   ]
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 1002,
+   "endFrame": 1099,
+   "narration": "Sunday night, he came home with a suspicious tan.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "hubby",
+     "x": -2.4,
+     "z": 2.5,
+     "expr": "smile",
+     "mode": "stroll",
+     "walkTo": [
+      0.0,
+      2.5
+     ],
+     "walkFrames": [
+      1002,
+      1069
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1002,
+     "position": [
+      -3.0,
+      2.3,
+      13.0
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      2.5
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1043,
+     "dur": 24,
+     "position": [
+      -1.6,
+      1.68,
+      8.1
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      2.5
+     ],
+     "fov": 38,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 1611,
+   "qualityNotes": ""
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 1099,
+   "endFrame": 1216,
+   "narration": "His wife opened the door wearing a fishing vest. Next to her lawyer.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "wifevest",
+     "x": 0.0,
+     "z": 2.5,
+     "expr": "stern",
+     "mode": "stand"
+    },
+    {
+     "castId": "lawyer",
+     "x": -0.72,
+     "z": 1.6,
+     "expr": "stern",
+     "mode": "stand",
+     "holding": "scroll"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1099,
+     "position": [
+      1.0,
+      1.66,
+      6.8
+     ],
+     "lookAt": [
+      0.0,
+      1.42,
+      2.5
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1186,
+     "dur": 24,
+     "position": [
+      0.55,
+      1.62,
+      5.4
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      2.5
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1612,
+   "qualityNotes": "",
+   "kicks": [
+    {
+     "frame": 1201,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 1199,
+     "dur": 17,
+     "at": [
+      -0.3,
+      2.28,
+      1.6
+     ],
+     "size": 0.42,
+     "product": "exclaim"
+    }
+   ]
+  },
+  {
+   "sceneId": "b14",
+   "startFrame": 1216,
+   "endFrame": 1324,
+   "narration": "Holding his credit card statement. Catch of the day.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "wifevest",
+     "x": 0.0,
+     "z": 2.5,
+     "expr": "stern",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1278,
+       "expr": "smile"
+      }
+     ],
+     "holding": "card"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1216,
+     "position": [
+      -0.55,
+      1.62,
+      5.4
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      2.5
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1275,
+     "cut": true,
+     "position": [
+      0.55,
+      1.62,
+      5.4
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      2.5
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1613,
+   "qualityNotes": "",
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 1295,
+     "dur": 29,
+     "at": [
+      0.274,
+      2.05,
+      2.5
+     ],
+     "size": 0.44330948811505755
+    }
+   ]
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": false,
+  "words": []
+ },
+ "style": "storybook",
+ "graphics": "full"
+}

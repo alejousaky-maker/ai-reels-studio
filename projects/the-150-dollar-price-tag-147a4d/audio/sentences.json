@@ -1,0 +1,126 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 47.870875,
+ "voice": "am_eric*0.6+am_fenrir*0.4",
+ "lang": "en",
+ "speed": 1.12,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "Rumors say GTA 6 might cost a hundred and fifty dollars, and gamers are already selling their furniture just to pre-order the base edition.",
+   "start": 0.06,
+   "end": 7.722104166666667
+  },
+  {
+   "text": "He checks his pockets.",
+   "start": 7.862104166666667,
+   "end": 9.058
+  },
+  {
+   "text": "Both of them.",
+   "start": 9.198,
+   "end": 10.0568125
+  },
+  {
+   "text": "Only a moth flies out.",
+   "start": 10.1968125,
+   "end": 11.6220625
+  },
+  {
+   "text": "So he drags everything he owns onto the front lawn for a yard sale.",
+   "start": 11.7620625,
+   "end": 15.367166666666666
+  },
+  {
+   "text": "Sofa, sold.",
+   "start": 15.507166666666667,
+   "end": 16.451583333333332
+  },
+  {
+   "text": "Fridge, sold.",
+   "start": 16.591583333333332,
+   "end": 17.466833333333334
+  },
+  {
+   "text": "Bed, sold.",
+   "start": 17.606833333333334,
+   "end": 18.381229166666667
+  },
+  {
+   "text": "Even the dog house.",
+   "start": 18.521229166666668,
+   "end": 19.615979166666666
+  },
+  {
+   "text": "Sold.",
+   "start": 19.755979166666666,
+   "end": 20.2995
+  },
+  {
+   "text": "Neighbors walk away with his whole life, piece by piece, for cash.",
+   "start": 20.4395,
+   "end": 23.635770833333332
+  },
+  {
+   "text": "Then he trades his car keys for a single gift card.",
+   "start": 23.775770833333333,
+   "end": 26.419791666666665
+  },
+  {
+   "text": "He walks back inside in his socks and headphones, smiling like a millionaire.",
+   "start": 26.559791666666666,
+   "end": 30.285979166666667
+  },
+  {
+   "text": "Rent is due tomorrow.",
+   "start": 30.425979166666668,
+   "end": 31.6943125
+  },
+  {
+   "text": "He does not care.",
+   "start": 31.8343125,
+   "end": 32.80439583333333
+  },
+  {
+   "text": "The apartment is now completely empty.",
+   "start": 32.94439583333333,
+   "end": 34.963770833333335
+  },
+  {
+   "text": "Bare brick.",
+   "start": 35.103770833333336,
+   "end": 35.788645833333334
+  },
+  {
+   "text": "One light bulb.",
+   "start": 35.928645833333334,
+   "end": 36.927625
+  },
+  {
+   "text": "No furniture.",
+   "start": 37.067625,
+   "end": 37.9941875
+  },
+  {
+   "text": "He sits on a cardboard box, eating cold instant noodles,",
+   "start": 38.1341875,
+   "end": 41.23741666666667
+  },
+  {
+   "text": "in front of an eighty-five inch TV running GTA 6.",
+   "start": 41.37741666666667,
+   "end": 44.52372916666667
+  },
+  {
+   "text": "Happiest man alive.",
+   "start": 44.66372916666667,
+   "end": 45.84560416666667
+  },
+  {
+   "text": "No couch, no bed, no regrets.",
+   "start": 45.98560416666667,
+   "end": 47.730875
+  }
+ ]
+}

@@ -1,0 +1,121 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 42.770604166666665,
+ "voice": "af_heart",
+ "lang": "en",
+ "speed": 0.88,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "He found out his bride cheated with the best man.",
+   "start": 0.06,
+   "end": 2.5991458333333335
+  },
+  {
+   "text": "He didn't cancel the wedding.",
+   "start": 2.739145833333333,
+   "end": 4.286708333333333
+  },
+  {
+   "text": "He edited the slideshow.",
+   "start": 4.426708333333333,
+   "end": 5.811708333333334
+  },
+  {
+   "text": "Forty thousand dollars.",
+   "start": 5.951708333333333,
+   "end": 7.4500625
+  },
+  {
+   "text": "Two hundred guests.",
+   "start": 7.5900625,
+   "end": 8.8123125
+  },
+  {
+   "text": "One projector.",
+   "start": 8.9523125,
+   "end": 10.062
+  },
+  {
+   "text": "The night before, a hotel hallway camera told him everything.",
+   "start": 10.202,
+   "end": 13.860854166666666
+  },
+  {
+   "text": "He smiled through the whole ceremony.",
+   "start": 14.000854166666667,
+   "end": 15.966354166666667
+  },
+  {
+   "text": "Then, at the reception, he took the mic for a special slideshow.",
+   "start": 16.106354166666666,
+   "end": 19.93627083333333
+  },
+  {
+   "text": "Baby photos.",
+   "start": 20.076270833333332,
+   "end": 21.227375
+  },
+  {
+   "text": "The first date.",
+   "start": 21.367375,
+   "end": 22.420666666666666
+  },
+  {
+   "text": "The proposal.",
+   "start": 22.560666666666666,
+   "end": 23.458104166666665
+  },
+  {
+   "text": "And then, a hallway photo.",
+   "start": 23.598104166666666,
+   "end": 25.315520833333334
+  },
+  {
+   "text": "The bride and the best man, walking into the same hotel room.",
+   "start": 25.455520833333335,
+   "end": 29.262479166666665
+  },
+  {
+   "text": "Timestamp: last night.",
+   "start": 29.402479166666666,
+   "end": 30.9311875
+  },
+  {
+   "text": "The bride and the best man went pale.",
+   "start": 31.0711875,
+   "end": 33.083875
+  },
+  {
+   "text": "He raised his glass.",
+   "start": 33.223875,
+   "end": 34.50791666666667
+  },
+  {
+   "text": "To the happy couple.",
+   "start": 34.64791666666667,
+   "end": 35.823395833333336
+  },
+  {
+   "text": "Then he dropped the mic.",
+   "start": 35.96339583333334,
+   "end": 37.25602083333333
+  },
+  {
+   "text": "He grabbed his suitcase, and the honeymoon tickets.",
+   "start": 37.39602083333333,
+   "end": 40.223333333333336
+  },
+  {
+   "text": "Best wedding ever.",
+   "start": 40.36333333333334,
+   "end": 41.511270833333334
+  },
+  {
+   "text": "For one guest.",
+   "start": 41.651270833333335,
+   "end": 42.630604166666664
+  }
+ ]
+}

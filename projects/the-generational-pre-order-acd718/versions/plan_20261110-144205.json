@@ -1,0 +1,968 @@
+{
+ "version": 1,
+ "title": "The Generational Pre-Order",
+ "lang": "en",
+ "style": "storybook",
+ "environment": "bedroom",
+ "seed": 59,
+ "cast": [
+  {
+   "id": "teen",
+   "name": "Me at 16",
+   "role": "teen",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "uni",
+   "name": "Me at 20",
+   "role": "streamer",
+   "palette": "#3f6fb5",
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "job",
+   "name": "Me at 30",
+   "role": "officeguy",
+   "palette": null,
+   "skin": null,
+   "hair": "#3a2a1e",
+   "shades": null
+  },
+  {
+   "id": "wife",
+   "name": "Wife",
+   "role": "wife",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "old",
+   "name": "Me at 70",
+   "role": "oldgamer",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "son",
+   "name": "Son",
+   "role": "graduate",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "kid",
+   "name": "Grandson",
+   "role": "kid",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  }
+ ],
+ "beats": [
+  {
+   "narration": "I pre-ordered GTA 6 as a teenager, and by the time it finally loaded, my son was graduating college.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "teen",
+     "action": "jump",
+     "expr": "starry",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": "day",
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "whip",
+   "hud": "panel",
+   "hudText": "PRE-ORDER CONFIRMED|GTA 6",
+   "shots": [
+    {
+     "at": "by",
+     "shot": "extreme",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "old",
+       "action": "stand",
+       "expr": "sleepy",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    },
+    {
+     "at": "son",
+     "shot": "medium",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "son",
+       "action": "cheer",
+       "expr": "laugh",
+       "react": null,
+       "holding": "diploma",
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "sparkle",
+       "product": null,
+       "color": null,
+       "word": "graduating",
+       "on": "son"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "orbit",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "Twenty thirteen. I clicked pre-order and bounced in my chair for an hour.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "teen",
+     "action": "jump",
+     "expr": "starry",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "2013",
+   "textStyle": "title",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": "day",
+   "pieces": [
+    {
+     "kind": "calendar",
+     "where": "right",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "2013",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Then the calendar pages started flying.",
+   "shot": "close",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "teen",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": "day",
+   "pieces": [
+    {
+     "kind": "calendar",
+     "where": "right",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "2016",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "whip",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "College. Exams, parties, heartbreak. Still waiting.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "uni",
+     "action": "sit",
+     "expr": "sleepy",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "2018",
+   "textStyle": "title",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": "day",
+   "pieces": [
+    {
+     "kind": "calendar",
+     "where": "right",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "2018",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": null,
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "First job. A suit, a tie, a beard. Still waiting.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "job",
+     "action": "hips",
+     "expr": "neutral",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "2024",
+   "textStyle": "title",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "calendar",
+     "where": "right",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "2024",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "orbit",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "And the TV never changed. Trailer two, coming soon.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "job",
+     "action": "stand",
+     "expr": "sleepy",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "tv",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "TRAILER 2|COMING SOON",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "truck_left",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "Trailer",
+     "shot": "insert",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": null,
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": [
+      {
+       "kind": "tv",
+       "where": "behind",
+       "dx": 0.0,
+       "dz": 0.0,
+       "scale": 1.4,
+       "y": null,
+       "mirror": false,
+       "move": null,
+       "label": "TRAILER 2|COMING SOON",
+       "spin": null,
+       "lift": null,
+       "shake": null
+      }
+     ],
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "I got married. We had a kid. My hair turned gray.",
+   "shot": "two_shot",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "job",
+     "action": "stand",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": null,
+     "y": null
+    },
+    {
+     "id": "wife",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "job",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "orbit",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "We",
+     "shot": "medium",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "kid",
+       "action": "jump",
+       "expr": "laugh",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    },
+    {
+     "at": "My",
+     "shot": "extreme",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "old",
+       "action": "stand",
+       "expr": "sleepy",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  },
+  {
+   "narration": "Now I have a wizard beard and reading glasses.",
+   "shot": "close",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "old",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "2061",
+   "textStyle": "title",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "calendar",
+     "where": "right",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "2061",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "My son walks in with his diploma.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "son",
+     "action": "walk",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": "diploma",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "follow",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Dad, is it out yet? Asking for my whole generation.",
+   "shot": "close",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "son",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Not yet, son. Not yet. Go get a job.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "old",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "bedroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "pull",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "Years later, lying in a hospital bed, the heart monitor beeping slowly,",
+   "shot": "medium",
+   "light": "day",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "old",
+     "action": "sit",
+     "expr": "sleepy",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "clinic",
+   "envVariant": "ward",
+   "pieces": [
+    {
+     "kind": "hospitalbed",
+     "where": "on",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 0.6,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    },
+    {
+     "kind": "heartmonitor",
+     "where": "right",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "I pass my dusty, cobweb-covered controller to my grandson.",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "old",
+     "action": "sit",
+     "expr": "smile_closed",
+     "react": null,
+     "holding": "controller",
+     "y": null
+    },
+    {
+     "id": "kid",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "old",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "controller",
+     "color": null,
+     "word": "controller",
+     "on": "old"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "clinic",
+   "envVariant": "ward",
+   "pieces": [
+    {
+     "kind": "hospitalbed",
+     "where": "on",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 0.6,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "orbit",
+   "hud": null,
+   "hudText": null,
+   "shots": []
+  },
+  {
+   "narration": "And right then, the TV dings. GTA 6, ready to start. Finally.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "kid",
+     "action": "jump",
+     "expr": "starry",
+     "react": null,
+     "holding": "controller",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": "dings",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "clinic",
+   "envVariant": "ward",
+   "pieces": [
+    {
+     "kind": "tv",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "~game|READY TO START",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "whip",
+   "hud": null,
+   "hudText": null,
+   "shots": [
+    {
+     "at": "GTA",
+     "shot": "extreme",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "old",
+       "action": "stand",
+       "expr": "relief",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "sparkle",
+       "product": null,
+       "color": null,
+       "word": "ready",
+       "on": "old"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null
+    }
+   ]
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Comedy fiction about GTA 6 (hypothetical delay / size / price / release-day scenarios); the game, console and studio appear only as generic unbranded props.",
+   "status": "fiction",
+   "source": null
+  }
+ ],
+ "creativeHooks": [],
+ "brand": null,
+ "cta": null,
+ "captions": true,
+ "graphics": "full"
+}
