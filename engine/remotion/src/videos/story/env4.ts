@@ -84,6 +84,61 @@ const houseFront = (key: string, col: string, door: string) => ctex("hfront_" + 
   g.strokeStyle = INKC; g.lineWidth = 6; g.strokeRect(150, 260, 210, 252);
 });
 
+/** eye-catching wall posters, our own painted art (no logos): synthwave city, sports car, palm sunset, arcade, rocket */
+export const posterTex = (kind: string) => ctex("poster_" + kind, 384, 512, (g, r) => {
+  const sky = g.createLinearGradient(0, 0, 0, 512);
+  const pal: Record<string, [string, string]> = { city: ["#2a0f4a", "#ff5fa2"], car: ["#ff9a3c", "#ffd86b"], palms: ["#ff5f6d", "#ffc371"], arcade: ["#101030", "#3a2a8a"], rocket: ["#0b1a3a", "#3f6fb5"] };
+  const [c0, c1] = pal[kind] ?? pal.city;
+  sky.addColorStop(0, c0); sky.addColorStop(1, c1); g.fillStyle = sky; g.fillRect(0, 0, 384, 512);
+  g.lineWidth = 6; g.strokeStyle = INKC;
+  if (kind === "city" || kind === "palms") {   // big sun with stripes + skyline / palms
+    g.fillStyle = "#ffd23f"; g.beginPath(); g.arc(192, 300, 120, Math.PI, 0); g.fill();
+    g.fillStyle = c0; for (let y = 230; y < 300; y += 16) g.fillRect(60, y, 264, 5);
+    if (kind === "city") { g.fillStyle = "#14082a"; let x = 0; while (x < 384) { const w = 30 + r() * 40, h = 80 + r() * 160; g.fillRect(x, 420 - h, w, h + 100); g.fillStyle = "#ff5fa2"; for (let k = 0; k < 6; k++) g.fillRect(x + 6 + (k % 2) * 14, 430 - h + k * 22, 6, 8); g.fillStyle = "#14082a"; x += w + 4; } }
+    else for (const [px, h] of [[70, 280], [300, 320]] as const) { g.strokeStyle = "#2a1020"; g.lineWidth = 14; g.beginPath(); g.moveTo(px, 512); g.quadraticCurveTo(px + 20, 512 - h / 2, px + 10, 512 - h); g.stroke(); g.fillStyle = "#2a1020"; for (let k = 0; k < 6; k++) { g.beginPath(); g.ellipse(px + 10 + Math.cos(k) * 40, 512 - h + Math.sin(k) * 10, 60, 14, k, 0, 7); g.fill(); } }
+    g.strokeStyle = "#ff3fd0"; g.lineWidth = 3; for (let y = 430; y < 512; y += 18) { g.beginPath(); g.moveTo(0, y); g.lineTo(384, y); g.stroke(); }
+  } else if (kind === "car") {   // a red sports car on a highway at sunset
+    g.fillStyle = "#3a3d47"; g.beginPath(); g.moveTo(0, 512); g.lineTo(150, 300); g.lineTo(234, 300); g.lineTo(384, 512); g.fill();
+    g.fillStyle = "#ffd23f"; for (let y = 320; y < 512; y += 40) g.fillRect(188, y, 8, 20);
+    g.fillStyle = "#e2232a"; g.beginPath(); g.moveTo(60, 430); g.lineTo(110, 380); g.lineTo(270, 375); g.lineTo(330, 420); g.lineTo(330, 455); g.lineTo(60, 455); g.closePath(); g.fill(); g.stroke();
+    g.fillStyle = "#8fd0ff"; g.beginPath(); g.moveTo(130, 385); g.lineTo(250, 382); g.lineTo(285, 410); g.lineTo(115, 410); g.closePath(); g.fill(); g.stroke();
+    g.fillStyle = "#1d1b22"; for (const x of [110, 280]) { g.beginPath(); g.arc(x, 455, 26, 0, 7); g.fill(); }
+  } else if (kind === "arcade") {   // retro joystick + pixel hearts
+    g.fillStyle = "#ff3fd0"; for (let k = 0; k < 14; k++) g.fillRect(r() * 360, r() * 300, 10, 10);
+    g.fillStyle = "#1d1b22"; g.fillRect(110, 330, 164, 90); g.strokeRect(110, 330, 164, 90);
+    g.strokeStyle = "#c9ccd2"; g.lineWidth = 14; g.beginPath(); g.moveTo(192, 330); g.lineTo(170, 220); g.stroke();
+    g.fillStyle = "#e2232a"; g.beginPath(); g.arc(168, 210, 34, 0, 7); g.fill();
+    g.fillStyle = "#39d9ff"; for (const x of [140, 240]) { g.beginPath(); g.arc(x, 375, 16, 0, 7); g.fill(); }
+  } else {   // rocket over a planet
+    g.fillStyle = "#ffffff"; for (let k = 0; k < 40; k++) g.fillRect(r() * 384, r() * 512, 3, 3);
+    g.fillStyle = "#e8b83a"; g.beginPath(); g.arc(300, 420, 120, 0, 7); g.fill();
+    g.fillStyle = "#f2efe8"; g.beginPath(); g.ellipse(170, 230, 40, 110, 0.4, 0, 7); g.fill(); g.stroke();
+    g.fillStyle = "#e2232a"; g.beginPath(); g.moveTo(120, 330); g.lineTo(90, 380); g.lineTo(150, 340); g.fill();
+    g.fillStyle = "#ffb03f"; g.beginPath(); g.ellipse(120, 360, 16, 40, 0.4, 0, 7); g.fill();
+  }
+  g.strokeStyle = INKC; g.lineWidth = 14; g.strokeRect(0, 0, 384, 512);
+});
+/** a framed poster on a wall plane at (x, y, z) facing +z (or rotated by ry) */
+const posterOn = (root: THREE.Object3D, b: Batch, kind: string, x: number, y: number, z: number, w: number, ry = 0) => {
+  const h = w * 4 / 3;
+  const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshLambertMaterial({ map: posterTex(kind) }));
+  m.position.set(x, y, z); m.rotation.y = ry; root.add(m);
+  const fr = new THREE.Mesh(new THREE.BoxGeometry(w + 0.12, h + 0.12, 0.04), new THREE.MeshLambertMaterial({ color: "#1d1b22" }));
+  fr.position.set(x - Math.sin(ry) * 0.025, y, z - Math.cos(ry) * 0.025); fr.rotation.y = ry; root.add(fr);
+  void b;
+};
+/** the console's game on a big TV: a neon city chase at dusk (our own painting) */
+const gameScreenTex = () => ctex("gameScreen", 1024, 576, (g, r) => {
+  const sky = g.createLinearGradient(0, 0, 0, 576); sky.addColorStop(0, "#3a1060"); sky.addColorStop(0.6, "#ff5fa2"); sky.addColorStop(1, "#ffb03f");
+  g.fillStyle = sky; g.fillRect(0, 0, 1024, 576);
+  g.fillStyle = "#ffd23f"; g.beginPath(); g.arc(512, 330, 120, Math.PI, 0); g.fill();
+  let x = 0; while (x < 1024) { const w = 50 + r() * 70, h = 120 + r() * 200; g.fillStyle = "#1a0a30"; g.fillRect(x, 400 - h, w, h + 50); g.fillStyle = "#39d9ff"; for (let k = 0; k < 8; k++) if (r() < 0.6) g.fillRect(x + 8 + (k % 3) * 14, 410 - h + Math.floor(k / 3) * 30, 8, 12); x += w + 5; }
+  for (let i = 0; i < 6; i++) { g.fillStyle = i % 2 ? "#14141c" : "#1d1d28"; g.fillRect(0, 440 + i * 23, 1024, 23); }
+  g.fillStyle = "#ffffff"; for (let k = 0; k < 10; k++) g.fillRect(k * 110, 505, 60, 8);
+  g.fillStyle = "#e2232a"; g.fillRect(420, 470, 180, 40); g.fillStyle = "#8fd0ff"; g.fillRect(460, 455, 100, 22);
+  g.fillStyle = "#ffffff"; g.font = "bold 34px Arial Black, Arial"; g.fillText("WANTED ★★★☆☆", 30, 50); g.fillText("$ 1,000,000", 760, 50);
+});
+
 const quadsRoom = (b: Batch, W: number, D: number, H: number, back: THREE.Material, side: THREE.Material, u = 2) => {
   b.add(quad(V(-W, 0, -D), V(W, 0, -D), V(W, H, -D), V(-W, H, -D), u, 1), back);
   b.add(quad(V(-W, 0, D + 2), V(-W, 0, -D), V(-W, H, -D), V(-W, H, D + 2), u, 1), side);
@@ -209,7 +264,13 @@ export const buildModernRoom = (root: THREE.Object3D, kit: Kit, env: EnvSpec, in
     const W = 5.5, D = 4.6, H = 3.3;
     b.add(ground(-W, W, -D, D + 4, 3, 3, 0.01), lam("planksHD", () => ({ map: planksHD() })));
     quadsRoom(b, W, D, H, lam("bedBack", () => ({ map: plainWall("bedB", "#d9c8e8", "#6b4a5a") })), lam("bedSide", () => ({ map: plainWall("bedS", "#c8b4d9", "#6b4a5a") })));
-    windowOn(root, b, 3.2, 1.9, -D, 2.2, 1.6, skylineTex("n", true));
+    const day = env.variant === "day";
+    windowOn(root, b, 3.2, 1.9, -D, 2.2, 1.6, skylineTex(day ? "d" : "n", !day));
+    for (const s of [-1, 1]) box(b, C("curtain2", "#c8553d"), 3.2 + s * 1.35 - 0.2, 0.9, -D + 0.05, 3.2 + s * 1.35 + 0.2, 2.9, -D + 0.15);   // curtains
+    posterOn(root, b, "car", -3.6, 2.1, -D + 0.03, 1.0); posterOn(root, b, "palms", -W + 0.03, 2.0, -1.5, 1.1, Math.PI / 2);
+    posterOn(root, b, "rocket", W - 0.03, 2.0, -1.0, 1.0, -Math.PI / 2);
+    box(b, C("shelf2", "#6b4a32"), 0.2, 2.35, -D, 2.0, 2.42, -D + 0.3);
+    for (let k = 0; k < 4; k++) b.add(cyl(0.1, 0.1, 0.22 + 0.08 * (k % 2), 10), C("fig" + k, ["#e2453c", "#3f6fb5", "#ffd23f", "#5d7a3a"][k]), M4(0.45 + k * 0.42, 2.42, -D + 0.15));
     box(b, C("bedBase", "#3a2a20"), -2.4, 0, -D, 1.4, 0.4, -1.2);
     box(b, C("mattress", "#f6f1e6"), -2.35, 0.4, -D + 0.05, 1.35, 0.6, -1.25);
     box(b, C("duvet2", "#7fa8d9"), -2.4, 0.5, -D + 1.3, 1.4, 0.66, -1.2);
@@ -218,6 +279,30 @@ export const buildModernRoom = (root: THREE.Object3D, kit: Kit, env: EnvSpec, in
     for (const x of [-3.1, 2.1]) { box(b, C("nightstand", "#3a2a20"), x - 0.4, 0, -D, x + 0.4, 0.6, -D + 0.6); const l = new THREE.Mesh(new THREE.SphereGeometry(0.2, 14, 10), glow([2.8, 2.0, 1.1])); l.position.set(x, 0.95, -D + 0.3); root.add(l); info.lanterns.push(V(x, 0.95, -D + 0.3)); }
     box(b, C("rugBed", "#e8c46a"), -2.6, 0.012, -1.0, 1.6, 0.02, 0.6);
     plant(b, kit, 4.6, -3.8);
+  } else if (kind === "gameroom") {   // curtains shut, dark walls, RGB light strips, a big TV with the game, console, gaming desk, posters
+    const W = 5.5, D = 4.4, H = 3.2;
+    b.add(ground(-W, W, -D, D + 4, 3, 3, 0.01), lam("planksDark", () => ({ map: planksHD(), color: "#7a7090" })));
+    quadsRoom(b, W, D, H, lam("gameBack", () => ({ map: plainWall("gameB", "#2a2448", "#14102a") })), lam("gameSide", () => ({ map: plainWall("gameS", "#231e3e", "#14102a") })));
+    for (const [y, c] of [[H - 0.15, [0.4, 3.0, 3.4]], [0.12, [3.2, 0.5, 2.6]]] as const) {   // RGB strips along the back wall (bloom)
+      const strip = new THREE.Mesh(new THREE.BoxGeometry(2 * W, 0.05, 0.05), glow(c as [number, number, number])); strip.position.set(0, y, -D + 0.06); root.add(strip);
+    }
+    const sideStrip = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.05, D * 2), glow([3.2, 0.5, 2.6])); sideStrip.position.set(-W + 0.06, H - 0.15, 0); root.add(sideStrip);
+    // curtains drawn over the window
+    box(b, C("curtainShut", "#3a2a6a"), 1.4, 0.6, -D + 0.04, 4.6, 3.0, -D + 0.16);
+    for (let x = 1.6; x < 4.6; x += 0.5) box(b, C("curtainFold", "#2a1e52"), x, 0.6, -D + 0.16, x + 0.1, 3.0, -D + 0.19);
+    // gaming desk, big TV with the game, console glowing blue, chair
+    box(b, C("gDesk", "#1d1b22"), -3.4, 0.72, -D + 0.3, 0.6, 0.8, -D + 1.3);
+    for (const x of [-3.3, 0.5]) box(b, C("gDeskLeg", "#3a3d47"), x - 0.04, 0, -D + 0.4, x + 0.04, 0.72, -D + 1.2);
+    box(b, C("tvFrame", "#0d0d12"), -2.75, 1.05, -D + 0.08, -0.05, 2.65, -D + 0.18);
+    const tvs = new THREE.Mesh(new THREE.PlaneGeometry(2.55, 1.45), new THREE.MeshBasicMaterial({ map: gameScreenTex(), color: new THREE.Color(1.25, 1.25, 1.25) }));
+    tvs.position.set(-1.4, 1.85, -D + 0.19); tvs.layers.set(NOINK); root.add(tvs);
+    box(b, C("console", "#f2f2f5"), -0.4, 0.8, -D + 0.45, -0.15, 1.3, -D + 0.85); box(b, C("consoleBlack", "#1d1b22"), -0.34, 0.8, -D + 0.47, -0.21, 1.3, -D + 0.83);
+    const led = new THREE.Mesh(new THREE.BoxGeometry(0.02, 0.4, 0.02), glow([0.3, 1.6, 3.6])); led.position.set(-0.275, 1.05, -D + 0.86); root.add(led);
+    // gaming chair turned sideways to the right of the desk (never between the lens and the player)
+    box(b, C("gChair", "#e2232a"), 1.2, 0.45, -3.4, 2.0, 0.6, -2.6); box(b, C("gChairBack", "#1d1b22"), 1.95, 0.6, -3.4, 2.1, 1.6, -2.6);
+    b.add(cyl(0.05, 0.05, 0.45, 6), C("gChairPole", "#3a3d47"), M4(1.6, 0, -3.0));
+    posterOn(root, b, "city", 2.0, 1.8, -D + 0.25, 0.9); posterOn(root, b, "arcade", -W + 0.03, 1.9, -1.2, 1.0, Math.PI / 2);
+    posterOn(root, b, "car", W - 0.03, 1.9, -1.4, 1.0, -Math.PI / 2);
   } else if (kind === "kitchen") {
     const W = 5.5, D = 4.4, H = 3.2;
     b.add(ground(-W, W, -D, D + 4, 3, 3, 0.01), lam("kitFloor", () => ({ map: tileTex("kf", "#f2efe8", "#c9c4b8", 6, true) })));
@@ -280,6 +365,58 @@ export const buildModernRoom = (root: THREE.Object3D, kit: Kit, env: EnvSpec, in
   }
 };
 
+// ---------------- shops: a high street with every shutter down ----------------
+const brickTex = (key: string, col: string) => ctex("brick_" + key, 512, 512, (g, r) => {
+  g.fillStyle = "#d8cbb8"; g.fillRect(0, 0, 512, 512);
+  for (let row = 0; row < 16; row++) for (let k = -1; k < 9; k++) {
+    const x = k * 64 + (row % 2) * 32, y = row * 32;
+    g.fillStyle = col; g.globalAlpha = 0.85 + r() * 0.15; g.fillRect(x + 3, y + 3, 58, 26); g.globalAlpha = 1;
+  }
+});
+const shutterTex = () => ctex("shutter", 512, 512, (g) => {
+  g.fillStyle = "#a8adb5"; g.fillRect(0, 0, 512, 512);
+  for (let y = 0; y < 512; y += 24) { g.fillStyle = "#8a9099"; g.fillRect(0, y, 512, 6); g.fillStyle = "#c9ced6"; g.fillRect(0, y + 8, 512, 3); }
+  g.fillStyle = "rgba(60,60,70,0.4)"; g.fillRect(230, 470, 52, 20);
+});
+const signTex = (text: string, bg: string) => ctex("shopSign_" + text, 512, 128, (g) => {
+  g.fillStyle = bg; g.fillRect(0, 0, 512, 128); g.strokeStyle = INKC; g.lineWidth = 10; g.strokeRect(5, 5, 502, 118);
+  g.fillStyle = "#ffffff"; g.font = "bold 70px Arial Black, Arial"; g.textAlign = "center"; g.fillText(text, 256, 92);
+});
+const closedTex = () => ctex("closedNeon", 512, 256, (g) => {
+  g.clearRect(0, 0, 512, 256); g.textAlign = "center"; g.lineJoin = "round";
+  for (const [t, y, s] of [["CLOSED", 110, 96], ["UNTIL FURTHER NOTICE", 200, 44]] as const) {
+    g.font = `bold ${s}px Arial Black, Arial`;
+    g.lineWidth = 16; g.strokeStyle = "rgba(255,40,60,0.45)"; g.strokeText(t, 256, y);
+    g.lineWidth = 5; g.strokeStyle = "#ffd0d6"; g.strokeText(t, 256, y);
+  }
+});
+export const buildShops = (root: THREE.Object3D, kit: Kit, env: EnvSpec, info: EnvInfo, b: Batch) => {
+  const r = rng(env.seed || 41);
+  b.add(ground(-300, 300, -300, 300, 100, 100, -0.01), lam("cityGround", () => ({ color: "#8a8f98" })));
+  box(b, C("asphalt", "#4a4f5a"), -150, -0.005, 6, 150, 0.01, 14);
+  for (let x = -150; x < 150; x += 6) box(b, C("roadLine", "#f2efe8"), x, 0.012, 9.9, x + 3, 0.015, 10.1);
+  box(b, lam("pavement", () => ({ map: rep(tileTex("pv", "#c9c4b8", "#b0aa9c", 4), 1, 1) })), -150, 0, 0, 150, 0.08, 6);
+  const shops: [string, string][] = [["COFFEE", "#7a4f33"], ["BANK", "#2f3f6a"], ["GROCERY", "#3f7a3a"], ["PHARMACY", "#3f8fa0"], ["DINER", "#c8323a"], ["BOOKS", "#7a3a6a"], ["PIZZA", "#c8553d"]];
+  for (let i = -3; i <= 3; i++) {
+    const x = i * 8, [name, col] = shops[(i + 7) % shops.length], bcol = ["#b8643a", "#a85a40", "#c27a4a", "#9a5a3a"][(i + 4) % 4];
+    const brick = lam("brickM" + bcol, () => ({ map: rep(brickTex(bcol, bcol), 2, 2) }));
+    box(b, brick, x - 3.9, 0, -6, x + 3.9, 7 + (i % 2) * 1.2, 0);
+    const sh = new THREE.Mesh(new THREE.PlaneGeometry(5.2, 3.0), new THREE.MeshLambertMaterial({ map: shutterTex() })); sh.position.set(x - 0.6, 1.6, 0.03); root.add(sh);
+    box(b, C("shutterBox", "#6a6f78"), x - 3.25, 3.1, 0, x + 2.05, 3.4, 0.25);
+    const door = new THREE.Mesh(new THREE.PlaneGeometry(1.1, 2.4), new THREE.MeshLambertMaterial({ map: shutterTex(), color: "#9aa0a8" })); door.position.set(x + 2.7, 1.2, 0.03); root.add(door);
+    const sign = new THREE.Mesh(new THREE.PlaneGeometry(4.6, 1.15), new THREE.MeshBasicMaterial({ map: signTex(name, col), color: 0xeeeeee })); sign.position.set(x - 0.4, 4.2, 0.05); sign.layers.set(NOINK); root.add(sign);
+    const neon = new THREE.Mesh(new THREE.PlaneGeometry(2.6, 1.3), new THREE.MeshBasicMaterial({ map: closedTex(), transparent: true, color: new THREE.Color(2.6, 2.6, 2.6) }));
+    neon.position.set(x - 0.6, 1.9, 0.06); neon.layers.set(NOINK); root.add(neon);
+    for (const wx of [-2.2, 0, 2.2]) box(b, C("upWin", "#cfe6fa"), x + wx - 0.6, 5.0, 0.0, x + wx + 0.6, 6.2, 0.04);
+    box(b, C("awningBar", "#2b2b38"), x - 3.9, 3.55, 0, x + 3.9, 3.7, 0.5);
+  }
+  for (let x = -24; x <= 24; x += 12) { b.add(cyl(0.07, 0.09, 4.2, 8), C("streetLamp", "#2b2b38"), M4(x, 0, 5.4)); const lm = new THREE.Mesh(new THREE.SphereGeometry(0.22, 12, 8), glow([3, 2.3, 1.2])); lm.position.set(x, 4.2, 5.4); root.add(lm); info.lanterns.push(V(x, 4.2, 5.4)); }
+  for (const x of [-14, 6, 18]) { b.add(cyl(0.32, 0.28, 0.9, 12), C("bin", "#3f6f5a"), M4(x, 0, 4.8)); }
+  box(b, C("bench", "#7a4f33"), -4, 0.42, 4.6, -2.4, 0.5, 5.1); box(b, C("bench", "#7a4f33"), -4, 0.5, 5.0, -2.4, 0.95, 5.1);
+  for (let i = -6; i <= 6; i++) { const x = i * 9; box(b, C("farBlock" + (i % 3), ["#c8b8a0", "#b8a890", "#d8c8b0"][(i + 9) % 3]), x - 4, 0, 18, x + 4, 8 + r() * 6, 26); }
+  prop(b, kit, "tree_default", -10, 0, 4.6, 5); prop(b, kit, "tree_oak", 14, 0, 4.6, 5.4);
+};
+
 // ---------------- outback (Western Australia, 1932) ----------------
 export const buildOutback = (root: THREE.Object3D, kit: Kit, env: EnvSpec, info: EnvInfo, b: Batch) => {
   const r = rng(env.seed || 37);
@@ -327,6 +464,12 @@ export const buildSuburb = (root: THREE.Object3D, kit: Kit, env: EnvSpec, info: 
     for (let k = 0; k < 3; k++) prop(b, kit, "plant_bush", x - 4.5 + k * 1.1, 0, -5.4, 0.8);
   }
   for (let i = -4; i <= 4; i++) { const x = i * 16 + 8; box(b, C("farHouse", "#d8cbb4"), x - 5, 0, 22, x + 5, 5, 30); b.add(new THREE.CylinderGeometry(0.01, 6.6, 2.8, 4, 1).rotateY(Math.PI / 4).scale(1.05, 1, 1.2), C("roof1", "#4a4f5a"), M4(x, 6.4, 26)); }
+  if (env.variant === "tvglow") {   // every house: the same blue TV flicker in the windows (the whole street is playing)
+    for (let i = -4; i <= 4; i++) for (const [wx, wy] of [[-3.2, 3.6], [3.2, 3.6], [-3.2, 1.6]]) {
+      const m = new THREE.Mesh(new THREE.PlaneGeometry(1.6, 1.0), glow([0.5, 1.4, 3.2])); m.position.set(i * 16 + wx * 0.95, wy, -5.98); m.layers.set(NOINK); root.add(m);
+    }
+    for (let i = -4; i <= 4; i += 2) info.lanterns.push(V(i * 16, 3.6, -5));
+  }
   for (let x = -90; x <= 90; x += 30) { const lm = new THREE.Mesh(new THREE.SphereGeometry(0.22, 12, 8), glow([3, 2.3, 1.2])); lm.position.set(x, 4.2, 8.4); root.add(lm); b.add(cyl(0.07, 0.09, 4.2, 8), C("streetLamp", "#2b2b38"), M4(x, 0, 8.4)); info.lanterns.push(V(x, 4.2, 8.4)); }
 };
 

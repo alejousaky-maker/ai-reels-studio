@@ -6,23 +6,23 @@ from typing import Literal, Optional
 
 from pydantic import BaseModel, Field, field_validator
 
-Expr = Literal["neutral", "stern", "grin", "laugh", "whistle", "nervous", "shock", "relief", "relief_open", "dazed", "pained", "smile", "smile_closed", "lick"]
-Action = Literal["stand", "walk", "dance", "sit", "wave", "march", "stroll", "fall"]
+Expr = Literal["neutral", "stern", "grin", "laugh", "whistle", "nervous", "shock", "relief", "relief_open", "dazed", "pained", "smile", "smile_closed", "lick", "starry", "crazy"]
+Action = Literal["stand", "walk", "dance", "sit", "wave", "march", "stroll", "fall", "stretch", "cheer", "point"]
 Shot = Literal["wide", "medium", "close", "low", "high", "two_shot", "insert"]
 Light = Literal["day", "golden", "night"]
 Mood = Literal["whimsical", "curious", "tense", "warm", "upbeat"]
 Product = Literal["coffee", "croissant", "bread", "cake", "lightbulb", "question", "exclaim", "heart", "clock", "book", "note", "scroll", "map", "globe", "wine", "spear", "stake", "phone", "tablet", "wifi", "key", "camera", "card", "fish", "receipt", "box",
-                  "snake", "coins", "mic", "earbuds", "gpsmap", "suitcase", "folder", "ticket"]
+                  "snake", "coins", "mic", "earbuds", "gpsmap", "suitcase", "folder", "ticket", "controller", "can", "pizza"]
 Role = Literal["villager_woman", "villager_man", "kid", "official", "musician", "baker", "barista", "scholar", "customer", "elder", "worker",
               "explorer", "king", "queen", "sailor", "islander", "greek", "hero", "trojan", "prisoner", "giant",
               "businessman", "boss", "woman", "towelguy", "lawyer", "fisher", "tourist",
               "soldier", "major", "emu", "farmer", "caesar", "pirate", "captain", "raj_official", "local", "athlete",
-              "hoodie", "robe", "groom", "bride", "guest"]
+              "hoodie", "robe", "groom", "bride", "guest", "pajamas", "gamer"]
 Env = Literal["village_square", "park", "street", "market", "interior", "harbour", "beach", "ocean", "troy", "cave", "throne",
               "apartment", "bathroom", "office", "hotel", "airport", "suburb", "lake", "resort",
-              "outback", "cabin", "bedroom", "kitchen", "banquet"]
+              "outback", "cabin", "bedroom", "kitchen", "banquet", "gameroom", "shops"]
 PieceKind = Literal["horse", "ship", "galley", "chalkboard", "sheep", "tent", "scale", "boxes", "car", "van", "poster",
-                    "lewis", "crates", "snakes", "board", "screen", "finish", "truck", "booth"]
+                    "lewis", "crates", "snakes", "board", "screen", "finish", "truck", "booth", "tumbleweed", "trafficlight", "snacks"]
 
 
 class Piece(BaseModel):
@@ -35,7 +35,8 @@ class Piece(BaseModel):
     y: Optional[float] = None
     mirror: bool = False
     move: Optional[Literal["left", "right", "toward", "away"]] = None
-    label: Optional[str] = Field(None, max_length=40)   # text on a board / booth / crates; screen picture "photos" | "hallway"
+    label: Optional[str] = Field(None, max_length=40)
+    spin: Optional[float] = None   # rad/s, rolling pieces (tumbleweed)   # text on a board / booth / crates; screen picture "photos" | "hallway"
 
 
 class Reaction(BaseModel):
@@ -75,7 +76,7 @@ class Beat(BaseModel):
     textStyle: Literal["title", "cta", "label"] = "label"
     atShop: bool = False
     environment: Optional[Env] = None  # per-beat location
-    envVariant: Optional[Literal["breach", "open"]] = None   # troy: torn wall; cave: boulder rolled aside
+    envVariant: Optional[Literal["breach", "open", "day", "tvglow"]] = None   # troy: torn wall; cave: boulder rolled aside
     pieces: list[Piece] = Field(default_factory=list)
     extrasRole: Optional[Role] = None
     spot: Optional[int] = Field(None, ge=0, le=9)   # which staging spot of the location (camera side / view direction)

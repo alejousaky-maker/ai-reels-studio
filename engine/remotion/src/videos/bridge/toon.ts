@@ -28,6 +28,8 @@ export type Outfit = {
   creature?: string;
   /** striped shirt (pirates), an eye patch, a toga drape over one shoulder, a bow tie, a veil */
   stripes?: string; eyepatch?: boolean; toga?: string; bowtie?: boolean;
+  /** gaming headset colour */
+  headset?: string;
 };
 type P2 = [number, number];
 
@@ -237,8 +239,8 @@ const DEF_LIGHT = rad(-120);
 
 // ---------------- faces ----------------
 export type Expr = "neutral" | "stern" | "grin" | "laugh" | "whistle" | "nervous" | "shock" | "relief" | "relief_open" | "dazed"
-  | "pained" | "smile" | "smile_closed" | "lick";
-type EyeK = "dot" | "small" | "lid" | "slit" | "happy" | "dash" | "squeeze" | "shock" | "shockHalf" | "spiral";
+  | "pained" | "smile" | "smile_closed" | "lick" | "starry" | "crazy";
+type EyeK = "dot" | "small" | "lid" | "slit" | "happy" | "dash" | "squeeze" | "shock" | "shockHalf" | "spiral" | "star" | "bloodshot";
 type MouthK = "dash" | "frown" | "smirk" | "smile" | "smileWide" | "grin" | "laugh" | "o" | "O" | "wave" | "teeth" | "lick";
 /** eyes [back, front], brows [inner, outer] offsets in u (+ = down), mouth kind */
 const FACE: Record<Expr, { eye: [EyeK, EyeK]; brow: [number, number]; mouth: MouthK }> = {
@@ -256,10 +258,12 @@ const FACE: Record<Expr, { eye: [EyeK, EyeK]; brow: [number, number]; mouth: Mou
   smile: { eye: ["dot", "dot"], brow: [0, -1], mouth: "smirk" },
   smile_closed: { eye: ["happy", "happy"], brow: [0, -1], mouth: "smile" },
   lick: { eye: ["dot", "dot"], brow: [0, -1], mouth: "lick" },
+  starry: { eye: ["star", "star"], brow: [-5, -5], mouth: "laugh" },
+  crazy: { eye: ["bloodshot", "bloodshot"], brow: [-6, 3], mouth: "grin" },
 };
 const halfLid = (k: EyeK): EyeK => (k === "dot" || k === "small" ? "lid" : k === "lid" ? "slit" : k === "shock" ? "shockHalf" : k);
 const eyeKind = (k: EyeK, lid: number): EyeK =>
-  lid >= 1 && k !== "happy" && k !== "squeeze" && k !== "spiral" ? "dash" : lid > 0 ? halfLid(k) : k;
+  k === "star" || k === "bloodshot" ? k : lid >= 1 && k !== "happy" && k !== "squeeze" && k !== "spiral" ? "dash" : lid > 0 ? halfLid(k) : k;
 const lidOf = (b: boolean | number | undefined) => (b === true ? 1 : Number(b) || 0);
 
 const eye = (p: Pen, kind: EyeK, x: number, ey: number, u: number, side: number, look: number, skin: string) => {
@@ -276,6 +280,20 @@ const eye = (p: Pen, kind: EyeK, x: number, ey: number, u: number, side: number,
       p.ell(x, ey, 11 * u, 11 * u, WHITE, 2.6 * u); p.dot(lx - side * 1.5 * u, ey + 1.5 * u, 3 * u);
       if (kind === "shockHalf") { p.ell(x, ey, 11 * u, 11 * u, skin, 0, 180, 360); p.stroke([[x - 11 * u, ey], [x + 11 * u, ey]], 2.6 * u); }
       break;
+    case "star": {   // glowing yellow star eyes
+      const st: P2[] = [];
+      for (let i = 0; i < 10; i++) { const a = -Math.PI / 2 + (i * Math.PI) / 5, r2 = (i % 2 ? 5 : 12) * u; st.push([x + Math.cos(a) * r2, ey + Math.sin(a) * r2]); }
+      p.poly(st, "#ffd23f", 2.2 * u);
+      break;
+    }
+    case "bloodshot": {   // wide white eye, red veins, tiny spiral pupil (the unblinking gamer)
+      p.ell(x, ey, 11 * u, 11 * u, WHITE, 2.6 * u);
+      for (let k = 0; k < 4; k++) { const a = k * 1.6 + 0.4; p.stroke([[x + Math.cos(a) * 10 * u, ey + Math.sin(a) * 10 * u], [x + Math.cos(a + 0.3) * 5 * u, ey + Math.sin(a + 0.3) * 5 * u]], 1.1 * u, "#e2453c"); }
+      const sp: P2[] = [];
+      for (let t = 1; t < 12; t++) sp.push([x + Math.cos(t * 0.95) * t * 0.5 * u, ey + Math.sin(t * 0.95) * t * 0.5 * u]);
+      p.stroke(sp, 1.8 * u);
+      break;
+    }
     default: {
       const s: P2[] = [];
       for (let t = 1; t < 15; t++) s.push([x + Math.cos(t * 0.9) * t * 0.55 * u, ey + Math.sin(t * 0.9) * t * 0.55 * u]);
@@ -609,6 +627,8 @@ const BUILD: Record<Build, { a: number; torso: number; legs: number; tw: number 
 export type FrontOpts = {
   phase?: number; expr?: Expr; mode?: "march" | "stroll" | "stand" | "sit" | "fall"; look?: number; blink?: boolean | number; lift?: number;
   prop?: Prop; tilt?: number; headTilt?: number; wave?: number;
+  /** arm pose: "up" = both arms raised (stretch / cheer, wiggled by `wave`), "point" = right arm straight out to the side */
+  pose?: "up" | "point";
   /** canvas angle the key light comes FROM (painted crescent + thick outline side) */
   light?: number; facing?: -1 | 0 | 1; seed?: number;
 };
@@ -723,13 +743,22 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
   const rifle = !!o.rifle && (mode === "march" || mode === "stand" || mode === "stroll");
   type Arm = { pts: [P2, P2, P2]; front: boolean };
   const arms: Arm[] = [];
-  if (mode === "sit") for (const side of [-1, 1]) arms.push({ pts: [sh(side), [tcx + side * (1.1 * T.a + 6 * u), sh(side)[1] + 0.4 * HH], [tcx + side * (1.2 * T.a + 10 * u), torsoBot + 0.04 * HH]], front: false });
+  const pose = opts.pose;
+  if (pose === "up" && mode !== "fall") for (const side of [-1, 1]) {
+    const w = (wave ?? 0) * side, S = sh(side);
+    // a wide V so the raised arms clear the head (they are drawn behind it)
+    arms.push({ pts: [S, [tcx + side * (1.35 * T.a + 20 * u) + 4 * u * w, S[1] - 0.3 * HH], [tcx + side * (1.8 * T.a + 38 * u) + 10 * u * w, S[1] - 0.86 * HH]], front: false });
+  }
+  else if (mode === "sit") for (const side of [-1, 1]) arms.push({ pts: [sh(side), [tcx + side * (1.1 * T.a + 6 * u), sh(side)[1] + 0.4 * HH], [tcx + side * (1.2 * T.a + 10 * u), torsoBot + 0.04 * HH]], front: false });
   else if (mode === "fall") for (const side of [-1, 1]) arms.push({ pts: [sh(side), [tcx + side * (1.15 * T.a + 12 * u), sh(side)[1] - 0.25 * HH], [tcx + side * (1.3 * T.a + 24 * u), sh(side)[1] - 0.68 * HH]], front: false });
   else {
     arms.push({ pts: prop === "shako" ? hang(-1, 0) : hang(-1, -sw), front: false });
     if (rifle) {
       const G = lerp2(R0, R1, 0.1);
       arms.push({ pts: [sh(1), [tcx + 1.12 * T.a + 5 * u, sh(1)[1] + 0.45 * HH], G], front: false });
+    } else if (pose === "point") {
+      const S = sh(1), k = (wave ?? 0) * 3 * u;
+      arms.push({ pts: [S, [tcx + 1.3 * T.a + 22 * u, S[1] - 0.06 * HH + k], [tcx + 1.55 * T.a + 50 * u, S[1] - 0.14 * HH + k]], front: false });
     } else if (wave !== undefined) {
       const S = sh(1);
       arms.push({ pts: [S, [tcx + 1.1 * T.a + 10 * u + 3 * u * wave, S[1] - 0.22 * HH], [tcx + 1.18 * T.a + 16 * u + 12 * u * wave, S[1] - 0.6 * HH]], front: false });
@@ -838,6 +867,14 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
   const brim = !!o.hat && o.hat !== "hair" && o.hat !== "longhair" && o.hat !== "bonnet" && o.hat !== "cap" && o.hat !== "laurel" && o.hat !== "headband" && o.hat !== "veil";
   if (o.beard) beardOn(p, o.beard, H, 300 + 7 * u * facing, hc, u, thick, ow);
   faceFront(p, 300, hc, W, expr, facing, look, lid, brim, skin, o.moustache, o.build === "stout", !!o.cyclops);
+  if (o.headset) {   // gaming headset: band over the crown, big ear cups, a mic boom
+    const col = o.headset;
+    p.arc(300, hc - 2 * u, 0.53 * W, 0.56 * HH, 195, 345, 7 * u, INK);
+    p.arc(300, hc - 2 * u, 0.53 * W, 0.56 * HH, 195, 345, 4.5 * u, col);
+    for (const s of [-1, 1]) { p.ell(300 + s * 0.5 * W, hc + 4 * u, 11 * u, 17 * u, col, 2.6 * u); p.ell(300 + s * 0.5 * W, hc + 4 * u, 5 * u, 9 * u, "#39d9ff", 0); }
+    p.stroke([[300 - 0.5 * W, hc + 14 * u], [300 - 0.3 * W, hc + 28 * u], [300 - 0.14 * W, hc + 26 * u]], 3 * u);
+    p.dot(300 - 0.14 * W, hc + 26 * u, 4 * u);
+  }
   if (o.eyepatch) {   // pirate patch over the left eye + strap
     const fx = 300 + 7 * u * facing;
     p.stroke([[300 - 48 * u, hc - 22 * u], [300 + 48 * u, hc - 2 * u]], 2.6 * u);

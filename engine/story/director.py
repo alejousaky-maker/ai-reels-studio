@@ -159,9 +159,13 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                 L *= 1.3; Dp += 1.6
             x, z = Cx + rx * L + ux * Dp, Cz + rz * L + uz * Dp
             act = {"castId": c.id, "x": round(x, 3), "z": round(z, 3), "expr": c.expr,
-                   "mode": {"walk": "stroll", "wave": "stand", "dance": "dance", "sit": "sit", "march": "march", "stroll": "stroll", "fall": "fall"}.get(c.action, "stand")}
+                   "mode": {"walk": "stroll", "wave": "stand", "dance": "dance", "sit": "sit", "march": "march", "stroll": "stroll", "fall": "fall", "stretch": "sit"}.get(c.action, "stand")}
             if c.action == "wave":
                 act["wave"] = True
+            if c.action in ("stretch", "cheer"):
+                act["pose"] = "up"
+            if c.action == "point":
+                act["pose"] = "point"
             if c.action == "walk":
                 act["x"], act["z"] = round(x - rx * 2.4, 3), round(z - rz * 2.4, 3)
                 act["walkTo"] = [round(x, 3), round(z, 3)]
@@ -290,6 +294,8 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                 spec["mirror"] = True
             if pc.label:
                 spec["label"] = pc.label
+            if pc.spin:
+                spec["spin"] = pc.spin
             if pc.kind in ("ship", "galley") and env_b in ("beach", "troy", "harbour", "ocean"):
                 spec["rock"] = 1.0
             if pc.move:

@@ -100,17 +100,21 @@ def outfit(role: str, i: int, palette: str | None = None) -> dict:
         return {**base, "jacket": "#ffffff", "dress": "#ffffff", "hat": "veil", "hair": palette or "#7a4a2a"}
     if role == "guest":
         return {**base, "jacket": palette or COATS[i % len(COATS)], "hat": "hair", "hair": "#3a2a1e", **({"dress": COATS[(i + 2) % len(COATS)], "hat": "longhair"} if i % 2 else {"tie": "#c8323a"})}
+    if role == "pajamas":
+        return {**base, "jacket": palette or "#7fa8d9", "pants": "#7fa8d9", "boots": "#ff9fc8", "stripes": "#f2efe8", "hat": "hair", "hair": "#3a2a1e"}
+    if role == "gamer":
+        return {**base, "jacket": palette or "#3a2a6a", "pants": "#2b2b38", "boots": "#ff9fc8", "hat": "hair", "hair": "#3a2a1e", "headset": "#1d1b22", "pockets": False}
     return {**base, "hat": "cap", "cap": COATS[(i + 4) % len(COATS)]}
 
 
 # world scale per role (kids 0.72 come from their build); a cyclops is ~2.6 x a person
 ROLE_SCALE = {"giant": 2.6}
 # set pieces: world width, height in metres (engine pieces.ts)
-PIECE_SIZE = {"lewis": (1.7, 1.6), "crates": (2.0, 1.77), "snakes": (3.2, 1.1), "board": (1.9, 2.47), "screen": (6.0, 5.0), "finish": (4.4, 2.48),
+PIECE_SIZE = {"tumbleweed": (1.3, 1.3), "trafficlight": (1.2, 4.0), "snacks": (1.6, 1.7), "lewis": (1.7, 1.6), "crates": (2.0, 1.77), "snakes": (3.2, 1.1), "board": (1.9, 2.47), "screen": (6.0, 5.0), "finish": (4.4, 2.48),
               "truck": (5.6, 3.2), "booth": (3.2, 2.64), "scale": (0.75, 0.45), "boxes": (1.9, 1.96), "car": (4.5, 2.5), "van": (5.4, 3.0), "poster": (1.9, 2.47), "horse": (8.0, 8.0), "ship": (14.0, 13.4), "galley": (13.0, 12.5), "chalkboard": (1.9, 2.47), "sheep": (1.35, 1.03), "tent": (5.0, 3.67)}
 # max lens distance in rooms / chambers (stay inside or just outside the walls)
-INDOOR_D = {"interior": 7.0, "throne": 8.0, "cave": 7.2, "ocean": 4.6, "apartment": 6.5, "bathroom": 5.0, "office": 7.0, "hotel": 6.0, "airport": 10.0, "cabin": 5.0, "bedroom": 6.0, "kitchen": 6.0, "banquet": 10.0}
-ROOMS = ("interior", "throne", "apartment", "bathroom", "office", "hotel", "airport", "cabin", "bedroom", "kitchen", "banquet")
+INDOOR_D = {"interior": 7.0, "throne": 8.0, "cave": 7.2, "ocean": 4.6, "apartment": 6.5, "bathroom": 5.0, "office": 7.0, "hotel": 6.0, "airport": 10.0, "cabin": 5.0, "bedroom": 6.0, "kitchen": 6.0, "banquet": 10.0, "gameroom": 6.0}
+ROOMS = ("interior", "throne", "apartment", "bathroom", "office", "hotel", "airport", "cabin", "bedroom", "kitchen", "banquet", "gameroom")
 
 
 def _rot(x: float, z: float, a: float) -> tuple[float, float]:
@@ -166,8 +170,9 @@ def anchors(env: str, shop: dict | None = None) -> list[dict]:
         for (cx, cz, ux, uz) in [(0, -2.4, 0, -1), (-1.8, -0.8, 0.3, -1), (1.8, -1.0, -0.3, -1), (0, 0.5, 0, -1), (-2.2, 1.6, 0.35, -1), (2.0, 1.8, -0.3, -1)]:
             n = math.hypot(ux, uz)
             out.append({"C": (cx, cz), "u": (ux / n, uz / n)})
-    elif env in ("apartment", "bathroom", "office", "hotel", "airport", "cabin", "bedroom", "kitchen", "banquet"):
+    elif env in ("apartment", "bathroom", "office", "hotel", "airport", "cabin", "bedroom", "kitchen", "banquet", "gameroom"):
         table = {
+            "gameroom": [(-1.4, -1.0, 0, -1), (-1.45, -0.2, 0.15, -1), (1.6, -0.6, -0.3, -1), (0, 1.0, 0, -1), (-2.6, 0.8, 0.3, -1), (2.4, 0.8, -0.35, -1)],
             "cabin": [(0, -0.8, 0, -1), (-1.6, -0.4, -0.3, -1), (1.6, -0.2, 0.3, -1), (0, 0.8, 0, -1), (-1.2, 0.8, -0.2, -1), (1.2, 0.8, 0.2, -1)],
             "bedroom": [(-0.5, -0.3, 0, -1), (2.4, 0.0, -0.3, -1), (0, 1.0, 0, -1), (-2.6, 0.6, 0.25, -1), (1.6, 1.2, -0.2, -1), (-1.5, 1.4, 0.1, -1)],
             "kitchen": [(0, -1.6, 0, -1), (-2.4, 0.2, 0.1, -1), (2.0, 0.0, -0.2, -1), (0, 1.0, 0, -1), (-1.2, 1.2, 0.2, -1), (2.6, 1.2, -0.3, -1)],
@@ -179,6 +184,11 @@ def anchors(env: str, shop: dict | None = None) -> list[dict]:
             "airport": [(0, -0.2, 0, -1), (-5.0, -1.0, -1, 0.05), (4, 0.5, 0.2, -1), (0, 2.5, 0, -1), (-3, 2, 0.3, -1), (6, 2, -0.3, -1)],
         }[env]
         for (cx, cz, ux, uz) in table:
+            n = math.hypot(ux, uz)
+            out.append({"C": (cx, cz), "u": (ux / n, uz / n)})
+    elif env == "shops":
+        # storefronts at z < 0 facing the street (+z); the pavement z 0-6, the road z 6-14
+        for (cx, cz, ux, uz) in [(0, 3.0, 0, -1), (-8, 3.2, 0.05, -1), (8, 3.2, -0.05, -1), (-3, 3.5, 1, -0.25), (16, 3.2, 0, -1), (-16, 3.2, 0, -1)]:
             n = math.hypot(ux, uz)
             out.append({"C": (cx, cz), "u": (ux / n, uz / n)})
     elif env == "outback":

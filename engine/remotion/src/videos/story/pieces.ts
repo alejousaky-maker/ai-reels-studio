@@ -275,6 +275,30 @@ const booth = (p: Pen, label: string) => {   // wooden counter booth with an awn
   text(p, label || "REWARD", 400, 270, 56, "#c8323a");
 };
 
+const tumbleweed = (p: Pen) => {   // a tangled ball of dry twigs (it spins as it rolls)
+  p.ell(200, 200, 170, 160, "rgba(176,128,72,0.35)", 8);
+  for (let k = 0; k < 26; k++) {
+    const a0 = k * 0.77, r0 = 40 + (k * 37) % 120;
+    p.arc(200 + Math.cos(a0) * 30, 200 + Math.sin(a0) * 30, r0, r0 * 0.8, (k * 47) % 360, ((k * 47) % 360) + 160, 7, k % 3 ? "#8a5a34" : "#b8864e");
+  }
+};
+const trafficlight = (p: Pen) => {
+  p.stroke([[150, 1000], [150, 300]], 26, INK); p.stroke([[150, 1000], [150, 300]], 16, "#3a3d47");
+  p.poly(rr(90, 60, 210, 330, 20), "#2b2b38", 10);
+  p.ell(150, 110, 34, 34, "#5a2020", 6); p.ell(150, 195, 34, 34, "#ffd23f", 6); p.ell(150, 280, 34, 34, "#1f4a2a", 6);
+  p.ell(150, 195, 50, 50, "rgba(255,210,63,0.35)", 0);
+};
+const snacks = (p: Pen) => {   // a growing tower of pizza boxes + energy cans
+  for (let k = 0; k < 7; k++) {
+    const y = 600 - k * 70, dx = (k % 2 ? 14 : -10);
+    p.poly([[110 + dx, y], [490 + dx, y], [490 + dx, y + 64], [110 + dx, y + 64]], "#f2e6cf", 8);
+    p.poly([[280 + dx, y + 18], [330 + dx, y + 18], [330 + dx, y + 46], [280 + dx, y + 46]], "#e2453c", 0);
+  }
+  for (const [x, c] of [[40, "#39d98a"], [540, "#ff4fa0"], [585, "#39d9ff"], [80, "#ffd23f"]] as const) {
+    p.poly(rr(x - 26, 560, x + 26, 664, 10), c, 8); p.stroke([[x - 20, 590], [x + 20, 590]], 6, "#ffffff");
+  }
+};
+
 export const PIECES: Record<PieceKind, { dw: number; dh: number; w: number; h: number; draw: (p: Pen, label: string) => void }> = {
   horse: { dw: 1000, dh: 1000, w: 8.0, h: 8.0, draw: horse },
   ship: { dw: 1250, dh: 1200, w: 14.0, h: 13.4, draw: (p) => ship(p, false) },
@@ -295,5 +319,8 @@ export const PIECES: Record<PieceKind, { dw: number; dh: number; w: number; h: n
   finish: { dw: 1100, dh: 620, w: 4.4, h: 2.48, draw: finish },
   truck: { dw: 700, dh: 400, w: 5.6, h: 3.2, draw: truck },
   booth: { dw: 800, dh: 660, w: 3.2, h: 2.64, draw: booth },
+  tumbleweed: { dw: 400, dh: 400, w: 1.3, h: 1.3, draw: tumbleweed },
+  trafficlight: { dw: 300, dh: 1000, w: 1.2, h: 4.0, draw: trafficlight },
+  snacks: { dw: 640, dh: 680, w: 1.6, h: 1.7, draw: snacks },
 };
 export { mix };

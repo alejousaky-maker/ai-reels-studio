@@ -258,6 +258,30 @@ export const drawProduct = (p: Pen, kind: ProductKind, col = "#c8553d") => {
       p.poly([[210, 205], [300, 180], [310, 192], [250, 212], [300, 240], [290, 250], [230, 222], [205, 228]], "#2b2b38", 0);
       break;
     }
+    case "controller": {   // a generic game controller (no brand)
+      const body: P2[] = [];
+      for (let i = 0; i <= 40; i++) { const a = (i / 40) * Math.PI * 2, x = 200 + 160 * Math.cos(a), y = 210 + 80 * Math.sin(a) + (Math.sin(a) > 0 ? 60 * Math.abs(Math.cos(a)) ** 3 : 0); body.push([x, y]); }
+      p.gradFill(body, "#f2f2f5", "#c9ccd2", LIGHT); p.poly(body, null, 10);
+      p.poly([[100, 200], [150, 200], [150, 215], [100, 215]], "#2b2b38", 0); p.poly([[118, 182], [133, 182], [133, 232], [118, 232]], "#2b2b38", 0);
+      for (const [x, y, c] of [[290, 180, "#39d98a"], [320, 210, "#e2453c"], [260, 210, "#3f6fb5"], [290, 240, "#ffd23f"]] as const) p.ell(x, y, 14, 14, c, 4);
+      p.ell(170, 250, 22, 22, "#2b2b38", 4); p.ell(235, 250, 22, 22, "#2b2b38", 4);
+      p.stroke([[170, 130], [230, 130]], 10, "#39d9ff");
+      break;
+    }
+    case "can": {   // energy drink can
+      p.poly(rr(140, 70, 260, 350, 22), "#39d98a", 10);
+      p.poly([[140, 150], [260, 120], [260, 170], [140, 200]], "#1d1b22", 0);
+      p.stroke([[170, 260], [230, 230]], 12, "#ffffff"); p.ell(200, 76, 56, 12, "#c9ccd2", 6);
+      break;
+    }
+    case "pizza": {   // an open pizza box with a slice missing
+      p.poly([[50, 220], [350, 220], [350, 330], [50, 330]], "#f2e6cf", 9);
+      p.poly([[50, 220], [350, 220], [320, 90], [80, 90]], "#e6d6b8", 9);
+      p.ell(200, 275, 130, 42, "#f2b84a", 8);
+      for (const [x, y] of [[150, 270], [200, 285], [250, 265], [175, 255]]) p.ell(x, y, 14, 9, "#c8323a", 0);
+      p.poly([[200, 275], [330, 270], [300, 300]], "#f2e6cf", 0);
+      break;
+    }
     case "stake": {   // sharpened olive-wood stake, tip glowing
       p.stroke([[60, 330], [320, 110]], 30, "#7a5a34");
       p.poly([[320, 110], [372, 66], [340, 132]], "#a8784a", 8);

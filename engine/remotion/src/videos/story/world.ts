@@ -159,7 +159,7 @@ export class StoryWorld {
     for (const pc of sb.scenes[sceneIdx]?.pieces ?? []) {
       const P = PIECES[pc.kind];
       if (!P) continue;
-      const k = pc.scale ?? 1, geo = new THREE.PlaneGeometry(P.w * k, P.h * k).translate(0, (P.h * k) / 2, 0);
+      const k = pc.scale ?? 1, geo = new THREE.PlaneGeometry(P.w * k, P.h * k).translate(0, pc.spin ? 0 : (P.h * k) / 2, 0);   // spinning pieces pivot on their centre
       this.pieceActors.push(new Actor(R, geo));
     }
     sb.cast.forEach((c, i) => this.outfits.set(c.id, { o: { ...c.outfit } as Outfit, scale: c.scale ?? (c.outfit.build === "kid" ? 0.72 : 1), i }));
@@ -268,15 +268,22 @@ export class StoryWorld {
       const cadence = mode0 === "dance" ? 1.1 : mode0 === "march" ? 1.0 : 0.75;
       const phase = moving ? q(((t * cadence + hh(who.i, 5)) % 1), 60) : 0;
       const dance = mode0 === "dance";
-      const hop = dance ? Math.max(0, Math.sin(2 * Math.PI * (t * 2.2 + hh(who.i, 3)))) * 0.16 * scl : 0;
+      let hop = dance ? Math.max(0, Math.sin(2 * Math.PI * (t * 2.2 + hh(who.i, 3)))) * 0.16 * scl : 0;
       const mode: FrontOpts["mode"] = mode0 === "fall" ? "fall" : mode0 === "sit" ? "sit" : mode0 === "march" ? "march" : moving ? "stroll" : "stand";
+      // life: standing people breathe and sway, the head bobs; every reaction lands with a small hop
+      const idle = mode === "stand" || mode === "sit";
+      const sway = idle ? q(1.8 * Math.sin(2 * Math.PI * (t * 0.45 + hh(who.i, 11))), 2) : 0;
+      const nod = idle ? q(3.5 * Math.sin(2 * Math.PI * (t * 0.33 + hh(who.i, 12))), 2) : 0;
+      for (const sw of st.swaps) { const kk = f - (sw - LEAD); if (kk >= 0 && kk < 8) hop += 0.07 * scl * Math.sin((Math.PI * kk) / 8); }
+      if (a.pose === "up") hop += mode === "stand" ? 0.03 * scl * Math.max(0, Math.sin(2 * Math.PI * t * 1.6)) : 0;
       const facing: -1 | 0 | 1 = a.facing ?? (st.dirx ? (((st.dirx > 0 ? 1 : -1) * Math.sign(right.x || 1)) as -1 | 1) : 0);
       const d = cam.position.distanceTo(this.v.set(st.x, 1.2 * scl, st.z)) / scl;
       const [w, h, k] = tier(d);
       const fo: FrontOpts = {
         phase, expr: st.expr, mode, look: a.look ?? 0, blink: st.expr === "whistle" ? 0 : lidAt(fr, who.i * 7 + ai, st.swaps.map((x) => x - s.startFrame)),
-        lift: 60, tilt: (a.tilt ?? 0) + (dance ? q(9 * Math.sin(2 * Math.PI * t * 1.1 + who.i), 10) : 0),
-        wave: a.wave || dance ? q(Math.sin(t * (dance ? 7 : 9) + who.i * 1.3), 20) : undefined,
+        lift: 60, tilt: (a.tilt ?? 0) + sway + (dance ? q(9 * Math.sin(2 * Math.PI * t * 1.1 + who.i), 10) : 0), headTilt: nod,
+        wave: a.wave || dance || a.pose ? q(Math.sin(t * (dance ? 7 : a.pose ? 5 : 9) + who.i * 1.3), 20) : undefined,
+        ...(a.pose ? { pose: a.pose } : {}),
         light: light2D(false), facing, seed: (who.i * 5 + 3) % 7 + 1,
       };
       // side view while walking ACROSS the frame (template bodySide: planted stance foot, cycloid swing foot)
@@ -376,7 +383,8 @@ export class StoryWorld {
       const bob = pc.rock ? pc.rock * Math.sin(t * 1.6 + i) : 0;
       A.mesh.visible = true;
       A.mesh.position.set(x, (pc.y ?? 0) + bob * 0.15, z);
-      A.mesh.rotation.set(0, Math.atan2(cam.position.x - x, cam.position.z - z), bob * 0.03);
+      A.mesh.rotation.set(0, Math.atan2(cam.position.x - x, cam.position.z - z), bob * 0.03 - (pc.spin ? pc.spin * t : 0));
+      if (pc.spin) A.mesh.position.y += (P.h * k) / 2 + 0.15 * Math.abs(Math.sin(t * 3.2));   // centred pivot + tumbling bounce
       A.mesh.scale.set(pc.mirror ? -1 : 1, 1, 1);
       A.mesh.castShadow = L.actorShadow;
       used.push(A);
