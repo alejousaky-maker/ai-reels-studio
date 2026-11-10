@@ -433,6 +433,30 @@ export const drawProduct = (p: Pen, kind: ProductKind, col = "#c8553d") => {
       p.stroke([[60, 380], [105, 325]], 22, "#5a3b2a");
       break;
     }
+    case "plug": {   // a power strip plug held like a live grenade (cable + sparks)
+      p.poly(rr(120, 140, 280, 300, 24), "#f2efe8", 9);
+      for (const x of [170, 230]) p.poly([[x - 9, 60], [x + 9, 60], [x + 9, 140], [x - 9, 140]], "#c9a227", 6);
+      p.stroke([[200, 300], [210, 360], [160, 390]], 16, "#2b2b38");
+      for (const [x, y] of [[120, 60], [290, 70], [210, 30]] as const) p.poly([[x, y], [x + 18, y + 10], [x + 6, y + 14], [x + 22, y + 30], [x - 4, y + 16], [x + 4, y + 12]], "#ffe14d", 4);
+      break;
+    }
+    case "fryingpan": {   // a frying pan in cartoon flames
+      for (let k = 0; k < 5; k++) { const x = 90 + k * 50; p.poly([[x - 30, 200], [x, 40 + (k % 2) * 40], [x + 30, 200]], "#ff7a1a", 6); p.poly([[x - 14, 200], [x, 110 + (k % 2) * 30], [x + 14, 200]], "#ffe14d", 0); }
+      p.ell(190, 230, 140, 45, "#2b2b38", 10); p.ell(190, 222, 118, 32, "#4a4f5a", 0);
+      p.stroke([[320, 240], [395, 270]], 22, "#5a3b2a");
+      break;
+    }
+    case "plate": {   // a white ceramic plate with a blue rim
+      p.ell(200, 220, 165, 70, "#ffffff", 10); p.ell(200, 220, 120, 48, "#f2efe8", 4); p.ell(200, 220, 150, 62, null, 4, 0, 360);
+      p.arc(200, 220, 158, 66, 0, 360, 6, "#3f6fb5");
+      break;
+    }
+    case "grass": {   // one tiny blade of grass held like an alien artifact (with a sparkle)
+      p.poly([[190, 380], [200, 120], [215, 60], [212, 140], [214, 380]], "#5fae5a", 8);
+      p.poly([[200, 380], [150, 200], [205, 300]], "#79c472", 6);
+      for (const [x, y] of [[260, 90], [140, 120]] as const) { p.stroke([[x - 16, y], [x + 16, y]], 5, "#ffe14d"); p.stroke([[x, y - 16], [x, y + 16]], 5, "#ffe14d"); }
+      break;
+    }
     case "goldcoin": {   // a big glowing gold token with a skull
       p.ell(200, 200, 160, 160, "#ffd23f", 10); p.ell(200, 200, 125, 125, "#f2b84a", 6);
       p.ell(200, 185, 55, 50, "#fff3c0", 6); p.dot(180, 180, 12, "#5a3b2a"); p.dot(220, 180, 12, "#5a3b2a");

@@ -48,7 +48,7 @@ export type ProductKind = "coffee" | "croissant" | "bread" | "cake" | "lightbulb
   | "phone" | "tablet" | "wifi" | "key" | "camera" | "card" | "fish" | "receipt" | "box"
   | "snake" | "coins" | "mic" | "earbuds" | "gpsmap" | "suitcase" | "folder" | "ticket" | "controller" | "can" | "pizza"
   | "thermometer" | "moth" | "cash" | "noodles" | "extinguisher" | "potato" | "battery" | "diploma" | "sicknote" | "router"
-  | "newspaper" | "pickaxe" | "shovel" | "bagel" | "lettuce" | "pillow" | "wrench" | "check" | "trident" | "clipboard" | "gavel" | "envelope" | "cutlass" | "goldcoin";
+  | "newspaper" | "pickaxe" | "shovel" | "bagel" | "lettuce" | "pillow" | "wrench" | "check" | "trident" | "clipboard" | "gavel" | "envelope" | "cutlass" | "goldcoin" | "plug" | "fryingpan" | "plate" | "grass";
 /** big painted set pieces standing in the world as lit cards (always turned to the camera, side view) */
 export type PieceKind = "horse" | "ship" | "galley" | "chalkboard" | "sheep" | "tent" | "scale" | "boxes" | "car" | "van" | "poster"
   | "lewis" | "crates" | "snakes" | "board" | "screen" | "finish" | "truck" | "booth" | "tumbleweed" | "trafficlight" | "snacks"
