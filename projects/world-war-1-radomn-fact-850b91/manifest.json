@@ -1,0 +1,193 @@
+{
+ "id": "world-war-1-radomn-fact-850b91",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 149,
+   "beats": 10,
+   "at": "2026-11-09T23:14:05"
+  },
+  "voice": {
+   "duration": 52.676520833333335,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 17.4,
+   "status": "done",
+   "voice": "af_heart",
+   "speed": 0.894,
+   "at": "2026-11-09T23:14:39"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 8.0,
+   "method": {
+    "whisper": 12,
+    "spread": 0
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-09T23:14:47"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1592,
+   "seconds_video": 53.06666666666667,
+   "scenes": 10,
+   "at": "2026-11-09T23:14:47"
+  },
+  "stills": {
+   "status": "done",
+   "count": 30,
+   "at": "2026-11-09T23:16:19"
+  },
+  "render_standard": {
+   "status": "done",
+   "quality": "standard",
+   "seconds": 191.5,
+   "frames": 1592,
+   "renderedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b07",
+    "b08",
+    "b09",
+    "b10"
+   ],
+   "reusedScenes": [],
+   "fps_render": 8.31,
+   "at": "2026-11-09T23:19:31"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 15.5,
+   "integratedLUFS": -14.01,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.23,
+   "maxGainReductionDB": 7.08,
+   "voiceLUFS": -13.98,
+   "musicLUFS": -29.76,
+   "sfxLUFS": -32.23,
+   "at": "2026-11-09T23:19:47"
+  },
+  "mux_standard": {
+   "status": "done",
+   "file": "projects\\world-war-1-radomn-fact-850b91\\output\\world-war-1-radomn-fact_standard_v1.mp4",
+   "at": "2026-11-09T23:19:48"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-09T23:19:57"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-09T23:14:05",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T23:14:05",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-09T23:14:22",
+   "seconds": 16.7,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-09T23:14:39",
+   "seconds": 17.4,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-09T23:14:47",
+   "status": "done",
+   "seconds": 8.0
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T23:14:47",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-09T23:16:19",
+   "status": "done"
+  },
+  {
+   "step": "render_standard",
+   "at": "2026-11-09T23:19:31",
+   "status": "done",
+   "seconds": 191.5
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T23:19:47",
+   "status": "done",
+   "seconds": 15.5
+  },
+  {
+   "step": "mux_standard",
+   "at": "2026-11-09T23:19:48",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T23:19:57",
+   "status": "done"
+  }
+ ],
+ "title": "World war 1 radomn fact",
+ "created": "2026-11-09T23:04:26",
+ "request": {
+  "title": "World war 1 radomn fact",
+  "idea": "World war 1 radomn fact",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 60,
+  "quality": "standard",
+  "style": "minimal_stickman",
+  "environment": "village_square",
+  "voice": null,
+  "speed": 1.0,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": false,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "auto",
+  "review": "auto_qa",
+  "seed": 7,
+  "autostart": true
+ },
+ "lang": "en",
+ "style": "minimal_stickman",
+ "scriptProvider": "ollama:qwen3:8b (writer+critic+director)",
+ "planRepairs": [],
+ "coherence": {
+  "visualSupport": 0.7,
+  "beats": 10,
+  "places": [
+   "market",
+   "street",
+   "village_square"
+  ],
+  "relevance": 8,
+  "coherence": 9,
+  "hook": 6
+ },
+ "durationNote": "",
+ "requestedSeconds": 60
+}

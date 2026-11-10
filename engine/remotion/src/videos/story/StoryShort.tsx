@@ -39,7 +39,8 @@ const useKit = () => {
 const Inner: React.FC<{ idx: number; world: StoryWorld; sb: Storyboard }> = ({ idx, world, sb }) => {
   const f = useCurrentFrame();
   const { camera, scene } = useThree();
-  const on = { ink: true, lens: true, bloom: true, grade: true, ...(sb.post ?? {}) };
+  const lite = sb.graphics === "simple";   // simple graphics: no lens blur / bloom (the two costliest passes), MSAA 2
+  const on = { ink: true, lens: !lite, bloom: !lite, grade: true, ...(sb.post ?? {}) };
   const fx = useMemo(() => ({
     ink: new InkPass(scene, camera as THREE.PerspectiveCamera),
     lens: new LensBlur({ maxCoC: 24, nearScale: 1.2 }),
@@ -49,7 +50,7 @@ const Inner: React.FC<{ idx: number; world: StoryWorld; sb: Storyboard }> = ({ i
   }), [camera, scene]);
   useEffect(() => () => fx.ink.dispose(), [fx]);
   const post = useMemo(() => (
-    <EffectComposer multisampling={4}>
+    <EffectComposer multisampling={lite ? 2 : 4}>
       {[
         on.ink && <primitive key="ink" object={fx.ink} dispose={null} />,
         on.lens && <primitive key="pre" object={fx.lens.pre} dispose={null} />,

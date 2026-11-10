@@ -1,0 +1,315 @@
+{
+ "lang": "en",
+ "title": "World war 1 radomn fact",
+ "words": 149,
+ "beats": [
+  {
+   "narration": "In 1915, a French soldier found a live rat inside his helmet.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "tom",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "tom",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "market",
+   "visual": "market, day, tom"
+  },
+  {
+   "narration": "He screamed and dropped it. The rat escaped, but the soldier remained unharmed.",
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "tom",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "lena",
+     "action": "stand",
+     "expr": "shock",
+     "react": {
+      "word": "unharmed",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "tom",
+   "fx": [],
+   "impactWord": null,
+   "transition": "flash",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "market",
+   "visual": "market, day, tom, lena"
+  },
+  {
+   "narration": "The next day, the same rat was found in another soldier's helmet.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "tom",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "tom",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "street",
+   "visual": "street, day, tom"
+  },
+  {
+   "narration": "This incident occurred over 100 times. Soldiers began referring to it as 'the rat patrol'.",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "captain",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "captain",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "clock",
+     "color": null,
+     "word": "times",
+     "on": "captain"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": "village_square, day, captain, clock"
+  },
+  {
+   "narration": "Doctors thought the rats might spread disease, but they were actually just curious about the phenomenon.",
+   "shot": "low",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "doctor",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "doctor",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": "village_square, night, doctor"
+  },
+  {
+   "narration": "The rats were harmless, yet the story became a symbol of the war's absurdity.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "tom",
+     "action": "stand",
+     "expr": "pained",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "lena",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "absurdity",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "tom",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "market",
+   "visual": "market, golden, tom, lena"
+  },
+  {
+   "narration": "This showed how war could turn even the smallest event into a major mystery.",
+   "shot": "close",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "captain",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "captain",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": "village_square, golden, captain"
+  },
+  {
+   "narration": "Soldiers shared the story as a way to cope with the chaos and fear of war.",
+   "shot": "high",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "tom",
+     "action": "stand",
+     "expr": "dazed",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "lena",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "war",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "tom",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "street",
+   "visual": "street, night, tom, lena"
+  },
+  {
+   "narration": "The rat patrol became a symbol of how war can make the ordinary feel strange and dangerous.",
+   "shot": "two_shot",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "doctor",
+     "action": "stand",
+     "expr": "pained",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "doctor",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "street",
+   "visual": "street, night, doctor"
+  },
+  {
+   "narration": "Even today, the story reminds us of the human side of war and the strange things that happen in conflict.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "captain",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "doctor",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "conflict",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "captain",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": "village_square, golden, captain, doctor"
+  }
+ ]
+}

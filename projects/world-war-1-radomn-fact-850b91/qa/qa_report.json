@@ -1,0 +1,286 @@
+{
+ "video": "C:\\Users\\felip\\AI-Reels-Studio\\projects\\world-war-1-radomn-fact-850b91\\output\\world-war-1-radomn-fact_standard_v1.mp4",
+ "probe": {
+  "width": 1080,
+  "height": 1920,
+  "fps": 30.0,
+  "videoSeconds": 53.066667,
+  "audioSeconds": 53.066667,
+  "sizeMB": 44.79
+ },
+ "checks": [
+  {
+   "check": "video stream",
+   "ok": true,
+   "detail": "1 video stream(s), codec h264",
+   "blocking": true
+  },
+  {
+   "check": "9:16 ratio",
+   "ok": true,
+   "detail": "1080x1920",
+   "blocking": true
+  },
+  {
+   "check": "fps",
+   "ok": true,
+   "detail": "30.000 fps",
+   "blocking": true
+  },
+  {
+   "check": "duration",
+   "ok": true,
+   "detail": "video 53.067 s, storyboard 53.067 s",
+   "blocking": true
+  },
+  {
+   "check": "single audio track",
+   "ok": true,
+   "detail": "1 audio stream(s) (a silent extra track means the mux mapped the wrong stream)",
+   "blocking": true
+  },
+  {
+   "check": "AAC 48 kHz",
+   "ok": true,
+   "detail": "aac 48000 Hz 2 ch",
+   "blocking": true
+  },
+  {
+   "check": "A/V length match",
+   "ok": true,
+   "detail": "audio 53.067 s vs video 53.067 s",
+   "blocking": true
+  },
+  {
+   "check": "no black spans",
+   "ok": true,
+   "detail": "0 span(s) []",
+   "blocking": true
+  },
+  {
+   "check": "no white spans (>0.2 s)",
+   "ok": true,
+   "detail": "0 span(s) [] — 4-frame flashes are shorter and allowed",
+   "blocking": true
+  },
+  {
+   "check": "no frozen holds >= 1.5 s",
+   "ok": true,
+   "detail": "0 freeze(s) >= 0.6 s: []",
+   "blocking": false
+  },
+  {
+   "check": "loudness ~ -14 LUFS",
+   "ok": true,
+   "detail": "integrated -14.0 LUFS (target -14, platform normalisation)",
+   "blocking": false
+  },
+  {
+   "check": "true peak <= -1 dBTP",
+   "ok": true,
+   "detail": "true peak -2.0 dBTP",
+   "blocking": true
+  },
+  {
+   "check": "no long silences",
+   "ok": true,
+   "detail": "0 silence(s) >= 1.2 s: []",
+   "blocking": false
+  },
+  {
+   "check": "render matches control stills",
+   "ok": true,
+   "detail": "30 frames compared; mismatches: []",
+   "blocking": true
+  },
+  {
+   "check": "day exposure (heuristic)",
+   "ok": true,
+   "detail": "median luma of day scenes 0.656, reference ~0.57 (range 0.5-0.66)",
+   "blocking": false
+  },
+  {
+   "check": "no crushed blacks (heuristic)",
+   "ok": false,
+   "detail": "scenes with p5 luma < 0.04: ['b02', 'b04', 'b07', 'b10']",
+   "blocking": false
+  }
+ ],
+ "blocking": [],
+ "warnings": [
+  "no crushed blacks (heuristic): scenes with p5 luma < 0.04: ['b02', 'b04', 'b07', 'b10']"
+ ],
+ "technicalPass": true,
+ "loudness": {
+  "I": -14.0,
+  "TP": -2.0
+ },
+ "sceneStats": [
+  {
+   "scene": "b01",
+   "t": 2.47,
+   "light": "day",
+   "medianLuma": 0.696,
+   "p5Luma": 0.32,
+   "p95Luma": 0.871,
+   "satMean": 0.336
+  },
+  {
+   "scene": "b02",
+   "t": 7.43,
+   "light": "day",
+   "medianLuma": 0.557,
+   "p5Luma": 0.024,
+   "p95Luma": 0.853,
+   "satMean": 0.498
+  },
+  {
+   "scene": "b03",
+   "t": 11.9,
+   "light": "day",
+   "medianLuma": 0.724,
+   "p5Luma": 0.067,
+   "p95Luma": 0.911,
+   "satMean": 0.338
+  },
+  {
+   "scene": "b04",
+   "t": 16.93,
+   "light": "day",
+   "medianLuma": 0.617,
+   "p5Luma": 0.035,
+   "p95Luma": 0.888,
+   "satMean": 0.389
+  },
+  {
+   "scene": "b05",
+   "t": 22.97,
+   "light": "night",
+   "medianLuma": 0.149,
+   "p5Luma": 0.059,
+   "p95Luma": 0.342,
+   "satMean": 0.605
+  },
+  {
+   "scene": "b06",
+   "t": 28.23,
+   "light": "golden",
+   "medianLuma": 0.299,
+   "p5Luma": 0.041,
+   "p95Luma": 0.626,
+   "satMean": 0.568
+  },
+  {
+   "scene": "b07",
+   "t": 32.83,
+   "light": "golden",
+   "medianLuma": 0.269,
+   "p5Luma": 0.022,
+   "p95Luma": 0.829,
+   "satMean": 0.625
+  },
+  {
+   "scene": "b08",
+   "t": 37.53,
+   "light": "night",
+   "medianLuma": 0.152,
+   "p5Luma": 0.116,
+   "p95Luma": 0.189,
+   "satMean": 0.694
+  },
+  {
+   "scene": "b09",
+   "t": 42.87,
+   "light": "night",
+   "medianLuma": 0.148,
+   "p5Luma": 0.022,
+   "p95Luma": 0.466,
+   "satMean": 0.622
+  },
+  {
+   "scene": "b10",
+   "t": 49.43,
+   "light": "golden",
+   "medianLuma": 0.304,
+   "p5Luma": 0.034,
+   "p95Luma": 0.663,
+   "satMean": 0.541
+  }
+ ],
+ "rubric": [
+  {
+   "area": "Comprensión narrativa y gancho inicial",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "Coherencia de personajes y escenarios",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "Cámara y pacing",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "auto+human"
+  },
+  {
+   "area": "Contornos / ilustración / materiales",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "Iluminación, color y profundidad",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "auto+human"
+  },
+  {
+   "area": "Claridad y naturalidad de la voz",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "SFX, música y sincronía",
+   "score": null,
+   "basis": "computed loudness -14.0 LUFS / TP -2.0 dBTP; sync and taste need a listen",
+   "kind": "auto+human"
+  },
+  {
+   "area": "Composición vertical y safe areas",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "Alineación visual-texto",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "Calidad técnica del archivo y licencias",
+   "score": 10,
+   "basis": "computed (checks above)",
+   "kind": "auto"
+  }
+ ],
+ "approved": false,
+ "note": "Technical checks are measured. Subjective rubric areas are NOT auto-scored; a person must review frames/video and approve in the app.",
+ "coherence": {
+  "visualSupport": 0.7,
+  "beats": 10,
+  "places": [
+   "market",
+   "street",
+   "village_square"
+  ],
+  "relevance": 8,
+  "coherence": 9,
+  "hook": 6
+ }
+}

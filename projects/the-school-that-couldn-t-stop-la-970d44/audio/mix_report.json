@@ -1,0 +1,254 @@
+{
+ "duration": 62.36666666666667,
+ "sampleRate": 48000,
+ "targetLUFS": -14.0,
+ "ceilingDBTP": -2.0,
+ "measured": {
+  "integratedLUFS": -14.01,
+  "truePeakDBTP": -2.0,
+  "LRA": 1.43,
+  "maxGainReductionDB": 6.76,
+  "voiceLUFS": -14.0,
+  "musicLUFS": -29.78,
+  "sfxLUFS": -30.99
+ },
+ "ffmpegEbur128": {
+  "I": -14.0,
+  "LRA": 1.4,
+  "truePeak": -2.0
+ },
+ "musicSections": [
+  {
+   "start": 0.0,
+   "end": 6.43,
+   "mood": "curious"
+  },
+  {
+   "start": 6.43,
+   "end": 7.77,
+   "mood": "whimsical"
+  },
+  {
+   "start": 7.77,
+   "end": 10.6,
+   "mood": "curious"
+  },
+  {
+   "start": 10.6,
+   "end": 12.93,
+   "mood": "upbeat"
+  },
+  {
+   "start": 12.93,
+   "end": 19.53,
+   "mood": "tense"
+  },
+  {
+   "start": 19.53,
+   "end": 25.03,
+   "mood": "whimsical"
+  },
+  {
+   "start": 25.03,
+   "end": 27.9,
+   "mood": "warm"
+  },
+  {
+   "start": 27.9,
+   "end": 30.4,
+   "mood": "whimsical"
+  },
+  {
+   "start": 30.4,
+   "end": 39.77,
+   "mood": "tense"
+  },
+  {
+   "start": 39.77,
+   "end": 49.57,
+   "mood": "curious"
+  },
+  {
+   "start": 49.57,
+   "end": 57.97,
+   "mood": "warm"
+  },
+  {
+   "start": 57.97,
+   "end": 62.37,
+   "mood": "whimsical"
+  }
+ ],
+ "musicCues": [
+  "0.00s section 1: curious (96 bpm)",
+  "6.43s section 2: whimsical (108 bpm)",
+  "7.77s section 3: curious (96 bpm)",
+  "10.60s section 4: upbeat (118 bpm)",
+  "12.93s section 5: tense (92 bpm)",
+  "19.53s section 6: whimsical (108 bpm)",
+  "25.03s section 7: warm (84 bpm)",
+  "27.90s section 8: whimsical (108 bpm)",
+  "30.40s section 9: tense (92 bpm)",
+  "39.77s section 10: curious (96 bpm)",
+  "49.57s section 11: warm (84 bpm)",
+  "57.97s section 12: whimsical (108 bpm)"
+ ],
+ "sfxCues": [
+  {
+   "t": 0.0,
+   "kind": "bed",
+   "what": "day ambience + crowd"
+  },
+  {
+   "t": 6.433,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 7.767,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 9.18,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 8.233,
+   "kind": "product",
+   "what": "product question"
+  },
+  {
+   "t": 10.6,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 12.933,
+   "kind": "bed",
+   "what": "day ambience + crowd"
+  },
+  {
+   "t": 12.813,
+   "kind": "whoosh",
+   "what": "xfade into b05"
+  },
+  {
+   "t": 19.533,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 21.267,
+   "kind": "product",
+   "what": "product exclaim"
+  },
+  {
+   "t": 21.9,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 25.033,
+   "kind": "bed",
+   "what": "golden ambience"
+  },
+  {
+   "t": 24.913,
+   "kind": "whoosh",
+   "what": "xfade into b08"
+  },
+  {
+   "t": 26.48,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 26.1,
+   "kind": "product",
+   "what": "product scroll"
+  },
+  {
+   "t": 27.9,
+   "kind": "bed",
+   "what": "golden ambience"
+  },
+  {
+   "t": 30.4,
+   "kind": "bed",
+   "what": "day ambience + crowd"
+  },
+  {
+   "t": 30.28,
+   "kind": "whoosh",
+   "what": "xfade into b10"
+  },
+  {
+   "t": 36.033,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 37.947,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 38.3,
+   "kind": "product",
+   "what": "product exclaim"
+  },
+  {
+   "t": 39.767,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 39.647,
+   "kind": "whoosh",
+   "what": "xfade into b12"
+  },
+  {
+   "t": 41.147,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 40.633,
+   "kind": "product",
+   "what": "product clock"
+  },
+  {
+   "t": 42.533,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 44.233,
+   "kind": "product",
+   "what": "product lightbulb"
+  },
+  {
+   "t": 49.567,
+   "kind": "bed",
+   "what": "golden ambience"
+  },
+  {
+   "t": 49.447,
+   "kind": "whoosh",
+   "what": "xfade into b14"
+  },
+  {
+   "t": 55.433,
+   "kind": "bed",
+   "what": "golden ambience + crowd"
+  },
+  {
+   "t": 57.967,
+   "kind": "bed",
+   "what": "golden ambience"
+  }
+ ],
+ "license": "All music and SFX synthesized locally (numpy/scipy), original; voice from local TTS or user import."
+}

@@ -1,5 +1,13 @@
 # PROGRESS — real, measured state (2026-11-09)
 
+## v0.5 update — Demo A formula
+- New short in the Demo A formula (the user's reference): "The School That Couldn't Stop Laughing" (1962 Tanganyika laughter
+  epidemic), EN, af_heart, 16 scenes, Master 2K 62.4 s, QA PASS, -14.0 LUFS / -2.0 dBTP. Facts from Wikipedia in plan.json.
+  `projects/the-school-that-couldn-t-stop-la-970d44/output/latest_master.mp4`. First render 273 s; after re-shooting 3 scenes,
+  5 scenes re-rendered / 11 reused in 107 s.
+- Graphics option full (default, Demo A look) / simple. Measured: same render speed (~10 fps at 2K), so full stays default.
+- pytest 30/30.
+
 ## v0.4 update — idea → coherent video
 - Test with the user's own idea "La gran inundación de melaza de Boston en 1919", audience "jóvenes de 16 a 25", ES, 60 s:
   Wikipedia source found (es) → qwen3:8b writer + critic (relevance 8/10, coherence 9/10, hook 7/10, 9 sentences

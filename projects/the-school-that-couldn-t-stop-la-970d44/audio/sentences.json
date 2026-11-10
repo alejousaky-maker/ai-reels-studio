@@ -1,0 +1,116 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 61.92720833333333,
+ "voice": "af_heart",
+ "lang": "en",
+ "speed": 1.0,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "In January 1962, at a girls' boarding school in Tanganyika, three students started laughing.",
+   "start": 0.06,
+   "end": 6.351833333333333
+  },
+  {
+   "text": "And they could not stop.",
+   "start": 6.491833333333333,
+   "end": 7.689020833333333
+  },
+  {
+   "text": "There was no joke.",
+   "start": 7.829020833333334,
+   "end": 8.8745625
+  },
+  {
+   "text": "Nobody knew what was so funny.",
+   "start": 9.0145625,
+   "end": 10.535395833333334
+  },
+  {
+   "text": "Then a classmate caught it.",
+   "start": 10.675395833333333,
+   "end": 11.92175
+  },
+  {
+   "text": "Then another.",
+   "start": 12.06175,
+   "end": 12.836958333333333
+  },
+  {
+   "text": "Within weeks, ninety-five of the school's one hundred and fifty-nine pupils were laughing, crying, or fainting.",
+   "start": 12.976958333333334,
+   "end": 19.461604166666667
+  },
+  {
+   "text": "And the teachers?",
+   "start": 19.601604166666668,
+   "end": 20.525291666666668
+  },
+  {
+   "text": "Not a single giggle.",
+   "start": 20.66529166666667,
+   "end": 21.832375
+  },
+  {
+   "text": "They just watched nobody concentrate on a single lesson.",
+   "start": 21.972375,
+   "end": 24.962270833333335
+  },
+  {
+   "text": "In March, the school closed and sent the girls home.",
+   "start": 25.102270833333332,
+   "end": 27.829395833333333
+  },
+  {
+   "text": "Bad idea.",
+   "start": 27.969395833333333,
+   "end": 28.717270833333334
+  },
+  {
+   "text": "The laughter went home with them.",
+   "start": 28.857270833333335,
+   "end": 30.300666666666668
+  },
+  {
+   "text": "In the village of Nshamba, two hundred and seventeen people, mostly young, had laughing attacks.",
+   "start": 30.440666666666665,
+   "end": 35.957541666666664
+  },
+  {
+   "text": "It jumped to other schools.",
+   "start": 36.097541666666665,
+   "end": 37.3703125
+  },
+  {
+   "text": "In the end, fourteen of them had to close.",
+   "start": 37.5103125,
+   "end": 39.688
+  },
+  {
+   "text": "It took about eighteen months to fade away completely.",
+   "start": 39.828,
+   "end": 42.4484375
+  },
+  {
+   "text": "Today, experts call it mass hysteria: stress that spreads from person to person, like a yawn across a room.",
+   "start": 42.5884375,
+   "end": 49.4759375
+  },
+  {
+   "text": "The country had just become independent, and the students felt huge pressure from teachers and parents.",
+   "start": 49.6159375,
+   "end": 55.3476875
+  },
+  {
+   "text": "In all, around a thousand people were affected.",
+   "start": 55.4876875,
+   "end": 57.8911875
+  },
+  {
+   "text": "Because laughter really is contagious, even when nothing is funny.",
+   "start": 58.0311875,
+   "end": 61.78720833333333
+  }
+ ]
+}

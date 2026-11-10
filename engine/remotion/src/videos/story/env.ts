@@ -33,9 +33,9 @@ const hills = (b: Batch) => {
 };
 
 /** a ring of distant trees so every horizon has depth */
-const forest = (b: Batch, kit: Kit, r: () => number, inner: number) => {
+const forest = (b: Batch, kit: Kit, r: () => number, inner: number, n = 90) => {
   const pick = <T,>(a: T[]) => a[Math.floor(r() * a.length) % a.length];
-  for (let i = 0; i < 90; i++) {
+  for (let i = 0; i < n; i++) {
     const a = r() * Math.PI * 2, d = inner + r() * 160;
     prop(b, kit, pick(["tree_cone", "tree_default", "tree_oak", "tree_fat"]), Math.cos(a) * d, 0, Math.sin(a) * d, 9 + r() * 6, r() * 6);
   }
@@ -73,6 +73,8 @@ export const buildEnv = (root: THREE.Object3D, kit: Kit, env: EnvSpec, rays: Ray
   const info: EnvInfo = { lanterns: [] };
   const b = new Batch(), r = rng(env.seed || 7);
   const pick = <T,>(a: T[]) => a[Math.floor(r() * a.length) % a.length];
+  // simple graphics: sparse set dressing (fewer far trees / back houses, no flower carpets) -> calmer frames, lighter scenes
+  const lite = !!env.lite, N = (n: number) => (lite ? Math.round(n * 0.4) : n), FN = lite ? 40 : 90;
   const grass = lam("grassHD", () => ({ map: grassHD() }));
   const cobble = lam("cobbleHD", () => ({ map: cobbleHD() }));
   const stone = lam("copeHD", () => ({ map: stoneHD("copeHD", ["#e6dccd", "#ddd3c3", "#ece4d6", "#d6cbba"], "#aea293") }));
@@ -84,7 +86,7 @@ export const buildEnv = (root: THREE.Object3D, kit: Kit, env: EnvSpec, rays: Ray
 
   if (env.preset === "interior") {
     buildInterior(root, kit, env, info, b);
-    forest(b, kit, r, 90);
+    forest(b, kit, r, 90, FN);
   } else if (env.preset === "harbour") {
     buildHarbour(root, kit, env, info, b);
   } else if (env.preset === "village_square" || env.preset === "market") {
@@ -105,8 +107,8 @@ export const buildEnv = (root: THREE.Object3D, kit: Kit, env: EnvSpec, rays: Ray
       }
     }
     // second row behind, for depth through the street gaps
-    for (let i = 0; i < 28; i++) {
-      const a = (i / 28) * Math.PI * 2, d = 46 + r() * 8, x = Math.cos(a) * d, z = Math.sin(a) * d;
+    for (let i = 0, nb = N(28); i < nb; i++) {
+      const a = (i / nb) * Math.PI * 2, d = 46 + r() * 8, x = Math.cos(a) * d, z = Math.sin(a) * d;
       house(b, x, z, faceCenter(x, z), pick([7, 9]), 8, pick([7, 8.4, 9.8]), Math.floor(r() * 8), 0);
     }
     for (const [x, z] of [[-14, -14], [14, -14], [14, 14], [-14, 14]]) lantern(x, z);
@@ -117,8 +119,8 @@ export const buildEnv = (root: THREE.Object3D, kit: Kit, env: EnvSpec, rays: Ray
         prop(b, kit, n, x, 0, z, 3.2, yaw);
       prop(b, kit, "cart", 10, 0, -15, 2.2, 0.8);
     }
-    for (let i = 0; i < 18; i++) { const a = r() * 6.28, d = 3.4 + r() * 0.6; prop(b, kit, pick(["flower_redA", "flower_yellowA", "flower_purpleA"]), Math.cos(a) * d, 0, Math.sin(a) * d, 0.5); }
-    forest(b, kit, r, 80);
+    for (let i = 0; i < (lite ? 0 : 18); i++) { const a = r() * 6.28, d = 3.4 + r() * 0.6; prop(b, kit, pick(["flower_redA", "flower_yellowA", "flower_purpleA"]), Math.cos(a) * d, 0, Math.sin(a) * d, 0.5); }
+    forest(b, kit, r, 80, FN);
   } else if (env.preset === "street") {
     b.add(ground(-5, 5, -120, 120, 3, 60, 0.0), cobble);
     b.add(ground(-7.5, -5, -120, 120, 1, 60, 0.12), stone); b.add(ground(5, 7.5, -120, 120, 1, 60, 0.12), stone);
@@ -132,25 +134,25 @@ export const buildEnv = (root: THREE.Object3D, kit: Kit, env: EnvSpec, rays: Ray
       }
     }
     for (let z = -100; z <= 100; z += 14) { lantern(-6.2, z); lantern(6.2, z + 7); }
-    for (let i = 0; i < 40; i++) { const x = (r() < 0.5 ? -1 : 1) * (22 + r() * 30), z = (r() - 0.5) * 220; prop(b, kit, pick(TREES), x, 0, z, 7 + r() * 3, r() * 6); }
-    forest(b, kit, r, 130);
+    for (let i = 0; i < N(40); i++) { const x = (r() < 0.5 ? -1 : 1) * (22 + r() * 30), z = (r() - 0.5) * 220; prop(b, kit, pick(TREES), x, 0, z, 7 + r() * 3, r() * 6); }
+    forest(b, kit, r, 130, FN);
   } else {
     // park: gravel loop, pond, trees, hedges, benches
     b.add(ground(-2, 2, -60, 60, 1, 30, 0.01), lam("gravel", () => ({ color: "#d8c49a" })));
     b.add(ground(-60, 60, -2, 2, 30, 1, 0.012), lam("gravel", () => ({ color: "#d8c49a" })));
     b.add(disc(7, 0.03), lam("pond", () => ({ color: "#4f9fd4" })), new THREE.Matrix4().makeTranslation(14, 0, -14));
     b.add(new THREE.TorusGeometry(7.1, 0.3, 8, 40).rotateX(Math.PI / 2), stone, new THREE.Matrix4().makeTranslation(14, 0.1, -14));
-    for (let i = 0; i < 36; i++) {
+    for (let i = 0; i < N(36); i++) {
       const a = r() * 6.28, d = 12 + r() * 40, x = Math.cos(a) * d, z = Math.sin(a) * d;
       if (Math.abs(x) < 4 || Math.abs(z) < 4 || Math.hypot(x - 14, z + 14) < 9) continue;
       prop(b, kit, pick(TREES), x, 0, z, 7 + r() * 3.5, r() * 6);
     }
-    for (let i = 0; i < 30; i++) { const x = (r() - 0.5) * 50, z = (r() - 0.5) * 50; if (Math.abs(x) > 3.5 && Math.abs(z) > 3.5 && Math.hypot(x - 14, z + 14) > 8.5) prop(b, kit, pick(["plant_bushLarge", "plant_bushDetailed", "plant_bush"]), x, 0, z, 1.2 + r() * 0.6); }
-    for (let i = 0; i < 40; i++) { const x = (r() - 0.5) * 40, z = (r() - 0.5) * 40; if (Math.abs(x) > 3 && Math.abs(z) > 3) prop(b, kit, pick(["flower_redA", "flower_yellowA", "flower_purpleA"]), x, 0, z, 0.5); }
+    for (let i = 0; i < N(30); i++) { const x = (r() - 0.5) * 50, z = (r() - 0.5) * 50; if (Math.abs(x) > 3.5 && Math.abs(z) > 3.5 && Math.hypot(x - 14, z + 14) > 8.5) prop(b, kit, pick(["plant_bushLarge", "plant_bushDetailed", "plant_bush"]), x, 0, z, 1.2 + r() * 0.6); }
+    for (let i = 0; i < (lite ? 0 : 40); i++) { const x = (r() - 0.5) * 40, z = (r() - 0.5) * 40; if (Math.abs(x) > 3 && Math.abs(z) > 3) prop(b, kit, pick(["flower_redA", "flower_yellowA", "flower_purpleA"]), x, 0, z, 0.5); }
     for (const [x, z, yaw] of [[3.2, 8, -Math.PI / 2], [-3.2, -9, Math.PI / 2], [9, 3.2, Math.PI]]) prop(b, kit, "stall-bench", x, 0, z, 1.0, yaw);
     for (const [x, z] of [[3, 3], [-3, -3], [3, -20], [-20, 3]]) lantern(x, z);
     for (let i = 0; i < 6; i++) { const a = (i / 6) * 6.28 + 0.4, d = 70; house(b, Math.cos(a) * d, Math.sin(a) * d, faceCenter(Math.cos(a) * d, Math.sin(a) * d), 8, 8, 8.4, i, 0); }
-    forest(b, kit, r, 85);
+    forest(b, kit, r, 85, FN);
   }
   if (env.shop && env.preset !== "interior") shopFront(root, b, env.shop, info);
   b.build(root);

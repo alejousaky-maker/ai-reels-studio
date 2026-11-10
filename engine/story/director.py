@@ -157,7 +157,7 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                 act["holding"] = c.holding
             pos[c.id] = (x, z)
             actors.append(act)
-        for e in range(beat.extras):
+        for e in range(min(beat.extras, 2) if plan.graphics == "simple" else beat.extras):
             eid = f"extra{extras_made % 8}"
             extras_made += 1
             if eid not in {c["id"] for c in cast}:
@@ -277,12 +277,15 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
     elif plan.style == "cinematic_explainer":
         for sc in scenes:                                   # stronger, more constant background blur
             sc["dof"] = {**sc["dof"], "cInf": max(sc["dof"].get("cInf", 0), 9 if sc["dof"].get("focusActor") is not None else 0) * 1.25}
+    if plan.graphics == "simple":                           # everything sharp: no lens pass needed
+        for sc in scenes:
+            sc["dof"] = {"cInf": 0}
     total = scenes[-1]["endFrame"]
     sb = {"version": 1, "title": plan.title, "fps": fps, "width": width, "height": height, "durationInFrames": total,
           "env": {"preset": plan.environment, "seed": plan.seed, "shop": shop}, "cast": cast, "scenes": scenes,
           "brand": ({"name": brand["name"], "primary": brand["primary"], "secondary": brand["secondary"], "text": brand["text"]} if brand else None),
           "captions": {"enabled": plan.captions, "words": words if plan.captions else []}, "style": plan.style,
-          **({"post": post} if post else {})}
+          "graphics": plan.graphics, **({"post": post} if post else {})}
     validate(sb)
     return sb
 

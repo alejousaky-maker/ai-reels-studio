@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.5.0 — 2026-11-09 (the Demo A formula)
+- New reference video in the Demo A formula: "The School That Couldn't Stop Laughing" (1962 Tanganyika laughter epidemic, EN,
+  af_heart voice, Wikipedia-checked facts, one recurring cast, classroom -> village, day -> golden -> night -> golden arc).
+- **Graphics** option: "full" (the Demo A look, default) or "simple" (no lens blur / bloom, MSAA 2, 2K shadow map,
+  4 clouds, sparse set dressing, at most 2 background extras, everything sharp). Measured at Master 2K on 300 frames:
+  9.9 fps full vs 10.3 fps simple (concurrency 5: 10.5 vs 10.1) - the GPU passes are not the bottleneck (CPU capture +
+  encode is), so the Demo A look costs no extra render time and stays the default.
+
 ## 0.4.0 — 2026-11-09 (idea → coherent story → matching picture)
 - **Research**: the topic is looked up on Wikipedia in the video's language (only the topic is sent; offline = skipped);
   the script must use only facts from that source; verified claims link to it (`script/SOURCE.md`).

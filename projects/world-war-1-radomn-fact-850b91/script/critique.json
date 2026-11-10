@@ -1,0 +1,38 @@
+{
+ "rounds": [
+  {
+   "relevance": 8,
+   "coherence": 9,
+   "hook": 6,
+   "problems": [
+    "0: In 1915, a French soldier found a live rat in his helmet.",
+    "1: He screamed and dropped it. The rat ran away, but the soldier was fine.",
+    "2: But the next day, the same rat was found in another soldier's helmet.",
+    "3: This happened over 100 times. Soldiers started calling it 'the rat patrol'.",
+    "4: Doctors thought the rats were spreading disease, but they were just curious.",
+    "5: The rats were harmless. But the story became a symbol of the war's absurdity.",
+    "6: It showed how war could turn even the smallest thing into a big mystery.",
+    "7: Soldiers shared the story to cope with the chaos and fear of war.",
+    "8: The rat patrol became a symbol of how war can make the mundane feel strange and dangerous.",
+    "9: Even today, the story reminds us of the human side of war and the strange things that happen in conflict."
+   ],
+   "rewritten": 9
+  },
+  {
+   "relevance": 8,
+   "coherence": 9,
+   "hook": 6,
+   "problems": [
+    "0: In 1915, a French soldier discovered a live rat inside his helmet.",
+    "4: Doctors believed the rats could spread disease, but they were actually just curious about the phenomenon.",
+    "6: It illustrated how war could turn even the smallest occurrence into a major mystery.",
+    "8: The rat patrol became a symbol of how war can make the ordinary feel strange and dangerous."
+   ],
+   "rewritten": 3
+  }
+ ],
+ "source": null,
+ "relevance": 8,
+ "coherence": 9,
+ "hook": 6
+}

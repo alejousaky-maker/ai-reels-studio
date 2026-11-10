@@ -57,7 +57,7 @@ export type SceneSpec = {
 };
 
 export type Shop = { x: number; z: number; yaw: number; name: string; tagline?: string; colors: { primary: string; secondary: string; text: string } };
-export type EnvSpec = { preset: EnvPreset; seed: number; shop?: Shop | null };
+export type EnvSpec = { preset: EnvPreset; seed: number; shop?: Shop | null; lite?: boolean };
 
 export type Brand = { name: string; primary: string; secondary: string; text: string; font?: string; logoText?: string };
 export type Storyboard = {
@@ -71,4 +71,6 @@ export type Storyboard = {
   brand?: Brand | null;
   captions?: { enabled: boolean; words?: { w: string; s: number; e: number }[] };
   post?: { ink?: boolean; lens?: boolean; bloom?: boolean; grade?: boolean };
+  /** "simple" = light to render and easy to read: no lens blur / bloom, MSAA 2, 2K shadow map, 4 clouds, sparse set dressing */
+  graphics?: "simple" | "full";
 };

@@ -1,0 +1,689 @@
+{
+ "version": 1,
+ "title": "The School That Couldn't Stop Laughing",
+ "lang": "en",
+ "style": "storybook",
+ "environment": "village_square",
+ "seed": 5,
+ "cast": [
+  {
+   "id": "amani",
+   "name": "First pupil",
+   "role": "kid",
+   "palette": "#d9663f"
+  },
+  {
+   "id": "neema",
+   "name": "Classmate",
+   "role": "kid",
+   "palette": "#4f8fd1"
+  },
+  {
+   "id": "zawadi",
+   "name": "Classmate",
+   "role": "kid",
+   "palette": "#7bb04a"
+  },
+  {
+   "id": "teacher",
+   "name": "Teacher",
+   "role": "villager_woman",
+   "palette": "#8a4f9e"
+  },
+  {
+   "id": "mother",
+   "name": "Mother",
+   "role": "villager_woman",
+   "palette": "#c9a227"
+  },
+  {
+   "id": "official",
+   "name": "Official",
+   "role": "official",
+   "palette": null
+  },
+  {
+   "id": "scholar",
+   "name": "Researcher",
+   "role": "scholar",
+   "palette": null
+  }
+ ],
+ "beats": [
+  {
+   "narration": "In January 1962, at a girls' boarding school in Tanganyika, three students started laughing.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "amani",
+     "action": "stand",
+     "expr": "laugh",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "neema",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "zawadi",
+     "action": "stand",
+     "expr": "laugh",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "teacher",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "amani",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "interior",
+   "visual": "Three pupils laugh in the classroom while the teacher watches."
+  },
+  {
+   "narration": "And they could not stop.",
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "amani",
+     "action": "stand",
+     "expr": "laugh",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "amani",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "interior",
+   "visual": null
+  },
+  {
+   "narration": "There was no joke. Nobody knew what was so funny.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "teacher",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "amani",
+     "action": "stand",
+     "expr": "laugh",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "teacher",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "question",
+     "color": null,
+     "word": "joke",
+     "on": "teacher"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "interior",
+   "visual": null
+  },
+  {
+   "narration": "Then a classmate caught it. Then another.",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "neema",
+     "action": "stand",
+     "expr": "laugh",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "zawadi",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "another",
+      "expr": "laugh"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "neema",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "interior",
+   "visual": null
+  },
+  {
+   "narration": "Within weeks, ninety-five of the school's one hundred and fifty-nine pupils were laughing, crying, or fainting.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "amani",
+     "action": "stand",
+     "expr": "laugh",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "neema",
+     "action": "stand",
+     "expr": "dazed",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "zawadi",
+     "action": "stand",
+     "expr": "pained",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 6,
+   "extrasAction": "stand",
+   "focus": "amani",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": "95 of 159 pupils",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "interior",
+   "visual": null
+  },
+  {
+   "narration": "And the teachers? Not a single giggle.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "teacher",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "teacher",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "color": null,
+     "word": "giggle",
+     "on": "teacher"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "interior",
+   "visual": null
+  },
+  {
+   "narration": "They just watched nobody concentrate on a single lesson.",
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "teacher",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": "book"
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "teacher",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "interior",
+   "visual": null
+  },
+  {
+   "narration": "In March, the school closed and sent the girls home.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "amani",
+     "action": "walk",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "mother",
+     "action": "wave",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "amani",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "scroll",
+     "color": null,
+     "word": "closed",
+     "on": "mother"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": null
+  },
+  {
+   "narration": "Bad idea. The laughter went home with them.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "mother",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "laughter",
+      "expr": "laugh"
+     },
+     "holding": null
+    },
+    {
+     "id": "amani",
+     "action": "stand",
+     "expr": "laugh",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "mother",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": null
+  },
+  {
+   "narration": "In the village of Nshamba, two hundred and seventeen people, mostly young, had laughing attacks.",
+   "shot": "high",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "mother",
+     "action": "stand",
+     "expr": "laugh",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "neema",
+     "action": "stand",
+     "expr": "laugh",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "zawadi",
+     "action": "stand",
+     "expr": "dazed",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 8,
+   "extrasAction": "stand",
+   "focus": "mother",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": "217 people in Nshamba",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": null
+  },
+  {
+   "narration": "It jumped to other schools. In the end, fourteen of them had to close.",
+   "shot": "low",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "official",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "zawadi",
+     "action": "stand",
+     "expr": "laugh",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "official",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "color": null,
+     "word": "fourteen",
+     "on": "official"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": null
+  },
+  {
+   "narration": "It took about eighteen months to fade away completely.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "official",
+     "action": "stand",
+     "expr": "relief",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "official",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "clock",
+     "color": null,
+     "word": "months",
+     "on": "official"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": null
+  },
+  {
+   "narration": "Today, experts call it mass hysteria: stress that spreads from person to person, like a yawn across a room.",
+   "shot": "two_shot",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "scholar",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": "book"
+    },
+    {
+     "id": "neema",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "scholar",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "lightbulb",
+     "color": null,
+     "word": "hysteria",
+     "on": "scholar"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": null
+  },
+  {
+   "narration": "The country had just become independent, and the students felt huge pressure from teachers and parents.",
+   "shot": "two_shot",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "amani",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "mother",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "amani",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": null
+  },
+  {
+   "narration": "In all, around a thousand people were affected.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "amani",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "mother",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "official",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 4,
+   "extrasAction": "stand",
+   "focus": "amani",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "≈ 1,000 people",
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": null
+  },
+  {
+   "narration": "Because laughter really is contagious, even when nothing is funny.",
+   "shot": "close",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "amani",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "funny",
+      "expr": "smile_closed"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "amani",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": null
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "The epidemic began on 30 January 1962 at a mission-run girls' boarding school in Kashasha, Tanganyika, with three girls.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Tanganyika_laughter_epidemic"
+  },
+  {
+   "text": "It affected 95 of the 159 pupils; symptoms included laughter, crying and fainting.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Tanganyika_laughter_epidemic"
+  },
+  {
+   "text": "The teaching staff were unaffected and reported that students could not concentrate.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Tanganyika_laughter_epidemic"
+  },
+  {
+   "text": "The school closed on 18 March 1962.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Tanganyika_laughter_epidemic"
+  },
+  {
+   "text": "In Nshamba, 217 mostly young villagers had laughing attacks over 34 days.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Tanganyika_laughter_epidemic"
+  },
+  {
+   "text": "14 schools were shut down and about 1,000 people were affected; it died off about 18 months after it started.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Tanganyika_laughter_epidemic"
+  },
+  {
+   "text": "It is explained as mass psychogenic illness; Hempelmann links it to stress from higher expectations after independence.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Tanganyika_laughter_epidemic"
+  },
+  {
+   "text": "The yawn comparison is a narrative analogy.",
+   "status": "fiction",
+   "source": null
+  }
+ ],
+ "creativeHooks": [
+  "Three girls started laughing and could not stop.",
+  "Bad idea. The laughter went home with them."
+ ],
+ "brand": null,
+ "cta": null,
+ "captions": false,
+ "graphics": "full"
+}

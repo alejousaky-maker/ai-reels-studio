@@ -115,17 +115,19 @@ export class StoryWorld {
     this.sunDisc.frustumCulled = false; this.sunDisc.layers.set(NOINK); R.add(this.sunDisc);
     this.hemi = new THREE.HemisphereLight("#cfe6ff", "#6c5c8c", 1.1);
     this.sun = new THREE.DirectionalLight("#fff0d6", 2.6);
-    this.sun.castShadow = true; this.sun.shadow.mapSize.set(4096, 4096);
+    const lite = sb.graphics === "simple";
+    this.sun.castShadow = true; this.sun.shadow.mapSize.set(lite ? 2048 : 4096, lite ? 2048 : 4096);
     R.add(this.hemi, this.sun, this.sun.target);
     const pal = (l: LightName) => [0, 1, 2, 3].map((k) => cloudHD(k, LOOK3[l].cloud));
     this.cloudMaps = { day: pal("day"), golden: pal("golden"), night: pal("night") };
-    for (let i = 0; i < 9; i++) {
-      const a = (i / 9) * Math.PI * 2 + 0.3, d = 620 + (i % 3) * 60, w = 130 + (i % 4) * 30;
+    const nClouds = lite ? 4 : 9;
+    for (let i = 0; i < nClouds; i++) {
+      const a = (i / nClouds) * Math.PI * 2 + 0.3, d = 620 + (i % 3) * 60, w = 130 + (i % 4) * 30;
       const m = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map: this.cloudMaps.day[i % 4], color: new THREE.Color(1.1, 1.1, 1.1), transparent: true, depthWrite: false, fog: false }));
       m.position.set(Math.cos(a) * d, 120 + (i % 4) * 38, Math.sin(a) * d); m.scale.set(w, w / 2, 1); m.layers.set(NOINK);
       this.clouds.push(m); R.add(m);
     }
-    this.info = buildEnv(R, kit, sb.scenes[sceneIdx]?.env ?? sb.env, sightLines(sb, sceneIdx));
+    this.info = buildEnv(R, kit, { ...(sb.scenes[sceneIdx]?.env ?? sb.env), lite }, sightLines(sb, sceneIdx));
     // warm light pools on the ground under every lamp (night only): additive, unlit, no ink
     const poolTex = ctex("lampPool", 256, 256, (g) => {
       const gr = g.createRadialGradient(128, 128, 0, 128, 128, 128);

@@ -1,0 +1,71 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 52.676520833333335,
+ "voice": "af_heart",
+ "lang": "en",
+ "speed": 0.894,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "In 1915, a French soldier found a live rat inside his helmet.",
+   "start": 0.06,
+   "end": 4.872333333333334
+  },
+  {
+   "text": "He screamed and dropped it.",
+   "start": 5.012333333333333,
+   "end": 6.4976875
+  },
+  {
+   "text": "The rat escaped, but the soldier remained unharmed.",
+   "start": 6.6376875,
+   "end": 9.8338125
+  },
+  {
+   "text": "The next day, the same rat was found in another soldier's helmet.",
+   "start": 9.9738125,
+   "end": 13.788479166666667
+  },
+  {
+   "text": "This incident occurred over 100 times.",
+   "start": 13.928479166666667,
+   "end": 16.55270833333333
+  },
+  {
+   "text": "Soldiers began referring to it as 'the rat patrol'.",
+   "start": 16.692708333333332,
+   "end": 19.894729166666668
+  },
+  {
+   "text": "Doctors thought the rats might spread disease, but they were actually just curious about the phenomenon.",
+   "start": 20.034729166666665,
+   "end": 25.827291666666667
+  },
+  {
+   "text": "The rats were harmless, yet the story became a symbol of the war's absurdity.",
+   "start": 25.967291666666668,
+   "end": 30.427354166666667
+  },
+  {
+   "text": "This showed how war could turn even the smallest event into a major mystery.",
+   "start": 30.567354166666668,
+   "end": 35.07329166666667
+  },
+  {
+   "text": "Soldiers shared the story as a way to cope with the chaos and fear of war.",
+   "start": 35.21329166666667,
+   "end": 39.8239375
+  },
+  {
+   "text": "The rat patrol became a symbol of how war can make the ordinary feel strange and dangerous.",
+   "start": 39.9639375,
+   "end": 45.6838125
+  },
+  {
+   "text": "Even today, the story reminds us of the human side of war and the strange things that happen in conflict.",
+   "start": 45.8238125,
+   "end": 52.536520833333334
+  }
+ ]
+}

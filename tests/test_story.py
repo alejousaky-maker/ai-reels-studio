@@ -149,3 +149,16 @@ def test_ad_plan_uses_shop_and_cta():
     sb = director.build_storyboard(plan, _words(plan))
     assert sb["env"]["shop"]["name"] == "Demo Café"
     assert sb["scenes"][-1]["textOverlays"][0]["text"] == "Come say hello"
+
+
+def test_graphics_full_is_default_and_simple_is_lighter():
+    plan = plan_fixture()
+    assert plan.graphics == "full"            # the Demo A look by default
+    plan.beats[0].extras = 8
+    full = director.build_storyboard(plan, _words(plan))
+    assert full["graphics"] == "full"
+    simple = director.build_storyboard(plan.model_copy(update={"graphics": "simple"}), _words(plan))
+    assert simple["graphics"] == "simple"
+    assert all(s["dof"] == {"cInf": 0} for s in simple["scenes"])
+    n = lambda sb: sum(1 for a in sb["scenes"][0]["actors"] if a["castId"].startswith("extra"))  # noqa: E731
+    assert n(full) == 8 and n(simple) == 2

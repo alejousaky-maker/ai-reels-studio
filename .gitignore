@@ -24,3 +24,5 @@ assets/library/
 *.part.mp4
 
 images/
+
+.remotion/

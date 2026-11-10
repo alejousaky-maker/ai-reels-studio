@@ -10,7 +10,7 @@ export const Create: React.FC = () => {
   const [opts] = useData<any>("/api/options");
   const [clients] = useData<any[]>("/api/clients");
   const [f, setF] = useState<any>({ title: "", idea: "", script: "", kind: "story", lang: "en", seconds: 60, quality: "master", style: "storybook",
-    environment: "village_square", voice: "", speed: 1.0, clientId: "", cta: "", audience: "", captions: false, music: true, variants: 1, provider: "auto", review: "auto_qa" });
+    environment: "village_square", voice: "", speed: 1.0, clientId: "", cta: "", audience: "", captions: false, graphics: "full", music: true, variants: 1, provider: "auto", review: "auto_qa" });
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
   const set = (k: string, v: any) => setF((x: any) => ({ ...x, [k]: v }));
@@ -63,6 +63,8 @@ export const Create: React.FC = () => {
               <select value={f.seconds} onChange={(e) => set("seconds", Number(e.target.value))}>{[15, 30, 45, 60, 90].map((s) => <option key={s} value={s}>{s} s</option>)}</select></label>
             <label className="f">Calidad
               <select value={f.quality} onChange={(e) => set("quality", e.target.value)}><option value="draft">Draft 540×960 (rápido)</option><option value="standard">Standard 1080×1920</option><option value="master">Master 2K 1440×2560</option></select></label>
+            <label className="f">Gráficos
+              <select value={f.graphics} onChange={(e) => set("graphics", e.target.value)}><option value="full">Como la Demo A (recomendado)</option><option value="simple">Sencillos (menos decorado, sin desenfoque)</option></select></label>
           </div>
           {f.kind === "ad" && (
             <div className="grid g2">

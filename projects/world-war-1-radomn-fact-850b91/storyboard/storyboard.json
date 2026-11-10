@@ -1,0 +1,749 @@
+{
+ "version": 1,
+ "title": "World war 1 radomn fact",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1592,
+ "env": {
+  "preset": "village_square",
+  "seed": 7,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "tom",
+   "name": "Tom",
+   "outfit": {
+    "jacket": "#3f6fb5",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#f5c9a0",
+    "hat": "tophat",
+    "cap": "#5d7a3a",
+    "moustache": "#4a3426"
+   }
+  },
+  {
+   "id": "lena",
+   "name": "Lena",
+   "outfit": {
+    "jacket": "#8c3b4a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "hat": "bonnet",
+    "hair": "#7a4a2a",
+    "dress": "#2f5f6a"
+   }
+  },
+  {
+   "id": "captain",
+   "name": "Captain",
+   "outfit": {
+    "jacket": "#8c3b4a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ecd0b6",
+    "hat": "tophat"
+   }
+  },
+  {
+   "id": "doctor",
+   "name": "Doctor",
+   "outfit": {
+    "jacket": "#8c3b4a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ffe2c2",
+    "hat": "tophat"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 149,
+   "narration": "In 1915, a French soldier found a live rat inside his helmet.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "tom",
+     "x": -9.5,
+     "z": 0.0,
+     "expr": "shock",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      -20.0,
+      2.3,
+      3.0
+     ],
+     "lookAt": [
+      -9.5,
+      1.2,
+      0.0
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 81,
+     "cut": true,
+     "position": [
+      -15.1,
+      1.68,
+      -1.6
+     ],
+     "lookAt": [
+      -9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 700,
+   "qualityNotes": "market, day, tom",
+   "env": {
+    "preset": "market",
+    "seed": 7,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 149,
+   "endFrame": 298,
+   "narration": "He screamed and dropped it. The rat escaped, but the soldier remained unharmed.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "tom",
+     "x": 9.5,
+     "z": 0.0,
+     "expr": "nervous",
+     "mode": "stand"
+    },
+    {
+     "castId": "lena",
+     "x": 7.0,
+     "z": 0.893,
+     "expr": "shock",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 267,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 149,
+     "position": [
+      12.4,
+      1.62,
+      0.55
+     ],
+     "lookAt": [
+      9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 230,
+     "cut": true,
+     "position": [
+      12.4,
+      1.62,
+      -0.55
+     ],
+     "lookAt": [
+      9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "flash",
+   "seed": 701,
+   "qualityNotes": "market, day, tom, lena",
+   "env": {
+    "preset": "market",
+    "seed": 7,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 298,
+   "endFrame": 417,
+   "narration": "The next day, the same rat was found in another soldier's helmet.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "tom",
+     "x": 0.0,
+     "z": -12.0,
+     "expr": "neutral",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 298,
+     "position": [
+      -1.6,
+      1.68,
+      -17.6
+     ],
+     "lookAt": [
+      0.0,
+      1.38,
+      -12
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 351,
+     "dur": 24,
+     "position": [
+      -0.55,
+      1.62,
+      -14.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -12
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 702,
+   "qualityNotes": "street, day, tom",
+   "env": {
+    "preset": "street",
+    "seed": 7,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 417,
+   "endFrame": 600,
+   "narration": "This incident occurred over 100 times. Soldiers began referring to it as 'the rat patrol'.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "captain",
+     "x": -9.5,
+     "z": 0.0,
+     "expr": "nervous",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 417,
+     "position": [
+      -13.8,
+      1.66,
+      -1.0
+     ],
+     "lookAt": [
+      -9.5,
+      1.42,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 517,
+     "cut": true,
+     "position": [
+      -12.4,
+      1.62,
+      0.55
+     ],
+     "lookAt": [
+      -9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 703,
+   "qualityNotes": "village_square, day, captain, clock",
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 474,
+     "dur": 60,
+     "at": [
+      -9.5,
+      2.28,
+      0.42
+     ],
+     "size": 0.42,
+     "product": "clock"
+    }
+   ]
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 600,
+   "endFrame": 778,
+   "narration": "Doctors thought the rats might spread disease, but they were actually just curious about the phenomenon.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "doctor",
+     "x": 9.5,
+     "z": 0.0,
+     "expr": "neutral",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 600,
+     "position": [
+      15.7,
+      0.85,
+      2.4
+     ],
+     "lookAt": [
+      9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 44,
+     "roll": 0.0
+    },
+    {
+     "frame": 697,
+     "cut": true,
+     "position": [
+      15.1,
+      1.68,
+      1.6
+     ],
+     "lookAt": [
+      9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 6,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 704,
+   "qualityNotes": "village_square, night, doctor"
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 778,
+   "endFrame": 916,
+   "narration": "The rats were harmless, yet the story became a symbol of the war's absurdity.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "tom",
+     "x": 6.718,
+     "z": -6.718,
+     "expr": "pained",
+     "mode": "stand"
+    },
+    {
+     "castId": "lena",
+     "x": 6.67,
+     "z": -5.551,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 892,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 778,
+     "position": [
+      11.809,
+      1.68,
+      -9.546
+     ],
+     "lookAt": [
+      6.718,
+      1.38,
+      -6.718
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 841,
+     "dur": 24,
+     "position": [
+      9.157,
+      1.62,
+      -8.379
+     ],
+     "lookAt": [
+      6.718,
+      1.5,
+      -6.718
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 705,
+   "qualityNotes": "market, golden, tom, lena",
+   "env": {
+    "preset": "market",
+    "seed": 7,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 916,
+   "endFrame": 1055,
+   "narration": "This showed how war could turn even the smallest event into a major mystery.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "captain",
+     "x": -9.5,
+     "z": 0.0,
+     "expr": "neutral",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 916,
+     "position": [
+      -12.4,
+      1.62,
+      0.55
+     ],
+     "lookAt": [
+      -9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 992,
+     "cut": true,
+     "position": [
+      -12.4,
+      1.62,
+      -0.55
+     ],
+     "lookAt": [
+      -9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 706,
+   "qualityNotes": "village_square, golden, captain"
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 1055,
+   "endFrame": 1198,
+   "narration": "Soldiers shared the story as a way to cope with the chaos and fear of war.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "tom",
+     "x": 0.0,
+     "z": -46.0,
+     "expr": "dazed",
+     "mode": "stand"
+    },
+    {
+     "castId": "lena",
+     "x": 1.546,
+     "z": -45.493,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1182,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1055,
+     "position": [
+      2.2,
+      7.6,
+      -55.0
+     ],
+     "lookAt": [
+      0.0,
+      0.6,
+      -46
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1121,
+     "dur": 24,
+     "position": [
+      3.0,
+      2.3,
+      -56.5
+     ],
+     "lookAt": [
+      0.0,
+      1.2,
+      -46
+     ],
+     "fov": 42,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0018,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 707,
+   "qualityNotes": "street, night, tom, lena",
+   "env": {
+    "preset": "street",
+    "seed": 7,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 1198,
+   "endFrame": 1374,
+   "narration": "The rat patrol became a symbol of how war can make the ordinary feel strange and dangerous.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "doctor",
+     "x": 0.0,
+     "z": -12.0,
+     "expr": "pained",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1198,
+     "position": [
+      -1.0,
+      1.66,
+      -16.3
+     ],
+     "lookAt": [
+      0.0,
+      1.42,
+      -12.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1294,
+     "cut": true,
+     "position": [
+      0.55,
+      1.62,
+      -14.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -12.0
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 708,
+   "qualityNotes": "street, night, doctor",
+   "env": {
+    "preset": "street",
+    "seed": 7,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 1374,
+   "endFrame": 1592,
+   "narration": "Even today, the story reminds us of the human side of war and the strange things that happen in conflict.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "captain",
+     "x": -9.5,
+     "z": 0.0,
+     "expr": "neutral",
+     "mode": "stand"
+    },
+    {
+     "castId": "doctor",
+     "x": -8.642,
+     "z": -0.791,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1555,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1374,
+     "position": [
+      -15.1,
+      1.68,
+      -1.6
+     ],
+     "lookAt": [
+      -9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1493,
+     "cut": true,
+     "position": [
+      -12.4,
+      1.62,
+      0.55
+     ],
+     "lookAt": [
+      -9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 709,
+   "qualityNotes": "village_square, golden, captain, doctor"
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": false,
+  "words": []
+ },
+ "style": "minimal_stickman",
+ "graphics": "full",
+ "post": {
+  "lens": false
+ }
+}

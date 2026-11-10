@@ -126,6 +126,7 @@ class ProjectIn(BaseModel):
     audience: str | None = Field(None, max_length=200)
     research: bool = True
     captions: bool = False
+    graphics: str = Field("full", pattern="^(simple|full)$")
     music: bool = True
     variants: int = Field(1, ge=1, le=4)
     provider: str = Field("auto", pattern="^(auto|ollama|template|claude)$")
@@ -677,6 +678,7 @@ def _plan_for(pid: str, ctx) -> Plan:
         plan.verifiedClaims = [Claim(text=c, status="approved_by_client") for c in claims]
     from engine.story.normalize import normalize_plan
     plan, fixes = normalize_plan(plan)   # small local models ignore direction fields: repair before producing
+    plan = plan.model_copy(update={"graphics": p.get("graphics", "full")})
     if fixes:
         ctx.progress("script", -1, "plan repaired: " + "; ".join(fixes))
     P.step_script(pid, plan)
@@ -871,7 +873,7 @@ def h_redirect(pid, params, ctx):
     crit = P.load_json(P.pdir(pid, "script", "critique.json"))
     new, coh = W.script_to_plan(W.plan_to_script(plan), p.get("idea") or r["title"], plan.lang, plan.environment, plan.seed, plan.style,
                                 plan.brand.model_dump() if plan.brand else None, plan.cta, plan.captions, crit)
-    new = new.model_copy(update={"title": plan.title, "verifiedClaims": plan.verifiedClaims})
+    new = new.model_copy(update={"title": plan.title, "verifiedClaims": plan.verifiedClaims, "graphics": plan.graphics})
     P.step_script(pid, new)
     P.update_manifest(pid, coherence=coh)
     ctx.progress("script", 1.0, f"scenes re-directed from the narration ({round(100 * coh['visualSupport'])}% show what is said)")

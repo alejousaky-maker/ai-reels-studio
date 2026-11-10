@@ -95,6 +95,8 @@ class Plan(BaseModel):
     brand: Optional[BrandSpec] = None
     cta: Optional[str] = None
     captions: bool = False
+    # "full" = the Demo A look (default); "simple" = lighter sets, no lens blur/bloom, at most 2 background extras
+    graphics: Literal["simple", "full"] = "full"
 
     def full_text(self) -> str:
         return " ".join(b.narration for b in self.beats)

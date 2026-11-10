@@ -1,0 +1,234 @@
+{
+ "id": "the-school-that-couldn-t-stop-la-970d44",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 177,
+   "beats": 16,
+   "at": "2026-11-09T23:19:57"
+  },
+  "voice": {
+   "duration": 61.92720833333333,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 21.2,
+   "status": "done",
+   "voice": "af_heart",
+   "speed": 1.0,
+   "at": "2026-11-09T23:20:18"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 13.4,
+   "method": {
+    "whisper": 19,
+    "spread": 2
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-09T23:20:32"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1871,
+   "seconds_video": 62.36666666666667,
+   "scenes": 16,
+   "at": "2026-11-09T23:20:32"
+  },
+  "stills": {
+   "status": "done",
+   "count": 48,
+   "at": "2026-11-09T23:22:50"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 106.5,
+   "frames": 1871,
+   "renderedScenes": [
+    "b01",
+    "b04",
+    "b05",
+    "b13",
+    "b14"
+   ],
+   "reusedScenes": [
+    "b02",
+    "b03",
+    "b06",
+    "b07",
+    "b08",
+    "b09",
+    "b10",
+    "b11",
+    "b12",
+    "b15",
+    "b16"
+   ],
+   "fps_render": 7.96,
+   "at": "2026-11-09T23:24:37"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 20.1,
+   "integratedLUFS": -14.01,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.43,
+   "maxGainReductionDB": 6.76,
+   "voiceLUFS": -14.0,
+   "musicLUFS": -29.78,
+   "sfxLUFS": -30.99,
+   "at": "2026-11-09T23:24:57"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\the-school-that-couldn-t-stop-la-970d44\\output\\the-school-that-couldn-t-stop-laughing_master_v2.mp4",
+   "at": "2026-11-09T23:24:59"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-09T23:25:17"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-09T23:04:25",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T23:04:25",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-09T23:04:55",
+   "seconds": 27.4,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-09T23:05:13",
+   "status": "done",
+   "seconds": 17.6
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T23:05:13",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-09T23:07:33",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-09T23:12:06",
+   "status": "done",
+   "seconds": 272.7
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T23:12:26",
+   "status": "done",
+   "seconds": 20.0
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-09T23:12:28",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T23:12:47",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T23:13:27",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T23:19:57",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-09T23:20:18",
+   "seconds": 21.2,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-09T23:20:32",
+   "status": "done",
+   "seconds": 13.4
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T23:20:32",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-09T23:22:50",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-09T23:24:37",
+   "status": "done",
+   "seconds": 106.5
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T23:24:57",
+   "status": "done",
+   "seconds": 20.1
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-09T23:24:59",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T23:25:17",
+   "status": "done"
+  }
+ ],
+ "title": "The School That Couldn't Stop Laughing",
+ "created": "2026-11-09T23:04:25",
+ "request": {
+  "title": "The School That Couldn't Stop Laughing",
+  "idea": "The 1962 Tanganyika laughter epidemic",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 60,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "village_square",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": false,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "claude",
+  "review": "auto_qa",
+  "seed": 5,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "",
+ "requestedSeconds": 60
+}
