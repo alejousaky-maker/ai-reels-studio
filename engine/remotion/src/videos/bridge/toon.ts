@@ -691,6 +691,14 @@ const hatOn = (p: Pen, o: Outfit, hp: P2[], H: Blob, cx: number, hc: number, lig
     if (arc.length > 2) { p.shadedFill(arc, hcol, mul(hcol, SH_FELT), light, H.a, 0.35); p.poly(arc, null, ow); }
     const [bx, by] = R([[cx, crown - 0.08 * HH]])[0];
     p.ell(bx, by, 0.2 * W, 0.12 * HH, hcol, ow); p.band([[bx - 0.16 * W, by + 0.08 * HH], [bx + 0.16 * W, by + 0.08 * HH]], "#ff9fc8", 0.04 * HH, ow * 0.5);
+  } else if (o.hat === "tricorn") {   // pirate captain's three-cornered hat with a white skull badge
+    const col = o.cap ?? "#1d1b22", yb = crown + 0.22 * HH;
+    const body = R([[cx - 0.62 * W, yb + 2 * u], [cx - 0.3 * W, yb - 0.34 * HH], [cx, yb - 0.24 * HH], [cx + 0.3 * W, yb - 0.34 * HH], [cx + 0.62 * W, yb + 2 * u], [cx, yb + 0.08 * HH]]);
+    p.shadedFill(body, col, mul(col, SH_FELT), light, 0.6 * W, 0.4); p.poly(body, null, ow);
+    p.band(R([[cx - 0.6 * W, yb], [cx, yb + 0.07 * HH], [cx + 0.6 * W, yb]]), "#e8b83a", 0.03 * HH, ow * 0.4);
+    const [sx, sy] = R([[cx, yb - 0.1 * HH]])[0];
+    p.ell(sx, sy, 9 * u, 8 * u, "#f7f5f0", 1.6 * u); p.dot(sx - 3 * u, sy - u, 2 * u); p.dot(sx + 3 * u, sy - u, 2 * u);
+    p.stroke([[sx - 9 * u, sy + 10 * u], [sx + 9 * u, sy + 4 * u]], 2.4 * u, "#f7f5f0"); p.stroke([[sx + 9 * u, sy + 10 * u], [sx - 9 * u, sy + 4 * u]], 2.4 * u, "#f7f5f0");
   } else if (o.hat === "gradcap") {   // mortarboard: skull cap + flat diamond board + tassel
     const col = o.cap ?? "#1d1b22", yb = crown + 0.2 * HH;
     const dome: P2[] = [];

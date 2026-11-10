@@ -12,7 +12,7 @@ export type Expr = "neutral" | "stern" | "grin" | "laugh" | "whistle" | "nervous
 
 export type OutfitSpec = {
   jacket: string; pants: string; boots: string;
-  hat?: "tophat" | "bonnet" | "cap" | "hair" | "helmet" | "crown" | "explorer" | "bucket" | "sunhat" | "longhair" | "slouch" | "pith" | "laurel" | "bandana" | "headband" | "veil" | "gradcap" | null; hair?: string; cap?: string;
+  hat?: "tophat" | "bonnet" | "cap" | "hair" | "helmet" | "crown" | "explorer" | "bucket" | "sunhat" | "longhair" | "slouch" | "pith" | "laurel" | "bandana" | "headband" | "veil" | "gradcap" | "tricorn" | null; hair?: string; cap?: string;
   coat?: string; hoodie?: boolean; jersey?: string; patches?: boolean; stethoscope?: boolean; glasses?: boolean; headMirror?: boolean;
   capBack?: boolean; propeller?: boolean; beardLong?: boolean; vest?: string; apron?: string; tutu?: string;
   tie?: string; shades?: boolean; pockets?: boolean; creature?: string; stripes?: string; eyepatch?: boolean; toga?: string; bowtie?: boolean; headset?: string;
@@ -48,14 +48,14 @@ export type ProductKind = "coffee" | "croissant" | "bread" | "cake" | "lightbulb
   | "phone" | "tablet" | "wifi" | "key" | "camera" | "card" | "fish" | "receipt" | "box"
   | "snake" | "coins" | "mic" | "earbuds" | "gpsmap" | "suitcase" | "folder" | "ticket" | "controller" | "can" | "pizza"
   | "thermometer" | "moth" | "cash" | "noodles" | "extinguisher" | "potato" | "battery" | "diploma" | "sicknote" | "router"
-  | "newspaper" | "pickaxe" | "shovel" | "bagel" | "lettuce" | "pillow" | "wrench" | "check" | "trident" | "clipboard";
+  | "newspaper" | "pickaxe" | "shovel" | "bagel" | "lettuce" | "pillow" | "wrench" | "check" | "trident" | "clipboard" | "gavel" | "envelope" | "cutlass" | "goldcoin";
 /** big painted set pieces standing in the world as lit cards (always turned to the camera, side view) */
 export type PieceKind = "horse" | "ship" | "galley" | "chalkboard" | "sheep" | "tent" | "scale" | "boxes" | "car" | "van" | "poster"
   | "lewis" | "crates" | "snakes" | "board" | "screen" | "finish" | "truck" | "booth" | "tumbleweed" | "trafficlight" | "snacks"
   | "cryo" | "redarrow" | "console" | "sofa" | "fridge" | "bed" | "doghouse" | "tv" | "calendar" | "hospitalbed" | "heartmonitor"
   | "pole" | "monitor" | "cardbox" | "desk" | "rack" | "signs" | "ticker"
   | "semi" | "forklift" | "fruitpile" | "containership" | "tugboat" | "steamshovel" | "mosquito" | "mixer" | "airplane" | "excavator"
-  | "rockpile" | "tetrapods" | "departures" | "escalator" | "pipes" | "cashcounter" | "blueprint" | "subwaymap" | "ribbon" | "oldcar";
+  | "rockpile" | "tetrapods" | "departures" | "escalator" | "pipes" | "cashcounter" | "blueprint" | "subwaymap" | "ribbon" | "oldcar" | "partybus";
 export type PieceSpec = { kind: PieceKind; x: number; z: number; y?: number; scale?: number; mirror?: boolean;
   /** rise to this height across moveFrames (a console blasting off) */
   liftTo?: number;

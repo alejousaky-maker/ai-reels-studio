@@ -654,6 +654,18 @@ const oldcar = (p: Pen) => {   // a 1920s automobile: tall cabin, running board,
   p.ell(690, 280, 18, 18, "#fff1a0", 5);
 };
 
+const partybus = (p: Pen) => {   // a flying party bus under a striped hot-air balloon, pirate flags, coin bags dropping
+  p.ell(500, 230, 230, 200, "#3f6fb5", 10);
+  for (let k = 0; k < 6; k++) p.arc(500, 230, 60 + k * 30, 200, 270, 450, 14, k % 2 ? "#ffd23f" : "#e2453c");
+  for (const x of [330, 670]) p.stroke([[x, 380], [x + (x < 500 ? 40 : -40), 560]], 6, "#3a3d47");
+  p.poly(rr(200, 560, 800, 760, 30), "#3fa0e6", 12);
+  for (let x = 250; x < 760; x += 90) p.poly([[x, 590], [x + 70, 590], [x + 70, 660], [x, 660]], "#bfe6f2", 6);
+  for (const x of [300, 700]) { p.ell(x, 770, 46, 46, "#1d1b22", 8); p.ell(x, 770, 18, 18, "#9aa4ad", 0); }
+  p.stroke([[780, 560], [780, 440]], 8, "#5a3b2a"); p.poly([[780, 440], [880, 465], [780, 500]], "#1d1b22", 6);
+  p.ell(822, 466, 12, 10, "#ffffff", 0);
+  for (const [x, y] of [[360, 860], [520, 920], [660, 870]] as const) { p.ell(x, y, 34, 40, "#c8a06a", 7); p.ell(x, y - 6, 14, 14, "#ffd23f", 0); }
+};
+
 export const PIECES: Record<PieceKind, { dw: number; dh: number; w: number; h: number; draw: (p: Pen, label: string) => void }> = {
   horse: { dw: 1000, dh: 1000, w: 8.0, h: 8.0, draw: horse },
   ship: { dw: 1250, dh: 1200, w: 14.0, h: 13.4, draw: (p) => ship(p, false) },
@@ -715,5 +727,6 @@ export const PIECES: Record<PieceKind, { dw: number; dh: number; w: number; h: n
   subwaymap: { dw: 1000, dh: 750, w: 3.0, h: 2.25, draw: subwaymap },
   ribbon: { dw: 1000, dh: 680, w: 4.0, h: 2.7, draw: ribbon },
   oldcar: { dw: 740, dh: 460, w: 4.2, h: 2.6, draw: oldcar },
+  partybus: { dw: 1000, dh: 960, w: 6.0, h: 5.76, draw: partybus },
 };
 export { mix };

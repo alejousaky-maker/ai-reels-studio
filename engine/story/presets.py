@@ -162,6 +162,11 @@ def _outfit(role: str, i: int, palette: str | None = None) -> dict:
         return {**base, "jacket": palette or "#1d2a50", "pants": "#1d2a50", "boots": "#1d1b22", "hat": "pilot", "cap": "#1d2a50", "tie": "#1d1b22"}
     if role == "sleeper":    # pyjamas + floppy night cap
         return {**base, "jacket": palette or "#8fb8e6", "pants": "#8fb8e6", "boots": "#f2efe8", "stripes": "#f2efe8", "hat": "nightcap", "cap": "#3f6fb5"}
+    if role == "piratecaptain":   # tricorn + eyepatch + tattered brown coat + giant RGB gaming headphones
+        return {**base, "jacket": palette or "#7a4f33", "pants": "#2b2b38", "boots": "#1d1b22", "hat": "tricorn", "cap": "#1d1b22", "eyepatch": True,
+                "headset": "#7a3aff", "belt": "#e8b83a", "buttons": "#e8b83a"}
+    if role == "guard":   # security guard: black suit, sunglasses
+        return {**base, "jacket": palette or "#1d1b22", "pants": "#1d1b22", "boots": "#1d1b22", "hat": "hair", "hair": "#1d1b22", "tie": "#1d1b22", "shades": True}
     if role == "skipper":    # ship captain: white uniform, white peaked cap with gold, neat beard
         return {**base, "jacket": palette or "#f7f7fa", "pants": "#1d2a50", "boots": "#1d1b22", "hat": "pilot", "cap": "#f7f7fa", "beard": "#5a3b2a", "tie": "#1d2a50"}
     if role == "commuter":   # 1929 suit + flat cap
@@ -174,7 +179,7 @@ def _outfit(role: str, i: int, palette: str | None = None) -> dict:
 # world scale per role (kids 0.72 come from their build); a cyclops is ~2.6 x a person
 ROLE_SCALE = {"giant": 2.6}
 # set pieces: world width, height in metres (engine pieces.ts)
-PIECE_SIZE = {"semi": (9.0, 3.2), "forklift": (2.6, 1.85), "fruitpile": (2.4, 1.8), "containership": (36.0, 14.6), "tugboat": (6.0, 3.2),
+PIECE_SIZE = {"partybus": (6.0, 5.76), "semi": (9.0, 3.2), "forklift": (2.6, 1.85), "fruitpile": (2.4, 1.8), "containership": (36.0, 14.6), "tugboat": (6.0, 3.2),
               "steamshovel": (6.0, 4.1), "mosquito": (1.6, 1.5), "mixer": (5.0, 2.45), "airplane": (16.0, 5.3), "excavator": (6.0, 3.35),
               "rockpile": (5.0, 3.5), "tetrapods": (6.0, 2.5), "departures": (3.6, 2.3), "escalator": (4.0, 3.36), "pipes": (5.0, 3.2),
               "cashcounter": (1.2, 2.16), "blueprint": (2.2, 2.0), "subwaymap": (3.0, 2.25), "ribbon": (4.0, 2.7), "oldcar": (4.2, 2.6),

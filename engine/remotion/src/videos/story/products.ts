@@ -413,6 +413,32 @@ export const drawProduct = (p: Pen, kind: ProductKind, col = "#c8553d") => {
       for (let k = 0; k < 6; k++) p.stroke([[135, 140 + k * 34], [265, 140 + k * 34]], 6, "#9aa4ad");
       break;
     }
+    case "gavel": {   // judge's wooden gavel
+      p.stroke([[120, 340], [250, 170]], 26, "#8a5a34");
+      p.poly(rr(170, 60, 370, 170, 20), "#7a4f33", 10);
+      p.poly([[210, 60], [235, 60], [235, 170], [210, 170]], "#e8b83a", 4); p.poly([[305, 60], [330, 60], [330, 170], [305, 170]], "#e8b83a", 4);
+      break;
+    }
+    case "envelope": {   // a lawsuit envelope with a red stamp
+      p.poly([[40, 110], [360, 110], [360, 320], [40, 320]], "#f2efe8", 9);
+      p.stroke([[40, 110], [200, 230], [360, 110]], 8);
+      p.poly([[90, 250], [310, 230], [314, 290], [94, 310]], "rgba(226,69,60,0.9)", 5);
+      const g = p.g; g.save(); g.translate(200, 280); g.rotate(-0.08); g.fillStyle = "#ffffff"; g.font = "bold 30px Arial Black, Arial"; g.textAlign = "center"; g.fillText("LAWSUIT", 0, 10); g.restore();
+      break;
+    }
+    case "cutlass": {   // pirate cutlass: curved blade, gold guard
+      p.poly([[90, 330], [110, 300], [300, 80], [330, 60], [318, 100], [135, 320]], "#d9dde3", 8);
+      p.stroke([[110, 300], [300, 85]], 3, "#ffffff");
+      p.arc(110, 320, 50, 40, 180, 360, 10, "#e8b83a");
+      p.stroke([[60, 380], [105, 325]], 22, "#5a3b2a");
+      break;
+    }
+    case "goldcoin": {   // a big glowing gold token with a skull
+      p.ell(200, 200, 160, 160, "#ffd23f", 10); p.ell(200, 200, 125, 125, "#f2b84a", 6);
+      p.ell(200, 185, 55, 50, "#fff3c0", 6); p.dot(180, 180, 12, "#5a3b2a"); p.dot(220, 180, 12, "#5a3b2a");
+      p.stroke([[150, 270], [250, 240]], 12, "#fff3c0"); p.stroke([[150, 240], [250, 270]], 12, "#fff3c0");
+      break;
+    }
     default: break;
   }
 };

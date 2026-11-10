@@ -1,0 +1,565 @@
+{
+ "title": "The Fortnite Pirate Token",
+ "environment": "trading",
+ "seed": 97,
+ "cast": [
+  {
+   "id": "cap",
+   "name": "Pirate captain",
+   "role": "piratecaptain"
+  },
+  {
+   "id": "gam",
+   "name": "Gamer trader",
+   "role": "streamer"
+  },
+  {
+   "id": "law",
+   "name": "Studio lawyer",
+   "role": "lawyer"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "What would happen if internet pirates launched an unofficial crypto token called Fortnite Gold? Absolute chaos.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "cap",
+     "action": "cheer",
+     "expr": "starry",
+     "holding": "goldcoin"
+    }
+   ],
+   "impactWord": "chaos",
+   "environment": "trading",
+   "pieces": [
+    {
+     "kind": "ship",
+     "scale": 0.35,
+     "move": "toward"
+    },
+    {
+     "kind": "ticker",
+     "where": "left",
+     "label": "FORTNITE GOLD ▲ 4200%"
+    }
+   ],
+   "camMove": "whip",
+   "backdrop": "a pirate ship bursting through the big glass window of a neon crypto stock exchange, shattered glass, green tickers",
+   "shots": [
+    {
+     "at": "Fortnite",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "cap",
+       "expr": "starry",
+       "holding": "goldcoin"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "sparkle",
+       "word": "Gold",
+       "on": "cap"
+      }
+     ],
+     "camMove": "push"
+    },
+    {
+     "at": "Absolute",
+     "shot": "dutch",
+     "characters": [
+      {
+       "id": "cap",
+       "action": "jump",
+       "expr": "laugh",
+       "holding": "goldcoin"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "burst",
+       "word": "chaos",
+       "on": "cap"
+      },
+      {
+       "kind": "money",
+       "word": "Absolute",
+       "on": "cap"
+      }
+     ],
+     "camMove": "orbit"
+    }
+   ]
+  },
+  {
+   "narration": "For years, gamers wanted a token to trade skins freely, without paying a thirty percent platform fee.",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "gam",
+     "action": "sitchair",
+     "expr": "skeptical"
+    }
+   ],
+   "transition": "whip",
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "monitor",
+     "where": "left",
+     "label": "PLATFORM FEE|30%"
+    }
+   ],
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "without",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "gam",
+       "expr": "evil",
+       "holding": "cutlass"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "burst",
+       "word": "fee",
+       "on": "gam"
+      }
+     ],
+     "impactWord": "fee",
+     "camMove": "whip"
+    }
+   ]
+  },
+  {
+   "narration": "So some anonymous devs launched a pirate token overnight, promising it would become the official currency of Tilted Towers.",
+   "shot": "close",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "cap",
+     "action": "point",
+     "expr": "smug",
+     "holding": "phone"
+    }
+   ],
+   "environment": "trading",
+   "camMove": "push",
+   "hud": "panel",
+   "hudText": "☠ FORTNITE GOLD|PRICE ▲ 4,200%|TO THE MOON!",
+   "shots": [
+    {
+     "at": "promising",
+     "shot": "medium",
+     "characters": [
+      {
+       "id": "cap",
+       "action": "hips",
+       "expr": "proud"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "ticker",
+       "label": "FTG ▲ TO THE MOON"
+      }
+     ],
+     "camMove": "crane_up"
+    }
+   ]
+  },
+  {
+   "narration": "Within twenty-four hours, millions of players piled in, turning a meme coin into a multi-million-dollar digital treasure island.",
+   "shot": "wide",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "gam",
+     "action": "cheer",
+     "expr": "starry"
+    }
+   ],
+   "extras": 6,
+   "extrasAction": "dance",
+   "fx": [
+    {
+     "kind": "money",
+     "word": "millions",
+     "on": "gam"
+    }
+   ],
+   "text": "24 HOURS",
+   "textStyle": "title",
+   "environment": "park",
+   "pieces": [
+    {
+     "kind": "partybus",
+     "scale": 0.9,
+     "y": 5.0,
+     "move": "right"
+    }
+   ],
+   "extrasRole": "streamer",
+   "camMove": "crane_up",
+   "backdrop": "a colorful video-game island with a treasure chest of glowing gold coins, palm trees and a festival crowd area",
+   "shots": [
+    {
+     "at": "treasure",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "gam",
+       "expr": "love",
+       "holding": "goldcoin"
+      }
+     ],
+     "extras": 0,
+     "fx": [
+      {
+       "kind": "sparkle",
+       "word": "treasure",
+       "on": "gam"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Suddenly, you weren't playing to win. You were playing to arbitrage liquidity pools on Discord.",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "gam",
+     "action": "sitchair",
+     "expr": "sweat",
+     "holding": "controller"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "push",
+   "hud": "panel",
+   "hudText": "LIQUIDITY POOL|APY 9,000%!",
+   "shots": [
+    {
+     "at": "You",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "gam",
+       "expr": "crazy"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Then the game studio's lawyers finished their morning coffee and chose absolute legal violence.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "law",
+     "expr": "bored",
+     "holding": "coffee"
+    }
+   ],
+   "impactWord": "violence",
+   "transition": "zoom",
+   "environment": "office",
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "chose",
+     "shot": "worm",
+     "characters": [
+      {
+       "id": "law",
+       "expr": "angry",
+       "holding": "gavel"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "burst",
+       "word": "violence",
+       "on": "law"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "A ten-page cease-and-desist letter hit the developers faster than a pump shotgun headshot.",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "cap",
+     "action": "sitchair",
+     "expr": "smug",
+     "holding": "phone"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "envelope",
+     "word": "letter",
+     "on": "cap"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "truck_right",
+   "shots": [
+    {
+     "at": "faster",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "cap",
+       "action": "fall",
+       "expr": "dazed"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "stars",
+       "word": "headshot",
+       "on": "cap"
+      }
+     ],
+     "impactWord": "headshot",
+     "camMove": "whip"
+    }
+   ]
+  },
+  {
+   "narration": "And just like that, the anonymous creators deleted their accounts, cashed out, and vanished into thin air.",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "cap",
+     "expr": "scared"
+    }
+   ],
+   "environment": "trading",
+   "pieces": [
+    {
+     "kind": "ticker",
+     "label": "FORTNITE GOLD ▼ 99.9%"
+    }
+   ],
+   "camMove": "crane_up",
+   "shots": [
+    {
+     "at": "cashed",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "cap",
+       "action": "panic",
+       "expr": "dazed"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "money",
+       "word": "cashed",
+       "on": "cap"
+      }
+     ],
+     "hud": "panel",
+     "hudText": "FORTNITE GOLD|▼ 99.9%!"
+    },
+    {
+     "at": "vanished",
+     "shot": "wide",
+     "characters": [],
+     "fx": [
+      {
+       "kind": "puff",
+       "word": "vanished"
+      }
+     ],
+     "camMove": "pull"
+    }
+   ]
+  },
+  {
+   "narration": "Players who thought they were crypto tycoons were suddenly left holding literal digital garbage.",
+   "shot": "close",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "gam",
+     "expr": "sad",
+     "holding": "phone"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "garbage",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "gam",
+       "expr": "cry"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "product",
+       "product": "moth",
+       "word": "garbage",
+       "on": "gam"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": "Even worse, anyone caught wearing the pirate token skin got banned from the lobby.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "cap",
+     "expr": "broken"
+    }
+   ],
+   "text": "BANNED",
+   "textStyle": "title",
+   "environment": "park",
+   "camMove": "whip",
+   "hud": "panel",
+   "hudText": "LOBBY|BANNED!",
+   "backdrop": "a bright video-game lobby stage with neon lights"
+  },
+  {
+   "narration": "Turns out, fighting a multi-billion-dollar gaming giant with a pirate meme coin is a great way to lose your lunch money.",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "gam",
+     "action": "sit",
+     "expr": "sad"
+    }
+   ],
+   "environment": "shops",
+   "envVariant": "open",
+   "pieces": [
+    {
+     "kind": "cardbox",
+     "where": "on"
+    },
+    {
+     "kind": "board",
+     "where": "right",
+     "label": "WILL TRADE|PIXEL SWORDS|FOR SANDWICHES"
+    }
+   ],
+   "camMove": "pull",
+   "backdrop": "outside a small convenience store with a glowing shop window",
+   "crowd": true
+  },
+  {
+   "narration": "The metaverse isn't the Wild West. It's a gated community owned by guys in suits.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "tense",
+   "extras": 5,
+   "transition": "dissolve",
+   "environment": "island",
+   "extrasRole": "guard",
+   "camMove": "crane_up",
+   "backdrop": "a tropical game island completely surrounded by giant grey concrete walls with barbed wire and watchtowers",
+   "shots": [
+    {
+     "at": "gated",
+     "shot": "medium",
+     "extras": 4,
+     "extrasRole": "guard",
+     "camMove": "truck_left"
+    }
+   ]
+  },
+  {
+   "narration": "So stick to regular V-Bucks. At least when you waste them on a bad emote, you actually get to dance.",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "gam",
+     "action": "dance",
+     "expr": "starry"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "dance",
+     "on": "gam"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "orbit",
+   "shots": [
+    {
+     "at": "At",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "gam",
+       "action": "dance",
+       "expr": "laugh"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "confetti",
+       "word": "dance",
+       "on": "gam"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Send this to that friend who falls for every single crypto scam on the internet.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "warm",
+   "transition": "dissolve",
+   "environment": "trading",
+   "hud": "outro"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Parody: 'Fortnite Gold' is a hypothetical unofficial token invented for this comedy short; no real token, developer or ban is depicted as fact.",
+   "status": "fiction"
+  },
+  {
+   "text": "The real game studio is represented only by generic stickman lawyers; no real executive is shown.",
+   "status": "fiction"
+  }
+ ],
+ "backdrops": "ai"
+}
