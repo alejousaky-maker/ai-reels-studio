@@ -26,7 +26,7 @@ export const JobRow: React.FC<{ j: Job; onChange?: () => void; showProject?: boo
 };
 
 const KIND: Record<string, string> = { create: "Crear vídeo completo", produce: "Producir vídeo", plan: "Escribir guion (para aprobar)", voice: "Voz + tiempos + storyboard",
-  storyboard: "Storyboard", stills: "Fotogramas de control", render: "Render + mezcla + QA", regen_scene: "Regenerar escenas cambiadas", mix: "Remezclar audio", qa: "QA técnico", image: "Imagen desde prompt", script: "Guion desde prompt" };
+  storyboard: "Storyboard", stills: "Fotogramas de control", render: "Render + mezcla + QA", regen_scene: "Regenerar escenas cambiadas", mix: "Remezclar audio", qa: "QA técnico", image: "Imagen desde prompt", script: "Guion desde prompt", redirect: "Re-dirigir escenas desde la narración" };
 const STEP: Record<string, string> = { script: "Guion", voice: "Voz", align: "Tiempos", storyboard: "Storyboard", stills: "Fotogramas", render: "Render", mix: "Mezcla" };
 
 /** turn a failure into: what happened + how to fix it */

@@ -1,5 +1,16 @@
 # PROGRESS — real, measured state (2026-11-09)
 
+## v0.4 update — idea → coherent video
+- Test with the user's own idea "La gran inundación de melaza de Boston en 1919", audience "jóvenes de 16 a 25", ES, 60 s:
+  Wikipedia source found (es) → qwen3:8b writer + critic (relevance 8/10, coherence 9/10, hook 7/10, 9 sentences
+  rewritten against the source) → 9 scenes, 78 % visually driven by their sentence → Master 2K 73.5 s, QA PASS.
+  `projects/la-inundaci-n-de-melaza-de-bosto-7dd13c/output/latest_master.mp4`. Facts cross-checked with the source:
+  56 km/h, 21 dead / 150 injured, Boston Elevated Railway, rivets — all match; two overstatements remain
+  ("hasta dos metros" vs 2-4 m; "calor extremo" vs an unusually mild day) → human review still needed.
+- Bugs found and fixed during the test: substring keyword matches ("cubriendo"→"riendo" = laughing in a tragedy),
+  writer objects invented (music note), side trip indoors never returning, bird's-eye shots inside rooms.
+- pytest 29/29.
+
 ## v0.3 update (same day, later session)
 - **Master 2K default.** Master renders, all technical QA PASS incl. the new render-vs-control-stills check:
   - Lighthouse demo `projects/lighthouse-daymarks/output/latest_master.mp4` — 1440×2560, 57.8 s, harbour + interior + night, 6.9 fps (251 s).

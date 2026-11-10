@@ -253,13 +253,18 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                 side = min(0.42, 0.55 * vhalf * aspect)
                 size = min(0.42, 0.32 * vhalf) if f.kind == "product" else min(0.8, 0.5 * vhalf)
                 at = [round(who[0] + rx * side, 3), round(y, 3), round(who[1] + rz * side, 3)]
+            elif f.kind == "splash":   # a liquid wave rolling in behind/beside the subject, base on the ground
+                at = [round(who[0] + rx * 1.4 + ux * 2.5, 3), 1.6, round(who[1] + rz * 1.4 + uz * 2.5, 3)]; size = 4.2
             elif f.kind == "steam":   # rises from the held cup (right hand), not over the body
                 at = [round(who[0] + rx * 0.42, 3), 1.32, round(who[1] + rz * 0.42 - uz * 0.05, 3)]; size = 0.32
             else:
                 at = [round(who[0], 3), 1.0, round(who[1], 3)]; size = 0.9
             d = b - fr if f.kind in ("notes", "steam") else min(60, b - fr)
+            if f.kind == "splash":
+                d = min(45, b - fr)
             if d > 4:
-                fxs.append({"kind": f.kind, "frame": fr, "dur": d, "at": at, "size": size, **({"product": f.product} if f.product else {})})
+                fxs.append({"kind": f.kind, "frame": fr, "dur": d, "at": at, "size": size, **({"product": f.product} if f.product else {}),
+                            **({"color": f.color} if getattr(f, "color", None) else {})})
         if fxs:
             scene["fx"] = fxs
         if beat.text:

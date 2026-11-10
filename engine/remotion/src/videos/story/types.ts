@@ -29,7 +29,7 @@ export type ActorSpec = {
 
 export type CameraKey = { frame: number; position: V3; lookAt: V3; fov?: number; roll?: number; cut?: boolean; dur?: number };
 export type ProductKind = "coffee" | "croissant" | "bread" | "cake" | "lightbulb" | "question" | "exclaim" | "heart" | "clock" | "book" | "note" | "scroll" | "coin_none";
-export type FxKind = "burst" | "stars" | "notes" | "puff" | "product" | "steam" | "sparkle";
+export type FxKind = "burst" | "stars" | "notes" | "puff" | "product" | "steam" | "sparkle" | "splash";
 export type FxSpec = { kind: FxKind; frame: number; dur: number; at: V3; size?: number; product?: ProductKind; color?: string };
 export type PropSpec = { kit: string; x: number; z: number; h: number; yaw?: number };
 export type TextOverlay = { text: string; frame: number; dur: number; position?: "top" | "center" | "bottom"; style?: "title" | "cta" | "label" };

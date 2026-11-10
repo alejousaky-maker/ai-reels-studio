@@ -123,6 +123,8 @@ class ProjectIn(BaseModel):
     speed: float = Field(1.0, ge=0.7, le=1.4)
     clientId: str | None = None
     cta: str | None = Field(None, max_length=80)
+    audience: str | None = Field(None, max_length=200)
+    research: bool = True
     captions: bool = False
     music: bool = True
     variants: int = Field(1, ge=1, le=4)
@@ -319,7 +321,7 @@ def edit_beat(pid: str, idx: int, e: SceneEdit):
 
 # ------------------------------------------------------------------ jobs
 class JobIn(BaseModel):
-    kind: str = Field(pattern="^(create|plan|script|produce|voice|storyboard|stills|render|mix|qa|regen_scene|export)$")
+    kind: str = Field(pattern="^(create|plan|script|redirect|produce|voice|storyboard|stills|render|mix|qa|regen_scene|export)$")
     params: dict = Field(default_factory=dict)
 
 
@@ -606,7 +608,49 @@ def _plan_for(pid: str, ctx) -> Plan:
     prov = p.get("provider", "auto")
     seed = int(p.get("seed", 7))
     style = p.get("style", "storybook")
-    if p.get("script", "").strip() or prov == "template":
+    from engine.story import writer as W
+    story = p.get("kind", "story") != "ad"
+    coherence: dict = {}
+    if story and p.get("script", "").strip():
+        # your own script: same sentence-driven visuals as the AI path (what you see follows what you hear)
+        ctx.progress("script", 0.3, "turning your script into scenes (no AI): place, people, emotions and objects from each sentence")
+        s = W.sentences_to_script(p["script"], r["title"])
+        plan, coherence = W.script_to_plan(s, p.get("idea") or p["script"], p.get("lang", "en"), env, seed, style, None, None, p.get("captions", False))
+        plan = plan.model_copy(update={"title": r["title"]})
+        used = "your script"
+    elif story and prov in ("auto", "ollama") and planner.pick_model(settings().get("ollamaModel")):
+        model = planner.pick_model(settings().get("ollamaModel"))
+        idea, aud = p.get("idea") or r["title"], p.get("audience") or ""
+        log = lambda m: ctx.progress("script", -1, m)  # noqa: E731
+        try:
+            source = None
+            if p.get("research", True):
+                from engine.story.research import lookup
+                ctx.progress("script", 0.08, "0/3 research: looking up the facts of your topic on Wikipedia (only the topic is sent)")
+                source = lookup(idea, p.get("lang", "en"))
+                if source:
+                    with open(P.pdir(pid, "script", "SOURCE.md"), "w", encoding="utf-8") as fh:
+                        fh.write(f"# Source: {source['title']}\n\n{source['url']}\n\n{source['text']}\n")
+                    ctx.progress("script", -1, f"source found: {source['title']} ({source['url']})")
+                else:
+                    ctx.progress("script", -1, "no source found (offline or unknown topic): writing without one, facts marked uncertain")
+            ctx.progress("script", 0.15, f"1/3 writer ({model}): story about your idea" + (f" for {aud}" if aud else ""))
+            s = W.write_script(idea, aud, p.get("lang", "en"), int(p.get("seconds", 60)), model, seed, log=log, source=source)
+            ctx.progress("script", 0.5, "2/3 critic: checking relevance and coherence against the source, rewriting weak sentences")
+            s, crit = W.critique(s, idea, aud, p.get("lang", "en"), model, log=log, source=source)
+            W.unload(model)
+            ctx.progress("script", 0.8, "3/3 director: each sentence becomes a scene that shows what is said")
+            plan, coherence = W.script_to_plan(s, idea, p.get("lang", "en"), env, seed, style, None, None, p.get("captions", False), crit)
+            plan = plan.model_copy(update={"title": r["title"]})
+            P.save_json(P.pdir(pid, "script", "critique.json"), crit)
+            used = f"ollama:{model} (writer+critic+director)"
+        except Exception as e:  # noqa
+            W.unload(model)
+            ctx.progress("script", -1, f"3-stage writer failed ({str(e)[:160]}); trying the single-pass planner")
+            plan, used = planner.ollama_plan(idea, p.get("kind", "story"), p.get("lang", "en"), int(p.get("seconds", 60)), env, brand, p.get("cta"), model, seed)
+            plan = plan.model_copy(update={"title": r["title"], "style": style, "captions": p.get("captions", False)})
+            used = f"ollama:{used} (single pass)"
+    elif p.get("script", "").strip() or prov == "template":
         ctx.progress("script", 0.3, "turning the script into beats (no AI)")
         plan = planner.template_plan(r["title"], p.get("script") or p.get("idea"), p.get("kind", "story"), p.get("lang", "en"), env, brand,
                                      p.get("cta"), seed, style, p.get("captions", False))
@@ -636,7 +680,7 @@ def _plan_for(pid: str, ctx) -> Plan:
     if fixes:
         ctx.progress("script", -1, "plan repaired: " + "; ".join(fixes))
     P.step_script(pid, plan)
-    P.update_manifest(pid, scriptProvider=used, planRepairs=fixes)
+    P.update_manifest(pid, scriptProvider=used, planRepairs=fixes, coherence=coherence)
     ctx.progress("script", 1.0, f"{len(plan.beats)} beats by {used}")
     return plan
 
@@ -817,7 +861,28 @@ def h_script_only(pid, params, ctx):
     return {"_status": "awaiting_review", "beats": len(plan.beats), "words": len(plan.full_text().split())}
 
 
-jobs.HANDLERS.update({"image": h_image, "script": h_script_only})
+def h_redirect(pid, params, ctx):
+    """re-direct every scene from its narration (place, people, emotion, objects, events) keeping text and voice;
+    then storyboard + stills + render of the scenes that changed"""
+    from engine.story import writer as W
+    r = project_or_404(pid)
+    p = r.get("params") or {}
+    plan = Plan.model_validate(P.load_json(P.pdir(pid, "plan.json")))
+    crit = P.load_json(P.pdir(pid, "script", "critique.json"))
+    new, coh = W.script_to_plan(W.plan_to_script(plan), p.get("idea") or r["title"], plan.lang, plan.environment, plan.seed, plan.style,
+                                plan.brand.model_dump() if plan.brand else None, plan.cta, plan.captions, crit)
+    new = new.model_copy(update={"title": plan.title, "verifiedClaims": plan.verifiedClaims})
+    P.step_script(pid, new)
+    P.update_manifest(pid, coherence=coh)
+    ctx.progress("script", 1.0, f"scenes re-directed from the narration ({round(100 * coh['visualSupport'])}% show what is said)")
+    if params.get("render", True) and os.path.exists(P.pdir(pid, "audio", "words.json")):
+        P.step_storyboard(pid, new, ctx.progress)
+        P.step_stills(pid, progress=ctx.progress, cancel=ctx.cancelled, register=ctx.register)
+        return h_render(pid, {"quality": params.get("quality") or r.get("quality") or "master"}, ctx)
+    return {"coherence": coh}
+
+
+jobs.HANDLERS.update({"image": h_image, "script": h_script_only, "redirect": h_redirect})
 jobs.HANDLERS.update({"plan": h_plan, "create": h_produce, "produce": h_produce, "voice": h_voice, "storyboard": h_storyboard, "stills": h_stills,
                       "render": h_render, "regen_scene": h_regen_scene, "mix": h_mix, "qa": h_qa})
 

@@ -1,0 +1,56 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 76.83891666666666,
+ "voice": "ef_dora",
+ "lang": "es",
+ "speed": 1.0,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "El 15 de enero de 1919, un tanque de melaza de 17,7 metros de altura se derramó en el barrio de North End de Boston, causando una de las inundaciones más sorprendentes de la historia.",
+   "start": 0.06,
+   "end": 12.371166666666667
+  },
+  {
+   "text": "La melaza salió a 56 km/h, como si fuera una ola gigante, cubriendo las calles del North End y dejando a la población en shock.",
+   "start": 12.511166666666666,
+   "end": 20.773333333333333
+  },
+  {
+   "text": "La ola alcanzó hasta dos metros de altura y rompió la estación de tren de la Boston Elevated Railway, dejando a la ciudad en silencio.",
+   "start": 20.913333333333334,
+   "end": 28.211729166666668
+  },
+  {
+   "text": "La melaza cubrió los edificios con hasta 90 cm de profundidad, dejando a muchas personas atrapadas en una masa viscosa y peligrosa.",
+   "start": 28.351729166666665,
+   "end": 36.546458333333334
+  },
+  {
+   "text": "21 personas perdieron la vida y otras 150 resultaron heridas, algunas aplastadas o cubiertas de melaza, en uno de los desastres más inesperados de la historia.",
+   "start": 36.686458333333334,
+   "end": 47.02135416666667
+  },
+  {
+   "text": "Un estudio reveló que el calor extremo de ese mes de enero provocó la rotura de los remaches del tanque, causando la catástrofe.",
+   "start": 47.16135416666667,
+   "end": 54.105291666666666
+  },
+  {
+   "text": "La melaza se usaba no solo para hacer alcohol, sino también para producir municiones, lo que la convierte en un ingrediente clave en la guerra.",
+   "start": 54.24529166666667,
+   "end": 62.057916666666664
+  },
+  {
+   "text": "La inundación fue tan rápida que muchas personas no tuvieron tiempo de reaccionar, quedando atrapadas en el flujo viscoso de la melaza.",
+   "start": 62.197916666666664,
+   "end": 70.02285416666666
+  },
+  {
+   "text": "Hoy se recuerda el desastre como uno de los eventos más extraños y sorprendentes de la historia de Estados Unidos.",
+   "start": 70.16285416666666,
+   "end": 76.69891666666666
+  }
+ ]
+}

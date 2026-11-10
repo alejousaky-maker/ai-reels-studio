@@ -427,6 +427,11 @@ def step_mux(pid: str, quality: str = "standard") -> str:
 def step_qa(pid: str, video: str) -> dict:
     from engine.quality import qa
     rep = qa.run(pid, video, pdir(pid, "qa"))
+    coh = manifest(pid).get("coherence")
+    if coh:   # idea -> script -> picture metrics from the writer/critic/director stage
+        rep["coherence"] = coh
+        save_json(pdir(pid, "qa", "qa_report.json"), rep)
+        qa.write_md(rep, pdir(pid, "qa", "QUALITY_REPORT.md"))
     update_manifest(pid, step=("qa", {"status": "done", "blocking": rep["blocking"], "technicalPass": rep["technicalPass"]}))
     return rep
 
@@ -447,8 +452,13 @@ def produce(pid: str, plan: Plan, quality: str = "standard", voice: str | None =
             new_speed = round(max(0.88, speed * dur / (0.92 * target)), 3)
             progress("voice", -1, f"narration {dur:.1f}s vs {target}s requested: re-voicing at speed {new_speed}")
             vinfo = step_voice(pid, plan, voice, new_speed, progress); chk()
+        elif dur > 1.15 * target and speed < 1.1:
+            # a bit long: slightly faster narration (max 1.1x, still clearly intelligible)
+            new_speed = round(min(1.1, speed * dur / (1.05 * target)), 3)
+            progress("voice", -1, f"narration {dur:.1f}s vs {target}s requested: re-voicing at speed {new_speed}")
+            vinfo = step_voice(pid, plan, voice, new_speed, progress); chk()
         dur = float(vinfo.get("duration", 0))
-        note = "" if dur >= 0.85 * target else f"Narration is {dur:.0f}s for a {target}s request: add beats/sentences to reach it."
+        note = "" if 0.85 * target <= dur <= 1.2 * target else (f"Narration is {dur:.0f}s for a {target}s request: " + ("add beats/sentences to reach it." if dur < target else "shorten some sentences."))
         update_manifest(pid, durationNote=note, requestedSeconds=target)
     step_align(pid, plan, progress); chk()
     step_storyboard(pid, plan, progress); chk()

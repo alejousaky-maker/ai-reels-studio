@@ -11,7 +11,7 @@ import { Pool, Actor, Fx, Place, FxPlace } from "../bridge/cast";
 import { LIGHTS3, LOOK3 } from "./looks";
 import { camAt } from "./camera";
 import { buildEnv, EnvInfo } from "./env";
-import { drawProduct } from "./products";
+import { drawProduct, drawSplash } from "./products";
 import type { Storyboard, SceneSpec, ActorSpec, Expr, LightName, V3 } from "./types";
 
 const hh = (i: number, s = 0) => { const v = Math.sin(i * 127.1 + s * 311.7) * 43758.5453; return v - Math.floor(v); };
@@ -313,6 +313,7 @@ export class StoryWorld {
           break;
         }
         case "steam": fx.push({ key: `steam${q((t * 0.8) % 1, 20)}`, cw: 400, ch: 400, draw: (p) => steamFx(p, q((t * 0.8) % 1, 20)), x, y, z, w: size, h: size, soft: true }); break;
+        case "splash": fx.push({ key: `splash${u}|${e.color ?? ""}`, cw: 800, ch: 800, draw: (p) => drawSplash(p, u, e.color ?? "#4fa8d8"), x, y, z, w: size, h: size }); break;
         case "sparkle": fx.push({ key: `spark${u}|${e.color ?? ""}`, cw: 400, ch: 400, draw: (p) => sparkleFx(p, u, e.color ?? "#ffe27a"), x, y, z, w: size, h: size }); break;
       }
     }

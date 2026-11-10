@@ -1,0 +1,185 @@
+{
+ "id": "la-inundaci-n-de-melaza-de-bosto-6f05a4",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 223,
+   "beats": 9,
+   "at": "2026-11-09T20:41:37"
+  },
+  "voice": {
+   "duration": 76.83891666666666,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 27.8,
+   "status": "done",
+   "voice": "ef_dora",
+   "speed": 1.0,
+   "at": "2026-11-09T20:42:08"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 10.0,
+   "method": {
+    "whisper": 6,
+    "spread": 3
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-09T20:42:18"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 2318,
+   "seconds_video": 77.26666666666667,
+   "scenes": 9,
+   "at": "2026-11-09T20:42:18"
+  },
+  "stills": {
+   "status": "done",
+   "count": 27,
+   "at": "2026-11-09T20:43:47"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 273.3,
+   "frames": 2318,
+   "renderedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b07",
+    "b08",
+    "b09"
+   ],
+   "reusedScenes": [],
+   "fps_render": 8.48,
+   "at": "2026-11-09T20:48:21"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 23.6,
+   "integratedLUFS": -14.02,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.53,
+   "maxGainReductionDB": 5.78,
+   "voiceLUFS": -13.67,
+   "musicLUFS": -29.49,
+   "sfxLUFS": -33.36,
+   "at": "2026-11-09T20:48:44"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\la-inundaci-n-de-melaza-de-bosto-6f05a4\\output\\la-inundaci-n-de-melaza-de-boston_master_v1.mp4",
+   "at": "2026-11-09T20:48:46"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-09T20:49:09"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-09T20:41:37",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T20:41:37",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-09T20:42:08",
+   "seconds": 27.8,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-09T20:42:18",
+   "status": "done",
+   "seconds": 10.0
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T20:42:18",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-09T20:43:47",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-09T20:48:21",
+   "status": "done",
+   "seconds": 273.3
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T20:48:44",
+   "status": "done",
+   "seconds": 23.6
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-09T20:48:46",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T20:49:09",
+   "status": "done"
+  }
+ ],
+ "title": "La inundación de melaza de Boston",
+ "created": "2026-11-09T20:39:29",
+ "request": {
+  "title": "La inundación de melaza de Boston",
+  "idea": "La gran inundación de melaza de Boston en 1919",
+  "script": "",
+  "kind": "story",
+  "lang": "es",
+  "seconds": 60,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "village_square",
+  "voice": null,
+  "speed": 1.0,
+  "clientId": null,
+  "cta": null,
+  "audience": "jóvenes de 16 a 25 años que aman las historias curiosas",
+  "research": true,
+  "captions": false,
+  "music": true,
+  "variants": 1,
+  "provider": "auto",
+  "review": "auto_qa",
+  "seed": 7,
+  "autostart": true
+ },
+ "lang": "es",
+ "style": "storybook",
+ "scriptProvider": "ollama:qwen3:8b (writer+critic+director)",
+ "planRepairs": [],
+ "coherence": {
+  "visualSupport": 0.78,
+  "beats": 9,
+  "places": [
+   "interior",
+   "street",
+   "village_square"
+  ],
+  "relevance": 8,
+  "coherence": 9,
+  "hook": 7
+ },
+ "durationNote": "",
+ "requestedSeconds": 60
+}

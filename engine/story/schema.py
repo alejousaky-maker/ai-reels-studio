@@ -29,8 +29,9 @@ class BeatCharacter(BaseModel):
 
 
 class BeatFx(BaseModel):
-    kind: Literal["burst", "stars", "notes", "puff", "product", "steam", "sparkle"]
+    kind: Literal["burst", "stars", "notes", "puff", "product", "steam", "sparkle", "splash"]
     product: Optional[Product] = None
+    color: Optional[str] = Field(None, pattern=r"^#[0-9a-fA-F]{6}$")
     word: Optional[str] = None
     on: Optional[str] = None  # character id it belongs to (above the head)
 

@@ -1,0 +1,277 @@
+{
+ "video": "C:\\Users\\felip\\AI-Reels-Studio\\projects\\la-inundaci-n-de-melaza-de-bosto-7dd13c\\output\\la-inundaci-n-de-melaza-de-boston-v2_master_v3.mp4",
+ "probe": {
+  "width": 1440,
+  "height": 2560,
+  "fps": 30.0,
+  "videoSeconds": 73.533333,
+  "audioSeconds": 73.533333,
+  "sizeMB": 101.53
+ },
+ "checks": [
+  {
+   "check": "video stream",
+   "ok": true,
+   "detail": "1 video stream(s), codec h264",
+   "blocking": true
+  },
+  {
+   "check": "9:16 ratio",
+   "ok": true,
+   "detail": "1440x2560",
+   "blocking": true
+  },
+  {
+   "check": "fps",
+   "ok": true,
+   "detail": "30.000 fps",
+   "blocking": true
+  },
+  {
+   "check": "duration",
+   "ok": true,
+   "detail": "video 73.533 s, storyboard 73.533 s",
+   "blocking": true
+  },
+  {
+   "check": "single audio track",
+   "ok": true,
+   "detail": "1 audio stream(s) (a silent extra track means the mux mapped the wrong stream)",
+   "blocking": true
+  },
+  {
+   "check": "AAC 48 kHz",
+   "ok": true,
+   "detail": "aac 48000 Hz 2 ch",
+   "blocking": true
+  },
+  {
+   "check": "A/V length match",
+   "ok": true,
+   "detail": "audio 73.533 s vs video 73.533 s",
+   "blocking": true
+  },
+  {
+   "check": "no black spans",
+   "ok": true,
+   "detail": "0 span(s) []",
+   "blocking": true
+  },
+  {
+   "check": "no white spans (>0.2 s)",
+   "ok": true,
+   "detail": "0 span(s) [] — 4-frame flashes are shorter and allowed",
+   "blocking": true
+  },
+  {
+   "check": "no frozen holds >= 1.5 s",
+   "ok": true,
+   "detail": "0 freeze(s) >= 0.6 s: []",
+   "blocking": false
+  },
+  {
+   "check": "loudness ~ -14 LUFS",
+   "ok": true,
+   "detail": "integrated -14.0 LUFS (target -14, platform normalisation)",
+   "blocking": false
+  },
+  {
+   "check": "true peak <= -1 dBTP",
+   "ok": true,
+   "detail": "true peak -1.9 dBTP",
+   "blocking": true
+  },
+  {
+   "check": "no long silences",
+   "ok": true,
+   "detail": "0 silence(s) >= 1.2 s: []",
+   "blocking": false
+  },
+  {
+   "check": "render matches control stills",
+   "ok": true,
+   "detail": "1 frames compared; mismatches: []",
+   "blocking": true
+  },
+  {
+   "check": "day exposure (heuristic)",
+   "ok": true,
+   "detail": "median luma of day scenes 0.529, reference ~0.57 (range 0.5-0.66)",
+   "blocking": false
+  },
+  {
+   "check": "no crushed blacks (heuristic)",
+   "ok": false,
+   "detail": "scenes with p5 luma < 0.04: ['b02', 'b03', 'b09']",
+   "blocking": false
+  }
+ ],
+ "blocking": [],
+ "warnings": [
+  "no crushed blacks (heuristic): scenes with p5 luma < 0.04: ['b02', 'b03', 'b09']"
+ ],
+ "technicalPass": true,
+ "loudness": {
+  "I": -14.0,
+  "TP": -1.9
+ },
+ "sceneStats": [
+  {
+   "scene": "b01",
+   "t": 5.87,
+   "light": "day",
+   "medianLuma": 0.569,
+   "p5Luma": 0.253,
+   "p95Luma": 0.89,
+   "satMean": 0.301
+  },
+  {
+   "scene": "b02",
+   "t": 15.7,
+   "light": "day",
+   "medianLuma": 0.411,
+   "p5Luma": 0.023,
+   "p95Luma": 0.869,
+   "satMean": 0.567
+  },
+  {
+   "scene": "b03",
+   "t": 23.23,
+   "light": "day",
+   "medianLuma": 0.489,
+   "p5Luma": 0.024,
+   "p95Luma": 0.883,
+   "satMean": 0.443
+  },
+  {
+   "scene": "b04",
+   "t": 30.9,
+   "light": "day",
+   "medianLuma": 0.601,
+   "p5Luma": 0.091,
+   "p95Luma": 0.859,
+   "satMean": 0.399
+  },
+  {
+   "scene": "b05",
+   "t": 39.97,
+   "light": "golden",
+   "medianLuma": 0.32,
+   "p5Luma": 0.084,
+   "p95Luma": 0.65,
+   "satMean": 0.483
+  },
+  {
+   "scene": "b06",
+   "t": 48.4,
+   "light": "night",
+   "medianLuma": 0.225,
+   "p5Luma": 0.065,
+   "p95Luma": 0.804,
+   "satMean": 0.613
+  },
+  {
+   "scene": "b07",
+   "t": 55.57,
+   "light": "night",
+   "medianLuma": 0.184,
+   "p5Luma": 0.024,
+   "p95Luma": 0.829,
+   "satMean": 0.649
+  },
+  {
+   "scene": "b08",
+   "t": 63.0,
+   "light": "golden",
+   "medianLuma": 0.307,
+   "p5Luma": 0.231,
+   "p95Luma": 0.425,
+   "satMean": 0.545
+  },
+  {
+   "scene": "b09",
+   "t": 70.1,
+   "light": "golden",
+   "medianLuma": 0.285,
+   "p5Luma": 0.026,
+   "p95Luma": 0.665,
+   "satMean": 0.581
+  }
+ ],
+ "rubric": [
+  {
+   "area": "Comprensión narrativa y gancho inicial",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "Coherencia de personajes y escenarios",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "Cámara y pacing",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "auto+human"
+  },
+  {
+   "area": "Contornos / ilustración / materiales",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "Iluminación, color y profundidad",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "auto+human"
+  },
+  {
+   "area": "Claridad y naturalidad de la voz",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "SFX, música y sincronía",
+   "score": null,
+   "basis": "computed loudness -14.0 LUFS / TP -1.9 dBTP; sync and taste need a listen",
+   "kind": "auto+human"
+  },
+  {
+   "area": "Composición vertical y safe areas",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "Alineación visual-texto",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "Calidad técnica del archivo y licencias",
+   "score": 10,
+   "basis": "computed (checks above)",
+   "kind": "auto"
+  }
+ ],
+ "approved": false,
+ "note": "Technical checks are measured. Subjective rubric areas are NOT auto-scored; a person must review frames/video and approve in the app.",
+ "coherence": {
+  "visualSupport": 0.78,
+  "beats": 9,
+  "places": [
+   "interior",
+   "street",
+   "village_square"
+  ],
+  "relevance": 8,
+  "coherence": 9,
+  "hook": 7
+ }
+}

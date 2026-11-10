@@ -1,0 +1,45 @@
+{
+ "rounds": [
+  {
+   "relevance": 8,
+   "coherence": 9,
+   "hook": 6,
+   "problems": [
+    "0: El 15 de enero de 1919, un tanque de melaza se rompió en Boston. (No es suficientemente específico, no menciona el impacto ni la sorpresa)",
+    "1: La melaza salió a 56 km/h y cubrió las calles del North End. (Muy buena, pero podría ser más impactante)",
+    "2: La ola llegó a dos metros de altura y rompió la estación de tren. (Buena, pero podría ser más específico)",
+    "3: La melaza cubrió los edificios con hasta 90 cm de profundidad. (Buena, pero podría ser más impactante)",
+    "4: 2,1 personas murieron y 150 más se lastimaron. (Muy buena, pero podría ser más impactante)",
+    "5: Un estudio dice que el calor provocó la rotura del tanque. (Buena, pero podría ser más específico)",
+    "6: La melaza se usaba para hacer alcohol y municiones. (Buena, pero podría ser más impactante)",
+    "7: La inundación fue tan rápida que las personas no tuvieron tiempo de escapar. (Buena, pero podría ser más específico)",
+    "8: Hoy se recuerda el desastre como uno de los más extraños de la historia. (Buena, pero podría ser más impactante)"
+   ],
+   "rewritten": 9
+  },
+  {
+   "relevance": 8,
+   "coherence": 9,
+   "hook": 7,
+   "problems": [
+    "0: El 15 de enero de 1919, un tanque de melaza de 17 metros de altura se derramó en el barrio de North End de Boston, causando una de las inundaciones más sorprendentes de la historia.",
+    "1: La melaza salió a 5,6 km/h, como si fuera una ola gigante, cubriendo las calles del North End y dejando a la población en shock.",
+    "2: La ola alcanzó hasta dos metros de altura y rompió la estación de tren de la Boston Elevated Railway, dejando a la ciudad en silencio.",
+    "3: La melaza cubrió los edificios con hasta 90 cm de profundidad, dejando a muchas personas atrapadas en una masa viscosa y peligrosa.",
+    "4: 21 personas perdieron la vida y otras 150 resultaron heridas, algunas aplastadas o cubiertas de melaza, en uno de los desastres más inesperados de la historia.",
+    "5: Un estudio reveló que el calor extremo de ese mes de enero provocó la rotura de los remaches del tanque, causando la catástrofe.",
+    "6: La melaza se usaba no solo para hacer alcohol, sino también para producir municiones, lo que la convierte en un ingrediente clave en la guerra.",
+    "7: La inundación fue tan rápida que muchas personas no tuvieron tiempo de reaccionar, quedando atrapadas en el flujo viscoso de la melaza.",
+    "8: Hoy se recuerda el desastre como uno de los eventos más extraños y sorprendentes de la historia de Estados Unidos."
+   ],
+   "rewritten": 1
+  }
+ ],
+ "source": {
+  "title": "Gran inundación de melaza de Boston",
+  "url": "https://es.wikipedia.org/wiki/Gran_inundaci%C3%B3n_de_melaza_de_Boston"
+ },
+ "relevance": 8,
+ "coherence": 9,
+ "hook": 7
+}

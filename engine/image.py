@@ -72,6 +72,9 @@ ACT_KW = [("dance", r"bail|danz|danc"), ("walk", r"camin|pase|anda|walk|stroll")
 PROD_KW = [("coffee", r"cafe\b|taza|coffee|cup"), ("croissant", r"croissant|cruasan"), ("bread", r"\bpan\b|barra|bread|loaf"), ("cake", r"pastel|tarta|cake"),
            ("book", r"libro|book"), ("clock", r"reloj|hora|clock|time"), ("lightbulb", r"idea|bombilla|invent|bulb"), ("heart", r"amor|corazon|love|heart"),
            ("note", r"musica|nota|music|song"), ("scroll", r"carta|pergamino|mensaje|letter|scroll|message"), ("question", r"pregunta|duda|\?|question"), ("exclaim", r"!|alerta|alert")]
+# every keyword must start a word ("cubriendo" must not match "riendo"); lookbehind also works before "?" / "!"
+for _tbl in ("ENV_KW", "LIGHT_KW", "ROLE_KW", "EXPR_KW", "ACT_KW", "PROD_KW"):
+    globals()[_tbl] = [(k, rf"(?<![a-z0-9])(?:{rx})") for k, rx in globals()[_tbl]]
 NUM = {"dos": 2, "two": 2, "tres": 3, "three": 3, "cuatro": 4, "four": 4, "pareja": 2, "couple": 2}
 
 

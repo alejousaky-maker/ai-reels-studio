@@ -27,6 +27,7 @@ export const Editor: React.FC<{ pid: string }> = ({ pid }) => {
         <span className="sp" />
         <button className="btn primary" disabled={running} onClick={() => job("produce", { quality })}>▶ Producir todo</button>
         <button className="btn" disabled={running || !p.storyboard} onClick={() => job("regen_scene", { quality })}>↻ Re-render solo lo cambiado</button>
+        <button className="btn" disabled={running || !p.plan} title="Rehace lugar, personajes, emociones, objetos y efectos de cada escena a partir de su frase (no cambia texto ni voz)" onClick={() => job("redirect", { quality })}>🎬 Re-dirigir escenas</button>
       </div>
       {msg && <div className="err" style={{ marginBottom: 12 }}>{msg}</div>}
       <div className="tabs" role="tablist">
@@ -182,6 +183,14 @@ const ScriptEditor: React.FC<any> = ({ p, reload, job, running }) => {
   return (
     <div className="grid" style={{ gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)" }}>
       <div className="card grid">
+        {p.manifest?.coherence && Object.keys(p.manifest.coherence).length > 0 && (
+          <div className="row small" style={{ gap: 8 }}>
+            {p.manifest.coherence.relevance != null && <span className={`pill ${p.manifest.coherence.relevance >= 8 ? "ok" : "warn"}`}>Relación con tu idea {p.manifest.coherence.relevance}/10</span>}
+            {p.manifest.coherence.coherence != null && <span className={`pill ${p.manifest.coherence.coherence >= 8 ? "ok" : "warn"}`}>Coherencia {p.manifest.coherence.coherence}/10</span>}
+            {p.manifest.coherence.hook != null && <span className={`pill ${p.manifest.coherence.hook >= 7 ? "ok" : "warn"}`}>Gancho {p.manifest.coherence.hook}/10</span>}
+            <span className={`pill ${p.manifest.coherence.visualSupport >= 0.7 ? "ok" : "warn"}`}>Escenas que muestran lo que se dice {Math.round(100 * p.manifest.coherence.visualSupport)}%</span>
+            <span className="dim">(puntuaciones del crítico IA local: orientativas; la imagen se mide por palabras de cada frase)</span>
+          </div>)}
         <h3>Guion por escenas</h3>
         {p.plan ? p.plan.beats.map((b: any, i: number) => <div key={i} className="small"><b>{i + 1}.</b> <span className="dim">[{b.shot}/{b.light}]</span> {b.narration}</div>) : <div className="muted">Sin guion todavía.</div>}
         {p.plan?.verifiedClaims?.length > 0 && <><h3>Hechos (FACTS.md)</h3>{p.plan.verifiedClaims.map((c: any, i: number) => <div key={i} className="small"><span className={`pill ${c.status === "verified" ? "ok" : c.status === "fiction" ? "" : "warn"}`}>{c.status}</span> {c.text} {c.source && <a href={c.source} target="_blank" rel="noreferrer">fuente</a>}</div>)}</>}

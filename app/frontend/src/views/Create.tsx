@@ -10,7 +10,7 @@ export const Create: React.FC = () => {
   const [opts] = useData<any>("/api/options");
   const [clients] = useData<any[]>("/api/clients");
   const [f, setF] = useState<any>({ title: "", idea: "", script: "", kind: "story", lang: "en", seconds: 60, quality: "master", style: "storybook",
-    environment: "village_square", voice: "", speed: 1.0, clientId: "", cta: "", captions: false, music: true, variants: 1, provider: "auto", review: "auto_qa" });
+    environment: "village_square", voice: "", speed: 1.0, clientId: "", cta: "", audience: "", captions: false, music: true, variants: 1, provider: "auto", review: "auto_qa" });
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
   const set = (k: string, v: any) => setF((x: any) => ({ ...x, [k]: v }));
@@ -22,7 +22,7 @@ export const Create: React.FC = () => {
   const submit = async () => {
     setErr(""); setBusy(true);
     try {
-      const body = { ...f, title: f.title || (f.idea || f.script).split(/[.!?\n]/)[0].slice(0, 80) || "Nuevo vídeo", voice: f.voice || null, clientId: f.clientId || null, cta: f.cta || null };
+      const body = { ...f, title: f.title || (f.idea || f.script).split(/[.!?\n]/)[0].slice(0, 80) || "Nuevo vídeo", voice: f.voice || null, clientId: f.clientId || null, cta: f.cta || null, audience: f.audience || null };
       const r = await api.post("/api/projects", body);
       go(`project/${r.id}`);
     } catch (e: any) { setErr(e.message); } finally { setBusy(false); }
@@ -38,6 +38,8 @@ export const Create: React.FC = () => {
           <label className="f">Idea del vídeo (una frase basta)
             <textarea value={f.idea} onChange={(e) => setIdea(e.target.value)} placeholder="p. ej. Por qué en 1518 una ciudad entera no podía dejar de bailar" />
           </label>
+          <label className="f">¿Para quién es? (público objetivo: el guion se adapta en tono, vocabulario y ejemplos)
+            <input type="text" value={f.audience} onChange={(e) => set("audience", e.target.value)} placeholder="p. ej. jóvenes de 16-25 que aman la historia; dueños de pequeños negocios; niños de 8-12" /></label>
           <div>
             <h3>Qué quieres obtener</h3>
             <div className="chips">

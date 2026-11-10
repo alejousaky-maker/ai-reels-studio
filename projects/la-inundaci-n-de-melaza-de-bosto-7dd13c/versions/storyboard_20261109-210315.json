@@ -1,0 +1,744 @@
+{
+ "version": 1,
+ "title": "La inundación de melaza de Boston v2",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 2206,
+ "env": {
+  "preset": "street",
+  "seed": 7,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "miguel",
+   "name": "Miguel",
+   "outfit": {
+    "jacket": "#3f6fb5",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#f5c9a0",
+    "hat": "tophat",
+    "cap": "#5d7a3a",
+    "moustache": "#4a3426"
+   }
+  },
+  {
+   "id": "luis",
+   "name": "Luis",
+   "outfit": {
+    "jacket": "#8c3b4a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "hat": "cap",
+    "cap": "#b5653f"
+   }
+  },
+  {
+   "id": "jefe",
+   "name": "Jefe",
+   "outfit": {
+    "jacket": "#2f3a5a",
+    "pants": "#2b2b38",
+    "boots": "#241726",
+    "skin": "#ecd0b6",
+    "hat": "tophat",
+    "moustache": "#4a3020",
+    "build": "stout",
+    "buttons": "#e8c45a",
+    "sash": "#c0353a"
+   }
+  },
+  {
+   "id": "stephen",
+   "name": "Stephen",
+   "outfit": {
+    "jacket": "#4a3b6a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ffe2c2",
+    "hat": "hair",
+    "hair": "#d9d4cc",
+    "moustache": "#d9d4cc"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 353,
+   "narration": "El 15 de enero de 1919, un tanque de melaza de 17,7 metros de altura se derramó en el barrio de North End de Boston, causando una de las inundaciones más sorprendentes de la historia.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "miguel",
+     "x": 0.0,
+     "z": -24.0,
+     "expr": "shock",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      -3.0,
+      2.3,
+      -34.5
+     ],
+     "lookAt": [
+      0.0,
+      1.2,
+      -24
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 194,
+     "cut": true,
+     "position": [
+      1.6,
+      1.68,
+      -29.6
+     ],
+     "lookAt": [
+      0.0,
+      1.38,
+      -24
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 700,
+   "qualityNotes": "street, day, miguel",
+   "fx": [
+    {
+     "kind": "splash",
+     "frame": 181,
+     "dur": 45,
+     "at": [
+      -1.4,
+      1.6,
+      -21.5
+     ],
+     "size": 4.2,
+     "color": "#5a2e12"
+    }
+   ]
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 353,
+   "endFrame": 590,
+   "narration": "La melaza salió a 56 km/h, como si fuera una ola gigante, cubriendo las calles del North End y dejando a la población en shock.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "miguel",
+     "x": 0.0,
+     "z": -46.0,
+     "expr": "shock",
+     "mode": "stand"
+    },
+    {
+     "castId": "luis",
+     "x": 0.893,
+     "z": -43.5,
+     "expr": "shock",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 578,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 353,
+     "position": [
+      0.55,
+      1.62,
+      -48.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -46.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 483,
+     "cut": true,
+     "position": [
+      -0.55,
+      1.62,
+      -48.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -46.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "flash",
+   "seed": 701,
+   "qualityNotes": "street, day, miguel, luis",
+   "fx": [
+    {
+     "kind": "splash",
+     "frame": 458,
+     "dur": 45,
+     "at": [
+      -1.4,
+      1.6,
+      -43.5
+     ],
+     "size": 4.2,
+     "color": "#5a2e12"
+    }
+   ]
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 590,
+   "endFrame": 805,
+   "narration": "La ola alcanzó hasta dos metros de altura y rompió la estación de tren de la Boston Elevated Railway, dejando a la ciudad en silencio.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "jefe",
+     "x": 0.0,
+     "z": -12.0,
+     "expr": "neutral",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 590,
+     "position": [
+      -1.6,
+      1.68,
+      -17.6
+     ],
+     "lookAt": [
+      0.0,
+      1.38,
+      -12
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 660,
+     "cut": true,
+     "position": [
+      0.55,
+      1.62,
+      -14.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -12
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 702,
+   "qualityNotes": "street, day, jefe",
+   "kicks": [
+    {
+     "frame": 662,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "splash",
+     "frame": 595,
+     "dur": 45,
+     "at": [
+      -1.4,
+      1.6,
+      -9.5
+     ],
+     "size": 4.2,
+     "color": "#5a2e12"
+    },
+    {
+     "kind": "burst",
+     "frame": 660,
+     "dur": 60,
+     "at": [
+      -0.42,
+      2.28,
+      -12.0
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 805,
+   "endFrame": 1049,
+   "narration": "La melaza cubrió los edificios con hasta 90 cm de profundidad, dejando a muchas personas atrapadas en una masa viscosa y peligrosa.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "luis",
+     "x": -9.5,
+     "z": 0.0,
+     "expr": "pained",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 805,
+     "position": [
+      -13.8,
+      1.66,
+      -1.0
+     ],
+     "lookAt": [
+      -9.5,
+      1.42,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 939,
+     "cut": true,
+     "position": [
+      -12.4,
+      1.62,
+      0.55
+     ],
+     "lookAt": [
+      -9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 703,
+   "qualityNotes": "village_square, day, luis",
+   "env": {
+    "preset": "village_square",
+    "seed": 7,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 1049,
+   "endFrame": 1349,
+   "narration": "21 personas perdieron la vida y otras 150 resultaron heridas, algunas aplastadas o cubiertas de melaza, en uno de los desastres más inesperados de la historia.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "jefe",
+     "x": 9.5,
+     "z": 0.0,
+     "expr": "pained",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1049,
+     "position": [
+      15.7,
+      0.85,
+      2.4
+     ],
+     "lookAt": [
+      9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 44,
+     "roll": 0.0
+    },
+    {
+     "frame": 1214,
+     "cut": true,
+     "position": [
+      15.1,
+      1.68,
+      1.6
+     ],
+     "lookAt": [
+      9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 6,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 704,
+   "qualityNotes": "village_square, golden, jefe",
+   "env": {
+    "preset": "village_square",
+    "seed": 7,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 1349,
+   "endFrame": 1555,
+   "narration": "Un estudio reveló que el calor extremo de ese mes de enero provocó la rotura de los remaches del tanque, causando la catástrofe.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "stephen",
+     "x": 0.0,
+     "z": 1.8,
+     "expr": "neutral",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1349,
+     "position": [
+      -1.6,
+      1.68,
+      7.4
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.8
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1462,
+     "cut": true,
+     "position": [
+      0.55,
+      1.62,
+      4.7
+     ],
+     "lookAt": [
+      0,
+      1.5,
+      1.8
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 705,
+   "qualityNotes": "interior, night, stephen",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "interior",
+    "seed": 7,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 1555,
+   "endFrame": 1780,
+   "narration": "La melaza se usaba no solo para hacer alcohol, sino también para producir municiones, lo que la convierte en un ingrediente clave en la guerra.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "stephen",
+     "x": -2.4,
+     "z": -1.2,
+     "expr": "shock",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1555,
+     "position": [
+      -2.429,
+      1.62,
+      1.752
+     ],
+     "lookAt": [
+      -2.4,
+      1.5,
+      -1.2
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1678,
+     "cut": true,
+     "position": [
+      -3.508,
+      1.62,
+      1.536
+     ],
+     "lookAt": [
+      -2.4,
+      1.5,
+      -1.2
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 706,
+   "qualityNotes": "interior, night, stephen",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "interior",
+    "seed": 7,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 1780,
+   "endFrame": 2000,
+   "narration": "La inundación fue tan rápida que muchas personas no tuvieron tiempo de reaccionar, quedando atrapadas en el flujo viscoso de la melaza.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "miguel",
+     "x": -2.0,
+     "z": 1.2,
+     "expr": "pained",
+     "mode": "stand"
+    },
+    {
+     "castId": "luis",
+     "x": -3.163,
+     "z": 0.69,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1983,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1780,
+     "position": [
+      -4.886,
+      7.6,
+      7.946
+     ],
+     "lookAt": [
+      -2.0,
+      0.6,
+      1.2
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1901,
+     "cut": true,
+     "position": [
+      0.289,
+      2.3,
+      8.464
+     ],
+     "lookAt": [
+      -2.0,
+      1.2,
+      1.2
+     ],
+     "fov": 42,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0018,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 707,
+   "qualityNotes": "interior, golden, miguel, luis",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "interior",
+    "seed": 7,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "splash",
+     "frame": 1784,
+     "dur": 45,
+     "at": [
+      -0.358,
+      1.6,
+      -1.148
+     ],
+     "size": 4.2,
+     "color": "#5a2e12"
+    }
+   ]
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 2000,
+   "endFrame": 2206,
+   "narration": "Hoy se recuerda el desastre como uno de los eventos más extraños y sorprendentes de la historia de Estados Unidos.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "jefe",
+     "x": 6.718,
+     "z": -6.718,
+     "expr": "shock",
+     "mode": "stand"
+    },
+    {
+     "castId": "stephen",
+     "x": 6.59,
+     "z": -5.572,
+     "expr": "shock",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 2171,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 2000,
+     "position": [
+      9.051,
+      1.66,
+      -10.465
+     ],
+     "lookAt": [
+      6.718,
+      1.42,
+      -6.718
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 2113,
+     "cut": true,
+     "position": [
+      9.157,
+      1.62,
+      -8.379
+     ],
+     "lookAt": [
+      6.718,
+      1.5,
+      -6.718
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 708,
+   "qualityNotes": "village_square, golden, jefe, stephen",
+   "env": {
+    "preset": "village_square",
+    "seed": 7,
+    "shop": null
+   }
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": false,
+  "words": []
+ },
+ "style": "storybook"
+}

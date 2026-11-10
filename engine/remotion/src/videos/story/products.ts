@@ -103,6 +103,21 @@ export const drawProduct = (p: Pen, kind: ProductKind, col = "#c8553d") => {
   }
 };
 
+/** liquid splash crown on an 800 x 800 canvas (any colour: water, molasses, mud, chocolate); t in 0..1 */
+export const drawSplash = (p: Pen, t: number, col: string) => {
+  const c = 400, size = 800, rise = Math.sin(Math.min(1, t * 1.3) * Math.PI), light = mix(col, "#ffffff", 0.35), deep = shade(col, 0.75);
+  if (rise > 0.02) {
+    const pts: P2[] = [];
+    for (let i = 0; i < 19; i++) { const h = (i % 2 ? 300 : 150) * rise * (0.7 + 0.3 * Math.sin(i * 1.7)); pts.push([c - 340 + (680 * i) / 18, size - 120 - h]); }
+    p.poly([...pts, [c + 340, size - 90], [c - 340, size - 90]], light, 10);
+    p.ell(c, size - 100, 370, 48, deep, 10);
+  }
+  for (let i = 0; i < 9; i++) {
+    const a = ((200 + i * 17) * Math.PI) / 180, d = 120 + 380 * t, y = size - 160 + d * Math.sin(a) + 520 * t * t, r = 28 * (1 - t) + 6;
+    if (t > 0.08 && y < size - 40) p.ell(c + d * Math.cos(a), y, r, r * 1.25, light, 7);
+  }
+};
+
 /** shop sign on a 1024 x 320 canvas: rounded board in brand colours + the brand name (user-supplied text only) */
 export const drawSign = (g: CanvasRenderingContext2D, name: string, primary: string, secondary: string, text: string, tagline?: string) => {
   const p = new Pen(g);

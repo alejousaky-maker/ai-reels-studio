@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.4.0 — 2026-11-09 (idea → coherent story → matching picture)
+- **Research**: the topic is looked up on Wikipedia in the video's language (only the topic is sent; offline = skipped);
+  the script must use only facts from that source; verified claims link to it (`script/SOURCE.md`).
+- **3-stage script**: writer (simple story fields + worked example + target audience) → critic (relevance / coherence /
+  hook scores, forced rewrites of the flagged sentences, checked against the source) → deterministic director.
+- **Sentence-driven direction**: each scene's place, time, who, emotion, objects and events come from its own sentence
+  (word-start keyword matching: "cubriendo" no longer reads as "riendo"); at most 3 places; side trips return to the main
+  place; tragic topics never get grins; "ola/inundación/flood" → liquid wave (brown for molasses/mud/chocolate),
+  "estalló/colapso/explosion" → impact; nothing the sentence doesn't name is invented.
+- **Audience** field ("¿Para quién es?"); coherence scores shown in the Guion tab and in QUALITY_REPORT.md.
+- **Re-dirigir escenas**: rebuild every scene's visuals from the current narration without touching text or voice
+  (only changed scenes re-render).
+- Duration fit both ways: short narration re-voiced slower (≥0.88×), long narration faster (≤1.1×), gap reported.
+
 ## 0.3.0 — 2026-11-09 (images and scripts from your prompts)
 - **Imágenes desde un prompt** (new screen): ES/EN prompt → scene (place, light, shot, characters with role/action/
   expression/held object, effects) → 2K PNG rendered by the same engine; formats 9:16, 1:1, 4:5, 16:9; 1-4 variants

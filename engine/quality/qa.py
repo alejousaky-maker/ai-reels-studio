@@ -195,6 +195,12 @@ def write_md(rep: dict, path: str):
     L += ["", "## Per-scene picture stats (heuristic, vs reference: day median luma ~0.57, p5 ~0.23)", "| scene | t | light | median Y | p5 | p95 | sat |", "|---|---|---|---|---|---|---|"]
     for s in rep["sceneStats"]:
         L.append(f"| {s['scene']} | {s['t']} | {s['light']} | {s['medianLuma']} | {s['p5Luma']} | {s['p95Luma']} | {s['satMean']} |")
+    coh = rep.get("coherence") or {}
+    if coh:
+        L += ["", "## Idea -> script -> picture coherence",
+              f"- Critic (local LLM, indicative): relevance to the idea {coh.get('relevance', '-')}/10, coherence {coh.get('coherence', '-')}/10, hook {coh.get('hook', '-')}/10",
+              f"- Scenes whose picture is driven by the words of their sentence (place/people/emotion/object): {round(100 * (coh.get('visualSupport') or 0))}% of {coh.get('beats', '?')} (measured)",
+              f"- Places used: {', '.join(coh.get('places', []))}"]
     L += ["", "## Rubric (0-10)", "| area | score | basis |", "|---|---|---|"]
     for r in rep["rubric"]:
         L.append(f"| {r['area']} | {r['score'] if r['score'] is not None else '—'} | {r['basis']} |")

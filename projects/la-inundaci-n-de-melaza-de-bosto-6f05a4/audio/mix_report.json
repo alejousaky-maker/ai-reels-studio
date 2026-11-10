@@ -1,0 +1,131 @@
+{
+ "duration": 77.26666666666667,
+ "sampleRate": 48000,
+ "targetLUFS": -14.0,
+ "ceilingDBTP": -2.0,
+ "measured": {
+  "integratedLUFS": -14.02,
+  "truePeakDBTP": -2.0,
+  "LRA": 1.53,
+  "maxGainReductionDB": 5.78,
+  "voiceLUFS": -13.67,
+  "musicLUFS": -29.49,
+  "sfxLUFS": -33.36
+ },
+ "ffmpegEbur128": {
+  "I": -14.0,
+  "LRA": 1.5,
+  "truePeak": -2.0
+ },
+ "musicSections": [
+  {
+   "start": 0.0,
+   "end": 36.67,
+   "mood": "whimsical"
+  },
+  {
+   "start": 36.67,
+   "end": 47.13,
+   "mood": "warm"
+  },
+  {
+   "start": 47.13,
+   "end": 62.2,
+   "mood": "tense"
+  },
+  {
+   "start": 62.2,
+   "end": 77.27,
+   "mood": "warm"
+  }
+ ],
+ "musicCues": [
+  "0.00s section 1: whimsical (108 bpm)",
+  "36.67s section 2: warm (84 bpm)",
+  "47.13s section 3: tense (92 bpm)",
+  "62.20s section 4: warm (84 bpm)"
+ ],
+ "sfxCues": [
+  {
+   "t": 0.0,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 12.467,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 12.247,
+   "kind": "whoosh",
+   "what": "flash into b02"
+  },
+  {
+   "t": 20.867,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 23.333,
+   "kind": "impact",
+   "what": "impact thump"
+  },
+  {
+   "t": 28.3,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 28.18,
+   "kind": "whoosh",
+   "what": "xfade into b04"
+  },
+  {
+   "t": 36.667,
+   "kind": "bed",
+   "what": "golden ambience"
+  },
+  {
+   "t": 36.547,
+   "kind": "whoosh",
+   "what": "xfade into b05"
+  },
+  {
+   "t": 47.133,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 47.013,
+   "kind": "whoosh",
+   "what": "xfade into b06"
+  },
+  {
+   "t": 54.233,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 62.2,
+   "kind": "bed",
+   "what": "golden ambience"
+  },
+  {
+   "t": 62.08,
+   "kind": "whoosh",
+   "what": "xfade into b08"
+  },
+  {
+   "t": 70.167,
+   "kind": "bed",
+   "what": "golden ambience"
+  },
+  {
+   "t": 70.047,
+   "kind": "whoosh",
+   "what": "xfade into b09"
+  }
+ ],
+ "license": "All music and SFX synthesized locally (numpy/scipy), original; voice from local TTS or user import."
+}

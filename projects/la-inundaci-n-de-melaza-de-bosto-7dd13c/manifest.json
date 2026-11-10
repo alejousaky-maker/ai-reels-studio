@@ -1,0 +1,275 @@
+{
+ "id": "la-inundaci-n-de-melaza-de-bosto-7dd13c",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 223,
+   "beats": 9,
+   "at": "2026-11-09T21:10:54"
+  },
+  "voice": {
+   "duration": 73.13041666666666,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 24.4,
+   "status": "done",
+   "voice": "ef_dora",
+   "speed": 1.1,
+   "at": "2026-11-09T20:54:15"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 9.4,
+   "method": {
+    "whisper": 8,
+    "spread": 1
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-09T20:54:24"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 2206,
+   "seconds_video": 73.53333333333333,
+   "scenes": 9,
+   "at": "2026-11-09T21:12:22"
+  },
+  "stills": {
+   "status": "done",
+   "count": 27,
+   "at": "2026-11-09T21:12:22"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 0.4,
+   "frames": 2206,
+   "renderedScenes": [],
+   "reusedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b07",
+    "b08",
+    "b09"
+   ],
+   "fps_render": 0.0,
+   "at": "2026-11-09T21:12:23"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 22.6,
+   "integratedLUFS": -14.03,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.48,
+   "maxGainReductionDB": 7.22,
+   "voiceLUFS": -13.56,
+   "musicLUFS": -29.37,
+   "sfxLUFS": -31.86,
+   "at": "2026-11-09T21:12:48"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\la-inundaci-n-de-melaza-de-bosto-7dd13c\\output\\la-inundaci-n-de-melaza-de-boston-v2_master_v3.mp4",
+   "at": "2026-11-09T21:12:50"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-09T21:13:11"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-09T20:53:20",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T20:53:20",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-09T20:53:50",
+   "seconds": 27.0,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-09T20:54:15",
+   "seconds": 24.4,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-09T20:54:24",
+   "status": "done",
+   "seconds": 9.4
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T20:54:24",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-09T20:56:07",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-09T21:00:33",
+   "status": "done",
+   "seconds": 265.7
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T21:01:00",
+   "status": "done",
+   "seconds": 26.8
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-09T21:01:02",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T21:01:25",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T21:03:15",
+   "status": "done"
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T21:03:15",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-09T21:04:42",
+   "status": "done"
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T21:04:42",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-09T21:08:58",
+   "status": "done",
+   "seconds": 256.5
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T21:09:25",
+   "status": "done",
+   "seconds": 23.7
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-09T21:09:27",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T21:09:48",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T21:10:54",
+   "status": "done"
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T21:10:54",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-09T21:12:22",
+   "status": "done"
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T21:12:22",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-09T21:12:23",
+   "status": "done",
+   "seconds": 0.4
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T21:12:48",
+   "status": "done",
+   "seconds": 22.6
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-09T21:12:50",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T21:13:11",
+   "status": "done"
+  }
+ ],
+ "title": "La inundación de melaza de Boston v2",
+ "created": "2026-11-09T20:51:13",
+ "request": {
+  "title": "La inundación de melaza de Boston v2",
+  "idea": "La gran inundación de melaza de Boston en 1919",
+  "script": "",
+  "kind": "story",
+  "lang": "es",
+  "seconds": 60,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "village_square",
+  "voice": null,
+  "speed": 1.0,
+  "clientId": null,
+  "cta": null,
+  "audience": "jóvenes de 16 a 25 años que aman las historias curiosas",
+  "research": true,
+  "captions": false,
+  "music": true,
+  "variants": 1,
+  "provider": "auto",
+  "review": "auto_qa",
+  "seed": 7,
+  "autostart": true
+ },
+ "lang": "es",
+ "style": "storybook",
+ "scriptProvider": "ollama:qwen3:8b (writer+critic+director)",
+ "planRepairs": [],
+ "coherence": {
+  "visualSupport": 0.78,
+  "beats": 9,
+  "places": [
+   "interior",
+   "street",
+   "village_square"
+  ],
+  "relevance": 8,
+  "coherence": 9,
+  "hook": 7
+ },
+ "durationNote": "Narration is 73s for a 60s request: shorten some sentences.",
+ "requestedSeconds": 60
+}

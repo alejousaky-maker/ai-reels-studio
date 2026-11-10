@@ -23,6 +23,15 @@ local (Ollama), voz, render, música, mezcla y QA corren en tu PC.
 > Si no tienes IA local (Ollama), abre «Opciones avanzadas» y pega tu propio guion (una o dos frases por escena),
 > o elige «Claude asistido»: la app te prepara un texto para pegar en Claude y luego pegas el JSON que te devuelva.
 
+## 3a. Cómo consigue que el vídeo tenga que ver con tu idea
+1. **Investiga** tu tema en Wikipedia (en tu idioma; solo envía el tema) y escribe **solo con esos datos**.
+2. **Escribe** la historia pensando en tu **público objetivo** (campo «¿Para quién es?»).
+3. **Revisa** el guion con un crítico: puntúa relación con tu idea, coherencia y gancho, y reescribe las frases malas.
+4. **Dirige** cada escena a partir de su frase: lugar, hora, quién aparece, emoción, objetos y efectos (una ola si la
+   frase habla de una ola, un impacto si algo estalla). Nada que la frase no diga.
+En la pestaña **Guion** ves las puntuaciones. Si cambias frases a mano, pulsa **🎬 Re-dirigir escenas** y las imágenes
+se rehacen para seguir al texto (sin cambiar la voz).
+
 ## 3b. Imágenes y guiones desde tus prompts
 - **Imágenes**: menú **Imágenes** → escribe lo que quieres ver («una niña sorprendida con un café en el puerto al
   atardecer») → formato (9:16, 1:1, 4:5, 16:9) y variantes → **Generar imagen**. Sale un PNG 2K en el mismo estilo de

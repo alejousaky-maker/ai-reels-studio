@@ -1,0 +1,370 @@
+{
+ "version": 1,
+ "title": "La inundación de melaza de Boston v2",
+ "lang": "es",
+ "style": "storybook",
+ "environment": "street",
+ "seed": 7,
+ "cast": [
+  {
+   "id": "miguel",
+   "name": "Miguel",
+   "role": "villager_man",
+   "palette": null
+  },
+  {
+   "id": "luis",
+   "name": "Luis",
+   "role": "villager_man",
+   "palette": null
+  },
+  {
+   "id": "jefe",
+   "name": "Jefe",
+   "role": "official",
+   "palette": null
+  },
+  {
+   "id": "stephen",
+   "name": "Stephen",
+   "role": "scholar",
+   "palette": null
+  }
+ ],
+ "beats": [
+  {
+   "narration": "El 15 de enero de 1919, un tanque de melaza de 17,7 metros de altura se derramó en el barrio de North End de Boston, causando una de las inundaciones más sorprendentes de la historia.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "miguel",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "miguel",
+   "fx": [
+    {
+     "kind": "splash",
+     "product": null,
+     "color": "#5a2e12",
+     "word": "derramó",
+     "on": "miguel"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": "street, day, miguel"
+  },
+  {
+   "narration": "La melaza salió a 56 km/h, como si fuera una ola gigante, cubriendo las calles del North End y dejando a la población en shock.",
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "miguel",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "luis",
+     "action": "stand",
+     "expr": "shock",
+     "react": {
+      "word": "shock",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "miguel",
+   "fx": [
+    {
+     "kind": "splash",
+     "product": null,
+     "color": "#5a2e12",
+     "word": "ola",
+     "on": "miguel"
+    }
+   ],
+   "impactWord": null,
+   "transition": "flash",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": "street, day, miguel, luis"
+  },
+  {
+   "narration": "La ola alcanzó hasta dos metros de altura y rompió la estación de tren de la Boston Elevated Railway, dejando a la ciudad en silencio.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "jefe",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "jefe",
+   "fx": [
+    {
+     "kind": "splash",
+     "product": null,
+     "color": "#5a2e12",
+     "word": "ola",
+     "on": "jefe"
+    },
+    {
+     "kind": "burst",
+     "product": null,
+     "color": null,
+     "word": "rompió",
+     "on": "jefe"
+    }
+   ],
+   "impactWord": "rompió",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": "street, day, jefe"
+  },
+  {
+   "narration": "La melaza cubrió los edificios con hasta 90 cm de profundidad, dejando a muchas personas atrapadas en una masa viscosa y peligrosa.",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "luis",
+     "action": "stand",
+     "expr": "pained",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "luis",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": "village_square, day, luis"
+  },
+  {
+   "narration": "21 personas perdieron la vida y otras 150 resultaron heridas, algunas aplastadas o cubiertas de melaza, en uno de los desastres más inesperados de la historia.",
+   "shot": "low",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "jefe",
+     "action": "stand",
+     "expr": "pained",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "jefe",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": "village_square, golden, jefe"
+  },
+  {
+   "narration": "Un estudio reveló que el calor extremo de ese mes de enero provocó la rotura de los remaches del tanque, causando la catástrofe.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "stephen",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "stephen",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "interior",
+   "visual": "interior, night, stephen"
+  },
+  {
+   "narration": "La melaza se usaba no solo para hacer alcohol, sino también para producir municiones, lo que la convierte en un ingrediente clave en la guerra.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "stephen",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "stephen",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "interior",
+   "visual": "interior, night, stephen"
+  },
+  {
+   "narration": "La inundación fue tan rápida que muchas personas no tuvieron tiempo de reaccionar, quedando atrapadas en el flujo viscoso de la melaza.",
+   "shot": "high",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "miguel",
+     "action": "stand",
+     "expr": "pained",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "luis",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "melaza",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "miguel",
+   "fx": [
+    {
+     "kind": "splash",
+     "product": null,
+     "color": "#5a2e12",
+     "word": "inundación",
+     "on": "miguel"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": "street, golden, miguel, luis"
+  },
+  {
+   "narration": "Hoy se recuerda el desastre como uno de los eventos más extraños y sorprendentes de la historia de Estados Unidos.",
+   "shot": "two_shot",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "jefe",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "stephen",
+     "action": "stand",
+     "expr": "shock",
+     "react": {
+      "word": "Unidos",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "jefe",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": "village_square, golden, jefe, stephen"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "La gran inundación de melaza de Boston tuvo lugar el 15 de enero de 1919.",
+   "status": "verified",
+   "source": "https://es.wikipedia.org/wiki/Gran_inundaci%C3%B3n_de_melaza_de_Boston"
+  },
+  {
+   "text": "El tanque de melaza se rompió debido al calor.",
+   "status": "verified",
+   "source": "https://es.wikipedia.org/wiki/Gran_inundaci%C3%B3n_de_melaza_de_Boston"
+  },
+  {
+   "text": "La melaza cubrió los edificios con hasta 90 cm de profundidad.",
+   "status": "verified",
+   "source": "https://es.wikipedia.org/wiki/Gran_inundaci%C3%B3n_de_melaza_de_Boston"
+  },
+  {
+   "text": "21 personas murieron y 150 se lastimaron.",
+   "status": "verified",
+   "source": "https://es.wikipedia.org/wiki/Gran_inundaci%C3%B3n_de_melaza_de_Boston"
+  },
+  {
+   "text": "La comparación de la melaza con una ola es una analogía.",
+   "status": "fiction",
+   "source": null
+  }
+ ],
+ "creativeHooks": [],
+ "brand": null,
+ "cta": null,
+ "captions": false
+}
