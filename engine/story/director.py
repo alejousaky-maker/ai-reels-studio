@@ -15,6 +15,18 @@ from .presets import SHOTS, TIGHTER, anchors, outfit, ROLE_SCALE, PIECE_SIZE, IN
 from .schema import Plan
 
 LEAD = 2
+MAP_HUDS = ("manhattan", "osaka", "panama", "world", "subway", "mud", "outro")
+# who fills the background of busy places (all white-headed stickmen)
+CROWD = {
+    "shops": ["officeguy", "woman", "tourist", "hoodie", "kid", "commuter"], "street": ["villager_man", "villager_woman", "kid", "officeguy"],
+    "bridge": ["officeguy", "driver", "woman", "hoodie"], "tunnel": ["officeguy", "woman", "tourist", "hoodie"],   # tunnel: the finished station only
+    "warehouse": ["stocker", "driver", "worker"], "airport": ["tourist", "woman", "pilot", "officeguy"], "market": ["villager_woman", "villager_man", "kid"],
+    "village_square": ["villager_woman", "villager_man", "kid"],
+    "park": ["villager_woman", "kid", "villager_man"], "harbour": ["sailor", "fisher", "villager_woman"], "beach": ["tourist", "woman"],
+    "resort": ["tourist", "woman"],
+}
+# a line that says the place is empty never gets a crowd
+EMPTY_WORDS = re.compile(r"\b(empty|alone|nobody|no one|ghost|deserted|abandoned|blackout|closed|silent|lonely|quiet)\b", re.I)
 
 
 def _tok(s: str) -> list[str]:
@@ -104,7 +116,7 @@ def _wf_of(ws: list[dict], w: dict, fps: int) -> int:
 
 
 _SUB_KEEP = ("shot", "light", "environment", "envVariant", "spot", "characters", "extras", "extrasAction", "extrasRole", "focus",
-             "fx", "impactWord", "transition", "text", "textStyle", "pieces", "camMove", "hud", "hudText", "visual", "look", "extrasHolding")
+             "fx", "impactWord", "transition", "text", "textStyle", "pieces", "camMove", "hud", "hudText", "visual", "look", "extrasHolding", "backdrop", "crowd")
 
 
 def expand_views(plan: Plan, spans, fps: int) -> list[tuple]:
@@ -299,6 +311,39 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
             actors.append({"castId": eid, "x": round(Cx + rx * L + ux * Dp, 3), "z": round(Cz + rz * L + uz * Dp, 3),
                            "mode": {"dance": "dance", "walk": "stroll", "march": "march", "sit": "sit"}.get(beat.extrasAction, "stand"),
                            "expr": ["smile", "grin", "nervous", "neutral", "laugh"][e % 5], **({"holding": beat.extrasHolding} if beat.extrasHolding else {})})
+        # ---- background crowd (user, 2026-11-11): busy places are full of stickmen strolling past, crossing, chatting ----
+        roles_c = CROWD.get(env_b)
+        want = beat.crowd if beat.crowd is not None else (bool(roles_c) and plan.crowd and not EMPTY_WORDS.search(beat.narration)
+                                                         and (env_b != "tunnel" or beat.envVariant == "station"))
+        roles_c = roles_c or ["villager_man", "villager_woman", "officeguy"]
+        if want and beat.extras == 0 and beat.hud not in MAP_HUDS and plan.graphics != "simple":
+            if beat.look == "sepia":
+                roles_c = ["commuter", "villager_man", "villager_woman"] if env_b != "canal" else ["worker"]
+            n_c = {"wide": 8, "high": 8, "medium": 6, "low": 6, "two_shot": 5, "dutch": 5, "worm": 5}.get(beat.shot, 3)
+            half_w = max(2.5, SHOTS[beat.shot]["d"] * math.tan(math.radians(SHOTS[beat.shot]["fov"] / 2)) * aspect)
+            for k in range(n_c):
+                h1 = ((bi * 7919 + sub_k * 104729 + k * 7307) % 1000) / 1000
+                h2 = ((bi * 6151 + sub_k * 3571 + k * 9049) % 1000) / 1000
+                role = roles_c[(k + bi) % len(roles_c)]
+                cid = f"crowd_{env_b}_{beat.look or ''}_{k}"
+                if cid not in {c["id"] for c in cast}:
+                    cast.append({"id": cid, "name": "", "outfit": outfit(role, 31 + k * 3 + len(cast))})
+                    scale_of[cid] = 0.72 if role == "kid" else 1.0
+                Dp = 3.8 + 4.5 * h1                              # behind the cast, in front of any painted backdrop
+                L = (h2 * 2 - 1) * half_w * (1.0 + 0.12 * Dp)
+                if abs(L) < 0.9 and Dp < 5.5:
+                    L += 1.6 if L >= 0 else -1.6                  # never hide the lead
+                x0, z0 = Cx + rx * L + ux * Dp, Cz + rz * L + uz * Dp
+                crowd_act = {"castId": cid, "x": round(x0, 3), "z": round(z0, 3), "expr": ["neutral", "smile", "bored", "smile_closed", "nervous"][k % 5]}
+                if k % 3 != 2:                                    # two thirds walk across the frame, the rest stand and chat
+                    sgn = 1 if (k + bi) % 2 else -1
+                    crowd_act["walkTo"] = [round(x0 + rx * sgn * 3.2, 3), round(z0 + rz * sgn * 3.2, 3)]
+                    crowd_act["walkFrames"] = [a, b]
+                    crowd_act["mode"] = "stroll"
+                else:
+                    crowd_act["mode"] = "stand"
+                    crowd_act["talk"] = [[a + 6, b]]
+                actors.append(crowd_act)
         # ---- camera ----
         sp = SHOTS[beat.shot]
         tx, tz = pos.get(focus_id, (Cx0, Cz0)) if beat.shot in ("close", "insert", "two_shot", "extreme", "worm", "dutch") else (Cx0, Cz0)
@@ -376,6 +421,12 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
             scene["sub"] = True     # a clause cut inside a sentence (the ambience bed carries on)
         if beat.look:
             scene["look"] = beat.look
+        if plan.backdrops == "ai" and not (beat.hud in ("manhattan", "osaka", "panama", "world", "subway", "mud", "outro")):
+            from engine.imagegen import scene_prompt
+            scene["backdropPrompt"] = scene_prompt(env_b, beat.envVariant, beat.light, beat.look, beat.backdrop or beat.visual)
+            scene["backdropSeed"] = plan.seed * 1000 + (beat.spot if beat.spot is not None else bi % 3)
+        if beat.shot == "extreme" and not beat.hud and beat.characters and plan.backdrops == "ai":
+            scene["hud"] = {"kind": "spot"}   # RicksClips iris spotlight on face-filling reaction shots
         if beat.hud:
             scene["hud"] = {"kind": beat.hud, **({"text": beat.hudText} if beat.hudText else {})}
         for w_ in (beat.impactWord, *[x.word for x in beat.fx]):

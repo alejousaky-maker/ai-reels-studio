@@ -374,12 +374,12 @@
      "characters": [
       {
        "id": "cap",
-       "expr": "grin",
+       "expr": "smug",
        "holding": "cash"
       },
       {
        "id": "toll",
-       "expr": "starry"
+       "expr": "love"
       }
      ],
      "focus": "cap",
@@ -506,5 +506,6 @@
    "text": "Droughts in 2023 forced draft limits; some ships paid millions in auctions to jump the queue.",
    "status": "verified"
   }
- ]
+ ],
+ "backdrops": "ai"
 }

@@ -127,7 +127,7 @@
    "characters": [
     {
      "id": "chef",
-     "expr": "sweat"
+     "expr": "scared"
     }
    ],
    "fx": [
@@ -265,12 +265,12 @@
       {
        "id": "cop",
        "action": "point",
-       "expr": "stern"
+       "expr": "angry"
       },
       {
        "id": "drv",
        "action": "panic",
-       "expr": "shock",
+       "expr": "scared",
        "holding": "box"
       }
      ],
@@ -602,5 +602,6 @@
   {
    "text": "'Billions of calories a day' is a rounded estimate."
   }
- ]
+ ],
+ "backdrops": "ai"
 }

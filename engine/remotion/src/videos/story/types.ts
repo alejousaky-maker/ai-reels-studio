@@ -83,6 +83,9 @@ export type SceneSpec = {
   /** lens blur radius at infinity in px at 1080 wide (0 = sharp); focus on an actor's eyes or a world point */
   dof?: { cInf: number; focusActor?: number; focus?: V3 };
   kicks?: { frame: number; amp: number }[];
+  /** AI-painted backdrop image (path under public/) shown behind the cast instead of the 3D set */
+  backdrop?: string;
+  backdropPrompt?: string;
   /** gentle lens lean-ins on named objects */
   punches?: number[];
   fx?: FxSpec[];

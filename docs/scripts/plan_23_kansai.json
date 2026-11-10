@@ -302,7 +302,7 @@
    "characters": [
     {
      "id": "plt",
-     "expr": "grin",
+     "expr": "smug",
      "holding": "check"
     }
    ],
@@ -400,6 +400,7 @@
    "characters": [
     {
      "id": "pax",
+     "expr": "bored",
      "holding": "coffee"
     }
    ],
@@ -457,5 +458,6 @@
    "text": "Seawalls protect the island (Typhoon Jebi flooded it in 2018); Kansai is repeatedly ranked among the most punctual airports.",
    "status": "verified"
   }
- ]
+ ],
+ "backdrops": "ai"
 }

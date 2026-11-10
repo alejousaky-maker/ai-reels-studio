@@ -334,7 +334,7 @@ def main():
           "Voice: Kokoro blend `am_eric*0.6+am_fenrir*0.4` at 1.12 (energetic young male, ~3 words/s). Captions on.",
           "Every shot below is one picture; `→` marks a cut inside the sentence on that word.", ""]
     for name, p in PLANS.items():
-        plan = {"version": 1, "lang": "en", "style": "storybook", "graphics": "full", "captions": True, **p,
+        plan = {"version": 1, "lang": "en", "style": "storybook", "graphics": "full", "captions": True, "backdrops": "ai", **p,
                 "verifiedClaims": [{"text": "Comedy fiction about GTA 6 (hypothetical delay / size / price / release-day scenarios); the game, console and studio appear only as generic unbranded props.", "status": "fiction"}]}
         P = Plan.model_validate(plan)
         with open(os.path.join(HERE, name + ".json"), "w", encoding="utf-8") as f:

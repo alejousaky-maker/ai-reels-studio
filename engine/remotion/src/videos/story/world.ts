@@ -2,6 +2,7 @@
 // Sky / sun / fog / two-tone uniforms follow the template's rig (bridge/world.ts); the cast are lit Canvas2D cards
 // drawn by the template's toon.ts; effects are unlit cards. Billboards live on the NOINK layer.
 import * as THREE from "three";
+import { delayRender, continueRender, staticFile } from "remotion";
 import { Kit, Ray, V, kitClone } from "../bridge/build";
 import { cloudHD, ctex } from "../bridge/paint";
 import { Pen, bodyFront, bodySide, fxBurst, fxStars, fxPuff, fxNote, fxShadow, fxContact, FrontOpts, SideOpts, Outfit, INK } from "../bridge/toon";
@@ -157,7 +158,39 @@ export class StoryWorld {
       m.position.set(Math.cos(a) * d, 120 + (i % 4) * 38, Math.sin(a) * d); m.scale.set(w, w / 2, 1); m.layers.set(NOINK);
       this.clouds.push(m); R.add(m);
     }
-    this.info = buildEnv(R, kit, { ...(sb.scenes[sceneIdx]?.env ?? sb.env), lite }, sightLines(sb, sceneIdx));
+    const scn = sb.scenes[sceneIdx];
+    if (scn?.backdrop) {
+      // AI-painted backdrop (ComfyUI / FLUX, generated per scene by the pipeline): a big card behind the subject, square to the
+      // scene's opening view, sized with a margin for camera moves; an invisible ground only catches the cast's shadows
+      this.info = { lanterns: [] };
+      const c0 = camAt(scn, scn.startFrame), P0 = V(...c0.pos), L0 = V(...c0.look);
+      const dir = L0.clone().sub(P0); dir.y = 0; const dist = dir.length() || 1; dir.normalize();
+      const BD = 9 + 0.6 * dist, D = dist + BD;
+      const h = 2 * Math.tan((c0.fov * Math.PI) / 360) * D * 2.0, w = h * (sb.width / sb.height) * 1.25;
+      const plane = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ color: new THREE.Color(0.94, 0.94, 0.94), fog: false, toneMapped: true }));
+      // the painting's floor line (~38 % up from the bottom: prompts ask for open floor in the lower third) sits on y = 0
+      const V0 = 0.38;
+      // seen from the lens, the subject's feet (ground at the look point) project onto the backdrop at yFeet: put the painted floor line there
+      // (only when the feet are in the frame: close-ups keep the painting centred, it is blurred behind the face anyway)
+      const yFeet = dist > 4.5 ? P0.y - P0.y * (D / dist) : P0.y - (0.5 - V0) * h * 0.85;
+      plane.position.set(L0.x + dir.x * BD, yFeet + (0.5 - V0) * h, L0.z + dir.z * BD);
+      plane.rotation.y = Math.atan2(-dir.x, -dir.z); plane.layers.set(NOINK); plane.renderOrder = -0.5;
+      R.add(plane);
+      // a skirt under the painting that continues its bottom edge colours (cranes / tilts that look down never see past it)
+      const skirtG = new THREE.PlaneGeometry(w, 2 * h), suv = skirtG.attributes.uv as THREE.BufferAttribute;
+      for (let i = 0; i < suv.count; i++) suv.setY(i, suv.getY(i) > 0.5 ? 0.012 : 0.0);
+      const skirt = new THREE.Mesh(skirtG, plane.material); skirt.rotation.y = plane.rotation.y; skirt.layers.set(NOINK);
+      skirt.position.copy(plane.position); skirt.position.y -= 1.5 * h - 0.01; R.add(skirt);
+      const handle = delayRender(`backdrop ${scn.backdrop}`);
+      new THREE.TextureLoader().load(staticFile(scn.backdrop), (tex) => {
+        tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 8;
+        (plane.material as THREE.MeshBasicMaterial).map = tex; (plane.material as THREE.MeshBasicMaterial).needsUpdate = true;
+        continueRender(handle);
+      }, undefined, () => continueRender(handle));
+      const catcher = new THREE.Mesh(new THREE.PlaneGeometry(400, 400).rotateX(-Math.PI / 2), new THREE.ShadowMaterial({ opacity: 0.28, depthWrite: false }));
+      catcher.receiveShadow = true; catcher.position.y = 0.005; catcher.layers.set(NOINK); R.add(catcher);
+      this.sky.visible = false; this.sunDisc.visible = false;
+    } else this.info = buildEnv(R, kit, { ...(scn?.env ?? sb.env), lite }, sightLines(sb, sceneIdx));
     // warm light pools on the ground under every lamp (night only): additive, unlit, no ink
     const poolTex = ctex("lampPool", 256, 256, (g) => {
       const gr = g.createRadialGradient(128, 128, 0, 128, 128, 128);
@@ -258,7 +291,7 @@ export class StoryWorld {
     this.sky.position.copy(cam.position);
     untone(L.fog, this.fog.color); this.fog.near = L.fogNear; this.fog.far = L.fogFar;
     scene.fog = this.fog; scene.background = null;
-    this.sunDisc.visible = s.light === "golden";
+    this.sunDisc.visible = s.light === "golden" && !s.backdrop;
     if (this.sunDisc.visible) {
       this.sunDisc.position.copy(cam.position).addScaledVector(sunDir, 900);
       this.sunDisc.scale.setScalar(2 * 900 * Math.tan(THREE.MathUtils.degToRad(1.7)));

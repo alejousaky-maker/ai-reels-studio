@@ -14,9 +14,9 @@ Figures corrected to documented facts where the brief overstated them (see verif
 7. *tunnel · wide · day · crane_up · dissolve* — “Fast forward billions of dollars later: they finally open three shiny new stations, about two miles of track.” — pax (stand, starry) → **three**: low
 8. *tunnel · medium · day · follow · HUD panel* — “That means every single step you walk underground cost roughly a million dollars.” — pax (walk, neutral, ticket)
 9. *tunnel · wide · day · truck_left* — “For that money, you could buy every daily rider a brand new car, and still have cash left for a private island.” — pax (point, grin) → **private**: close
-10. *tunnel · medium · night · push* — “So why did it cost so much? Consultants, special contracts, and hiring six guys to watch one guy hold a shovel.” — acc (shrug, nervous) → **Consultants**: close → **six**: wide
+10. *tunnel · medium · night · push* — “So why did it cost so much? Consultants, special contracts, and hiring six guys to watch one guy hold a shovel.” — acc (shrug, smug) → **Consultants**: close → **six**: wide
 11. *office · medium · day · push · zoom* — “And the best part? Phase two is still years from finished, which means the budget is about to enter orbit.” — eng (point, grin) → **budget**: worm
-12. *tunnel · medium · day · pull* — “Congratulations, you've just built the most expensive hole in human history.” — eng (hips, laugh) → **most**: extreme
+12. *tunnel · medium · day · pull* — “Congratulations, you've just built the most expensive hole in human history.” — eng (hips, proud) → **most**: extreme
 13. *shops · high · golden · crane_up · dissolve* — “Send this to that friend who complains about his local train ticket price.” — no cast
 14. *shops · wide · night · dissolve · HUD outro* — “Hit follow for more engineering disasters.” — no cast
 
@@ -24,7 +24,7 @@ Figures corrected to documented facts where the brief overstated them (see verif
 
 1. *bridge · wide · day · push · HUD manhattan* — “How do you feed a city of eight million people when its heart is an island with zero farms? You don't. You pray the trucks don't stop.” — no cast → **You**: medium → **pray**: extreme
 2. *bridge · wide · night · truck_right · whip* — “Every single morning, thousands of massive eighteen-wheelers converge on New York City before dawn, carrying millions of pounds of food.” — no cast → **converge**: wide
-3. *kitchen · medium · day · push · dissolve* — “If you run a restaurant in Times Square, your entire menu depends on a single truck crawling across the George Washington Bridge.” — chef (stand, sweat) → **single**: wide @ bridge → **George**: extreme @ kitchen
+3. *kitchen · medium · day · push · dissolve* — “If you run a restaurant in Times Square, your entire menu depends on a single truck crawling across the George Washington Bridge.” — chef (stand, scared) → **single**: wide @ bridge → **George**: extreme @ kitchen
 4. *street · wide · day · truck_right · dissolve · sepia* — “Manhattan was laid out in eighteen eleven for horse-drawn carriages, not eighty-foot trucks trying to deliver fifty crates of avocados.” — no cast → **eighty**: wide @ shops → **avocados**: close
 5. *shops · medium · day · follow* — “Delivery drivers have to invent new laws of physics just to double-park without getting towed in thirty seconds.” — drv (run, sweat, box) → **double**: two_shot → **thirty**: extreme
 6. *warehouse · wide · day · truck_left · zoom* — “By six in the morning, the Hunts Point Market in the Bronx turns into a synchronized war zone of forklifts and crates.” — stk (march, stern) → **war**: wide
@@ -64,9 +64,9 @@ Figures corrected to documented facts where the brief overstated them (see verif
 6. *island · medium · day · push · HUD bar* — “Instead of settling slightly, the island kept sinking, year after year, way faster than predicted.” — eng (stand, sweat) → **year**: extreme → **faster**: dutch
 7. *airport · wide · day · truck_right · zoom* — “To keep the terminal from flooding, engineers put hydraulic jacks under the building to lift it up by hand.” — eng (stand, stern, wrench) → **lift**: close
 8. *island · wide · night · whip* — “They surrounded the island with massive seawalls and armor blocks to stop typhoons from washing it away.” — no cast → **typhoons**: low
-9. *office · medium · day · push* — “Pumping billions of dollars into keeping an airport above water is the ultimate engineering flex.” — plt (stand, grin, check) → **ultimate**: extreme
+9. *office · medium · day · push* — “Pumping billions of dollars into keeping an airport above water is the ultimate engineering flex.” — plt (stand, smug, check) → **ultimate**: extreme
 10. *airport · wide · day · follow · dissolve* — “Despite sinking into the abyss, Kansai is still one of the most punctual airports on Earth.” — pax (walk, smile, suitcase)
 11. *island · wide · day · follow* — “With sea levels rising, engineers are now in a high-stakes race against Neptune himself.” — eng (run, shock)
-12. *airport · medium · day · push* — “Next time your flight is delayed, remember the runway under you is slowly drowning.” — pax (stand, neutral, coffee) → **runway**: close
+12. *airport · medium · day · push* — “Next time your flight is delayed, remember the runway under you is slowly drowning.” — pax (stand, bored, coffee) → **runway**: close
 13. *island · wide · golden · crane_up · dissolve* — “Send this to anyone who loves extreme civil engineering.” — no cast
 14. *shops · wide · night · dissolve · HUD outro* — “Hit follow for more engineering wonders.” — no cast

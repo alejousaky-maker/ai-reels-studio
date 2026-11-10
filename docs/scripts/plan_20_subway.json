@@ -498,7 +498,7 @@
     {
      "id": "acc",
      "action": "shrug",
-     "expr": "nervous"
+     "expr": "smug"
     }
    ],
    "environment": "tunnel",
@@ -511,7 +511,7 @@
       {
        "id": "acc",
        "action": "point",
-       "expr": "stern",
+       "expr": "skeptical",
        "holding": "clipboard"
       }
      ],
@@ -585,7 +585,7 @@
     {
      "id": "eng",
      "action": "hips",
-     "expr": "laugh"
+     "expr": "proud"
     }
    ],
    "fx": [
@@ -657,5 +657,6 @@
    "text": "'A million dollars per step', 'a car for every daily rider' are rounded comic comparisons.",
    "status": "fiction"
   }
- ]
+ ],
+ "backdrops": "ai"
 }

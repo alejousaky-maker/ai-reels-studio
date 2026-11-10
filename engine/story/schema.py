@@ -105,6 +105,8 @@ class SubShot(BaseModel):
     visual: Optional[str] = None
     look: Optional[Literal["sepia", "bw", "cool", "warm"]] = None
     extrasHolding: Optional[Product] = None
+    backdrop: Optional[str] = Field(None, max_length=300)
+    crowd: Optional[bool] = None
 
 
 class Beat(BaseModel):
@@ -132,6 +134,8 @@ class Beat(BaseModel):
     hud: Optional[Hud] = None           # diegetic screen layer: camcorder REC, phone notification, breaking news, map
     hudText: Optional[str] = Field(None, max_length=140)
     look: Optional[Literal["sepia", "bw", "cool", "warm"]] = None   # film look of the shot (sepia = the past)
+    backdrop: Optional[str] = Field(None, max_length=300)   # extra words for the AI-painted backdrop of this shot
+    crowd: Optional[bool] = None   # force background stickmen on / off for this shot (default: only busy public places)
     extrasHolding: Optional[Product] = None
     shots: list[SubShot] = Field(default_factory=list, max_length=6)   # extra cuts inside the sentence, one per clause
 
@@ -182,6 +186,9 @@ class Plan(BaseModel):
     captions: bool = True   # big word-by-word captions (pro Shorts look); the plan / form can switch them off
     # "full" = the Demo A look (default); "simple" = lighter sets, no lens blur/bloom, at most 2 background extras
     graphics: Literal["simple", "full"] = "full"
+    # "ai" = every shot gets a backdrop painted locally by ComfyUI / FLUX (cast, pieces and effects stay 3D on top); "3d" = built sets
+    backdrops: Literal["3d", "ai"] = "3d"
+    crowd: bool = True   # background stickmen strolling / chatting in busy places (shops, streets, stations, bridges...)
 
     def full_text(self) -> str:
         return " ".join(b.narration for b in self.beats)

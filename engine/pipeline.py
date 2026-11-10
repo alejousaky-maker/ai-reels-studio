@@ -224,6 +224,17 @@ def step_storyboard(pid: str, plan: Plan, progress: Progress = _noop) -> dict:
         o = over.get(sc["sceneId"])
         if o:
             sc.update({k: v for k, v in o.items() if k not in ("startFrame", "endFrame", "sceneId")})
+    # AI-painted backdrops (local ComfyUI / FLUX): one image per distinct prompt, cached, copied into the Remotion public folder
+    todo = [sc for sc in sb["scenes"] if sc.get("backdropPrompt")]
+    if todo:
+        from engine import imagegen
+        if not imagegen.available():
+            progress("storyboard", -1, "AI backdrops requested but ComfyUI / FLUX is not installed: using the 3D sets")
+        else:
+            for i, sc in enumerate(todo):
+                progress("backdrops", i / len(todo), f"painting backdrop {i + 1}/{len(todo)}")
+                png = imagegen.generate(sc["backdropPrompt"], int(sc.get("backdropSeed", 7)))
+                sc["backdrop"] = imagegen.publish(png)
     save_json(pdir(pid, "storyboard", "storyboard.json"), sb)
     snapshot(pid, "storyboard", sb)
     info = {"status": "done", "frames": sb["durationInFrames"], "seconds_video": sb["durationInFrames"] / sb["fps"], "scenes": len(sb["scenes"])}
@@ -297,8 +308,10 @@ def _strip_frames(o, base: int):
         for k, v in o.items():
             if k in ("frame", "startFrame", "endFrame") and isinstance(v, (int, float)):
                 r[k] = v - base
-            elif k == "walkFrames" and isinstance(v, list):
+            elif k in ("walkFrames", "moveFrames", "punches") and isinstance(v, list):
                 r[k] = [x - base for x in v]
+            elif k == "talk" and isinstance(v, list):
+                r[k] = [[x - base for x in span] for span in v]
             else:
                 r[k] = _strip_frames(v, base)
         return r
