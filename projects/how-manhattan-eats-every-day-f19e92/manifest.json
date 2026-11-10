@@ -5,26 +5,26 @@
    "status": "done",
    "words": 248,
    "beats": 14,
-   "at": "2026-11-10T15:35:24"
+   "at": "2026-11-10T18:07:57"
   },
   "voice": {
-   "duration": 83.41,
+   "duration": 79.20483333333334,
    "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
-   "seconds": 27.9,
+   "seconds": 28.9,
    "status": "done",
-   "voice": "am_fenrir*0.8+am_eric*0.2",
+   "voice": "am_eric*0.7+am_fenrir*0.3",
    "speed": 1.15,
-   "at": "2026-11-10T15:35:52"
+   "at": "2026-11-10T18:08:28"
   },
   "align": {
    "status": "done",
-   "seconds": 12.9,
+   "seconds": 13.7,
    "method": {
     "whisper": 12,
     "spread": 5
    },
    "model": "faster-whisper base (cpu/int8)",
-   "at": "2026-11-10T15:36:05"
+   "at": "2026-11-10T18:02:20"
   },
   "storyboard": {
    "status": "done",
@@ -160,6 +160,44 @@
   {
    "step": "qa",
    "at": "2026-11-10T15:46:57",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T17:42:28",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T18:01:35",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T18:02:06",
+   "seconds": 31.1,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T18:02:20",
+   "status": "done",
+   "seconds": 13.7
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T18:07:56",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T18:07:57",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T18:08:28",
+   "seconds": 28.9,
    "status": "done"
   }
  ],

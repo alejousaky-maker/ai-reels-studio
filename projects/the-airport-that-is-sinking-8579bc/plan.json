@@ -84,6 +84,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -124,7 +126,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     },
     {
      "at": "swallowing",
@@ -140,7 +144,8 @@
        "expr": "shock",
        "react": null,
        "holding": null,
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -166,7 +171,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -182,7 +189,8 @@
      "expr": "stern",
      "react": null,
      "holding": "pillow",
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 3,
@@ -219,6 +227,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": "pillow",
    "shots": [
     {
@@ -235,7 +245,8 @@
        "expr": "crazy",
        "react": null,
        "holding": "pillow",
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -261,7 +272,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -290,6 +303,8 @@
    "hud": "osaka",
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": []
   },
@@ -305,7 +320,8 @@
      "expr": "grin",
      "react": null,
      "holding": null,
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 0,
@@ -356,6 +372,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -404,7 +422,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -433,6 +453,8 @@
    "hud": "mud",
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": []
   },
@@ -448,7 +470,8 @@
      "expr": "sweat",
      "react": null,
      "holding": null,
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 0,
@@ -470,6 +493,8 @@
    "hud": "bar",
    "hudText": "ISLAND SINKING|0|38|FT",
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -486,7 +511,8 @@
        "expr": "broken",
        "react": null,
        "holding": null,
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -504,7 +530,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     },
     {
      "at": "faster",
@@ -520,7 +548,8 @@
        "expr": "shock",
        "react": null,
        "holding": null,
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -538,7 +567,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -554,7 +585,8 @@
      "expr": "stern",
      "react": null,
      "holding": "wrench",
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 5,
@@ -576,6 +608,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": "wrench",
    "shots": [
     {
@@ -592,7 +626,8 @@
        "expr": "laugh",
        "react": null,
        "holding": "wrench",
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -610,7 +645,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -676,6 +713,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -709,7 +748,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -722,10 +763,11 @@
     {
      "id": "plt",
      "action": "stand",
-     "expr": "grin",
+     "expr": "smug",
      "react": null,
      "holding": "check",
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 0,
@@ -755,6 +797,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -771,7 +815,8 @@
        "expr": "starry",
        "react": null,
        "holding": null,
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -797,7 +842,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -813,7 +860,8 @@
      "expr": "smile",
      "react": null,
      "holding": "suitcase",
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 4,
@@ -850,6 +898,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": "suitcase",
    "shots": []
   },
@@ -865,7 +915,8 @@
      "expr": "shock",
      "react": null,
      "holding": null,
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 0,
@@ -917,6 +968,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": []
   },
@@ -929,10 +982,11 @@
     {
      "id": "pax",
      "action": "stand",
-     "expr": "neutral",
+     "expr": "bored",
      "react": null,
      "holding": "coffee",
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 0,
@@ -954,6 +1008,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -970,7 +1026,8 @@
        "expr": "shock",
        "react": null,
        "holding": "coffee",
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -988,7 +1045,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -1017,6 +1076,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": []
   },
@@ -1045,6 +1106,8 @@
    "hud": "outro",
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": []
   }
@@ -1075,5 +1138,7 @@
  "brand": null,
  "cta": null,
  "captions": true,
- "graphics": "full"
+ "graphics": "full",
+ "backdrops": "ai",
+ "crowd": true
 }

@@ -329,7 +329,7 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                 if cid not in {c["id"] for c in cast}:
                     cast.append({"id": cid, "name": "", "outfit": outfit(role, 31 + k * 3 + len(cast))})
                     scale_of[cid] = 0.72 if role == "kid" else 1.0
-                Dp = 3.8 + 4.5 * h1                              # behind the cast, in front of any painted backdrop
+                Dp = (1.6 + 4.6 * h1) if plan.backdrops == "ai" else (3.8 + 4.5 * h1)   # behind the cast, always in front of a painted backdrop
                 L = (h2 * 2 - 1) * half_w * (1.0 + 0.12 * Dp)
                 if abs(L) < 0.9 and Dp < 5.5:
                     L += 1.6 if L >= 0 else -1.6                  # never hide the lead

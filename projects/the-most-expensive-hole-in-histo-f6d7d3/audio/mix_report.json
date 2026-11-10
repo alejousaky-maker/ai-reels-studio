@@ -1,246 +1,241 @@
 {
- "duration": 80.63333333333334,
+ "duration": 77.33333333333333,
  "sampleRate": 48000,
  "targetLUFS": -14.0,
  "ceilingDBTP": -2.0,
  "measured": {
-  "integratedLUFS": -14.01,
+  "integratedLUFS": -14.0,
   "truePeakDBTP": -2.0,
-  "LRA": 1.7,
-  "maxGainReductionDB": 5.03,
-  "voiceLUFS": -13.78,
-  "musicLUFS": -29.71,
-  "sfxLUFS": -30.34
+  "LRA": 1.06,
+  "maxGainReductionDB": 2.29,
+  "voiceLUFS": -14.07,
+  "musicLUFS": -29.99,
+  "sfxLUFS": -30.9
  },
  "ffmpegEbur128": {
   "I": -14.0,
-  "LRA": 1.7,
+  "LRA": 1.1,
   "truePeak": -2.0
  },
  "musicSections": [
   {
    "start": 0.0,
-   "end": 7.43,
+   "end": 7.3,
    "mood": "upbeat"
   },
   {
-   "start": 7.43,
-   "end": 14.97,
+   "start": 7.3,
+   "end": 14.5,
    "mood": "whimsical"
   },
   {
-   "start": 14.97,
-   "end": 27.3,
+   "start": 14.5,
+   "end": 26.1,
    "mood": "tense"
   },
   {
-   "start": 27.3,
-   "end": 34.83,
+   "start": 26.1,
+   "end": 33.23,
    "mood": "curious"
   },
   {
-   "start": 34.83,
-   "end": 41.07,
+   "start": 33.23,
+   "end": 39.27,
    "mood": "tense"
   },
   {
-   "start": 41.07,
-   "end": 47.37,
+   "start": 39.27,
+   "end": 45.17,
    "mood": "upbeat"
   },
   {
-   "start": 47.37,
-   "end": 51.77,
+   "start": 45.17,
+   "end": 49.27,
    "mood": "curious"
   },
   {
-   "start": 51.77,
-   "end": 64.1,
+   "start": 49.27,
+   "end": 61.23,
    "mood": "whimsical"
   },
   {
-   "start": 64.1,
-   "end": 69.83,
+   "start": 61.23,
+   "end": 66.93,
    "mood": "upbeat"
   },
   {
-   "start": 69.83,
-   "end": 80.63,
+   "start": 66.93,
+   "end": 77.33,
    "mood": "warm"
   }
  ],
  "musicCues": [
   "0.00s section 1: upbeat (118 bpm)",
-  "7.43s section 2: whimsical (108 bpm)",
-  "14.97s section 3: tense (92 bpm)",
-  "27.30s section 4: curious (96 bpm)",
-  "34.83s section 5: tense (92 bpm)",
-  "41.07s section 6: upbeat (118 bpm)",
-  "47.37s section 7: curious (96 bpm)",
-  "51.77s section 8: whimsical (108 bpm)",
-  "64.10s section 9: upbeat (118 bpm)",
-  "69.83s section 10: warm (84 bpm)"
+  "7.30s section 2: whimsical (108 bpm)",
+  "14.50s section 3: tense (92 bpm)",
+  "26.10s section 4: curious (96 bpm)",
+  "33.23s section 5: tense (92 bpm)",
+  "39.27s section 6: upbeat (118 bpm)",
+  "45.17s section 7: curious (96 bpm)",
+  "49.27s section 8: whimsical (108 bpm)",
+  "61.23s section 9: upbeat (118 bpm)",
+  "66.93s section 10: warm (84 bpm)"
  ],
  "sfxCues": [
   {
    "t": 0.0,
    "kind": "bed",
-   "what": "day ambience"
+   "what": "day ambience + crowd"
   },
   {
-   "t": 5.567,
+   "t": 5.3,
    "kind": "product",
    "what": "product coins"
   },
   {
-   "t": 5.567,
+   "t": 5.3,
    "kind": "burst",
    "what": "burst"
   },
   {
-   "t": 6.848,
+   "t": 6.672,
    "kind": "glide",
    "what": "soft camera whoosh"
   },
   {
-   "t": 6.733,
+   "t": 6.533,
    "kind": "sparkle",
    "what": "sparkle"
   },
   {
-   "t": 7.433,
+   "t": 7.3,
    "kind": "bed",
    "what": "day ambience + crowd"
   },
   {
-   "t": 7.313,
+   "t": 7.18,
    "kind": "whoosh",
    "what": "dissolve into b02"
   },
   {
-   "t": 14.967,
-   "kind": "bed",
-   "what": "day ambience"
-  },
-  {
-   "t": 15.433,
-   "kind": "glide",
-   "what": "soft camera whoosh"
-  },
-  {
-   "t": 21.133,
-   "kind": "bed",
-   "what": "night ambience + crowd"
-  },
-  {
-   "t": 20.913,
-   "kind": "whoosh",
-   "what": "zoom into b04"
-  },
-  {
-   "t": 27.3,
-   "kind": "bed",
-   "what": "night ambience"
-  },
-  {
-   "t": 31.408,
-   "kind": "glide",
-   "what": "soft camera whoosh"
-  },
-  {
-   "t": 32.9,
-   "kind": "impact",
-   "what": "impact thump"
-  },
-  {
-   "t": 33.433,
-   "kind": "puff",
-   "what": "puff"
-  },
-  {
-   "t": 34.833,
-   "kind": "bed",
-   "what": "day ambience"
-  },
-  {
-   "t": 41.067,
+   "t": 14.5,
    "kind": "bed",
    "what": "day ambience + crowd"
   },
   {
-   "t": 40.947,
-   "kind": "whoosh",
-   "what": "dissolve into b07"
-  },
-  {
-   "t": 44.633,
-   "kind": "sparkle",
-   "what": "sparkle"
-  },
-  {
-   "t": 47.367,
-   "kind": "bed",
-   "what": "day ambience"
-  },
-  {
-   "t": 51.767,
-   "kind": "bed",
-   "what": "day ambience"
-  },
-  {
-   "t": 57.005,
+   "t": 14.908,
    "kind": "glide",
    "what": "soft camera whoosh"
   },
   {
-   "t": 57.633,
+   "t": 20.233,
+   "kind": "bed",
+   "what": "night ambience + crowd"
+  },
+  {
+   "t": 20.013,
+   "kind": "whoosh",
+   "what": "zoom into b04"
+  },
+  {
+   "t": 26.1,
    "kind": "bed",
    "what": "night ambience"
   },
   {
-   "t": 64.1,
-   "kind": "bed",
-   "what": "day ambience"
+   "t": 30.03,
+   "kind": "glide",
+   "what": "soft camera whoosh"
   },
   {
-   "t": 63.88,
-   "kind": "whoosh",
-   "what": "zoom into b11"
-  },
-  {
-   "t": 69.833,
-   "kind": "bed",
-   "what": "day ambience"
-  },
-  {
-   "t": 72.533,
+   "t": 31.433,
    "kind": "impact",
    "what": "impact thump"
   },
   {
-   "t": 74.0,
+   "t": 31.933,
+   "kind": "puff",
+   "what": "puff"
+  },
+  {
+   "t": 33.233,
    "kind": "bed",
-   "what": "golden ambience"
+   "what": "day ambience"
   },
   {
-   "t": 73.88,
+   "t": 39.267,
+   "kind": "bed",
+   "what": "day ambience + crowd"
+  },
+  {
+   "t": 39.147,
    "kind": "whoosh",
-   "what": "dissolve into b13"
+   "what": "dissolve into b07"
   },
   {
-   "t": 77.867,
+   "t": 42.633,
+   "kind": "sparkle",
+   "what": "sparkle"
+  },
+  {
+   "t": 45.167,
+   "kind": "bed",
+   "what": "day ambience + crowd"
+  },
+  {
+   "t": 49.267,
+   "kind": "bed",
+   "what": "day ambience + crowd"
+  },
+  {
+   "t": 54.182,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 54.767,
    "kind": "bed",
    "what": "night ambience"
   },
   {
-   "t": 77.747,
-   "kind": "whoosh",
-   "what": "dissolve into b14"
+   "t": 61.233,
+   "kind": "bed",
+   "what": "day ambience"
   },
   {
-   "t": 79.247,
-   "kind": "glide",
-   "what": "soft camera whoosh"
+   "t": 61.013,
+   "kind": "whoosh",
+   "what": "zoom into b11"
+  },
+  {
+   "t": 66.933,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 69.567,
+   "kind": "impact",
+   "what": "impact thump"
+  },
+  {
+   "t": 70.933,
+   "kind": "bed",
+   "what": "golden ambience + crowd"
+  },
+  {
+   "t": 70.813,
+   "kind": "whoosh",
+   "what": "dissolve into b13"
+  },
+  {
+   "t": 74.733,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 74.613,
+   "kind": "whoosh",
+   "what": "dissolve into b14"
   }
  ],
  "license": "All music and SFX synthesized locally (numpy/scipy), original; voice from local TTS or user import."

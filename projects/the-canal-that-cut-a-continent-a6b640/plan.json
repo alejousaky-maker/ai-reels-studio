@@ -84,6 +84,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -132,7 +134,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     },
     {
      "at": "either",
@@ -148,7 +152,8 @@
        "expr": "sweat",
        "react": null,
        "holding": null,
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -166,7 +171,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -182,7 +189,8 @@
      "expr": "stern",
      "react": null,
      "holding": "shovel",
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 4,
@@ -227,6 +235,8 @@
    "hud": null,
    "hudText": null,
    "look": "sepia",
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": "shovel",
    "shots": [
     {
@@ -243,7 +253,8 @@
        "expr": "grin",
        "react": null,
        "holding": "shovel",
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -261,7 +272,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -277,7 +290,8 @@
      "expr": "sleepy",
      "react": null,
      "holding": null,
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 0,
@@ -314,6 +328,8 @@
    "hud": null,
    "hudText": null,
    "look": "sepia",
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -330,7 +346,8 @@
        "expr": "shock",
        "react": null,
        "holding": null,
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -363,7 +380,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -379,7 +398,8 @@
      "expr": "shock",
      "react": null,
      "holding": null,
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 0,
@@ -416,6 +436,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -432,7 +454,8 @@
        "expr": "broken",
        "react": null,
        "holding": null,
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -450,7 +473,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -466,7 +491,8 @@
      "expr": "grin",
      "react": null,
      "holding": null,
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 0,
@@ -517,6 +543,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -533,7 +561,8 @@
        "expr": "starry",
        "react": null,
        "holding": null,
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -580,7 +609,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -632,6 +663,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -665,7 +698,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -681,7 +716,8 @@
      "expr": "sweat",
      "react": null,
      "holding": null,
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 0,
@@ -703,6 +739,8 @@
    "hud": "panel",
    "hudText": "CLEARANCE|≈ 3 METERS EACH SIDE!",
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -719,7 +757,8 @@
        "expr": "broken",
        "react": null,
        "holding": null,
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -737,7 +776,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -809,6 +850,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -825,7 +868,8 @@
        "expr": "grin",
        "react": null,
        "holding": null,
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -843,7 +887,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -859,7 +905,8 @@
      "expr": "nervous",
      "react": null,
      "holding": null,
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 0,
@@ -881,6 +928,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -894,18 +943,20 @@
       {
        "id": "cap",
        "action": "stand",
-       "expr": "grin",
+       "expr": "smug",
        "react": null,
        "holding": "cash",
-       "y": null
+       "y": null,
+       "talk": null
       },
       {
        "id": "toll",
        "action": "stand",
-       "expr": "starry",
+       "expr": "love",
        "react": null,
        "holding": null,
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -938,7 +989,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -967,6 +1020,8 @@
    "hud": "world",
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": []
   },
@@ -995,6 +1050,8 @@
    "hud": "panama",
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": []
   },
@@ -1010,7 +1067,8 @@
      "expr": "starry",
      "react": null,
      "holding": null,
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 0,
@@ -1061,6 +1119,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -1077,7 +1137,8 @@
        "expr": "starry",
        "react": null,
        "holding": null,
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -1103,7 +1164,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -1147,6 +1210,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": []
   },
@@ -1175,6 +1240,8 @@
    "hud": "outro",
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": []
   }
@@ -1210,5 +1277,7 @@
  "brand": null,
  "cta": null,
  "captions": true,
- "graphics": "full"
+ "graphics": "full",
+ "backdrops": "ai",
+ "crowd": true
 }

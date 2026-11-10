@@ -28,6 +28,8 @@
    "hud": "manhattan",
    "hudText": "jam",
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -44,7 +46,8 @@
        "expr": "sweat",
        "react": null,
        "holding": null,
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -77,7 +80,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     },
     {
      "at": "pray",
@@ -93,7 +98,8 @@
        "expr": "nervous",
        "react": null,
        "holding": null,
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -111,7 +117,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -169,6 +177,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -223,7 +233,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -236,10 +248,11 @@
     {
      "id": "chef",
      "action": "stand",
-     "expr": "sweat",
+     "expr": "scared",
      "react": null,
      "holding": null,
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 0,
@@ -269,6 +282,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -337,7 +352,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     },
     {
      "at": "George",
@@ -353,7 +370,8 @@
        "expr": "sweat",
        "react": null,
        "holding": null,
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -371,7 +389,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -415,6 +435,8 @@
    "hud": null,
    "hudText": null,
    "look": "sepia",
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -431,7 +453,8 @@
        "expr": "shock",
        "react": null,
        "holding": null,
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -472,7 +495,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     },
     {
      "at": "avocados",
@@ -488,7 +513,8 @@
        "expr": "nervous",
        "react": null,
        "holding": "box",
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -506,7 +532,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -522,7 +550,8 @@
      "expr": "sweat",
      "react": null,
      "holding": "box",
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 0,
@@ -559,6 +588,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -572,18 +603,20 @@
       {
        "id": "cop",
        "action": "point",
-       "expr": "stern",
+       "expr": "angry",
        "react": null,
        "holding": null,
-       "y": null
+       "y": null,
+       "talk": null
       },
       {
        "id": "drv",
        "action": "panic",
-       "expr": "shock",
+       "expr": "scared",
        "react": null,
        "holding": "box",
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -609,7 +642,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     },
     {
      "at": "thirty",
@@ -625,7 +660,8 @@
        "expr": "sweat",
        "react": null,
        "holding": null,
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -643,7 +679,9 @@
      "hudText": "TOW TRUCK|ARRIVES IN 0:30!",
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -659,7 +697,8 @@
      "expr": "stern",
      "react": null,
      "holding": null,
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 3,
@@ -724,6 +763,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -778,7 +819,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -794,7 +837,8 @@
      "expr": "stern",
      "react": null,
      "holding": null,
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 0,
@@ -831,6 +875,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -847,7 +893,8 @@
        "expr": "dazed",
        "react": null,
        "holding": "coffee",
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": 6,
@@ -865,7 +912,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": "coffee"
+     "extrasHolding": "coffee",
+     "backdrop": null,
+     "crowd": null
     },
     {
      "at": "morning",
@@ -881,7 +930,8 @@
        "expr": "dazed",
        "react": null,
        "holding": "coffee",
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -899,7 +949,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -915,7 +967,8 @@
      "expr": "nervous",
      "react": null,
      "holding": "lettuce",
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 0,
@@ -937,6 +990,8 @@
    "hud": "panel",
    "hudText": "DELIVERY WINDOW|00:01",
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -953,7 +1008,8 @@
        "expr": "broken",
        "react": null,
        "holding": null,
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -979,7 +1035,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -995,7 +1053,8 @@
      "expr": "stern",
      "react": null,
      "holding": "box",
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 3,
@@ -1032,6 +1091,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": []
   },
@@ -1047,7 +1108,8 @@
      "expr": "starry",
      "react": null,
      "holding": null,
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 0,
@@ -1077,6 +1139,8 @@
    "hud": "panel",
    "hudText": "EVERY DAY|BILLIONS OF CALORIES!",
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": []
   },
@@ -1092,7 +1156,8 @@
      "expr": "nervous",
      "react": null,
      "holding": null,
-     "y": 1.7
+     "y": 1.7,
+     "talk": null
     }
    ],
    "extras": 0,
@@ -1129,6 +1194,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -1145,7 +1212,8 @@
        "expr": "sweat",
        "react": null,
        "holding": null,
-       "y": 1.7
+       "y": 1.7,
+       "talk": null
       }
      ],
      "extras": null,
@@ -1163,7 +1231,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -1179,7 +1249,8 @@
      "expr": "starry",
      "react": null,
      "holding": "bagel",
-     "y": null
+     "y": null,
+     "talk": null
     }
    ],
    "extras": 0,
@@ -1201,6 +1272,8 @@
    "hud": null,
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": [
     {
@@ -1217,7 +1290,8 @@
        "expr": "laugh",
        "react": null,
        "holding": "bagel",
-       "y": null
+       "y": null,
+       "talk": null
       }
      ],
      "extras": null,
@@ -1243,7 +1317,9 @@
      "hudText": null,
      "visual": null,
      "look": null,
-     "extrasHolding": null
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
     }
    ]
   },
@@ -1272,6 +1348,8 @@
    "hud": "manhattan",
    "hudText": "night",
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": []
   },
@@ -1300,6 +1378,8 @@
    "hud": "outro",
    "hudText": null,
    "look": null,
+   "backdrop": null,
+   "crowd": null,
    "extrasHolding": null,
    "shots": []
   }

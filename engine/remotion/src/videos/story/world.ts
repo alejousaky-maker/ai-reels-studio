@@ -4,7 +4,7 @@
 import * as THREE from "three";
 import { delayRender, continueRender, staticFile } from "remotion";
 import { Kit, Ray, V, kitClone } from "../bridge/build";
-import { cloudHD, ctex } from "../bridge/paint";
+import { cloudHD, ctex, rep } from "../bridge/paint";
 import { Pen, bodyFront, bodySide, fxBurst, fxStars, fxPuff, fxNote, fxShadow, fxContact, FrontOpts, SideOpts, Outfit, INK } from "../bridge/toon";
 import { TONE, CHAR, untone } from "../bridge/shade";
 import { NOINK } from "../bridge/ink";
@@ -160,37 +160,45 @@ export class StoryWorld {
     }
     const scn = sb.scenes[sceneIdx];
     if (scn?.backdrop) {
-      // AI-painted backdrop (ComfyUI / FLUX, generated per scene by the pipeline): a big card behind the subject, square to the
-      // scene's opening view, sized with a margin for camera moves; an invisible ground only catches the cast's shadows
+      // AI-painted backdrop (ComfyUI / FLUX, generated per scene by the pipeline) + a REAL floor: everyone (lead, crowd, cars,
+      // props) stands on solid 3D ground tinted like the painting's own floor; the painting is the far background and its
+      // floor line (~38 % up from the bottom, prompts ask for open floor in the lower third) meets the 3D floor at y = 0
       this.info = { lanterns: [] };
       const c0 = camAt(scn, scn.startFrame), P0 = V(...c0.pos), L0 = V(...c0.look);
       const dir = L0.clone().sub(P0); dir.y = 0; const dist = dir.length() || 1; dir.normalize();
-      const BD = 9 + 0.6 * dist, D = dist + BD;
-      const h = 2 * Math.tan((c0.fov * Math.PI) / 360) * D * 2.0, w = h * (sb.width / sb.height) * 1.25;
+      const BD = 9.5 + 0.3 * dist, D = dist + BD, V0 = 0.38;
+      const h = 2 * Math.tan((c0.fov * Math.PI) / 360) * D * 1.9, w = h * (sb.width / sb.height);
+      const yaw = Math.atan2(-dir.x, -dir.z);
       const plane = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ color: new THREE.Color(0.94, 0.94, 0.94), fog: false, toneMapped: true }));
-      // the painting's floor line (~38 % up from the bottom: prompts ask for open floor in the lower third) sits on y = 0
-      const V0 = 0.38;
-      // seen from the lens, the subject's feet (ground at the look point) project onto the backdrop at yFeet: put the painted floor line there
-      // (only when the feet are in the frame: close-ups keep the painting centred, it is blurred behind the face anyway)
-      const yFeet = dist > 4.5 ? P0.y - P0.y * (D / dist) : P0.y - (0.5 - V0) * h * 0.85;
-      plane.position.set(L0.x + dir.x * BD, yFeet + (0.5 - V0) * h, L0.z + dir.z * BD);
-      plane.rotation.y = Math.atan2(-dir.x, -dir.z); plane.layers.set(NOINK); plane.renderOrder = -0.5;
+      plane.position.set(L0.x + dir.x * BD, (0.5 - V0) * h, L0.z + dir.z * BD);
+      plane.rotation.y = yaw; plane.layers.set(NOINK); plane.renderOrder = -0.5;
       R.add(plane);
-      // a skirt under the painting that continues its bottom edge colours (cranes / tilts that look down never see past it)
-      const skirtG = new THREE.PlaneGeometry(w, 2 * h), suv = skirtG.attributes.uv as THREE.BufferAttribute;
-      for (let i = 0; i < suv.count; i++) suv.setY(i, suv.getY(i) > 0.5 ? 0.012 : 0.0);
-      const skirt = new THREE.Mesh(skirtG, plane.material); skirt.rotation.y = plane.rotation.y; skirt.layers.set(NOINK);
-      skirt.position.copy(plane.position); skirt.position.y -= 1.5 * h - 0.01; R.add(skirt);
+      // the floor: a lit, shadow-receiving ground from behind the lens to the painting, with a soft paving grain
+      const grain = ctex("bdFloorGrain", 512, 512, (g, r) => {
+        g.fillStyle = "#ffffff"; g.fillRect(0, 0, 512, 512);
+        for (let i = 0; i < 700; i++) { g.fillStyle = `rgba(${r() < 0.5 ? "255,255,255" : "40,30,40"},${0.03 + r() * 0.05})`; g.fillRect(r() * 512, r() * 512, 3 + r() * 14, 2 + r() * 6); }
+        g.strokeStyle = "rgba(40,30,40,0.08)"; g.lineWidth = 3; for (let k = 0; k <= 512; k += 128) { g.beginPath(); g.moveTo(0, k); g.lineTo(512, k); g.stroke(); g.beginPath(); g.moveTo(k, 0); g.lineTo(k, 512); g.stroke(); }
+      });
+      const depth = BD + dist + 30;
+      const floorMat = new THREE.MeshLambertMaterial({ map: rep(grain, w / 6, depth / 6), color: new THREE.Color("#9a948a") });
+      const floor = new THREE.Mesh(new THREE.PlaneGeometry(w * 1.2, depth).rotateX(-Math.PI / 2), floorMat);
+      floor.rotation.y = yaw; floor.position.set(L0.x + dir.x * (BD - depth / 2), 0, L0.z + dir.z * (BD - depth / 2));
+      floor.receiveShadow = true; R.add(floor);
       const handle = delayRender(`backdrop ${scn.backdrop}`);
       new THREE.TextureLoader().load(staticFile(scn.backdrop), (tex) => {
         tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 8;
         (plane.material as THREE.MeshBasicMaterial).map = tex; (plane.material as THREE.MeshBasicMaterial).needsUpdate = true;
+        // tint the 3D floor with the painting's own floor colour (average just below its floor line)
+        try {
+          const img = tex.image as HTMLImageElement, cv = document.createElement("canvas"); cv.width = 64; cv.height = 64;
+          const g = cv.getContext("2d")!; g.drawImage(img, 0, 0, 64, 64);
+          const d = g.getImageData(0, Math.round((1 - V0) * 64) + 2, 64, 10).data;
+          let rr = 0, gg = 0, bb = 0; for (let k = 0; k < d.length; k += 4) { rr += d[k]; gg += d[k + 1]; bb += d[k + 2]; }
+          const n = d.length / 4; floorMat.color.setRGB(rr / n / 255, gg / n / 255, bb / n / 255, THREE.SRGBColorSpace);
+        } catch { /* keep the neutral floor */ }
         continueRender(handle);
       }, undefined, () => continueRender(handle));
-      const catcher = new THREE.Mesh(new THREE.PlaneGeometry(400, 400).rotateX(-Math.PI / 2), new THREE.ShadowMaterial({ opacity: 0.28, depthWrite: false }));
-      catcher.receiveShadow = true; catcher.position.y = 0.005; catcher.layers.set(NOINK); R.add(catcher);
-      this.sky.visible = false; this.sunDisc.visible = false;
-    } else this.info = buildEnv(R, kit, { ...(scn?.env ?? sb.env), lite }, sightLines(sb, sceneIdx));
+      this.sky.visible = false; this.sunDisc.visible = false;    } else this.info = buildEnv(R, kit, { ...(scn?.env ?? sb.env), lite }, sightLines(sb, sceneIdx));
     // warm light pools on the ground under every lamp (night only): additive, unlit, no ink
     const poolTex = ctex("lampPool", 256, 256, (g) => {
       const gr = g.createRadialGradient(128, 128, 0, 128, 128, 128);

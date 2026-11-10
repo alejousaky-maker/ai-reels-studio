@@ -5,7 +5,7 @@
    "status": "done",
    "words": 230,
    "beats": 14,
-   "at": "2026-11-10T15:46:58"
+   "at": "2026-11-10T18:07:57"
   },
   "voice": {
    "duration": 79.6415625,
@@ -157,6 +157,16 @@
   {
    "step": "qa",
    "at": "2026-11-10T15:57:56",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T17:42:28",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T18:07:57",
    "status": "done"
   }
  ],

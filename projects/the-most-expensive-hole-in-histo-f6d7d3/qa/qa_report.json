@@ -1,12 +1,12 @@
 {
- "video": "C:\\Users\\felip\\AI-Reels-Studio\\projects\\the-most-expensive-hole-in-histo-f6d7d3\\output\\the-most-expensive-hole-in-history_master_v1.mp4",
+ "video": "C:\\Users\\felip\\AI-Reels-Studio\\projects\\the-most-expensive-hole-in-histo-f6d7d3\\output\\the-most-expensive-hole-in-history_master_v2.mp4",
  "probe": {
   "width": 1440,
   "height": 2560,
   "fps": 30.0,
-  "videoSeconds": 80.633333,
-  "audioSeconds": 80.633333,
-  "sizeMB": 112.69
+  "videoSeconds": 77.333333,
+  "audioSeconds": 77.333333,
+  "sizeMB": 124.06
  },
  "checks": [
   {
@@ -30,7 +30,7 @@
   {
    "check": "duration",
    "ok": true,
-   "detail": "video 80.633 s, storyboard 80.633 s",
+   "detail": "video 77.333 s, storyboard 77.333 s",
    "blocking": true
   },
   {
@@ -48,7 +48,7 @@
   {
    "check": "A/V length match",
    "ok": true,
-   "detail": "audio 80.633 s vs video 80.633 s",
+   "detail": "audio 77.333 s vs video 77.333 s",
    "blocking": true
   },
   {
@@ -66,7 +66,7 @@
   {
    "check": "no frozen holds >= 1.5 s",
    "ok": true,
-   "detail": "1 freeze(s) >= 0.6 s: [(78.6, None)]",
+   "detail": "1 freeze(s) >= 0.6 s: [(75.466667, None)]",
    "blocking": false
   },
   {
@@ -78,7 +78,7 @@
   {
    "check": "true peak <= -1 dBTP",
    "ok": true,
-   "detail": "true peak -1.9 dBTP",
+   "detail": "true peak -1.5 dBTP",
    "blocking": true
   },
   {
@@ -95,300 +95,301 @@
   },
   {
    "check": "day exposure (heuristic)",
-   "ok": true,
-   "detail": "median luma of day scenes 0.627, reference ~0.57 (range 0.5-0.66)",
+   "ok": false,
+   "detail": "median luma of day scenes 0.670, reference ~0.57 (range 0.5-0.66)",
    "blocking": false
   },
   {
    "check": "no crushed blacks (heuristic)",
    "ok": false,
-   "detail": "scenes with p5 luma < 0.04: ['b01a', 'b01c', 'b02a', 'b03', 'b03b', 'b06', 'b06a', 'b09a', 'b12a']",
+   "detail": "scenes with p5 luma < 0.04: ['b01a', 'b01c', 'b02a', 'b03', 'b03b', 'b06', 'b06a', 'b09a', 'b12', 'b12a', 'b13']",
    "blocking": false
   }
  ],
  "blocking": [],
  "warnings": [
-  "no crushed blacks (heuristic): scenes with p5 luma < 0.04: ['b01a', 'b01c', 'b02a', 'b03', 'b03b', 'b06', 'b06a', 'b09a', 'b12a']"
+  "day exposure (heuristic): median luma of day scenes 0.670, reference ~0.57 (range 0.5-0.66)",
+  "no crushed blacks (heuristic): scenes with p5 luma < 0.04: ['b01a', 'b01c', 'b02a', 'b03', 'b03b', 'b06', 'b06a', 'b09a', 'b12', 'b12a', 'b13']"
  ],
  "technicalPass": true,
  "loudness": {
   "I": -14.0,
-  "TP": -1.9
+  "TP": -1.5
  },
  "sceneStats": [
   {
    "scene": "b01",
-   "t": 1.0,
+   "t": 0.93,
    "light": "day",
-   "medianLuma": 0.576,
-   "p5Luma": 0.061,
-   "p95Luma": 0.897,
-   "satMean": 0.411
+   "medianLuma": 0.698,
+   "p5Luma": 0.046,
+   "p95Luma": 0.92,
+   "satMean": 0.504
   },
   {
    "scene": "b01a",
-   "t": 3.4,
+   "t": 3.27,
    "light": "day",
-   "medianLuma": 0.708,
+   "medianLuma": 0.59,
    "p5Luma": 0.031,
-   "p95Luma": 0.895,
-   "satMean": 0.536
+   "p95Luma": 0.945,
+   "satMean": 0.54
   },
   {
    "scene": "b01b",
-   "t": 5.67,
+   "t": 5.47,
    "light": "day",
-   "medianLuma": 0.55,
-   "p5Luma": 0.042,
-   "p95Luma": 0.903,
-   "satMean": 0.448
+   "medianLuma": 0.68,
+   "p5Luma": 0.044,
+   "p95Luma": 0.914,
+   "satMean": 0.522
   },
   {
    "scene": "b01c",
-   "t": 6.97,
+   "t": 6.8,
    "light": "day",
-   "medianLuma": 0.742,
-   "p5Luma": 0.027,
-   "p95Luma": 0.867,
-   "satMean": 0.601
+   "medianLuma": 0.089,
+   "p5Luma": 0.029,
+   "p95Luma": 0.835,
+   "satMean": 0.492
   },
   {
    "scene": "b02",
-   "t": 9.9,
+   "t": 9.67,
    "light": "day",
-   "medianLuma": 0.65,
-   "p5Luma": 0.045,
-   "p95Luma": 0.961,
-   "satMean": 0.307
+   "medianLuma": 0.701,
+   "p5Luma": 0.081,
+   "p95Luma": 0.964,
+   "satMean": 0.328
   },
   {
    "scene": "b02a",
-   "t": 13.67,
+   "t": 13.27,
    "light": "day",
-   "medianLuma": 0.508,
-   "p5Luma": 0.026,
-   "p95Luma": 0.911,
-   "satMean": 0.324
+   "medianLuma": 0.412,
+   "p5Luma": 0.029,
+   "p95Luma": 0.963,
+   "satMean": 0.355
   },
   {
    "scene": "b03",
-   "t": 15.63,
+   "t": 15.07,
    "light": "day",
-   "medianLuma": 0.654,
-   "p5Luma": 0.025,
-   "p95Luma": 0.95,
-   "satMean": 0.306
+   "medianLuma": 0.395,
+   "p5Luma": 0.021,
+   "p95Luma": 0.963,
+   "satMean": 0.354
   },
   {
    "scene": "b03a",
-   "t": 17.77,
+   "t": 17.07,
    "light": "day",
-   "medianLuma": 0.538,
-   "p5Luma": 0.235,
-   "p95Luma": 0.958,
-   "satMean": 0.281
+   "medianLuma": 0.482,
+   "p5Luma": 0.05,
+   "p95Luma": 0.959,
+   "satMean": 0.371
   },
   {
    "scene": "b03b",
-   "t": 20.2,
+   "t": 19.37,
    "light": "day",
-   "medianLuma": 0.631,
-   "p5Luma": 0.039,
-   "p95Luma": 0.933,
+   "medianLuma": 0.396,
+   "p5Luma": 0.004,
+   "p95Luma": 0.902,
    "satMean": 0.001
   },
   {
    "scene": "b04",
-   "t": 22.63,
+   "t": 21.63,
    "light": "night",
-   "medianLuma": 0.109,
-   "p5Luma": 0.009,
-   "p95Luma": 0.276,
-   "satMean": 0.763
+   "medianLuma": 0.141,
+   "p5Luma": 0.029,
+   "p95Luma": 0.651,
+   "satMean": 0.826
   },
   {
    "scene": "b04a",
-   "t": 25.7,
+   "t": 24.57,
    "light": "night",
-   "medianLuma": 0.114,
-   "p5Luma": 0.022,
-   "p95Luma": 0.848,
-   "satMean": 0.692
+   "medianLuma": 0.247,
+   "p5Luma": 0.024,
+   "p95Luma": 0.887,
+   "satMean": 0.737
   },
   {
    "scene": "b05",
-   "t": 29.13,
+   "t": 27.87,
    "light": "night",
-   "medianLuma": 0.111,
-   "p5Luma": 0.033,
-   "p95Luma": 0.526,
-   "satMean": 0.766
+   "medianLuma": 0.147,
+   "p5Luma": 0.043,
+   "p95Luma": 0.745,
+   "satMean": 0.733
   },
   {
    "scene": "b05a",
-   "t": 31.57,
+   "t": 30.2,
    "light": "night",
-   "medianLuma": 0.189,
-   "p5Luma": 0.016,
-   "p95Luma": 0.58,
-   "satMean": 0.673
+   "medianLuma": 0.238,
+   "p5Luma": 0.047,
+   "p95Luma": 0.586,
+   "satMean": 0.784
   },
   {
    "scene": "b05b",
-   "t": 33.5,
+   "t": 32.0,
    "light": "night",
-   "medianLuma": 0.239,
-   "p5Luma": 0.023,
-   "p95Luma": 0.857,
-   "satMean": 0.699
+   "medianLuma": 0.365,
+   "p5Luma": 0.027,
+   "p95Luma": 0.868,
+   "satMean": 0.672
   },
   {
    "scene": "b06",
-   "t": 36.0,
+   "t": 34.33,
    "light": "day",
-   "medianLuma": 0.623,
-   "p5Luma": 0.026,
-   "p95Luma": 0.823,
-   "satMean": 0.44
+   "medianLuma": 0.655,
+   "p5Luma": 0.039,
+   "p95Luma": 0.922,
+   "satMean": 0.477
   },
   {
    "scene": "b06a",
-   "t": 37.6,
+   "t": 35.87,
    "light": "day",
-   "medianLuma": 0.627,
+   "medianLuma": 0.719,
    "p5Luma": 0.035,
-   "p95Luma": 0.832,
-   "satMean": 0.433
+   "p95Luma": 0.928,
+   "satMean": 0.43
   },
   {
    "scene": "b06b",
-   "t": 39.57,
+   "t": 37.77,
    "light": "day",
-   "medianLuma": 0.626,
-   "p5Luma": 0.041,
-   "p95Luma": 0.879,
-   "satMean": 0.419
+   "medianLuma": 0.624,
+   "p5Luma": 0.045,
+   "p95Luma": 0.913,
+   "satMean": 0.529
   },
   {
    "scene": "b07",
-   "t": 42.67,
+   "t": 40.77,
    "light": "day",
-   "medianLuma": 0.709,
-   "p5Luma": 0.341,
-   "p95Luma": 0.975,
-   "satMean": 0.141
+   "medianLuma": 0.679,
+   "p5Luma": 0.171,
+   "p95Luma": 0.922,
+   "satMean": 0.229
   },
   {
    "scene": "b07a",
-   "t": 45.8,
+   "t": 43.73,
    "light": "day",
-   "medianLuma": 0.636,
-   "p5Luma": 0.142,
-   "p95Luma": 0.967,
-   "satMean": 0.276
+   "medianLuma": 0.807,
+   "p5Luma": 0.282,
+   "p95Luma": 0.959,
+   "satMean": 0.253
   },
   {
    "scene": "b08",
-   "t": 49.57,
+   "t": 47.2,
    "light": "day",
-   "medianLuma": 0.663,
-   "p5Luma": 0.115,
-   "p95Luma": 0.975,
-   "satMean": 0.216
+   "medianLuma": 0.771,
+   "p5Luma": 0.104,
+   "p95Luma": 0.941,
+   "satMean": 0.357
   },
   {
    "scene": "b09",
-   "t": 54.2,
+   "t": 51.57,
    "light": "day",
-   "medianLuma": 0.684,
-   "p5Luma": 0.138,
-   "p95Luma": 0.975,
-   "satMean": 0.258
+   "medianLuma": 0.688,
+   "p5Luma": 0.066,
+   "p95Luma": 0.903,
+   "satMean": 0.519
   },
   {
    "scene": "b09a",
-   "t": 57.13,
+   "t": 54.3,
    "light": "day",
-   "medianLuma": 0.263,
-   "p5Luma": 0.031,
-   "p95Luma": 0.936,
-   "satMean": 0.506
+   "medianLuma": 0.67,
+   "p5Luma": 0.033,
+   "p95Luma": 0.927,
+   "satMean": 0.578
   },
   {
    "scene": "b10",
-   "t": 58.4,
+   "t": 55.63,
    "light": "night",
-   "medianLuma": 0.103,
-   "p5Luma": 0.019,
-   "p95Luma": 0.454,
-   "satMean": 0.734
+   "medianLuma": 0.178,
+   "p5Luma": 0.041,
+   "p95Luma": 0.803,
+   "satMean": 0.771
   },
   {
    "scene": "b10a",
-   "t": 60.3,
+   "t": 57.57,
    "light": "night",
-   "medianLuma": 0.106,
-   "p5Luma": 0.01,
-   "p95Luma": 0.778,
-   "satMean": 0.696
+   "medianLuma": 0.179,
+   "p5Luma": 0.024,
+   "p95Luma": 0.856,
+   "satMean": 0.688
   },
   {
    "scene": "b10b",
-   "t": 62.73,
+   "t": 59.93,
    "light": "night",
-   "medianLuma": 0.111,
-   "p5Luma": 0.018,
-   "p95Luma": 0.363,
-   "satMean": 0.746
+   "medianLuma": 0.185,
+   "p5Luma": 0.048,
+   "p95Luma": 0.581,
+   "satMean": 0.841
   },
   {
    "scene": "b11",
-   "t": 66.07,
+   "t": 63.2,
    "light": "day",
-   "medianLuma": 0.642,
+   "medianLuma": 0.852,
    "p5Luma": 0.103,
-   "p95Luma": 0.944,
-   "satMean": 0.361
+   "p95Luma": 0.941,
+   "satMean": 0.236
   },
   {
    "scene": "b11a",
-   "t": 68.93,
+   "t": 66.07,
    "light": "day",
-   "medianLuma": 0.595,
-   "p5Luma": 0.052,
-   "p95Luma": 0.815,
-   "satMean": 0.502
+   "medianLuma": 0.821,
+   "p5Luma": 0.065,
+   "p95Luma": 0.94,
+   "satMean": 0.337
   },
   {
    "scene": "b12",
-   "t": 70.77,
+   "t": 67.87,
    "light": "day",
-   "medianLuma": 0.372,
-   "p5Luma": 0.058,
-   "p95Luma": 0.839,
-   "satMean": 0.489
+   "medianLuma": 0.307,
+   "p5Luma": 0.018,
+   "p95Luma": 0.89,
+   "satMean": 0.611
   },
   {
    "scene": "b12a",
-   "t": 72.83,
+   "t": 69.87,
    "light": "day",
-   "medianLuma": 0.549,
-   "p5Luma": 0.028,
-   "p95Luma": 0.849,
-   "satMean": 0.57
+   "medianLuma": 0.089,
+   "p5Luma": 0.029,
+   "p95Luma": 0.866,
+   "satMean": 0.497
   },
   {
    "scene": "b13",
-   "t": 75.93,
+   "t": 72.83,
    "light": "golden",
-   "medianLuma": 0.357,
-   "p5Luma": 0.047,
-   "p95Luma": 0.806,
-   "satMean": 0.583
+   "medianLuma": 0.13,
+   "p5Luma": 0.029,
+   "p95Luma": 0.644,
+   "satMean": 0.831
   },
   {
    "scene": "b14",
-   "t": 79.23,
+   "t": 76.03,
    "light": "night",
    "medianLuma": 0.026,
    "p5Luma": 0.026,
@@ -436,7 +437,7 @@
   {
    "area": "SFX, m\u00fasica y sincron\u00eda",
    "score": null,
-   "basis": "computed loudness -14.0 LUFS / TP -1.9 dBTP; sync and taste need a listen",
+   "basis": "computed loudness -14.0 LUFS / TP -1.5 dBTP; sync and taste need a listen",
    "kind": "auto+human"
   },
   {

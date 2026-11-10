@@ -1,6 +1,6 @@
 # QUALITY REPORT
 
-Video: `the-most-expensive-hole-in-history_master_v1.mp4` · 1440x2560 · 30.00 fps · 80.63 s · 112.69 MB
+Video: `the-most-expensive-hole-in-history_master_v2.mp4` · 1440x2560 · 30.00 fps · 77.33 s · 124.06 MB
 
 **Technical result: PASS** · Approved for delivery: **no — human review pending**
 
@@ -10,54 +10,54 @@ Video: `the-most-expensive-hole-in-history_master_v1.mp4` · 1440x2560 · 30.00 
 | video stream | ✅ | yes | 1 video stream(s), codec h264 |
 | 9:16 ratio | ✅ | yes | 1440x2560 |
 | fps | ✅ | yes | 30.000 fps |
-| duration | ✅ | yes | video 80.633 s, storyboard 80.633 s |
+| duration | ✅ | yes | video 77.333 s, storyboard 77.333 s |
 | single audio track | ✅ | yes | 1 audio stream(s) (a silent extra track means the mux mapped the wrong stream) |
 | AAC 48 kHz | ✅ | yes | aac 48000 Hz 2 ch |
-| A/V length match | ✅ | yes | audio 80.633 s vs video 80.633 s |
+| A/V length match | ✅ | yes | audio 77.333 s vs video 77.333 s |
 | no black spans | ✅ | yes | 0 span(s) [] |
 | no white spans (>0.2 s) | ✅ | yes | 0 span(s) [] — 4-frame flashes are shorter and allowed |
-| no frozen holds >= 1.5 s | ✅ | no | 1 freeze(s) >= 0.6 s: [(78.6, None)] |
+| no frozen holds >= 1.5 s | ✅ | no | 1 freeze(s) >= 0.6 s: [(75.466667, None)] |
 | loudness ~ -14 LUFS | ✅ | no | integrated -14.0 LUFS (target -14, platform normalisation) |
-| true peak <= -1 dBTP | ✅ | yes | true peak -1.9 dBTP |
+| true peak <= -1 dBTP | ✅ | yes | true peak -1.5 dBTP |
 | no long silences | ✅ | no | 0 silence(s) >= 1.2 s: [] |
 | render matches control stills | ✅ | yes | 93 frames compared; mismatches: [] |
-| day exposure (heuristic) | ✅ | no | median luma of day scenes 0.627, reference ~0.57 (range 0.5-0.66) |
-| no crushed blacks (heuristic) | ❌ | no | scenes with p5 luma < 0.04: ['b01a', 'b01c', 'b02a', 'b03', 'b03b', 'b06', 'b06a', 'b09a', 'b12a'] |
+| day exposure (heuristic) | ❌ | no | median luma of day scenes 0.670, reference ~0.57 (range 0.5-0.66) |
+| no crushed blacks (heuristic) | ❌ | no | scenes with p5 luma < 0.04: ['b01a', 'b01c', 'b02a', 'b03', 'b03b', 'b06', 'b06a', 'b09a', 'b12', 'b12a', 'b13'] |
 
 ## Per-scene picture stats (heuristic, vs reference: day median luma ~0.57, p5 ~0.23)
 | scene | t | light | median Y | p5 | p95 | sat |
 |---|---|---|---|---|---|---|
-| b01 | 1.0 | day | 0.576 | 0.061 | 0.897 | 0.411 |
-| b01a | 3.4 | day | 0.708 | 0.031 | 0.895 | 0.536 |
-| b01b | 5.67 | day | 0.55 | 0.042 | 0.903 | 0.448 |
-| b01c | 6.97 | day | 0.742 | 0.027 | 0.867 | 0.601 |
-| b02 | 9.9 | day | 0.65 | 0.045 | 0.961 | 0.307 |
-| b02a | 13.67 | day | 0.508 | 0.026 | 0.911 | 0.324 |
-| b03 | 15.63 | day | 0.654 | 0.025 | 0.95 | 0.306 |
-| b03a | 17.77 | day | 0.538 | 0.235 | 0.958 | 0.281 |
-| b03b | 20.2 | day | 0.631 | 0.039 | 0.933 | 0.001 |
-| b04 | 22.63 | night | 0.109 | 0.009 | 0.276 | 0.763 |
-| b04a | 25.7 | night | 0.114 | 0.022 | 0.848 | 0.692 |
-| b05 | 29.13 | night | 0.111 | 0.033 | 0.526 | 0.766 |
-| b05a | 31.57 | night | 0.189 | 0.016 | 0.58 | 0.673 |
-| b05b | 33.5 | night | 0.239 | 0.023 | 0.857 | 0.699 |
-| b06 | 36.0 | day | 0.623 | 0.026 | 0.823 | 0.44 |
-| b06a | 37.6 | day | 0.627 | 0.035 | 0.832 | 0.433 |
-| b06b | 39.57 | day | 0.626 | 0.041 | 0.879 | 0.419 |
-| b07 | 42.67 | day | 0.709 | 0.341 | 0.975 | 0.141 |
-| b07a | 45.8 | day | 0.636 | 0.142 | 0.967 | 0.276 |
-| b08 | 49.57 | day | 0.663 | 0.115 | 0.975 | 0.216 |
-| b09 | 54.2 | day | 0.684 | 0.138 | 0.975 | 0.258 |
-| b09a | 57.13 | day | 0.263 | 0.031 | 0.936 | 0.506 |
-| b10 | 58.4 | night | 0.103 | 0.019 | 0.454 | 0.734 |
-| b10a | 60.3 | night | 0.106 | 0.01 | 0.778 | 0.696 |
-| b10b | 62.73 | night | 0.111 | 0.018 | 0.363 | 0.746 |
-| b11 | 66.07 | day | 0.642 | 0.103 | 0.944 | 0.361 |
-| b11a | 68.93 | day | 0.595 | 0.052 | 0.815 | 0.502 |
-| b12 | 70.77 | day | 0.372 | 0.058 | 0.839 | 0.489 |
-| b12a | 72.83 | day | 0.549 | 0.028 | 0.849 | 0.57 |
-| b13 | 75.93 | golden | 0.357 | 0.047 | 0.806 | 0.583 |
-| b14 | 79.23 | night | 0.026 | 0.026 | 0.093 | 0.445 |
+| b01 | 0.93 | day | 0.698 | 0.046 | 0.92 | 0.504 |
+| b01a | 3.27 | day | 0.59 | 0.031 | 0.945 | 0.54 |
+| b01b | 5.47 | day | 0.68 | 0.044 | 0.914 | 0.522 |
+| b01c | 6.8 | day | 0.089 | 0.029 | 0.835 | 0.492 |
+| b02 | 9.67 | day | 0.701 | 0.081 | 0.964 | 0.328 |
+| b02a | 13.27 | day | 0.412 | 0.029 | 0.963 | 0.355 |
+| b03 | 15.07 | day | 0.395 | 0.021 | 0.963 | 0.354 |
+| b03a | 17.07 | day | 0.482 | 0.05 | 0.959 | 0.371 |
+| b03b | 19.37 | day | 0.396 | 0.004 | 0.902 | 0.001 |
+| b04 | 21.63 | night | 0.141 | 0.029 | 0.651 | 0.826 |
+| b04a | 24.57 | night | 0.247 | 0.024 | 0.887 | 0.737 |
+| b05 | 27.87 | night | 0.147 | 0.043 | 0.745 | 0.733 |
+| b05a | 30.2 | night | 0.238 | 0.047 | 0.586 | 0.784 |
+| b05b | 32.0 | night | 0.365 | 0.027 | 0.868 | 0.672 |
+| b06 | 34.33 | day | 0.655 | 0.039 | 0.922 | 0.477 |
+| b06a | 35.87 | day | 0.719 | 0.035 | 0.928 | 0.43 |
+| b06b | 37.77 | day | 0.624 | 0.045 | 0.913 | 0.529 |
+| b07 | 40.77 | day | 0.679 | 0.171 | 0.922 | 0.229 |
+| b07a | 43.73 | day | 0.807 | 0.282 | 0.959 | 0.253 |
+| b08 | 47.2 | day | 0.771 | 0.104 | 0.941 | 0.357 |
+| b09 | 51.57 | day | 0.688 | 0.066 | 0.903 | 0.519 |
+| b09a | 54.3 | day | 0.67 | 0.033 | 0.927 | 0.578 |
+| b10 | 55.63 | night | 0.178 | 0.041 | 0.803 | 0.771 |
+| b10a | 57.57 | night | 0.179 | 0.024 | 0.856 | 0.688 |
+| b10b | 59.93 | night | 0.185 | 0.048 | 0.581 | 0.841 |
+| b11 | 63.2 | day | 0.852 | 0.103 | 0.941 | 0.236 |
+| b11a | 66.07 | day | 0.821 | 0.065 | 0.94 | 0.337 |
+| b12 | 67.87 | day | 0.307 | 0.018 | 0.89 | 0.611 |
+| b12a | 69.87 | day | 0.089 | 0.029 | 0.866 | 0.497 |
+| b13 | 72.83 | golden | 0.13 | 0.029 | 0.644 | 0.831 |
+| b14 | 76.03 | night | 0.026 | 0.026 | 0.093 | 0.445 |
 
 ## Rubric (0-10)
 | area | score | basis |
@@ -68,7 +68,7 @@ Video: `the-most-expensive-hole-in-history_master_v1.mp4` · 1440x2560 · 30.00 
 | Contornos / ilustración / materiales | — | pending human review (see checklist) |
 | Iluminación, color y profundidad | — | pending human review (see checklist) |
 | Claridad y naturalidad de la voz | — | pending human review (see checklist) |
-| SFX, música y sincronía | — | computed loudness -14.0 LUFS / TP -1.9 dBTP; sync and taste need a listen |
+| SFX, música y sincronía | — | computed loudness -14.0 LUFS / TP -1.5 dBTP; sync and taste need a listen |
 | Composición vertical y safe areas | — | pending human review (see checklist) |
 | Alineación visual-texto | — | pending human review (see checklist) |
 | Calidad técnica del archivo y licencias | 10 | computed (checks above) |
@@ -86,4 +86,5 @@ Video: `the-most-expensive-hole-in-history_master_v1.mp4` · 1440x2560 · 30.00 
 - [ ] ¿Textos/CTA dentro de las safe areas y legibles?
 
 ## Warnings
-- no crushed blacks (heuristic): scenes with p5 luma < 0.04: ['b01a', 'b01c', 'b02a', 'b03', 'b03b', 'b06', 'b06a', 'b09a', 'b12a']
+- day exposure (heuristic): median luma of day scenes 0.670, reference ~0.57 (range 0.5-0.66)
+- no crushed blacks (heuristic): scenes with p5 luma < 0.04: ['b01a', 'b01c', 'b02a', 'b03', 'b03b', 'b06', 'b06a', 'b09a', 'b12', 'b12a', 'b13']

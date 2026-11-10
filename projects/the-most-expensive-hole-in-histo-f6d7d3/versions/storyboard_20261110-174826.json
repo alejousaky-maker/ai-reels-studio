@@ -1,0 +1,5353 @@
+{
+ "version": 1,
+ "title": "The Most Expensive Hole in History",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 2320,
+ "env": {
+  "preset": "shops",
+  "seed": 71,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "eng",
+   "name": "Engineer",
+   "outfit": {
+    "jacket": "#ff7a1a",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#fdfcf8",
+    "hat": "pith",
+    "cap": "#ffd23f",
+    "vest": "#d7ff3a",
+    "glasses": true
+   }
+  },
+  {
+   "id": "acc",
+   "name": "Accountant",
+   "outfit": {
+    "jacket": "#f2efe8",
+    "pants": "#3a3d47",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#5a3b2a",
+    "tie": "#3f6fb5",
+    "glasses": true
+   }
+  },
+  {
+   "id": "pax",
+   "name": "Passenger",
+   "outfit": {
+    "jacket": "#3a4566",
+    "pants": "#2b2b38",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "tie": "#3f6fb5"
+   }
+  },
+  {
+   "id": "dig",
+   "name": "Digger",
+   "outfit": {
+    "jacket": "#f28c28",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#fdfcf8",
+    "hat": "pith",
+    "cap": "#ffd23f",
+    "pockets": true
+   }
+  },
+  {
+   "id": "old",
+   "name": "1929 commuter",
+   "outfit": {
+    "jacket": "#2f5f6a",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "crowd_shops__0",
+   "name": "",
+   "outfit": {
+    "jacket": "#3a4566",
+    "pants": "#2b2b38",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "tie": "#3f6fb5"
+   }
+  },
+  {
+   "id": "crowd_shops__1",
+   "name": "",
+   "outfit": {
+    "jacket": "#e06a9a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#fdfcf8",
+    "dress": "#e06a9a",
+    "hat": "longhair",
+    "hair": "#5a3b2a"
+   }
+  },
+  {
+   "id": "crowd_shops__2",
+   "name": "",
+   "outfit": {
+    "jacket": "#ff7a59",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#fdfcf8",
+    "dress": "#ff7a59",
+    "hat": "sunhat",
+    "hair": "#2a201a",
+    "shades": true
+   }
+  },
+  {
+   "id": "crowd_shops__3",
+   "name": "",
+   "outfit": {
+    "jacket": "#9a7ac9",
+    "pants": "#3b5b9a",
+    "boots": "#f2efe8",
+    "skin": "#fdfcf8",
+    "hat": "longhair",
+    "hair": "#5a3b2a",
+    "pockets": false
+   }
+  },
+  {
+   "id": "crowd_shops__4",
+   "name": "",
+   "outfit": {
+    "jacket": "#2f5f6a",
+    "pants": "#3b5b9a",
+    "boots": "#f4f1ea",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#e2453c",
+    "build": "kid"
+   }
+  },
+  {
+   "id": "crowd_shops__5",
+   "name": "",
+   "outfit": {
+    "jacket": "#3f6fb5",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "extra0",
+   "name": "",
+   "outfit": {
+    "jacket": "#b5653f",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "extra1",
+   "name": "",
+   "outfit": {
+    "jacket": "#2f5f6a",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "extra2",
+   "name": "",
+   "outfit": {
+    "jacket": "#7b5ac9",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "extra3",
+   "name": "",
+   "outfit": {
+    "jacket": "#c25a7a",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "extra4",
+   "name": "",
+   "outfit": {
+    "jacket": "#d9a441",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "extra5",
+   "name": "",
+   "outfit": {
+    "jacket": "#b5653f",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "extra6",
+   "name": "",
+   "outfit": {
+    "jacket": "#2f5f6a",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "extra7",
+   "name": "",
+   "outfit": {
+    "jacket": "#7b5ac9",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "crowd_street_sepia_0",
+   "name": "",
+   "outfit": {
+    "jacket": "#5d7a3a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#7a4a2a",
+    "dress": "#7b5ac9"
+   }
+  },
+  {
+   "id": "crowd_street_sepia_1",
+   "name": "",
+   "outfit": {
+    "jacket": "#c25a7a",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "crowd_street_sepia_2",
+   "name": "",
+   "outfit": {
+    "jacket": "#5d7a3a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#fdfcf8",
+    "hat": "tophat",
+    "cap": "#2f5f6a"
+   }
+  },
+  {
+   "id": "crowd_street_sepia_3",
+   "name": "",
+   "outfit": {
+    "jacket": "#c25a7a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#7a4a2a",
+    "dress": "#8c3b4a"
+   }
+  },
+  {
+   "id": "crowd_street_sepia_4",
+   "name": "",
+   "outfit": {
+    "jacket": "#5d7a3a",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "crowd_street_sepia_5",
+   "name": "",
+   "outfit": {
+    "jacket": "#c25a7a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#fdfcf8",
+    "hat": "tophat",
+    "cap": "#3f6fb5"
+   }
+  },
+  {
+   "id": "crowd_street_bw_0",
+   "name": "",
+   "outfit": {
+    "jacket": "#3f6fb5",
+    "pants": "#3b5b9a",
+    "boots": "#f4f1ea",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#e2453c",
+    "build": "kid"
+   }
+  },
+  {
+   "id": "crowd_street_bw_1",
+   "name": "",
+   "outfit": {
+    "jacket": "#3a4566",
+    "pants": "#2b2b38",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "tie": "#3f6fb5"
+   }
+  },
+  {
+   "id": "crowd_street_bw_2",
+   "name": "",
+   "outfit": {
+    "jacket": "#3f6fb5",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#fdfcf8",
+    "hat": "tophat",
+    "cap": "#5d7a3a"
+   }
+  },
+  {
+   "id": "crowd_street_bw_3",
+   "name": "",
+   "outfit": {
+    "jacket": "#2f5f6a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#7a4a2a",
+    "dress": "#d9a441"
+   }
+  },
+  {
+   "id": "crowd_street_bw_4",
+   "name": "",
+   "outfit": {
+    "jacket": "#3f6fb5",
+    "pants": "#3b5b9a",
+    "boots": "#f4f1ea",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#e2453c",
+    "build": "kid"
+   }
+  },
+  {
+   "id": "crowd_street_bw_5",
+   "name": "",
+   "outfit": {
+    "jacket": "#3a4566",
+    "pants": "#2b2b38",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "tie": "#3f6fb5"
+   }
+  },
+  {
+   "id": "crowd_tunnel__0",
+   "name": "",
+   "outfit": {
+    "jacket": "#9a7ac9",
+    "pants": "#3b5b9a",
+    "boots": "#f2efe8",
+    "skin": "#fdfcf8",
+    "hat": "longhair",
+    "hair": "#2a201a",
+    "pockets": false
+   }
+  },
+  {
+   "id": "crowd_tunnel__1",
+   "name": "",
+   "outfit": {
+    "jacket": "#3a4566",
+    "pants": "#2b2b38",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "tie": "#3f6fb5"
+   }
+  },
+  {
+   "id": "crowd_tunnel__2",
+   "name": "",
+   "outfit": {
+    "jacket": "#e06a9a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#fdfcf8",
+    "dress": "#e06a9a",
+    "hat": "longhair",
+    "hair": "#2a201a"
+   }
+  },
+  {
+   "id": "crowd_tunnel__3",
+   "name": "",
+   "outfit": {
+    "jacket": "#ff7a59",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#fdfcf8",
+    "dress": "#ff7a59",
+    "hat": "sunhat",
+    "hair": "#2a201a",
+    "shades": true
+   }
+  },
+  {
+   "id": "crowd_tunnel__4",
+   "name": "",
+   "outfit": {
+    "jacket": "#9a7ac9",
+    "pants": "#3b5b9a",
+    "boots": "#f2efe8",
+    "skin": "#fdfcf8",
+    "hat": "longhair",
+    "hair": "#5a3b2a",
+    "pockets": false
+   }
+  },
+  {
+   "id": "crowd_tunnel__5",
+   "name": "",
+   "outfit": {
+    "jacket": "#3a4566",
+    "pants": "#2b2b38",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "tie": "#3f6fb5"
+   }
+  },
+  {
+   "id": "crowd_tunnel__6",
+   "name": "",
+   "outfit": {
+    "jacket": "#ff7a59",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#fdfcf8",
+    "dress": "#ff7a59",
+    "hat": "sunhat",
+    "hair": "#2a201a",
+    "shades": true
+   }
+  },
+  {
+   "id": "crowd_tunnel__7",
+   "name": "",
+   "outfit": {
+    "jacket": "#9a7ac9",
+    "pants": "#3b5b9a",
+    "boots": "#f2efe8",
+    "skin": "#fdfcf8",
+    "hat": "longhair",
+    "hair": "#5a3b2a",
+    "pockets": false
+   }
+  },
+  {
+   "id": "crowd_shops__6",
+   "name": "",
+   "outfit": {
+    "jacket": "#3a4566",
+    "pants": "#2b2b38",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "tie": "#3f6fb5"
+   }
+  },
+  {
+   "id": "crowd_shops__7",
+   "name": "",
+   "outfit": {
+    "jacket": "#e06a9a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#fdfcf8",
+    "dress": "#e06a9a",
+    "hat": "longhair",
+    "hair": "#5a3b2a"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 57,
+   "narration": "If you want to build a subway that costs four and a half billion dollars for just three stations, you don't build transit. You build a gold mine.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": -16.0,
+     "z": 3.2,
+     "expr": "smile",
+     "mode": "stand",
+     "holding": "coffee"
+    },
+    {
+     "castId": "crowd_shops__0",
+     "x": -18.84,
+     "z": -0.829,
+     "expr": "neutral",
+     "walkTo": [
+      -22.04,
+      -0.829
+     ],
+     "walkFrames": [
+      0,
+      57
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__1",
+     "x": -19.404,
+     "z": -2.053,
+     "expr": "smile",
+     "walkTo": [
+      -16.204,
+      -2.053
+     ],
+     "walkFrames": [
+      0,
+      57
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__2",
+     "x": -19.593,
+     "z": -3.363,
+     "expr": "bored",
+     "mode": "stand",
+     "talk": [
+      [
+       6,
+       57
+      ]
+     ]
+    },
+    {
+     "castId": "crowd_shops__3",
+     "x": -19.448,
+     "z": -4.744,
+     "expr": "smile_closed",
+     "walkTo": [
+      -16.248,
+      -4.744
+     ],
+     "walkFrames": [
+      0,
+      57
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__4",
+     "x": -18.4,
+     "z": -1.626,
+     "expr": "nervous",
+     "walkTo": [
+      -21.6,
+      -1.626
+     ],
+     "walkFrames": [
+      0,
+      57
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__5",
+     "x": -18.225,
+     "z": -3.007,
+     "expr": "neutral",
+     "mode": "stand",
+     "talk": [
+      [
+       6,
+       57
+      ]
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      -14.4,
+      1.68,
+      8.8
+     ],
+     "lookAt": [
+      -16,
+      1.38,
+      3.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 0,
+     "position": [
+      -15.04,
+      1.56,
+      6.56
+     ],
+     "lookAt": [
+      -16,
+      1.38,
+      3.2
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 57
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7100,
+   "qualityNotes": "",
+   "backdropPrompt": "a New York street with brick shopfronts, awnings, lit shop windows, street lamps and fire escapes, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71000,
+   "env": {
+    "preset": "shops",
+    "seed": 71,
+    "shop": null,
+    "variant": "open"
+   },
+   "backdrop": "backdrops/ab46ca2874e28bdb.png"
+  },
+  {
+   "sceneId": "b01a",
+   "startFrame": 57,
+   "endFrame": 139,
+   "narration": "If you want to build a subway that costs four and a half billion dollars for just three stations, you don't build transit. You build a gold mine.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": -16.0,
+     "z": 3.2,
+     "expr": "shock",
+     "mode": "stand",
+     "holding": "coffee"
+    },
+    {
+     "castId": "crowd_shops__0",
+     "x": -15.343,
+     "z": -3.88,
+     "expr": "neutral",
+     "walkTo": [
+      -18.543,
+      -3.88
+     ],
+     "walkFrames": [
+      57,
+      139
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__1",
+     "x": -13.515,
+     "z": -0.762,
+     "expr": "smile",
+     "walkTo": [
+      -10.315,
+      -0.762
+     ],
+     "walkFrames": [
+      57,
+      139
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__2",
+     "x": -14.613,
+     "z": -2.143,
+     "expr": "bored",
+     "mode": "stand",
+     "talk": [
+      [
+       63,
+       139
+      ]
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 57,
+     "position": [
+      -16.55,
+      1.62,
+      6.1
+     ],
+     "lookAt": [
+      -16.0,
+      1.5,
+      3.2
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 102,
+     "cut": true,
+     "position": [
+      -15.45,
+      1.62,
+      6.1
+     ],
+     "lookAt": [
+      -16.0,
+      1.5,
+      3.2
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7137,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a New York street with brick shopfronts, awnings, lit shop windows, street lamps and fire escapes, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71000,
+   "env": {
+    "preset": "shops",
+    "seed": 71,
+    "shop": null,
+    "variant": "open"
+   },
+   "textOverlays": [
+    {
+     "text": "$4,500,000,000",
+     "frame": 60,
+     "dur": 76,
+     "position": "top",
+     "style": "title"
+    }
+   ],
+   "backdrop": "backdrops/ab46ca2874e28bdb.png"
+  },
+  {
+   "sceneId": "b01b",
+   "startFrame": 139,
+   "endFrame": 190,
+   "narration": "If you want to build a subway that costs four and a half billion dollars for just three stations, you don't build transit. You build a gold mine.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": -16.0,
+     "z": 3.2,
+     "expr": "shock",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0
+    },
+    {
+     "castId": "crowd_shops__0",
+     "x": -19.049,
+     "z": -2.661,
+     "expr": "neutral",
+     "walkTo": [
+      -22.249,
+      -2.661
+     ],
+     "walkFrames": [
+      139,
+      190
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__1",
+     "x": -18.888,
+     "z": -4.042,
+     "expr": "smile",
+     "walkTo": [
+      -15.688,
+      -4.042
+     ],
+     "walkFrames": [
+      139,
+      190
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__2",
+     "x": -17.943,
+     "z": -0.924,
+     "expr": "bored",
+     "mode": "stand",
+     "talk": [
+      [
+       145,
+       190
+      ]
+     ]
+    },
+    {
+     "castId": "crowd_shops__3",
+     "x": -17.752,
+     "z": -2.305,
+     "expr": "smile_closed",
+     "walkTo": [
+      -14.552,
+      -2.305
+     ],
+     "walkFrames": [
+      139,
+      190
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__4",
+     "x": -17.479,
+     "z": -3.687,
+     "expr": "nervous",
+     "walkTo": [
+      -20.679,
+      -3.687
+     ],
+     "walkFrames": [
+      139,
+      190
+     ],
+     "mode": "stroll"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 139,
+     "position": [
+      -15.1,
+      0.4,
+      6.8
+     ],
+     "lookAt": [
+      -16.0,
+      1.55,
+      3.2
+     ],
+     "fov": 50,
+     "roll": 0.0
+    },
+    {
+     "frame": 139,
+     "position": [
+      -15.1,
+      2.175,
+      6.8
+     ],
+     "lookAt": [
+      -16.0,
+      1.55,
+      3.2
+     ],
+     "fov": 50,
+     "roll": 0.0,
+     "dur": 51
+    }
+   ],
+   "push": 0.0028,
+   "dof": {
+    "cInf": 7,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7174,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a New York street with brick shopfronts, awnings, lit shop windows, street lamps and fire escapes, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71000,
+   "env": {
+    "preset": "shops",
+    "seed": 71,
+    "shop": null,
+    "variant": "open"
+   },
+   "punches": [
+    161
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 159,
+     "dur": 31,
+     "at": [
+      -15.58,
+      2.28,
+      3.2
+     ],
+     "size": 0.42,
+     "product": "coins"
+    },
+    {
+     "kind": "burst",
+     "frame": 159,
+     "dur": 31,
+     "at": [
+      -15.58,
+      2.28,
+      3.2
+     ],
+     "size": 0.8
+    }
+   ],
+   "backdrop": "backdrops/ab46ca2874e28bdb.png"
+  },
+  {
+   "sceneId": "b01c",
+   "startFrame": 190,
+   "endFrame": 219,
+   "narration": "If you want to build a subway that costs four and a half billion dollars for just three stations, you don't build transit. You build a gold mine.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": -16.0,
+     "z": 3.2,
+     "expr": "starry",
+     "mode": "stand"
+    },
+    {
+     "castId": "crowd_shops__0",
+     "x": -14.342,
+     "z": -1.441,
+     "expr": "neutral",
+     "walkTo": [
+      -17.542,
+      -1.441
+     ],
+     "walkFrames": [
+      190,
+      219
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__1",
+     "x": -13.743,
+     "z": -2.823,
+     "expr": "smile",
+     "walkTo": [
+      -10.543,
+      -2.823
+     ],
+     "walkFrames": [
+      190,
+      219
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__2",
+     "x": -13.063,
+     "z": -4.205,
+     "expr": "bored",
+     "mode": "stand",
+     "talk": [
+      [
+       196,
+       219
+      ]
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 190,
+     "position": [
+      -16.18,
+      1.6,
+      4.95
+     ],
+     "lookAt": [
+      -16.0,
+      1.6,
+      3.2
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 190,
+     "position": [
+      -16.108,
+      1.6,
+      4.25
+     ],
+     "lookAt": [
+      -16.0,
+      1.6,
+      3.2
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 29
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 20,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7211,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a New York street with brick shopfronts, awnings, lit shop windows, street lamps and fire escapes, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71000,
+   "hud": {
+    "kind": "spot"
+   },
+   "env": {
+    "preset": "shops",
+    "seed": 71,
+    "shop": null,
+    "variant": "open"
+   },
+   "punches": [
+    192,
+    198
+   ],
+   "fx": [
+    {
+     "kind": "money",
+     "frame": 190,
+     "dur": 29,
+     "at": [
+      -16.0,
+      1.4,
+      3.8
+     ],
+     "size": 3.2
+    },
+    {
+     "kind": "sparkle",
+     "frame": 196,
+     "dur": 23,
+     "at": [
+      -15.855,
+      1.891,
+      3.2
+     ],
+     "size": 0.23445554337723234
+    }
+   ],
+   "backdrop": "backdrops/ab46ca2874e28bdb.png"
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 219,
+   "endFrame": 361,
+   "narration": "It's nineteen twenty-nine, and New York promises commuters a brand new subway line under Second Avenue to fix endless overcrowding.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "old",
+     "x": -0.726,
+     "z": -24.0,
+     "expr": "smile",
+     "mode": "stand",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra0",
+     "x": -1.57,
+     "z": -21.216,
+     "mode": "stand",
+     "expr": "smile",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra1",
+     "x": 0.074,
+     "z": -19.9,
+     "mode": "stand",
+     "expr": "grin",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra2",
+     "x": -1.379,
+     "z": -19.442,
+     "mode": "stand",
+     "expr": "nervous",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra3",
+     "x": 1.374,
+     "z": -21.0,
+     "mode": "stand",
+     "expr": "neutral",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra4",
+     "x": -1.533,
+     "z": -20.87,
+     "mode": "stand",
+     "expr": "laugh",
+     "holding": "newspaper"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 219,
+     "position": [
+      -1.425,
+      2.3,
+      -34.95
+     ],
+     "lookAt": [
+      1.575,
+      1.2,
+      -24.45
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 219,
+     "position": [
+      -4.575,
+      2.3,
+      -34.05
+     ],
+     "lookAt": [
+      -1.575,
+      1.2,
+      -23.55
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 142
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 7101,
+   "qualityNotes": "",
+   "look": "sepia",
+   "backdropPrompt": "a narrow old European street with tall painted townhouses, shuttered windows, laundry lines, cobblestones, bright daylight, clear blue sky with soft clouds, vintage 1920s period details, old sepia photograph mood, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71001,
+   "env": {
+    "preset": "street",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "oldcar",
+     "x": 1.97,
+     "z": -22.58
+    },
+    {
+     "kind": "oldcar",
+     "x": -0.726,
+     "z": -9.4,
+     "moveTo": [
+      -3.726,
+      -9.4
+     ],
+     "moveFrames": [
+      233,
+      346
+     ]
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "1929",
+     "frame": 222,
+     "dur": 136,
+     "position": "top",
+     "style": "title"
+    }
+   ],
+   "backdrop": "backdrops/5af32b738cc285ea.png"
+  },
+  {
+   "sceneId": "b02a",
+   "startFrame": 361,
+   "endFrame": 435,
+   "narration": "It's nineteen twenty-nine, and New York promises commuters a brand new subway line under Second Avenue to fix endless overcrowding.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "old",
+     "x": -0.16,
+     "z": -24.0,
+     "expr": "grin",
+     "mode": "stand",
+     "pose": "point",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra5",
+     "x": -1.76,
+     "z": -21.0,
+     "mode": "stand",
+     "expr": "smile",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra6",
+     "x": 0.64,
+     "z": -19.9,
+     "mode": "stand",
+     "expr": "grin",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra7",
+     "x": -3.06,
+     "z": -18.8,
+     "mode": "stand",
+     "expr": "nervous",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra0",
+     "x": 1.94,
+     "z": -21.0,
+     "mode": "stand",
+     "expr": "neutral",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra1",
+     "x": -4.36,
+     "z": -19.9,
+     "mode": "stand",
+     "expr": "laugh",
+     "holding": "newspaper"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 361,
+     "position": [
+      0.982,
+      1.62,
+      -26.722
+     ],
+     "lookAt": [
+      -0.16,
+      1.5,
+      -24.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 361,
+     "position": [
+      -0.227,
+      1.62,
+      -26.951
+     ],
+     "lookAt": [
+      -0.16,
+      1.5,
+      -24.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 74
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7138,
+   "qualityNotes": "",
+   "sub": true,
+   "look": "sepia",
+   "backdropPrompt": "a narrow old European street with tall painted townhouses, shuttered windows, laundry lines, cobblestones, bright daylight, clear blue sky with soft clouds, vintage 1920s period details, old sepia photograph mood, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71001,
+   "env": {
+    "preset": "street",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "oldcar",
+     "x": 1.97,
+     "z": -22.58
+    },
+    {
+     "kind": "oldcar",
+     "x": -0.16,
+     "z": -9.4,
+     "moveTo": [
+      -3.16,
+      -9.4
+     ],
+     "moveFrames": [
+      368,
+      427
+     ]
+    }
+   ],
+   "backdrop": "backdrops/5af32b738cc285ea.png"
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 435,
+   "endFrame": 470,
+   "narration": "Then the Great Depression hits, World War Two happens, and the project gets quietly buried for nearly a century.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "old",
+     "x": -0.16,
+     "z": -46.0,
+     "expr": "nervous",
+     "mode": "stand"
+    },
+    {
+     "castId": "crowd_street_sepia_0",
+     "x": 1.73,
+     "z": -38.429,
+     "expr": "neutral",
+     "walkTo": [
+      4.93,
+      -38.429
+     ],
+     "walkFrames": [
+      435,
+      470
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_street_sepia_1",
+     "x": 0.983,
+     "z": -41.547,
+     "expr": "smile",
+     "walkTo": [
+      -2.217,
+      -41.547
+     ],
+     "walkFrames": [
+      435,
+      470
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_street_sepia_2",
+     "x": 0.69,
+     "z": -40.166,
+     "expr": "bored",
+     "mode": "stand",
+     "talk": [
+      [
+       441,
+       470
+      ]
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 435,
+     "position": [
+      -0.71,
+      1.62,
+      -48.9
+     ],
+     "lookAt": [
+      -0.16,
+      1.5,
+      -46.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 435,
+     "position": [
+      -0.49,
+      1.572,
+      -47.74
+     ],
+     "lookAt": [
+      -0.16,
+      1.5,
+      -46.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 35
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7102,
+   "qualityNotes": "",
+   "look": "sepia",
+   "backdropPrompt": "a narrow old European street with tall painted townhouses, shuttered windows, laundry lines, cobblestones, bright daylight, clear blue sky with soft clouds, vintage 1920s period details, old sepia photograph mood, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71002,
+   "env": {
+    "preset": "street",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "blueprint",
+     "x": 1.27,
+     "z": -44.78,
+     "label": "SECOND AVE LINE"
+    }
+   ],
+   "backdrop": "backdrops/4fdf67918b66888b.png"
+  },
+  {
+   "sceneId": "b03a",
+   "startFrame": 470,
+   "endFrame": 555,
+   "narration": "Then the Great Depression hits, World War Two happens, and the project gets quietly buried for nearly a century.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "old",
+     "x": -0.347,
+     "z": -46.0,
+     "expr": "shock",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0
+    },
+    {
+     "castId": "crowd_street_sepia_0",
+     "x": -3.634,
+     "z": -39.648,
+     "expr": "neutral",
+     "walkTo": [
+      -0.434,
+      -39.648
+     ],
+     "walkFrames": [
+      470,
+      555
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_street_sepia_1",
+     "x": -4.415,
+     "z": -38.267,
+     "expr": "smile",
+     "walkTo": [
+      -7.615,
+      -38.267
+     ],
+     "walkFrames": [
+      470,
+      555
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_street_sepia_2",
+     "x": -3.214,
+     "z": -41.16,
+     "expr": "bored",
+     "mode": "stand",
+     "talk": [
+      [
+       476,
+       555
+      ]
+     ]
+    },
+    {
+     "castId": "crowd_street_sepia_3",
+     "x": 0.273,
+     "z": -41.006,
+     "expr": "smile_closed",
+     "walkTo": [
+      -2.927,
+      -41.006
+     ],
+     "walkFrames": [
+      470,
+      555
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_street_sepia_4",
+     "x": 0.104,
+     "z": -39.655,
+     "expr": "nervous",
+     "walkTo": [
+      3.304,
+      -39.655
+     ],
+     "walkFrames": [
+      470,
+      555
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_street_sepia_5",
+     "x": 0.441,
+     "z": -42.341,
+     "expr": "neutral",
+     "mode": "stand",
+     "talk": [
+      [
+       476,
+       555
+      ]
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 470,
+     "position": [
+      1.6,
+      1.68,
+      -51.6
+     ],
+     "lookAt": [
+      0.0,
+      1.38,
+      -46
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 516,
+     "cut": true,
+     "position": [
+      -1.6,
+      1.68,
+      -51.6
+     ],
+     "lookAt": [
+      0.0,
+      1.38,
+      -46
+     ],
+     "fov": 38,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7139,
+   "qualityNotes": "",
+   "sub": true,
+   "look": "sepia",
+   "backdropPrompt": "a narrow old European street with tall painted townhouses, shuttered windows, laundry lines, cobblestones, bright daylight, clear blue sky with soft clouds, vintage 1920s period details, old sepia photograph mood, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71002,
+   "hud": {
+    "kind": "news",
+    "text": "WAR!"
+   },
+   "env": {
+    "preset": "street",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "blueprint",
+     "x": 1.27,
+     "z": -44.78,
+     "label": "SECOND AVE LINE"
+    }
+   ],
+   "backdrop": "backdrops/4fdf67918b66888b.png"
+  },
+  {
+   "sceneId": "b03b",
+   "startFrame": 555,
+   "endFrame": 607,
+   "narration": "Then the Great Depression hits, World War Two happens, and the project gets quietly buried for nearly a century.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "old",
+     "x": -0.347,
+     "z": -46.0,
+     "expr": "nervous",
+     "mode": "stand"
+    },
+    {
+     "castId": "crowd_street_bw_0",
+     "x": 1.705,
+     "z": -40.868,
+     "expr": "neutral",
+     "walkTo": [
+      4.905,
+      -40.868
+     ],
+     "walkFrames": [
+      555,
+      607
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_street_bw_1",
+     "x": -0.09,
+     "z": -39.542,
+     "expr": "smile",
+     "walkTo": [
+      -3.29,
+      -39.542
+     ],
+     "walkFrames": [
+      555,
+      607
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_street_bw_2",
+     "x": 0.061,
+     "z": -38.338,
+     "expr": "bored",
+     "mode": "stand",
+     "talk": [
+      [
+       561,
+       607
+      ]
+     ]
+    },
+    {
+     "castId": "crowd_street_bw_3",
+     "x": -0.382,
+     "z": -41.876,
+     "expr": "smile_closed",
+     "walkTo": [
+      -3.582,
+      -41.876
+     ],
+     "walkFrames": [
+      555,
+      607
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_street_bw_4",
+     "x": -0.177,
+     "z": -40.238,
+     "expr": "nervous",
+     "walkTo": [
+      3.023,
+      -40.238
+     ],
+     "walkFrames": [
+      555,
+      607
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_street_bw_5",
+     "x": -0.03,
+     "z": -39.066,
+     "expr": "neutral",
+     "mode": "stand",
+     "talk": [
+      [
+       561,
+       607
+      ]
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 555,
+     "position": [
+      -1.6,
+      1.68,
+      -51.6
+     ],
+     "lookAt": [
+      0.0,
+      1.38,
+      -46
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 555,
+     "position": [
+      -0.96,
+      1.56,
+      -49.36
+     ],
+     "lookAt": [
+      0.0,
+      1.38,
+      -46
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 52
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7176,
+   "qualityNotes": "",
+   "sub": true,
+   "look": "bw",
+   "backdropPrompt": "a narrow old European street with tall painted townhouses, shuttered windows, laundry lines, cobblestones, bright daylight, clear blue sky with soft clouds, old black and white archive photo mood, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71002,
+   "env": {
+    "preset": "street",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "blueprint",
+     "x": 1.424,
+     "z": -44.736,
+     "scale": 1.2,
+     "label": "~CANCELLED"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "dust",
+     "frame": 555,
+     "dur": 52,
+     "at": [
+      -0.347,
+      1.4,
+      -46.6
+     ],
+     "size": 3.2
+    }
+   ],
+   "backdrop": "backdrops/58b7e5882204e877.png"
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 607,
+   "endFrame": 692,
+   "narration": "When they finally restart digging in the two thousands, every single inch of dirt costs more than solid platinum.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "dig",
+     "x": 2.4,
+     "z": -4.0,
+     "expr": "stern",
+     "mode": "stand",
+     "holding": "pickaxe"
+    },
+    {
+     "castId": "extra2",
+     "x": 3.694,
+     "z": -7.144,
+     "mode": "stand",
+     "expr": "smile",
+     "holding": "pickaxe"
+    },
+    {
+     "castId": "extra3",
+     "x": 1.614,
+     "z": -7.868,
+     "mode": "stand",
+     "expr": "grin",
+     "holding": "pickaxe"
+    },
+    {
+     "castId": "extra4",
+     "x": 4.768,
+     "z": -9.463,
+     "mode": "stand",
+     "expr": "nervous",
+     "holding": "pickaxe"
+    },
+    {
+     "castId": "extra5",
+     "x": 1.407,
+     "z": -6.336,
+     "mode": "stand",
+     "expr": "neutral",
+     "holding": "pickaxe"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 607,
+     "position": [
+      1.201,
+      2.3,
+      3.607
+     ],
+     "lookAt": [
+      3.49,
+      1.2,
+      -3.657
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 607,
+     "position": [
+      -0.979,
+      2.3,
+      2.921
+     ],
+     "lookAt": [
+      1.31,
+      1.2,
+      -4.343
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 85
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "zoom",
+   "seed": 7103,
+   "qualityNotes": "",
+   "backdropPrompt": "a subway tunnel under construction with concrete arches, rails, work lamps, pipes and dust, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71000,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "dust",
+     "frame": 648,
+     "dur": 44,
+     "at": [
+      2.46,
+      1.4,
+      -3.403
+     ],
+     "size": 3.2
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "2007",
+     "frame": 610,
+     "dur": 79,
+     "position": "top",
+     "style": "title"
+    }
+   ],
+   "backdrop": "backdrops/96436a990d10517f.png"
+  },
+  {
+   "sceneId": "b04a",
+   "startFrame": 692,
+   "endFrame": 783,
+   "narration": "When they finally restart digging in the two thousands, every single inch of dirt costs more than solid platinum.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "dig",
+     "x": 2.4,
+     "z": -4.0,
+     "expr": "shock",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0,
+     "holding": "pickaxe"
+    },
+    {
+     "castId": "extra6",
+     "x": 3.694,
+     "z": -7.144,
+     "mode": "stand",
+     "expr": "smile",
+     "holding": "pickaxe"
+    },
+    {
+     "castId": "extra7",
+     "x": 1.196,
+     "z": -8.0,
+     "mode": "stand",
+     "expr": "grin",
+     "holding": "pickaxe"
+    },
+    {
+     "castId": "extra0",
+     "x": 4.768,
+     "z": -9.463,
+     "mode": "stand",
+     "expr": "nervous",
+     "holding": "pickaxe"
+    },
+    {
+     "castId": "extra1",
+     "x": 0.012,
+     "z": -6.776,
+     "mode": "stand",
+     "expr": "neutral",
+     "holding": "pickaxe"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 692,
+     "position": [
+      3.236,
+      1.62,
+      -1.169
+     ],
+     "lookAt": [
+      2.4,
+      1.5,
+      -4.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 692,
+     "position": [
+      2.902,
+      1.572,
+      -2.301
+     ],
+     "lookAt": [
+      2.4,
+      1.5,
+      -4.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 91
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7140,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a subway tunnel under construction with concrete arches, rails, work lamps, pipes and dust, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71000,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   },
+   "punches": [
+    714
+   ],
+   "fx": [
+    {
+     "kind": "money",
+     "frame": 712,
+     "dur": 71,
+     "at": [
+      2.46,
+      1.4,
+      -3.403
+     ],
+     "size": 3.2
+    }
+   ],
+   "backdrop": "backdrops/96436a990d10517f.png"
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 783,
+   "endFrame": 889,
+   "narration": "Why? Because underneath the street lies a hundred-year-old maze of mystery pipes, electrical cables, and forgotten steam lines.",
+   "light": "night",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "dig",
+     "x": -2.2,
+     "z": 0.0,
+     "expr": "nervous",
+     "mode": "stand",
+     "pose": "shrug"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 783,
+     "position": [
+      -6.098,
+      1.68,
+      4.328
+     ],
+     "lookAt": [
+      -2.2,
+      1.38,
+      0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 783,
+     "position": [
+      -3.994,
+      1.68,
+      5.541
+     ],
+     "lookAt": [
+      -2.2,
+      1.38,
+      0
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 106
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7104,
+   "qualityNotes": "",
+   "backdropPrompt": "a subway tunnel under construction with concrete arches, rails, work lamps, pipes and dust, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71001,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "pipes",
+     "x": -0.839,
+     "z": -5.444,
+     "scale": 1.2
+    }
+   ],
+   "backdrop": "backdrops/fe30994a13d29ed8.png"
+  },
+  {
+   "sceneId": "b05a",
+   "startFrame": 889,
+   "endFrame": 923,
+   "narration": "Why? Because underneath the street lies a hundred-year-old maze of mystery pipes, electrical cables, and forgotten steam lines.",
+   "light": "night",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "dig",
+     "x": -2.2,
+     "z": 0.0,
+     "expr": "dazed",
+     "mode": "stand",
+     "pose": "point"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 889,
+     "position": [
+      -0.987,
+      0.4,
+      7.519
+     ],
+     "lookAt": [
+      -2.2,
+      1.2,
+      0
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 889,
+     "position": [
+      -0.987,
+      6.108,
+      7.519
+     ],
+     "lookAt": [
+      -2.2,
+      1.2,
+      0
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 34
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7141,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a subway tunnel under construction with concrete arches, rails, work lamps, pipes and dust, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71001,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "pipes",
+     "x": -0.668,
+     "z": -6.127,
+     "scale": 1.6
+    }
+   ],
+   "backdrop": "backdrops/fe30994a13d29ed8.png"
+  },
+  {
+   "sceneId": "b05b",
+   "startFrame": 923,
+   "endFrame": 997,
+   "narration": "Why? Because underneath the street lies a hundred-year-old maze of mystery pipes, electrical cables, and forgotten steam lines.",
+   "light": "night",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "dig",
+     "x": -2.2,
+     "z": 0.0,
+     "expr": "shock",
+     "mode": "stand",
+     "holding": "wrench"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 923,
+     "position": [
+      -3.437,
+      1.62,
+      2.68
+     ],
+     "lookAt": [
+      -2.2,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7178,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a subway tunnel under construction with concrete arches, rails, work lamps, pipes and dust, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71001,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "pipes",
+     "x": -0.839,
+     "z": -5.444,
+     "scale": 1.2
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 943,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparks",
+     "frame": 941,
+     "dur": 56,
+     "at": [
+      -1.715,
+      1.2,
+      0.121
+     ],
+     "size": 1.0
+    },
+    {
+     "kind": "puff",
+     "frame": 958,
+     "dur": 39,
+     "at": [
+      -2.2,
+      1.0,
+      0.0
+     ],
+     "size": 0.9
+    }
+   ],
+   "backdrop": "backdrops/fe30994a13d29ed8.png"
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 997,
+   "endFrame": 1063,
+   "narration": "Every time they move a single water pipe, it costs millions. They're literally tunneling through a maze of financial regret.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "acc",
+     "x": 0.347,
+     "z": 1.2,
+     "expr": "sweat",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 997,
+     "position": [
+      1.6,
+      1.68,
+      6.8
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 997,
+     "position": [
+      0.96,
+      1.56,
+      4.56
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.2
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 66
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7105,
+   "qualityNotes": "",
+   "backdropPrompt": "a corner office with a big desk, laptop, shelves and floor-to-ceiling windows onto skyscrapers, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71002,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "office",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "cashcounter",
+     "x": -0.92,
+     "z": 0.08
+    }
+   ],
+   "backdrop": "backdrops/c7fa5dc7d75a6427.png"
+  },
+  {
+   "sceneId": "b06a",
+   "startFrame": 1063,
+   "endFrame": 1089,
+   "narration": "Every time they move a single water pipe, it costs millions. They're literally tunneling through a maze of financial regret.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "acc",
+     "x": 0.16,
+     "z": 1.2,
+     "expr": "shock",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1063,
+     "position": [
+      -0.39,
+      1.62,
+      4.1
+     ],
+     "lookAt": [
+      0.16,
+      1.5,
+      1.2
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7142,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a corner office with a big desk, laptop, shelves and floor-to-ceiling windows onto skyscrapers, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71002,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "office",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "cashcounter",
+     "x": -0.92,
+     "z": 0.08,
+     "label": "fire",
+     "shake": 1.2
+    }
+   ],
+   "punches": [
+    1065
+   ],
+   "fx": [
+    {
+     "kind": "money",
+     "frame": 1063,
+     "dur": 26,
+     "at": [
+      0.16,
+      1.4,
+      1.8
+     ],
+     "size": 3.2
+    }
+   ],
+   "backdrop": "backdrops/c7fa5dc7d75a6427.png"
+  },
+  {
+   "sceneId": "b06b",
+   "startFrame": 1089,
+   "endFrame": 1178,
+   "narration": "Every time they move a single water pipe, it costs millions. They're literally tunneling through a maze of financial regret.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "acc",
+     "x": 0.301,
+     "z": 1.2,
+     "expr": "dazed",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1089,
+     "position": [
+      2.531,
+      1.55,
+      5.428
+     ],
+     "lookAt": [
+      0.301,
+      1.4,
+      1.2
+     ],
+     "fov": 40,
+     "roll": 0.16
+    },
+    {
+     "frame": 1089,
+     "position": [
+      0.614,
+      1.55,
+      5.97
+     ],
+     "lookAt": [
+      0.301,
+      1.4,
+      1.2
+     ],
+     "fov": 40,
+     "roll": 0.16,
+     "dur": 89
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7179,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a corner office with a big desk, laptop, shelves and floor-to-ceiling windows onto skyscrapers, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71002,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "office",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "cashcounter",
+     "x": -0.92,
+     "z": 0.08,
+     "label": "fire",
+     "shake": 1.6
+    }
+   ],
+   "backdrop": "backdrops/c7fa5dc7d75a6427.png"
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 1178,
+   "endFrame": 1269,
+   "narration": "Fast forward billions of dollars later: they finally open three shiny new stations, about two miles of track.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "pax",
+     "x": 2.4,
+     "z": -4.0,
+     "expr": "starry",
+     "mode": "stand"
+    },
+    {
+     "castId": "extra2",
+     "x": 3.694,
+     "z": -7.144,
+     "mode": "stand",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra3",
+     "x": 1.614,
+     "z": -7.868,
+     "mode": "stand",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra4",
+     "x": 4.768,
+     "z": -9.463,
+     "mode": "stand",
+     "expr": "nervous"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1178,
+     "position": [
+      0.111,
+      0.4,
+      3.264
+     ],
+     "lookAt": [
+      2.4,
+      1.2,
+      -4
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1178,
+     "position": [
+      0.111,
+      6.108,
+      3.264
+     ],
+     "lookAt": [
+      2.4,
+      1.2,
+      -4
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 91
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 7106,
+   "qualityNotes": "",
+   "backdropPrompt": "a gleaming new subway station with marble pillars, white LED light strips and tiled walls, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71000,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null,
+    "variant": "station"
+   },
+   "backdrop": "backdrops/2b23a4f7f8103c66.png"
+  },
+  {
+   "sceneId": "b07a",
+   "startFrame": 1269,
+   "endFrame": 1355,
+   "narration": "Fast forward billions of dollars later: they finally open three shiny new stations, about two miles of track.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "pax",
+     "x": 2.4,
+     "z": -4.0,
+     "expr": "starry",
+     "mode": "stand"
+    },
+    {
+     "castId": "extra5",
+     "x": 3.694,
+     "z": -7.144,
+     "mode": "stand",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra6",
+     "x": 1.557,
+     "z": -7.9,
+     "mode": "stand",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra7",
+     "x": 4.768,
+     "z": -9.463,
+     "mode": "stand",
+     "expr": "nervous"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1269,
+     "position": [
+      -0.332,
+      0.85,
+      2.142
+     ],
+     "lookAt": [
+      1.439,
+      1.5,
+      -4.266
+     ],
+     "fov": 44,
+     "roll": 0.0
+    },
+    {
+     "frame": 1269,
+     "position": [
+      1.59,
+      0.85,
+      2.674
+     ],
+     "lookAt": [
+      3.361,
+      1.5,
+      -3.734
+     ],
+     "fov": 44,
+     "roll": 0.0,
+     "dur": 86
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 6,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7143,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a gleaming new subway station with marble pillars, white LED light strips and tiled walls, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71000,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null,
+    "variant": "station"
+   },
+   "punches": [
+    1281
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 1279,
+     "dur": 60,
+     "at": [
+      2.818,
+      2.28,
+      -4.042
+     ],
+     "size": 0.8
+    }
+   ],
+   "backdrop": "backdrops/2b23a4f7f8103c66.png"
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 1355,
+   "endFrame": 1478,
+   "narration": "That means every single step you walk underground cost roughly a million dollars.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "pax",
+     "x": -4.192,
+     "z": -0.498,
+     "expr": "neutral",
+     "mode": "stroll",
+     "walkTo": [
+      -1.863,
+      0.084
+     ],
+     "walkFrames": [
+      1355,
+      1441
+     ],
+     "holding": "ticket"
+    },
+    {
+     "castId": "crowd_tunnel__0",
+     "x": -1.303,
+     "z": -4.787,
+     "expr": "neutral",
+     "walkTo": [
+      1.801,
+      -4.011
+     ],
+     "walkFrames": [
+      1355,
+      1478
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_tunnel__1",
+     "x": -0.808,
+     "z": -6.064,
+     "expr": "smile",
+     "walkTo": [
+      -3.913,
+      -6.84
+     ],
+     "walkFrames": [
+      1355,
+      1478
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_tunnel__2",
+     "x": -1.794,
+     "z": -3.518,
+     "expr": "bored",
+     "mode": "stand",
+     "talk": [
+      [
+       1361,
+       1478
+      ]
+     ]
+    },
+    {
+     "castId": "crowd_tunnel__3",
+     "x": -1.297,
+     "z": -4.803,
+     "expr": "smile_closed",
+     "walkTo": [
+      -4.402,
+      -5.579
+     ],
+     "walkFrames": [
+      1355,
+      1478
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_tunnel__4",
+     "x": -0.791,
+     "z": -6.108,
+     "expr": "nervous",
+     "walkTo": [
+      2.313,
+      -5.332
+     ],
+     "walkFrames": [
+      1355,
+      1478
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_tunnel__5",
+     "x": -0.278,
+     "z": -7.433,
+     "expr": "neutral",
+     "mode": "stand",
+     "talk": [
+      [
+       1361,
+       1478
+      ]
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1355,
+     "position": [
+      -7.439,
+      1.68,
+      4.463
+     ],
+     "lookAt": [
+      -4.529,
+      1.38,
+      -0.582
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1355,
+     "position": [
+      -5.11,
+      1.68,
+      5.045
+     ],
+     "lookAt": [
+      -2.2,
+      1.38,
+      0
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 86
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7107,
+   "qualityNotes": "",
+   "backdropPrompt": "a gleaming new subway station with marble pillars, white LED light strips and tiled walls, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71001,
+   "hud": {
+    "kind": "panel",
+    "text": "$4,500,000,000 ÷ 2 MILES|≈ $1,000,000 PER STEP!"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null,
+    "variant": "station"
+   },
+   "pieces": [
+    {
+     "kind": "escalator",
+     "x": -3.704,
+     "z": -1.819
+    }
+   ],
+   "backdrop": "backdrops/fd577232829ef303.png"
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 1478,
+   "endFrame": 1616,
+   "narration": "For that money, you could buy every daily rider a brand new car, and still have cash left for a private island.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "pax",
+     "x": 0.726,
+     "z": 6.0,
+     "expr": "grin",
+     "mode": "stand",
+     "pose": "point"
+    },
+    {
+     "castId": "crowd_tunnel__0",
+     "x": -1.678,
+     "z": 0.616,
+     "expr": "neutral",
+     "walkTo": [
+      -4.878,
+      0.616
+     ],
+     "walkFrames": [
+      1478,
+      1616
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_tunnel__1",
+     "x": -1.476,
+     "z": -0.765,
+     "expr": "smile",
+     "walkTo": [
+      1.724,
+      -0.765
+     ],
+     "walkFrames": [
+      1478,
+      1616
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_tunnel__2",
+     "x": -1.193,
+     "z": -2.147,
+     "expr": "bored",
+     "mode": "stand",
+     "talk": [
+      [
+       1484,
+       1616
+      ]
+     ]
+    },
+    {
+     "castId": "crowd_tunnel__3",
+     "x": -0.437,
+     "z": 0.971,
+     "expr": "smile_closed",
+     "walkTo": [
+      2.763,
+      0.971
+     ],
+     "walkFrames": [
+      1478,
+      1616
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_tunnel__4",
+     "x": -0.188,
+     "z": -0.383,
+     "expr": "nervous",
+     "walkTo": [
+      -3.388,
+      -0.383
+     ],
+     "walkFrames": [
+      1478,
+      1616
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_tunnel__5",
+     "x": -0.45,
+     "z": -1.483,
+     "expr": "neutral",
+     "mode": "stand",
+     "talk": [
+      [
+       1484,
+       1616
+      ]
+     ]
+    },
+    {
+     "castId": "crowd_tunnel__6",
+     "x": 0.416,
+     "z": 2.152,
+     "expr": "smile",
+     "walkTo": [
+      -2.784,
+      2.152
+     ],
+     "walkFrames": [
+      1478,
+      1616
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_tunnel__7",
+     "x": 0.009,
+     "z": 0.442,
+     "expr": "bored",
+     "walkTo": [
+      3.209,
+      0.442
+     ],
+     "walkFrames": [
+      1478,
+      1616
+     ],
+     "mode": "stroll"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1478,
+     "position": [
+      4.05,
+      2.3,
+      12.55
+     ],
+     "lookAt": [
+      1.05,
+      1.2,
+      5.55
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1478,
+     "position": [
+      1.95,
+      2.3,
+      13.45
+     ],
+     "lookAt": [
+      -1.05,
+      1.2,
+      6.45
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 138
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7108,
+   "qualityNotes": "",
+   "backdropPrompt": "a gleaming new subway station with marble pillars, white LED light strips and tiled walls, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71002,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null,
+    "variant": "station"
+   },
+   "pieces": [
+    {
+     "kind": "car",
+     "x": -2.075,
+     "z": 4.55
+    },
+    {
+     "kind": "car",
+     "x": 2.075,
+     "z": 4.55,
+     "mirror": true
+    },
+    {
+     "kind": "car",
+     "x": 0.726,
+     "z": -8.5
+    }
+   ],
+   "backdrop": "backdrops/f8ae39c144e87335.png"
+  },
+  {
+   "sceneId": "b09a",
+   "startFrame": 1616,
+   "endFrame": 1643,
+   "narration": "For that money, you could buy every daily rider a brand new car, and still have cash left for a private island.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "pax",
+     "x": 0.16,
+     "z": 6.0,
+     "expr": "starry",
+     "mode": "stand"
+    },
+    {
+     "castId": "crowd_tunnel__0",
+     "x": 2.252,
+     "z": 1.836,
+     "expr": "neutral",
+     "walkTo": [
+      -0.948,
+      1.836
+     ],
+     "walkFrames": [
+      1616,
+      1643
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_tunnel__1",
+     "x": 2.891,
+     "z": 0.454,
+     "expr": "smile",
+     "walkTo": [
+      6.091,
+      0.454
+     ],
+     "walkFrames": [
+      1616,
+      1643
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_tunnel__2",
+     "x": 3.612,
+     "z": -0.928,
+     "expr": "bored",
+     "mode": "stand",
+     "talk": [
+      [
+       1622,
+       1643
+      ]
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1616,
+     "position": [
+      -0.39,
+      1.62,
+      8.9
+     ],
+     "lookAt": [
+      0.16,
+      1.5,
+      6.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1616,
+     "position": [
+      -0.17,
+      1.572,
+      7.74
+     ],
+     "lookAt": [
+      0.16,
+      1.5,
+      6.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 27
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7145,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a gleaming new subway station with marble pillars, white LED light strips and tiled walls, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71002,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null,
+    "variant": "station"
+   },
+   "pieces": [
+    {
+     "kind": "car",
+     "x": -2.075,
+     "z": 4.55
+    },
+    {
+     "kind": "car",
+     "x": 2.075,
+     "z": 4.55,
+     "mirror": true
+    },
+    {
+     "kind": "car",
+     "x": 0.16,
+     "z": -8.5
+    }
+   ],
+   "punches": [
+    1630
+   ],
+   "fx": [
+    {
+     "kind": "money",
+     "frame": 1628,
+     "dur": 15,
+     "at": [
+      0.16,
+      1.4,
+      6.6
+     ],
+     "size": 3.2
+    }
+   ],
+   "backdrop": "backdrops/f8ae39c144e87335.png"
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 1643,
+   "endFrame": 1695,
+   "narration": "So why did it cost so much? Consultants, special contracts, and hiring six guys to watch one guy hold a shovel.",
+   "light": "night",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "acc",
+     "x": 2.4,
+     "z": -4.0,
+     "expr": "smug",
+     "mode": "stand",
+     "pose": "shrug"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1643,
+     "position": [
+      4.549,
+      1.68,
+      1.413
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      -4
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1643,
+     "position": [
+      3.689,
+      1.56,
+      -0.752
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      -4
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 52
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7109,
+   "qualityNotes": "",
+   "backdropPrompt": "a subway tunnel under construction with concrete arches, rails, work lamps, pipes and dust, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71000,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   },
+   "backdrop": "backdrops/96436a990d10517f.png"
+  },
+  {
+   "sceneId": "b10a",
+   "startFrame": 1695,
+   "endFrame": 1760,
+   "narration": "So why did it cost so much? Consultants, special contracts, and hiring six guys to watch one guy hold a shovel.",
+   "light": "night",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "acc",
+     "x": 2.4,
+     "z": -4.0,
+     "expr": "skeptical",
+     "mode": "stand",
+     "pose": "point",
+     "holding": "clipboard"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1695,
+     "position": [
+      2.141,
+      1.62,
+      -1.06
+     ],
+     "lookAt": [
+      2.4,
+      1.5,
+      -4.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7146,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a subway tunnel under construction with concrete arches, rails, work lamps, pipes and dust, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71000,
+   "hud": {
+    "kind": "panel",
+    "text": "INVOICE|CONSULTANTS: $$$|CONTRACTS: $$$$"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   },
+   "backdrop": "backdrops/96436a990d10517f.png"
+  },
+  {
+   "sceneId": "b10b",
+   "startFrame": 1760,
+   "endFrame": 1837,
+   "narration": "So why did it cost so much? Consultants, special contracts, and hiring six guys to watch one guy hold a shovel.",
+   "light": "night",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "dig",
+     "x": 2.4,
+     "z": -4.0,
+     "expr": "pained",
+     "mode": "sit",
+     "holding": "shovel"
+    },
+    {
+     "castId": "extra0",
+     "x": 2.845,
+     "z": -6.675,
+     "mode": "stand",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra1",
+     "x": 1.196,
+     "z": -8.0,
+     "mode": "stand",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra2",
+     "x": 2.343,
+     "z": -8.124,
+     "mode": "stand",
+     "expr": "nervous"
+    },
+    {
+     "castId": "extra3",
+     "x": 0.012,
+     "z": -6.776,
+     "mode": "stand",
+     "expr": "neutral"
+    },
+    {
+     "castId": "extra4",
+     "x": 2.849,
+     "z": -6.663,
+     "mode": "stand",
+     "expr": "laugh"
+    },
+    {
+     "castId": "extra5",
+     "x": -1.501,
+     "z": -8.836,
+     "mode": "stand",
+     "expr": "smile"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1760,
+     "position": [
+      7.391,
+      2.3,
+      1.753
+     ],
+     "lookAt": [
+      2.4,
+      1.2,
+      -4
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1760,
+     "position": [
+      4.611,
+      2.3,
+      3.288
+     ],
+     "lookAt": [
+      2.4,
+      1.2,
+      -4
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 77
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7183,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a subway tunnel under construction with concrete arches, rails, work lamps, pipes and dust, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71000,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   },
+   "backdrop": "backdrops/96436a990d10517f.png"
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 1837,
+   "endFrame": 1956,
+   "narration": "And the best part? Phase two is still years from finished, which means the budget is about to enter orbit.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": -2.268,
+     "z": -0.1,
+     "expr": "grin",
+     "mode": "stand",
+     "pose": "point"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1837,
+     "position": [
+      -5.742,
+      1.68,
+      4.704
+     ],
+     "lookAt": [
+      -2.6,
+      1.38,
+      -0.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1837,
+     "position": [
+      -4.485,
+      1.56,
+      2.742
+     ],
+     "lookAt": [
+      -2.6,
+      1.38,
+      -0.2
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 119
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "zoom",
+   "seed": 7110,
+   "qualityNotes": "",
+   "backdropPrompt": "a corner office with a big desk, laptop, shelves and floor-to-ceiling windows onto skyscrapers, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71001,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "office",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "subwaymap",
+     "x": -3.711,
+     "z": -1.891,
+     "label": "PHASE 2|COMING NEVER"
+    }
+   ],
+   "backdrop": "backdrops/49cd9bb457c2a744.png"
+  },
+  {
+   "sceneId": "b11a",
+   "startFrame": 1956,
+   "endFrame": 2008,
+   "narration": "And the best part? Phase two is still years from finished, which means the budget is about to enter orbit.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": -2.311,
+     "z": -0.113,
+     "expr": "crazy",
+     "mode": "stand",
+     "pose": "up"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1956,
+     "position": [
+      -2.483,
+      0.4,
+      3.594
+     ],
+     "lookAt": [
+      -2.311,
+      1.55,
+      -0.113
+     ],
+     "fov": 50,
+     "roll": 0.0
+    },
+    {
+     "frame": 1956,
+     "position": [
+      -2.483,
+      2.175,
+      3.594
+     ],
+     "lookAt": [
+      -2.311,
+      1.55,
+      -0.113
+     ],
+     "fov": 50,
+     "roll": 0.0,
+     "dur": 52
+    }
+   ],
+   "push": 0.0028,
+   "dof": {
+    "cInf": 7,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7147,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a corner office with a big desk, laptop, shelves and floor-to-ceiling windows onto skyscrapers, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71001,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "office",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "cashcounter",
+     "x": -3.159,
+     "z": -1.537,
+     "label": "fire",
+     "liftTo": 6.0,
+     "moveFrames": [
+      1963,
+      2008
+     ]
+    }
+   ],
+   "backdrop": "backdrops/49cd9bb457c2a744.png"
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 2008,
+   "endFrame": 2064,
+   "narration": "Congratulations, you've just built the most expensive hole in human history.",
+   "light": "day",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": 0.0,
+     "z": 6.0,
+     "expr": "proud",
+     "mode": "stand",
+     "pose": "hips"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 2008,
+     "position": [
+      -0.88,
+      1.545,
+      9.08
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      6
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 2008,
+     "position": [
+      -1.6,
+      1.68,
+      11.6
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      6
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 56
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7111,
+   "qualityNotes": "",
+   "backdropPrompt": "a subway tunnel under construction with concrete arches, rails, work lamps, pipes and dust, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71002,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "ribbon",
+     "x": 0.0,
+     "z": 3.015
+    }
+   ],
+   "fx": [
+    {
+     "kind": "confetti",
+     "frame": 2009,
+     "dur": 55,
+     "at": [
+      0.0,
+      1.4,
+      6.6
+     ],
+     "size": 3.2
+    }
+   ],
+   "backdrop": "backdrops/6e7692db474b059c.png"
+  },
+  {
+   "sceneId": "b12a",
+   "startFrame": 2064,
+   "endFrame": 2128,
+   "narration": "Congratulations, you've just built the most expensive hole in human history.",
+   "light": "day",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": 0.0,
+     "z": 6.0,
+     "expr": "starry",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 2064,
+     "position": [
+      0.18,
+      1.6,
+      7.75
+     ],
+     "lookAt": [
+      0.0,
+      1.6,
+      6.0
+     ],
+     "fov": 30,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 20,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7148,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a subway tunnel under construction with concrete arches, rails, work lamps, pipes and dust, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71002,
+   "hud": {
+    "kind": "spot"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "ribbon",
+     "x": 0.0,
+     "z": 3.015
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 2087,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "confetti",
+     "frame": 2064,
+     "dur": 64,
+     "at": [
+      0.0,
+      1.4,
+      6.6
+     ],
+     "size": 3.2
+    }
+   ],
+   "backdrop": "backdrops/6e7692db474b059c.png"
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 2128,
+   "endFrame": 2242,
+   "narration": "Send this to that friend who complains about his local train ticket price.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "crowd_shops__0",
+     "x": -13.705,
+     "z": -0.726,
+     "expr": "neutral",
+     "walkTo": [
+      -16.905,
+      -0.726
+     ],
+     "walkFrames": [
+      2128,
+      2242
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__1",
+     "x": -13.045,
+     "z": -2.107,
+     "expr": "smile",
+     "walkTo": [
+      -9.845,
+      -2.107
+     ],
+     "walkFrames": [
+      2128,
+      2242
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__2",
+     "x": -12.305,
+     "z": -3.489,
+     "expr": "bored",
+     "mode": "stand",
+     "talk": [
+      [
+       2134,
+       2242
+      ]
+     ]
+    },
+    {
+     "castId": "crowd_shops__3",
+     "x": -11.482,
+     "z": -4.87,
+     "expr": "smile_closed",
+     "walkTo": [
+      -8.282,
+      -4.87
+     ],
+     "walkFrames": [
+      2128,
+      2242
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__4",
+     "x": -17.284,
+     "z": -1.107,
+     "expr": "nervous",
+     "walkTo": [
+      -20.484,
+      -1.107
+     ],
+     "walkFrames": [
+      2128,
+      2242
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__5",
+     "x": -17.191,
+     "z": -2.471,
+     "expr": "neutral",
+     "mode": "stand",
+     "talk": [
+      [
+       2134,
+       2242
+      ]
+     ]
+    },
+    {
+     "castId": "crowd_shops__6",
+     "x": -17.095,
+     "z": -3.855,
+     "expr": "smile",
+     "walkTo": [
+      -20.295,
+      -3.855
+     ],
+     "walkFrames": [
+      2128,
+      2242
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__7",
+     "x": -17.288,
+     "z": -1.057,
+     "expr": "bored",
+     "walkTo": [
+      -14.088,
+      -1.057
+     ],
+     "walkFrames": [
+      2128,
+      2242
+     ],
+     "mode": "stroll"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 2128,
+     "position": [
+      -18.2,
+      5.284,
+      12.2
+     ],
+     "lookAt": [
+      -16,
+      0.6,
+      3.2
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 2128,
+     "position": [
+      -18.2,
+      12.232,
+      12.2
+     ],
+     "lookAt": [
+      -16,
+      0.6,
+      3.2
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 114
+    }
+   ],
+   "push": 0.0018,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 7112,
+   "qualityNotes": "",
+   "backdropPrompt": "a New York street with brick shopfronts, awnings, lit shop windows, street lamps and fire escapes, warm golden-hour sunset light, long soft shadows, orange sky, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 71000,
+   "env": {
+    "preset": "shops",
+    "seed": 71,
+    "shop": null,
+    "variant": "open"
+   },
+   "backdrop": "backdrops/9f4d25e1f143de71.png"
+  },
+  {
+   "sceneId": "b14",
+   "startFrame": 2242,
+   "endFrame": 2320,
+   "narration": "Hit follow for more engineering disasters.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 2242,
+     "position": [
+      -5.528,
+      2.3,
+      13.837
+     ],
+     "lookAt": [
+      -8,
+      1.2,
+      3.2
+     ],
+     "fov": 42,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 7113,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "outro"
+   }
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": true,
+  "words": [
+   {
+    "w": "If",
+    "s": 0.08,
+    "e": 0.185
+   },
+   {
+    "w": "you",
+    "s": 0.195,
+    "e": 0.359
+   },
+   {
+    "w": "want",
+    "s": 0.369,
+    "e": 0.59
+   },
+   {
+    "w": "to",
+    "s": 0.6,
+    "e": 0.705
+   },
+   {
+    "w": "build",
+    "s": 0.715,
+    "e": 0.994
+   },
+   {
+    "w": "a",
+    "s": 1.004,
+    "e": 1.109
+   },
+   {
+    "w": "subway",
+    "s": 1.119,
+    "e": 1.456
+   },
+   {
+    "w": "that",
+    "s": 1.466,
+    "e": 1.687
+   },
+   {
+    "w": "costs",
+    "s": 1.697,
+    "e": 1.976
+   },
+   {
+    "w": "four",
+    "s": 1.986,
+    "e": 2.207
+   },
+   {
+    "w": "and",
+    "s": 2.217,
+    "e": 2.38
+   },
+   {
+    "w": "a",
+    "s": 2.39,
+    "e": 2.495
+   },
+   {
+    "w": "half",
+    "s": 2.505,
+    "e": 2.726
+   },
+   {
+    "w": "billion",
+    "s": 2.736,
+    "e": 3.131
+   },
+   {
+    "w": "dollars",
+    "s": 3.141,
+    "e": 3.535
+   },
+   {
+    "w": "for",
+    "s": 3.545,
+    "e": 3.708
+   },
+   {
+    "w": "just",
+    "s": 3.718,
+    "e": 3.939
+   },
+   {
+    "w": "three",
+    "s": 3.949,
+    "e": 4.228
+   },
+   {
+    "w": "stations,",
+    "s": 4.238,
+    "e": 4.69
+   },
+   {
+    "w": "you",
+    "s": 4.7,
+    "e": 4.863
+   },
+   {
+    "w": "don't",
+    "s": 4.873,
+    "e": 5.094
+   },
+   {
+    "w": "build",
+    "s": 5.104,
+    "e": 5.383
+   },
+   {
+    "w": "transit.",
+    "s": 5.393,
+    "e": 5.787,
+    "hot": true
+   },
+   {
+    "w": "You",
+    "s": 5.967,
+    "e": 6.087
+   },
+   {
+    "w": "build",
+    "s": 6.087,
+    "e": 6.307
+   },
+   {
+    "w": "a",
+    "s": 6.307,
+    "e": 6.407
+   },
+   {
+    "w": "gold",
+    "s": 6.407,
+    "e": 6.627,
+    "hot": true
+   },
+   {
+    "w": "mine.",
+    "s": 6.627,
+    "e": 7.027,
+    "hot": true
+   },
+   {
+    "w": "It's",
+    "s": 7.385,
+    "e": 7.568
+   },
+   {
+    "w": "nineteen",
+    "s": 7.578,
+    "e": 8.083
+   },
+   {
+    "w": "twenty-nine,",
+    "s": 8.093,
+    "e": 8.727
+   },
+   {
+    "w": "and",
+    "s": 8.737,
+    "e": 8.92
+   },
+   {
+    "w": "New",
+    "s": 8.93,
+    "e": 9.113
+   },
+   {
+    "w": "York",
+    "s": 9.123,
+    "e": 9.37
+   },
+   {
+    "w": "promises",
+    "s": 9.38,
+    "e": 9.885
+   },
+   {
+    "w": "commuters",
+    "s": 9.895,
+    "e": 10.464
+   },
+   {
+    "w": "a",
+    "s": 10.474,
+    "e": 10.592
+   },
+   {
+    "w": "brand",
+    "s": 10.602,
+    "e": 10.914
+   },
+   {
+    "w": "new",
+    "s": 10.924,
+    "e": 11.107
+   },
+   {
+    "w": "subway",
+    "s": 11.117,
+    "e": 11.493
+   },
+   {
+    "w": "line",
+    "s": 11.503,
+    "e": 11.751
+   },
+   {
+    "w": "under",
+    "s": 11.761,
+    "e": 12.072
+   },
+   {
+    "w": "Second",
+    "s": 12.082,
+    "e": 12.458
+   },
+   {
+    "w": "Avenue",
+    "s": 12.468,
+    "e": 12.844
+   },
+   {
+    "w": "to",
+    "s": 12.854,
+    "e": 12.973
+   },
+   {
+    "w": "fix",
+    "s": 12.983,
+    "e": 13.166
+   },
+   {
+    "w": "endless",
+    "s": 13.176,
+    "e": 13.616
+   },
+   {
+    "w": "overcrowding.",
+    "s": 13.626,
+    "e": 14.389
+   },
+   {
+    "w": "Then",
+    "s": 14.569,
+    "e": 14.669
+   },
+   {
+    "w": "the",
+    "s": 14.669,
+    "e": 14.749
+   },
+   {
+    "w": "Great",
+    "s": 14.749,
+    "e": 14.929
+   },
+   {
+    "w": "Depression",
+    "s": 14.929,
+    "e": 15.369
+   },
+   {
+    "w": "hits,",
+    "s": 15.369,
+    "e": 15.689
+   },
+   {
+    "w": "World",
+    "s": 15.689,
+    "e": 16.029
+   },
+   {
+    "w": "War",
+    "s": 16.029,
+    "e": 16.269
+   },
+   {
+    "w": "Two",
+    "s": 16.269,
+    "e": 16.529
+   },
+   {
+    "w": "happens,",
+    "s": 16.529,
+    "e": 16.929
+   },
+   {
+    "w": "and",
+    "s": 17.309,
+    "e": 17.389
+   },
+   {
+    "w": "the",
+    "s": 17.389,
+    "e": 17.469
+   },
+   {
+    "w": "project",
+    "s": 17.469,
+    "e": 17.829
+   },
+   {
+    "w": "gets",
+    "s": 17.829,
+    "e": 18.169
+   },
+   {
+    "w": "quietly",
+    "s": 18.169,
+    "e": 18.549
+   },
+   {
+    "w": "buried",
+    "s": 18.549,
+    "e": 19.009,
+    "hot": true
+   },
+   {
+    "w": "for",
+    "s": 19.009,
+    "e": 19.229
+   },
+   {
+    "w": "nearly",
+    "s": 19.229,
+    "e": 19.429
+   },
+   {
+    "w": "a",
+    "s": 19.429,
+    "e": 19.649
+   },
+   {
+    "w": "century.",
+    "s": 19.649,
+    "e": 19.969
+   },
+   {
+    "w": "When",
+    "s": 20.294,
+    "e": 20.528
+   },
+   {
+    "w": "they",
+    "s": 20.538,
+    "e": 20.772
+   },
+   {
+    "w": "finally",
+    "s": 20.782,
+    "e": 21.2
+   },
+   {
+    "w": "restart",
+    "s": 21.21,
+    "e": 21.628
+   },
+   {
+    "w": "digging",
+    "s": 21.638,
+    "e": 22.055,
+    "hot": true
+   },
+   {
+    "w": "in",
+    "s": 22.065,
+    "e": 22.177
+   },
+   {
+    "w": "the",
+    "s": 22.187,
+    "e": 22.361
+   },
+   {
+    "w": "two",
+    "s": 22.371,
+    "e": 22.544
+   },
+   {
+    "w": "thousands,",
+    "s": 22.554,
+    "e": 23.094
+   },
+   {
+    "w": "every",
+    "s": 23.104,
+    "e": 23.399
+   },
+   {
+    "w": "single",
+    "s": 23.409,
+    "e": 23.766
+   },
+   {
+    "w": "inch",
+    "s": 23.776,
+    "e": 24.01,
+    "hot": true
+   },
+   {
+    "w": "of",
+    "s": 24.02,
+    "e": 24.132
+   },
+   {
+    "w": "dirt",
+    "s": 24.142,
+    "e": 24.376
+   },
+   {
+    "w": "costs",
+    "s": 24.386,
+    "e": 24.682
+   },
+   {
+    "w": "more",
+    "s": 24.692,
+    "e": 24.926
+   },
+   {
+    "w": "than",
+    "s": 24.936,
+    "e": 25.171
+   },
+   {
+    "w": "solid",
+    "s": 25.181,
+    "e": 25.476
+   },
+   {
+    "w": "platinum.",
+    "s": 25.486,
+    "e": 25.965
+   },
+   {
+    "w": "Why?",
+    "s": 26.145,
+    "e": 26.325
+   },
+   {
+    "w": "Because",
+    "s": 26.803,
+    "e": 27.226
+   },
+   {
+    "w": "underneath",
+    "s": 27.236,
+    "e": 27.845
+   },
+   {
+    "w": "the",
+    "s": 27.855,
+    "e": 28.031
+   },
+   {
+    "w": "street",
+    "s": 28.041,
+    "e": 28.402
+   },
+   {
+    "w": "lies",
+    "s": 28.412,
+    "e": 28.65
+   },
+   {
+    "w": "a",
+    "s": 28.66,
+    "e": 28.773
+   },
+   {
+    "w": "hundred-year-old",
+    "s": 28.783,
+    "e": 29.64
+   },
+   {
+    "w": "maze",
+    "s": 29.65,
+    "e": 29.887
+   },
+   {
+    "w": "of",
+    "s": 29.897,
+    "e": 30.011
+   },
+   {
+    "w": "mystery",
+    "s": 30.021,
+    "e": 30.444
+   },
+   {
+    "w": "pipes,",
+    "s": 30.454,
+    "e": 30.754
+   },
+   {
+    "w": "electrical",
+    "s": 30.764,
+    "e": 31.373
+   },
+   {
+    "w": "cables,",
+    "s": 31.383,
+    "e": 31.744,
+    "hot": true
+   },
+   {
+    "w": "and",
+    "s": 31.754,
+    "e": 31.93
+   },
+   {
+    "w": "forgotten",
+    "s": 31.94,
+    "e": 32.487,
+    "hot": true
+   },
+   {
+    "w": "steam",
+    "s": 32.497,
+    "e": 32.796
+   },
+   {
+    "w": "lines.",
+    "s": 32.806,
+    "e": 33.106
+   },
+   {
+    "w": "Every",
+    "s": 33.286,
+    "e": 33.486
+   },
+   {
+    "w": "time",
+    "s": 33.486,
+    "e": 33.746
+   },
+   {
+    "w": "they",
+    "s": 33.746,
+    "e": 33.926
+   },
+   {
+    "w": "move",
+    "s": 33.926,
+    "e": 34.086
+   },
+   {
+    "w": "a",
+    "s": 34.086,
+    "e": 34.206
+   },
+   {
+    "w": "single",
+    "s": 34.206,
+    "e": 34.446
+   },
+   {
+    "w": "water",
+    "s": 34.446,
+    "e": 34.766
+   },
+   {
+    "w": "pipe,",
+    "s": 34.766,
+    "e": 35.066
+   },
+   {
+    "w": "it",
+    "s": 35.206,
+    "e": 35.246
+   },
+   {
+    "w": "costs",
+    "s": 35.246,
+    "e": 35.446
+   },
+   {
+    "w": "millions.",
+    "s": 35.446,
+    "e": 35.866,
+    "hot": true
+   },
+   {
+    "w": "They're",
+    "s": 36.332,
+    "e": 36.635
+   },
+   {
+    "w": "literally",
+    "s": 36.645,
+    "e": 37.106
+   },
+   {
+    "w": "tunneling",
+    "s": 37.116,
+    "e": 37.576
+   },
+   {
+    "w": "through",
+    "s": 37.586,
+    "e": 37.942
+   },
+   {
+    "w": "a",
+    "s": 37.952,
+    "e": 38.047
+   },
+   {
+    "w": "maze",
+    "s": 38.057,
+    "e": 38.256
+   },
+   {
+    "w": "of",
+    "s": 38.266,
+    "e": 38.361
+   },
+   {
+    "w": "financial",
+    "s": 38.371,
+    "e": 38.831
+   },
+   {
+    "w": "regret.",
+    "s": 38.841,
+    "e": 39.145
+   },
+   {
+    "w": "Fast",
+    "s": 39.325,
+    "e": 39.525
+   },
+   {
+    "w": "forward",
+    "s": 39.525,
+    "e": 39.885
+   },
+   {
+    "w": "billions",
+    "s": 39.885,
+    "e": 40.245
+   },
+   {
+    "w": "of",
+    "s": 40.245,
+    "e": 40.485
+   },
+   {
+    "w": "dollars",
+    "s": 40.485,
+    "e": 40.785
+   },
+   {
+    "w": "later:",
+    "s": 40.785,
+    "e": 41.185
+   },
+   {
+    "w": "they",
+    "s": 41.545,
+    "e": 41.605
+   },
+   {
+    "w": "finally",
+    "s": 41.605,
+    "e": 42.025
+   },
+   {
+    "w": "open",
+    "s": 42.025,
+    "e": 42.325
+   },
+   {
+    "w": "three",
+    "s": 42.325,
+    "e": 42.645
+   },
+   {
+    "w": "shiny",
+    "s": 42.645,
+    "e": 43.005,
+    "hot": true
+   },
+   {
+    "w": "new",
+    "s": 43.005,
+    "e": 43.225
+   },
+   {
+    "w": "stations,",
+    "s": 43.225,
+    "e": 43.645
+   },
+   {
+    "w": "about",
+    "s": 43.645,
+    "e": 44.005
+   },
+   {
+    "w": "two",
+    "s": 44.005,
+    "e": 44.245
+   },
+   {
+    "w": "miles",
+    "s": 44.245,
+    "e": 44.485
+   },
+   {
+    "w": "of",
+    "s": 44.485,
+    "e": 44.665
+   },
+   {
+    "w": "track.",
+    "s": 44.665,
+    "e": 44.885
+   },
+   {
+    "w": "That",
+    "s": 45.228,
+    "e": 45.308
+   },
+   {
+    "w": "means",
+    "s": 45.308,
+    "e": 45.508
+   },
+   {
+    "w": "every",
+    "s": 45.508,
+    "e": 45.928
+   },
+   {
+    "w": "single",
+    "s": 45.928,
+    "e": 46.268
+   },
+   {
+    "w": "step",
+    "s": 46.268,
+    "e": 46.588
+   },
+   {
+    "w": "you",
+    "s": 46.588,
+    "e": 46.768
+   },
+   {
+    "w": "walk",
+    "s": 46.768,
+    "e": 46.968
+   },
+   {
+    "w": "underground",
+    "s": 46.968,
+    "e": 47.408
+   },
+   {
+    "w": "cost",
+    "s": 47.408,
+    "e": 47.728
+   },
+   {
+    "w": "roughly",
+    "s": 47.728,
+    "e": 48.108
+   },
+   {
+    "w": "a",
+    "s": 48.108,
+    "e": 48.228
+   },
+   {
+    "w": "million",
+    "s": 48.228,
+    "e": 48.488
+   },
+   {
+    "w": "dollars.",
+    "s": 48.488,
+    "e": 48.928
+   },
+   {
+    "w": "For",
+    "s": 49.313,
+    "e": 49.483
+   },
+   {
+    "w": "that",
+    "s": 49.493,
+    "e": 49.723
+   },
+   {
+    "w": "money,",
+    "s": 49.733,
+    "e": 50.023
+   },
+   {
+    "w": "you",
+    "s": 50.033,
+    "e": 50.202
+   },
+   {
+    "w": "could",
+    "s": 50.212,
+    "e": 50.502
+   },
+   {
+    "w": "buy",
+    "s": 50.512,
+    "e": 50.682
+   },
+   {
+    "w": "every",
+    "s": 50.692,
+    "e": 50.982
+   },
+   {
+    "w": "daily",
+    "s": 50.992,
+    "e": 51.282
+   },
+   {
+    "w": "rider",
+    "s": 51.292,
+    "e": 51.582
+   },
+   {
+    "w": "a",
+    "s": 51.592,
+    "e": 51.702
+   },
+   {
+    "w": "brand",
+    "s": 51.712,
+    "e": 52.001
+   },
+   {
+    "w": "new",
+    "s": 52.011,
+    "e": 52.181
+   },
+   {
+    "w": "car,",
+    "s": 52.191,
+    "e": 52.361
+   },
+   {
+    "w": "and",
+    "s": 52.371,
+    "e": 52.541
+   },
+   {
+    "w": "still",
+    "s": 52.551,
+    "e": 52.841
+   },
+   {
+    "w": "have",
+    "s": 52.851,
+    "e": 53.081
+   },
+   {
+    "w": "cash",
+    "s": 53.091,
+    "e": 53.321
+   },
+   {
+    "w": "left",
+    "s": 53.331,
+    "e": 53.561
+   },
+   {
+    "w": "for",
+    "s": 53.571,
+    "e": 53.741
+   },
+   {
+    "w": "a",
+    "s": 53.751,
+    "e": 53.86
+   },
+   {
+    "w": "private",
+    "s": 53.87,
+    "e": 54.28
+   },
+   {
+    "w": "island.",
+    "s": 54.29,
+    "e": 54.64,
+    "hot": true
+   },
+   {
+    "w": "So",
+    "s": 54.82,
+    "e": 54.96
+   },
+   {
+    "w": "why",
+    "s": 54.96,
+    "e": 55.18
+   },
+   {
+    "w": "did",
+    "s": 55.18,
+    "e": 55.32
+   },
+   {
+    "w": "it",
+    "s": 55.32,
+    "e": 55.42
+   },
+   {
+    "w": "cost",
+    "s": 55.42,
+    "e": 55.6
+   },
+   {
+    "w": "so",
+    "s": 55.6,
+    "e": 55.94
+   },
+   {
+    "w": "much?",
+    "s": 55.94,
+    "e": 56.16
+   },
+   {
+    "w": "Consultants,",
+    "s": 56.52,
+    "e": 57.18
+   },
+   {
+    "w": "special",
+    "s": 57.18,
+    "e": 57.42
+   },
+   {
+    "w": "contracts,",
+    "s": 57.42,
+    "e": 57.94
+   },
+   {
+    "w": "and",
+    "s": 57.94,
+    "e": 58.34
+   },
+   {
+    "w": "hiring",
+    "s": 58.34,
+    "e": 58.68
+   },
+   {
+    "w": "six",
+    "s": 58.68,
+    "e": 59.0
+   },
+   {
+    "w": "guys",
+    "s": 59.0,
+    "e": 59.34
+   },
+   {
+    "w": "to",
+    "s": 59.34,
+    "e": 59.58
+   },
+   {
+    "w": "watch",
+    "s": 59.58,
+    "e": 59.76
+   },
+   {
+    "w": "one",
+    "s": 59.76,
+    "e": 60.06
+   },
+   {
+    "w": "guy",
+    "s": 60.06,
+    "e": 60.28
+   },
+   {
+    "w": "hold",
+    "s": 60.28,
+    "e": 60.6
+   },
+   {
+    "w": "a",
+    "s": 60.6,
+    "e": 60.72
+   },
+   {
+    "w": "shovel.",
+    "s": 60.72,
+    "e": 61.02
+   },
+   {
+    "w": "And",
+    "s": 61.297,
+    "e": 61.397
+   },
+   {
+    "w": "the",
+    "s": 61.397,
+    "e": 61.497
+   },
+   {
+    "w": "best",
+    "s": 61.497,
+    "e": 61.677
+   },
+   {
+    "w": "part?",
+    "s": 61.677,
+    "e": 62.017
+   },
+   {
+    "w": "Phase",
+    "s": 62.395,
+    "e": 62.555
+   },
+   {
+    "w": "two",
+    "s": 62.555,
+    "e": 62.915
+   },
+   {
+    "w": "is",
+    "s": 62.915,
+    "e": 63.095
+   },
+   {
+    "w": "still",
+    "s": 63.095,
+    "e": 63.315
+   },
+   {
+    "w": "years",
+    "s": 63.315,
+    "e": 63.615
+   },
+   {
+    "w": "from",
+    "s": 63.615,
+    "e": 63.855
+   },
+   {
+    "w": "finished,",
+    "s": 63.855,
+    "e": 64.335
+   },
+   {
+    "w": "which",
+    "s": 64.595,
+    "e": 64.775
+   },
+   {
+    "w": "means",
+    "s": 64.775,
+    "e": 64.995
+   },
+   {
+    "w": "the",
+    "s": 64.995,
+    "e": 65.215
+   },
+   {
+    "w": "budget",
+    "s": 65.215,
+    "e": 65.535
+   },
+   {
+    "w": "is",
+    "s": 65.535,
+    "e": 65.715
+   },
+   {
+    "w": "about",
+    "s": 65.715,
+    "e": 65.935
+   },
+   {
+    "w": "to",
+    "s": 65.935,
+    "e": 66.135
+   },
+   {
+    "w": "enter",
+    "s": 66.135,
+    "e": 66.375
+   },
+   {
+    "w": "orbit.",
+    "s": 66.375,
+    "e": 66.715
+   },
+   {
+    "w": "Congratulations,",
+    "s": 66.984,
+    "e": 67.544,
+    "hot": true
+   },
+   {
+    "w": "you've",
+    "s": 68.084,
+    "e": 68.244
+   },
+   {
+    "w": "just",
+    "s": 68.244,
+    "e": 68.384
+   },
+   {
+    "w": "built",
+    "s": 68.384,
+    "e": 68.644
+   },
+   {
+    "w": "the",
+    "s": 68.644,
+    "e": 68.824
+   },
+   {
+    "w": "most",
+    "s": 68.824,
+    "e": 68.984,
+    "hot": true
+   },
+   {
+    "w": "expensive",
+    "s": 68.984,
+    "e": 69.504
+   },
+   {
+    "w": "hole",
+    "s": 69.504,
+    "e": 69.804,
+    "hot": true
+   },
+   {
+    "w": "in",
+    "s": 69.804,
+    "e": 70.024
+   },
+   {
+    "w": "human",
+    "s": 70.024,
+    "e": 70.264
+   },
+   {
+    "w": "history.",
+    "s": 70.264,
+    "e": 70.684
+   },
+   {
+    "w": "Send",
+    "s": 70.989,
+    "e": 71.148
+   },
+   {
+    "w": "this",
+    "s": 71.148,
+    "e": 71.349
+   },
+   {
+    "w": "to",
+    "s": 71.349,
+    "e": 71.508
+   },
+   {
+    "w": "that",
+    "s": 71.508,
+    "e": 71.669
+   },
+   {
+    "w": "friend",
+    "s": 71.669,
+    "e": 71.969
+   },
+   {
+    "w": "who",
+    "s": 71.969,
+    "e": 72.269
+   },
+   {
+    "w": "complains",
+    "s": 72.269,
+    "e": 72.788
+   },
+   {
+    "w": "about",
+    "s": 72.788,
+    "e": 72.989
+   },
+   {
+    "w": "his",
+    "s": 72.989,
+    "e": 73.189
+   },
+   {
+    "w": "local",
+    "s": 73.189,
+    "e": 73.409
+   },
+   {
+    "w": "train",
+    "s": 73.409,
+    "e": 73.769
+   },
+   {
+    "w": "ticket",
+    "s": 73.769,
+    "e": 74.069
+   },
+   {
+    "w": "price.",
+    "s": 74.069,
+    "e": 74.409
+   },
+   {
+    "w": "Hit",
+    "s": 74.773,
+    "e": 74.893
+   },
+   {
+    "w": "follow",
+    "s": 74.893,
+    "e": 75.233
+   },
+   {
+    "w": "for",
+    "s": 75.233,
+    "e": 75.453
+   },
+   {
+    "w": "more",
+    "s": 75.453,
+    "e": 75.653
+   },
+   {
+    "w": "engineering",
+    "s": 75.653,
+    "e": 76.093
+   },
+   {
+    "w": "disasters.",
+    "s": 76.093,
+    "e": 76.573
+   }
+  ]
+ },
+ "style": "storybook",
+ "graphics": "full"
+}
