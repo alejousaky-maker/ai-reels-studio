@@ -169,7 +169,24 @@ export class StoryWorld {
       const BD = 9.5 + 0.3 * dist, D = dist + BD, V0 = 0.38;
       const h = 2 * Math.tan((c0.fov * Math.PI) / 360) * D * 1.9, w = h * (sb.width / sb.height);
       const yaw = Math.atan2(-dir.x, -dir.z);
-      const plane = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ color: new THREE.Color(0.94, 0.94, 0.94), fog: false, toneMapped: true }));
+      // 2.5D relief: a dense mesh pushed toward the opening lens along each pixel's own sight ray by its depth (from the opening
+      // view it is exactly the painting; when the camera moves, near things slide more than far ones = true parallax). Below the
+      // painted floor line nothing moves, so the painting still meets the real floor.
+      const bdMat = new THREE.MeshBasicMaterial({ color: new THREE.Color(0.94, 0.94, 0.94), fog: false, toneMapped: true });
+      const relief = { uDepth: { value: null as THREE.Texture | null }, uCam0: { value: P0.clone() }, uRelief: { value: scn.backdropDepth ? 0.28 : 0 }, uV0: { value: 0.38 } };
+      bdMat.onBeforeCompile = (sh) => {
+        Object.assign(sh.uniforms, relief);
+        sh.vertexShader = "uniform sampler2D uDepth; uniform vec3 uCam0; uniform float uRelief; uniform float uV0;\n" + sh.vertexShader.replace("#include <project_vertex>", `
+          if (uRelief > 0.0) {
+            vec4 wp = modelMatrix * vec4(transformed, 1.0);
+            float d = texture2D(uDepth, uv).r * smoothstep(uV0 + 0.02, uV0 + 0.12, uv.y);
+            wp.xyz = uCam0 + (wp.xyz - uCam0) * (1.0 - uRelief * d);
+            transformed = (inverse(modelMatrix) * wp).xyz;
+          }
+          #include <project_vertex>`);
+      };
+      bdMat.customProgramCacheKey = () => "bdRelief";
+      const plane = new THREE.Mesh(new THREE.PlaneGeometry(w, h, 180, 320), bdMat);
       plane.position.set(L0.x + dir.x * BD, (0.5 - V0) * h, L0.z + dir.z * BD);
       plane.rotation.y = yaw; plane.layers.set(NOINK); plane.renderOrder = -0.5;
       R.add(plane);
@@ -188,6 +205,10 @@ export class StoryWorld {
       new THREE.TextureLoader().load(staticFile(scn.backdrop), (tex) => {
         tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 8;
         (plane.material as THREE.MeshBasicMaterial).map = tex; (plane.material as THREE.MeshBasicMaterial).needsUpdate = true;
+        if (scn.backdropDepth) {
+          const h2 = delayRender(`depth ${scn.backdropDepth}`);
+          new THREE.TextureLoader().load(staticFile(scn.backdropDepth), (dt) => { relief.uDepth.value = dt; continueRender(h2); }, undefined, () => { relief.uRelief.value = 0; continueRender(h2); });
+        }
         // tint the 3D floor with the painting's own floor colour (average just below its floor line)
         try {
           const img = tex.image as HTMLImageElement, cv = document.createElement("canvas"); cv.width = 64; cv.height = 64;

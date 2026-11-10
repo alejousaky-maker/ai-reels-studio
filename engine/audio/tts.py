@@ -107,16 +107,68 @@ def voice_style(k, voice: str):
     return sum((w / tot) * k.get_voice_style(n) for n, w in parts)
 
 
+# ---------------- ElevenLabs (opt-in, paid): voice = "elevenlabs:<voice_id>", key from ELEVENLABS_API_KEY or the local .env ----------------
+_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+
+def _el_key() -> str:
+    k = os.environ.get("ELEVENLABS_API_KEY", "").strip()
+    env = os.path.join(_ROOT, ".env")
+    if not k and os.path.exists(env):
+        for line in open(env, encoding="utf-8"):
+            if line.strip().startswith("ELEVENLABS_API_KEY="):
+                k = line.split("=", 1)[1].strip().strip('"').strip("'")
+    if not k:
+        raise RuntimeError("ElevenLabs voice requested but ELEVENLABS_API_KEY is not set in .env")
+    return k
+
+
+def el_chars(sentences: list[str], lang: str) -> int:
+    """characters ElevenLabs would bill for these sentences (cached sentences cost nothing)"""
+    return sum(len(normalize(s, lang)) for s in sentences)
+
+
+def _el_sentence(text: str, voice_id: str, speed: float, prev: str, nxt: str) -> tuple[np.ndarray, int]:
+    import hashlib
+    import urllib.request
+    settings = {"stability": 0.4, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": True, "speed": round(max(0.7, min(1.2, speed)), 2)}
+    body = {"text": text, "model_id": "eleven_multilingual_v2", "voice_settings": settings, "previous_text": prev, "next_text": nxt}
+    cache_dir = os.path.join(_ROOT, "work", "tts_cache")
+    os.makedirs(cache_dir, exist_ok=True)
+    h = hashlib.sha1(json.dumps({"v": voice_id, **body}, sort_keys=True).encode()).hexdigest()[:20]
+    mp3 = os.path.join(cache_dir, f"el_{h}.mp3")
+    if not os.path.exists(mp3):
+        req = urllib.request.Request(f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}?output_format=mp3_44100_128",
+                                     data=json.dumps(body).encode(), method="POST",
+                                     headers={"xi-api-key": _el_key(), "Content-Type": "application/json", "Accept": "audio/mpeg"})
+        with urllib.request.urlopen(req, timeout=120) as r:
+            data = r.read()
+        with open(mp3 + ".part", "wb") as f:
+            f.write(data)
+        os.replace(mp3 + ".part", mp3)
+    pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", mp3, "-f", "f32le", "-ac", "1", "-ar", str(SR), "pipe:1"], check=True, capture_output=True).stdout
+    return np.frombuffer(pcm, dtype=np.float32).astype(np.float64), SR
+
+
 def synth(sentences: list[str], lang: str, voice: str, speed: float = 1.0, gap: float = 0.14) -> tuple[np.ndarray, list[Sentence]]:
-    k = _get_kokoro()
+    el = voice.startswith("elevenlabs:")
+    if el:
+        voice_id = voice.split(":", 1)[1].strip()
+        if not re.fullmatch(r"[A-Za-z0-9]{10,40}", voice_id):
+            raise ValueError("bad ElevenLabs voice id")
+    else:
+        k = _get_kokoro()
+        vstyle = voice_style(k, voice)
     out: list[np.ndarray] = []
     meta: list[Sentence] = []
     pos = 0
     lead = int(0.06 * SR)
     out.append(np.zeros(lead)); pos += lead
-    vstyle = voice_style(k, voice)
-    for s in sentences:
-        audio, sr = k.create(normalize(s, lang), voice=vstyle, speed=speed, lang=LANG_CODE.get(lang, "en-us"))
+    for i, s in enumerate(sentences):
+        if el:
+            audio, sr = _el_sentence(normalize(s, lang), voice_id, speed, " ".join(sentences[max(0, i - 2):i]), " ".join(sentences[i + 1:i + 3]))
+        else:
+            audio, sr = k.create(normalize(s, lang), voice=vstyle, speed=speed, lang=LANG_CODE.get(lang, "en-us"))
         a = np.asarray(audio, dtype=np.float64)
         if sr != SR:
             g = np.gcd(SR, sr)
@@ -150,7 +202,8 @@ def make_voice(script_sentences: list[str], lang: str, voice: str, out_dir: str,
     wav = os.path.join(out_dir, "voice.wav")
     D.write_wav(wav, y[None, :], 24)
     info = {"file": "voice.wav", "sampleRate": SR, "duration": len(y) / SR, "voice": voice, "lang": lang, "speed": speed,
-            "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)", "sentences": [s.__dict__ for s in meta]}
+            "provider": "ElevenLabs (eleven_multilingual_v2, user account)" if voice.startswith("elevenlabs:") else "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+            "sentences": [s.__dict__ for s in meta]}
     with open(os.path.join(out_dir, "sentences.json"), "w", encoding="utf-8") as f:
         json.dump(info, f, indent=1, ensure_ascii=False)
     return info

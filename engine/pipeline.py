@@ -235,6 +235,9 @@ def step_storyboard(pid: str, plan: Plan, progress: Progress = _noop) -> dict:
                 progress("backdrops", i / len(todo), f"painting backdrop {i + 1}/{len(todo)}")
                 png = imagegen.generate(sc["backdropPrompt"], int(sc.get("backdropSeed", 7)))
                 sc["backdrop"] = imagegen.publish(png)
+                dep = imagegen.depth_of(png)
+                if dep:
+                    sc["backdropDepth"] = imagegen.publish(dep)   # 2.5D parallax relief of the painting
     save_json(pdir(pid, "storyboard", "storyboard.json"), sb)
     snapshot(pid, "storyboard", sb)
     info = {"status": "done", "frames": sb["durationInFrames"], "seconds_video": sb["durationInFrames"] / sb["fps"], "scenes": len(sb["scenes"])}
@@ -396,6 +399,10 @@ def step_mix(pid: str, plan: Plan, music: bool = True, music_db: float = -10.0, 
     moods = [b.mood for b in plan.beats]
     rep = mixdown.mix(pdir(pid, "audio"), sb, words, sb["durationInFrames"] / sb["fps"], moods, music_on=music, music_db=music_db, seed=plan.seed)
     rep["status"] = "done"; rep["seconds"] = round(time.time() - t0, 1)
+    if rep.get("musicCredit"):   # CC BY music: the credit must go in the video description
+        os.makedirs(pdir(pid, "output"), exist_ok=True)
+        with open(pdir(pid, "output", "credits.txt"), "w", encoding="utf-8") as f:
+            f.write("Music: " + rep["musicCredit"] + "\n")
     update_manifest(pid, step=("mix", {"status": "done", "seconds": rep["seconds"], **rep["measured"]}))
     progress("mix", 1.0, f"{rep['measured']['integratedLUFS']} LUFS, TP {rep['measured']['truePeakDBTP']} dBTP")
     return rep
@@ -458,7 +465,8 @@ def produce(pid: str, plan: Plan, quality: str = "standard", voice: str | None =
     step_script(pid, plan); chk()
     vinfo = step_voice(pid, plan, voice, speed, progress); chk()
     target = (load_json(pdir(pid, "input", "request.json"), {}) or {}).get("seconds")
-    if target and not os.path.exists(pdir(pid, "input", "voice_user.wav")):
+    # never re-voice a paid ElevenLabs narration just to stretch / squeeze the length (every pass costs credits)
+    if target and not os.path.exists(pdir(pid, "input", "voice_user.wav")) and not str(voice or "").startswith("elevenlabs:"):
         dur = float(vinfo.get("duration", 0))
         if dur < 0.85 * target and speed > 0.9:
             # gently slower narration to approach the requested length (never below 0.88x: intelligibility first)

@@ -4,7 +4,7 @@
 // All pixel-sized parameters are specified at 1080x1920 and scale with the output height.
 import React, { useEffect, useMemo, useState } from "react";
 import * as THREE from "three";
-import { AbsoluteFill, continueRender, delayRender, useCurrentFrame, CalculateMetadataFunction, interpolate } from "remotion";
+import { AbsoluteFill, continueRender, delayRender, useCurrentFrame, CalculateMetadataFunction, interpolate, staticFile } from "remotion";
 import { ThreeCanvas } from "@remotion/three";
 import { useThree } from "@react-three/fiber";
 import { EffectComposer } from "@react-three/postprocessing";
@@ -29,6 +29,17 @@ const makeBloom = () => {
   return b;
 };
 const fwd = new THREE.Vector3(), fpt = new THREE.Vector3();
+
+/** Montserrat (SIL OFL 1.1, public/fonts) for captions: the classic Shorts caption face */
+let fontReady: Promise<void> | null = null;
+const useCaptionFont = () => {
+  const [handle] = useState(() => delayRender("caption font"));
+  useEffect(() => {
+    fontReady ??= new FontFace("Montserrat", `url(${staticFile("fonts/Montserrat-Variable.ttf")})`, { weight: "100 900" }).load()
+      .then((f) => { (document.fonts as unknown as { add: (x: FontFace) => void }).add(f); }).catch(() => undefined);
+    fontReady.then(() => continueRender(handle));
+  }, [handle]);
+};
 
 const useKit = () => {
   const [kit, setKit] = useState<Kit | null>(null);
@@ -162,7 +173,7 @@ const Overlays: React.FC<{ sb: Storyboard }> = ({ sb }) => {
       const capY = cur?.hud && ["manhattan", "osaka", "panama", "world", "subway", "mud"].includes(cur.hud.kind) ? 0.84 : 0.765;
       if (cur?.hud?.kind !== "outro") items.push(
         <div key="cap" style={{ position: "absolute", left: 0, right: 0, top: H * capY, display: "flex", justifyContent: "center" }}>
-          <div style={{ fontFamily: '"Arial Black", "Segoe UI Black", Arial, sans-serif', fontWeight: 900, fontSize: 80 * k, letterSpacing: -0.5 * k,
+          <div style={{ fontFamily: '"Montserrat", "Arial Black", "Segoe UI Black", Arial, sans-serif', fontWeight: 900, fontSize: 82 * k, letterSpacing: -0.5 * k,
             color: g.hot ? "#ffe14d" : "#ffffff", WebkitTextStroke: `${11 * k}px #0d0b10`, paintOrder: "stroke fill",
             textShadow: `0 ${5 * k}px ${8 * k}px rgba(0,0,0,0.4)`, transform: `scale(${pop}) rotate(${g.hot ? -2 : 0}deg)`, maxWidth: 0.9 * sb.width,
             textAlign: "center", lineHeight: 1.05 }}>{g.text}</div>
@@ -291,6 +302,7 @@ const Hud: React.FC<{ kind: string; text?: string; f: number; f0: number; sb: St
 export const StoryShort: React.FC<StoryProps> = ({ storyboard: sb, dpr }) => {
   const f = useCurrentFrame();
   const kit = useKit();
+  useCaptionFont();
   if (!kit) return null;
   let flash = 0;
   for (const s of sb.scenes) if (s.transitionIn === "flash" && f >= s.startFrame && f < s.startFrame + 4) flash = [1, 0.75, 0.45, 0.2][f - s.startFrame];

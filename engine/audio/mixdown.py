@@ -19,6 +19,25 @@ from . import dsp_bridge as D
 from . import score
 
 S, SR = D.S, D.SR
+LIB = os.path.join(os.path.dirname(os.path.abspath(__file__)), "library")
+LIB_MUSIC = os.path.join(LIB, "music")
+LIB_CREDITS = {
+    "sneaky-snitch.mp3": "\"Sneaky Snitch\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 License · http://creativecommons.org/licenses/by/4.0/",
+    "mischief-maker.mp3": "\"Mischief Maker\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 License · http://creativecommons.org/licenses/by/4.0/",
+    "marty-gots-a-plan.mp3": "\"Marty Gots a Plan\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 License · http://creativecommons.org/licenses/by/4.0/",
+}
+_SAMPLES: dict = {}
+
+
+def sample(name: str):
+    """a recorded SFX from library/sfx (CC0) as a mono 48 kHz array, or None"""
+    if name not in _SAMPLES:
+        f = os.path.join(LIB, "sfx", name)
+        _SAMPLES[name] = None
+        if os.path.exists(f):
+            pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", f, "-f", "f32le", "-ac", "1", "-ar", str(SR), "pipe:1"], check=True, capture_output=True).stdout
+            _SAMPLES[name] = np.frombuffer(pcm, dtype=np.float32).astype(np.float64)
+    return _SAMPLES[name]
 
 
 def _ev(buf, x, t, db, p=0.0):
@@ -69,7 +88,8 @@ def build_sfx(sb: dict, duration: float, voice_lufs: float, seed: int = 11) -> t
         tr = s.get("transitionIn", "cut")
         if i > 0 and tr in ("flash", "xfade", "dissolve", "zoom", "whip"):
             t0 = a - (0.22 if tr in ("flash", "zoom", "whip") else 0.12)
-            _ev(out, S.whoosh(0.55, r, peak=0.35), max(0, t0), ev - (2 if tr in ("flash", "zoom", "whip") else 5), 0.0)
+            rec = sample("whoosh.wav" if tr in ("zoom", "whip", "flash") else "whoosh2.wav")   # real CC0 whooshes on scene transitions
+            _ev(out, rec if rec is not None else S.whoosh(0.55, r, peak=0.35), max(0, t0), ev - (2 if tr in ("flash", "zoom", "whip") else 5), 0.0)
             cues.append({"t": round(t0, 3), "kind": "whoosh", "what": f"{tr} into {s['sceneId']}"})
         for k in s.get("cameraKeys", [])[1:]:
             if k.get("cut") or k.get("dur", 24) > 40:   # slow camera moves across a whole shot are silent
@@ -176,7 +196,8 @@ def voice_comp(v: np.ndarray, thr_db: float = -24.0, ratio: float = 2.5, att: fl
 
 
 def mix(project_audio_dir: str, sb: dict, words: list[dict], duration: float, moods: list[str] | None = None,
-        target_lufs: float = -14.0, ceiling: float = -2.0, music_db: float = -10.0, music_on: bool = True, seed: int = 7) -> dict:
+        target_lufs: float = -14.0, ceiling: float = -2.0, music_db: float = -10.0, music_on: bool = True, seed: int = 7,
+        music_kind: str = "library") -> dict:
     # ceiling -2 dBTP on the WAV: AAC encoding overshoots true peak by up to ~2 dB (measured +2.2 dB on Demo A)
     n = D.ns(duration)
     vx, sr = D.read_wav(os.path.join(project_audio_dir, "voice.wav"))
@@ -199,13 +220,30 @@ def mix(project_audio_dir: str, sb: dict, words: list[dict], duration: float, mo
             secs[-1] = (secs[-1][0], b, mood)
         else:
             secs.append((a, b, mood))
-    if music_on:
+    lib_track = None
+    if music_on and music_kind == "library" and os.path.isdir(LIB_MUSIC):
+        tracks = sorted(f for f in os.listdir(LIB_MUSIC) if f.endswith(".mp3"))
+        if tracks:
+            lib_track = tracks[seed % len(tracks)]
+    if lib_track:
+        # a real comedy cue (CC BY 4.0, credited in output/credits.txt), looped to length, ducked under the voice like the score
+        pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", os.path.join(LIB_MUSIC, lib_track), "-f", "f32le", "-ac", "2", "-ar", str(SR), "pipe:1"],
+                             check=True, capture_output=True).stdout
+        tr = np.frombuffer(pcm, dtype=np.float32).astype(np.float64).reshape(-1, 2).T
+        reps = int(np.ceil(n / tr.shape[1])) + 1
+        m = np.tile(tr, (1, reps))[:, :n]
+        m = D.fades(m, 0.3, 1.5)
+        mcues = [{"t": 0.0, "kind": "track", "what": lib_track}]
+    if music_on and not lib_track:
         m, mcues = score.render(duration, secs, seed)
         m = m[:, :n] if m.shape[1] >= n else np.pad(m, ((0, 0), (0, n - m.shape[1])))
         mL = D.integrated(m)
         m = m * D.dbg(vL + music_db - mL) * D.dbg(duck_curve(words, n, -6.0))[None, :]
-    else:
+    elif not lib_track:
         m, mcues = np.zeros((2, n)), []
+    if lib_track:
+        mL = D.integrated(m)
+        m = m * D.dbg(vL + music_db - mL) * D.dbg(duck_curve(words, n, -6.0))[None, :]
     s_st, scues = build_sfx(sb, duration, vL, seed + 4)
     mix0 = v + m + s_st
     G = target_lufs - D.integrated(mix0)
@@ -231,7 +269,9 @@ def mix(project_audio_dir: str, sb: dict, words: list[dict], duration: float, mo
         "ffmpegEbur128": ebur(os.path.join(project_audio_dir, "mix.wav")),
         "musicSections": [{"start": round(a, 2), "end": round(b, 2), "mood": md} for a, b, md in secs],
         "musicCues": mcues, "sfxCues": scues,
-        "license": "All music and SFX synthesized locally (numpy/scipy), original; voice from local TTS or user import.",
+        "license": (f"Music: {LIB_CREDITS.get(lib_track, lib_track)}. Whooshes CC0 (freesound AudioPapkin 441345, D4XX 607250); other SFX synthesized."
+                    if lib_track else "All music and SFX synthesized locally (numpy/scipy), original; voice from local TTS or user import."),
+        "musicCredit": LIB_CREDITS.get(lib_track) if lib_track else None,
     }
     with open(os.path.join(project_audio_dir, "mix_report.json"), "w", encoding="utf-8") as f:
         json.dump(rep, f, indent=1)

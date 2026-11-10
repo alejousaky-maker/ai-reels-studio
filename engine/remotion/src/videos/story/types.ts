@@ -85,6 +85,8 @@ export type SceneSpec = {
   kicks?: { frame: number; amp: number }[];
   /** AI-painted backdrop image (path under public/) shown behind the cast instead of the 3D set */
   backdrop?: string;
+  /** its depth map (near = white) for the 2.5D parallax relief */
+  backdropDepth?: string;
   backdropPrompt?: string;
   /** gentle lens lean-ins on named objects */
   punches?: number[];

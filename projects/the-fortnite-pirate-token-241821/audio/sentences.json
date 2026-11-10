@@ -1,0 +1,101 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 78.20827083333333,
+ "voice": "am_eric*0.7+am_fenrir*0.3",
+ "lang": "en",
+ "speed": 0.999,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "What would happen if internet pirates launched an unofficial crypto token called Fortnite Gold?",
+   "start": 0.06,
+   "end": 4.905020833333333
+  },
+  {
+   "text": "Absolute chaos.",
+   "start": 5.045020833333333,
+   "end": 6.257541666666667
+  },
+  {
+   "text": "For years, gamers wanted a token to trade skins freely, without paying a thirty percent platform fee.",
+   "start": 6.397541666666666,
+   "end": 12.132458333333334
+  },
+  {
+   "text": "So some anonymous devs launched a pirate token overnight, promising it would become the official currency of Tilted Towers.",
+   "start": 12.272458333333333,
+   "end": 19.0628125
+  },
+  {
+   "text": "Within twenty-four hours, millions of players piled in, turning a meme coin into a multi-million-dollar digital treasure island.",
+   "start": 19.2028125,
+   "end": 26.448583333333332
+  },
+  {
+   "text": "Suddenly, you weren't playing to win.",
+   "start": 26.588583333333332,
+   "end": 28.327770833333332
+  },
+  {
+   "text": "You were playing to arbitrage liquidity pools on Discord.",
+   "start": 28.467770833333333,
+   "end": 31.382166666666667
+  },
+  {
+   "text": "Then the game studio's lawyers finished their morning coffee and chose absolute legal violence.",
+   "start": 31.522166666666667,
+   "end": 36.55629166666667
+  },
+  {
+   "text": "A ten-page cease-and-desist letter hit the developers faster than a pump shotgun headshot.",
+   "start": 36.69629166666667,
+   "end": 41.497875
+  },
+  {
+   "text": "And just like that, the anonymous creators deleted their accounts, cashed out, and vanished into thin air.",
+   "start": 41.637875,
+   "end": 47.007645833333335
+  },
+  {
+   "text": "Players who thought they were crypto tycoons were suddenly left holding literal digital garbage.",
+   "start": 47.147645833333335,
+   "end": 52.145875
+  },
+  {
+   "text": "Even worse, anyone caught wearing the pirate token skin got banned from the lobby.",
+   "start": 52.285875,
+   "end": 56.595395833333335
+  },
+  {
+   "text": "Turns out, fighting a multi-billion-dollar gaming giant with a pirate meme coin is a great way to lose your lunch money.",
+   "start": 56.735395833333335,
+   "end": 63.244166666666665
+  },
+  {
+   "text": "The metaverse isn't the Wild West.",
+   "start": 63.384166666666665,
+   "end": 65.29179166666667
+  },
+  {
+   "text": "It's a gated community owned by guys in suits.",
+   "start": 65.43179166666667,
+   "end": 68.1366875
+  },
+  {
+   "text": "So stick to regular V-Bucks.",
+   "start": 68.2766875,
+   "end": 70.04885416666667
+  },
+  {
+   "text": "At least when you waste them on a bad emote, you actually get to dance.",
+   "start": 70.18885416666667,
+   "end": 73.551125
+  },
+  {
+   "text": "Send this to that friend who falls for every single crypto scam on the internet.",
+   "start": 73.691125,
+   "end": 78.06827083333333
+  }
+ ]
+}

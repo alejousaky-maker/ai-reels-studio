@@ -1,0 +1,1248 @@
+{
+ "lang": "en",
+ "title": "The Fortnite Pirate Token",
+ "words": 228,
+ "beats": [
+  {
+   "narration": "What would happen if internet pirates launched an unofficial crypto token called Fortnite Gold? Absolute chaos.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "cap",
+     "action": "cheer",
+     "expr": "starry",
+     "react": null,
+     "holding": "goldcoin",
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": "chaos",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "trading",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "ship",
+     "where": "behind",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 0.35,
+     "y": null,
+     "mirror": false,
+     "move": "toward",
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    },
+    {
+     "kind": "ticker",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "FORTNITE GOLD ▲ 4200%",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "whip",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": "a pirate ship bursting through the big glass window of a neon crypto stock exchange, shattered glass, green tickers",
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "Fortnite",
+     "shot": "extreme",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "cap",
+       "action": "stand",
+       "expr": "starry",
+       "react": null,
+       "holding": "goldcoin",
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "sparkle",
+       "product": null,
+       "color": null,
+       "word": "Gold",
+       "on": "cap"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    },
+    {
+     "at": "Absolute",
+     "shot": "dutch",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "cap",
+       "action": "jump",
+       "expr": "laugh",
+       "react": null,
+       "holding": "goldcoin",
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "burst",
+       "product": null,
+       "color": null,
+       "word": "chaos",
+       "on": "cap"
+      },
+      {
+       "kind": "money",
+       "product": null,
+       "color": null,
+       "word": "Absolute",
+       "on": "cap"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "orbit",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "For years, gamers wanted a token to trade skins freely, without paying a thirty percent platform fee.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "gam",
+     "action": "sitchair",
+     "expr": "skeptical",
+     "react": null,
+     "holding": null,
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "whip",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "monitor",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "PLATFORM FEE|30%",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": null,
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "without",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "gam",
+       "action": "stand",
+       "expr": "evil",
+       "react": null,
+       "holding": "cutlass",
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "burst",
+       "product": null,
+       "color": null,
+       "word": "fee",
+       "on": "gam"
+      }
+     ],
+     "impactWord": "fee",
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "whip",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "So some anonymous devs launched a pirate token overnight, promising it would become the official currency of Tilted Towers.",
+   "shot": "close",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "cap",
+     "action": "point",
+     "expr": "smug",
+     "react": null,
+     "holding": "phone",
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "trading",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": "panel",
+   "hudText": "☠ FORTNITE GOLD|PRICE ▲ 4,200%|TO THE MOON!",
+   "look": null,
+   "backdrop": null,
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "promising",
+     "shot": "medium",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "cap",
+       "action": "hips",
+       "expr": "proud",
+       "react": null,
+       "holding": null,
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": [
+      {
+       "kind": "ticker",
+       "where": "behind",
+       "dx": 0.0,
+       "dz": 0.0,
+       "scale": null,
+       "y": null,
+       "mirror": false,
+       "move": null,
+       "label": "FTG ▲ TO THE MOON",
+       "spin": null,
+       "lift": null,
+       "shake": null
+      }
+     ],
+     "camMove": "crane_up",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "Within twenty-four hours, millions of players piled in, turning a meme coin into a multi-million-dollar digital treasure island.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "gam",
+     "action": "cheer",
+     "expr": "starry",
+     "react": null,
+     "holding": null,
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 6,
+   "extrasAction": "dance",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "money",
+     "product": null,
+     "color": null,
+     "word": "millions",
+     "on": "gam"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "24 HOURS",
+   "textStyle": "title",
+   "atShop": false,
+   "environment": "park",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "partybus",
+     "where": "behind",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 0.9,
+     "y": 5.0,
+     "mirror": false,
+     "move": "right",
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": "streamer",
+   "spot": null,
+   "visual": null,
+   "camMove": "crane_up",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": "a colorful video-game island with a treasure chest of glowing gold coins, palm trees and a festival crowd area",
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "treasure",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "gam",
+       "action": "stand",
+       "expr": "love",
+       "react": null,
+       "holding": "goldcoin",
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": 0,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "sparkle",
+       "product": null,
+       "color": null,
+       "word": "treasure",
+       "on": "gam"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "Suddenly, you weren't playing to win. You were playing to arbitrage liquidity pools on Discord.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "gam",
+     "action": "sitchair",
+     "expr": "sweat",
+     "react": null,
+     "holding": "controller",
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": "panel",
+   "hudText": "LIQUIDITY POOL|APY 9,000%!",
+   "look": null,
+   "backdrop": null,
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "You",
+     "shot": "extreme",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "gam",
+       "action": "stand",
+       "expr": "crazy",
+       "react": null,
+       "holding": null,
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "Then the game studio's lawyers finished their morning coffee and chose absolute legal violence.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "law",
+     "action": "stand",
+     "expr": "bored",
+     "react": null,
+     "holding": "coffee",
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": "violence",
+   "transition": "zoom",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "office",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": null,
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "chose",
+     "shot": "worm",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "law",
+       "action": "stand",
+       "expr": "angry",
+       "react": null,
+       "holding": "gavel",
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "burst",
+       "product": null,
+       "color": null,
+       "word": "violence",
+       "on": "law"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "A ten-page cease-and-desist letter hit the developers faster than a pump shotgun headshot.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "cap",
+     "action": "sitchair",
+     "expr": "smug",
+     "react": null,
+     "holding": "phone",
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "product",
+     "product": "envelope",
+     "color": null,
+     "word": "letter",
+     "on": "cap"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "truck_right",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": null,
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "faster",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "cap",
+       "action": "fall",
+       "expr": "dazed",
+       "react": null,
+       "holding": null,
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "stars",
+       "product": null,
+       "color": null,
+       "word": "headshot",
+       "on": "cap"
+      }
+     ],
+     "impactWord": "headshot",
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "whip",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "And just like that, the anonymous creators deleted their accounts, cashed out, and vanished into thin air.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "cap",
+     "action": "stand",
+     "expr": "scared",
+     "react": null,
+     "holding": null,
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "trading",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "ticker",
+     "where": "behind",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "FORTNITE GOLD ▼ 99.9%",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "crane_up",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": null,
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "cashed",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "cap",
+       "action": "panic",
+       "expr": "dazed",
+       "react": null,
+       "holding": null,
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "money",
+       "product": null,
+       "color": null,
+       "word": "cashed",
+       "on": "cap"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": null,
+     "hud": "panel",
+     "hudText": "FORTNITE GOLD|▼ 99.9%!",
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    },
+    {
+     "at": "vanished",
+     "shot": "wide",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "puff",
+       "product": null,
+       "color": null,
+       "word": "vanished",
+       "on": null
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "pull",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "Players who thought they were crypto tycoons were suddenly left holding literal digital garbage.",
+   "shot": "close",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "gam",
+     "action": "stand",
+     "expr": "sad",
+     "react": null,
+     "holding": "phone",
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": null,
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "garbage",
+     "shot": "extreme",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "gam",
+       "action": "stand",
+       "expr": "cry",
+       "react": null,
+       "holding": null,
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "product",
+       "product": "moth",
+       "color": null,
+       "word": "garbage",
+       "on": "gam"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": null,
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "Even worse, anyone caught wearing the pirate token skin got banned from the lobby.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "cap",
+     "action": "stand",
+     "expr": "broken",
+     "react": null,
+     "holding": null,
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": "BANNED",
+   "textStyle": "title",
+   "atShop": false,
+   "environment": "park",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "whip",
+   "hud": "panel",
+   "hudText": "LOBBY|BANNED!",
+   "look": null,
+   "backdrop": "a bright video-game lobby stage with neon lights",
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": []
+  },
+  {
+   "narration": "Turns out, fighting a multi-billion-dollar gaming giant with a pirate meme coin is a great way to lose your lunch money.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "gam",
+     "action": "sit",
+     "expr": "sad",
+     "react": null,
+     "holding": null,
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "shops",
+   "envVariant": "open",
+   "pieces": [
+    {
+     "kind": "cardbox",
+     "where": "on",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    },
+    {
+     "kind": "board",
+     "where": "right",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "WILL TRADE|PIXEL SWORDS|FOR SANDWICHES",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "pull",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": "outside a small convenience store with a glowing shop window",
+   "crowd": true,
+   "extrasHolding": null,
+   "shots": []
+  },
+  {
+   "narration": "The metaverse isn't the Wild West. It's a gated community owned by guys in suits.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [],
+   "extras": 5,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "dissolve",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "island",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": "guard",
+   "spot": null,
+   "visual": null,
+   "camMove": "crane_up",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": "a tropical game island completely surrounded by giant grey concrete walls with barbed wire and watchtowers",
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "gated",
+     "shot": "medium",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": null,
+     "extras": 4,
+     "extrasAction": null,
+     "extrasRole": "guard",
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "truck_left",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "So stick to regular V-Bucks. At least when you waste them on a bad emote, you actually get to dance.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "gam",
+     "action": "dance",
+     "expr": "starry",
+     "react": null,
+     "holding": null,
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "sparkle",
+     "product": null,
+     "color": null,
+     "word": "dance",
+     "on": "gam"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "orbit",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": null,
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "At",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "gam",
+       "action": "dance",
+       "expr": "laugh",
+       "react": null,
+       "holding": null,
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "confetti",
+       "product": null,
+       "color": null,
+       "word": "dance",
+       "on": "gam"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "Send this to that friend who falls for every single crypto scam on the internet.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "warm",
+   "characters": [],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "dissolve",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "trading",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": null,
+   "hud": "outro",
+   "hudText": null,
+   "look": null,
+   "backdrop": null,
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": []
+  }
+ ]
+}

@@ -1,0 +1,579 @@
+{
+ "title": "The Day I Tried to Be Useful",
+ "environment": "gameroom",
+ "seed": 101,
+ "cast": [
+  {
+   "id": "me",
+   "name": "Gamer (stained hoodie)",
+   "role": "streamer",
+   "palette": "#6b6f78"
+  },
+  {
+   "id": "nb",
+   "name": "Neighbour"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "What happens when a lifetime gamer finally decides to turn off his console and be useful for a single day? Pure psychological horror.",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "scared",
+     "holding": "plug"
+    }
+   ],
+   "impactWord": "horror",
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "monitor",
+     "where": "left",
+     "label": "GAME OVER"
+    },
+    {
+     "kind": "snacks",
+     "where": "right",
+     "scale": 1.2
+    }
+   ],
+   "camMove": "whip",
+   "look": "warm",
+   "backdrop": "a messy gamer bedroom piled with pizza boxes, crushed energy drink cans and tangled wires, dramatic red alarm light",
+   "shots": [
+    {
+     "at": "useful",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "sweat",
+       "holding": "plug"
+      }
+     ],
+     "camMove": "push"
+    },
+    {
+     "at": "Pure",
+     "shot": "dutch",
+     "characters": [
+      {
+       "id": "me",
+       "action": "panic",
+       "expr": "scared",
+       "holding": "plug"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "burst",
+       "word": "horror",
+       "on": "me"
+      }
+     ],
+     "camMove": "orbit"
+    }
+   ]
+  },
+  {
+   "narration": "Step one: touching grass. Outside air hits my lungs like chemical warfare.",
+   "characters": [
+    {
+     "id": "me",
+     "action": "walk",
+     "expr": "squint",
+     "holding": "grass"
+    }
+   ],
+   "transition": "whip",
+   "text": "STEP 1",
+   "textStyle": "title",
+   "environment": "suburb",
+   "camMove": "follow",
+   "backdrop": "a bright sunny front yard with a green lawn and a front door",
+   "shots": [
+    {
+     "at": "Outside",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "pained",
+       "holding": "grass"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "puff",
+       "word": "warfare",
+       "on": "me"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "I tried to clean my bedroom. Turns out, under three years of pizza boxes, there was actually a wooden floor.",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "stern",
+     "holding": "shovel"
+    }
+   ],
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "snacks",
+     "where": "left",
+     "scale": 1.6
+    },
+    {
+     "kind": "snacks",
+     "where": "right",
+     "scale": 1.3
+    }
+   ],
+   "camMove": "truck_right",
+   "backdrop": "a messy bedroom with mountains of pizza boxes and a black trash bag",
+   "shots": [
+    {
+     "at": "under",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "me",
+       "action": "shrug",
+       "expr": "shock"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "snacks",
+       "where": "left",
+       "scale": 0.6
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Then I tried applying for a real job. The application asked for five years of experience for an entry-level position.",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sitchair",
+     "expr": "nervous"
+    }
+   ],
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "monitor",
+     "where": "left",
+     "label": "JOB APPLICATION"
+    }
+   ],
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "five",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "me",
+       "action": "sitchair",
+       "expr": "dazed"
+      }
+     ],
+     "camMove": "push",
+     "hud": "panel",
+     "hudText": "ERROR|EXPERIENCE REQUIRED: 100 YEARS!"
+    }
+   ]
+  },
+  {
+   "narration": "I attempted to cook real food instead of eating instant ramen. I managed to set water on fire.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "proud",
+     "holding": "fryingpan"
+    }
+   ],
+   "environment": "kitchen",
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "managed",
+     "shot": "wide",
+     "characters": [
+      {
+       "id": "me",
+       "action": "run",
+       "expr": "scared"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "burst",
+       "word": "fire",
+       "on": "me"
+      },
+      {
+       "kind": "sparks",
+       "word": "water",
+       "on": "me"
+      }
+     ],
+     "impactWord": "fire",
+     "camMove": "whip"
+    }
+   ]
+  },
+  {
+   "narration": "The worst part about real life? There is no quick-save button. You drop a plate, and it's gone forever.",
+   "shot": "close",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "skeptical"
+    }
+   ],
+   "environment": "kitchen",
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "You",
+     "shot": "medium",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "shock",
+       "holding": "plate"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "burst",
+       "word": "gone",
+       "on": "me"
+      }
+     ],
+     "impactWord": "gone"
+    },
+    {
+     "at": "forever",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "me",
+       "action": "panic",
+       "expr": "crazy",
+       "holding": "controller"
+      }
+     ],
+     "camMove": "push",
+     "hud": "panel",
+     "hudText": "F9 - QUICK LOAD|NOT AVAILABLE"
+    }
+   ]
+  },
+  {
+   "narration": "I tried talking to a normal human being outside. We made awkward eye contact for four seconds and I aged ten years.",
+   "shot": "two_shot",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "sweat"
+    },
+    {
+     "id": "nb",
+     "expr": "sweat"
+    }
+   ],
+   "focus": "me",
+   "environment": "suburb",
+   "camMove": "orbit",
+   "backdrop": "a quiet suburban sidewalk with lawns and houses",
+   "crowd": false,
+   "shots": [
+    {
+     "at": "aged",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "sleepy"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Nobody warned me that adulting is basically paying a subscription fee just to exist in a server that lags constantly.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "shock",
+     "holding": "envelope"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "money",
+     "word": "subscription",
+     "on": "me"
+    }
+   ],
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "cashcounter",
+     "where": "left",
+     "label": "fire",
+     "shake": 1.2
+    }
+   ],
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "server",
+     "shot": "dutch",
+     "characters": [
+      {
+       "id": "me",
+       "action": "panic",
+       "expr": "dazed",
+       "holding": "envelope"
+      }
+     ],
+     "camMove": "orbit",
+     "hud": "police"
+    }
+   ]
+  },
+  {
+   "narration": "After four hours of total productivity, my brain felt like a fried graphics card running Crysis on max settings.",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "fall",
+     "expr": "dazed"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "steam",
+     "word": "brain",
+     "on": "me"
+    },
+    {
+     "kind": "sparks",
+     "word": "fried",
+     "on": "me"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "crane_up",
+   "shots": [
+    {
+     "at": "fried",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "me",
+       "action": "fall",
+       "expr": "crazy"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "puff",
+       "word": "fried",
+       "on": "me"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "I looked at my life, looked at my chores, and made the only logical executive decision.",
+   "shot": "low",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "walk",
+     "expr": "pained"
+    }
+   ],
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "console",
+     "where": "left",
+     "scale": 1.2
+    }
+   ],
+   "camMove": "follow",
+   "shots": [
+    {
+     "at": "only",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "evil"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "I pressed the power button. The console beeped. Balance was instantly restored to the universe.",
+   "shot": "insert",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "starry"
+    }
+   ],
+   "transition": "flash",
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "console",
+     "where": "on",
+     "scale": 1.0
+    }
+   ],
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "Balance",
+     "shot": "wide",
+     "characters": [
+      {
+       "id": "me",
+       "action": "cheer",
+       "expr": "laugh"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "sparkle",
+       "word": "restored",
+       "on": "me"
+      }
+     ],
+     "pieces": [],
+     "camMove": "crane_up"
+    }
+   ]
+  },
+  {
+   "narration": "Sure, I'm unemployed, broke, and living in squalor. But at least my K-D ratio is positive.",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sitchair",
+     "expr": "smug",
+     "holding": "controller"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "pull",
+   "shots": [
+    {
+     "at": "But",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "me",
+       "action": "sitchair",
+       "expr": "starry",
+       "holding": "controller"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "confetti",
+       "word": "positive",
+       "on": "me"
+      }
+     ],
+     "camMove": "push",
+     "hud": "panel",
+     "hudText": "VICTORY!|K/D RATIO: 1.01"
+    }
+   ]
+  },
+  {
+   "narration": "Being useful is overrated. Grinding in a fictional video game simulator is where true fulfillment lies.",
+   "shot": "close",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sitchair",
+     "expr": "wink",
+     "holding": "controller"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "orbit",
+   "shots": [
+    {
+     "at": "Grinding",
+     "shot": "medium",
+     "characters": [
+      {
+       "id": "me",
+       "action": "dance",
+       "expr": "laugh"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Send this to that friend who really needs to touch grass today.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "warm",
+   "transition": "dissolve",
+   "environment": "gameroom",
+   "hud": "outro"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "First-person comedy sketch; fiction.",
+   "status": "fiction"
+  }
+ ],
+ "backdrops": "ai"
+}

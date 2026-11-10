@@ -98,6 +98,19 @@ def generate(prompt: str, seed: int = 7, w: int = 832, h: int = 1472, timeout: i
     raise TimeoutError("ComfyUI generation timed out")
 
 
+def depth_of(png: str) -> str | None:
+    """depth map next to a cached backdrop (Depth Anything V2 Small, run in the ComfyUI venv); None when unavailable"""
+    out = png[:-4] + "_depth.png"
+    if os.path.exists(out):
+        return out
+    py = os.path.join(COMFY, ".venv", "Scripts", "python.exe")
+    try:
+        subprocess.run([py, os.path.join(ROOT, "engine", "depthgen.py"), png, out], check=True, capture_output=True, timeout=600)
+    except Exception:
+        return None
+    return out if os.path.exists(out) else None
+
+
 def publish(png: str) -> str:
     """copy a cached backdrop into the Remotion public folder; returns the staticFile path"""
     os.makedirs(PUBLIC, exist_ok=True)

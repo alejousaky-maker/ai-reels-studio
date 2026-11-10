@@ -1,0 +1,103 @@
+{
+ "id": "the-fortnite-pirate-token-241821",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 228,
+   "beats": 14,
+   "at": "2026-11-10T18:20:12"
+  },
+  "voice": {
+   "duration": 78.20827083333333,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 26.4,
+   "status": "done",
+   "voice": "am_eric*0.7+am_fenrir*0.3",
+   "speed": 0.999,
+   "at": "2026-11-10T18:21:07"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 14.7,
+   "method": {
+    "whisper": 14,
+    "spread": 4
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T18:21:22"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 2361,
+   "seconds_video": 78.7,
+   "scenes": 27,
+   "at": "2026-11-10T18:28:22"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T18:20:12",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T18:20:12",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T18:20:41",
+   "seconds": 26.3,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T18:21:07",
+   "seconds": 26.4,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T18:21:22",
+   "status": "done",
+   "seconds": 14.7
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T18:28:22",
+   "status": "done"
+  }
+ ],
+ "title": "The Fortnite Pirate Token",
+ "created": "2026-11-10T18:20:12",
+ "request": {
+  "title": "The Fortnite Pirate Token",
+  "idea": "The Fortnite Pirate Token",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 90,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "trading",
+  "voice": "am_eric*0.7+am_fenrir*0.3",
+  "speed": 1.15,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": true,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "auto",
+  "review": "auto_qa",
+  "seed": 7,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "",
+ "requestedSeconds": 90
+}
