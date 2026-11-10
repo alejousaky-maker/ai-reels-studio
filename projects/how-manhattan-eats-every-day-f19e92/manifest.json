@@ -1,0 +1,197 @@
+{
+ "id": "how-manhattan-eats-every-day-f19e92",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 248,
+   "beats": 14,
+   "at": "2026-11-10T15:35:24"
+  },
+  "voice": {
+   "duration": 83.41,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 27.9,
+   "status": "done",
+   "voice": "am_fenrir*0.8+am_eric*0.2",
+   "speed": 1.15,
+   "at": "2026-11-10T15:35:52"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 12.9,
+   "method": {
+    "whisper": 12,
+    "spread": 5
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T15:36:05"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 2513,
+   "seconds_video": 83.76666666666667,
+   "scenes": 29,
+   "at": "2026-11-10T15:36:05"
+  },
+  "stills": {
+   "status": "done",
+   "count": 87,
+   "at": "2026-11-10T15:39:31"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 388.7,
+   "frames": 2513,
+   "renderedScenes": [
+    "b01",
+    "b01a",
+    "b01b",
+    "b02",
+    "b02a",
+    "b03",
+    "b03a",
+    "b03b",
+    "b04",
+    "b04a",
+    "b04b",
+    "b05",
+    "b05a",
+    "b05b",
+    "b06",
+    "b06a",
+    "b07",
+    "b07a",
+    "b07b",
+    "b08",
+    "b08a",
+    "b09",
+    "b10",
+    "b11",
+    "b11a",
+    "b12",
+    "b12a",
+    "b13",
+    "b14"
+   ],
+   "reusedScenes": [],
+   "fps_render": 6.46,
+   "at": "2026-11-10T15:46:00"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 29.8,
+   "integratedLUFS": -14.01,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.75,
+   "maxGainReductionDB": 5.06,
+   "voiceLUFS": -13.79,
+   "musicLUFS": -29.74,
+   "sfxLUFS": -31.25,
+   "at": "2026-11-10T15:46:30"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\how-manhattan-eats-every-day-f19e92\\output\\how-manhattan-eats-every-day_master_v1.mp4",
+   "at": "2026-11-10T15:46:32"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-10T15:46:57"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T15:22:00",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T15:22:33",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T15:35:24",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T15:35:52",
+   "seconds": 27.9,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T15:36:05",
+   "status": "done",
+   "seconds": 12.9
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T15:36:05",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T15:39:31",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T15:46:00",
+   "status": "done",
+   "seconds": 388.7
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T15:46:30",
+   "status": "done",
+   "seconds": 29.8
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T15:46:32",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T15:46:57",
+   "status": "done"
+  }
+ ],
+ "title": "How Manhattan Eats Every Day",
+ "created": "2026-11-10T15:22:00",
+ "request": {
+  "title": "How Manhattan Eats Every Day",
+  "idea": "How Manhattan Eats Every Day",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 90,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "village_square",
+  "voice": "am_fenrir*0.8+am_eric*0.2",
+  "speed": 1.15,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": true,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "auto",
+  "review": "auto_qa",
+  "seed": 7,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "",
+ "requestedSeconds": 90
+}

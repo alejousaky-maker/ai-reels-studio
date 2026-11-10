@@ -59,6 +59,8 @@
    "camMove": "whip",
    "hud": "panel",
    "hudText": "11:59:59 PM",
+   "look": null,
+   "extrasHolding": null,
    "shots": [
     {
      "at": "hundred",
@@ -81,7 +83,9 @@
      "camMove": "truck_right",
      "hud": null,
      "hudText": null,
-     "visual": null
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
     },
     {
      "at": "melt",
@@ -121,7 +125,9 @@
      "camMove": "push",
      "hud": null,
      "hudText": null,
-     "visual": null
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
     }
    ]
   },
@@ -158,6 +164,8 @@
    "camMove": "push",
    "hud": "panel",
    "hudText": "11:59:59 PM",
+   "look": null,
+   "extrasHolding": null,
    "shots": []
   },
   {
@@ -208,6 +216,8 @@
    "camMove": "orbit",
    "hud": null,
    "hudText": null,
+   "look": null,
+   "extrasHolding": null,
    "shots": []
   },
   {
@@ -251,6 +261,8 @@
    "camMove": "whip",
    "hud": null,
    "hudText": null,
+   "look": null,
+   "extrasHolding": null,
    "shots": []
   },
   {
@@ -306,6 +318,8 @@
    "camMove": "truck_left",
    "hud": null,
    "hudText": null,
+   "look": null,
+   "extrasHolding": null,
    "shots": []
   },
   {
@@ -378,6 +392,8 @@
    "camMove": "crane_up",
    "hud": null,
    "hudText": null,
+   "look": null,
+   "extrasHolding": null,
    "shots": []
   },
   {
@@ -413,6 +429,8 @@
    "camMove": "follow",
    "hud": null,
    "hudText": null,
+   "look": null,
+   "extrasHolding": null,
    "shots": []
   },
   {
@@ -463,6 +481,8 @@
    "camMove": "whip",
    "hud": null,
    "hudText": null,
+   "look": null,
+   "extrasHolding": null,
    "shots": []
   },
   {
@@ -498,6 +518,8 @@
    "camMove": "push",
    "hud": "bar",
    "hudText": "DOWNLOADING GTA 6|98|99.9",
+   "look": null,
+   "extrasHolding": null,
    "shots": []
   },
   {
@@ -533,6 +555,8 @@
    "camMove": "push",
    "hud": "bar",
    "hudText": "1 SECOND REMAINING|99.9|99.9",
+   "look": null,
+   "extrasHolding": null,
    "shots": []
   },
   {
@@ -583,6 +607,8 @@
    "camMove": null,
    "hud": null,
    "hudText": null,
+   "look": null,
+   "extrasHolding": null,
    "shots": []
   },
   {
@@ -633,6 +659,8 @@
    "camMove": "push",
    "hud": null,
    "hudText": null,
+   "look": null,
+   "extrasHolding": null,
    "shots": [
     {
      "at": "Not",
@@ -655,7 +683,9 @@
      "camMove": "push",
      "hud": null,
      "hudText": null,
-     "visual": null
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
     },
     {
      "at": "anywhere",
@@ -678,7 +708,9 @@
      "camMove": "crane_up",
      "hud": null,
      "hudText": null,
-     "visual": null
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
     }
    ]
   },
@@ -715,6 +747,8 @@
    "camMove": "crane_up",
    "hud": null,
    "hudText": null,
+   "look": null,
+   "extrasHolding": null,
    "shots": []
   },
   {
@@ -773,6 +807,8 @@
    "camMove": "crane_up",
    "hud": null,
    "hudText": null,
+   "look": null,
+   "extrasHolding": null,
    "shots": [
     {
      "at": "car",
@@ -827,7 +863,9 @@
      "camMove": null,
      "hud": null,
      "hudText": null,
-     "visual": null
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
     }
    ]
   },
@@ -879,6 +917,8 @@
    "camMove": "pull",
    "hud": "bar",
    "hudText": "DOWNLOADING|99.9|99.9",
+   "look": null,
+   "extrasHolding": null,
    "shots": []
   }
  ],

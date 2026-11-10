@@ -20,6 +20,26 @@ const q = (v: number, n = 120) => Math.round(v * n) / n;
 const clamp01 = (x: number) => Math.max(0, Math.min(1, x));
 /** vertical scale for the landing bounce over the first 10 frames of a scene: 0.86 -> 1.07 -> 0.98 -> 1 */
 const entrance = (n: number) => n < 0 || n >= 10 ? 1 : 1 - 0.14 * Math.cos((n / 10) * Math.PI * 1.5) * Math.exp(-n / 4);
+/** finishing pass on a painted card (pieces + icons): warm top light, soft cool shade at the bottom, a rim highlight on the
+ *  lit edge and a fine paint grain, all clipped to what was drawn (source-atop), so flat fills read as lit, textured objects */
+const cardFinish = (p: Pen, w: number, h: number) => {
+  const g = p.g; g.save(); g.globalCompositeOperation = "source-atop";
+  const v = g.createLinearGradient(0, 0, 0, h); v.addColorStop(0, "rgba(255,248,225,0.22)"); v.addColorStop(0.45, "rgba(255,255,255,0)"); v.addColorStop(1, "rgba(30,18,50,0.26)");
+  g.fillStyle = v; g.fillRect(0, 0, w, h);
+  const s = g.createLinearGradient(0, 0, w, 0); s.addColorStop(0, "rgba(255,255,255,0.12)"); s.addColorStop(0.25, "rgba(255,255,255,0)"); s.addColorStop(1, "rgba(20,10,40,0.12)");
+  g.fillStyle = s; g.fillRect(0, 0, w, h);
+  let r = 12345; const rnd = () => ((r = (r * 16807) % 2147483647) / 2147483647);
+  for (let i = 0; i < (w * h) / 900; i++) { g.fillStyle = rnd() < 0.5 ? "rgba(255,255,255,0.06)" : "rgba(30,20,40,0.06)"; g.fillRect(rnd() * w, rnd() * h, 2 + rnd() * 5, 1 + rnd() * 3); }
+  g.restore();
+};
+/** a wooden chair seen from the front (seat, back, four legs) */
+const chairFx = (p: Pen) => {
+  p.poly([[40, 20], [260, 20], [250, 200], [50, 200]], "#a8784a", 8);
+  for (let k = 0; k < 3; k++) p.stroke([[70, 60 + k * 45], [230, 60 + k * 45]], 6, "#7a4f33");
+  p.poly([[20, 220], [280, 220], [270, 260], [30, 260]], "#8a5a34", 8);
+  for (const x of [45, 255]) p.stroke([[x, 260], [x + (x < 150 ? -6 : 6), 410]], 16, "#6b4a32");
+  for (const x of [95, 205]) p.stroke([[x, 260], [x, 380]], 10, "#5a3b2a");
+};
 /** a green banknote */
 const billFx = (p: Pen) => {
   p.poly([[6, 6], [194, 6], [194, 94], [6, 94]], "#7cc46a", 5);
@@ -280,10 +300,18 @@ export class StoryWorld {
       let hop = dance ? Math.max(0, Math.sin(2 * Math.PI * (t * 2.2 + hh(who.i, 3)))) * 0.16 * scl : 0;
       if (jump) hop = Math.abs(Math.sin(Math.PI * (t * 1.5 + hh(who.i, 3)))) * 0.42 * scl;      // bouncing on the spot (joy / rage)
       if (run) hop = Math.abs(Math.sin(2 * Math.PI * (t * cadence + hh(who.i, 5)))) * 0.06 * scl;
-      const mode: FrontOpts["mode"] = mode0 === "fall" ? "fall" : mode0 === "sit" ? "sit" : mode0 === "march" || run ? "march" : moving ? "stroll" : "stand";
+      const mode: FrontOpts["mode"] = mode0 === "fall" ? "fall" : mode0 === "sit" ? "sit" : mode0 === "chair" ? "chair" : mode0 === "march" || run ? "march" : moving ? "stroll" : "stand";
       const shake = a.shake ? q(a.shake * 7 * Math.sin(t * 23 + who.i), 4) : 0;   // panic tremble
       // life: standing people breathe and sway, the head bobs; every reaction lands with a small hop
-      const idle = mode === "stand" || mode === "sit";
+      const idle = mode === "stand" || mode === "sit" || mode === "chair";
+      // speech: the mouth flaps on the syllables of the words this character says; brows jump on every reaction
+      const talking = (a.talk ?? []).some(([f0, f1]) => f >= f0 && f < f1);
+      const syl = talking ? Math.abs(Math.sin(Math.PI * (t * 6.2 + hh(who.i, 21)))) * (0.55 + 0.45 * Math.abs(Math.sin(t * 2.3))) : 0;
+      const talk = talking ? Math.round(syl * 3) / 3 : 0;
+      let browUp = talking ? Math.round(2 * Math.abs(Math.sin(t * 1.7 + who.i))) : 0;
+      for (const sw of st.swaps) { const kk = f - (sw - LEAD); if (kk >= 0 && kk < 12) browUp = Math.max(browUp, Math.round(6 * (1 - kk / 12))); }
+      // talking hands: when nothing else is posed, the right hand gestures every ~1.3 s (point / open palm / down)
+      const gest = talking && !a.pose && !a.holding && !a.wave && mode !== "chair" ? (["point", "shrug", undefined] as const)[Math.floor((t + hh(who.i, 22)) / 1.3) % 3] : undefined;
       const sway = idle ? q(1.8 * Math.sin(2 * Math.PI * (t * 0.45 + hh(who.i, 11))), 2) : 0;
       const nod = idle ? q(3.5 * Math.sin(2 * Math.PI * (t * 0.33 + hh(who.i, 12))), 2) : 0;
       for (const sw of st.swaps) { const kk = f - (sw - LEAD); if (kk >= 0 && kk < 8) hop += 0.07 * scl * Math.sin((Math.PI * kk) / 8); }
@@ -295,7 +323,8 @@ export class StoryWorld {
         phase, expr: st.expr, mode, look: a.look ?? 0, blink: st.expr === "whistle" ? 0 : lidAt(fr, who.i * 7 + ai, st.swaps.map((x) => x - s.startFrame)),
         lift: 60, tilt: (a.tilt ?? 0) + sway + shake + (run ? 8 : 0) + (dance ? q(9 * Math.sin(2 * Math.PI * t * 1.1 + who.i), 10) : 0), headTilt: nod,
         wave: a.wave || dance || a.pose || jump ? q(Math.sin(t * (dance ? 7 : a.shake ? 16 : a.pose ? 5 : 9) + who.i * 1.3), 20) : undefined,
-        ...(a.pose || jump ? { pose: a.pose ?? "up" } : {}),
+        ...(a.pose || jump ? { pose: a.pose ?? "up" } : gest ? { pose: gest } : {}),
+        ...(talk ? { talk } : {}), ...(browUp ? { browUp } : {}),
         light: light2D(false), facing, seed: (who.i * 5 + 3) % 7 + 1,
       };
       // side view while walking ACROSS the frame (template bodySide: planted stance foot, cycloid swing foot)
@@ -316,9 +345,13 @@ export class StoryWorld {
       const key = `F|${a.castId}|${JSON.stringify(fo, (_k, v) => (typeof v === "number" ? q(v) : v))}`;
       places.push({ key, x: st.x, y: hop + (a.y ?? 0), z: st.z, scale: scl, draw: (p) => bodyFront(p, who.o, fo), size: [w, h, k] });
       if (!a.y) blob(st.x, st.z, scl, hop > 0.02 ? 0.7 : 1);
+      if (mode === "chair") {   // the chair the character sits on (behind the body, facing the lens)
+        const bx = cam.position.x - st.x, bz = cam.position.z - st.z, bl = Math.hypot(bx, bz) || 1;
+        fx.push({ key: "chairfx", cw: 300, ch: 420, draw: chairFx, x: st.x - (bx / bl) * 0.12, y: 0.62 * scl, z: st.z - (bz / bl) * 0.12, w: 0.78 * scl, h: 1.24 * scl });
+      }
       if (a.holding) {
         const sz = 0.34 * scl;
-        fx.push({ key: `prod|${a.holding}|${this.sb.brand?.primary ?? ""}`, cw: 400, ch: 400, draw: (p) => drawProduct(p, a.holding!, this.sb.brand?.primary),
+        fx.push({ key: `prod|${a.holding}|${this.sb.brand?.primary ?? ""}`, cw: 400, ch: 400, draw: (p) => { drawProduct(p, a.holding!, this.sb.brand?.primary); cardFinish(p, 400, 400); },
           x: st.x + right.x * 0.42 * scl, y: hop + (a.y ?? 0) + 0.98 * scl, z: st.z + right.z * 0.42 * scl - 0.05, w: sz, h: sz });
       }
     });
@@ -339,7 +372,7 @@ export class StoryWorld {
         case "product": {
           const pop = u < 0.15 ? smooth(u / 0.15) * 1.08 : u > 0.9 ? smooth((1 - u) / 0.1) : 1 + 0.03 * Math.sin(t * 5);
           const pk = e.product ?? "coffee";
-          fx.push({ key: `prod|${pk}|${this.sb.brand?.primary ?? ""}`, cw: 400, ch: 400, draw: (p) => drawProduct(p, pk, this.sb.brand?.primary), x, y: y + 0.04 * Math.sin(t * 3), z, w: size * pop, h: size * pop });
+          fx.push({ key: `prod|${pk}|${this.sb.brand?.primary ?? ""}`, cw: 400, ch: 400, draw: (p) => { drawProduct(p, pk, this.sb.brand?.primary); cardFinish(p, 400, 400); }, x, y: y + 0.04 * Math.sin(t * 3), z, w: size * pop, h: size * pop });
           break;
         }
         case "steam": fx.push({ key: `steam${q((t * 0.8) % 1, 20)}`, cw: 400, ch: 400, draw: (p) => steamFx(p, q((t * 0.8) % 1, 20)), x, y, z, w: size, h: size, soft: true }); break;
@@ -421,7 +454,7 @@ export class StoryWorld {
       const k = pc.scale ?? 1, d = cam.position.distanceTo(this.v.set(x, P.h * k * 0.5, z)) / (k * P.h / 2.2);
       const res = d < 3.2 ? 1.6 : d < 6.5 ? 1.0 : d < 16 ? 0.55 : 0.3;
       const cw = Math.round(P.dw * res), ch = Math.round(P.dh * res);
-      A.r = this.pool.req(`piece|${pc.kind}|${pc.label ?? ""}`, cw, ch, res, (pp) => P.draw(pp, pc.label ?? ""));
+      A.r = this.pool.req(`piece|${pc.kind}|${pc.label ?? ""}`, cw, ch, res, (pp) => { P.draw(pp, pc.label ?? ""); cardFinish(pp, P.dw, P.dh); });
       const bob = pc.rock ? pc.rock * Math.sin(t * 1.6 + i) : 0;
       A.mesh.visible = true;
       A.mesh.position.set(x, (pc.y ?? 0) + lift + bob * 0.15 + (pc.shake ? pc.shake * 0.02 * Math.abs(Math.sin(f * 4.1)) : 0), z);

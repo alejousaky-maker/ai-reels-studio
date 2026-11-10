@@ -7,7 +7,17 @@ SKINS = ["#ffe2c2", "#f5c9a0", "#ecd0b6", "#c99067", "#8d5a3b"]
 COATS = ["#3f6fb5", "#8c3b4a", "#5d7a3a", "#b5653f", "#2f5f6a", "#7b5ac9", "#c25a7a", "#d9a441"]
 
 
+# Stickman rule (user, 2026-11-11): every face is a plain white 2D stickman head, never a skin tone
+STICK_SKIN = "#fdfcf8"
+
+
 def outfit(role: str, i: int, palette: str | None = None) -> dict:
+    o = _outfit(role, i, palette)
+    o["skin"] = STICK_SKIN
+    return o
+
+
+def _outfit(role: str, i: int, palette: str | None = None) -> dict:
     sk = SKINS[(i * 3 + 1) % len(SKINS)]
     c = palette or COATS[i % len(COATS)]
     base = {"jacket": c, "pants": "#3b3f52", "boots": "#4a3426", "skin": sk}
@@ -311,14 +321,14 @@ def anchors(env: str, shop: dict | None = None) -> list[dict]:
 SHOTS = {
     # d = camera distance from C along -u, side = lateral offset, h = lens height, lh = look height, fov, dof cInf, push
     "wide": dict(d=10.5, side=3.0, h=2.3, lh=1.2, fov=42, dof=0, push=0.0022),
-    "medium": dict(d=5.6, side=1.6, h=1.68, lh=1.38, fov=38, dof=10, push=0.0025),
-    "close": dict(d=2.9, side=0.55, h=1.62, lh=1.5, fov=34, dof=13, push=0.003),
+    "medium": dict(d=5.6, side=1.6, h=1.68, lh=1.38, fov=38, dof=14, push=0.0025),
+    "close": dict(d=2.9, side=0.55, h=1.62, lh=1.5, fov=34, dof=18, push=0.003),
     "low": dict(d=6.2, side=-2.4, h=0.85, lh=1.5, fov=44, dof=6, push=0.0022),
     "high": dict(d=9.0, side=2.2, h=7.6, lh=0.6, fov=42, dof=0, push=0.0018),
-    "two_shot": dict(d=4.3, side=1.0, h=1.66, lh=1.42, fov=38, dof=9, push=0.0025),
+    "two_shot": dict(d=4.3, side=1.0, h=1.66, lh=1.42, fov=38, dof=12, push=0.0025),
     "insert": dict(d=1.6, side=0.25, h=1.55, lh=1.32, fov=34, dof=14, push=0.003),
     # pro angles (reference short: face-filling reaction shots, up-angles for power / panic, tilted frames for chaos)
-    "extreme": dict(d=1.75, side=0.18, h=1.6, lh=1.6, fov=30, dof=15, push=0.0035),
+    "extreme": dict(d=1.75, side=0.18, h=1.6, lh=1.6, fov=30, dof=20, push=0.0035),
     "worm": dict(d=3.6, side=0.9, h=0.32, lh=1.55, fov=50, dof=7, push=0.0028),
     "dutch": dict(d=4.6, side=1.3, h=1.55, lh=1.4, fov=40, dof=9, push=0.003, roll=0.16),
 }

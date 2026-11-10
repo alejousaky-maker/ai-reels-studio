@@ -1,0 +1,3172 @@
+{
+ "version": 1,
+ "title": "The Canal That Cut a Continent",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 2405,
+ "env": {
+  "preset": "canal",
+  "seed": 79,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "cap",
+   "name": "Captain",
+   "outfit": {
+    "jacket": "#f7f7fa",
+    "pants": "#1d2a50",
+    "boots": "#1d1b22",
+    "skin": "#f5c9a0",
+    "hat": "pilot",
+    "cap": "#f7f7fa",
+    "beard": "#5a3b2a",
+    "tie": "#1d2a50"
+   }
+  },
+  {
+   "id": "eng",
+   "name": "Engineer",
+   "outfit": {
+    "jacket": "#ff7a1a",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#8d5a3b",
+    "hat": "pith",
+    "cap": "#ffd23f",
+    "vest": "#d7ff3a",
+    "glasses": true
+   }
+  },
+  {
+   "id": "wk",
+   "name": "1914 worker",
+   "outfit": {
+    "jacket": "#b5653f",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ecd0b6",
+    "hat": "cap",
+    "cap": "#3b5b9a"
+   }
+  },
+  {
+   "id": "toll",
+   "name": "Toll man",
+   "outfit": {
+    "jacket": "#e8b83a",
+    "pants": "#3a3d47",
+    "boots": "#1d1b22",
+    "skin": "#ffe2c2",
+    "hat": "cap",
+    "cap": "#3a3d47",
+    "vest": "#ff7a1a"
+   }
+  },
+  {
+   "id": "extra0",
+   "name": "",
+   "outfit": {
+    "jacket": "#b5653f",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "hat": "cap",
+    "cap": "#3b5b9a"
+   }
+  },
+  {
+   "id": "extra1",
+   "name": "",
+   "outfit": {
+    "jacket": "#b5653f",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ecd0b6",
+    "hat": "cap",
+    "cap": "#3b5b9a"
+   }
+  },
+  {
+   "id": "extra2",
+   "name": "",
+   "outfit": {
+    "jacket": "#b5653f",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ffe2c2",
+    "hat": "cap",
+    "cap": "#3b5b9a"
+   }
+  },
+  {
+   "id": "extra3",
+   "name": "",
+   "outfit": {
+    "jacket": "#b5653f",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#c99067",
+    "hat": "cap",
+    "cap": "#3b5b9a"
+   }
+  },
+  {
+   "id": "extra4",
+   "name": "",
+   "outfit": {
+    "jacket": "#b5653f",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "hat": "cap",
+    "cap": "#3b5b9a"
+   }
+  },
+  {
+   "id": "extra5",
+   "name": "",
+   "outfit": {
+    "jacket": "#b5653f",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ecd0b6",
+    "hat": "cap",
+    "cap": "#3b5b9a"
+   }
+  },
+  {
+   "id": "extra6",
+   "name": "",
+   "outfit": {
+    "jacket": "#b5653f",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ffe2c2",
+    "hat": "cap",
+    "cap": "#3b5b9a"
+   }
+  },
+  {
+   "id": "extra7",
+   "name": "",
+   "outfit": {
+    "jacket": "#b5653f",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#c99067",
+    "hat": "cap",
+    "cap": "#3b5b9a"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 124,
+   "narration": "They spent over five billion dollars widening the Panama Canal, and the giant new ships still scrape by with barely any room on either wall.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      19.649,
+      2.3,
+      -8.03
+     ],
+     "lookAt": [
+      9.5,
+      1.2,
+      -4
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 0,
+     "position": [
+      15.589,
+      1.86,
+      -6.418
+     ],
+     "lookAt": [
+      9.5,
+      1.2,
+      -4
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 124
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7900,
+   "qualityNotes": "",
+   "pieces": [
+    {
+     "kind": "containership",
+     "x": 1.623,
+     "z": -3.212,
+     "scale": 0.55,
+     "y": -2.53,
+     "moveTo": [
+      -1.362,
+      -2.914
+     ],
+     "moveFrames": [
+      12,
+      111
+     ]
+    }
+   ]
+  },
+  {
+   "sceneId": "b01a",
+   "startFrame": 124,
+   "endFrame": 218,
+   "narration": "They spent over five billion dollars widening the Panama Canal, and the giant new ships still scrape by with barely any room on either wall.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 124,
+     "position": [
+      15.881,
+      0.85,
+      -6.115
+     ],
+     "lookAt": [
+      9.951,
+      1.5,
+      -3.111
+     ],
+     "fov": 44,
+     "roll": 0.0
+    },
+    {
+     "frame": 124,
+     "position": [
+      14.979,
+      0.85,
+      -7.894
+     ],
+     "lookAt": [
+      9.049,
+      1.5,
+      -4.889
+     ],
+     "fov": 44,
+     "roll": 0.0,
+     "dur": 94
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 6
+   },
+   "transitionIn": "cut",
+   "seed": 7937,
+   "qualityNotes": "",
+   "sub": true,
+   "pieces": [
+    {
+     "kind": "containership",
+     "x": 1.623,
+     "z": -3.212,
+     "scale": 0.55,
+     "y": -2.53,
+     "shake": 0.4
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparks",
+     "frame": 161,
+     "dur": 57,
+     "at": [
+      9.45,
+      1.2,
+      -4.498
+     ],
+     "size": 1.0
+    }
+   ]
+  },
+  {
+   "sceneId": "b01b",
+   "startFrame": 218,
+   "endFrame": 244,
+   "narration": "They spent over five billion dollars widening the Panama Canal, and the giant new ships still scrape by with barely any room on either wall.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": 9.5,
+     "z": -4.0,
+     "expr": "sweat",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 218,
+     "position": [
+      12.331,
+      1.62,
+      -4.836
+     ],
+     "lookAt": [
+      9.5,
+      1.5,
+      -4.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 218,
+     "position": [
+      11.199,
+      1.572,
+      -4.502
+     ],
+     "lookAt": [
+      9.5,
+      1.5,
+      -4.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 26
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7974,
+   "qualityNotes": "",
+   "sub": true
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 244,
+   "endFrame": 348,
+   "narration": "Back in nineteen fourteen, digging a ditch across the jungle connected two oceans and changed global trade forever.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "wk",
+     "x": -9.305,
+     "z": 10.208,
+     "expr": "stern",
+     "mode": "stand",
+     "holding": "shovel"
+    },
+    {
+     "castId": "extra0",
+     "x": -6.911,
+     "z": 7.795,
+     "mode": "stand",
+     "expr": "smile",
+     "holding": "shovel"
+    },
+    {
+     "castId": "extra1",
+     "x": -8.893,
+     "z": 6.052,
+     "mode": "stand",
+     "expr": "grin",
+     "holding": "shovel"
+    },
+    {
+     "castId": "extra2",
+     "x": -5.033,
+     "z": 6.061,
+     "mode": "stand",
+     "expr": "nervous",
+     "holding": "shovel"
+    },
+    {
+     "castId": "extra3",
+     "x": -10.454,
+     "z": 6.732,
+     "mode": "stand",
+     "expr": "neutral",
+     "holding": "shovel"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 244,
+     "position": [
+      -14.512,
+      2.3,
+      20.079
+     ],
+     "lookAt": [
+      -8.621,
+      1.2,
+      10.884
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 244,
+     "position": [
+      -17.27,
+      2.3,
+      18.311
+     ],
+     "lookAt": [
+      -11.379,
+      1.2,
+      9.116
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 104
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 7901,
+   "qualityNotes": "",
+   "look": "sepia",
+   "env": {
+    "preset": "canal",
+    "seed": 79,
+    "shop": null,
+    "variant": "dig"
+   },
+   "pieces": [
+    {
+     "kind": "steamshovel",
+     "x": -12.031,
+     "z": 7.72
+    }
+   ],
+   "fx": [
+    {
+     "kind": "puff",
+     "frame": 308,
+     "dur": 40,
+     "at": [
+      -9.305,
+      1.0,
+      10.208
+     ],
+     "size": 0.9
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "1914",
+     "frame": 247,
+     "dur": 98,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b02a",
+   "startFrame": 348,
+   "endFrame": 445,
+   "narration": "Back in nineteen fourteen, digging a ditch across the jungle connected two oceans and changed global trade forever.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "wk",
+     "x": -9.847,
+     "z": 10.046,
+     "expr": "grin",
+     "mode": "stand",
+     "pose": "up",
+     "holding": "shovel"
+    },
+    {
+     "castId": "extra4",
+     "x": -7.453,
+     "z": 7.632,
+     "mode": "stand",
+     "expr": "smile",
+     "holding": "shovel"
+    },
+    {
+     "castId": "extra5",
+     "x": -9.435,
+     "z": 5.889,
+     "mode": "stand",
+     "expr": "grin",
+     "holding": "shovel"
+    },
+    {
+     "castId": "extra6",
+     "x": -5.575,
+     "z": 5.898,
+     "mode": "stand",
+     "expr": "nervous",
+     "holding": "shovel"
+    },
+    {
+     "castId": "extra7",
+     "x": -10.997,
+     "z": 6.569,
+     "mode": "stand",
+     "expr": "neutral",
+     "holding": "shovel"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 348,
+     "position": [
+      -10.154,
+      1.62,
+      12.982
+     ],
+     "lookAt": [
+      -9.847,
+      1.5,
+      10.046
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 348,
+     "position": [
+      -10.031,
+      1.572,
+      11.808
+     ],
+     "lookAt": [
+      -9.847,
+      1.5,
+      10.046
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 97
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7938,
+   "qualityNotes": "",
+   "sub": true,
+   "look": "sepia",
+   "env": {
+    "preset": "canal",
+    "seed": 79,
+    "shop": null,
+    "variant": "dig"
+   },
+   "pieces": [
+    {
+     "kind": "steamshovel",
+     "x": -12.031,
+     "z": 7.72
+    }
+   ]
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 445,
+   "endFrame": 563,
+   "narration": "The original cost? Over twenty-five thousand worker lives lost to malaria and yellow fever in the brutal tropical mud.",
+   "light": "golden",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "wk",
+     "x": -0.16,
+     "z": 30.0,
+     "expr": "sleepy",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 445,
+     "position": [
+      -0.71,
+      1.62,
+      32.9
+     ],
+     "lookAt": [
+      -0.16,
+      1.5,
+      30.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 445,
+     "position": [
+      -0.49,
+      1.572,
+      31.74
+     ],
+     "lookAt": [
+      -0.16,
+      1.5,
+      30.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 118
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7902,
+   "qualityNotes": "",
+   "look": "sepia",
+   "sunEl": 18,
+   "sunAz": 150,
+   "env": {
+    "preset": "canal",
+    "seed": 79,
+    "shop": null,
+    "variant": "dig"
+   },
+   "pieces": [
+    {
+     "kind": "mosquito",
+     "x": 1.06,
+     "z": 28.84,
+     "y": 1.4,
+     "shake": 0.6
+    }
+   ]
+  },
+  {
+   "sceneId": "b03a",
+   "startFrame": 563,
+   "endFrame": 659,
+   "narration": "The original cost? Over twenty-five thousand worker lives lost to malaria and yellow fever in the brutal tropical mud.",
+   "light": "golden",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "wk",
+     "x": -0.084,
+     "z": 30.0,
+     "expr": "shock",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 563,
+     "position": [
+      0.096,
+      1.6,
+      31.75
+     ],
+     "lookAt": [
+      -0.084,
+      1.6,
+      30.0
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 615,
+     "cut": true,
+     "position": [
+      -0.264,
+      1.6,
+      31.75
+     ],
+     "lookAt": [
+      -0.084,
+      1.6,
+      30.0
+     ],
+     "fov": 30,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7939,
+   "qualityNotes": "",
+   "sub": true,
+   "look": "sepia",
+   "sunEl": 18,
+   "sunAz": 150,
+   "env": {
+    "preset": "canal",
+    "seed": 79,
+    "shop": null,
+    "variant": "dig"
+   },
+   "pieces": [
+    {
+     "kind": "mosquito",
+     "x": 1.396,
+     "z": 28.744,
+     "scale": 1.6,
+     "y": 1.5,
+     "shake": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 659,
+   "endFrame": 753,
+   "narration": "Fast forward a century, and cargo ships got so big they couldn't even fit through the old locks anymore.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": 9.5,
+     "z": -4.0,
+     "expr": "shock",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 659,
+     "position": [
+      13.172,
+      0.4,
+      -3.463
+     ],
+     "lookAt": [
+      9.5,
+      1.55,
+      -4.0
+     ],
+     "fov": 50,
+     "roll": 0.0
+    },
+    {
+     "frame": 659,
+     "position": [
+      13.172,
+      2.176,
+      -3.463
+     ],
+     "lookAt": [
+      9.5,
+      1.55,
+      -4.0
+     ],
+     "fov": 50,
+     "roll": 0.0,
+     "dur": 94
+    }
+   ],
+   "push": 0.0028,
+   "dof": {
+    "cInf": 7,
+    "focusActor": 0
+   },
+   "transitionIn": "zoom",
+   "seed": 7903,
+   "qualityNotes": "",
+   "pieces": [
+    {
+     "kind": "containership",
+     "x": 0.424,
+     "z": -3.092,
+     "scale": 0.7,
+     "y": -3.2199999999999998
+    }
+   ]
+  },
+  {
+   "sceneId": "b04a",
+   "startFrame": 753,
+   "endFrame": 837,
+   "narration": "Fast forward a century, and cargo ships got so big they couldn't even fit through the old locks anymore.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": 9.5,
+     "z": -4.0,
+     "expr": "broken",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 753,
+     "position": [
+      11.223,
+      1.6,
+      -4.353
+     ],
+     "lookAt": [
+      9.5,
+      1.6,
+      -4.0
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 753,
+     "position": [
+      10.534,
+      1.6,
+      -4.212
+     ],
+     "lookAt": [
+      9.5,
+      1.6,
+      -4.0
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 84
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7940,
+   "qualityNotes": "",
+   "sub": true,
+   "pieces": [
+    {
+     "kind": "containership",
+     "x": 0.424,
+     "z": -3.092,
+     "scale": 0.7,
+     "y": -3.2199999999999998
+    }
+   ]
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 837,
+   "endFrame": 941,
+   "narration": "So engineers launched a colossal project: brand new, gigantic concrete water elevators to lift floating cities.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": -9.668,
+     "z": 10.1,
+     "expr": "grin",
+     "mode": "stand",
+     "pose": "point"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 837,
+     "position": [
+      -14.095,
+      1.68,
+      14.141
+     ],
+     "lookAt": [
+      -10,
+      1.38,
+      10
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 837,
+     "position": [
+      -12.051,
+      1.68,
+      15.451
+     ],
+     "lookAt": [
+      -10,
+      1.38,
+      10
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 104
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7904,
+   "qualityNotes": "",
+   "env": {
+    "preset": "canal",
+    "seed": 79,
+    "shop": null,
+    "variant": "dig"
+   },
+   "pieces": [
+    {
+     "kind": "blueprint",
+     "x": -10.866,
+     "z": 8.467,
+     "label": "NEW LOCKS"
+    },
+    {
+     "kind": "mixer",
+     "x": -5.515,
+     "z": -3.741,
+     "moveTo": [
+      -8.389,
+      -4.603
+     ],
+     "moveFrames": [
+      847,
+      930
+     ]
+    }
+   ]
+  },
+  {
+   "sceneId": "b05a",
+   "startFrame": 941,
+   "endFrame": 1060,
+   "narration": "So engineers launched a colossal project: brand new, gigantic concrete water elevators to lift floating cities.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": -9.305,
+     "z": 10.208,
+     "expr": "starry",
+     "mode": "stand",
+     "pose": "up"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 941,
+     "position": [
+      -10.144,
+      0.4,
+      20.919
+     ],
+     "lookAt": [
+      -10,
+      1.2,
+      10
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 941,
+     "position": [
+      -10.144,
+      7.76,
+      20.919
+     ],
+     "lookAt": [
+      -10,
+      1.2,
+      10
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 119
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7941,
+   "qualityNotes": "",
+   "sub": true,
+   "env": {
+    "preset": "canal",
+    "seed": 79,
+    "shop": null,
+    "variant": "dig"
+   },
+   "pieces": [
+    {
+     "kind": "mixer",
+     "x": -11.724,
+     "z": 7.917
+    },
+    {
+     "kind": "mixer",
+     "x": -7.414,
+     "z": 9.21,
+     "mirror": true
+    }
+   ]
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 1060,
+   "endFrame": 1167,
+   "narration": "Instead of pumps, gravity does all the work, draining lake water to float ships uphill.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 1060,
+     "position": [
+      -3.0,
+      0.4,
+      40.5
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      30
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1060,
+     "position": [
+      -3.0,
+      7.76,
+      40.5
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      30
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 107
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7905,
+   "qualityNotes": "",
+   "pieces": [
+    {
+     "kind": "containership",
+     "x": 0.0,
+     "z": 22.084,
+     "scale": 0.55,
+     "y": -2.5,
+     "liftTo": 0.5,
+     "moveFrames": [
+      1076,
+      1167
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "splash",
+     "frame": 1087,
+     "dur": 45,
+     "at": [
+      1.4,
+      1.6,
+      27.5
+     ],
+     "size": 4.2
+    }
+   ]
+  },
+  {
+   "sceneId": "b06a",
+   "startFrame": 1167,
+   "endFrame": 1207,
+   "narration": "Instead of pumps, gravity does all the work, draining lake water to float ships uphill.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 1167,
+     "position": [
+      -3.33,
+      0.85,
+      35.84
+     ],
+     "lookAt": [
+      -0.93,
+      1.5,
+      29.64
+     ],
+     "fov": 44,
+     "roll": 0.0
+    },
+    {
+     "frame": 1167,
+     "position": [
+      -1.47,
+      0.85,
+      36.56
+     ],
+     "lookAt": [
+      0.93,
+      1.5,
+      30.36
+     ],
+     "fov": 44,
+     "roll": 0.0,
+     "dur": 40
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 6
+   },
+   "transitionIn": "cut",
+   "seed": 7942,
+   "qualityNotes": "",
+   "sub": true,
+   "pieces": [
+    {
+     "kind": "containership",
+     "x": 0.0,
+     "z": 22.084,
+     "scale": 0.55,
+     "y": -2.5,
+     "liftTo": 0.5,
+     "moveFrames": [
+      1173,
+      1207
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "splash",
+     "frame": 1185,
+     "dur": 22,
+     "at": [
+      1.4,
+      1.6,
+      27.5
+     ],
+     "size": 4.2
+    }
+   ]
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 1207,
+   "endFrame": 1330,
+   "narration": "The new ships are so wide they leave just a few meters on each side. There is zero room for bad steering.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": 9.5,
+     "z": -4.0,
+     "expr": "sweat",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1207,
+     "position": [
+      12.44,
+      1.62,
+      -3.741
+     ],
+     "lookAt": [
+      9.5,
+      1.5,
+      -4.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1207,
+     "position": [
+      11.264,
+      1.572,
+      -3.845
+     ],
+     "lookAt": [
+      9.5,
+      1.5,
+      -4.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 123
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7906,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "panel",
+    "text": "CLEARANCE|≈ 3 METERS EACH SIDE!"
+   }
+  },
+  {
+   "sceneId": "b07a",
+   "startFrame": 1330,
+   "endFrame": 1381,
+   "narration": "The new ships are so wide they leave just a few meters on each side. There is zero room for bad steering.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": 9.5,
+     "z": -4.0,
+     "expr": "broken",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1330,
+     "position": [
+      11.223,
+      1.6,
+      -4.353
+     ],
+     "lookAt": [
+      9.602,
+      1.6,
+      -5.035
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 1330,
+     "position": [
+      11.223,
+      1.6,
+      -4.353
+     ],
+     "lookAt": [
+      9.5,
+      1.6,
+      -4.0
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7943,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "panel",
+    "text": "CLEARANCE|≈ 3 METERS EACH SIDE!"
+   }
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 1381,
+   "endFrame": 1452,
+   "narration": "Powerful tugboats tie onto both ends to guide the giant beast through safely.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 1381,
+     "position": [
+      -15.891,
+      7.6,
+      17.284
+     ],
+     "lookAt": [
+      -11.198,
+      0.6,
+      9.296
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1381,
+     "position": [
+      -13.495,
+      7.6,
+      18.692
+     ],
+     "lookAt": [
+      -8.802,
+      0.6,
+      10.704
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 71
+    }
+   ],
+   "push": 0.0018,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7907,
+   "qualityNotes": "",
+   "pieces": [
+    {
+     "kind": "containership",
+     "x": -7.725,
+     "z": 2.417,
+     "scale": 0.55,
+     "y": -2.53,
+     "moveTo": [
+      -6.863,
+      -0.456
+     ],
+     "moveFrames": [
+      1388,
+      1444
+     ]
+    },
+    {
+     "kind": "tugboat",
+     "x": -17.684,
+     "z": 4.291,
+     "y": -1.4
+    },
+    {
+     "kind": "tugboat",
+     "x": -0.443,
+     "z": 9.464,
+     "y": -1.4,
+     "mirror": true
+    }
+   ]
+  },
+  {
+   "sceneId": "b08a",
+   "startFrame": 1452,
+   "endFrame": 1513,
+   "narration": "Powerful tugboats tie onto both ends to guide the giant beast through safely.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": -10.0,
+     "z": 10.0,
+     "expr": "grin",
+     "mode": "stand",
+     "pose": "point"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1452,
+     "position": [
+      -10.307,
+      1.62,
+      12.936
+     ],
+     "lookAt": [
+      -10.0,
+      1.5,
+      10.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1452,
+     "position": [
+      -10.184,
+      1.572,
+      11.762
+     ],
+     "lookAt": [
+      -10.0,
+      1.5,
+      10.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 61
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7944,
+   "qualityNotes": "",
+   "sub": true
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 1513,
+   "endFrame": 1630,
+   "narration": "The funny part? The canal runs on rainwater, so when a drought hits, ships pay millions just to skip the line.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": 0.0,
+     "z": 30.0,
+     "expr": "nervous",
+     "mode": "stand",
+     "pose": "shrug"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1513,
+     "position": [
+      -1.65,
+      1.805,
+      35.775
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      30
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1513,
+     "position": [
+      -3.0,
+      2.3,
+      40.5
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      30
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 117
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7908,
+   "qualityNotes": "",
+   "env": {
+    "preset": "canal",
+    "seed": 79,
+    "shop": null,
+    "variant": "dry"
+   }
+  },
+  {
+   "sceneId": "b09a",
+   "startFrame": 1630,
+   "endFrame": 1703,
+   "narration": "The funny part? The canal runs on rainwater, so when a drought hits, ships pay millions just to skip the line.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": 0.0,
+     "z": 30.0,
+     "expr": "grin",
+     "mode": "stand",
+     "holding": "cash"
+    },
+    {
+     "castId": "toll",
+     "x": -0.72,
+     "z": 29.1,
+     "expr": "starry",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1630,
+     "position": [
+      1.874,
+      1.66,
+      33.997
+     ],
+     "lookAt": [
+      0.0,
+      1.42,
+      30.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1630,
+     "position": [
+      0.082,
+      1.66,
+      34.414
+     ],
+     "lookAt": [
+      0.0,
+      1.42,
+      30.0
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 73
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7945,
+   "qualityNotes": "",
+   "sub": true,
+   "env": {
+    "preset": "canal",
+    "seed": 79,
+    "shop": null,
+    "variant": "dry"
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 1674,
+     "dur": 29,
+     "at": [
+      -0.3,
+      2.28,
+      29.1
+     ],
+     "size": 0.42,
+     "product": "ticket"
+    },
+    {
+     "kind": "money",
+     "frame": 1646,
+     "dur": 57,
+     "at": [
+      0.0,
+      1.4,
+      30.6
+     ],
+     "size": 3.2
+    }
+   ]
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 1703,
+   "endFrame": 1887,
+   "narration": "Around forty percent of all US container traffic squeezes through this exact tropical bottleneck.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 1703,
+     "position": [
+      20.246,
+      2.3,
+      -2.06
+     ],
+     "lookAt": [
+      9.5,
+      1.2,
+      -4
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1804,
+     "cut": true,
+     "position": [
+      14.913,
+      1.68,
+      -6.149
+     ],
+     "lookAt": [
+      9.5,
+      1.38,
+      -4
+     ],
+     "fov": 38,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "zoom",
+   "seed": 7909,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "world"
+   }
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 1887,
+   "endFrame": 2090,
+   "narration": "Instead of sailing all the way around South America, you cut about eight thousand miles off the trip in one afternoon.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 1887,
+     "position": [
+      -10.144,
+      2.3,
+      20.919
+     ],
+     "lookAt": [
+      -10,
+      1.2,
+      10
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1998,
+     "cut": true,
+     "position": [
+      -13.142,
+      1.68,
+      14.904
+     ],
+     "lookAt": [
+      -10,
+      1.38,
+      10
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7910,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "panama"
+   }
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 2090,
+   "endFrame": 2168,
+   "narration": "Humanity literally cut a continent in half so your TV could arrive faster.",
+   "light": "day",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": 3.122,
+     "z": 0.271,
+     "expr": "starry",
+     "mode": "stand",
+     "pose": "up"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 2090,
+     "position": [
+      3.394,
+      1.68,
+      6.194
+     ],
+     "lookAt": [
+      2.8,
+      1.38,
+      0.4
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 2090,
+     "position": [
+      3.156,
+      1.56,
+      3.876
+     ],
+     "lookAt": [
+      2.8,
+      1.38,
+      0.4
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 78
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 7911,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "apartment",
+    "seed": 79,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "tv",
+     "x": 0.733,
+     "z": -0.217,
+     "label": "~game"
+    },
+    {
+     "kind": "cardbox",
+     "x": 3.152,
+     "z": -0.915
+    }
+   ]
+  },
+  {
+   "sceneId": "b12a",
+   "startFrame": 2168,
+   "endFrame": 2220,
+   "narration": "Humanity literally cut a continent in half so your TV could arrive faster.",
+   "light": "day",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": 2.878,
+     "z": 0.369,
+     "expr": "starry",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 2168,
+     "position": [
+      3.695,
+      1.6,
+      1.927
+     ],
+     "lookAt": [
+      2.878,
+      1.6,
+      0.369
+     ],
+     "fov": 30,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7948,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "apartment",
+    "seed": 79,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "tv",
+     "x": 0.733,
+     "z": -0.217,
+     "label": "~game"
+    },
+    {
+     "kind": "cardbox",
+     "x": 3.152,
+     "z": -0.915
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 2187,
+     "dur": 33,
+     "at": [
+      3.013,
+      1.891,
+      0.315
+     ],
+     "size": 0.23445554337723234
+    }
+   ]
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 2220,
+   "endFrame": 2311,
+   "narration": "Send this to anyone who loves engineering marvels.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 2220,
+     "position": [
+      20.246,
+      0.4,
+      -2.06
+     ],
+     "lookAt": [
+      9.5,
+      1.2,
+      -4
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 2220,
+     "position": [
+      20.246,
+      7.76,
+      -2.06
+     ],
+     "lookAt": [
+      9.5,
+      1.2,
+      -4
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 91
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 7912,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150,
+   "pieces": [
+    {
+     "kind": "containership",
+     "x": -9.704,
+     "z": -2.08,
+     "scale": 0.5,
+     "y": -2.3
+    }
+   ]
+  },
+  {
+   "sceneId": "b14",
+   "startFrame": 2311,
+   "endFrame": 2405,
+   "narration": "Hit follow for more megaproject breakdowns.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 2311,
+     "position": [
+      -12.459,
+      2.3,
+      8.957
+     ],
+     "lookAt": [
+      -3,
+      1.2,
+      3.5
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 2350,
+     "dur": 24,
+     "position": [
+      -8.045,
+      1.68,
+      6.41
+     ],
+     "lookAt": [
+      -3,
+      1.38,
+      3.5
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 7913,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "outro"
+   },
+   "env": {
+    "preset": "shops",
+    "seed": 79,
+    "shop": null
+   }
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": true,
+  "words": [
+   {
+    "w": "They",
+    "s": 0.08,
+    "e": 0.349
+   },
+   {
+    "w": "spent",
+    "s": 0.359,
+    "e": 0.698
+   },
+   {
+    "w": "over",
+    "s": 0.708,
+    "e": 0.977
+   },
+   {
+    "w": "five",
+    "s": 0.987,
+    "e": 1.256
+   },
+   {
+    "w": "billion",
+    "s": 1.266,
+    "e": 1.745
+   },
+   {
+    "w": "dollars",
+    "s": 1.755,
+    "e": 2.233
+   },
+   {
+    "w": "widening",
+    "s": 2.243,
+    "e": 2.791
+   },
+   {
+    "w": "the",
+    "s": 2.801,
+    "e": 3.0
+   },
+   {
+    "w": "Panama",
+    "s": 3.01,
+    "e": 3.419
+   },
+   {
+    "w": "Canal,",
+    "s": 3.429,
+    "e": 3.768
+   },
+   {
+    "w": "and",
+    "s": 3.778,
+    "e": 3.977
+   },
+   {
+    "w": "the",
+    "s": 3.987,
+    "e": 4.187
+   },
+   {
+    "w": "giant",
+    "s": 4.197,
+    "e": 4.535
+   },
+   {
+    "w": "new",
+    "s": 4.545,
+    "e": 4.745
+   },
+   {
+    "w": "ships",
+    "s": 4.755,
+    "e": 5.094
+   },
+   {
+    "w": "still",
+    "s": 5.104,
+    "e": 5.442
+   },
+   {
+    "w": "scrape",
+    "s": 5.452,
+    "e": 5.861,
+    "hot": true
+   },
+   {
+    "w": "by",
+    "s": 5.871,
+    "e": 6.001
+   },
+   {
+    "w": "with",
+    "s": 6.011,
+    "e": 6.28
+   },
+   {
+    "w": "barely",
+    "s": 6.29,
+    "e": 6.698
+   },
+   {
+    "w": "any",
+    "s": 6.708,
+    "e": 6.908
+   },
+   {
+    "w": "room",
+    "s": 6.918,
+    "e": 7.187
+   },
+   {
+    "w": "on",
+    "s": 7.197,
+    "e": 7.326
+   },
+   {
+    "w": "either",
+    "s": 7.336,
+    "e": 7.745
+   },
+   {
+    "w": "wall.",
+    "s": 7.755,
+    "e": 8.024
+   },
+   {
+    "w": "Back",
+    "s": 8.224,
+    "e": 8.483
+   },
+   {
+    "w": "in",
+    "s": 8.493,
+    "e": 8.618
+   },
+   {
+    "w": "nineteen",
+    "s": 8.628,
+    "e": 9.156
+   },
+   {
+    "w": "fourteen,",
+    "s": 9.166,
+    "e": 9.694
+   },
+   {
+    "w": "digging",
+    "s": 9.704,
+    "e": 10.164
+   },
+   {
+    "w": "a",
+    "s": 10.174,
+    "e": 10.299
+   },
+   {
+    "w": "ditch",
+    "s": 10.309,
+    "e": 10.635,
+    "hot": true
+   },
+   {
+    "w": "across",
+    "s": 10.645,
+    "e": 11.039
+   },
+   {
+    "w": "the",
+    "s": 11.049,
+    "e": 11.24
+   },
+   {
+    "w": "jungle",
+    "s": 11.25,
+    "e": 11.644
+   },
+   {
+    "w": "connected",
+    "s": 11.654,
+    "e": 12.249
+   },
+   {
+    "w": "two",
+    "s": 12.259,
+    "e": 12.451
+   },
+   {
+    "w": "oceans",
+    "s": 12.461,
+    "e": 12.854
+   },
+   {
+    "w": "and",
+    "s": 12.864,
+    "e": 13.056
+   },
+   {
+    "w": "changed",
+    "s": 13.066,
+    "e": 13.527
+   },
+   {
+    "w": "global",
+    "s": 13.537,
+    "e": 13.93
+   },
+   {
+    "w": "trade",
+    "s": 13.94,
+    "e": 14.267
+   },
+   {
+    "w": "forever.",
+    "s": 14.277,
+    "e": 14.737
+   },
+   {
+    "w": "The",
+    "s": 14.917,
+    "e": 15.017
+   },
+   {
+    "w": "original",
+    "s": 15.017,
+    "e": 15.437
+   },
+   {
+    "w": "cost?",
+    "s": 15.437,
+    "e": 15.817
+   },
+   {
+    "w": "Over",
+    "s": 16.22,
+    "e": 16.4
+   },
+   {
+    "w": "twenty-five",
+    "s": 16.4,
+    "e": 17.02
+   },
+   {
+    "w": "thousand",
+    "s": 17.02,
+    "e": 17.48
+   },
+   {
+    "w": "worker",
+    "s": 17.48,
+    "e": 17.8
+   },
+   {
+    "w": "lives",
+    "s": 17.8,
+    "e": 18.22
+   },
+   {
+    "w": "lost",
+    "s": 18.22,
+    "e": 18.6
+   },
+   {
+    "w": "to",
+    "s": 18.6,
+    "e": 18.82
+   },
+   {
+    "w": "malaria",
+    "s": 18.82,
+    "e": 19.12
+   },
+   {
+    "w": "and",
+    "s": 19.12,
+    "e": 19.52
+   },
+   {
+    "w": "yellow",
+    "s": 19.52,
+    "e": 19.8
+   },
+   {
+    "w": "fever",
+    "s": 19.8,
+    "e": 20.24
+   },
+   {
+    "w": "in",
+    "s": 20.24,
+    "e": 20.5
+   },
+   {
+    "w": "the",
+    "s": 20.5,
+    "e": 20.58
+   },
+   {
+    "w": "brutal",
+    "s": 20.58,
+    "e": 20.88
+   },
+   {
+    "w": "tropical",
+    "s": 20.88,
+    "e": 21.34
+   },
+   {
+    "w": "mud.",
+    "s": 21.34,
+    "e": 21.7
+   },
+   {
+    "w": "Fast",
+    "s": 22.059,
+    "e": 22.323
+   },
+   {
+    "w": "forward",
+    "s": 22.333,
+    "e": 22.803
+   },
+   {
+    "w": "a",
+    "s": 22.813,
+    "e": 22.94
+   },
+   {
+    "w": "century,",
+    "s": 22.95,
+    "e": 23.419
+   },
+   {
+    "w": "and",
+    "s": 23.429,
+    "e": 23.625
+   },
+   {
+    "w": "cargo",
+    "s": 23.635,
+    "e": 23.968
+   },
+   {
+    "w": "ships",
+    "s": 23.978,
+    "e": 24.31
+   },
+   {
+    "w": "got",
+    "s": 24.32,
+    "e": 24.516
+   },
+   {
+    "w": "so",
+    "s": 24.526,
+    "e": 24.653
+   },
+   {
+    "w": "big",
+    "s": 24.663,
+    "e": 24.859
+   },
+   {
+    "w": "they",
+    "s": 24.869,
+    "e": 25.133
+   },
+   {
+    "w": "couldn't",
+    "s": 25.143,
+    "e": 25.613
+   },
+   {
+    "w": "even",
+    "s": 25.623,
+    "e": 25.887
+   },
+   {
+    "w": "fit",
+    "s": 25.897,
+    "e": 26.092
+   },
+   {
+    "w": "through",
+    "s": 26.102,
+    "e": 26.572
+   },
+   {
+    "w": "the",
+    "s": 26.582,
+    "e": 26.778
+   },
+   {
+    "w": "old",
+    "s": 26.788,
+    "e": 26.983
+   },
+   {
+    "w": "locks",
+    "s": 26.993,
+    "e": 27.326
+   },
+   {
+    "w": "anymore.",
+    "s": 27.336,
+    "e": 27.806
+   },
+   {
+    "w": "So",
+    "s": 27.986,
+    "e": 28.146
+   },
+   {
+    "w": "engineers",
+    "s": 28.146,
+    "e": 28.626
+   },
+   {
+    "w": "launched",
+    "s": 28.626,
+    "e": 29.206
+   },
+   {
+    "w": "a",
+    "s": 29.206,
+    "e": 29.386
+   },
+   {
+    "w": "colossal",
+    "s": 29.386,
+    "e": 29.926
+   },
+   {
+    "w": "project:",
+    "s": 29.926,
+    "e": 30.526
+   },
+   {
+    "w": "brand",
+    "s": 30.846,
+    "e": 31.026
+   },
+   {
+    "w": "new,",
+    "s": 31.026,
+    "e": 31.406
+   },
+   {
+    "w": "gigantic",
+    "s": 31.406,
+    "e": 32.206
+   },
+   {
+    "w": "concrete",
+    "s": 32.206,
+    "e": 32.786
+   },
+   {
+    "w": "water",
+    "s": 32.786,
+    "e": 33.106
+   },
+   {
+    "w": "elevators",
+    "s": 33.106,
+    "e": 33.746
+   },
+   {
+    "w": "to",
+    "s": 33.746,
+    "e": 33.946
+   },
+   {
+    "w": "lift",
+    "s": 33.946,
+    "e": 34.146
+   },
+   {
+    "w": "floating",
+    "s": 34.146,
+    "e": 34.506
+   },
+   {
+    "w": "cities.",
+    "s": 34.506,
+    "e": 34.966
+   },
+   {
+    "w": "Instead",
+    "s": 35.43,
+    "e": 35.69
+   },
+   {
+    "w": "of",
+    "s": 35.69,
+    "e": 35.87
+   },
+   {
+    "w": "pumps,",
+    "s": 35.87,
+    "e": 36.15
+   },
+   {
+    "w": "gravity",
+    "s": 36.29,
+    "e": 36.61,
+    "hot": true
+   },
+   {
+    "w": "does",
+    "s": 36.61,
+    "e": 36.89
+   },
+   {
+    "w": "all",
+    "s": 36.89,
+    "e": 37.19
+   },
+   {
+    "w": "the",
+    "s": 37.19,
+    "e": 37.35
+   },
+   {
+    "w": "work,",
+    "s": 37.35,
+    "e": 37.67
+   },
+   {
+    "w": "draining",
+    "s": 37.83,
+    "e": 38.19
+   },
+   {
+    "w": "lake",
+    "s": 38.19,
+    "e": 38.45
+   },
+   {
+    "w": "water",
+    "s": 38.45,
+    "e": 38.77
+   },
+   {
+    "w": "to",
+    "s": 38.77,
+    "e": 38.97
+   },
+   {
+    "w": "float",
+    "s": 38.97,
+    "e": 39.21
+   },
+   {
+    "w": "ships",
+    "s": 39.21,
+    "e": 39.57
+   },
+   {
+    "w": "uphill.",
+    "s": 39.57,
+    "e": 39.85,
+    "hot": true
+   },
+   {
+    "w": "The",
+    "s": 40.321,
+    "e": 40.401
+   },
+   {
+    "w": "new",
+    "s": 40.401,
+    "e": 40.541
+   },
+   {
+    "w": "ships",
+    "s": 40.541,
+    "e": 40.821
+   },
+   {
+    "w": "are",
+    "s": 40.821,
+    "e": 41.021
+   },
+   {
+    "w": "so",
+    "s": 41.021,
+    "e": 41.281
+   },
+   {
+    "w": "wide",
+    "s": 41.281,
+    "e": 41.701
+   },
+   {
+    "w": "they",
+    "s": 41.701,
+    "e": 41.941
+   },
+   {
+    "w": "leave",
+    "s": 41.941,
+    "e": 42.181
+   },
+   {
+    "w": "just",
+    "s": 42.181,
+    "e": 42.401
+   },
+   {
+    "w": "a",
+    "s": 42.401,
+    "e": 42.581
+   },
+   {
+    "w": "few",
+    "s": 42.581,
+    "e": 42.761
+   },
+   {
+    "w": "meters",
+    "s": 42.761,
+    "e": 43.001
+   },
+   {
+    "w": "on",
+    "s": 43.001,
+    "e": 43.261
+   },
+   {
+    "w": "each",
+    "s": 43.261,
+    "e": 43.461
+   },
+   {
+    "w": "side.",
+    "s": 43.461,
+    "e": 43.821
+   },
+   {
+    "w": "There",
+    "s": 44.112,
+    "e": 44.232
+   },
+   {
+    "w": "is",
+    "s": 44.232,
+    "e": 44.372
+   },
+   {
+    "w": "zero",
+    "s": 44.372,
+    "e": 44.672
+   },
+   {
+    "w": "room",
+    "s": 44.672,
+    "e": 44.972
+   },
+   {
+    "w": "for",
+    "s": 44.972,
+    "e": 45.172
+   },
+   {
+    "w": "bad",
+    "s": 45.172,
+    "e": 45.392
+   },
+   {
+    "w": "steering.",
+    "s": 45.392,
+    "e": 45.772
+   },
+   {
+    "w": "Powerful",
+    "s": 46.111,
+    "e": 46.491
+   },
+   {
+    "w": "tugboats",
+    "s": 46.491,
+    "e": 47.151
+   },
+   {
+    "w": "tie",
+    "s": 47.151,
+    "e": 47.411
+   },
+   {
+    "w": "onto",
+    "s": 47.411,
+    "e": 47.631
+   },
+   {
+    "w": "both",
+    "s": 47.631,
+    "e": 47.871
+   },
+   {
+    "w": "ends",
+    "s": 47.871,
+    "e": 48.251
+   },
+   {
+    "w": "to",
+    "s": 48.251,
+    "e": 48.431
+   },
+   {
+    "w": "guide",
+    "s": 48.431,
+    "e": 48.651
+   },
+   {
+    "w": "the",
+    "s": 48.651,
+    "e": 48.831
+   },
+   {
+    "w": "giant",
+    "s": 48.831,
+    "e": 49.131
+   },
+   {
+    "w": "beast",
+    "s": 49.131,
+    "e": 49.411
+   },
+   {
+    "w": "through",
+    "s": 49.411,
+    "e": 49.731
+   },
+   {
+    "w": "safely.",
+    "s": 49.731,
+    "e": 50.111
+   },
+   {
+    "w": "The",
+    "s": 50.515,
+    "e": 50.595
+   },
+   {
+    "w": "funny",
+    "s": 50.595,
+    "e": 50.835
+   },
+   {
+    "w": "part?",
+    "s": 50.835,
+    "e": 51.135
+   },
+   {
+    "w": "The",
+    "s": 51.522,
+    "e": 51.602
+   },
+   {
+    "w": "canal",
+    "s": 51.602,
+    "e": 51.862
+   },
+   {
+    "w": "runs",
+    "s": 51.862,
+    "e": 52.242
+   },
+   {
+    "w": "on",
+    "s": 52.242,
+    "e": 52.502
+   },
+   {
+    "w": "rainwater,",
+    "s": 52.502,
+    "e": 53.122
+   },
+   {
+    "w": "so",
+    "s": 53.122,
+    "e": 53.382
+   },
+   {
+    "w": "when",
+    "s": 53.382,
+    "e": 53.502
+   },
+   {
+    "w": "a",
+    "s": 53.502,
+    "e": 53.582
+   },
+   {
+    "w": "drought",
+    "s": 53.582,
+    "e": 53.802
+   },
+   {
+    "w": "hits,",
+    "s": 53.802,
+    "e": 54.242
+   },
+   {
+    "w": "ships",
+    "s": 54.382,
+    "e": 54.662
+   },
+   {
+    "w": "pay",
+    "s": 54.662,
+    "e": 54.922
+   },
+   {
+    "w": "millions",
+    "s": 54.922,
+    "e": 55.302,
+    "hot": true
+   },
+   {
+    "w": "just",
+    "s": 55.302,
+    "e": 55.642
+   },
+   {
+    "w": "to",
+    "s": 55.642,
+    "e": 55.862
+   },
+   {
+    "w": "skip",
+    "s": 55.862,
+    "e": 56.082,
+    "hot": true
+   },
+   {
+    "w": "the",
+    "s": 56.082,
+    "e": 56.282
+   },
+   {
+    "w": "line.",
+    "s": 56.282,
+    "e": 56.542
+   },
+   {
+    "w": "Around",
+    "s": 56.858,
+    "e": 57.078
+   },
+   {
+    "w": "forty",
+    "s": 57.078,
+    "e": 57.518
+   },
+   {
+    "w": "percent",
+    "s": 57.518,
+    "e": 57.898
+   },
+   {
+    "w": "of",
+    "s": 57.898,
+    "e": 58.158
+   },
+   {
+    "w": "all",
+    "s": 58.158,
+    "e": 58.458
+   },
+   {
+    "w": "US",
+    "s": 58.458,
+    "e": 58.918
+   },
+   {
+    "w": "container",
+    "s": 58.918,
+    "e": 59.438
+   },
+   {
+    "w": "traffic",
+    "s": 59.438,
+    "e": 59.878
+   },
+   {
+    "w": "squeezes",
+    "s": 59.878,
+    "e": 60.578
+   },
+   {
+    "w": "through",
+    "s": 60.578,
+    "e": 60.798
+   },
+   {
+    "w": "this",
+    "s": 60.798,
+    "e": 61.098
+   },
+   {
+    "w": "exact",
+    "s": 61.098,
+    "e": 61.478
+   },
+   {
+    "w": "tropical",
+    "s": 61.478,
+    "e": 62.078
+   },
+   {
+    "w": "bottleneck.",
+    "s": 62.078,
+    "e": 62.838
+   },
+   {
+    "w": "Instead",
+    "s": 63.006,
+    "e": 63.306
+   },
+   {
+    "w": "of",
+    "s": 63.306,
+    "e": 63.466
+   },
+   {
+    "w": "sailing",
+    "s": 63.466,
+    "e": 63.826
+   },
+   {
+    "w": "all",
+    "s": 63.826,
+    "e": 64.166
+   },
+   {
+    "w": "the",
+    "s": 64.166,
+    "e": 64.346
+   },
+   {
+    "w": "way",
+    "s": 64.346,
+    "e": 64.546
+   },
+   {
+    "w": "around",
+    "s": 64.546,
+    "e": 64.866
+   },
+   {
+    "w": "South",
+    "s": 64.866,
+    "e": 65.246
+   },
+   {
+    "w": "America,",
+    "s": 65.246,
+    "e": 65.706
+   },
+   {
+    "w": "you",
+    "s": 66.066,
+    "e": 66.126
+   },
+   {
+    "w": "cut",
+    "s": 66.126,
+    "e": 66.306
+   },
+   {
+    "w": "about",
+    "s": 66.306,
+    "e": 66.546
+   },
+   {
+    "w": "eight",
+    "s": 66.546,
+    "e": 66.886
+   },
+   {
+    "w": "thousand",
+    "s": 66.886,
+    "e": 67.426
+   },
+   {
+    "w": "miles",
+    "s": 67.426,
+    "e": 67.726
+   },
+   {
+    "w": "off",
+    "s": 67.726,
+    "e": 68.106
+   },
+   {
+    "w": "the",
+    "s": 68.106,
+    "e": 68.246
+   },
+   {
+    "w": "trip",
+    "s": 68.246,
+    "e": 68.466
+   },
+   {
+    "w": "in",
+    "s": 68.466,
+    "e": 68.666
+   },
+   {
+    "w": "one",
+    "s": 68.666,
+    "e": 68.846
+   },
+   {
+    "w": "afternoon.",
+    "s": 68.846,
+    "e": 69.386
+   },
+   {
+    "w": "Humanity",
+    "s": 69.772,
+    "e": 70.312
+   },
+   {
+    "w": "literally",
+    "s": 70.312,
+    "e": 70.632
+   },
+   {
+    "w": "cut",
+    "s": 70.632,
+    "e": 70.992
+   },
+   {
+    "w": "a",
+    "s": 70.992,
+    "e": 71.072
+   },
+   {
+    "w": "continent",
+    "s": 71.072,
+    "e": 71.412
+   },
+   {
+    "w": "in",
+    "s": 71.412,
+    "e": 71.612
+   },
+   {
+    "w": "half",
+    "s": 71.612,
+    "e": 71.892
+   },
+   {
+    "w": "so",
+    "s": 71.892,
+    "e": 72.172
+   },
+   {
+    "w": "your",
+    "s": 72.172,
+    "e": 72.332
+   },
+   {
+    "w": "TV",
+    "s": 72.332,
+    "e": 72.712
+   },
+   {
+    "w": "could",
+    "s": 72.712,
+    "e": 72.972
+   },
+   {
+    "w": "arrive",
+    "s": 72.972,
+    "e": 73.232,
+    "hot": true
+   },
+   {
+    "w": "faster.",
+    "s": 73.232,
+    "e": 73.792
+   },
+   {
+    "w": "Send",
+    "s": 74.111,
+    "e": 74.291
+   },
+   {
+    "w": "this",
+    "s": 74.291,
+    "e": 74.471
+   },
+   {
+    "w": "to",
+    "s": 74.471,
+    "e": 74.631
+   },
+   {
+    "w": "anyone",
+    "s": 74.631,
+    "e": 75.011
+   },
+   {
+    "w": "who",
+    "s": 75.011,
+    "e": 75.251
+   },
+   {
+    "w": "loves",
+    "s": 75.251,
+    "e": 75.531
+   },
+   {
+    "w": "engineering",
+    "s": 75.531,
+    "e": 76.211
+   },
+   {
+    "w": "marvels.",
+    "s": 76.211,
+    "e": 76.911
+   },
+   {
+    "w": "Hit",
+    "s": 77.139,
+    "e": 77.318
+   },
+   {
+    "w": "follow",
+    "s": 77.328,
+    "e": 77.696
+   },
+   {
+    "w": "for",
+    "s": 77.706,
+    "e": 77.885
+   },
+   {
+    "w": "more",
+    "s": 77.895,
+    "e": 78.138
+   },
+   {
+    "w": "megaproject",
+    "s": 78.148,
+    "e": 78.831
+   },
+   {
+    "w": "breakdowns.",
+    "s": 78.841,
+    "e": 79.462
+   }
+  ]
+ },
+ "style": "storybook",
+ "graphics": "full"
+}

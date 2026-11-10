@@ -21,7 +21,8 @@ from . import dsp_bridge as D
 
 SR = 48000
 VOICES = {
-    "en": [("am_eric*0.6+am_fenrir*0.4", "Shorts narrator — energetic young male (EN-US blend)"), ("am_eric", "Eric — bright male (EN-US)"),
+    "en": [("am_eric*0.7+am_fenrir*0.3", "Story narrator — bright expressive male, RicksClips-like (EN-US blend)"),
+           ("am_eric*0.6+am_fenrir*0.4", "Shorts narrator — energetic young male (EN-US blend)"), ("am_eric", "Eric — bright male (EN-US)"),
            ("af_heart", "Heart — warm female (EN-US)"), ("af_bella", "Bella — bright female (EN-US)"), ("am_michael", "Michael — calm male (EN-US)"),
            ("am_fenrir", "Fenrir — deep male (EN-US)"), ("bm_george", "George — British male"), ("bf_emma", "Emma — British female")],
     "es": [("ef_dora", "Dora — voz femenina (ES)"), ("em_alex", "Alex — voz masculina (ES)"), ("em_santa", "Santa — voz masculina grave (ES)")],

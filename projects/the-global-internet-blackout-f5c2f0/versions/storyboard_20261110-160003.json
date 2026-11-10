@@ -1,0 +1,2486 @@
+{
+ "version": 1,
+ "title": "The Global Internet Blackout",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1495,
+ "env": {
+  "preset": "gameroom",
+  "seed": 61,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "me",
+   "name": "Esports gamer",
+   "outfit": {
+    "jacket": "#1b3a8a",
+    "pants": "#1d1b22",
+    "boots": "#f2efe8",
+    "skin": "#f5c9a0",
+    "hat": "headband",
+    "cap": "#e2453c",
+    "hair": "#3a2a1e",
+    "jersey": "#ffd23f",
+    "headset": "#e2453c"
+   }
+  },
+  {
+   "id": "tech",
+   "name": "Technician",
+   "outfit": {
+    "jacket": "#f28c28",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#8d5a3b",
+    "hat": "pith",
+    "cap": "#ffd23f",
+    "pockets": true
+   }
+  },
+  {
+   "id": "extra0",
+   "name": "",
+   "outfit": {
+    "jacket": "#f28c28",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#8d5a3b",
+    "hat": "pith",
+    "cap": "#ffd23f",
+    "pockets": true
+   }
+  },
+  {
+   "id": "extra1",
+   "name": "",
+   "outfit": {
+    "jacket": "#f28c28",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#ecd0b6",
+    "hat": "pith",
+    "cap": "#ffd23f",
+    "pockets": true
+   }
+  },
+  {
+   "id": "extra2",
+   "name": "",
+   "outfit": {
+    "jacket": "#f28c28",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#ffe2c2",
+    "hat": "pith",
+    "cap": "#ffd23f",
+    "pockets": true
+   }
+  },
+  {
+   "id": "extra3",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#8d5a3b",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "extra4",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#ecd0b6",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "extra5",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#ffe2c2",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "extra6",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#c99067",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "extra7",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#8d5a3b",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 68,
+   "narration": "The second GTA 6 unlocks at midnight, a hundred million downloads will literally melt the global internet.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -1.45,
+     "z": -0.2,
+     "expr": "sweat",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      -1.336,
+      1.62,
+      2.75
+     ],
+     "lookAt": [
+      0.236,
+      1.5,
+      0.251
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 0,
+     "position": [
+      -1.336,
+      1.62,
+      2.75
+     ],
+     "lookAt": [
+      -1.45,
+      1.5,
+      -0.2
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6100,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "panel",
+    "text": "11:59:59 PM"
+   },
+   "sunEl": 68,
+   "sunAz": 35
+  },
+  {
+   "sceneId": "b01a",
+   "startFrame": 68,
+   "endFrame": 143,
+   "narration": "The second GTA 6 unlocks at midnight, a hundred million downloads will literally melt the global internet.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 68,
+     "position": [
+      -8.45,
+      2.3,
+      12.05
+     ],
+     "lookAt": [
+      -5.45,
+      1.2,
+      3.05
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 68,
+     "position": [
+      -5.75,
+      2.3,
+      12.95
+     ],
+     "lookAt": [
+      -2.75,
+      1.2,
+      3.95
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 75
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6137,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "panel",
+    "text": "11:59:59 PM"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "datacenter",
+    "seed": 61,
+    "shop": null,
+    "variant": "red"
+   },
+   "textOverlays": [
+    {
+     "text": "100,000,000",
+     "frame": 71,
+     "dur": 69,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b01b",
+   "startFrame": 143,
+   "endFrame": 192,
+   "narration": "The second GTA 6 unlocks at midnight, a hundred million downloads will literally melt the global internet.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "tech",
+     "x": -4.1,
+     "z": 3.5,
+     "expr": "shock",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0,
+     "holding": "extinguisher"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 143,
+     "position": [
+      -6.5,
+      0.85,
+      9.7
+     ],
+     "lookAt": [
+      -4.1,
+      1.5,
+      3.5
+     ],
+     "fov": 44,
+     "roll": 0.0
+    },
+    {
+     "frame": 143,
+     "position": [
+      -5.54,
+      1.11,
+      7.22
+     ],
+     "lookAt": [
+      -4.1,
+      1.5,
+      3.5
+     ],
+     "fov": 44,
+     "roll": 0.0,
+     "dur": 49
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 6,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6174,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "panel",
+    "text": "11:59:59 PM"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "datacenter",
+    "seed": 61,
+    "shop": null,
+    "variant": "red"
+   },
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 143,
+     "dur": 49,
+     "at": [
+      -3.68,
+      2.28,
+      3.5
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 192,
+   "endFrame": 321,
+   "narration": "Eleven fifty-nine and fifty-nine seconds. His heart is louder than his fans.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "sweat",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 192,
+     "position": [
+      -0.18,
+      1.6,
+      2.75
+     ],
+     "lookAt": [
+      0.0,
+      1.6,
+      1.0
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 192,
+     "position": [
+      -0.108,
+      1.6,
+      2.05
+     ],
+     "lookAt": [
+      0.0,
+      1.6,
+      1.0
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 129
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6101,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "panel",
+    "text": "11:59:59 PM"
+   },
+   "sunEl": 68,
+   "sunAz": 35
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 321,
+   "endFrame": 449,
+   "narration": "His trembling finger hovers over the download button, sweat pouring down his face.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.728,
+     "z": 0.685,
+     "expr": "nervous",
+     "mode": "stand",
+     "pose": "point"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 321,
+     "position": [
+      6.678,
+      1.68,
+      4.752
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      0.8
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 321,
+     "position": [
+      4.695,
+      1.68,
+      6.153
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      0.8
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 128
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6102,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "monitor",
+     "x": 0.798,
+     "z": 0.068,
+     "label": "[ DOWNLOAD ]"
+    }
+   ]
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 449,
+   "endFrame": 490,
+   "narration": "Midnight. Click.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -1.45,
+     "z": -0.2,
+     "expr": "starry",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 449,
+     "position": [
+      -1.888,
+      1.6,
+      1.504
+     ],
+     "lookAt": [
+      -2.489,
+      1.6,
+      -0.15
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 449,
+     "position": [
+      -1.888,
+      1.6,
+      1.504
+     ],
+     "lookAt": [
+      -1.45,
+      1.6,
+      -0.2
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6103,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "kicks": [
+    {
+     "frame": 476,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 474,
+     "dur": 16,
+     "at": [
+      -1.307,
+      1.891,
+      -0.178
+     ],
+     "size": 0.23445554337723234
+    }
+   ]
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 490,
+   "endFrame": 592,
+   "narration": "Across the world, data centers start glowing red like toasters.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 490,
+     "position": [
+      4.35,
+      2.3,
+      9.05
+     ],
+     "lookAt": [
+      1.35,
+      1.2,
+      0.05
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 490,
+     "position": [
+      1.65,
+      2.3,
+      9.95
+     ],
+     "lookAt": [
+      -1.35,
+      1.2,
+      0.95
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 102
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6104,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "datacenter",
+    "seed": 61,
+    "shop": null,
+    "variant": "red"
+   },
+   "pieces": [
+    {
+     "kind": "rack",
+     "x": -1.379,
+     "z": -0.61,
+     "label": "red"
+    },
+    {
+     "kind": "rack",
+     "x": 1.379,
+     "z": -0.61,
+     "label": "red"
+    }
+   ]
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 592,
+   "endFrame": 645,
+   "narration": "Lightning shoots out of the servers.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "tech",
+     "x": 0.302,
+     "z": 6.0,
+     "expr": "shock",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 592,
+     "position": [
+      -0.598,
+      0.4,
+      9.6
+     ],
+     "lookAt": [
+      0.302,
+      1.55,
+      6.0
+     ],
+     "fov": 50,
+     "roll": 0.0
+    },
+    {
+     "frame": 592,
+     "position": [
+      -0.598,
+      2.175,
+      9.6
+     ],
+     "lookAt": [
+      0.302,
+      1.55,
+      6.0
+     ],
+     "fov": 50,
+     "roll": 0.0,
+     "dur": 53
+    }
+   ],
+   "push": 0.0028,
+   "dof": {
+    "cInf": 7,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6105,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "datacenter",
+    "seed": 61,
+    "shop": null,
+    "variant": "red"
+   },
+   "pieces": [
+    {
+     "kind": "rack",
+     "x": -0.885,
+     "z": 4.89,
+     "label": "red",
+     "shake": 1.0
+    },
+    {
+     "kind": "rack",
+     "x": 0.885,
+     "z": 4.89,
+     "label": "red",
+     "shake": 1.0
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 595,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 593,
+     "dur": 52,
+     "at": [
+      0.722,
+      2.28,
+      6.0
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 645,
+   "endFrame": 747,
+   "narration": "Technicians in hard hats run around with fire extinguishers.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "tech",
+     "x": -8.3,
+     "z": 3.5,
+     "expr": "shock",
+     "mode": "run",
+     "walkTo": [
+      -4.1,
+      3.5
+     ],
+     "walkFrames": [
+      645,
+      706
+     ],
+     "holding": "extinguisher"
+    },
+    {
+     "castId": "extra0",
+     "x": -3.54,
+     "z": 0.797,
+     "mode": "march",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra1",
+     "x": -4.9,
+     "z": -0.6,
+     "mode": "march",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra2",
+     "x": -3.761,
+     "z": -0.968,
+     "mode": "march",
+     "expr": "nervous"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 645,
+     "position": [
+      -6.7,
+      1.68,
+      9.1
+     ],
+     "lookAt": [
+      -8.3,
+      1.38,
+      3.5
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 645,
+     "position": [
+      -2.5,
+      1.68,
+      9.1
+     ],
+     "lookAt": [
+      -4.1,
+      1.38,
+      3.5
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 61
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6106,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "datacenter",
+    "seed": 61,
+    "shop": null,
+    "variant": "red"
+   }
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 747,
+   "endFrame": 803,
+   "narration": "Gauges explode, one by one.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "tech",
+     "x": 0.0,
+     "z": 0.5,
+     "expr": "broken",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 747,
+     "position": [
+      -0.55,
+      1.62,
+      3.4
+     ],
+     "lookAt": [
+      -1.734,
+      1.5,
+      0.696
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 747,
+     "position": [
+      -0.55,
+      1.62,
+      3.4
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      0.5
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6107,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "datacenter",
+    "seed": 61,
+    "shop": null,
+    "variant": "red"
+   },
+   "kicks": [
+    {
+     "frame": 759,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 757,
+     "dur": 46,
+     "at": [
+      0.274,
+      2.05,
+      0.5
+     ],
+     "size": 0.44330948811505755
+    },
+    {
+     "kind": "puff",
+     "frame": 771,
+     "dur": 32,
+     "at": [
+      0.0,
+      1.0,
+      0.5
+     ],
+     "size": 0.9
+    }
+   ]
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 803,
+   "endFrame": 922,
+   "narration": "Back in the bedroom, the download bar crawls to ninety-nine point nine percent.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.4,
+     "z": 0.8,
+     "expr": "starry",
+     "mode": "sit"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 803,
+     "position": [
+      5.76,
+      1.68,
+      5.557
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      0.8
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 803,
+     "position": [
+      4.416,
+      1.56,
+      3.654
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      0.8
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 119
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6108,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "bar",
+    "text": "DOWNLOADING GTA 6|98|99.9"
+   },
+   "sunEl": 68,
+   "sunAz": 35
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 922,
+   "endFrame": 962,
+   "narration": "One second remaining.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -1.45,
+     "z": -0.2,
+     "expr": "sweat",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 922,
+     "position": [
+      -1.888,
+      1.6,
+      1.504
+     ],
+     "lookAt": [
+      -1.45,
+      1.6,
+      -0.2
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 922,
+     "position": [
+      -1.713,
+      1.6,
+      0.822
+     ],
+     "lookAt": [
+      -1.45,
+      1.6,
+      -0.2
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 40
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6109,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "bar",
+    "text": "1 SECOND REMAINING|99.9|99.9"
+   },
+   "sunEl": 68,
+   "sunAz": 35
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 962,
+   "endFrame": 1057,
+   "narration": "Then the router on the desk bursts into a cloud of black smoke.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "shock",
+     "mode": "stand",
+     "holding": "router"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 962,
+     "position": [
+      0.25,
+      1.55,
+      3.7
+     ],
+     "lookAt": [
+      0.0,
+      1.32,
+      2.1
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 994,
+     "cut": true,
+     "position": [
+      -0.25,
+      1.55,
+      3.7
+     ],
+     "lookAt": [
+      0.0,
+      1.32,
+      2.1
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6110,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "kicks": [
+    {
+     "frame": 996,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "puff",
+     "frame": 994,
+     "dur": 60,
+     "at": [
+      0.0,
+      1.0,
+      1.0
+     ],
+     "size": 0.9
+    },
+    {
+     "kind": "burst",
+     "frame": 1036,
+     "dur": 21,
+     "at": [
+      0.151,
+      1.623,
+      1.0
+     ],
+     "size": 0.24458454516692832
+    }
+   ]
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 1057,
+   "endFrame": 1088,
+   "narration": "No internet. Not on his street, not in his city, not anywhere.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.728,
+     "z": 0.685,
+     "expr": "broken",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1057,
+     "position": [
+      2.74,
+      1.68,
+      6.614
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      0.8
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1057,
+     "position": [
+      2.604,
+      1.56,
+      4.288
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      0.8
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 31
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6111,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "tv",
+     "x": 0.362,
+     "z": 0.094,
+     "label": "~nointernet"
+    }
+   ]
+  },
+  {
+   "sceneId": "b12a",
+   "startFrame": 1088,
+   "endFrame": 1142,
+   "narration": "No internet. Not on his street, not in his city, not anywhere.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.48,
+     "z": 0.772,
+     "expr": "broken",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1088,
+     "position": [
+      3.228,
+      1.6,
+      2.364
+     ],
+     "lookAt": [
+      2.48,
+      1.6,
+      0.772
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 1088,
+     "position": [
+      2.929,
+      1.6,
+      1.727
+     ],
+     "lookAt": [
+      2.48,
+      1.6,
+      0.772
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 54
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6148,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "tv",
+     "x": 0.362,
+     "z": 0.094,
+     "label": "~nointernet"
+    }
+   ]
+  },
+  {
+   "sceneId": "b12b",
+   "startFrame": 1142,
+   "endFrame": 1162,
+   "narration": "No internet. Not on his street, not in his city, not anywhere.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "extra3",
+     "x": -2.222,
+     "z": -9.0,
+     "mode": "stand",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra4",
+     "x": 0.178,
+     "z": -7.9,
+     "mode": "stand",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra5",
+     "x": -3.522,
+     "z": -6.8,
+     "mode": "stand",
+     "expr": "nervous"
+    },
+    {
+     "castId": "extra6",
+     "x": 1.376,
+     "z": -9.025,
+     "mode": "stand",
+     "expr": "neutral"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1142,
+     "position": [
+      2.2,
+      5.284,
+      -21.0
+     ],
+     "lookAt": [
+      0.0,
+      0.6,
+      -12
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1142,
+     "position": [
+      2.2,
+      12.232,
+      -21.0
+     ],
+     "lookAt": [
+      0.0,
+      0.6,
+      -12
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 20
+    }
+   ],
+   "push": 0.0018,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6185,
+   "qualityNotes": "",
+   "sub": true,
+   "env": {
+    "preset": "street",
+    "seed": 61,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "tv",
+     "x": 1.69,
+     "z": -10.66,
+     "label": "~nointernet"
+    }
+   ]
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 1162,
+   "endFrame": 1275,
+   "narration": "Total blackout. Millions of gamers flood the streets in their headsets.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 4.2,
+     "z": -24.0,
+     "expr": "crazy",
+     "mode": "run",
+     "walkTo": [
+      0.0,
+      -24.0
+     ],
+     "walkFrames": [
+      1162,
+      1229
+     ]
+    },
+    {
+     "castId": "extra7",
+     "x": -1.548,
+     "z": -21.015,
+     "mode": "march",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra0",
+     "x": 0.8,
+     "z": -19.9,
+     "mode": "march",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra1",
+     "x": -1.357,
+     "z": -19.241,
+     "mode": "march",
+     "expr": "nervous"
+    },
+    {
+     "castId": "extra2",
+     "x": 2.1,
+     "z": -21.0,
+     "mode": "march",
+     "expr": "neutral"
+    },
+    {
+     "castId": "extra3",
+     "x": -1.511,
+     "z": -20.668,
+     "mode": "march",
+     "expr": "laugh"
+    },
+    {
+     "castId": "extra4",
+     "x": 3.4,
+     "z": -18.8,
+     "mode": "march",
+     "expr": "smile"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1162,
+     "position": [
+      -3.0,
+      0.4,
+      -34.5
+     ],
+     "lookAt": [
+      0.0,
+      1.2,
+      -24
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1162,
+     "position": [
+      -3.0,
+      7.76,
+      -34.5
+     ],
+     "lookAt": [
+      0.0,
+      1.2,
+      -24
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 113
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6112,
+   "qualityNotes": "",
+   "env": {
+    "preset": "street",
+    "seed": 61,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b14",
+   "startFrame": 1275,
+   "endFrame": 1388,
+   "narration": "They climb telephone poles and plug ethernet cables into potatoes and car batteries.",
+   "light": "night",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": -46.0,
+     "expr": "crazy",
+     "mode": "stand",
+     "pose": "point",
+     "holding": "potato",
+     "y": 2.4
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1275,
+     "position": [
+      1.6,
+      2.624,
+      -51.6
+     ],
+     "lookAt": [
+      0.0,
+      3.78,
+      -46
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1275,
+     "position": [
+      1.6,
+      6.992,
+      -51.6
+     ],
+     "lookAt": [
+      0.0,
+      3.78,
+      -46
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 113
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6113,
+   "qualityNotes": "",
+   "env": {
+    "preset": "street",
+    "seed": 61,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "pole",
+     "x": 0.0,
+     "z": -45.65,
+     "scale": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 1364,
+     "dur": 24,
+     "at": [
+      -0.42,
+      4.68,
+      -46.0
+     ],
+     "size": 0.42,
+     "product": "potato"
+    }
+   ]
+  },
+  {
+   "sceneId": "b14a",
+   "startFrame": 1388,
+   "endFrame": 1418,
+   "narration": "They climb telephone poles and plug ethernet cables into potatoes and car batteries.",
+   "light": "night",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": -46.0,
+     "expr": "grin",
+     "mode": "stand",
+     "pose": "point",
+     "holding": "battery",
+     "y": 2.4
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1388,
+     "position": [
+      -0.55,
+      4.02,
+      -48.9
+     ],
+     "lookAt": [
+      0.0,
+      3.9,
+      -46.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6150,
+   "qualityNotes": "",
+   "sub": true,
+   "env": {
+    "preset": "street",
+    "seed": 61,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "pole",
+     "x": 0.0,
+     "z": -45.65,
+     "scale": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 1395,
+     "dur": 23,
+     "at": [
+      -0.274,
+      4.45,
+      -46.0
+     ],
+     "size": 0.28371807239363683,
+     "product": "battery"
+    }
+   ]
+  },
+  {
+   "sceneId": "b15",
+   "startFrame": 1418,
+   "endFrame": 1495,
+   "narration": "Just one more megabyte. Please.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": -12.0,
+     "expr": "crazy",
+     "mode": "stand",
+     "y": 2.4
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1418,
+     "position": [
+      0.099,
+      4.0,
+      -12.963
+     ],
+     "lookAt": [
+      0.0,
+      4.0,
+      -12.0
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 1418,
+     "position": [
+      0.18,
+      4.0,
+      -13.75
+     ],
+     "lookAt": [
+      0.0,
+      4.0,
+      -12.0
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 77
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 6114,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "bar",
+    "text": "DOWNLOADING|99.9|99.9"
+   },
+   "env": {
+    "preset": "street",
+    "seed": 61,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "pole",
+     "x": 0.0,
+     "z": -11.65,
+     "scale": 0.8
+    }
+   ]
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": true,
+  "words": [
+   {
+    "w": "The",
+    "s": 0.08,
+    "e": 0.277
+   },
+   {
+    "w": "second",
+    "s": 0.287,
+    "e": 0.691
+   },
+   {
+    "w": "GTA",
+    "s": 0.701,
+    "e": 0.898
+   },
+   {
+    "w": "6",
+    "s": 0.908,
+    "e": 1.036
+   },
+   {
+    "w": "unlocks",
+    "s": 1.046,
+    "e": 1.519
+   },
+   {
+    "w": "at",
+    "s": 1.529,
+    "e": 1.657
+   },
+   {
+    "w": "midnight,",
+    "s": 1.667,
+    "e": 2.209
+   },
+   {
+    "w": "a",
+    "s": 2.219,
+    "e": 2.347
+   },
+   {
+    "w": "hundred",
+    "s": 2.357,
+    "e": 2.83
+   },
+   {
+    "w": "million",
+    "s": 2.84,
+    "e": 3.313
+   },
+   {
+    "w": "downloads",
+    "s": 3.323,
+    "e": 3.933
+   },
+   {
+    "w": "will",
+    "s": 3.943,
+    "e": 4.209
+   },
+   {
+    "w": "literally",
+    "s": 4.219,
+    "e": 4.83
+   },
+   {
+    "w": "melt",
+    "s": 4.84,
+    "e": 5.106,
+    "hot": true
+   },
+   {
+    "w": "the",
+    "s": 5.116,
+    "e": 5.313
+   },
+   {
+    "w": "global",
+    "s": 5.323,
+    "e": 5.727
+   },
+   {
+    "w": "internet.",
+    "s": 5.737,
+    "e": 6.279
+   },
+   {
+    "w": "Eleven",
+    "s": 6.479,
+    "e": 6.864
+   },
+   {
+    "w": "fifty-nine",
+    "s": 6.874,
+    "e": 7.456
+   },
+   {
+    "w": "and",
+    "s": 7.466,
+    "e": 7.653
+   },
+   {
+    "w": "fifty-nine",
+    "s": 7.663,
+    "e": 8.246
+   },
+   {
+    "w": "seconds.",
+    "s": 8.256,
+    "e": 8.706
+   },
+   {
+    "w": "His",
+    "s": 8.886,
+    "e": 8.986
+   },
+   {
+    "w": "heart",
+    "s": 8.986,
+    "e": 9.266
+   },
+   {
+    "w": "is",
+    "s": 9.266,
+    "e": 9.466
+   },
+   {
+    "w": "louder",
+    "s": 9.466,
+    "e": 9.746
+   },
+   {
+    "w": "than",
+    "s": 9.746,
+    "e": 9.966
+   },
+   {
+    "w": "his",
+    "s": 9.966,
+    "e": 10.106
+   },
+   {
+    "w": "fans.",
+    "s": 10.106,
+    "e": 10.386
+   },
+   {
+    "w": "His",
+    "s": 10.767,
+    "e": 10.867
+   },
+   {
+    "w": "trembling",
+    "s": 10.867,
+    "e": 11.207
+   },
+   {
+    "w": "finger",
+    "s": 11.207,
+    "e": 11.647
+   },
+   {
+    "w": "hovers",
+    "s": 11.647,
+    "e": 12.027
+   },
+   {
+    "w": "over",
+    "s": 12.027,
+    "e": 12.187
+   },
+   {
+    "w": "the",
+    "s": 12.187,
+    "e": 12.307
+   },
+   {
+    "w": "download",
+    "s": 12.307,
+    "e": 12.607
+   },
+   {
+    "w": "button,",
+    "s": 12.607,
+    "e": 13.127
+   },
+   {
+    "w": "sweat",
+    "s": 13.387,
+    "e": 13.567
+   },
+   {
+    "w": "pouring",
+    "s": 13.567,
+    "e": 13.967
+   },
+   {
+    "w": "down",
+    "s": 13.967,
+    "e": 14.207
+   },
+   {
+    "w": "his",
+    "s": 14.207,
+    "e": 14.387
+   },
+   {
+    "w": "face.",
+    "s": 14.387,
+    "e": 14.627
+   },
+   {
+    "w": "Midnight.",
+    "s": 15.018,
+    "e": 15.498
+   },
+   {
+    "w": "Click.",
+    "s": 15.812,
+    "e": 15.992,
+    "hot": true
+   },
+   {
+    "w": "Across",
+    "s": 16.391,
+    "e": 16.611
+   },
+   {
+    "w": "the",
+    "s": 16.611,
+    "e": 16.851
+   },
+   {
+    "w": "world,",
+    "s": 16.851,
+    "e": 17.091
+   },
+   {
+    "w": "data",
+    "s": 17.311,
+    "e": 17.471
+   },
+   {
+    "w": "centers",
+    "s": 17.471,
+    "e": 17.831
+   },
+   {
+    "w": "start",
+    "s": 17.831,
+    "e": 18.131
+   },
+   {
+    "w": "glowing",
+    "s": 18.131,
+    "e": 18.431
+   },
+   {
+    "w": "red",
+    "s": 18.431,
+    "e": 18.771
+   },
+   {
+    "w": "like",
+    "s": 18.771,
+    "e": 18.971
+   },
+   {
+    "w": "toasters.",
+    "s": 18.971,
+    "e": 19.431
+   },
+   {
+    "w": "Lightning",
+    "s": 19.788,
+    "e": 20.088,
+    "hot": true
+   },
+   {
+    "w": "shoots",
+    "s": 20.088,
+    "e": 20.448
+   },
+   {
+    "w": "out",
+    "s": 20.448,
+    "e": 20.668
+   },
+   {
+    "w": "of",
+    "s": 20.668,
+    "e": 20.768
+   },
+   {
+    "w": "the",
+    "s": 20.768,
+    "e": 20.848
+   },
+   {
+    "w": "servers.",
+    "s": 20.848,
+    "e": 21.148
+   },
+   {
+    "w": "Technicians",
+    "s": 21.56,
+    "e": 22.04
+   },
+   {
+    "w": "in",
+    "s": 22.04,
+    "e": 22.22
+   },
+   {
+    "w": "hard",
+    "s": 22.22,
+    "e": 22.46
+   },
+   {
+    "w": "hats",
+    "s": 22.46,
+    "e": 22.84
+   },
+   {
+    "w": "run",
+    "s": 22.84,
+    "e": 23.1
+   },
+   {
+    "w": "around",
+    "s": 23.1,
+    "e": 23.38
+   },
+   {
+    "w": "with",
+    "s": 23.38,
+    "e": 23.62
+   },
+   {
+    "w": "fire",
+    "s": 23.62,
+    "e": 23.94
+   },
+   {
+    "w": "extinguishers.",
+    "s": 23.94,
+    "e": 24.7
+   },
+   {
+    "w": "Gauges",
+    "s": 24.967,
+    "e": 25.267
+   },
+   {
+    "w": "explode,",
+    "s": 25.267,
+    "e": 25.727,
+    "hot": true
+   },
+   {
+    "w": "one",
+    "s": 25.727,
+    "e": 26.047,
+    "hot": true
+   },
+   {
+    "w": "by",
+    "s": 26.047,
+    "e": 26.247
+   },
+   {
+    "w": "one.",
+    "s": 26.247,
+    "e": 26.527
+   },
+   {
+    "w": "Back",
+    "s": 26.845,
+    "e": 27.072
+   },
+   {
+    "w": "in",
+    "s": 27.082,
+    "e": 27.19
+   },
+   {
+    "w": "the",
+    "s": 27.2,
+    "e": 27.367
+   },
+   {
+    "w": "bedroom,",
+    "s": 27.377,
+    "e": 27.781
+   },
+   {
+    "w": "the",
+    "s": 27.791,
+    "e": 27.959
+   },
+   {
+    "w": "download",
+    "s": 27.969,
+    "e": 28.432
+   },
+   {
+    "w": "bar",
+    "s": 28.442,
+    "e": 28.61
+   },
+   {
+    "w": "crawls",
+    "s": 28.62,
+    "e": 28.965
+   },
+   {
+    "w": "to",
+    "s": 28.975,
+    "e": 29.083
+   },
+   {
+    "w": "ninety-nine",
+    "s": 29.093,
+    "e": 29.675
+   },
+   {
+    "w": "point",
+    "s": 29.685,
+    "e": 29.97
+   },
+   {
+    "w": "nine",
+    "s": 29.98,
+    "e": 30.207
+   },
+   {
+    "w": "percent.",
+    "s": 30.217,
+    "e": 30.621
+   },
+   {
+    "w": "One",
+    "s": 30.801,
+    "e": 30.961
+   },
+   {
+    "w": "second",
+    "s": 30.961,
+    "e": 31.321
+   },
+   {
+    "w": "remaining.",
+    "s": 31.321,
+    "e": 31.681
+   },
+   {
+    "w": "Then",
+    "s": 32.133,
+    "e": 32.233
+   },
+   {
+    "w": "the",
+    "s": 32.233,
+    "e": 32.333
+   },
+   {
+    "w": "router",
+    "s": 32.333,
+    "e": 32.573
+   },
+   {
+    "w": "on",
+    "s": 32.573,
+    "e": 32.753
+   },
+   {
+    "w": "the",
+    "s": 32.753,
+    "e": 32.853
+   },
+   {
+    "w": "desk",
+    "s": 32.853,
+    "e": 33.173
+   },
+   {
+    "w": "bursts",
+    "s": 33.173,
+    "e": 33.453,
+    "hot": true
+   },
+   {
+    "w": "into",
+    "s": 33.453,
+    "e": 33.793
+   },
+   {
+    "w": "a",
+    "s": 33.793,
+    "e": 33.933
+   },
+   {
+    "w": "cloud",
+    "s": 33.933,
+    "e": 34.153
+   },
+   {
+    "w": "of",
+    "s": 34.153,
+    "e": 34.333
+   },
+   {
+    "w": "black",
+    "s": 34.333,
+    "e": 34.553
+   },
+   {
+    "w": "smoke.",
+    "s": 34.553,
+    "e": 34.913,
+    "hot": true
+   },
+   {
+    "w": "No",
+    "s": 35.286,
+    "e": 35.466
+   },
+   {
+    "w": "internet.",
+    "s": 35.466,
+    "e": 35.906
+   },
+   {
+    "w": "Not",
+    "s": 36.289,
+    "e": 36.429
+   },
+   {
+    "w": "on",
+    "s": 36.429,
+    "e": 36.569
+   },
+   {
+    "w": "his",
+    "s": 36.569,
+    "e": 36.689
+   },
+   {
+    "w": "street,",
+    "s": 36.689,
+    "e": 36.949
+   },
+   {
+    "w": "not",
+    "s": 37.109,
+    "e": 37.229
+   },
+   {
+    "w": "in",
+    "s": 37.229,
+    "e": 37.349
+   },
+   {
+    "w": "his",
+    "s": 37.349,
+    "e": 37.469
+   },
+   {
+    "w": "city,",
+    "s": 37.469,
+    "e": 37.749
+   },
+   {
+    "w": "not",
+    "s": 37.969,
+    "e": 38.089
+   },
+   {
+    "w": "anywhere.",
+    "s": 38.089,
+    "e": 38.449
+   },
+   {
+    "w": "Total",
+    "s": 38.777,
+    "e": 39.077
+   },
+   {
+    "w": "blackout.",
+    "s": 39.077,
+    "e": 39.637
+   },
+   {
+    "w": "Millions",
+    "s": 39.906,
+    "e": 40.246
+   },
+   {
+    "w": "of",
+    "s": 40.246,
+    "e": 40.366
+   },
+   {
+    "w": "gamers",
+    "s": 40.366,
+    "e": 40.666
+   },
+   {
+    "w": "flood",
+    "s": 40.666,
+    "e": 41.006
+   },
+   {
+    "w": "the",
+    "s": 41.006,
+    "e": 41.166
+   },
+   {
+    "w": "streets",
+    "s": 41.166,
+    "e": 41.446
+   },
+   {
+    "w": "in",
+    "s": 41.446,
+    "e": 41.626
+   },
+   {
+    "w": "their",
+    "s": 41.626,
+    "e": 41.766
+   },
+   {
+    "w": "headsets.",
+    "s": 41.766,
+    "e": 42.286
+   },
+   {
+    "w": "They",
+    "s": 42.53,
+    "e": 42.63
+   },
+   {
+    "w": "climb",
+    "s": 42.63,
+    "e": 42.89
+   },
+   {
+    "w": "telephone",
+    "s": 42.89,
+    "e": 43.35
+   },
+   {
+    "w": "poles",
+    "s": 43.35,
+    "e": 43.85
+   },
+   {
+    "w": "and",
+    "s": 43.85,
+    "e": 44.13
+   },
+   {
+    "w": "plug",
+    "s": 44.13,
+    "e": 44.35
+   },
+   {
+    "w": "ethernet",
+    "s": 44.35,
+    "e": 44.87
+   },
+   {
+    "w": "cables",
+    "s": 44.87,
+    "e": 45.21
+   },
+   {
+    "w": "into",
+    "s": 45.21,
+    "e": 45.47
+   },
+   {
+    "w": "potatoes",
+    "s": 45.47,
+    "e": 45.93,
+    "hot": true
+   },
+   {
+    "w": "and",
+    "s": 45.93,
+    "e": 46.27
+   },
+   {
+    "w": "car",
+    "s": 46.27,
+    "e": 46.49
+   },
+   {
+    "w": "batteries.",
+    "s": 46.49,
+    "e": 46.89,
+    "hot": true
+   },
+   {
+    "w": "Just",
+    "s": 47.285,
+    "e": 47.485
+   },
+   {
+    "w": "one",
+    "s": 47.485,
+    "e": 47.745
+   },
+   {
+    "w": "more",
+    "s": 47.745,
+    "e": 47.985
+   },
+   {
+    "w": "megabyte.",
+    "s": 47.985,
+    "e": 48.445
+   },
+   {
+    "w": "Please.",
+    "s": 48.783,
+    "e": 49.023
+   }
+  ]
+ },
+ "style": "storybook",
+ "graphics": "full"
+}

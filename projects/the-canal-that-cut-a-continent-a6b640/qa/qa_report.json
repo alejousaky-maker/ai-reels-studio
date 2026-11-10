@@ -1,0 +1,409 @@
+{
+ "video": "C:\\Users\\felip\\AI-Reels-Studio\\projects\\the-canal-that-cut-a-continent-a6b640\\output\\the-canal-that-cut-a-continent_master_v1.mp4",
+ "probe": {
+  "width": 1440,
+  "height": 2560,
+  "fps": 30.0,
+  "videoSeconds": 80.166667,
+  "audioSeconds": 80.166667,
+  "sizeMB": 81.92
+ },
+ "checks": [
+  {
+   "check": "video stream",
+   "ok": true,
+   "detail": "1 video stream(s), codec h264",
+   "blocking": true
+  },
+  {
+   "check": "9:16 ratio",
+   "ok": true,
+   "detail": "1440x2560",
+   "blocking": true
+  },
+  {
+   "check": "fps",
+   "ok": true,
+   "detail": "30.000 fps",
+   "blocking": true
+  },
+  {
+   "check": "duration",
+   "ok": true,
+   "detail": "video 80.167 s, storyboard 80.167 s",
+   "blocking": true
+  },
+  {
+   "check": "single audio track",
+   "ok": true,
+   "detail": "1 audio stream(s) (a silent extra track means the mux mapped the wrong stream)",
+   "blocking": true
+  },
+  {
+   "check": "AAC 48 kHz",
+   "ok": true,
+   "detail": "aac 48000 Hz 2 ch",
+   "blocking": true
+  },
+  {
+   "check": "A/V length match",
+   "ok": true,
+   "detail": "audio 80.167 s vs video 80.167 s",
+   "blocking": true
+  },
+  {
+   "check": "no black spans",
+   "ok": true,
+   "detail": "0 span(s) []",
+   "blocking": true
+  },
+  {
+   "check": "no white spans (>0.2 s)",
+   "ok": true,
+   "detail": "0 span(s) [] \u2014 4-frame flashes are shorter and allowed",
+   "blocking": true
+  },
+  {
+   "check": "no frozen holds >= 1.5 s",
+   "ok": true,
+   "detail": "1 freeze(s) >= 0.6 s: [(77.766667, None)]",
+   "blocking": false
+  },
+  {
+   "check": "loudness ~ -14 LUFS",
+   "ok": true,
+   "detail": "integrated -14.1 LUFS (target -14, platform normalisation)",
+   "blocking": false
+  },
+  {
+   "check": "true peak <= -1 dBTP",
+   "ok": true,
+   "detail": "true peak -1.8 dBTP",
+   "blocking": true
+  },
+  {
+   "check": "no long silences",
+   "ok": true,
+   "detail": "0 silence(s) >= 1.2 s: []",
+   "blocking": false
+  },
+  {
+   "check": "render matches control stills",
+   "ok": true,
+   "detail": "75 frames compared; mismatches: []",
+   "blocking": true
+  },
+  {
+   "check": "day exposure (heuristic)",
+   "ok": true,
+   "detail": "median luma of day scenes 0.606, reference ~0.57 (range 0.5-0.66)",
+   "blocking": false
+  },
+  {
+   "check": "no crushed blacks (heuristic)",
+   "ok": false,
+   "detail": "scenes with p5 luma < 0.04: ['b01', 'b01a', 'b01b', 'b02a', 'b03', 'b03a', 'b04', 'b04a', 'b06', 'b07', 'b07a', 'b08a', 'b12', 'b12a']",
+   "blocking": false
+  }
+ ],
+ "blocking": [],
+ "warnings": [
+  "no crushed blacks (heuristic): scenes with p5 luma < 0.04: ['b01', 'b01a', 'b01b', 'b02a', 'b03', 'b03a', 'b04', 'b04a', 'b06', 'b07', 'b07a', 'b08a', 'b12', 'b12a']"
+ ],
+ "technicalPass": true,
+ "loudness": {
+  "I": -14.1,
+  "TP": -1.8
+ },
+ "sceneStats": [
+  {
+   "scene": "b01",
+   "t": 2.07,
+   "light": "day",
+   "medianLuma": 0.638,
+   "p5Luma": 0.027,
+   "p95Luma": 0.862,
+   "satMean": 0.521
+  },
+  {
+   "scene": "b01a",
+   "t": 5.7,
+   "light": "day",
+   "medianLuma": 0.606,
+   "p5Luma": 0.034,
+   "p95Luma": 0.847,
+   "satMean": 0.507
+  },
+  {
+   "scene": "b01b",
+   "t": 7.7,
+   "light": "day",
+   "medianLuma": 0.648,
+   "p5Luma": 0.03,
+   "p95Luma": 0.92,
+   "satMean": 0.5
+  },
+  {
+   "scene": "b02",
+   "t": 9.87,
+   "light": "day",
+   "medianLuma": 0.614,
+   "p5Luma": 0.341,
+   "p95Luma": 0.962,
+   "satMean": 0.337
+  },
+  {
+   "scene": "b02a",
+   "t": 13.2,
+   "light": "day",
+   "medianLuma": 0.561,
+   "p5Luma": 0.026,
+   "p95Luma": 0.961,
+   "satMean": 0.332
+  },
+  {
+   "scene": "b03",
+   "t": 16.8,
+   "light": "golden",
+   "medianLuma": 0.583,
+   "p5Luma": 0.023,
+   "p95Luma": 0.949,
+   "satMean": 0.412
+  },
+  {
+   "scene": "b03a",
+   "t": 20.37,
+   "light": "golden",
+   "medianLuma": 0.665,
+   "p5Luma": 0.024,
+   "p95Luma": 0.946,
+   "satMean": 0.393
+  },
+  {
+   "scene": "b04",
+   "t": 23.53,
+   "light": "day",
+   "medianLuma": 0.566,
+   "p5Luma": 0.029,
+   "p95Luma": 0.839,
+   "satMean": 0.638
+  },
+  {
+   "scene": "b04a",
+   "t": 26.5,
+   "light": "day",
+   "medianLuma": 0.466,
+   "p5Luma": 0.022,
+   "p95Luma": 0.955,
+   "satMean": 0.66
+  },
+  {
+   "scene": "b05",
+   "t": 29.63,
+   "light": "day",
+   "medianLuma": 0.602,
+   "p5Luma": 0.332,
+   "p95Luma": 0.877,
+   "satMean": 0.487
+  },
+  {
+   "scene": "b05a",
+   "t": 33.33,
+   "light": "day",
+   "medianLuma": 0.543,
+   "p5Luma": 0.08,
+   "p95Luma": 0.862,
+   "satMean": 0.56
+  },
+  {
+   "scene": "b06",
+   "t": 37.1,
+   "light": "day",
+   "medianLuma": 0.454,
+   "p5Luma": 0.033,
+   "p95Luma": 0.824,
+   "satMean": 0.761
+  },
+  {
+   "scene": "b06a",
+   "t": 39.57,
+   "light": "day",
+   "medianLuma": 0.54,
+   "p5Luma": 0.042,
+   "p95Luma": 0.901,
+   "satMean": 0.7
+  },
+  {
+   "scene": "b07",
+   "t": 42.27,
+   "light": "day",
+   "medianLuma": 0.644,
+   "p5Luma": 0.026,
+   "p95Luma": 0.936,
+   "satMean": 0.519
+  },
+  {
+   "scene": "b07a",
+   "t": 45.17,
+   "light": "day",
+   "medianLuma": 0.612,
+   "p5Luma": 0.022,
+   "p95Luma": 0.928,
+   "satMean": 0.585
+  },
+  {
+   "scene": "b08",
+   "t": 47.2,
+   "light": "day",
+   "medianLuma": 0.811,
+   "p5Luma": 0.072,
+   "p95Luma": 0.871,
+   "satMean": 0.349
+  },
+  {
+   "scene": "b08a",
+   "t": 49.4,
+   "light": "day",
+   "medianLuma": 0.761,
+   "p5Luma": 0.027,
+   "p95Luma": 0.895,
+   "satMean": 0.369
+  },
+  {
+   "scene": "b09",
+   "t": 52.37,
+   "light": "day",
+   "medianLuma": 0.778,
+   "p5Luma": 0.398,
+   "p95Luma": 0.877,
+   "satMean": 0.336
+  },
+  {
+   "scene": "b09a",
+   "t": 55.53,
+   "light": "day",
+   "medianLuma": 0.658,
+   "p5Luma": 0.052,
+   "p95Luma": 0.881,
+   "satMean": 0.393
+  },
+  {
+   "scene": "b10",
+   "t": 59.83,
+   "light": "day",
+   "medianLuma": 0.111,
+   "p5Luma": 0.063,
+   "p95Luma": 0.665,
+   "satMean": 0.695
+  },
+  {
+   "scene": "b11",
+   "t": 66.27,
+   "light": "day",
+   "medianLuma": 0.5,
+   "p5Luma": 0.416,
+   "p95Luma": 0.662,
+   "satMean": 0.676
+  },
+  {
+   "scene": "b12",
+   "t": 70.97,
+   "light": "day",
+   "medianLuma": 0.61,
+   "p5Luma": 0.033,
+   "p95Luma": 0.818,
+   "satMean": 0.487
+  },
+  {
+   "scene": "b12a",
+   "t": 73.13,
+   "light": "day",
+   "medianLuma": 0.553,
+   "p5Luma": 0.023,
+   "p95Luma": 0.858,
+   "satMean": 0.557
+  },
+  {
+   "scene": "b13",
+   "t": 75.5,
+   "light": "golden",
+   "medianLuma": 0.489,
+   "p5Luma": 0.19,
+   "p95Luma": 0.82,
+   "satMean": 0.769
+  },
+  {
+   "scene": "b14",
+   "t": 78.6,
+   "light": "night",
+   "medianLuma": 0.026,
+   "p5Luma": 0.026,
+   "p95Luma": 0.093,
+   "satMean": 0.445
+  }
+ ],
+ "rubric": [
+  {
+   "area": "Comprensi\u00f3n narrativa y gancho inicial",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "Coherencia de personajes y escenarios",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "C\u00e1mara y pacing",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "auto+human"
+  },
+  {
+   "area": "Contornos / ilustraci\u00f3n / materiales",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "Iluminaci\u00f3n, color y profundidad",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "auto+human"
+  },
+  {
+   "area": "Claridad y naturalidad de la voz",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "SFX, m\u00fasica y sincron\u00eda",
+   "score": null,
+   "basis": "computed loudness -14.1 LUFS / TP -1.8 dBTP; sync and taste need a listen",
+   "kind": "auto+human"
+  },
+  {
+   "area": "Composici\u00f3n vertical y safe areas",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "Alineaci\u00f3n visual-texto",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "Calidad t\u00e9cnica del archivo y licencias",
+   "score": 10,
+   "basis": "computed (checks above)",
+   "kind": "auto"
+  }
+ ],
+ "approved": false,
+ "note": "Technical checks are measured. Subjective rubric areas are NOT auto-scored; a person must review frames/video and approve in the app."
+}

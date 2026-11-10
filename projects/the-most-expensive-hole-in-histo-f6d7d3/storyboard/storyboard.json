@@ -1,0 +1,4084 @@
+{
+ "version": 1,
+ "title": "The Most Expensive Hole in History",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 2419,
+ "env": {
+  "preset": "shops",
+  "seed": 71,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "eng",
+   "name": "Engineer",
+   "outfit": {
+    "jacket": "#ff7a1a",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#f5c9a0",
+    "hat": "pith",
+    "cap": "#ffd23f",
+    "vest": "#d7ff3a",
+    "glasses": true
+   }
+  },
+  {
+   "id": "acc",
+   "name": "Accountant",
+   "outfit": {
+    "jacket": "#f2efe8",
+    "pants": "#3a3d47",
+    "boots": "#1d1b22",
+    "skin": "#8d5a3b",
+    "hat": "hair",
+    "hair": "#5a3b2a",
+    "tie": "#3f6fb5",
+    "glasses": true
+   }
+  },
+  {
+   "id": "pax",
+   "name": "Passenger",
+   "outfit": {
+    "jacket": "#3a4566",
+    "pants": "#2b2b38",
+    "boots": "#1d1b22",
+    "skin": "#ecd0b6",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "tie": "#3f6fb5"
+   }
+  },
+  {
+   "id": "dig",
+   "name": "Digger",
+   "outfit": {
+    "jacket": "#f28c28",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#ffe2c2",
+    "hat": "pith",
+    "cap": "#ffd23f",
+    "pockets": true
+   }
+  },
+  {
+   "id": "old",
+   "name": "1929 commuter",
+   "outfit": {
+    "jacket": "#2f5f6a",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#c99067",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "extra0",
+   "name": "",
+   "outfit": {
+    "jacket": "#b5653f",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#8d5a3b",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "extra1",
+   "name": "",
+   "outfit": {
+    "jacket": "#2f5f6a",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#ecd0b6",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "extra2",
+   "name": "",
+   "outfit": {
+    "jacket": "#7b5ac9",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#ffe2c2",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "extra3",
+   "name": "",
+   "outfit": {
+    "jacket": "#c25a7a",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#c99067",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "extra4",
+   "name": "",
+   "outfit": {
+    "jacket": "#d9a441",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#f5c9a0",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "extra5",
+   "name": "",
+   "outfit": {
+    "jacket": "#b5653f",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#8d5a3b",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "extra6",
+   "name": "",
+   "outfit": {
+    "jacket": "#2f5f6a",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#ecd0b6",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "extra7",
+   "name": "",
+   "outfit": {
+    "jacket": "#7b5ac9",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#ffe2c2",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 60,
+   "narration": "If you want to build a subway that costs four and a half billion dollars for just three stations, you don't build transit. You build a gold mine.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": -16.0,
+     "z": 3.2,
+     "expr": "smile",
+     "mode": "stand",
+     "holding": "coffee"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      -14.4,
+      1.68,
+      8.8
+     ],
+     "lookAt": [
+      -16,
+      1.38,
+      3.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 0,
+     "position": [
+      -15.04,
+      1.56,
+      6.56
+     ],
+     "lookAt": [
+      -16,
+      1.38,
+      3.2
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 60
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7100,
+   "qualityNotes": "",
+   "env": {
+    "preset": "shops",
+    "seed": 71,
+    "shop": null,
+    "variant": "open"
+   }
+  },
+  {
+   "sceneId": "b01a",
+   "startFrame": 60,
+   "endFrame": 145,
+   "narration": "If you want to build a subway that costs four and a half billion dollars for just three stations, you don't build transit. You build a gold mine.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": -16.0,
+     "z": 3.2,
+     "expr": "shock",
+     "mode": "stand",
+     "holding": "coffee"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 60,
+     "position": [
+      -16.55,
+      1.62,
+      6.1
+     ],
+     "lookAt": [
+      -16.0,
+      1.5,
+      3.2
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 106,
+     "cut": true,
+     "position": [
+      -15.45,
+      1.62,
+      6.1
+     ],
+     "lookAt": [
+      -16.0,
+      1.5,
+      3.2
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7137,
+   "qualityNotes": "",
+   "sub": true,
+   "env": {
+    "preset": "shops",
+    "seed": 71,
+    "shop": null,
+    "variant": "open"
+   },
+   "textOverlays": [
+    {
+     "text": "$4,500,000,000",
+     "frame": 63,
+     "dur": 79,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b01b",
+   "startFrame": 145,
+   "endFrame": 196,
+   "narration": "If you want to build a subway that costs four and a half billion dollars for just three stations, you don't build transit. You build a gold mine.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": -16.0,
+     "z": 3.2,
+     "expr": "shock",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 145,
+     "position": [
+      -15.1,
+      0.4,
+      6.8
+     ],
+     "lookAt": [
+      -16.0,
+      1.55,
+      3.2
+     ],
+     "fov": 50,
+     "roll": 0.0
+    },
+    {
+     "frame": 145,
+     "position": [
+      -15.1,
+      2.175,
+      6.8
+     ],
+     "lookAt": [
+      -16.0,
+      1.55,
+      3.2
+     ],
+     "fov": 50,
+     "roll": 0.0,
+     "dur": 51
+    }
+   ],
+   "push": 0.0028,
+   "dof": {
+    "cInf": 7,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7174,
+   "qualityNotes": "",
+   "sub": true,
+   "env": {
+    "preset": "shops",
+    "seed": 71,
+    "shop": null,
+    "variant": "open"
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 167,
+     "dur": 29,
+     "at": [
+      -15.58,
+      2.28,
+      3.2
+     ],
+     "size": 0.42,
+     "product": "coins"
+    },
+    {
+     "kind": "burst",
+     "frame": 167,
+     "dur": 29,
+     "at": [
+      -15.58,
+      2.28,
+      3.2
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b01c",
+   "startFrame": 196,
+   "endFrame": 223,
+   "narration": "If you want to build a subway that costs four and a half billion dollars for just three stations, you don't build transit. You build a gold mine.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": -16.0,
+     "z": 3.2,
+     "expr": "starry",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 196,
+     "position": [
+      -16.18,
+      1.6,
+      4.95
+     ],
+     "lookAt": [
+      -16.0,
+      1.6,
+      3.2
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 196,
+     "position": [
+      -16.108,
+      1.6,
+      4.25
+     ],
+     "lookAt": [
+      -16.0,
+      1.6,
+      3.2
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 27
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7211,
+   "qualityNotes": "",
+   "sub": true,
+   "env": {
+    "preset": "shops",
+    "seed": 71,
+    "shop": null,
+    "variant": "open"
+   },
+   "fx": [
+    {
+     "kind": "money",
+     "frame": 196,
+     "dur": 27,
+     "at": [
+      -16.0,
+      1.4,
+      3.8
+     ],
+     "size": 3.2
+    },
+    {
+     "kind": "sparkle",
+     "frame": 202,
+     "dur": 21,
+     "at": [
+      -15.855,
+      1.891,
+      3.2
+     ],
+     "size": 0.23445554337723234
+    }
+   ]
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 223,
+   "endFrame": 372,
+   "narration": "It's nineteen twenty-nine, and New York promises commuters a brand new subway line under Second Avenue to fix endless overcrowding.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "old",
+     "x": -0.726,
+     "z": -24.0,
+     "expr": "smile",
+     "mode": "stand",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra0",
+     "x": -1.57,
+     "z": -21.216,
+     "mode": "stand",
+     "expr": "smile",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra1",
+     "x": 0.074,
+     "z": -19.9,
+     "mode": "stand",
+     "expr": "grin",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra2",
+     "x": -1.379,
+     "z": -19.442,
+     "mode": "stand",
+     "expr": "nervous",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra3",
+     "x": 1.374,
+     "z": -21.0,
+     "mode": "stand",
+     "expr": "neutral",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra4",
+     "x": -1.533,
+     "z": -20.87,
+     "mode": "stand",
+     "expr": "laugh",
+     "holding": "newspaper"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 223,
+     "position": [
+      -1.425,
+      2.3,
+      -34.95
+     ],
+     "lookAt": [
+      1.575,
+      1.2,
+      -24.45
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 223,
+     "position": [
+      -4.575,
+      2.3,
+      -34.05
+     ],
+     "lookAt": [
+      -1.575,
+      1.2,
+      -23.55
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 149
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 7101,
+   "qualityNotes": "",
+   "look": "sepia",
+   "env": {
+    "preset": "street",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "oldcar",
+     "x": 1.97,
+     "z": -22.58
+    },
+    {
+     "kind": "oldcar",
+     "x": -0.726,
+     "z": -9.4,
+     "moveTo": [
+      -3.726,
+      -9.4
+     ],
+     "moveFrames": [
+      237,
+      357
+     ]
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "1929",
+     "frame": 226,
+     "dur": 143,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b02a",
+   "startFrame": 372,
+   "endFrame": 449,
+   "narration": "It's nineteen twenty-nine, and New York promises commuters a brand new subway line under Second Avenue to fix endless overcrowding.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "old",
+     "x": -0.16,
+     "z": -24.0,
+     "expr": "grin",
+     "mode": "stand",
+     "pose": "point",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra5",
+     "x": -1.76,
+     "z": -21.0,
+     "mode": "stand",
+     "expr": "smile",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra6",
+     "x": 0.64,
+     "z": -19.9,
+     "mode": "stand",
+     "expr": "grin",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra7",
+     "x": -3.06,
+     "z": -18.8,
+     "mode": "stand",
+     "expr": "nervous",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra0",
+     "x": 1.94,
+     "z": -21.0,
+     "mode": "stand",
+     "expr": "neutral",
+     "holding": "newspaper"
+    },
+    {
+     "castId": "extra1",
+     "x": -4.36,
+     "z": -19.9,
+     "mode": "stand",
+     "expr": "laugh",
+     "holding": "newspaper"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 372,
+     "position": [
+      0.982,
+      1.62,
+      -26.722
+     ],
+     "lookAt": [
+      -0.16,
+      1.5,
+      -24.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 372,
+     "position": [
+      -0.227,
+      1.62,
+      -26.951
+     ],
+     "lookAt": [
+      -0.16,
+      1.5,
+      -24.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 77
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7138,
+   "qualityNotes": "",
+   "sub": true,
+   "look": "sepia",
+   "env": {
+    "preset": "street",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "oldcar",
+     "x": 1.97,
+     "z": -22.58
+    },
+    {
+     "kind": "oldcar",
+     "x": -0.16,
+     "z": -9.4,
+     "moveTo": [
+      -3.16,
+      -9.4
+     ],
+     "moveFrames": [
+      379,
+      441
+     ]
+    }
+   ]
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 449,
+   "endFrame": 489,
+   "narration": "Then the Great Depression hits, World War Two happens, and the project gets quietly buried for nearly a century.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "old",
+     "x": -0.16,
+     "z": -46.0,
+     "expr": "nervous",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 449,
+     "position": [
+      -0.71,
+      1.62,
+      -48.9
+     ],
+     "lookAt": [
+      -0.16,
+      1.5,
+      -46.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 449,
+     "position": [
+      -0.49,
+      1.572,
+      -47.74
+     ],
+     "lookAt": [
+      -0.16,
+      1.5,
+      -46.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 40
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7102,
+   "qualityNotes": "",
+   "look": "sepia",
+   "env": {
+    "preset": "street",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "blueprint",
+     "x": 1.27,
+     "z": -44.78,
+     "label": "SECOND AVE LINE"
+    }
+   ]
+  },
+  {
+   "sceneId": "b03a",
+   "startFrame": 489,
+   "endFrame": 578,
+   "narration": "Then the Great Depression hits, World War Two happens, and the project gets quietly buried for nearly a century.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "old",
+     "x": -0.347,
+     "z": -46.0,
+     "expr": "shock",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 489,
+     "position": [
+      1.6,
+      1.68,
+      -51.6
+     ],
+     "lookAt": [
+      0.0,
+      1.38,
+      -46
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 537,
+     "cut": true,
+     "position": [
+      -1.6,
+      1.68,
+      -51.6
+     ],
+     "lookAt": [
+      0.0,
+      1.38,
+      -46
+     ],
+     "fov": 38,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7139,
+   "qualityNotes": "",
+   "sub": true,
+   "look": "sepia",
+   "hud": {
+    "kind": "news",
+    "text": "WAR!"
+   },
+   "env": {
+    "preset": "street",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "blueprint",
+     "x": 1.27,
+     "z": -44.78,
+     "label": "SECOND AVE LINE"
+    }
+   ]
+  },
+  {
+   "sceneId": "b03b",
+   "startFrame": 578,
+   "endFrame": 634,
+   "narration": "Then the Great Depression hits, World War Two happens, and the project gets quietly buried for nearly a century.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "old",
+     "x": -0.347,
+     "z": -46.0,
+     "expr": "nervous",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 578,
+     "position": [
+      -1.6,
+      1.68,
+      -51.6
+     ],
+     "lookAt": [
+      0.0,
+      1.38,
+      -46
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 578,
+     "position": [
+      -0.96,
+      1.56,
+      -49.36
+     ],
+     "lookAt": [
+      0.0,
+      1.38,
+      -46
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 56
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7176,
+   "qualityNotes": "",
+   "sub": true,
+   "look": "bw",
+   "env": {
+    "preset": "street",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "blueprint",
+     "x": 1.424,
+     "z": -44.736,
+     "scale": 1.2,
+     "label": "~CANCELLED"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "dust",
+     "frame": 578,
+     "dur": 56,
+     "at": [
+      -0.347,
+      1.4,
+      -46.6
+     ],
+     "size": 3.2
+    }
+   ]
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 634,
+   "endFrame": 724,
+   "narration": "When they finally restart digging in the two thousands, every single inch of dirt costs more than solid platinum.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "dig",
+     "x": 2.4,
+     "z": -4.0,
+     "expr": "stern",
+     "mode": "stand",
+     "holding": "pickaxe"
+    },
+    {
+     "castId": "extra2",
+     "x": 3.694,
+     "z": -7.144,
+     "mode": "stand",
+     "expr": "smile",
+     "holding": "pickaxe"
+    },
+    {
+     "castId": "extra3",
+     "x": 1.614,
+     "z": -7.868,
+     "mode": "stand",
+     "expr": "grin",
+     "holding": "pickaxe"
+    },
+    {
+     "castId": "extra4",
+     "x": 4.768,
+     "z": -9.463,
+     "mode": "stand",
+     "expr": "nervous",
+     "holding": "pickaxe"
+    },
+    {
+     "castId": "extra5",
+     "x": 1.407,
+     "z": -6.336,
+     "mode": "stand",
+     "expr": "neutral",
+     "holding": "pickaxe"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 634,
+     "position": [
+      1.201,
+      2.3,
+      3.607
+     ],
+     "lookAt": [
+      3.49,
+      1.2,
+      -3.657
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 634,
+     "position": [
+      -0.979,
+      2.3,
+      2.921
+     ],
+     "lookAt": [
+      1.31,
+      1.2,
+      -4.343
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 90
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "zoom",
+   "seed": 7103,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "dust",
+     "frame": 678,
+     "dur": 46,
+     "at": [
+      2.46,
+      1.4,
+      -3.403
+     ],
+     "size": 3.2
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "2007",
+     "frame": 637,
+     "dur": 84,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b04a",
+   "startFrame": 724,
+   "endFrame": 819,
+   "narration": "When they finally restart digging in the two thousands, every single inch of dirt costs more than solid platinum.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "dig",
+     "x": 2.4,
+     "z": -4.0,
+     "expr": "shock",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0,
+     "holding": "pickaxe"
+    },
+    {
+     "castId": "extra6",
+     "x": 3.694,
+     "z": -7.144,
+     "mode": "stand",
+     "expr": "smile",
+     "holding": "pickaxe"
+    },
+    {
+     "castId": "extra7",
+     "x": 1.196,
+     "z": -8.0,
+     "mode": "stand",
+     "expr": "grin",
+     "holding": "pickaxe"
+    },
+    {
+     "castId": "extra0",
+     "x": 4.768,
+     "z": -9.463,
+     "mode": "stand",
+     "expr": "nervous",
+     "holding": "pickaxe"
+    },
+    {
+     "castId": "extra1",
+     "x": 0.012,
+     "z": -6.776,
+     "mode": "stand",
+     "expr": "neutral",
+     "holding": "pickaxe"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 724,
+     "position": [
+      3.236,
+      1.62,
+      -1.169
+     ],
+     "lookAt": [
+      2.4,
+      1.5,
+      -4.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 724,
+     "position": [
+      2.902,
+      1.572,
+      -2.301
+     ],
+     "lookAt": [
+      2.4,
+      1.5,
+      -4.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 95
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7140,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "money",
+     "frame": 745,
+     "dur": 74,
+     "at": [
+      2.46,
+      1.4,
+      -3.403
+     ],
+     "size": 3.2
+    }
+   ]
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 819,
+   "endFrame": 930,
+   "narration": "Why? Because underneath the street lies a hundred-year-old maze of mystery pipes, electrical cables, and forgotten steam lines.",
+   "light": "night",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "dig",
+     "x": -2.2,
+     "z": 0.0,
+     "expr": "nervous",
+     "mode": "stand",
+     "pose": "shrug"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 819,
+     "position": [
+      -6.098,
+      1.68,
+      4.328
+     ],
+     "lookAt": [
+      -2.2,
+      1.38,
+      0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 819,
+     "position": [
+      -3.994,
+      1.68,
+      5.541
+     ],
+     "lookAt": [
+      -2.2,
+      1.38,
+      0
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 111
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7104,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "pipes",
+     "x": -0.839,
+     "z": -5.444,
+     "scale": 1.2
+    }
+   ]
+  },
+  {
+   "sceneId": "b05a",
+   "startFrame": 930,
+   "endFrame": 965,
+   "narration": "Why? Because underneath the street lies a hundred-year-old maze of mystery pipes, electrical cables, and forgotten steam lines.",
+   "light": "night",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "dig",
+     "x": -2.2,
+     "z": 0.0,
+     "expr": "dazed",
+     "mode": "stand",
+     "pose": "point"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 930,
+     "position": [
+      -0.987,
+      0.4,
+      7.519
+     ],
+     "lookAt": [
+      -2.2,
+      1.2,
+      0
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 930,
+     "position": [
+      -0.987,
+      6.108,
+      7.519
+     ],
+     "lookAt": [
+      -2.2,
+      1.2,
+      0
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 35
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7141,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "pipes",
+     "x": -0.668,
+     "z": -6.127,
+     "scale": 1.6
+    }
+   ]
+  },
+  {
+   "sceneId": "b05b",
+   "startFrame": 965,
+   "endFrame": 1045,
+   "narration": "Why? Because underneath the street lies a hundred-year-old maze of mystery pipes, electrical cables, and forgotten steam lines.",
+   "light": "night",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "dig",
+     "x": -2.2,
+     "z": 0.0,
+     "expr": "shock",
+     "mode": "stand",
+     "holding": "wrench"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 965,
+     "position": [
+      -3.437,
+      1.62,
+      2.68
+     ],
+     "lookAt": [
+      -2.2,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1009,
+     "cut": true,
+     "position": [
+      -2.37,
+      1.62,
+      2.947
+     ],
+     "lookAt": [
+      -2.2,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7178,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "pipes",
+     "x": -0.839,
+     "z": -5.444,
+     "scale": 1.2
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 987,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparks",
+     "frame": 985,
+     "dur": 60,
+     "at": [
+      -1.715,
+      1.2,
+      0.121
+     ],
+     "size": 1.0
+    },
+    {
+     "kind": "puff",
+     "frame": 1003,
+     "dur": 42,
+     "at": [
+      -2.2,
+      1.0,
+      0.0
+     ],
+     "size": 0.9
+    }
+   ]
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 1045,
+   "endFrame": 1115,
+   "narration": "Every time they move a single water pipe, it costs millions. They're literally tunneling through a maze of financial regret.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "acc",
+     "x": 0.347,
+     "z": 1.2,
+     "expr": "sweat",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1045,
+     "position": [
+      1.6,
+      1.68,
+      6.8
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1045,
+     "position": [
+      0.96,
+      1.56,
+      4.56
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.2
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 70
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7105,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "office",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "cashcounter",
+     "x": -0.92,
+     "z": 0.08
+    }
+   ]
+  },
+  {
+   "sceneId": "b06a",
+   "startFrame": 1115,
+   "endFrame": 1142,
+   "narration": "Every time they move a single water pipe, it costs millions. They're literally tunneling through a maze of financial regret.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "acc",
+     "x": 0.16,
+     "z": 1.2,
+     "expr": "shock",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1115,
+     "position": [
+      -0.39,
+      1.62,
+      4.1
+     ],
+     "lookAt": [
+      0.16,
+      1.5,
+      1.2
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7142,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "office",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "cashcounter",
+     "x": -0.92,
+     "z": 0.08,
+     "label": "fire",
+     "shake": 1.2
+    }
+   ],
+   "fx": [
+    {
+     "kind": "money",
+     "frame": 1115,
+     "dur": 27,
+     "at": [
+      0.16,
+      1.4,
+      1.8
+     ],
+     "size": 3.2
+    }
+   ]
+  },
+  {
+   "sceneId": "b06b",
+   "startFrame": 1142,
+   "endFrame": 1232,
+   "narration": "Every time they move a single water pipe, it costs millions. They're literally tunneling through a maze of financial regret.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "acc",
+     "x": 0.301,
+     "z": 1.2,
+     "expr": "dazed",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1142,
+     "position": [
+      2.531,
+      1.55,
+      5.428
+     ],
+     "lookAt": [
+      0.301,
+      1.4,
+      1.2
+     ],
+     "fov": 40,
+     "roll": 0.16
+    },
+    {
+     "frame": 1142,
+     "position": [
+      0.614,
+      1.55,
+      5.97
+     ],
+     "lookAt": [
+      0.301,
+      1.4,
+      1.2
+     ],
+     "fov": 40,
+     "roll": 0.16,
+     "dur": 90
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7179,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "office",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "cashcounter",
+     "x": -0.92,
+     "z": 0.08,
+     "label": "fire",
+     "shake": 1.6
+    }
+   ]
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 1232,
+   "endFrame": 1328,
+   "narration": "Fast forward billions of dollars later: they finally open three shiny new stations, about two miles of track.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "pax",
+     "x": 2.4,
+     "z": -4.0,
+     "expr": "starry",
+     "mode": "stand"
+    },
+    {
+     "castId": "extra2",
+     "x": 3.694,
+     "z": -7.144,
+     "mode": "stand",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra3",
+     "x": 1.614,
+     "z": -7.868,
+     "mode": "stand",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra4",
+     "x": 4.768,
+     "z": -9.463,
+     "mode": "stand",
+     "expr": "nervous"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1232,
+     "position": [
+      0.111,
+      0.4,
+      3.264
+     ],
+     "lookAt": [
+      2.4,
+      1.2,
+      -4
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1232,
+     "position": [
+      0.111,
+      6.108,
+      3.264
+     ],
+     "lookAt": [
+      2.4,
+      1.2,
+      -4
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 96
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 7106,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null,
+    "variant": "station"
+   }
+  },
+  {
+   "sceneId": "b07a",
+   "startFrame": 1328,
+   "endFrame": 1421,
+   "narration": "Fast forward billions of dollars later: they finally open three shiny new stations, about two miles of track.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "pax",
+     "x": 2.4,
+     "z": -4.0,
+     "expr": "starry",
+     "mode": "stand"
+    },
+    {
+     "castId": "extra5",
+     "x": 3.694,
+     "z": -7.144,
+     "mode": "stand",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra6",
+     "x": 1.557,
+     "z": -7.9,
+     "mode": "stand",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra7",
+     "x": 4.768,
+     "z": -9.463,
+     "mode": "stand",
+     "expr": "nervous"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1328,
+     "position": [
+      -0.332,
+      0.85,
+      2.142
+     ],
+     "lookAt": [
+      1.439,
+      1.5,
+      -4.266
+     ],
+     "fov": 44,
+     "roll": 0.0
+    },
+    {
+     "frame": 1328,
+     "position": [
+      1.59,
+      0.85,
+      2.674
+     ],
+     "lookAt": [
+      3.361,
+      1.5,
+      -3.734
+     ],
+     "fov": 44,
+     "roll": 0.0,
+     "dur": 93
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 6,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7143,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null,
+    "variant": "station"
+   },
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 1339,
+     "dur": 60,
+     "at": [
+      2.818,
+      2.28,
+      -4.042
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 1421,
+   "endFrame": 1553,
+   "narration": "That means every single step you walk underground cost roughly a million dollars.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "pax",
+     "x": -4.192,
+     "z": -0.498,
+     "expr": "neutral",
+     "mode": "stroll",
+     "walkTo": [
+      -1.863,
+      0.084
+     ],
+     "walkFrames": [
+      1421,
+      1513
+     ],
+     "holding": "ticket"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1421,
+     "position": [
+      -7.439,
+      1.68,
+      4.463
+     ],
+     "lookAt": [
+      -4.529,
+      1.38,
+      -0.582
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1421,
+     "position": [
+      -5.11,
+      1.68,
+      5.045
+     ],
+     "lookAt": [
+      -2.2,
+      1.38,
+      0
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 92
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7107,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "panel",
+    "text": "$4,500,000,000 ÷ 2 MILES|≈ $1,000,000 PER STEP!"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null,
+    "variant": "station"
+   },
+   "pieces": [
+    {
+     "kind": "escalator",
+     "x": -3.704,
+     "z": -1.819
+    }
+   ]
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 1553,
+   "endFrame": 1700,
+   "narration": "For that money, you could buy every daily rider a brand new car, and still have cash left for a private island.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "pax",
+     "x": 0.726,
+     "z": 6.0,
+     "expr": "grin",
+     "mode": "stand",
+     "pose": "point"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1553,
+     "position": [
+      4.05,
+      2.3,
+      12.55
+     ],
+     "lookAt": [
+      1.05,
+      1.2,
+      5.55
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1553,
+     "position": [
+      1.95,
+      2.3,
+      13.45
+     ],
+     "lookAt": [
+      -1.05,
+      1.2,
+      6.45
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 147
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7108,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null,
+    "variant": "station"
+   },
+   "pieces": [
+    {
+     "kind": "car",
+     "x": -2.075,
+     "z": 4.55
+    },
+    {
+     "kind": "car",
+     "x": 2.075,
+     "z": 4.55,
+     "mirror": true
+    },
+    {
+     "kind": "car",
+     "x": 0.726,
+     "z": -8.5
+    }
+   ]
+  },
+  {
+   "sceneId": "b09a",
+   "startFrame": 1700,
+   "endFrame": 1729,
+   "narration": "For that money, you could buy every daily rider a brand new car, and still have cash left for a private island.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "pax",
+     "x": 0.16,
+     "z": 6.0,
+     "expr": "starry",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1700,
+     "position": [
+      -0.39,
+      1.62,
+      8.9
+     ],
+     "lookAt": [
+      0.16,
+      1.5,
+      6.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1700,
+     "position": [
+      -0.17,
+      1.572,
+      7.74
+     ],
+     "lookAt": [
+      0.16,
+      1.5,
+      6.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 29
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7145,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null,
+    "variant": "station"
+   },
+   "pieces": [
+    {
+     "kind": "car",
+     "x": -2.075,
+     "z": 4.55
+    },
+    {
+     "kind": "car",
+     "x": 2.075,
+     "z": 4.55,
+     "mirror": true
+    },
+    {
+     "kind": "car",
+     "x": 0.16,
+     "z": -8.5
+    }
+   ],
+   "fx": [
+    {
+     "kind": "money",
+     "frame": 1709,
+     "dur": 20,
+     "at": [
+      0.16,
+      1.4,
+      6.6
+     ],
+     "size": 3.2
+    }
+   ]
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 1729,
+   "endFrame": 1776,
+   "narration": "So why did it cost so much? Consultants, special contracts, and hiring six guys to watch one guy hold a shovel.",
+   "light": "night",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "acc",
+     "x": 2.4,
+     "z": -4.0,
+     "expr": "nervous",
+     "mode": "stand",
+     "pose": "shrug"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1729,
+     "position": [
+      4.549,
+      1.68,
+      1.413
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      -4
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1729,
+     "position": [
+      3.689,
+      1.56,
+      -0.752
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      -4
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 47
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7109,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b10a",
+   "startFrame": 1776,
+   "endFrame": 1842,
+   "narration": "So why did it cost so much? Consultants, special contracts, and hiring six guys to watch one guy hold a shovel.",
+   "light": "night",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "acc",
+     "x": 2.4,
+     "z": -4.0,
+     "expr": "stern",
+     "mode": "stand",
+     "pose": "point",
+     "holding": "clipboard"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1776,
+     "position": [
+      2.141,
+      1.62,
+      -1.06
+     ],
+     "lookAt": [
+      2.4,
+      1.5,
+      -4.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7146,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "panel",
+    "text": "INVOICE|CONSULTANTS: $$$|CONTRACTS: $$$$"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b10b",
+   "startFrame": 1842,
+   "endFrame": 1923,
+   "narration": "So why did it cost so much? Consultants, special contracts, and hiring six guys to watch one guy hold a shovel.",
+   "light": "night",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "dig",
+     "x": 2.4,
+     "z": -4.0,
+     "expr": "pained",
+     "mode": "sit",
+     "holding": "shovel"
+    },
+    {
+     "castId": "extra0",
+     "x": 2.845,
+     "z": -6.675,
+     "mode": "stand",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra1",
+     "x": 1.196,
+     "z": -8.0,
+     "mode": "stand",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra2",
+     "x": 2.343,
+     "z": -8.124,
+     "mode": "stand",
+     "expr": "nervous"
+    },
+    {
+     "castId": "extra3",
+     "x": 0.012,
+     "z": -6.776,
+     "mode": "stand",
+     "expr": "neutral"
+    },
+    {
+     "castId": "extra4",
+     "x": 2.849,
+     "z": -6.663,
+     "mode": "stand",
+     "expr": "laugh"
+    },
+    {
+     "castId": "extra5",
+     "x": -1.501,
+     "z": -8.836,
+     "mode": "stand",
+     "expr": "smile"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1842,
+     "position": [
+      7.391,
+      2.3,
+      1.753
+     ],
+     "lookAt": [
+      2.4,
+      1.2,
+      -4
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1842,
+     "position": [
+      4.611,
+      2.3,
+      3.288
+     ],
+     "lookAt": [
+      2.4,
+      1.2,
+      -4
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 81
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7183,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 1923,
+   "endFrame": 2041,
+   "narration": "And the best part? Phase two is still years from finished, which means the budget is about to enter orbit.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": -2.268,
+     "z": -0.1,
+     "expr": "grin",
+     "mode": "stand",
+     "pose": "point"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1923,
+     "position": [
+      -5.742,
+      1.68,
+      4.704
+     ],
+     "lookAt": [
+      -2.6,
+      1.38,
+      -0.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1923,
+     "position": [
+      -4.485,
+      1.56,
+      2.742
+     ],
+     "lookAt": [
+      -2.6,
+      1.38,
+      -0.2
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 118
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "zoom",
+   "seed": 7110,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "office",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "subwaymap",
+     "x": -3.711,
+     "z": -1.891,
+     "label": "PHASE 2|COMING NEVER"
+    }
+   ]
+  },
+  {
+   "sceneId": "b11a",
+   "startFrame": 2041,
+   "endFrame": 2095,
+   "narration": "And the best part? Phase two is still years from finished, which means the budget is about to enter orbit.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": -2.311,
+     "z": -0.113,
+     "expr": "crazy",
+     "mode": "stand",
+     "pose": "up"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 2041,
+     "position": [
+      -2.483,
+      0.4,
+      3.594
+     ],
+     "lookAt": [
+      -2.311,
+      1.55,
+      -0.113
+     ],
+     "fov": 50,
+     "roll": 0.0
+    },
+    {
+     "frame": 2041,
+     "position": [
+      -2.483,
+      2.175,
+      3.594
+     ],
+     "lookAt": [
+      -2.311,
+      1.55,
+      -0.113
+     ],
+     "fov": 50,
+     "roll": 0.0,
+     "dur": 54
+    }
+   ],
+   "push": 0.0028,
+   "dof": {
+    "cInf": 7,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7147,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "office",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "cashcounter",
+     "x": -3.159,
+     "z": -1.537,
+     "label": "fire",
+     "liftTo": 6.0,
+     "moveFrames": [
+      2049,
+      2095
+     ]
+    }
+   ]
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 2095,
+   "endFrame": 2151,
+   "narration": "Congratulations, you've just built the most expensive hole in human history.",
+   "light": "day",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": 0.0,
+     "z": 6.0,
+     "expr": "laugh",
+     "mode": "stand",
+     "pose": "hips"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 2095,
+     "position": [
+      -0.88,
+      1.545,
+      9.08
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      6
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 2095,
+     "position": [
+      -1.6,
+      1.68,
+      11.6
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      6
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 56
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7111,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "ribbon",
+     "x": 0.0,
+     "z": 3.015
+    }
+   ],
+   "fx": [
+    {
+     "kind": "confetti",
+     "frame": 2096,
+     "dur": 55,
+     "at": [
+      0.0,
+      1.4,
+      6.6
+     ],
+     "size": 3.2
+    }
+   ]
+  },
+  {
+   "sceneId": "b12a",
+   "startFrame": 2151,
+   "endFrame": 2220,
+   "narration": "Congratulations, you've just built the most expensive hole in human history.",
+   "light": "day",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": 0.0,
+     "z": 6.0,
+     "expr": "starry",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 2151,
+     "position": [
+      0.18,
+      1.6,
+      7.75
+     ],
+     "lookAt": [
+      0.0,
+      1.6,
+      6.0
+     ],
+     "fov": 30,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7148,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "tunnel",
+    "seed": 71,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "ribbon",
+     "x": 0.0,
+     "z": 3.015
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 2176,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "confetti",
+     "frame": 2151,
+     "dur": 69,
+     "at": [
+      0.0,
+      1.4,
+      6.6
+     ],
+     "size": 3.2
+    }
+   ]
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 2220,
+   "endFrame": 2336,
+   "narration": "Send this to that friend who complains about his local train ticket price.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 2220,
+     "position": [
+      -18.2,
+      5.284,
+      12.2
+     ],
+     "lookAt": [
+      -16,
+      0.6,
+      3.2
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 2220,
+     "position": [
+      -18.2,
+      12.232,
+      12.2
+     ],
+     "lookAt": [
+      -16,
+      0.6,
+      3.2
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 116
+    }
+   ],
+   "push": 0.0018,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 7112,
+   "qualityNotes": "",
+   "env": {
+    "preset": "shops",
+    "seed": 71,
+    "shop": null,
+    "variant": "open"
+   }
+  },
+  {
+   "sceneId": "b14",
+   "startFrame": 2336,
+   "endFrame": 2419,
+   "narration": "Hit follow for more engineering disasters.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 2336,
+     "position": [
+      -5.528,
+      2.3,
+      13.837
+     ],
+     "lookAt": [
+      -8,
+      1.2,
+      3.2
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 2369,
+     "dur": 24,
+     "position": [
+      -6.682,
+      1.68,
+      8.873
+     ],
+     "lookAt": [
+      -8,
+      1.38,
+      3.2
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 7113,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "outro"
+   }
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": true,
+  "words": [
+   {
+    "w": "If",
+    "s": 0.08,
+    "e": 0.191
+   },
+   {
+    "w": "you",
+    "s": 0.201,
+    "e": 0.372
+   },
+   {
+    "w": "want",
+    "s": 0.382,
+    "e": 0.614
+   },
+   {
+    "w": "to",
+    "s": 0.624,
+    "e": 0.735
+   },
+   {
+    "w": "build",
+    "s": 0.745,
+    "e": 1.038
+   },
+   {
+    "w": "a",
+    "s": 1.048,
+    "e": 1.159
+   },
+   {
+    "w": "subway",
+    "s": 1.169,
+    "e": 1.522
+   },
+   {
+    "w": "that",
+    "s": 1.532,
+    "e": 1.763
+   },
+   {
+    "w": "costs",
+    "s": 1.773,
+    "e": 2.066
+   },
+   {
+    "w": "four",
+    "s": 2.076,
+    "e": 2.308
+   },
+   {
+    "w": "and",
+    "s": 2.318,
+    "e": 2.489
+   },
+   {
+    "w": "a",
+    "s": 2.499,
+    "e": 2.61
+   },
+   {
+    "w": "half",
+    "s": 2.62,
+    "e": 2.852
+   },
+   {
+    "w": "billion",
+    "s": 2.862,
+    "e": 3.275
+   },
+   {
+    "w": "dollars",
+    "s": 3.285,
+    "e": 3.699
+   },
+   {
+    "w": "for",
+    "s": 3.709,
+    "e": 3.88
+   },
+   {
+    "w": "just",
+    "s": 3.89,
+    "e": 4.122
+   },
+   {
+    "w": "three",
+    "s": 4.132,
+    "e": 4.425
+   },
+   {
+    "w": "stations,",
+    "s": 4.435,
+    "e": 4.908
+   },
+   {
+    "w": "you",
+    "s": 4.918,
+    "e": 5.09
+   },
+   {
+    "w": "don't",
+    "s": 5.1,
+    "e": 5.332
+   },
+   {
+    "w": "build",
+    "s": 5.342,
+    "e": 5.634
+   },
+   {
+    "w": "transit.",
+    "s": 5.644,
+    "e": 6.058,
+    "hot": true
+   },
+   {
+    "w": "You",
+    "s": 6.238,
+    "e": 6.318
+   },
+   {
+    "w": "build",
+    "s": 6.318,
+    "e": 6.498
+   },
+   {
+    "w": "a",
+    "s": 6.498,
+    "e": 6.618
+   },
+   {
+    "w": "gold",
+    "s": 6.618,
+    "e": 6.798,
+    "hot": true
+   },
+   {
+    "w": "mine.",
+    "s": 6.798,
+    "e": 7.138,
+    "hot": true
+   },
+   {
+    "w": "It's",
+    "s": 7.501,
+    "e": 7.693
+   },
+   {
+    "w": "nineteen",
+    "s": 7.703,
+    "e": 8.232
+   },
+   {
+    "w": "twenty-nine,",
+    "s": 8.242,
+    "e": 8.907
+   },
+   {
+    "w": "and",
+    "s": 8.917,
+    "e": 9.109
+   },
+   {
+    "w": "New",
+    "s": 9.119,
+    "e": 9.311
+   },
+   {
+    "w": "York",
+    "s": 9.321,
+    "e": 9.581
+   },
+   {
+    "w": "promises",
+    "s": 9.591,
+    "e": 10.12
+   },
+   {
+    "w": "commuters",
+    "s": 10.13,
+    "e": 10.727
+   },
+   {
+    "w": "a",
+    "s": 10.737,
+    "e": 10.862
+   },
+   {
+    "w": "brand",
+    "s": 10.872,
+    "e": 11.199
+   },
+   {
+    "w": "new",
+    "s": 11.209,
+    "e": 11.401
+   },
+   {
+    "w": "subway",
+    "s": 11.411,
+    "e": 11.806
+   },
+   {
+    "w": "line",
+    "s": 11.816,
+    "e": 12.075
+   },
+   {
+    "w": "under",
+    "s": 12.085,
+    "e": 12.412
+   },
+   {
+    "w": "Second",
+    "s": 12.422,
+    "e": 12.817
+   },
+   {
+    "w": "Avenue",
+    "s": 12.827,
+    "e": 13.221
+   },
+   {
+    "w": "to",
+    "s": 13.231,
+    "e": 13.356
+   },
+   {
+    "w": "fix",
+    "s": 13.366,
+    "e": 13.558
+   },
+   {
+    "w": "endless",
+    "s": 13.568,
+    "e": 14.03
+   },
+   {
+    "w": "overcrowding.",
+    "s": 14.04,
+    "e": 14.839
+   },
+   {
+    "w": "Then",
+    "s": 15.019,
+    "e": 15.139
+   },
+   {
+    "w": "the",
+    "s": 15.139,
+    "e": 15.259
+   },
+   {
+    "w": "Great",
+    "s": 15.259,
+    "e": 15.459
+   },
+   {
+    "w": "Depression",
+    "s": 15.459,
+    "e": 15.939
+   },
+   {
+    "w": "hits,",
+    "s": 15.939,
+    "e": 16.319
+   },
+   {
+    "w": "World",
+    "s": 16.319,
+    "e": 16.659
+   },
+   {
+    "w": "War",
+    "s": 16.659,
+    "e": 16.939
+   },
+   {
+    "w": "Two",
+    "s": 16.939,
+    "e": 17.219
+   },
+   {
+    "w": "happens,",
+    "s": 17.219,
+    "e": 17.659
+   },
+   {
+    "w": "and",
+    "s": 17.959,
+    "e": 18.019
+   },
+   {
+    "w": "the",
+    "s": 18.019,
+    "e": 18.119
+   },
+   {
+    "w": "project",
+    "s": 18.119,
+    "e": 18.499
+   },
+   {
+    "w": "gets",
+    "s": 18.499,
+    "e": 18.819
+   },
+   {
+    "w": "quietly",
+    "s": 18.819,
+    "e": 19.279
+   },
+   {
+    "w": "buried",
+    "s": 19.279,
+    "e": 19.759,
+    "hot": true
+   },
+   {
+    "w": "for",
+    "s": 19.759,
+    "e": 19.999
+   },
+   {
+    "w": "nearly",
+    "s": 19.999,
+    "e": 20.219
+   },
+   {
+    "w": "a",
+    "s": 20.219,
+    "e": 20.419
+   },
+   {
+    "w": "century.",
+    "s": 20.419,
+    "e": 20.799
+   },
+   {
+    "w": "When",
+    "s": 21.185,
+    "e": 21.433
+   },
+   {
+    "w": "they",
+    "s": 21.443,
+    "e": 21.691
+   },
+   {
+    "w": "finally",
+    "s": 21.701,
+    "e": 22.142
+   },
+   {
+    "w": "restart",
+    "s": 22.152,
+    "e": 22.593
+   },
+   {
+    "w": "digging",
+    "s": 22.603,
+    "e": 23.044,
+    "hot": true
+   },
+   {
+    "w": "in",
+    "s": 23.054,
+    "e": 23.173
+   },
+   {
+    "w": "the",
+    "s": 23.183,
+    "e": 23.367
+   },
+   {
+    "w": "two",
+    "s": 23.377,
+    "e": 23.56
+   },
+   {
+    "w": "thousands,",
+    "s": 23.57,
+    "e": 24.14
+   },
+   {
+    "w": "every",
+    "s": 24.15,
+    "e": 24.463
+   },
+   {
+    "w": "single",
+    "s": 24.473,
+    "e": 24.849
+   },
+   {
+    "w": "inch",
+    "s": 24.859,
+    "e": 25.107,
+    "hot": true
+   },
+   {
+    "w": "of",
+    "s": 25.117,
+    "e": 25.236
+   },
+   {
+    "w": "dirt",
+    "s": 25.246,
+    "e": 25.494
+   },
+   {
+    "w": "costs",
+    "s": 25.504,
+    "e": 25.816
+   },
+   {
+    "w": "more",
+    "s": 25.826,
+    "e": 26.074
+   },
+   {
+    "w": "than",
+    "s": 26.084,
+    "e": 26.332
+   },
+   {
+    "w": "solid",
+    "s": 26.342,
+    "e": 26.655
+   },
+   {
+    "w": "platinum.",
+    "s": 26.665,
+    "e": 27.17
+   },
+   {
+    "w": "Why?",
+    "s": 27.35,
+    "e": 27.55
+   },
+   {
+    "w": "Because",
+    "s": 27.954,
+    "e": 28.408
+   },
+   {
+    "w": "underneath",
+    "s": 28.418,
+    "e": 29.07
+   },
+   {
+    "w": "the",
+    "s": 29.08,
+    "e": 29.269
+   },
+   {
+    "w": "street",
+    "s": 29.279,
+    "e": 29.667
+   },
+   {
+    "w": "lies",
+    "s": 29.677,
+    "e": 29.932
+   },
+   {
+    "w": "a",
+    "s": 29.942,
+    "e": 30.064
+   },
+   {
+    "w": "hundred-year-old",
+    "s": 30.074,
+    "e": 30.992
+   },
+   {
+    "w": "maze",
+    "s": 31.002,
+    "e": 31.257
+   },
+   {
+    "w": "of",
+    "s": 31.267,
+    "e": 31.389
+   },
+   {
+    "w": "mystery",
+    "s": 31.399,
+    "e": 31.853
+   },
+   {
+    "w": "pipes,",
+    "s": 31.863,
+    "e": 32.184
+   },
+   {
+    "w": "electrical",
+    "s": 32.194,
+    "e": 32.847
+   },
+   {
+    "w": "cables,",
+    "s": 32.857,
+    "e": 33.245,
+    "hot": true
+   },
+   {
+    "w": "and",
+    "s": 33.255,
+    "e": 33.443
+   },
+   {
+    "w": "forgotten",
+    "s": 33.453,
+    "e": 34.04,
+    "hot": true
+   },
+   {
+    "w": "steam",
+    "s": 34.05,
+    "e": 34.371
+   },
+   {
+    "w": "lines.",
+    "s": 34.381,
+    "e": 34.702
+   },
+   {
+    "w": "Every",
+    "s": 34.882,
+    "e": 35.062
+   },
+   {
+    "w": "time",
+    "s": 35.062,
+    "e": 35.322
+   },
+   {
+    "w": "they",
+    "s": 35.322,
+    "e": 35.522
+   },
+   {
+    "w": "move",
+    "s": 35.522,
+    "e": 35.682
+   },
+   {
+    "w": "a",
+    "s": 35.682,
+    "e": 35.822
+   },
+   {
+    "w": "single",
+    "s": 35.822,
+    "e": 36.062
+   },
+   {
+    "w": "water",
+    "s": 36.062,
+    "e": 36.382
+   },
+   {
+    "w": "pipe,",
+    "s": 36.382,
+    "e": 36.702
+   },
+   {
+    "w": "it",
+    "s": 36.922,
+    "e": 36.962
+   },
+   {
+    "w": "costs",
+    "s": 36.962,
+    "e": 37.182
+   },
+   {
+    "w": "millions.",
+    "s": 37.182,
+    "e": 37.602,
+    "hot": true
+   },
+   {
+    "w": "They're",
+    "s": 38.074,
+    "e": 38.214
+   },
+   {
+    "w": "literally",
+    "s": 38.214,
+    "e": 38.494
+   },
+   {
+    "w": "tunneling",
+    "s": 38.494,
+    "e": 38.934
+   },
+   {
+    "w": "through",
+    "s": 38.934,
+    "e": 39.174
+   },
+   {
+    "w": "a",
+    "s": 39.174,
+    "e": 39.314
+   },
+   {
+    "w": "maze",
+    "s": 39.314,
+    "e": 39.614
+   },
+   {
+    "w": "of",
+    "s": 39.614,
+    "e": 39.874
+   },
+   {
+    "w": "financial",
+    "s": 39.874,
+    "e": 40.354
+   },
+   {
+    "w": "regret.",
+    "s": 40.354,
+    "e": 40.754
+   },
+   {
+    "w": "Fast",
+    "s": 41.108,
+    "e": 41.328
+   },
+   {
+    "w": "forward",
+    "s": 41.328,
+    "e": 41.728
+   },
+   {
+    "w": "billions",
+    "s": 41.728,
+    "e": 42.128
+   },
+   {
+    "w": "of",
+    "s": 42.128,
+    "e": 42.388
+   },
+   {
+    "w": "dollars",
+    "s": 42.388,
+    "e": 42.688
+   },
+   {
+    "w": "later:",
+    "s": 42.688,
+    "e": 43.128
+   },
+   {
+    "w": "they",
+    "s": 43.448,
+    "e": 43.528
+   },
+   {
+    "w": "finally",
+    "s": 43.528,
+    "e": 43.948
+   },
+   {
+    "w": "open",
+    "s": 43.948,
+    "e": 44.288
+   },
+   {
+    "w": "three",
+    "s": 44.288,
+    "e": 44.628
+   },
+   {
+    "w": "shiny",
+    "s": 44.628,
+    "e": 45.028,
+    "hot": true
+   },
+   {
+    "w": "new",
+    "s": 45.028,
+    "e": 45.248
+   },
+   {
+    "w": "stations,",
+    "s": 45.248,
+    "e": 45.648
+   },
+   {
+    "w": "about",
+    "s": 45.648,
+    "e": 46.068
+   },
+   {
+    "w": "two",
+    "s": 46.068,
+    "e": 46.368
+   },
+   {
+    "w": "miles",
+    "s": 46.368,
+    "e": 46.628
+   },
+   {
+    "w": "of",
+    "s": 46.628,
+    "e": 46.808
+   },
+   {
+    "w": "track.",
+    "s": 46.808,
+    "e": 47.048
+   },
+   {
+    "w": "That",
+    "s": 47.404,
+    "e": 47.504
+   },
+   {
+    "w": "means",
+    "s": 47.504,
+    "e": 47.704
+   },
+   {
+    "w": "every",
+    "s": 47.704,
+    "e": 48.144
+   },
+   {
+    "w": "single",
+    "s": 48.144,
+    "e": 48.544
+   },
+   {
+    "w": "step",
+    "s": 48.544,
+    "e": 48.864
+   },
+   {
+    "w": "you",
+    "s": 48.864,
+    "e": 49.044
+   },
+   {
+    "w": "walk",
+    "s": 49.044,
+    "e": 49.264
+   },
+   {
+    "w": "underground",
+    "s": 49.264,
+    "e": 49.784
+   },
+   {
+    "w": "cost",
+    "s": 49.784,
+    "e": 50.144
+   },
+   {
+    "w": "roughly",
+    "s": 50.144,
+    "e": 50.544
+   },
+   {
+    "w": "a",
+    "s": 50.544,
+    "e": 50.684
+   },
+   {
+    "w": "million",
+    "s": 50.684,
+    "e": 50.944
+   },
+   {
+    "w": "dollars.",
+    "s": 50.944,
+    "e": 51.424
+   },
+   {
+    "w": "For",
+    "s": 51.792,
+    "e": 51.892
+   },
+   {
+    "w": "that",
+    "s": 51.892,
+    "e": 52.072
+   },
+   {
+    "w": "money,",
+    "s": 52.072,
+    "e": 52.352
+   },
+   {
+    "w": "you",
+    "s": 52.532,
+    "e": 52.592
+   },
+   {
+    "w": "could",
+    "s": 52.592,
+    "e": 52.752
+   },
+   {
+    "w": "buy",
+    "s": 52.752,
+    "e": 52.932
+   },
+   {
+    "w": "every",
+    "s": 52.932,
+    "e": 53.312
+   },
+   {
+    "w": "daily",
+    "s": 53.312,
+    "e": 53.592
+   },
+   {
+    "w": "rider",
+    "s": 53.592,
+    "e": 53.992
+   },
+   {
+    "w": "a",
+    "s": 53.992,
+    "e": 54.192
+   },
+   {
+    "w": "brand",
+    "s": 54.192,
+    "e": 54.412
+   },
+   {
+    "w": "new",
+    "s": 54.412,
+    "e": 54.692
+   },
+   {
+    "w": "car,",
+    "s": 54.692,
+    "e": 55.032
+   },
+   {
+    "w": "and",
+    "s": 55.032,
+    "e": 55.312
+   },
+   {
+    "w": "still",
+    "s": 55.312,
+    "e": 55.532
+   },
+   {
+    "w": "have",
+    "s": 55.532,
+    "e": 55.752
+   },
+   {
+    "w": "cash",
+    "s": 55.752,
+    "e": 56.112
+   },
+   {
+    "w": "left",
+    "s": 56.112,
+    "e": 56.352
+   },
+   {
+    "w": "for",
+    "s": 56.352,
+    "e": 56.592
+   },
+   {
+    "w": "a",
+    "s": 56.592,
+    "e": 56.672
+   },
+   {
+    "w": "private",
+    "s": 56.672,
+    "e": 56.972
+   },
+   {
+    "w": "island.",
+    "s": 56.972,
+    "e": 57.332,
+    "hot": true
+   },
+   {
+    "w": "So",
+    "s": 57.66,
+    "e": 57.76
+   },
+   {
+    "w": "why",
+    "s": 57.76,
+    "e": 57.94
+   },
+   {
+    "w": "did",
+    "s": 57.94,
+    "e": 58.06
+   },
+   {
+    "w": "it",
+    "s": 58.06,
+    "e": 58.18
+   },
+   {
+    "w": "cost",
+    "s": 58.18,
+    "e": 58.36
+   },
+   {
+    "w": "so",
+    "s": 58.36,
+    "e": 58.64
+   },
+   {
+    "w": "much?",
+    "s": 58.64,
+    "e": 58.86
+   },
+   {
+    "w": "Consultants,",
+    "s": 59.187,
+    "e": 59.887
+   },
+   {
+    "w": "special",
+    "s": 59.887,
+    "e": 60.167
+   },
+   {
+    "w": "contracts,",
+    "s": 60.167,
+    "e": 60.727
+   },
+   {
+    "w": "and",
+    "s": 60.727,
+    "e": 61.087
+   },
+   {
+    "w": "hiring",
+    "s": 61.087,
+    "e": 61.407
+   },
+   {
+    "w": "six",
+    "s": 61.407,
+    "e": 61.767
+   },
+   {
+    "w": "guys",
+    "s": 61.767,
+    "e": 62.127
+   },
+   {
+    "w": "to",
+    "s": 62.127,
+    "e": 62.367
+   },
+   {
+    "w": "watch",
+    "s": 62.367,
+    "e": 62.547
+   },
+   {
+    "w": "one",
+    "s": 62.547,
+    "e": 62.867
+   },
+   {
+    "w": "guy",
+    "s": 62.867,
+    "e": 63.127
+   },
+   {
+    "w": "hold",
+    "s": 63.127,
+    "e": 63.427
+   },
+   {
+    "w": "a",
+    "s": 63.427,
+    "e": 63.567
+   },
+   {
+    "w": "shovel.",
+    "s": 63.567,
+    "e": 63.847
+   },
+   {
+    "w": "And",
+    "s": 64.137,
+    "e": 64.237
+   },
+   {
+    "w": "the",
+    "s": 64.237,
+    "e": 64.317
+   },
+   {
+    "w": "best",
+    "s": 64.317,
+    "e": 64.477
+   },
+   {
+    "w": "part?",
+    "s": 64.477,
+    "e": 64.837
+   },
+   {
+    "w": "Phase",
+    "s": 65.181,
+    "e": 65.341
+   },
+   {
+    "w": "two",
+    "s": 65.341,
+    "e": 65.701
+   },
+   {
+    "w": "is",
+    "s": 65.701,
+    "e": 65.881
+   },
+   {
+    "w": "still",
+    "s": 65.881,
+    "e": 66.121
+   },
+   {
+    "w": "years",
+    "s": 66.121,
+    "e": 66.441
+   },
+   {
+    "w": "from",
+    "s": 66.441,
+    "e": 66.701
+   },
+   {
+    "w": "finished,",
+    "s": 66.701,
+    "e": 67.161
+   },
+   {
+    "w": "which",
+    "s": 67.421,
+    "e": 67.581
+   },
+   {
+    "w": "means",
+    "s": 67.581,
+    "e": 67.801
+   },
+   {
+    "w": "the",
+    "s": 67.801,
+    "e": 68.021
+   },
+   {
+    "w": "budget",
+    "s": 68.021,
+    "e": 68.361
+   },
+   {
+    "w": "is",
+    "s": 68.361,
+    "e": 68.581
+   },
+   {
+    "w": "about",
+    "s": 68.581,
+    "e": 68.801
+   },
+   {
+    "w": "to",
+    "s": 68.801,
+    "e": 69.001
+   },
+   {
+    "w": "enter",
+    "s": 69.001,
+    "e": 69.241
+   },
+   {
+    "w": "orbit.",
+    "s": 69.241,
+    "e": 69.581
+   },
+   {
+    "w": "Congratulations,",
+    "s": 69.854,
+    "e": 70.454,
+    "hot": true
+   },
+   {
+    "w": "you've",
+    "s": 70.954,
+    "e": 71.094
+   },
+   {
+    "w": "just",
+    "s": 71.094,
+    "e": 71.254
+   },
+   {
+    "w": "built",
+    "s": 71.254,
+    "e": 71.494
+   },
+   {
+    "w": "the",
+    "s": 71.494,
+    "e": 71.694
+   },
+   {
+    "w": "most",
+    "s": 71.694,
+    "e": 71.874,
+    "hot": true
+   },
+   {
+    "w": "expensive",
+    "s": 71.874,
+    "e": 72.454
+   },
+   {
+    "w": "hole",
+    "s": 72.454,
+    "e": 72.794,
+    "hot": true
+   },
+   {
+    "w": "in",
+    "s": 72.794,
+    "e": 73.014
+   },
+   {
+    "w": "human",
+    "s": 73.014,
+    "e": 73.274
+   },
+   {
+    "w": "history.",
+    "s": 73.274,
+    "e": 73.674
+   },
+   {
+    "w": "Send",
+    "s": 74.006,
+    "e": 74.166
+   },
+   {
+    "w": "this",
+    "s": 74.166,
+    "e": 74.366
+   },
+   {
+    "w": "to",
+    "s": 74.366,
+    "e": 74.526
+   },
+   {
+    "w": "that",
+    "s": 74.526,
+    "e": 74.666
+   },
+   {
+    "w": "friend",
+    "s": 74.666,
+    "e": 75.006
+   },
+   {
+    "w": "who",
+    "s": 75.006,
+    "e": 75.326
+   },
+   {
+    "w": "complains",
+    "s": 75.326,
+    "e": 75.866
+   },
+   {
+    "w": "about",
+    "s": 75.866,
+    "e": 76.066
+   },
+   {
+    "w": "his",
+    "s": 76.066,
+    "e": 76.266
+   },
+   {
+    "w": "local",
+    "s": 76.266,
+    "e": 76.506
+   },
+   {
+    "w": "train",
+    "s": 76.506,
+    "e": 76.886
+   },
+   {
+    "w": "ticket",
+    "s": 76.886,
+    "e": 77.166
+   },
+   {
+    "w": "price.",
+    "s": 77.166,
+    "e": 77.506
+   },
+   {
+    "w": "Hit",
+    "s": 77.885,
+    "e": 77.965
+   },
+   {
+    "w": "follow",
+    "s": 77.965,
+    "e": 78.305
+   },
+   {
+    "w": "for",
+    "s": 78.305,
+    "e": 78.545
+   },
+   {
+    "w": "more",
+    "s": 78.545,
+    "e": 78.725
+   },
+   {
+    "w": "engineering",
+    "s": 78.725,
+    "e": 79.205
+   },
+   {
+    "w": "disasters.",
+    "s": 79.205,
+    "e": 79.845
+   }
+  ]
+ },
+ "style": "storybook",
+ "graphics": "full"
+}

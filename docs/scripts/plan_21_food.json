@@ -103,7 +103,7 @@
    "shots": [
     {
      "at": "converge",
-     "shot": "low",
+     "shot": "wide",
      "pieces": [
       {
        "kind": "semi",
@@ -337,7 +337,7 @@
    "shots": [
     {
      "at": "war",
-     "shot": "low",
+     "shot": "wide",
      "pieces": [
       {
        "kind": "forklift",

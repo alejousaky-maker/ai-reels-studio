@@ -12,6 +12,9 @@ El usuario habla español: respóndele en español. La narración de los vídeos
   o subfrase (cada 1,5–3 s, `shots` dentro de cada beat), la cámara siempre se mueve (`camMove`), ángulos que cuentan la
   emoción (extreme / worm / dutch), transiciones (dissolve / zoom / whip), subtítulos en el tercio inferior.
   Ver `docs/FORMULA.md`.
+- **Personajes = stickmen 2D con cabeza BLANCA** (nunca tonos de piel), caras muy expresivas como RicksClips3000
+  (shorts 5WMQhPObNqQ, Mz72MuPgnGY, VKsamN3Fk4U): párpados a media asta, ceja levantada, boca que habla (`talk`), parpadeo,
+  cejas que se mueven, se sientan en sillas (`sitchair`), caminan bien. Voz estilo RicksClips: `am_eric*0.7+am_fenrir*0.3`.
 - Mantener el estilo aprobado (Demo A / "The School That Couldn't Stop Laughing"): bean-stickmen con cabeza blanca, tinta negra.
 - Comprobar los datos: lo exagerado o cómico va en `verifiedClaims` como `fiction`/`uncertain`; corregir cifras falsas y avisar.
 - Voz: la que el usuario pida. Mezclas Kokoro permitidas, p. ej. `am_fenrir*0.8+am_eric*0.2` (narrador masculino enérgico).

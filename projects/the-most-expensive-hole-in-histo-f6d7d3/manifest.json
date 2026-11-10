@@ -1,0 +1,204 @@
+{
+ "id": "the-most-expensive-hole-in-histo-f6d7d3",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 248,
+   "beats": 14,
+   "at": "2026-11-10T15:22:33"
+  },
+  "voice": {
+   "duration": 80.26516666666667,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 28.2,
+   "status": "done",
+   "voice": "am_fenrir*0.8+am_eric*0.2",
+   "speed": 1.15,
+   "at": "2026-11-10T15:23:04"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 17.2,
+   "method": {
+    "whisper": 15,
+    "spread": 4
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T15:23:21"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 2419,
+   "seconds_video": 80.63333333333334,
+   "scenes": 31,
+   "at": "2026-11-10T15:23:21"
+  },
+  "stills": {
+   "status": "done",
+   "count": 93,
+   "at": "2026-11-10T15:27:07"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 438.9,
+   "frames": 2419,
+   "renderedScenes": [
+    "b01",
+    "b01a",
+    "b01b",
+    "b01c",
+    "b02",
+    "b02a",
+    "b03",
+    "b03a",
+    "b03b",
+    "b04",
+    "b04a",
+    "b05",
+    "b05a",
+    "b05b",
+    "b06",
+    "b06a",
+    "b06b",
+    "b07",
+    "b07a",
+    "b08",
+    "b09",
+    "b09a",
+    "b10",
+    "b10a",
+    "b10b",
+    "b11",
+    "b11a",
+    "b12",
+    "b12a",
+    "b13",
+    "b14"
+   ],
+   "reusedScenes": [],
+   "fps_render": 5.51,
+   "at": "2026-11-10T15:34:26"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 29.0,
+   "integratedLUFS": -14.01,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.7,
+   "maxGainReductionDB": 5.03,
+   "voiceLUFS": -13.78,
+   "musicLUFS": -29.71,
+   "sfxLUFS": -30.34,
+   "at": "2026-11-10T15:34:55"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\the-most-expensive-hole-in-histo-f6d7d3\\output\\the-most-expensive-hole-in-history_master_v1.mp4",
+   "at": "2026-11-10T15:34:57"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-10T15:35:24"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T15:21:45",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T15:21:45",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T15:22:33",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T15:22:33",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T15:23:04",
+   "seconds": 28.2,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T15:23:21",
+   "status": "done",
+   "seconds": 17.2
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T15:23:21",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T15:27:07",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T15:34:26",
+   "status": "done",
+   "seconds": 438.9
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T15:34:55",
+   "status": "done",
+   "seconds": 29.0
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T15:34:57",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T15:35:24",
+   "status": "done"
+  }
+ ],
+ "title": "The Most Expensive Hole in History",
+ "created": "2026-11-10T15:21:45",
+ "request": {
+  "title": "The Most Expensive Hole in History",
+  "idea": "The Most Expensive Hole in History",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 90,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "shops",
+  "voice": "am_fenrir*0.8+am_eric*0.2",
+  "speed": 1.15,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": true,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "auto",
+  "review": "auto_qa",
+  "seed": 7,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "",
+ "requestedSeconds": 90
+}

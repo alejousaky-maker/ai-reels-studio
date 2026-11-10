@@ -204,8 +204,6 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
         return env_cache[env_name]
     def look(c, i):
         o = outfit(c.role, i, c.palette)
-        if c.skin:
-            o["skin"] = c.skin
         if c.hair:
             o["hair"] = c.hair
         if c.shades is not None:
@@ -254,7 +252,7 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                 L *= 1.3; Dp += 1.6
             x, z = Cx + rx * L + ux * Dp, Cz + rz * L + uz * Dp
             act = {"castId": c.id, "x": round(x, 3), "z": round(z, 3), "expr": c.expr,
-                   "mode": {"walk": "stroll", "wave": "stand", "dance": "dance", "sit": "sit", "march": "march", "stroll": "stroll", "fall": "fall", "stretch": "sit", "run": "run", "jump": "jump"}.get(c.action, "stand")}
+                   "mode": {"walk": "stroll", "wave": "stand", "dance": "dance", "sit": "sit", "march": "march", "stroll": "stroll", "fall": "fall", "stretch": "sit", "run": "run", "jump": "jump", "sitchair": "chair"}.get(c.action, "stand")}
             if c.action == "wave":
                 act["wave"] = True
             if c.action in ("stretch", "cheer", "panic"):
@@ -276,6 +274,16 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                 act["holding"] = c.holding
             if c.y:
                 act["y"] = c.y
+            # lip flap: explicit, or the lead of a line that quotes someone ("...") speaks it on screen
+            if c.talk or (c.talk is None and c.id == focus_id and ("\"" in beat.narration or "“" in beat.narration)):
+                spans_t = []
+                for w in ws:
+                    w0 = _wf_of(ws, w, fps); w1 = w0 + max(3, int(round((w["e"] - w["s"]) * fps)))
+                    if spans_t and w0 - spans_t[-1][1] < 6:
+                        spans_t[-1][1] = w1
+                    else:
+                        spans_t.append([w0, w1])
+                act["talk"] = [[max(a, x0), min(b, x1)] for x0, x1 in spans_t if x1 > a and x0 < b]
             pos[c.id] = (x, z)
             actors.append(act)
         for e in range(min(beat.extras, 2) if plan.graphics == "simple" else beat.extras):
@@ -433,6 +441,11 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
             scene["pieces"] = pcs
         if impact:
             scene["kicks"] = [{"frame": impact + LEAD, "amp": 0.8}]
+        # the lens leans in when the narrator names the thing that pops on screen (product / burst / sparkle words)
+        pun = sorted({wf + LEAD for x in beat.fx if x.kind in ("product", "burst", "sparkle", "money") and x.word
+                      for wf in [word_frame(ws, x.word, fps)] if wf is not None and wf + LEAD != (impact or -99) + LEAD})
+        if pun:
+            scene["punches"] = pun
         fxs = []
         for f in beat.fx:
             wf = word_frame(ws, f.word, fps) if f.word else None

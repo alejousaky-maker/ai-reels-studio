@@ -7,7 +7,8 @@ export type EnvPreset = "village_square" | "park" | "street" | "market" | "inter
   | "outback" | "cabin" | "bedroom" | "kitchen" | "banquet" | "gameroom" | "shops" | "trading" | "clinic" | "datacenter" | "tunnel" | "warehouse" | "canal" | "island" | "bridge";
 
 export type Expr = "neutral" | "stern" | "grin" | "laugh" | "whistle" | "nervous" | "shock" | "relief" | "relief_open" | "dazed"
-  | "pained" | "smile" | "smile_closed" | "lick" | "starry" | "crazy" | "squint" | "broken" | "sweat" | "sleepy";
+  | "pained" | "smile" | "smile_closed" | "lick" | "starry" | "crazy" | "squint" | "broken" | "sweat" | "sleepy"
+  | "smug" | "skeptical" | "angry" | "sad" | "cry" | "wink" | "bored" | "scared" | "love" | "evil" | "proud" | "confused";
 
 export type OutfitSpec = {
   jacket: string; pants: string; boots: string;
@@ -24,7 +25,9 @@ export type ExprKey = { frame: number; expr: Expr };
 export type ActorSpec = {
   castId: string; x: number; z: number;
   /** "dance" = stroll cycle + hop + arm waves */
-  mode?: "stand" | "stroll" | "sit" | "march" | "dance" | "fall" | "run" | "jump";
+  mode?: "stand" | "stroll" | "sit" | "march" | "dance" | "fall" | "run" | "jump" | "chair";
+  /** frame spans while this character speaks (lip flap + talking hands) */
+  talk?: [number, number][];
   /** panic tremble amount (0-1) */
   shake?: number;
   /** standing height above the ground (climbing a pole, in a bed) */
@@ -80,6 +83,8 @@ export type SceneSpec = {
   /** lens blur radius at infinity in px at 1080 wide (0 = sharp); focus on an actor's eyes or a world point */
   dof?: { cInf: number; focusActor?: number; focus?: V3 };
   kicks?: { frame: number; amp: number }[];
+  /** gentle lens lean-ins on named objects */
+  punches?: number[];
   fx?: FxSpec[];
   props?: PropSpec[];
   pieces?: PieceSpec[];
@@ -93,7 +98,7 @@ export type SceneSpec = {
   /** a clause cut inside a sentence */
   sub?: boolean;
   /** diegetic screen layer drawn over the picture */
-  hud?: { kind: "rec" | "phone" | "news" | "map" | "panel" | "bar" | "police" | "manhattan" | "osaka" | "panama" | "world" | "subway" | "mud" | "outro"; text?: string };
+  hud?: { kind: "rec" | "phone" | "news" | "map" | "panel" | "bar" | "police" | "manhattan" | "osaka" | "panama" | "world" | "subway" | "mud" | "outro" | "spot"; text?: string };
   /** film look (CSS grade over the 3D picture) */
   look?: "sepia" | "bw" | "cool" | "warm";
 };

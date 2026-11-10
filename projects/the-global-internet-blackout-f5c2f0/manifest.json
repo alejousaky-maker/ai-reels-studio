@@ -5,33 +5,33 @@
    "status": "done",
    "words": 144,
    "beats": 15,
-   "at": "2026-11-10T14:49:45"
+   "at": "2026-11-10T15:59:32"
   },
   "voice": {
    "duration": 49.488625,
    "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
-   "seconds": 16.6,
+   "seconds": 17.7,
    "status": "done",
    "voice": "am_eric*0.6+am_fenrir*0.4",
    "speed": 1.12,
-   "at": "2026-11-10T14:50:02"
+   "at": "2026-11-10T15:59:50"
   },
   "align": {
    "status": "done",
-   "seconds": 12.4,
+   "seconds": 13.3,
    "method": {
     "whisper": 17,
     "spread": 3
    },
    "model": "faster-whisper base (cpu/int8)",
-   "at": "2026-11-10T14:50:14"
+   "at": "2026-11-10T16:00:03"
   },
   "storyboard": {
    "status": "done",
    "frames": 1495,
    "seconds_video": 49.833333333333336,
    "scenes": 20,
-   "at": "2026-11-10T14:50:14"
+   "at": "2026-11-10T16:00:03"
   },
   "stills": {
    "status": "done",
@@ -70,6 +70,28 @@
   {
    "step": "stills",
    "at": "2026-11-10T14:52:44",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T15:59:32",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T15:59:50",
+   "seconds": 17.7,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T16:00:03",
+   "status": "done",
+   "seconds": 13.3
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T16:00:03",
    "status": "done"
   }
  ],

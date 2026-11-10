@@ -23,11 +23,11 @@ Figures corrected to documented facts where the brief overstated them (see verif
 ## How Manhattan Eats Every Day  (`plan_21_food.json`, 14 scenes, 248 words)
 
 1. *bridge · wide · day · push · HUD manhattan* — “How do you feed a city of eight million people when its heart is an island with zero farms? You don't. You pray the trucks don't stop.” — no cast → **You**: medium → **pray**: extreme
-2. *bridge · wide · night · truck_right · whip* — “Every single morning, thousands of massive eighteen-wheelers converge on New York City before dawn, carrying millions of pounds of food.” — no cast → **converge**: low
+2. *bridge · wide · night · truck_right · whip* — “Every single morning, thousands of massive eighteen-wheelers converge on New York City before dawn, carrying millions of pounds of food.” — no cast → **converge**: wide
 3. *kitchen · medium · day · push · dissolve* — “If you run a restaurant in Times Square, your entire menu depends on a single truck crawling across the George Washington Bridge.” — chef (stand, sweat) → **single**: wide @ bridge → **George**: extreme @ kitchen
 4. *street · wide · day · truck_right · dissolve · sepia* — “Manhattan was laid out in eighteen eleven for horse-drawn carriages, not eighty-foot trucks trying to deliver fifty crates of avocados.” — no cast → **eighty**: wide @ shops → **avocados**: close
 5. *shops · medium · day · follow* — “Delivery drivers have to invent new laws of physics just to double-park without getting towed in thirty seconds.” — drv (run, sweat, box) → **double**: two_shot → **thirty**: extreme
-6. *warehouse · wide · day · truck_left · zoom* — “By six in the morning, the Hunts Point Market in the Bronx turns into a synchronized war zone of forklifts and crates.” — stk (march, stern) → **war**: low
+6. *warehouse · wide · day · truck_left · zoom* — “By six in the morning, the Hunts Point Market in the Bronx turns into a synchronized war zone of forklifts and crates.” — stk (march, stern) → **war**: wide
 7. *bridge · medium · day · push* — “If one bridge closes for maintenance, coffee shops downtown run out of milk before the morning rush even starts.” — cop (point, stern) → **coffee**: wide @ shops → **morning**: extreme
 8. *kitchen · close · day · push · HUD panel* — “Fresh food has zero tolerance. Miss your delivery window, and thousands of meals turn into expensive dumpster juice.” — chef (stand, nervous, lettuce) → **thousands**: extreme
 9. *shops · medium · night · follow · dissolve* — “An army of night-shift stockers unloads everything in total darkness before the city wakes up.” — stk (walk, stern, box)
@@ -41,12 +41,12 @@ Figures corrected to documented facts where the brief overstated them (see verif
 
 1. *canal · wide · day · push* — “They spent over five billion dollars widening the Panama Canal, and the giant new ships still scrape by with barely any room on either wall.” — no cast → **giant**: low → **either**: close
 2. *canal · wide · day · truck_left · dissolve · sepia* — “Back in nineteen fourteen, digging a ditch across the jungle connected two oceans and changed global trade forever.” — wk (stand, stern, shovel) → **connected**: close
-3. *canal · close · golden · push · sepia* — “The original cost? Over twenty-five thousand worker lives lost to malaria and yellow fever in the brutal tropical mud.” — wk (sit, sleepy) → **malaria**: extreme
+3. *canal · close · golden · push · sepia* — “The original cost? Over twenty-five thousand worker lives lost to malaria and yellow fever in the brutal tropical mud.” — wk (stand, sleepy) → **malaria**: extreme
 4. *canal · worm · day · crane_up · zoom* — “Fast forward a century, and cargo ships got so big they couldn't even fit through the old locks anymore.” — cap (stand, shock) → **couldn't**: extreme
 5. *canal · medium · day · orbit* — “So engineers launched a colossal project: brand new, gigantic concrete water elevators to lift floating cities.” — eng (point, grin) → **gigantic**: wide
 6. *canal · wide · day · crane_up* — “Instead of pumps, gravity does all the work, draining lake water to float ships uphill.” — no cast → **float**: low
 7. *canal · close · day · push · HUD panel* — “The new ships are so wide they leave just a few meters on each side. There is zero room for bad steering.” — cap (stand, sweat) → **zero**: extreme
-8. *canal · wide · day · truck_right* — “Powerful tugboats tie onto both ends to guide the giant beast through safely.” — no cast → **guide**: low
+8. *canal · high · day · truck_right* — “Powerful tugboats tie onto both ends to guide the giant beast through safely.” — no cast → **guide**: close
 9. *canal · wide · day · pull* — “The funny part? The canal runs on rainwater, so when a drought hits, ships pay millions just to skip the line.” — cap (shrug, nervous) → **ships**: two_shot
 10. *canal · wide · day · zoom · HUD world* — “Around forty percent of all US container traffic squeezes through this exact tropical bottleneck.” — no cast
 11. *canal · wide · day · HUD panama* — “Instead of sailing all the way around South America, you cut about eight thousand miles off the trip in one afternoon.” — no cast

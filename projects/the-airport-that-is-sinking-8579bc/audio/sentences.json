@@ -1,0 +1,91 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 78.65570833333334,
+ "voice": "am_fenrir*0.8+am_eric*0.2",
+ "lang": "en",
+ "speed": 1.021,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "Japan needed a massive international airport, but there was no room on land, so they built an island in the ocean, which is slowly swallowing itself.",
+   "start": 0.06,
+   "end": 8.565166666666666
+  },
+  {
+   "text": "In the nineteen eighties, Osaka was running out of space, and residents hated noisy flights over the city.",
+   "start": 8.705166666666667,
+   "end": 14.671979166666667
+  },
+  {
+   "text": "The solution?",
+   "start": 14.811979166666667,
+   "end": 15.616604166666667
+  },
+  {
+   "text": "Build a brand new artificial island five kilometers out in Osaka Bay, where nobody can complain.",
+   "start": 15.756604166666667,
+   "end": 21.949666666666666
+  },
+  {
+   "text": "Engineers flattened entire mountains, loaded millions of tons of rock onto barges, and dumped it into the sea.",
+   "start": 22.089666666666666,
+   "end": 28.743375
+  },
+  {
+   "text": "The small oversight?",
+   "start": 28.883375,
+   "end": 30.016458333333333
+  },
+  {
+   "text": "The sea floor was made of about sixty feet of ultra-soft marine clay.",
+   "start": 30.156458333333333,
+   "end": 34.29870833333333
+  },
+  {
+   "text": "Instead of settling slightly, the island kept sinking, year after year, way faster than predicted.",
+   "start": 34.43870833333333,
+   "end": 39.852916666666665
+  },
+  {
+   "text": "To keep the terminal from flooding, engineers put hydraulic jacks under the building to lift it up by hand.",
+   "start": 39.992916666666666,
+   "end": 45.90889583333333
+  },
+  {
+   "text": "They surrounded the island with massive seawalls and armor blocks to stop typhoons from washing it away.",
+   "start": 46.04889583333333,
+   "end": 51.783479166666666
+  },
+  {
+   "text": "Pumping billions of dollars into keeping an airport above water is the ultimate engineering flex.",
+   "start": 51.92347916666667,
+   "end": 57.68122916666667
+  },
+  {
+   "text": "Despite sinking into the abyss, Kansai is still one of the most punctual airports on Earth.",
+   "start": 57.82122916666667,
+   "end": 62.8594375
+  },
+  {
+   "text": "With sea levels rising, engineers are now in a high-stakes race against Neptune himself.",
+   "start": 62.9994375,
+   "end": 68.2725625
+  },
+  {
+   "text": "Next time your flight is delayed, remember the runway under you is slowly drowning.",
+   "start": 68.4125625,
+   "end": 73.01925
+  },
+  {
+   "text": "Send this to anyone who loves extreme civil engineering.",
+   "start": 73.15925,
+   "end": 76.23697916666667
+  },
+  {
+   "text": "Hit follow for more engineering wonders.",
+   "start": 76.37697916666667,
+   "end": 78.51570833333334
+  }
+ ]
+}

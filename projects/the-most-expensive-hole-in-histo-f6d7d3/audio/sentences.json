@@ -1,0 +1,106 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 80.26516666666667,
+ "voice": "am_fenrir*0.8+am_eric*0.2",
+ "lang": "en",
+ "speed": 1.15,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "If you want to build a subway that costs four and a half billion dollars for just three stations, you don't build transit.",
+   "start": 0.06,
+   "end": 6.097625
+  },
+  {
+   "text": "You build a gold mine.",
+   "start": 6.237625,
+   "end": 7.3406875
+  },
+  {
+   "text": "It's nineteen twenty-nine, and New York promises commuters a brand new subway line under Second Avenue to fix endless overcrowding.",
+   "start": 7.4806875,
+   "end": 14.879479166666666
+  },
+  {
+   "text": "Then the Great Depression hits, World War Two happens, and the project gets quietly buried for nearly a century.",
+   "start": 15.019479166666667,
+   "end": 21.024791666666665
+  },
+  {
+   "text": "When they finally restart digging in the two thousands, every single inch of dirt costs more than solid platinum.",
+   "start": 21.164791666666666,
+   "end": 27.210270833333333
+  },
+  {
+   "text": "Why?",
+   "start": 27.350270833333333,
+   "end": 27.793729166666665
+  },
+  {
+   "text": "Because underneath the street lies a hundred-year-old maze of mystery pipes, electrical cables, and forgotten steam lines.",
+   "start": 27.933729166666666,
+   "end": 34.742375
+  },
+  {
+   "text": "Every time they move a single water pipe, it costs millions.",
+   "start": 34.882375,
+   "end": 37.93414583333333
+  },
+  {
+   "text": "They're literally tunneling through a maze of financial regret.",
+   "start": 38.07414583333333,
+   "end": 40.967729166666665
+  },
+  {
+   "text": "Fast forward billions of dollars later: they finally open three shiny new stations, about two miles of track.",
+   "start": 41.107729166666665,
+   "end": 47.2640625
+  },
+  {
+   "text": "That means every single step you walk underground cost roughly a million dollars.",
+   "start": 47.4040625,
+   "end": 51.651895833333334
+  },
+  {
+   "text": "For that money, you could buy every daily rider a brand new car, and still have cash left for a private island.",
+   "start": 51.791895833333335,
+   "end": 57.520208333333336
+  },
+  {
+   "text": "So why did it cost so much?",
+   "start": 57.66020833333334,
+   "end": 59.04720833333333
+  },
+  {
+   "text": "Consultants, special contracts, and hiring six guys to watch one guy hold a shovel.",
+   "start": 59.18720833333333,
+   "end": 63.99689583333333
+  },
+  {
+   "text": "And the best part?",
+   "start": 64.13689583333333,
+   "end": 65.04058333333333
+  },
+  {
+   "text": "Phase two is still years from finished, which means the budget is about to enter orbit.",
+   "start": 65.18058333333333,
+   "end": 69.71352083333333
+  },
+  {
+   "text": "Congratulations, you've just built the most expensive hole in human history.",
+   "start": 69.85352083333333,
+   "end": 73.8661875
+  },
+  {
+   "text": "Send this to that friend who complains about his local train ticket price.",
+   "start": 74.0061875,
+   "end": 77.74477083333333
+  },
+  {
+   "text": "Hit follow for more engineering disasters.",
+   "start": 77.88477083333333,
+   "end": 80.12516666666667
+  }
+ ]
+}

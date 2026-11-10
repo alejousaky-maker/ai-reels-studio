@@ -1,0 +1,96 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 83.41,
+ "voice": "am_fenrir*0.8+am_eric*0.2",
+ "lang": "en",
+ "speed": 1.15,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "How do you feed a city of eight million people when its heart is an island with zero farms?",
+   "start": 0.06,
+   "end": 4.838729166666667
+  },
+  {
+   "text": "You don't.",
+   "start": 4.978729166666667,
+   "end": 5.567020833333333
+  },
+  {
+   "text": "You pray the trucks don't stop.",
+   "start": 5.707020833333333,
+   "end": 7.1338333333333335
+  },
+  {
+   "text": "Every single morning, thousands of massive eighteen-wheelers converge on New York City before dawn, carrying millions of pounds of food.",
+   "start": 7.273833333333333,
+   "end": 14.550041666666667
+  },
+  {
+   "text": "If you run a restaurant in Times Square, your entire menu depends on a single truck crawling across the George Washington Bridge.",
+   "start": 14.690041666666668,
+   "end": 21.6363125
+  },
+  {
+   "text": "Manhattan was laid out in eighteen eleven for horse-drawn carriages, not eighty-foot trucks trying to deliver fifty crates of avocados.",
+   "start": 21.7763125,
+   "end": 29.143020833333335
+  },
+  {
+   "text": "Delivery drivers have to invent new laws of physics just to double-park without getting towed in thirty seconds.",
+   "start": 29.28302083333333,
+   "end": 35.370875
+  },
+  {
+   "text": "By six in the morning, the Hunts Point Market in the Bronx turns into a synchronized war zone of forklifts and crates.",
+   "start": 35.510875,
+   "end": 41.59385416666667
+  },
+  {
+   "text": "If one bridge closes for maintenance, coffee shops downtown run out of milk before the morning rush even starts.",
+   "start": 41.73385416666667,
+   "end": 47.908208333333334
+  },
+  {
+   "text": "Fresh food has zero tolerance.",
+   "start": 48.048208333333335,
+   "end": 49.71960416666667
+  },
+  {
+   "text": "Miss your delivery window, and thousands of meals turn into expensive dumpster juice.",
+   "start": 49.859604166666664,
+   "end": 54.2170625
+  },
+  {
+   "text": "An army of night-shift stockers unloads everything in total darkness before the city wakes up.",
+   "start": 54.3570625,
+   "end": 59.49870833333333
+  },
+  {
+   "text": "We're talking about moving billions of calories across concrete bridges every single day, like clockwork.",
+   "start": 59.638708333333334,
+   "end": 65.23029166666667
+  },
+  {
+   "text": "It's the most fragile, high-stakes logistics ballet on Earth, and it happens every twenty-four hours.",
+   "start": 65.37029166666666,
+   "end": 70.90572916666666
+  },
+  {
+   "text": "Next time you bite into a bagel in Manhattan, remember it survived bridges, tunnels, and a parking ticket.",
+   "start": 71.04572916666666,
+   "end": 76.62816666666667
+  },
+  {
+   "text": "Send this to anyone who thinks food magically appears on grocery shelves.",
+   "start": 76.76816666666667,
+   "end": 80.6881875
+  },
+  {
+   "text": "Hit follow for more hidden infrastructure secrets.",
+   "start": 80.8281875,
+   "end": 83.27
+  }
+ ]
+}

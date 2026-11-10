@@ -128,7 +128,6 @@
    "characters": [
     {
      "id": "wk",
-     "action": "sit",
      "expr": "sleepy"
     }
    ],
@@ -151,7 +150,7 @@
      "characters": [
       {
        "id": "wk",
-       "action": "sit",
+       "action": "panic",
        "expr": "shock"
       }
      ],
@@ -314,7 +313,7 @@
   },
   {
    "narration": "Powerful tugboats tie onto both ends to guide the giant beast through safely.",
-   "shot": "wide",
+   "shot": "high",
    "mood": "upbeat",
    "environment": "canal",
    "pieces": [
@@ -341,7 +340,7 @@
    "shots": [
     {
      "at": "guide",
-     "shot": "low",
+     "shot": "close",
      "characters": [
       {
        "id": "cap",
@@ -349,7 +348,8 @@
        "expr": "grin"
       }
      ],
-     "camMove": "truck_left"
+     "pieces": [],
+     "camMove": "push"
     }
    ]
   },

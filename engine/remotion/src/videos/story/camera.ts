@@ -50,6 +50,10 @@ export const camAt = (sc: SceneSpec, f: number): Cam => {
     const n = f - k.frame + 1;
     if (n >= 0 && n < 12) punch = Math.max(punch, 0.1 * Math.min(1, k.amp + 0.2) * (1 - n / 12) ** 2);
   }
+  for (const pf of sc.punches ?? []) {   // softer lean-in on named objects: 5 % tighter, eases back over 16 f
+    const n = f - pf + 1;
+    if (n >= 0 && n < 16) punch = Math.max(punch, 0.05 * Math.sin((Math.PI * Math.min(n, 6)) / 12) * (n < 6 ? 1 : (1 - (n - 6) / 10)));
+  }
   if (punch) cur = { ...cur, fov: cur.fov * (1 - punch) };
   const a = kickAt(sc, f);
   if (!a) return cur;

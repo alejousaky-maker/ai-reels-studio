@@ -1,0 +1,3163 @@
+{
+ "version": 1,
+ "title": "The Airport That Is Sinking",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 2372,
+ "env": {
+  "preset": "island",
+  "seed": 83,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "eng",
+   "name": "Engineer",
+   "outfit": {
+    "jacket": "#ff7a1a",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#f5c9a0",
+    "hat": "pith",
+    "cap": "#ffd23f",
+    "vest": "#d7ff3a",
+    "glasses": true
+   }
+  },
+  {
+   "id": "slp",
+   "name": "Resident",
+   "outfit": {
+    "jacket": "#8fb8e6",
+    "pants": "#8fb8e6",
+    "boots": "#f2efe8",
+    "skin": "#8d5a3b",
+    "stripes": "#f2efe8",
+    "hat": "nightcap",
+    "cap": "#3f6fb5"
+   }
+  },
+  {
+   "id": "plt",
+   "name": "Director",
+   "outfit": {
+    "jacket": "#1d2a50",
+    "pants": "#1d2a50",
+    "boots": "#1d1b22",
+    "skin": "#ecd0b6",
+    "hat": "pilot",
+    "cap": "#1d2a50",
+    "tie": "#1d1b22"
+   }
+  },
+  {
+   "id": "pax",
+   "name": "Passenger",
+   "outfit": {
+    "jacket": "#ff7a59",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ffe2c2",
+    "dress": "#ff7a59",
+    "hat": "sunhat",
+    "hair": "#2a201a",
+    "shades": true
+   }
+  },
+  {
+   "id": "extra0",
+   "name": "",
+   "outfit": {
+    "jacket": "#8fb8e6",
+    "pants": "#8fb8e6",
+    "boots": "#f2efe8",
+    "skin": "#8d5a3b",
+    "stripes": "#f2efe8",
+    "hat": "nightcap",
+    "cap": "#3f6fb5"
+   }
+  },
+  {
+   "id": "extra1",
+   "name": "",
+   "outfit": {
+    "jacket": "#8fb8e6",
+    "pants": "#8fb8e6",
+    "boots": "#f2efe8",
+    "skin": "#ecd0b6",
+    "stripes": "#f2efe8",
+    "hat": "nightcap",
+    "cap": "#3f6fb5"
+   }
+  },
+  {
+   "id": "extra2",
+   "name": "",
+   "outfit": {
+    "jacket": "#8fb8e6",
+    "pants": "#8fb8e6",
+    "boots": "#f2efe8",
+    "skin": "#ffe2c2",
+    "stripes": "#f2efe8",
+    "hat": "nightcap",
+    "cap": "#3f6fb5"
+   }
+  },
+  {
+   "id": "extra3",
+   "name": "",
+   "outfit": {
+    "jacket": "#8fb8e6",
+    "pants": "#8fb8e6",
+    "boots": "#f2efe8",
+    "skin": "#8d5a3b",
+    "stripes": "#f2efe8",
+    "hat": "nightcap",
+    "cap": "#3f6fb5"
+   }
+  },
+  {
+   "id": "extra4",
+   "name": "",
+   "outfit": {
+    "jacket": "#8fb8e6",
+    "pants": "#8fb8e6",
+    "boots": "#f2efe8",
+    "skin": "#ecd0b6",
+    "stripes": "#f2efe8",
+    "hat": "nightcap",
+    "cap": "#3f6fb5"
+   }
+  },
+  {
+   "id": "extra5",
+   "name": "",
+   "outfit": {
+    "jacket": "#8fb8e6",
+    "pants": "#8fb8e6",
+    "boots": "#f2efe8",
+    "skin": "#ffe2c2",
+    "stripes": "#f2efe8",
+    "hat": "nightcap",
+    "cap": "#3f6fb5"
+   }
+  },
+  {
+   "id": "extra6",
+   "name": "",
+   "outfit": {
+    "jacket": "#ff7a1a",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#8d5a3b",
+    "hat": "pith",
+    "cap": "#ffd23f",
+    "vest": "#d7ff3a",
+    "glasses": true
+   }
+  },
+  {
+   "id": "extra7",
+   "name": "",
+   "outfit": {
+    "jacket": "#ff7a1a",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#ecd0b6",
+    "hat": "pith",
+    "cap": "#ffd23f",
+    "vest": "#d7ff3a",
+    "glasses": true
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 154,
+   "narration": "Japan needed a massive international airport, but there was no room on land, so they built an island in the ocean, which is slowly swallowing itself.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      -19.246,
+      2.3,
+      9.492
+     ],
+     "lookAt": [
+      -29.395,
+      1.2,
+      13.522
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 0,
+     "position": [
+      -20.456,
+      2.3,
+      6.448
+     ],
+     "lookAt": [
+      -30.605,
+      1.2,
+      10.478
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 154
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 8300,
+   "qualityNotes": "",
+   "pieces": [
+    {
+     "kind": "airplane",
+     "x": -35.223,
+     "z": 12.522,
+     "scale": 0.6,
+     "y": 3.0,
+     "moveTo": [
+      -35.521,
+      9.537
+     ],
+     "moveFrames": [
+      15,
+      138
+     ]
+    }
+   ]
+  },
+  {
+   "sceneId": "b01a",
+   "startFrame": 154,
+   "endFrame": 215,
+   "narration": "Japan needed a massive international airport, but there was no room on land, so they built an island in the ocean, which is slowly swallowing itself.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 154,
+     "position": [
+      -19.254,
+      0.4,
+      13.94
+     ],
+     "lookAt": [
+      -30,
+      1.2,
+      12
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 154,
+     "position": [
+      -19.254,
+      7.76,
+      13.94
+     ],
+     "lookAt": [
+      -30,
+      1.2,
+      12
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 61
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 8337,
+   "qualityNotes": "",
+   "sub": true,
+   "pieces": [
+    {
+     "kind": "airplane",
+     "x": -45.105,
+     "z": 13.51,
+     "scale": 0.6,
+     "y": 2.0,
+     "moveTo": [
+      -44.806,
+      16.496
+     ],
+     "moveFrames": [
+      160,
+      208
+     ]
+    }
+   ]
+  },
+  {
+   "sceneId": "b01b",
+   "startFrame": 215,
+   "endFrame": 260,
+   "narration": "Japan needed a massive international airport, but there was no room on land, so they built an island in the ocean, which is slowly swallowing itself.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": -30.0,
+     "z": 12.0,
+     "expr": "shock",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 215,
+     "position": [
+      -23.592,
+      0.85,
+      13.771
+     ],
+     "lookAt": [
+      -30,
+      1.5,
+      12
+     ],
+     "fov": 44,
+     "roll": 0.0
+    },
+    {
+     "frame": 215,
+     "position": [
+      -26.155,
+      1.11,
+      13.063
+     ],
+     "lookAt": [
+      -30,
+      1.5,
+      12
+     ],
+     "fov": 44,
+     "roll": 0.0,
+     "dur": 45
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 6,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 8374,
+   "qualityNotes": "",
+   "sub": true,
+   "pieces": [
+    {
+     "kind": "airplane",
+     "x": -35.223,
+     "z": 12.522,
+     "scale": 0.6,
+     "y": 3.0,
+     "moveTo": [
+      -35.521,
+      9.537
+     ],
+     "moveFrames": [
+      219,
+      255
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "splash",
+     "frame": 215,
+     "dur": 45,
+     "at": [
+      -32.627,
+      1.6,
+      10.856
+     ],
+     "size": 4.2
+    }
+   ]
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 260,
+   "endFrame": 381,
+   "narration": "In the nineteen eighties, Osaka was running out of space, and residents hated noisy flights over the city.",
+   "light": "night",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "slp",
+     "x": 16.0,
+     "z": 3.0,
+     "expr": "stern",
+     "mode": "stand",
+     "pose": "point",
+     "holding": "pillow"
+    },
+    {
+     "castId": "extra0",
+     "x": 17.294,
+     "z": -0.144,
+     "mode": "stand",
+     "expr": "smile",
+     "holding": "pillow"
+    },
+    {
+     "castId": "extra1",
+     "x": 15.206,
+     "z": -0.926,
+     "mode": "stand",
+     "expr": "grin",
+     "holding": "pillow"
+    },
+    {
+     "castId": "extra2",
+     "x": 18.368,
+     "z": -2.463,
+     "mode": "stand",
+     "expr": "nervous",
+     "holding": "pillow"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 260,
+     "position": [
+      14.965,
+      1.68,
+      8.731
+     ],
+     "lookAt": [
+      16,
+      1.38,
+      3
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 260,
+     "position": [
+      15.379,
+      1.56,
+      6.439
+     ],
+     "lookAt": [
+      16,
+      1.38,
+      3
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 121
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 8301,
+   "qualityNotes": "",
+   "env": {
+    "preset": "suburb",
+    "seed": 83,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "airplane",
+     "x": 15.536,
+     "z": -1.643,
+     "scale": 0.4,
+     "y": 7.0,
+     "moveTo": [
+      18.521,
+      -1.941
+     ],
+     "moveFrames": [
+      272,
+      368
+     ]
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "1980s",
+     "frame": 263,
+     "dur": 115,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b02a",
+   "startFrame": 381,
+   "endFrame": 443,
+   "narration": "In the nineteen eighties, Osaka was running out of space, and residents hated noisy flights over the city.",
+   "light": "night",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "slp",
+     "x": 16.0,
+     "z": 3.0,
+     "expr": "crazy",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0,
+     "holding": "pillow"
+    },
+    {
+     "castId": "extra3",
+     "x": 17.294,
+     "z": -0.144,
+     "mode": "stand",
+     "expr": "smile",
+     "holding": "pillow"
+    },
+    {
+     "castId": "extra4",
+     "x": 14.796,
+     "z": -1.0,
+     "mode": "stand",
+     "expr": "grin",
+     "holding": "pillow"
+    },
+    {
+     "castId": "extra5",
+     "x": 18.368,
+     "z": -2.463,
+     "mode": "stand",
+     "expr": "nervous",
+     "holding": "pillow"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 381,
+     "position": [
+      16.836,
+      1.62,
+      5.831
+     ],
+     "lookAt": [
+      17.745,
+      1.5,
+      3.022
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 381,
+     "position": [
+      16.836,
+      1.62,
+      5.831
+     ],
+     "lookAt": [
+      16.0,
+      1.5,
+      3.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 8338,
+   "qualityNotes": "",
+   "sub": true,
+   "env": {
+    "preset": "suburb",
+    "seed": 83,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "airplane",
+     "x": 15.536,
+     "z": -1.643,
+     "scale": 0.4,
+     "y": 7.0,
+     "moveTo": [
+      18.521,
+      -1.941
+     ],
+     "moveFrames": [
+      387,
+      436
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "notes",
+     "frame": 391,
+     "dur": 52,
+     "at": [
+      16.299,
+      1.65,
+      2.97
+     ],
+     "size": 1.1
+    }
+   ]
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 443,
+   "endFrame": 661,
+   "narration": "The solution? Build a brand new artificial island five kilometers out in Osaka Bay, where nobody can complain.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 443,
+     "position": [
+      20.83,
+      2.3,
+      12.547
+     ],
+     "lookAt": [
+      18,
+      1.2,
+      2
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 562,
+     "cut": true,
+     "position": [
+      22.253,
+      1.68,
+      5.979
+     ],
+     "lookAt": [
+      18,
+      1.38,
+      2
+     ],
+     "fov": 38,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "zoom",
+   "seed": 8302,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "osaka"
+   }
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 661,
+   "endFrame": 825,
+   "narration": "Engineers flattened entire mountains, loaded millions of tons of rock onto barges, and dumped it into the sea.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": -30.072,
+     "z": 11.278,
+     "expr": "grin",
+     "mode": "stand",
+     "pose": "point"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 661,
+     "position": [
+      -20.456,
+      2.3,
+      6.448
+     ],
+     "lookAt": [
+      -30.605,
+      1.2,
+      10.478
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 661,
+     "position": [
+      -19.246,
+      2.3,
+      9.492
+     ],
+     "lookAt": [
+      -29.395,
+      1.2,
+      13.522
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 164
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 8303,
+   "qualityNotes": "",
+   "env": {
+    "preset": "island",
+    "seed": 83,
+    "shop": null,
+    "variant": "build"
+   },
+   "pieces": [
+    {
+     "kind": "excavator",
+     "x": -31.333,
+     "z": 14.746
+    },
+    {
+     "kind": "rockpile",
+     "x": -31.716,
+     "z": 9.91
+    }
+   ]
+  },
+  {
+   "sceneId": "b04a",
+   "startFrame": 825,
+   "endFrame": 865,
+   "narration": "Engineers flattened entire mountains, loaded millions of tons of rock onto barges, and dumped it into the sea.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 825,
+     "position": [
+      -24.07,
+      0.85,
+      8.995
+     ],
+     "lookAt": [
+      -27.267,
+      1.5,
+      14.823
+     ],
+     "fov": 44,
+     "roll": 0.0
+    },
+    {
+     "frame": 825,
+     "position": [
+      -24.07,
+      0.85,
+      8.995
+     ],
+     "lookAt": [
+      -30,
+      1.5,
+      12
+     ],
+     "fov": 44,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 6
+   },
+   "transitionIn": "cut",
+   "seed": 8340,
+   "qualityNotes": "",
+   "sub": true,
+   "env": {
+    "preset": "island",
+    "seed": 83,
+    "shop": null,
+    "variant": "build"
+   },
+   "pieces": [
+    {
+     "kind": "rockpile",
+     "x": -35.781,
+     "z": 12.578,
+     "scale": 1.2,
+     "y": 1.5,
+     "liftTo": -1.5,
+     "moveFrames": [
+      831,
+      865
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "splash",
+     "frame": 849,
+     "dur": 16,
+     "at": [
+      -32.627,
+      1.6,
+      10.856
+     ],
+     "size": 4.2
+    }
+   ]
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 865,
+   "endFrame": 1032,
+   "narration": "The small oversight? The sea floor was made of about sixty feet of ultra-soft marine clay.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 865,
+     "position": [
+      -16.012,
+      2.3,
+      14.733
+     ],
+     "lookAt": [
+      -14,
+      1.2,
+      4
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 956,
+     "cut": true,
+     "position": [
+      -17.935,
+      1.68,
+      8.293
+     ],
+     "lookAt": [
+      -14,
+      1.38,
+      4
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 8304,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "mud"
+   }
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 1032,
+   "endFrame": 1115,
+   "narration": "Instead of settling slightly, the island kept sinking, year after year, way faster than predicted.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": 18.0,
+     "z": 2.0,
+     "expr": "sweat",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1032,
+     "position": [
+      19.509,
+      1.68,
+      7.625
+     ],
+     "lookAt": [
+      18,
+      1.38,
+      2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1032,
+     "position": [
+      18.905,
+      1.56,
+      5.375
+     ],
+     "lookAt": [
+      18,
+      1.38,
+      2
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 83
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 8305,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "bar",
+    "text": "ISLAND SINKING|0|38|FT"
+   }
+  },
+  {
+   "sceneId": "b06a",
+   "startFrame": 1115,
+   "endFrame": 1157,
+   "narration": "Instead of settling slightly, the island kept sinking, year after year, way faster than predicted.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": 18.0,
+     "z": 2.0,
+     "expr": "broken",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1115,
+     "position": [
+      19.055,
+      1.6,
+      3.408
+     ],
+     "lookAt": [
+      18.0,
+      1.6,
+      2.0
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 1115,
+     "position": [
+      18.633,
+      1.6,
+      2.845
+     ],
+     "lookAt": [
+      18.0,
+      1.6,
+      2.0
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 42
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 8342,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "bar",
+    "text": "ISLAND SINKING|0|38|FT"
+   }
+  },
+  {
+   "sceneId": "b06b",
+   "startFrame": 1157,
+   "endFrame": 1199,
+   "narration": "Instead of settling slightly, the island kept sinking, year after year, way faster than predicted.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": 18.0,
+     "z": 2.0,
+     "expr": "shock",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1157,
+     "position": [
+      18.263,
+      1.55,
+      6.773
+     ],
+     "lookAt": [
+      18.0,
+      1.4,
+      2.0
+     ],
+     "fov": 40,
+     "roll": -0.16
+    },
+    {
+     "frame": 1157,
+     "position": [
+      20.186,
+      1.55,
+      6.251
+     ],
+     "lookAt": [
+      18.0,
+      1.4,
+      2.0
+     ],
+     "fov": 40,
+     "roll": -0.16,
+     "dur": 42
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 8379,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "bar",
+    "text": "ISLAND SINKING|0|38|FT"
+   }
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 1199,
+   "endFrame": 1339,
+   "narration": "To keep the terminal from flooding, engineers put hydraulic jacks under the building to lift it up by hand.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": 6.0,
+     "z": 2.0,
+     "expr": "stern",
+     "mode": "stand",
+     "holding": "wrench"
+    },
+    {
+     "castId": "extra6",
+     "x": 6.525,
+     "z": -1.237,
+     "mode": "stand",
+     "expr": "smile",
+     "holding": "wrench"
+    },
+    {
+     "castId": "extra7",
+     "x": 4.056,
+     "z": -1.697,
+     "mode": "stand",
+     "expr": "grin",
+     "holding": "wrench"
+    },
+    {
+     "castId": "extra0",
+     "x": 5.821,
+     "z": -2.85,
+     "mode": "stand",
+     "expr": "nervous",
+     "holding": "wrench"
+    },
+    {
+     "castId": "extra1",
+     "x": 3.127,
+     "z": -0.27,
+     "mode": "stand",
+     "expr": "neutral",
+     "holding": "wrench"
+    },
+    {
+     "castId": "extra2",
+     "x": 6.401,
+     "z": -1.522,
+     "mode": "stand",
+     "expr": "laugh",
+     "holding": "wrench"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1199,
+     "position": [
+      10.44,
+      2.3,
+      11.578
+     ],
+     "lookAt": [
+      4.693,
+      1.2,
+      2.862
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1199,
+     "position": [
+      13.054,
+      2.3,
+      9.854
+     ],
+     "lookAt": [
+      7.307,
+      1.2,
+      1.138
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 140
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "zoom",
+   "seed": 8306,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "airport",
+    "seed": 83,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b07a",
+   "startFrame": 1339,
+   "endFrame": 1381,
+   "narration": "To keep the terminal from flooding, engineers put hydraulic jacks under the building to lift it up by hand.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": 6.0,
+     "z": 2.0,
+     "expr": "laugh",
+     "mode": "stand",
+     "pose": "up",
+     "holding": "wrench"
+    },
+    {
+     "castId": "extra3",
+     "x": 6.67,
+     "z": -1.333,
+     "mode": "stand",
+     "expr": "smile",
+     "holding": "wrench"
+    },
+    {
+     "castId": "extra4",
+     "x": 4.056,
+     "z": -1.697,
+     "mode": "stand",
+     "expr": "grin",
+     "holding": "wrench"
+    },
+    {
+     "castId": "extra5",
+     "x": 7.283,
+     "z": -3.814,
+     "mode": "stand",
+     "expr": "nervous",
+     "holding": "wrench"
+    },
+    {
+     "castId": "extra6",
+     "x": 3.127,
+     "z": -0.27,
+     "mode": "stand",
+     "expr": "neutral",
+     "holding": "wrench"
+    },
+    {
+     "castId": "extra7",
+     "x": 8.845,
+     "z": -3.134,
+     "mode": "stand",
+     "expr": "laugh",
+     "holding": "wrench"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1339,
+     "position": [
+      6.307,
+      0.882,
+      4.936
+     ],
+     "lookAt": [
+      6.0,
+      1.5,
+      2.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1339,
+     "position": [
+      6.307,
+      3.096,
+      4.936
+     ],
+     "lookAt": [
+      6.0,
+      1.5,
+      2.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 42
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 8343,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "airport",
+    "seed": 83,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 1381,
+   "endFrame": 1504,
+   "narration": "They surrounded the island with massive seawalls and armor blocks to stop typhoons from washing it away.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 1381,
+     "position": [
+      -16.012,
+      2.3,
+      14.733
+     ],
+     "lookAt": [
+      -8.291,
+      1.2,
+      7.011
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1381,
+     "position": [
+      -16.012,
+      2.3,
+      14.733
+     ],
+     "lookAt": [
+      -14,
+      1.2,
+      4
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 8307,
+   "qualityNotes": "",
+   "pieces": [
+    {
+     "kind": "tetrapods",
+     "x": -13.639,
+     "z": 5.522
+    },
+    {
+     "kind": "tetrapods",
+     "x": -11.82,
+     "z": -0.36
+    }
+   ]
+  },
+  {
+   "sceneId": "b08a",
+   "startFrame": 1504,
+   "endFrame": 1557,
+   "narration": "They surrounded the island with massive seawalls and armor blocks to stop typhoons from washing it away.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 1504,
+     "position": [
+      -14.626,
+      0.85,
+      10.619
+     ],
+     "lookAt": [
+      -14,
+      1.5,
+      4
+     ],
+     "fov": 44,
+     "roll": 0.0
+    },
+    {
+     "frame": 1504,
+     "position": [
+      -14.376,
+      1.11,
+      7.971
+     ],
+     "lookAt": [
+      -14,
+      1.5,
+      4
+     ],
+     "fov": 44,
+     "roll": 0.0,
+     "dur": 53
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 6
+   },
+   "transitionIn": "cut",
+   "seed": 8344,
+   "qualityNotes": "",
+   "sub": true,
+   "pieces": [
+    {
+     "kind": "tetrapods",
+     "x": -15.045,
+     "z": 4.819
+    },
+    {
+     "kind": "tetrapods",
+     "x": -11.82,
+     "z": -0.36
+    }
+   ],
+   "fx": [
+    {
+     "kind": "splash",
+     "frame": 1527,
+     "dur": 30,
+     "at": [
+      -11.63,
+      1.6,
+      2.39
+     ],
+     "size": 4.2
+    }
+   ]
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 1557,
+   "endFrame": 1676,
+   "narration": "Pumping billions of dollars into keeping an airport above water is the ultimate engineering flex.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "plt",
+     "x": 0.0,
+     "z": 1.2,
+     "expr": "grin",
+     "mode": "stand",
+     "holding": "check"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1557,
+     "position": [
+      1.6,
+      1.68,
+      6.8
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1557,
+     "position": [
+      0.96,
+      1.56,
+      4.56
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.2
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 119
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 8308,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "office",
+    "seed": 83,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "money",
+     "frame": 1569,
+     "dur": 107,
+     "at": [
+      0.0,
+      1.4,
+      1.8
+     ],
+     "size": 3.2
+    }
+   ]
+  },
+  {
+   "sceneId": "b09a",
+   "startFrame": 1676,
+   "endFrame": 1734,
+   "narration": "Pumping billions of dollars into keeping an airport above water is the ultimate engineering flex.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "plt",
+     "x": 0.0,
+     "z": 1.2,
+     "expr": "starry",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1676,
+     "position": [
+      -0.18,
+      1.6,
+      2.95
+     ],
+     "lookAt": [
+      0.0,
+      1.6,
+      1.2
+     ],
+     "fov": 30,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 8345,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "office",
+    "seed": 83,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 1710,
+     "dur": 24,
+     "at": [
+      0.145,
+      1.891,
+      1.2
+     ],
+     "size": 0.23445554337723234
+    }
+   ]
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 1734,
+   "endFrame": 1890,
+   "narration": "Despite sinking into the abyss, Kansai is still one of the most punctual airports on Earth.",
+   "light": "day",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "pax",
+     "x": 3.701,
+     "z": 2.69,
+     "expr": "smile",
+     "mode": "stroll",
+     "walkTo": [
+      6.0,
+      2.0
+     ],
+     "walkFrames": [
+      1734,
+      1843
+     ],
+     "holding": "suitcase"
+    },
+    {
+     "castId": "extra0",
+     "x": 6.525,
+     "z": -1.237,
+     "mode": "stroll",
+     "expr": "smile",
+     "holding": "suitcase"
+    },
+    {
+     "castId": "extra1",
+     "x": 4.056,
+     "z": -1.697,
+     "mode": "stroll",
+     "expr": "grin",
+     "holding": "suitcase"
+    },
+    {
+     "castId": "extra2",
+     "x": 5.821,
+     "z": -2.85,
+     "mode": "stroll",
+     "expr": "nervous",
+     "holding": "suitcase"
+    },
+    {
+     "castId": "extra3",
+     "x": 3.127,
+     "z": -0.27,
+     "mode": "stroll",
+     "expr": "neutral",
+     "holding": "suitcase"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1734,
+     "position": [
+      9.448,
+      2.3,
+      11.406
+     ],
+     "lookAt": [
+      3.701,
+      1.2,
+      2.69
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1734,
+     "position": [
+      11.747,
+      2.3,
+      10.716
+     ],
+     "lookAt": [
+      6,
+      1.2,
+      2
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 109
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 8309,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "airport",
+    "seed": 83,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "departures",
+     "x": 4.631,
+     "z": -2.564
+    }
+   ]
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 1890,
+   "endFrame": 2052,
+   "narration": "With sea levels rising, engineers are now in a high-stakes race against Neptune himself.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "eng",
+     "x": -17.757,
+     "z": 2.122,
+     "expr": "shock",
+     "mode": "run",
+     "walkTo": [
+      -14.0,
+      4.0
+     ],
+     "walkFrames": [
+      1890,
+      1987
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1890,
+     "position": [
+      -25.136,
+      2.3,
+      10.172
+     ],
+     "lookAt": [
+      -17.757,
+      1.2,
+      2.122
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1890,
+     "position": [
+      -21.379,
+      2.3,
+      12.05
+     ],
+     "lookAt": [
+      -14,
+      1.2,
+      4
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 97
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 8310,
+   "qualityNotes": "",
+   "pieces": [
+    {
+     "kind": "airplane",
+     "x": -11.653,
+     "z": -0.695,
+     "scale": 0.6,
+     "moveTo": [
+      -14.336,
+      -2.036
+     ],
+     "moveFrames": [
+      1906,
+      2035
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 2018,
+     "dur": 34,
+     "at": [
+      -13.624,
+      2.28,
+      4.188
+     ],
+     "size": 0.42,
+     "product": "trident"
+    },
+    {
+     "kind": "splash",
+     "frame": 1919,
+     "dur": 45,
+     "at": [
+      -11.63,
+      1.6,
+      2.39
+     ],
+     "size": 4.2
+    }
+   ]
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 2052,
+   "endFrame": 2122,
+   "narration": "Next time your flight is delayed, remember the runway under you is slowly drowning.",
+   "light": "day",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "pax",
+     "x": 0.0,
+     "z": 2.5,
+     "expr": "neutral",
+     "mode": "stand",
+     "holding": "coffee"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 2052,
+     "position": [
+      1.6,
+      1.68,
+      8.1
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      2.5
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 2052,
+     "position": [
+      0.96,
+      1.56,
+      5.86
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      2.5
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 70
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 8311,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "airport",
+    "seed": 83,
+    "shop": null,
+    "variant": "aquarium"
+   }
+  },
+  {
+   "sceneId": "b12a",
+   "startFrame": 2122,
+   "endFrame": 2194,
+   "narration": "Next time your flight is delayed, remember the runway under you is slowly drowning.",
+   "light": "day",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "pax",
+     "x": 0.0,
+     "z": 2.5,
+     "expr": "shock",
+     "mode": "stand",
+     "holding": "coffee"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 2122,
+     "position": [
+      -1.142,
+      1.62,
+      5.222
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      2.5
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 2122,
+     "position": [
+      0.067,
+      1.62,
+      5.451
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      2.5
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 72
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 8348,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "airport",
+    "seed": 83,
+    "shop": null,
+    "variant": "aquarium"
+   }
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 2194,
+   "endFrame": 2291,
+   "narration": "Send this to anyone who loves extreme civil engineering.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 2194,
+     "position": [
+      -19.851,
+      0.4,
+      7.97
+     ],
+     "lookAt": [
+      -30,
+      1.2,
+      12
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 2194,
+     "position": [
+      -19.851,
+      7.76,
+      7.97
+     ],
+     "lookAt": [
+      -30,
+      1.2,
+      12
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 97
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 8312,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150
+  },
+  {
+   "sceneId": "b14",
+   "startFrame": 2291,
+   "endFrame": 2372,
+   "narration": "Hit follow for more engineering wonders.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 2291,
+     "position": [
+      -11.521,
+      2.3,
+      13.537
+     ],
+     "lookAt": [
+      -8,
+      1.2,
+      3.2
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 2323,
+     "dur": 24,
+     "position": [
+      -9.878,
+      1.68,
+      8.713
+     ],
+     "lookAt": [
+      -8,
+      1.38,
+      3.2
+     ],
+     "fov": 38,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 8313,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "outro"
+   },
+   "env": {
+    "preset": "shops",
+    "seed": 83,
+    "shop": null
+   }
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": true,
+  "words": [
+   {
+    "w": "Japan",
+    "s": 0.06,
+    "e": 0.34
+   },
+   {
+    "w": "needed",
+    "s": 0.34,
+    "e": 0.8
+   },
+   {
+    "w": "a",
+    "s": 0.8,
+    "e": 0.98
+   },
+   {
+    "w": "massive",
+    "s": 0.98,
+    "e": 1.38
+   },
+   {
+    "w": "international",
+    "s": 1.38,
+    "e": 2.04
+   },
+   {
+    "w": "airport,",
+    "s": 2.04,
+    "e": 2.58
+   },
+   {
+    "w": "but",
+    "s": 2.74,
+    "e": 2.84
+   },
+   {
+    "w": "there",
+    "s": 2.84,
+    "e": 3.0
+   },
+   {
+    "w": "was",
+    "s": 3.0,
+    "e": 3.14
+   },
+   {
+    "w": "no",
+    "s": 3.14,
+    "e": 3.34
+   },
+   {
+    "w": "room",
+    "s": 3.34,
+    "e": 3.68
+   },
+   {
+    "w": "on",
+    "s": 3.68,
+    "e": 3.82
+   },
+   {
+    "w": "land,",
+    "s": 3.82,
+    "e": 4.28
+   },
+   {
+    "w": "so",
+    "s": 4.44,
+    "e": 4.62
+   },
+   {
+    "w": "they",
+    "s": 4.62,
+    "e": 4.76
+   },
+   {
+    "w": "built",
+    "s": 4.76,
+    "e": 5.02
+   },
+   {
+    "w": "an",
+    "s": 5.02,
+    "e": 5.2
+   },
+   {
+    "w": "island",
+    "s": 5.2,
+    "e": 5.56
+   },
+   {
+    "w": "in",
+    "s": 5.56,
+    "e": 5.82
+   },
+   {
+    "w": "the",
+    "s": 5.82,
+    "e": 5.94
+   },
+   {
+    "w": "ocean,",
+    "s": 5.94,
+    "e": 6.3
+   },
+   {
+    "w": "which",
+    "s": 6.3,
+    "e": 6.6
+   },
+   {
+    "w": "is",
+    "s": 6.6,
+    "e": 6.74
+   },
+   {
+    "w": "slowly",
+    "s": 6.74,
+    "e": 7.24
+   },
+   {
+    "w": "swallowing",
+    "s": 7.24,
+    "e": 7.92,
+    "hot": true
+   },
+   {
+    "w": "itself.",
+    "s": 7.92,
+    "e": 8.26
+   },
+   {
+    "w": "In",
+    "s": 8.725,
+    "e": 8.853
+   },
+   {
+    "w": "the",
+    "s": 8.863,
+    "e": 9.059
+   },
+   {
+    "w": "nineteen",
+    "s": 9.069,
+    "e": 9.61
+   },
+   {
+    "w": "eighties,",
+    "s": 9.62,
+    "e": 10.16
+   },
+   {
+    "w": "Osaka",
+    "s": 10.17,
+    "e": 10.504
+   },
+   {
+    "w": "was",
+    "s": 10.514,
+    "e": 10.71
+   },
+   {
+    "w": "running",
+    "s": 10.72,
+    "e": 11.192
+   },
+   {
+    "w": "out",
+    "s": 11.202,
+    "e": 11.398
+   },
+   {
+    "w": "of",
+    "s": 11.408,
+    "e": 11.536
+   },
+   {
+    "w": "space,",
+    "s": 11.546,
+    "e": 11.88
+   },
+   {
+    "w": "and",
+    "s": 11.89,
+    "e": 12.086
+   },
+   {
+    "w": "residents",
+    "s": 12.096,
+    "e": 12.706
+   },
+   {
+    "w": "hated",
+    "s": 12.716,
+    "e": 13.05
+   },
+   {
+    "w": "noisy",
+    "s": 13.06,
+    "e": 13.394,
+    "hot": true
+   },
+   {
+    "w": "flights",
+    "s": 13.404,
+    "e": 13.875
+   },
+   {
+    "w": "over",
+    "s": 13.885,
+    "e": 14.15
+   },
+   {
+    "w": "the",
+    "s": 14.16,
+    "e": 14.357
+   },
+   {
+    "w": "city.",
+    "s": 14.367,
+    "e": 14.632
+   },
+   {
+    "w": "The",
+    "s": 14.812,
+    "e": 14.912
+   },
+   {
+    "w": "solution?",
+    "s": 14.912,
+    "e": 15.352
+   },
+   {
+    "w": "Build",
+    "s": 15.757,
+    "e": 15.917
+   },
+   {
+    "w": "a",
+    "s": 15.917,
+    "e": 16.037
+   },
+   {
+    "w": "brand",
+    "s": 16.037,
+    "e": 16.257
+   },
+   {
+    "w": "new",
+    "s": 16.257,
+    "e": 16.577
+   },
+   {
+    "w": "artificial",
+    "s": 16.577,
+    "e": 17.157
+   },
+   {
+    "w": "island",
+    "s": 17.157,
+    "e": 17.677
+   },
+   {
+    "w": "five",
+    "s": 17.677,
+    "e": 18.157
+   },
+   {
+    "w": "kilometers",
+    "s": 18.157,
+    "e": 18.757
+   },
+   {
+    "w": "out",
+    "s": 18.757,
+    "e": 19.097
+   },
+   {
+    "w": "in",
+    "s": 19.097,
+    "e": 19.297
+   },
+   {
+    "w": "Osaka",
+    "s": 19.297,
+    "e": 19.697
+   },
+   {
+    "w": "Bay,",
+    "s": 19.697,
+    "e": 20.077
+   },
+   {
+    "w": "where",
+    "s": 20.457,
+    "e": 20.537
+   },
+   {
+    "w": "nobody",
+    "s": 20.537,
+    "e": 20.937
+   },
+   {
+    "w": "can",
+    "s": 20.937,
+    "e": 21.257
+   },
+   {
+    "w": "complain.",
+    "s": 21.257,
+    "e": 21.637
+   },
+   {
+    "w": "Engineers",
+    "s": 22.09,
+    "e": 22.61
+   },
+   {
+    "w": "flattened",
+    "s": 22.61,
+    "e": 23.27
+   },
+   {
+    "w": "entire",
+    "s": 23.27,
+    "e": 23.71
+   },
+   {
+    "w": "mountains,",
+    "s": 23.71,
+    "e": 24.31
+   },
+   {
+    "w": "loaded",
+    "s": 24.65,
+    "e": 24.87
+   },
+   {
+    "w": "millions",
+    "s": 24.87,
+    "e": 25.31
+   },
+   {
+    "w": "of",
+    "s": 25.31,
+    "e": 25.61
+   },
+   {
+    "w": "tons",
+    "s": 25.61,
+    "e": 25.87
+   },
+   {
+    "w": "of",
+    "s": 25.87,
+    "e": 26.13
+   },
+   {
+    "w": "rock",
+    "s": 26.13,
+    "e": 26.35
+   },
+   {
+    "w": "onto",
+    "s": 26.35,
+    "e": 26.65
+   },
+   {
+    "w": "barges,",
+    "s": 26.65,
+    "e": 27.21
+   },
+   {
+    "w": "and",
+    "s": 27.21,
+    "e": 27.53
+   },
+   {
+    "w": "dumped",
+    "s": 27.53,
+    "e": 27.77
+   },
+   {
+    "w": "it",
+    "s": 27.77,
+    "e": 27.99
+   },
+   {
+    "w": "into",
+    "s": 27.99,
+    "e": 28.17
+   },
+   {
+    "w": "the",
+    "s": 28.17,
+    "e": 28.31
+   },
+   {
+    "w": "sea.",
+    "s": 28.31,
+    "e": 28.57,
+    "hot": true
+   },
+   {
+    "w": "The",
+    "s": 28.883,
+    "e": 28.983
+   },
+   {
+    "w": "small",
+    "s": 28.983,
+    "e": 29.223
+   },
+   {
+    "w": "oversight?",
+    "s": 29.223,
+    "e": 29.723
+   },
+   {
+    "w": "The",
+    "s": 30.176,
+    "e": 30.39
+   },
+   {
+    "w": "sea",
+    "s": 30.4,
+    "e": 30.613
+   },
+   {
+    "w": "floor",
+    "s": 30.623,
+    "e": 30.985
+   },
+   {
+    "w": "was",
+    "s": 30.995,
+    "e": 31.208
+   },
+   {
+    "w": "made",
+    "s": 31.218,
+    "e": 31.506
+   },
+   {
+    "w": "of",
+    "s": 31.516,
+    "e": 31.655
+   },
+   {
+    "w": "about",
+    "s": 31.665,
+    "e": 32.027
+   },
+   {
+    "w": "sixty",
+    "s": 32.037,
+    "e": 32.399
+   },
+   {
+    "w": "feet",
+    "s": 32.409,
+    "e": 32.696
+   },
+   {
+    "w": "of",
+    "s": 32.706,
+    "e": 32.845
+   },
+   {
+    "w": "ultra-soft",
+    "s": 32.855,
+    "e": 33.515
+   },
+   {
+    "w": "marine",
+    "s": 33.525,
+    "e": 33.961
+   },
+   {
+    "w": "clay.",
+    "s": 33.971,
+    "e": 34.259
+   },
+   {
+    "w": "Instead",
+    "s": 34.439,
+    "e": 34.719
+   },
+   {
+    "w": "of",
+    "s": 34.719,
+    "e": 34.879
+   },
+   {
+    "w": "settling",
+    "s": 34.879,
+    "e": 35.259
+   },
+   {
+    "w": "slightly,",
+    "s": 35.259,
+    "e": 35.719
+   },
+   {
+    "w": "the",
+    "s": 35.999,
+    "e": 36.059
+   },
+   {
+    "w": "island",
+    "s": 36.059,
+    "e": 36.399
+   },
+   {
+    "w": "kept",
+    "s": 36.399,
+    "e": 36.719
+   },
+   {
+    "w": "sinking,",
+    "s": 36.719,
+    "e": 37.159
+   },
+   {
+    "w": "year",
+    "s": 37.159,
+    "e": 37.599
+   },
+   {
+    "w": "after",
+    "s": 37.599,
+    "e": 37.959
+   },
+   {
+    "w": "year,",
+    "s": 37.959,
+    "e": 38.259
+   },
+   {
+    "w": "way",
+    "s": 38.259,
+    "e": 38.579
+   },
+   {
+    "w": "faster",
+    "s": 38.579,
+    "e": 39.039
+   },
+   {
+    "w": "than",
+    "s": 39.039,
+    "e": 39.219
+   },
+   {
+    "w": "predicted.",
+    "s": 39.219,
+    "e": 39.639
+   },
+   {
+    "w": "To",
+    "s": 39.993,
+    "e": 40.093
+   },
+   {
+    "w": "keep",
+    "s": 40.093,
+    "e": 40.293
+   },
+   {
+    "w": "the",
+    "s": 40.293,
+    "e": 40.513
+   },
+   {
+    "w": "terminal",
+    "s": 40.513,
+    "e": 40.933
+   },
+   {
+    "w": "from",
+    "s": 40.933,
+    "e": 41.193
+   },
+   {
+    "w": "flooding,",
+    "s": 41.193,
+    "e": 41.533
+   },
+   {
+    "w": "engineers",
+    "s": 41.993,
+    "e": 42.413
+   },
+   {
+    "w": "put",
+    "s": 42.413,
+    "e": 42.713
+   },
+   {
+    "w": "hydraulic",
+    "s": 42.713,
+    "e": 43.253
+   },
+   {
+    "w": "jacks",
+    "s": 43.253,
+    "e": 43.873
+   },
+   {
+    "w": "under",
+    "s": 43.873,
+    "e": 43.993
+   },
+   {
+    "w": "the",
+    "s": 43.993,
+    "e": 44.113
+   },
+   {
+    "w": "building",
+    "s": 44.113,
+    "e": 44.373
+   },
+   {
+    "w": "to",
+    "s": 44.373,
+    "e": 44.613
+   },
+   {
+    "w": "lift",
+    "s": 44.613,
+    "e": 44.873
+   },
+   {
+    "w": "it",
+    "s": 44.873,
+    "e": 44.993
+   },
+   {
+    "w": "up",
+    "s": 44.993,
+    "e": 45.113
+   },
+   {
+    "w": "by",
+    "s": 45.113,
+    "e": 45.333
+   },
+   {
+    "w": "hand.",
+    "s": 45.333,
+    "e": 45.773
+   },
+   {
+    "w": "They",
+    "s": 46.069,
+    "e": 46.32
+   },
+   {
+    "w": "surrounded",
+    "s": 46.33,
+    "e": 46.974
+   },
+   {
+    "w": "the",
+    "s": 46.984,
+    "e": 47.17
+   },
+   {
+    "w": "island",
+    "s": 47.18,
+    "e": 47.562
+   },
+   {
+    "w": "with",
+    "s": 47.572,
+    "e": 47.823
+   },
+   {
+    "w": "massive",
+    "s": 47.833,
+    "e": 48.28
+   },
+   {
+    "w": "seawalls",
+    "s": 48.29,
+    "e": 48.803
+   },
+   {
+    "w": "and",
+    "s": 48.813,
+    "e": 48.999
+   },
+   {
+    "w": "armor",
+    "s": 49.009,
+    "e": 49.326
+   },
+   {
+    "w": "blocks",
+    "s": 49.336,
+    "e": 49.718
+   },
+   {
+    "w": "to",
+    "s": 49.728,
+    "e": 49.849
+   },
+   {
+    "w": "stop",
+    "s": 49.859,
+    "e": 50.11
+   },
+   {
+    "w": "typhoons",
+    "s": 50.12,
+    "e": 50.633
+   },
+   {
+    "w": "from",
+    "s": 50.643,
+    "e": 50.894
+   },
+   {
+    "w": "washing",
+    "s": 50.904,
+    "e": 51.351,
+    "hot": true
+   },
+   {
+    "w": "it",
+    "s": 51.361,
+    "e": 51.482
+   },
+   {
+    "w": "away.",
+    "s": 51.492,
+    "e": 51.743
+   },
+   {
+    "w": "Pumping",
+    "s": 51.923,
+    "e": 52.303
+   },
+   {
+    "w": "billions",
+    "s": 52.303,
+    "e": 52.663,
+    "hot": true
+   },
+   {
+    "w": "of",
+    "s": 52.663,
+    "e": 52.923
+   },
+   {
+    "w": "dollars",
+    "s": 52.923,
+    "e": 53.283
+   },
+   {
+    "w": "into",
+    "s": 53.283,
+    "e": 53.563
+   },
+   {
+    "w": "keeping",
+    "s": 53.563,
+    "e": 53.843
+   },
+   {
+    "w": "an",
+    "s": 53.843,
+    "e": 54.103
+   },
+   {
+    "w": "airport",
+    "s": 54.103,
+    "e": 54.443
+   },
+   {
+    "w": "above",
+    "s": 54.443,
+    "e": 54.803
+   },
+   {
+    "w": "water",
+    "s": 54.803,
+    "e": 55.263
+   },
+   {
+    "w": "is",
+    "s": 55.263,
+    "e": 55.663
+   },
+   {
+    "w": "the",
+    "s": 55.663,
+    "e": 55.863
+   },
+   {
+    "w": "ultimate",
+    "s": 55.863,
+    "e": 56.323
+   },
+   {
+    "w": "engineering",
+    "s": 56.323,
+    "e": 56.983
+   },
+   {
+    "w": "flex.",
+    "s": 56.983,
+    "e": 57.343,
+    "hot": true
+   },
+   {
+    "w": "Despite",
+    "s": 57.821,
+    "e": 58.141
+   },
+   {
+    "w": "sinking",
+    "s": 58.141,
+    "e": 58.581
+   },
+   {
+    "w": "into",
+    "s": 58.581,
+    "e": 58.841
+   },
+   {
+    "w": "the",
+    "s": 58.841,
+    "e": 58.941
+   },
+   {
+    "w": "abyss,",
+    "s": 58.941,
+    "e": 59.381
+   },
+   {
+    "w": "Kansai",
+    "s": 59.581,
+    "e": 60.061
+   },
+   {
+    "w": "is",
+    "s": 60.061,
+    "e": 60.221
+   },
+   {
+    "w": "still",
+    "s": 60.221,
+    "e": 60.461
+   },
+   {
+    "w": "one",
+    "s": 60.461,
+    "e": 60.681
+   },
+   {
+    "w": "of",
+    "s": 60.681,
+    "e": 60.781
+   },
+   {
+    "w": "the",
+    "s": 60.781,
+    "e": 60.861
+   },
+   {
+    "w": "most",
+    "s": 60.861,
+    "e": 61.101
+   },
+   {
+    "w": "punctual",
+    "s": 61.101,
+    "e": 61.661
+   },
+   {
+    "w": "airports",
+    "s": 61.661,
+    "e": 62.061
+   },
+   {
+    "w": "on",
+    "s": 62.061,
+    "e": 62.361
+   },
+   {
+    "w": "Earth.",
+    "s": 62.361,
+    "e": 62.661
+   },
+   {
+    "w": "With",
+    "s": 63.019,
+    "e": 63.296
+   },
+   {
+    "w": "sea",
+    "s": 63.306,
+    "e": 63.51
+   },
+   {
+    "w": "levels",
+    "s": 63.52,
+    "e": 63.94
+   },
+   {
+    "w": "rising,",
+    "s": 63.95,
+    "e": 64.369,
+    "hot": true
+   },
+   {
+    "w": "engineers",
+    "s": 64.379,
+    "e": 65.013
+   },
+   {
+    "w": "are",
+    "s": 65.023,
+    "e": 65.227
+   },
+   {
+    "w": "now",
+    "s": 65.237,
+    "e": 65.442
+   },
+   {
+    "w": "in",
+    "s": 65.452,
+    "e": 65.585
+   },
+   {
+    "w": "a",
+    "s": 65.595,
+    "e": 65.728
+   },
+   {
+    "w": "high-stakes",
+    "s": 65.738,
+    "e": 66.444
+   },
+   {
+    "w": "race",
+    "s": 66.454,
+    "e": 66.73
+   },
+   {
+    "w": "against",
+    "s": 66.74,
+    "e": 67.231
+   },
+   {
+    "w": "Neptune",
+    "s": 67.241,
+    "e": 67.732,
+    "hot": true
+   },
+   {
+    "w": "himself.",
+    "s": 67.742,
+    "e": 68.233
+   },
+   {
+    "w": "Next",
+    "s": 68.413,
+    "e": 68.633
+   },
+   {
+    "w": "time",
+    "s": 68.633,
+    "e": 68.853
+   },
+   {
+    "w": "your",
+    "s": 68.853,
+    "e": 68.993
+   },
+   {
+    "w": "flight",
+    "s": 68.993,
+    "e": 69.273
+   },
+   {
+    "w": "is",
+    "s": 69.273,
+    "e": 69.493
+   },
+   {
+    "w": "delayed,",
+    "s": 69.493,
+    "e": 69.853
+   },
+   {
+    "w": "remember",
+    "s": 70.253,
+    "e": 70.533
+   },
+   {
+    "w": "the",
+    "s": 70.533,
+    "e": 70.713
+   },
+   {
+    "w": "runway",
+    "s": 70.713,
+    "e": 71.093
+   },
+   {
+    "w": "under",
+    "s": 71.093,
+    "e": 71.393
+   },
+   {
+    "w": "you",
+    "s": 71.393,
+    "e": 71.653
+   },
+   {
+    "w": "is",
+    "s": 71.653,
+    "e": 71.873
+   },
+   {
+    "w": "slowly",
+    "s": 71.873,
+    "e": 72.253
+   },
+   {
+    "w": "drowning.",
+    "s": 72.253,
+    "e": 72.793
+   },
+   {
+    "w": "Send",
+    "s": 73.159,
+    "e": 73.339
+   },
+   {
+    "w": "this",
+    "s": 73.339,
+    "e": 73.519
+   },
+   {
+    "w": "to",
+    "s": 73.519,
+    "e": 73.679
+   },
+   {
+    "w": "anyone",
+    "s": 73.679,
+    "e": 74.059
+   },
+   {
+    "w": "who",
+    "s": 74.059,
+    "e": 74.299
+   },
+   {
+    "w": "loves",
+    "s": 74.299,
+    "e": 74.559
+   },
+   {
+    "w": "extreme",
+    "s": 74.559,
+    "e": 75.159
+   },
+   {
+    "w": "civil",
+    "s": 75.159,
+    "e": 75.539
+   },
+   {
+    "w": "engineering.",
+    "s": 75.539,
+    "e": 76.019
+   },
+   {
+    "w": "Hit",
+    "s": 76.377,
+    "e": 76.497
+   },
+   {
+    "w": "follow",
+    "s": 76.497,
+    "e": 76.877
+   },
+   {
+    "w": "for",
+    "s": 76.877,
+    "e": 77.117
+   },
+   {
+    "w": "more",
+    "s": 77.117,
+    "e": 77.297
+   },
+   {
+    "w": "engineering",
+    "s": 77.297,
+    "e": 77.797
+   },
+   {
+    "w": "wonders.",
+    "s": 77.797,
+    "e": 78.257
+   }
+  ]
+ },
+ "style": "storybook",
+ "graphics": "full"
+}

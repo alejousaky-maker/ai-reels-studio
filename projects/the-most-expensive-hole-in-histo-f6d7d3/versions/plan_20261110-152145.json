@@ -1,0 +1,1496 @@
+{
+ "version": 1,
+ "title": "The Most Expensive Hole in History",
+ "lang": "en",
+ "style": "storybook",
+ "environment": "shops",
+ "seed": 71,
+ "cast": [
+  {
+   "id": "eng",
+   "name": "Engineer",
+   "role": "engineer",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "acc",
+   "name": "Accountant",
+   "role": "accountant",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "pax",
+   "name": "Passenger",
+   "role": "officeguy",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "dig",
+   "name": "Digger",
+   "role": "technician",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "old",
+   "name": "1929 commuter",
+   "role": "commuter",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  }
+ ],
+ "beats": [
+  {
+   "narration": "If you want to build a subway that costs four and a half billion dollars for just three stations, you don't build transit. You build a gold mine.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "eng",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": "coffee",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "shops",
+   "envVariant": "open",
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "four",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "eng",
+       "action": "stand",
+       "expr": "shock",
+       "react": null,
+       "holding": "coffee",
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": "$4,500,000,000",
+     "textStyle": "title",
+     "pieces": null,
+     "camMove": null,
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
+    },
+    {
+     "at": "you",
+     "shot": "worm",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "eng",
+       "action": "panic",
+       "expr": "shock",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "product",
+       "product": "coins",
+       "color": null,
+       "word": "transit",
+       "on": "eng"
+      },
+      {
+       "kind": "burst",
+       "product": null,
+       "color": null,
+       "word": "transit",
+       "on": "eng"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "crane_up",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
+    },
+    {
+     "at": "gold",
+     "shot": "extreme",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "eng",
+       "action": "stand",
+       "expr": "starry",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "money",
+       "product": null,
+       "color": null,
+       "word": "gold",
+       "on": "eng"
+      },
+      {
+       "kind": "sparkle",
+       "product": null,
+       "color": null,
+       "word": "mine",
+       "on": "eng"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
+    }
+   ]
+  },
+  {
+   "narration": "It's nineteen twenty-nine, and New York promises commuters a brand new subway line under Second Avenue to fix endless overcrowding.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "old",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": "newspaper",
+     "y": null
+    }
+   ],
+   "extras": 5,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "dissolve",
+   "text": "1929",
+   "textStyle": "title",
+   "atShop": false,
+   "environment": "street",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "oldcar",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    },
+    {
+     "kind": "oldcar",
+     "where": "far",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": "right",
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": "commuter",
+   "spot": null,
+   "visual": null,
+   "camMove": "truck_right",
+   "hud": null,
+   "hudText": null,
+   "look": "sepia",
+   "extrasHolding": "newspaper",
+   "shots": [
+    {
+     "at": "Second",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "old",
+       "action": "point",
+       "expr": "grin",
+       "react": null,
+       "holding": "newspaper",
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "orbit",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
+    }
+   ]
+  },
+  {
+   "narration": "Then the Great Depression hits, World War Two happens, and the project gets quietly buried for nearly a century.",
+   "shot": "close",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "old",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "street",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "blueprint",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "SECOND AVE LINE",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "look": "sepia",
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "World",
+     "shot": "medium",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "old",
+       "action": "panic",
+       "expr": "shock",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": null,
+     "hud": "news",
+     "hudText": "WAR!",
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
+    },
+    {
+     "at": "buried",
+     "shot": "medium",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": null,
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "dust",
+       "product": null,
+       "color": null,
+       "word": "buried",
+       "on": "old"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": [
+      {
+       "kind": "blueprint",
+       "where": "left",
+       "dx": 0.0,
+       "dz": 0.0,
+       "scale": 1.2,
+       "y": null,
+       "mirror": false,
+       "move": null,
+       "label": "~CANCELLED",
+       "spin": null,
+       "lift": null,
+       "shake": null
+      }
+     ],
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": "bw",
+     "extrasHolding": null
+    }
+   ]
+  },
+  {
+   "narration": "When they finally restart digging in the two thousands, every single inch of dirt costs more than solid platinum.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "dig",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": "pickaxe",
+     "y": null
+    }
+   ],
+   "extras": 4,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "dust",
+     "product": null,
+     "color": null,
+     "word": "digging",
+     "on": "dig"
+    }
+   ],
+   "impactWord": null,
+   "transition": "zoom",
+   "text": "2007",
+   "textStyle": "title",
+   "atShop": false,
+   "environment": "tunnel",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": "technician",
+   "spot": null,
+   "visual": null,
+   "camMove": "truck_left",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "extrasHolding": "pickaxe",
+   "shots": [
+    {
+     "at": "every",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "dig",
+       "action": "panic",
+       "expr": "shock",
+       "react": null,
+       "holding": "pickaxe",
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "money",
+       "product": null,
+       "color": null,
+       "word": "inch",
+       "on": "dig"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
+    }
+   ]
+  },
+  {
+   "narration": "Why? Because underneath the street lies a hundred-year-old maze of mystery pipes, electrical cables, and forgotten steam lines.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "dig",
+     "action": "shrug",
+     "expr": "nervous",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "tunnel",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "pipes",
+     "where": "behind",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 1.2,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "orbit",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "maze",
+     "shot": "wide",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "dig",
+       "action": "point",
+       "expr": "dazed",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": [
+      {
+       "kind": "pipes",
+       "where": "behind",
+       "dx": 0.0,
+       "dz": 0.0,
+       "scale": 1.6,
+       "y": null,
+       "mirror": false,
+       "move": null,
+       "label": null,
+       "spin": null,
+       "lift": null,
+       "shake": null
+      }
+     ],
+     "camMove": "crane_up",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
+    },
+    {
+     "at": "electrical",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "dig",
+       "action": "stand",
+       "expr": "shock",
+       "react": null,
+       "holding": "wrench",
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "sparks",
+       "product": null,
+       "color": null,
+       "word": "cables",
+       "on": "dig"
+      },
+      {
+       "kind": "puff",
+       "product": null,
+       "color": null,
+       "word": "forgotten",
+       "on": "dig"
+      }
+     ],
+     "impactWord": "cables",
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": null,
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
+    }
+   ]
+  },
+  {
+   "narration": "Every time they move a single water pipe, it costs millions. They're literally tunneling through a maze of financial regret.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "acc",
+     "action": "stand",
+     "expr": "sweat",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "office",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "cashcounter",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "millions",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "acc",
+       "action": "panic",
+       "expr": "shock",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "money",
+       "product": null,
+       "color": null,
+       "word": "millions",
+       "on": "acc"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": [
+      {
+       "kind": "cashcounter",
+       "where": "left",
+       "dx": 0.0,
+       "dz": 0.0,
+       "scale": null,
+       "y": null,
+       "mirror": false,
+       "move": null,
+       "label": "fire",
+       "spin": null,
+       "lift": null,
+       "shake": 1.2
+      }
+     ],
+     "camMove": null,
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
+    },
+    {
+     "at": "They're",
+     "shot": "dutch",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "acc",
+       "action": "stand",
+       "expr": "dazed",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": [
+      {
+       "kind": "cashcounter",
+       "where": "left",
+       "dx": 0.0,
+       "dz": 0.0,
+       "scale": null,
+       "y": null,
+       "mirror": false,
+       "move": null,
+       "label": "fire",
+       "spin": null,
+       "lift": null,
+       "shake": 1.6
+      }
+     ],
+     "camMove": "orbit",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
+    }
+   ]
+  },
+  {
+   "narration": "Fast forward billions of dollars later: they finally open three shiny new stations, about two miles of track.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "pax",
+     "action": "stand",
+     "expr": "starry",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 3,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "dissolve",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "tunnel",
+   "envVariant": "station",
+   "pieces": [],
+   "extrasRole": "officeguy",
+   "spot": null,
+   "visual": null,
+   "camMove": "crane_up",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "three",
+     "shot": "low",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": null,
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "sparkle",
+       "product": null,
+       "color": null,
+       "word": "shiny",
+       "on": "pax"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "truck_right",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
+    }
+   ]
+  },
+  {
+   "narration": "That means every single step you walk underground cost roughly a million dollars.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "pax",
+     "action": "walk",
+     "expr": "neutral",
+     "react": null,
+     "holding": "ticket",
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "tunnel",
+   "envVariant": "station",
+   "pieces": [
+    {
+     "kind": "escalator",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "follow",
+   "hud": "panel",
+   "hudText": "$4,500,000,000 ÷ 2 MILES|≈ $1,000,000 PER STEP!",
+   "look": null,
+   "extrasHolding": null,
+   "shots": []
+  },
+  {
+   "narration": "For that money, you could buy every daily rider a brand new car, and still have cash left for a private island.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "pax",
+     "action": "point",
+     "expr": "grin",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "tunnel",
+   "envVariant": "station",
+   "pieces": [
+    {
+     "kind": "car",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    },
+    {
+     "kind": "car",
+     "where": "right",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": true,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    },
+    {
+     "kind": "car",
+     "where": "far",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "truck_left",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "private",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "pax",
+       "action": "stand",
+       "expr": "starry",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "money",
+       "product": null,
+       "color": null,
+       "word": "island",
+       "on": "pax"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
+    }
+   ]
+  },
+  {
+   "narration": "So why did it cost so much? Consultants, special contracts, and hiring six guys to watch one guy hold a shovel.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "acc",
+     "action": "shrug",
+     "expr": "nervous",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "tunnel",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "Consultants",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "acc",
+       "action": "point",
+       "expr": "stern",
+       "react": null,
+       "holding": "clipboard",
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": null,
+     "hud": "panel",
+     "hudText": "INVOICE|CONSULTANTS: $$$|CONTRACTS: $$$$",
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
+    },
+    {
+     "at": "six",
+     "shot": "wide",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "dig",
+       "action": "sit",
+       "expr": "pained",
+       "react": null,
+       "holding": "shovel",
+       "y": null
+      }
+     ],
+     "extras": 6,
+     "extrasAction": null,
+     "extrasRole": "engineer",
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "orbit",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
+    }
+   ]
+  },
+  {
+   "narration": "And the best part? Phase two is still years from finished, which means the budget is about to enter orbit.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "eng",
+     "action": "point",
+     "expr": "grin",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "zoom",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "office",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "subwaymap",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "PHASE 2|COMING NEVER",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "budget",
+     "shot": "worm",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "eng",
+       "action": "cheer",
+       "expr": "crazy",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": [
+      {
+       "kind": "cashcounter",
+       "where": "left",
+       "dx": 0.0,
+       "dz": 0.0,
+       "scale": null,
+       "y": null,
+       "mirror": false,
+       "move": null,
+       "label": "fire",
+       "spin": null,
+       "lift": 6.0,
+       "shake": null
+      }
+     ],
+     "camMove": "crane_up",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
+    }
+   ]
+  },
+  {
+   "narration": "Congratulations, you've just built the most expensive hole in human history.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "eng",
+     "action": "hips",
+     "expr": "laugh",
+     "react": null,
+     "holding": null,
+     "y": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "confetti",
+     "product": null,
+     "color": null,
+     "word": "Congratulations",
+     "on": "eng"
+    }
+   ],
+   "impactWord": "hole",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "tunnel",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "ribbon",
+     "where": "behind",
+     "dx": 0.0,
+     "dz": -2.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "pull",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "most",
+     "shot": "extreme",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "eng",
+       "action": "stand",
+       "expr": "starry",
+       "react": null,
+       "holding": null,
+       "y": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "confetti",
+       "product": null,
+       "color": null,
+       "word": "most",
+       "on": "eng"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": null,
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null
+    }
+   ]
+  },
+  {
+   "narration": "Send this to that friend who complains about his local train ticket price.",
+   "shot": "high",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "dissolve",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "shops",
+   "envVariant": "open",
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "crane_up",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "extrasHolding": null,
+   "shots": []
+  },
+  {
+   "narration": "Hit follow for more engineering disasters.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "warm",
+   "characters": [],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "dissolve",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "shops",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": null,
+   "hud": "outro",
+   "hudText": null,
+   "look": null,
+   "extrasHolding": null,
+   "shots": []
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Second Avenue Subway first proposed 1929; delayed by the Depression and WWII.",
+   "status": "verified",
+   "source": null
+  },
+  {
+   "text": "Phase 1 (opened 2017): about $4.45 billion for three new stations, roughly two miles of track.",
+   "status": "verified",
+   "source": null
+  },
+  {
+   "text": "'A million dollars per step', 'a car for every daily rider' are rounded comic comparisons.",
+   "status": "fiction",
+   "source": null
+  }
+ ],
+ "creativeHooks": [],
+ "brand": null,
+ "cta": null,
+ "captions": true,
+ "graphics": "full"
+}

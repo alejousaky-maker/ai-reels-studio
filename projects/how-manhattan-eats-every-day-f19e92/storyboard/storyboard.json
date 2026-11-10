@@ -1,0 +1,3695 @@
+{
+ "version": 1,
+ "title": "How Manhattan Eats Every Day",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 2513,
+ "env": {
+  "preset": "bridge",
+  "seed": 73,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "drv",
+   "name": "Driver",
+   "outfit": {
+    "jacket": "#3f6fb5",
+    "pants": "#2b2b38",
+    "boots": "#1d1b22",
+    "skin": "#f5c9a0",
+    "hat": "cap",
+    "cap": "#e2453c",
+    "vest": "#d7ff3a"
+   }
+  },
+  {
+   "id": "chef",
+   "name": "Chef",
+   "outfit": {
+    "jacket": "#ffffff",
+    "pants": "#3a3d47",
+    "boots": "#1d1b22",
+    "skin": "#8d5a3b",
+    "hat": "chef",
+    "apron": "#f2efe8"
+   }
+  },
+  {
+   "id": "cop",
+   "name": "Cop",
+   "outfit": {
+    "jacket": "#1f3a6a",
+    "pants": "#1f3a6a",
+    "boots": "#1d1b22",
+    "skin": "#ecd0b6",
+    "hat": "police",
+    "cap": "#1f3a6a",
+    "pockets": true
+   }
+  },
+  {
+   "id": "stk",
+   "name": "Stocker",
+   "outfit": {
+    "jacket": "#5d7a3a",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#ffe2c2",
+    "hat": "beanie",
+    "cap": "#c8323a",
+    "pockets": true
+   }
+  },
+  {
+   "id": "bal",
+   "name": "Ballerina",
+   "outfit": {
+    "jacket": "#ff9fc8",
+    "pants": "#3b3f52",
+    "boots": "#ff9fc8",
+    "skin": "#c99067",
+    "dress": "#ff9fc8",
+    "tutu": "#ffc6e0",
+    "hat": "bun",
+    "hair": "#5a3b2a"
+   }
+  },
+  {
+   "id": "hat",
+   "name": "Hard hat",
+   "outfit": {
+    "jacket": "#ff7a1a",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#f5c9a0",
+    "hat": "pith",
+    "cap": "#ffd23f",
+    "vest": "#d7ff3a",
+    "glasses": true
+   }
+  },
+  {
+   "id": "extra0",
+   "name": "",
+   "outfit": {
+    "jacket": "#5d7a3a",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#8d5a3b",
+    "hat": "beanie",
+    "cap": "#c8323a",
+    "pockets": true
+   }
+  },
+  {
+   "id": "extra1",
+   "name": "",
+   "outfit": {
+    "jacket": "#5d7a3a",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#ecd0b6",
+    "hat": "beanie",
+    "cap": "#c8323a",
+    "pockets": true
+   }
+  },
+  {
+   "id": "extra2",
+   "name": "",
+   "outfit": {
+    "jacket": "#5d7a3a",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#ffe2c2",
+    "hat": "beanie",
+    "cap": "#c8323a",
+    "pockets": true
+   }
+  },
+  {
+   "id": "extra3",
+   "name": "",
+   "outfit": {
+    "jacket": "#5d7a3a",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#8d5a3b",
+    "hat": "beanie",
+    "cap": "#c8323a",
+    "pockets": true
+   }
+  },
+  {
+   "id": "extra4",
+   "name": "",
+   "outfit": {
+    "jacket": "#5d7a3a",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#ecd0b6",
+    "hat": "beanie",
+    "cap": "#c8323a",
+    "pockets": true
+   }
+  },
+  {
+   "id": "extra5",
+   "name": "",
+   "outfit": {
+    "jacket": "#5d7a3a",
+    "pants": "#3b5b9a",
+    "boots": "#5a3b2a",
+    "skin": "#ffe2c2",
+    "hat": "beanie",
+    "cap": "#c8323a",
+    "pockets": true
+   }
+  },
+  {
+   "id": "extra6",
+   "name": "",
+   "outfit": {
+    "jacket": "#3a4566",
+    "pants": "#2b2b38",
+    "boots": "#1d1b22",
+    "skin": "#8d5a3b",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "tie": "#3f6fb5"
+   }
+  },
+  {
+   "id": "extra7",
+   "name": "",
+   "outfit": {
+    "jacket": "#3a4566",
+    "pants": "#2b2b38",
+    "boots": "#1d1b22",
+    "skin": "#ecd0b6",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "tie": "#3f6fb5"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 148,
+   "narration": "How do you feed a city of eight million people when its heart is an island with zero farms? You don't. You pray the trucks don't stop.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      16.439,
+      2.3,
+      -14.524
+     ],
+     "lookAt": [
+      6.5,
+      1.2,
+      -10
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 0,
+     "position": [
+      12.463,
+      1.86,
+      -12.714
+     ],
+     "lookAt": [
+      6.5,
+      1.2,
+      -10
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 148
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7300,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "manhattan",
+    "text": "jam"
+   }
+  },
+  {
+   "sceneId": "b01a",
+   "startFrame": 148,
+   "endFrame": 172,
+   "narration": "How do you feed a city of eight million people when its heart is an island with zero farms? You don't. You pray the trucks don't stop.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "drv",
+     "x": 6.5,
+     "z": -10.0,
+     "expr": "sweat",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 148,
+     "position": [
+      12.275,
+      1.68,
+      -9.248
+     ],
+     "lookAt": [
+      6.5,
+      1.38,
+      -10
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 148,
+     "position": [
+      9.965,
+      1.56,
+      -9.549
+     ],
+     "lookAt": [
+      6.5,
+      1.38,
+      -10
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 24
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7337,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "manhattan",
+    "text": "jam"
+   },
+   "pieces": [
+    {
+     "kind": "semi",
+     "x": 1.994,
+     "z": -9.324,
+     "scale": 0.6
+    }
+   ]
+  },
+  {
+   "sceneId": "b01b",
+   "startFrame": 172,
+   "endFrame": 217,
+   "narration": "How do you feed a city of eight million people when its heart is an island with zero farms? You don't. You pray the trucks don't stop.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "drv",
+     "x": 6.5,
+     "z": -10.0,
+     "expr": "nervous",
+     "mode": "stand",
+     "pose": "up"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 172,
+     "position": [
+      8.075,
+      1.6,
+      -10.784
+     ],
+     "lookAt": [
+      6.5,
+      1.6,
+      -10.0
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 172,
+     "position": [
+      8.258,
+      1.6,
+      -10.073
+     ],
+     "lookAt": [
+      6.5,
+      1.6,
+      -10.0
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 45
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7374,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "manhattan",
+    "text": "jam"
+   }
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 217,
+   "endFrame": 318,
+   "narration": "Every single morning, thousands of massive eighteen-wheelers converge on New York City before dawn, carrying millions of pounds of food.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 217,
+     "position": [
+      13.77,
+      2.3,
+      1.689
+     ],
+     "lookAt": [
+      7.879,
+      1.2,
+      10.884
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 217,
+     "position": [
+      11.012,
+      2.3,
+      -0.079
+     ],
+     "lookAt": [
+      5.121,
+      1.2,
+      9.116
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 101
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "whip",
+   "seed": 7301,
+   "qualityNotes": "",
+   "pieces": [
+    {
+     "kind": "semi",
+     "x": 8.347,
+     "z": 12.162,
+     "scale": 0.6,
+     "moveTo": [
+      9.209,
+      9.288
+     ],
+     "moveFrames": [
+      227,
+      307
+     ]
+    },
+    {
+     "kind": "semi",
+     "x": 3.768,
+     "z": 10.788,
+     "scale": 0.6,
+     "mirror": true,
+     "moveTo": [
+      4.63,
+      7.915
+     ],
+     "moveFrames": [
+      227,
+      307
+     ]
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "4:00 AM",
+     "frame": 220,
+     "dur": 95,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b02a",
+   "startFrame": 318,
+   "endFrame": 439,
+   "narration": "Every single morning, thousands of massive eighteen-wheelers converge on New York City before dawn, carrying millions of pounds of food.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 318,
+     "position": [
+      5.006,
+      2.3,
+      -0.941
+     ],
+     "lookAt": [
+      4.862,
+      1.2,
+      9.978
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 318,
+     "position": [
+      8.282,
+      2.3,
+      -0.897
+     ],
+     "lookAt": [
+      8.138,
+      1.2,
+      10.022
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 121
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7338,
+   "qualityNotes": "",
+   "sub": true,
+   "pieces": [
+    {
+     "kind": "semi",
+     "x": 8.347,
+     "z": 12.162,
+     "scale": 0.6,
+     "moveTo": [
+      9.209,
+      9.288
+     ],
+     "moveFrames": [
+      330,
+      426
+     ]
+    },
+    {
+     "kind": "semi",
+     "x": 1.805,
+     "z": 23.124,
+     "scale": 0.6
+    }
+   ]
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 439,
+   "endFrame": 553,
+   "narration": "If you run a restaurant in Times Square, your entire menu depends on a single truck crawling across the George Washington Bridge.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "chef",
+     "x": 2.6,
+     "z": 1.2,
+     "expr": "sweat",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 439,
+     "position": [
+      2.677,
+      1.68,
+      7.024
+     ],
+     "lookAt": [
+      2.6,
+      1.38,
+      1.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 439,
+     "position": [
+      2.646,
+      1.56,
+      4.694
+     ],
+     "lookAt": [
+      2.6,
+      1.38,
+      1.2
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 114
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 7302,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "kitchen",
+    "seed": 73,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 520,
+     "dur": 33,
+     "at": [
+      3.002,
+      2.28,
+      1.079
+     ],
+     "size": 0.42,
+     "product": "clock"
+    }
+   ]
+  },
+  {
+   "sceneId": "b03a",
+   "startFrame": 553,
+   "endFrame": 604,
+   "narration": "If you run a restaurant in Times Square, your entire menu depends on a single truck crawling across the George Washington Bridge.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 553,
+     "position": [
+      10.53,
+      0.4,
+      -9.851
+     ],
+     "lookAt": [
+      6.5,
+      1.2,
+      -20
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 553,
+     "position": [
+      10.53,
+      7.76,
+      -9.851
+     ],
+     "lookAt": [
+      6.5,
+      1.2,
+      -20
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 51
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7339,
+   "qualityNotes": "",
+   "sub": true,
+   "pieces": [
+    {
+     "kind": "semi",
+     "x": 6.769,
+     "z": -24.606,
+     "scale": 0.6
+    },
+    {
+     "kind": "car",
+     "x": 4.291,
+     "z": -21.236
+    },
+    {
+     "kind": "van",
+     "x": 8.725,
+     "z": -21.77,
+     "mirror": true
+    }
+   ]
+  },
+  {
+   "sceneId": "b03b",
+   "startFrame": 604,
+   "endFrame": 652,
+   "narration": "If you run a restaurant in Times Square, your entire menu depends on a single truck crawling across the George Washington Bridge.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "chef",
+     "x": 2.6,
+     "z": 1.2,
+     "expr": "sweat",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 604,
+     "position": [
+      2.93,
+      1.6,
+      2.928
+     ],
+     "lookAt": [
+      2.6,
+      1.6,
+      1.2
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 604,
+     "position": [
+      2.798,
+      1.6,
+      2.237
+     ],
+     "lookAt": [
+      2.6,
+      1.6,
+      1.2
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 48
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7376,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "kitchen",
+    "seed": 73,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 652,
+   "endFrame": 771,
+   "narration": "Manhattan was laid out in eighteen eleven for horse-drawn carriages, not eighty-foot trucks trying to deliver fifty crates of avocados.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 652,
+     "position": [
+      -1.425,
+      2.3,
+      -34.95
+     ],
+     "lookAt": [
+      1.575,
+      1.2,
+      -24.45
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 652,
+     "position": [
+      -4.575,
+      2.3,
+      -34.05
+     ],
+     "lookAt": [
+      -1.575,
+      1.2,
+      -23.55
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 119
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 7303,
+   "qualityNotes": "",
+   "look": "sepia",
+   "env": {
+    "preset": "street",
+    "seed": 73,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "oldcar",
+     "x": 1.97,
+     "z": -22.58
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "1811",
+     "frame": 655,
+     "dur": 113,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b04a",
+   "startFrame": 771,
+   "endFrame": 857,
+   "narration": "Manhattan was laid out in eighteen eleven for horse-drawn carriages, not eighty-foot trucks trying to deliver fifty crates of avocados.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "drv",
+     "x": -8.0,
+     "z": 3.2,
+     "expr": "shock",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 771,
+     "position": [
+      -11.521,
+      2.3,
+      13.537
+     ],
+     "lookAt": [
+      -8,
+      1.2,
+      3.2
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 771,
+     "position": [
+      -10.113,
+      1.86,
+      9.402
+     ],
+     "lookAt": [
+      -8,
+      1.2,
+      3.2
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 86
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7340,
+   "qualityNotes": "",
+   "sub": true,
+   "look": "sepia",
+   "env": {
+    "preset": "shops",
+    "seed": 73,
+    "shop": null,
+    "variant": "open"
+   },
+   "pieces": [
+    {
+     "kind": "semi",
+     "x": -7.755,
+     "z": -1.702,
+     "scale": 0.8,
+     "shake": 0.3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "notes",
+     "frame": 771,
+     "dur": 86,
+     "at": [
+      -7.7,
+      1.65,
+      3.215
+     ],
+     "size": 1.1
+    }
+   ]
+  },
+  {
+   "sceneId": "b04b",
+   "startFrame": 857,
+   "endFrame": 877,
+   "narration": "Manhattan was laid out in eighteen eleven for horse-drawn carriages, not eighty-foot trucks trying to deliver fifty crates of avocados.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "drv",
+     "x": -0.16,
+     "z": -24.0,
+     "expr": "nervous",
+     "mode": "stand",
+     "pose": "shrug",
+     "holding": "box"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 857,
+     "position": [
+      -1.302,
+      1.62,
+      -26.722
+     ],
+     "lookAt": [
+      -0.16,
+      1.5,
+      -24.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 857,
+     "position": [
+      -0.093,
+      1.62,
+      -26.951
+     ],
+     "lookAt": [
+      -0.16,
+      1.5,
+      -24.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 20
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7377,
+   "qualityNotes": "",
+   "sub": true,
+   "look": "sepia",
+   "env": {
+    "preset": "street",
+    "seed": 73,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "oldcar",
+     "x": 1.97,
+     "z": -22.58
+    }
+   ]
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 877,
+   "endFrame": 973,
+   "narration": "Delivery drivers have to invent new laws of physics just to double-park without getting towed in thirty seconds.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "drv",
+     "x": -3.934,
+     "z": -0.238,
+     "expr": "sweat",
+     "mode": "run",
+     "walkTo": [
+      -2.916,
+      3.837
+     ],
+     "walkFrames": [
+      877,
+      934
+     ],
+     "holding": "box"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 877,
+     "position": [
+      -9.839,
+      1.68,
+      -0.769
+     ],
+     "lookAt": [
+      -4.018,
+      1.38,
+      -0.575
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 877,
+     "position": [
+      -8.821,
+      1.68,
+      3.306
+     ],
+     "lookAt": [
+      -3,
+      1.38,
+      3.5
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 57
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7304,
+   "qualityNotes": "",
+   "env": {
+    "preset": "shops",
+    "seed": 73,
+    "shop": null,
+    "variant": "open"
+   },
+   "pieces": [
+    {
+     "kind": "boxes",
+     "x": -2.128,
+     "z": 2.081
+    }
+   ]
+  },
+  {
+   "sceneId": "b05a",
+   "startFrame": 973,
+   "endFrame": 1034,
+   "narration": "Delivery drivers have to invent new laws of physics just to double-park without getting towed in thirty seconds.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "cop",
+     "x": -2.935,
+     "z": 3.759,
+     "expr": "stern",
+     "mode": "stand",
+     "pose": "point"
+    },
+    {
+     "castId": "drv",
+     "x": -2.237,
+     "z": 2.842,
+     "expr": "shock",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0,
+     "holding": "box"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 973,
+     "position": [
+      -6.358,
+      1.66,
+      6.547
+     ],
+     "lookAt": [
+      -2.935,
+      1.42,
+      3.759
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 973,
+     "position": [
+      -7.197,
+      1.66,
+      4.909
+     ],
+     "lookAt": [
+      -2.935,
+      1.42,
+      3.759
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 61
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7341,
+   "qualityNotes": "",
+   "sub": true,
+   "env": {
+    "preset": "shops",
+    "seed": 73,
+    "shop": null,
+    "variant": "open"
+   },
+   "pieces": [
+    {
+     "kind": "boxes",
+     "x": -2.128,
+     "z": 2.081
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 1020,
+     "dur": 14,
+     "at": [
+      -2.833,
+      2.28,
+      4.166
+     ],
+     "size": 0.7403043685727803
+    }
+   ]
+  },
+  {
+   "sceneId": "b05b",
+   "startFrame": 1034,
+   "endFrame": 1063,
+   "narration": "Delivery drivers have to invent new laws of physics just to double-park without getting towed in thirty seconds.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "drv",
+     "x": -2.98,
+     "z": 3.582,
+     "expr": "sweat",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1034,
+     "position": [
+      -4.721,
+      1.6,
+      3.832
+     ],
+     "lookAt": [
+      -2.98,
+      1.6,
+      3.582
+     ],
+     "fov": 30,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7378,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "panel",
+    "text": "TOW TRUCK|ARRIVES IN 0:30!"
+   },
+   "env": {
+    "preset": "shops",
+    "seed": 73,
+    "shop": null,
+    "variant": "open"
+   },
+   "pieces": [
+    {
+     "kind": "boxes",
+     "x": -2.128,
+     "z": 2.081
+    }
+   ]
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 1063,
+   "endFrame": 1191,
+   "narration": "By six in the morning, the Hunts Point Market in the Bronx turns into a synchronized war zone of forklifts and crates.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "stk",
+     "x": 7.674,
+     "z": 3.731,
+     "expr": "stern",
+     "mode": "march"
+    },
+    {
+     "castId": "extra0",
+     "x": 7.424,
+     "z": 0.832,
+     "mode": "march",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra1",
+     "x": 5.408,
+     "z": 0.221,
+     "mode": "march",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra2",
+     "x": 6.587,
+     "z": -0.745,
+     "mode": "march",
+     "expr": "nervous"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1063,
+     "position": [
+      14.98,
+      2.3,
+      11.632
+     ],
+     "lookAt": [
+      8.295,
+      1.2,
+      2.997
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1063,
+     "position": [
+      12.39,
+      2.3,
+      13.638
+     ],
+     "lookAt": [
+      5.705,
+      1.2,
+      5.003
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 128
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "zoom",
+   "seed": 7305,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "warehouse",
+    "seed": 73,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "forklift",
+     "x": 5.223,
+     "z": 3.354,
+     "moveTo": [
+      8.008,
+      2.24
+     ],
+     "moveFrames": [
+      1075,
+      1178
+     ]
+    },
+    {
+     "kind": "fruitpile",
+     "x": 7.834,
+     "z": 2.331
+    },
+    {
+     "kind": "forklift",
+     "x": 2.53,
+     "z": -9.129,
+     "mirror": true,
+     "moveTo": [
+      -0.256,
+      -8.015
+     ],
+     "moveFrames": [
+      1075,
+      1178
+     ]
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "6:00 AM",
+     "frame": 1066,
+     "dur": 122,
+     "position": "top",
+     "style": "title"
+    }
+   ]
+  },
+  {
+   "sceneId": "b06a",
+   "startFrame": 1191,
+   "endFrame": 1250,
+   "narration": "By six in the morning, the Hunts Point Market in the Bronx turns into a synchronized war zone of forklifts and crates.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "stk",
+     "x": 7.674,
+     "z": 3.731,
+     "expr": "stern",
+     "mode": "march"
+    },
+    {
+     "castId": "extra3",
+     "x": 8.045,
+     "z": 0.351,
+     "mode": "march",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra4",
+     "x": 5.408,
+     "z": 0.221,
+     "mode": "march",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra5",
+     "x": 8.435,
+     "z": -2.175,
+     "mode": "march",
+     "expr": "nervous"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1191,
+     "position": [
+      8.114,
+      2.3,
+      14.863
+     ],
+     "lookAt": [
+      1.061,
+      1.2,
+      6.526
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1191,
+     "position": [
+      8.114,
+      2.3,
+      14.863
+     ],
+     "lookAt": [
+      7,
+      1.2,
+      4
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7342,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "warehouse",
+    "seed": 73,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "forklift",
+     "x": 5.223,
+     "z": 3.354,
+     "moveTo": [
+      8.008,
+      2.24
+     ],
+     "moveFrames": [
+      1196,
+      1244
+     ]
+    },
+    {
+     "kind": "fruitpile",
+     "x": 5.859,
+     "z": -0.806,
+     "scale": 1.4
+    }
+   ]
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 1250,
+   "endFrame": 1310,
+   "narration": "If one bridge closes for maintenance, coffee shops downtown run out of milk before the morning rush even starts.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "cop",
+     "x": 6.551,
+     "z": -9.657,
+     "expr": "stern",
+     "mode": "stand",
+     "pose": "point"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1250,
+     "position": [
+      11.801,
+      1.68,
+      -12.413
+     ],
+     "lookAt": [
+      6.5,
+      1.38,
+      -10
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1250,
+     "position": [
+      9.681,
+      1.56,
+      -11.448
+     ],
+     "lookAt": [
+      6.5,
+      1.38,
+      -10
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 60
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7306,
+   "qualityNotes": "",
+   "pieces": [
+    {
+     "kind": "signs",
+     "x": 4.954,
+     "z": -11.406,
+     "label": "BRIDGE|CLOSED|SORRY"
+    }
+   ]
+  },
+  {
+   "sceneId": "b07a",
+   "startFrame": 1310,
+   "endFrame": 1389,
+   "narration": "If one bridge closes for maintenance, coffee shops downtown run out of milk before the morning rush even starts.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "hat",
+     "x": -8.0,
+     "z": 3.2,
+     "expr": "dazed",
+     "mode": "stand",
+     "holding": "coffee"
+    },
+    {
+     "castId": "extra6",
+     "x": -6.252,
+     "z": 0.284,
+     "mode": "stand",
+     "expr": "smile",
+     "holding": "coffee"
+    },
+    {
+     "castId": "extra7",
+     "x": -8.594,
+     "z": -0.935,
+     "mode": "stand",
+     "expr": "grin",
+     "holding": "coffee"
+    },
+    {
+     "castId": "extra0",
+     "x": -4.844,
+     "z": -1.849,
+     "mode": "stand",
+     "expr": "nervous",
+     "holding": "coffee"
+    },
+    {
+     "castId": "extra1",
+     "x": -9.419,
+     "z": 0.279,
+     "mode": "stand",
+     "expr": "neutral",
+     "holding": "coffee"
+    },
+    {
+     "castId": "extra2",
+     "x": -3.738,
+     "z": -0.732,
+     "mode": "stand",
+     "expr": "laugh",
+     "holding": "coffee"
+    },
+    {
+     "castId": "extra3",
+     "x": -9.14,
+     "z": -1.483,
+     "mode": "stand",
+     "expr": "smile",
+     "holding": "coffee"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1310,
+     "position": [
+      -13.072,
+      2.3,
+      13.009
+     ],
+     "lookAt": [
+      -9.551,
+      1.2,
+      2.672
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1310,
+     "position": [
+      -9.97,
+      2.3,
+      14.065
+     ],
+     "lookAt": [
+      -6.449,
+      1.2,
+      3.728
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 79
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7343,
+   "qualityNotes": "",
+   "sub": true,
+   "env": {
+    "preset": "shops",
+    "seed": 73,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b07b",
+   "startFrame": 1389,
+   "endFrame": 1439,
+   "narration": "If one bridge closes for maintenance, coffee shops downtown run out of milk before the morning rush even starts.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "hat",
+     "x": 6.513,
+     "z": -9.917,
+     "expr": "dazed",
+     "mode": "stand",
+     "holding": "coffee"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1389,
+     "position": [
+      8.216,
+      1.6,
+      -10.354
+     ],
+     "lookAt": [
+      6.513,
+      1.6,
+      -9.917
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 1389,
+     "position": [
+      7.535,
+      1.6,
+      -10.179
+     ],
+     "lookAt": [
+      6.513,
+      1.6,
+      -9.917
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 50
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7380,
+   "qualityNotes": "",
+   "sub": true,
+   "pieces": [
+    {
+     "kind": "signs",
+     "x": 4.954,
+     "z": -11.406,
+     "label": "BRIDGE|CLOSED|SORRY"
+    }
+   ]
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 1439,
+   "endFrame": 1533,
+   "narration": "Fresh food has zero tolerance. Miss your delivery window, and thousands of meals turn into expensive dumpster juice.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "chef",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "nervous",
+     "mode": "stand",
+     "holding": "lettuce"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1439,
+     "position": [
+      -0.55,
+      1.62,
+      3.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      1.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1439,
+     "position": [
+      -0.33,
+      1.572,
+      2.74
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      1.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 94
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7307,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "panel",
+    "text": "DELIVERY WINDOW|00:01"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "kitchen",
+    "seed": 73,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b08a",
+   "startFrame": 1533,
+   "endFrame": 1629,
+   "narration": "Fresh food has zero tolerance. Miss your delivery window, and thousands of meals turn into expensive dumpster juice.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "chef",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "broken",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1533,
+     "position": [
+      0.18,
+      1.6,
+      2.75
+     ],
+     "lookAt": [
+      1.02,
+      1.6,
+      1.204
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 1533,
+     "position": [
+      0.18,
+      1.6,
+      2.75
+     ],
+     "lookAt": [
+      0.0,
+      1.6,
+      1.0
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 15,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7344,
+   "qualityNotes": "",
+   "sub": true,
+   "hud": {
+    "kind": "panel",
+    "text": "DELIVERY WINDOW|00:01"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "kitchen",
+    "seed": 73,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "puff",
+     "frame": 1595,
+     "dur": 34,
+     "at": [
+      0.0,
+      1.0,
+      1.0
+     ],
+     "size": 0.9
+    }
+   ]
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 1629,
+   "endFrame": 1787,
+   "narration": "An army of night-shift stockers unloads everything in total darkness before the city wakes up.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "stk",
+     "x": -18.053,
+     "z": 3.2,
+     "expr": "stern",
+     "mode": "stroll",
+     "walkTo": [
+      -15.653,
+      3.2
+     ],
+     "walkFrames": [
+      1629,
+      1739
+     ],
+     "holding": "box"
+    },
+    {
+     "castId": "extra4",
+     "x": -14.053,
+     "z": 0.2,
+     "mode": "march",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra5",
+     "x": -16.388,
+     "z": -0.881,
+     "mode": "march",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra6",
+     "x": -12.753,
+     "z": -2.0,
+     "mode": "march",
+     "expr": "nervous"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1629,
+     "position": [
+      -20.0,
+      1.68,
+      8.8
+     ],
+     "lookAt": [
+      -18.4,
+      1.38,
+      3.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1629,
+     "position": [
+      -17.6,
+      1.68,
+      8.8
+     ],
+     "lookAt": [
+      -16,
+      1.38,
+      3.2
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 110
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 7308,
+   "qualityNotes": "",
+   "env": {
+    "preset": "shops",
+    "seed": 73,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "crates",
+     "x": -17.2,
+     "z": 2.0
+    }
+   ]
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 1787,
+   "endFrame": 1960,
+   "narration": "We're talking about moving billions of calories across concrete bridges every single day, like clockwork.",
+   "light": "golden",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "hat",
+     "x": 6.5,
+     "z": -10.0,
+     "expr": "starry",
+     "mode": "stand",
+     "pose": "up"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1787,
+     "position": [
+      16.439,
+      0.4,
+      -14.524
+     ],
+     "lookAt": [
+      6.5,
+      1.2,
+      -10
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1787,
+     "position": [
+      16.439,
+      7.76,
+      -14.524
+     ],
+     "lookAt": [
+      6.5,
+      1.2,
+      -10
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 173
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7309,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "panel",
+    "text": "EVERY DAY|BILLIONS OF CALORIES!"
+   },
+   "sunEl": 18,
+   "sunAz": 150,
+   "fx": [
+    {
+     "kind": "confetti",
+     "frame": 1816,
+     "dur": 144,
+     "at": [
+      7.093,
+      1.4,
+      -10.089
+     ],
+     "size": 3.2
+    }
+   ]
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 1960,
+   "endFrame": 2085,
+   "narration": "It's the most fragile, high-stakes logistics ballet on Earth, and it happens every twenty-four hours.",
+   "light": "golden",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "bal",
+     "x": 6.5,
+     "z": 10.0,
+     "expr": "nervous",
+     "mode": "stand",
+     "pose": "up",
+     "y": 1.7
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1960,
+     "position": [
+      14.178,
+      4.0,
+      2.235
+     ],
+     "lookAt": [
+      6.5,
+      2.9,
+      10
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1960,
+     "position": [
+      10.345,
+      4.0,
+      -0.221
+     ],
+     "lookAt": [
+      6.5,
+      2.9,
+      10
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 125
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7310,
+   "qualityNotes": "",
+   "sunEl": 18,
+   "sunAz": 150,
+   "pieces": [
+    {
+     "kind": "crates",
+     "x": 6.601,
+     "z": 9.665,
+     "scale": 1.0,
+     "shake": 0.5
+    }
+   ]
+  },
+  {
+   "sceneId": "b11a",
+   "startFrame": 2085,
+   "endFrame": 2130,
+   "narration": "It's the most fragile, high-stakes logistics ballet on Earth, and it happens every twenty-four hours.",
+   "light": "golden",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "bal",
+     "x": 6.5,
+     "z": 10.0,
+     "expr": "sweat",
+     "mode": "sit",
+     "pose": "up",
+     "y": 1.7
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 2085,
+     "position": [
+      6.672,
+      1.092,
+      6.293
+     ],
+     "lookAt": [
+      6.5,
+      3.25,
+      10.0
+     ],
+     "fov": 50,
+     "roll": 0.0
+    },
+    {
+     "frame": 2085,
+     "position": [
+      6.672,
+      3.875,
+      6.293
+     ],
+     "lookAt": [
+      6.5,
+      3.25,
+      10.0
+     ],
+     "fov": 50,
+     "roll": 0.0,
+     "dur": 45
+    }
+   ],
+   "push": 0.0028,
+   "dof": {
+    "cInf": 7,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7347,
+   "qualityNotes": "",
+   "sub": true,
+   "sunEl": 18,
+   "sunAz": 150,
+   "pieces": [
+    {
+     "kind": "crates",
+     "x": 6.601,
+     "z": 9.665,
+     "scale": 1.0,
+     "shake": 0.5
+    }
+   ]
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 2130,
+   "endFrame": 2222,
+   "narration": "Next time you bite into a bagel in Manhattan, remember it survived bridges, tunnels, and a parking ticket.",
+   "light": "day",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "hat",
+     "x": -16.0,
+     "z": 3.2,
+     "expr": "starry",
+     "mode": "stand",
+     "holding": "bagel"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 2130,
+     "position": [
+      -16.55,
+      1.62,
+      6.1
+     ],
+     "lookAt": [
+      -16.0,
+      1.5,
+      3.2
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 2130,
+     "position": [
+      -16.33,
+      1.572,
+      4.94
+     ],
+     "lookAt": [
+      -16.0,
+      1.5,
+      3.2
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 92
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "zoom",
+   "seed": 7311,
+   "qualityNotes": "",
+   "env": {
+    "preset": "shops",
+    "seed": 73,
+    "shop": null,
+    "variant": "open"
+   }
+  },
+  {
+   "sceneId": "b12a",
+   "startFrame": 2222,
+   "endFrame": 2302,
+   "narration": "Next time you bite into a bagel in Manhattan, remember it survived bridges, tunnels, and a parking ticket.",
+   "light": "day",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "hat",
+     "x": -16.0,
+     "z": 3.2,
+     "expr": "laugh",
+     "mode": "stand",
+     "pose": "point",
+     "holding": "bagel"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 2222,
+     "position": [
+      -13.268,
+      1.68,
+      8.343
+     ],
+     "lookAt": [
+      -16,
+      1.38,
+      3.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 2222,
+     "position": [
+      -15.603,
+      1.68,
+      9.011
+     ],
+     "lookAt": [
+      -16,
+      1.38,
+      3.2
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 80
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 7348,
+   "qualityNotes": "",
+   "sub": true,
+   "env": {
+    "preset": "shops",
+    "seed": 73,
+    "shop": null,
+    "variant": "open"
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 2285,
+     "dur": 17,
+     "at": [
+      -15.58,
+      2.28,
+      3.2
+     ],
+     "size": 0.42,
+     "product": "ticket"
+    }
+   ]
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 2302,
+   "endFrame": 2424,
+   "narration": "Send this to anyone who thinks food magically appears on grocery shelves.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 2302,
+     "position": [
+      17.329,
+      2.3,
+      -8.591
+     ],
+     "lookAt": [
+      6.5,
+      1.2,
+      -10
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 2357,
+     "dur": 24,
+     "position": [
+      12.275,
+      1.68,
+      -9.248
+     ],
+     "lookAt": [
+      6.5,
+      1.38,
+      -10
+     ],
+     "fov": 38,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 7312,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "manhattan",
+    "text": "night"
+   }
+  },
+  {
+   "sceneId": "b14",
+   "startFrame": 2424,
+   "endFrame": 2513,
+   "narration": "Hit follow for more hidden infrastructure secrets.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 2424,
+     "position": [
+      -12.459,
+      2.3,
+      8.957
+     ],
+     "lookAt": [
+      -3,
+      1.2,
+      3.5
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 2460,
+     "dur": 24,
+     "position": [
+      -8.045,
+      1.68,
+      6.41
+     ],
+     "lookAt": [
+      -3,
+      1.38,
+      3.5
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 7313,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "outro"
+   },
+   "env": {
+    "preset": "shops",
+    "seed": 73,
+    "shop": null
+   }
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": true,
+  "words": [
+   {
+    "w": "How",
+    "s": 0.06,
+    "e": 0.18
+   },
+   {
+    "w": "do",
+    "s": 0.18,
+    "e": 0.3
+   },
+   {
+    "w": "you",
+    "s": 0.3,
+    "e": 0.42
+   },
+   {
+    "w": "feed",
+    "s": 0.42,
+    "e": 0.6
+   },
+   {
+    "w": "a",
+    "s": 0.6,
+    "e": 0.72
+   },
+   {
+    "w": "city",
+    "s": 0.72,
+    "e": 1.0
+   },
+   {
+    "w": "of",
+    "s": 1.0,
+    "e": 1.18
+   },
+   {
+    "w": "eight",
+    "s": 1.18,
+    "e": 1.42
+   },
+   {
+    "w": "million",
+    "s": 1.42,
+    "e": 1.76
+   },
+   {
+    "w": "people",
+    "s": 1.76,
+    "e": 2.2
+   },
+   {
+    "w": "when",
+    "s": 2.2,
+    "e": 2.42
+   },
+   {
+    "w": "its",
+    "s": 2.42,
+    "e": 2.58
+   },
+   {
+    "w": "heart",
+    "s": 2.58,
+    "e": 2.8
+   },
+   {
+    "w": "is",
+    "s": 2.8,
+    "e": 3.0
+   },
+   {
+    "w": "an",
+    "s": 3.0,
+    "e": 3.12
+   },
+   {
+    "w": "island",
+    "s": 3.12,
+    "e": 3.46
+   },
+   {
+    "w": "with",
+    "s": 3.46,
+    "e": 3.76
+   },
+   {
+    "w": "zero",
+    "s": 3.76,
+    "e": 4.1
+   },
+   {
+    "w": "farms?",
+    "s": 4.1,
+    "e": 4.6
+   },
+   {
+    "w": "You",
+    "s": 4.979,
+    "e": 5.099
+   },
+   {
+    "w": "don't.",
+    "s": 5.099,
+    "e": 5.479
+   },
+   {
+    "w": "You",
+    "s": 5.707,
+    "e": 5.807
+   },
+   {
+    "w": "pray",
+    "s": 5.807,
+    "e": 5.987
+   },
+   {
+    "w": "the",
+    "s": 5.987,
+    "e": 6.107
+   },
+   {
+    "w": "trucks",
+    "s": 6.107,
+    "e": 6.367
+   },
+   {
+    "w": "don't",
+    "s": 6.367,
+    "e": 6.627
+   },
+   {
+    "w": "stop.",
+    "s": 6.627,
+    "e": 6.887
+   },
+   {
+    "w": "Every",
+    "s": 7.294,
+    "e": 7.604
+   },
+   {
+    "w": "single",
+    "s": 7.614,
+    "e": 7.987
+   },
+   {
+    "w": "morning,",
+    "s": 7.997,
+    "e": 8.435
+   },
+   {
+    "w": "thousands",
+    "s": 8.445,
+    "e": 9.01
+   },
+   {
+    "w": "of",
+    "s": 9.02,
+    "e": 9.138
+   },
+   {
+    "w": "massive",
+    "s": 9.148,
+    "e": 9.586
+   },
+   {
+    "w": "eighteen-wheelers",
+    "s": 9.596,
+    "e": 10.609
+   },
+   {
+    "w": "converge",
+    "s": 10.619,
+    "e": 11.121
+   },
+   {
+    "w": "on",
+    "s": 11.131,
+    "e": 11.249
+   },
+   {
+    "w": "New",
+    "s": 11.259,
+    "e": 11.441
+   },
+   {
+    "w": "York",
+    "s": 11.451,
+    "e": 11.696
+   },
+   {
+    "w": "City",
+    "s": 11.706,
+    "e": 11.952
+   },
+   {
+    "w": "before",
+    "s": 11.962,
+    "e": 12.336
+   },
+   {
+    "w": "dawn,",
+    "s": 12.346,
+    "e": 12.592
+   },
+   {
+    "w": "carrying",
+    "s": 12.602,
+    "e": 13.103
+   },
+   {
+    "w": "millions",
+    "s": 13.113,
+    "e": 13.615
+   },
+   {
+    "w": "of",
+    "s": 13.625,
+    "e": 13.743
+   },
+   {
+    "w": "pounds",
+    "s": 13.753,
+    "e": 14.126
+   },
+   {
+    "w": "of",
+    "s": 14.136,
+    "e": 14.254
+   },
+   {
+    "w": "food.",
+    "s": 14.264,
+    "e": 14.51
+   },
+   {
+    "w": "If",
+    "s": 14.69,
+    "e": 14.81
+   },
+   {
+    "w": "you",
+    "s": 14.81,
+    "e": 14.91
+   },
+   {
+    "w": "run",
+    "s": 14.91,
+    "e": 15.09
+   },
+   {
+    "w": "a",
+    "s": 15.09,
+    "e": 15.23
+   },
+   {
+    "w": "restaurant",
+    "s": 15.23,
+    "e": 15.65
+   },
+   {
+    "w": "in",
+    "s": 15.65,
+    "e": 15.87
+   },
+   {
+    "w": "Times",
+    "s": 15.87,
+    "e": 16.15
+   },
+   {
+    "w": "Square,",
+    "s": 16.15,
+    "e": 16.59
+   },
+   {
+    "w": "your",
+    "s": 16.87,
+    "e": 16.95
+   },
+   {
+    "w": "entire",
+    "s": 16.95,
+    "e": 17.35
+   },
+   {
+    "w": "menu",
+    "s": 17.35,
+    "e": 17.77,
+    "hot": true
+   },
+   {
+    "w": "depends",
+    "s": 17.77,
+    "e": 18.09
+   },
+   {
+    "w": "on",
+    "s": 18.09,
+    "e": 18.37
+   },
+   {
+    "w": "a",
+    "s": 18.37,
+    "e": 18.47
+   },
+   {
+    "w": "single",
+    "s": 18.47,
+    "e": 18.77
+   },
+   {
+    "w": "truck",
+    "s": 18.77,
+    "e": 19.17
+   },
+   {
+    "w": "crawling",
+    "s": 19.17,
+    "e": 19.55
+   },
+   {
+    "w": "across",
+    "s": 19.55,
+    "e": 19.93
+   },
+   {
+    "w": "the",
+    "s": 19.93,
+    "e": 20.15
+   },
+   {
+    "w": "George",
+    "s": 20.15,
+    "e": 20.43
+   },
+   {
+    "w": "Washington",
+    "s": 20.43,
+    "e": 21.03
+   },
+   {
+    "w": "Bridge.",
+    "s": 21.03,
+    "e": 21.35
+   },
+   {
+    "w": "Manhattan",
+    "s": 21.796,
+    "e": 22.374
+   },
+   {
+    "w": "was",
+    "s": 22.384,
+    "e": 22.57
+   },
+   {
+    "w": "laid",
+    "s": 22.58,
+    "e": 22.832
+   },
+   {
+    "w": "out",
+    "s": 22.842,
+    "e": 23.028
+   },
+   {
+    "w": "in",
+    "s": 23.038,
+    "e": 23.158
+   },
+   {
+    "w": "eighteen",
+    "s": 23.168,
+    "e": 23.681
+   },
+   {
+    "w": "eleven",
+    "s": 23.691,
+    "e": 24.073
+   },
+   {
+    "w": "for",
+    "s": 24.083,
+    "e": 24.269
+   },
+   {
+    "w": "horse-drawn",
+    "s": 24.279,
+    "e": 24.922
+   },
+   {
+    "w": "carriages,",
+    "s": 24.932,
+    "e": 25.51
+   },
+   {
+    "w": "not",
+    "s": 25.52,
+    "e": 25.706
+   },
+   {
+    "w": "eighty-foot",
+    "s": 25.716,
+    "e": 26.359,
+    "hot": true
+   },
+   {
+    "w": "trucks",
+    "s": 26.369,
+    "e": 26.751
+   },
+   {
+    "w": "trying",
+    "s": 26.761,
+    "e": 27.143
+   },
+   {
+    "w": "to",
+    "s": 27.153,
+    "e": 27.274
+   },
+   {
+    "w": "deliver",
+    "s": 27.284,
+    "e": 27.731
+   },
+   {
+    "w": "fifty",
+    "s": 27.741,
+    "e": 28.058
+   },
+   {
+    "w": "crates",
+    "s": 28.068,
+    "e": 28.45
+   },
+   {
+    "w": "of",
+    "s": 28.46,
+    "e": 28.58
+   },
+   {
+    "w": "avocados.",
+    "s": 28.59,
+    "e": 29.103
+   },
+   {
+    "w": "Delivery",
+    "s": 29.303,
+    "e": 29.812
+   },
+   {
+    "w": "drivers",
+    "s": 29.822,
+    "e": 30.267
+   },
+   {
+    "w": "have",
+    "s": 30.277,
+    "e": 30.527
+   },
+   {
+    "w": "to",
+    "s": 30.537,
+    "e": 30.656
+   },
+   {
+    "w": "invent",
+    "s": 30.666,
+    "e": 31.046
+   },
+   {
+    "w": "new",
+    "s": 31.056,
+    "e": 31.241
+   },
+   {
+    "w": "laws",
+    "s": 31.251,
+    "e": 31.5
+   },
+   {
+    "w": "of",
+    "s": 31.51,
+    "e": 31.63
+   },
+   {
+    "w": "physics",
+    "s": 31.64,
+    "e": 32.085
+   },
+   {
+    "w": "just",
+    "s": 32.095,
+    "e": 32.344
+   },
+   {
+    "w": "to",
+    "s": 32.354,
+    "e": 32.474
+   },
+   {
+    "w": "double-park",
+    "s": 32.484,
+    "e": 33.123
+   },
+   {
+    "w": "without",
+    "s": 33.133,
+    "e": 33.578
+   },
+   {
+    "w": "getting",
+    "s": 33.588,
+    "e": 34.032
+   },
+   {
+    "w": "towed",
+    "s": 34.042,
+    "e": 34.357,
+    "hot": true
+   },
+   {
+    "w": "in",
+    "s": 34.367,
+    "e": 34.487
+   },
+   {
+    "w": "thirty",
+    "s": 34.497,
+    "e": 34.876
+   },
+   {
+    "w": "seconds.",
+    "s": 34.886,
+    "e": 35.331
+   },
+   {
+    "w": "By",
+    "s": 35.511,
+    "e": 35.611
+   },
+   {
+    "w": "six",
+    "s": 35.611,
+    "e": 35.851
+   },
+   {
+    "w": "in",
+    "s": 35.851,
+    "e": 36.091
+   },
+   {
+    "w": "the",
+    "s": 36.091,
+    "e": 36.171
+   },
+   {
+    "w": "morning,",
+    "s": 36.171,
+    "e": 36.491
+   },
+   {
+    "w": "the",
+    "s": 36.711,
+    "e": 36.791
+   },
+   {
+    "w": "Hunts",
+    "s": 36.791,
+    "e": 37.071
+   },
+   {
+    "w": "Point",
+    "s": 37.071,
+    "e": 37.291
+   },
+   {
+    "w": "Market",
+    "s": 37.291,
+    "e": 37.691
+   },
+   {
+    "w": "in",
+    "s": 37.691,
+    "e": 37.851
+   },
+   {
+    "w": "the",
+    "s": 37.851,
+    "e": 37.931
+   },
+   {
+    "w": "Bronx",
+    "s": 37.931,
+    "e": 38.191
+   },
+   {
+    "w": "turns",
+    "s": 38.191,
+    "e": 38.551
+   },
+   {
+    "w": "into",
+    "s": 38.551,
+    "e": 38.911
+   },
+   {
+    "w": "a",
+    "s": 38.911,
+    "e": 39.051
+   },
+   {
+    "w": "synchronized",
+    "s": 39.051,
+    "e": 39.751
+   },
+   {
+    "w": "war",
+    "s": 39.751,
+    "e": 39.951
+   },
+   {
+    "w": "zone",
+    "s": 39.951,
+    "e": 40.291
+   },
+   {
+    "w": "of",
+    "s": 40.291,
+    "e": 40.431
+   },
+   {
+    "w": "forklifts",
+    "s": 40.431,
+    "e": 40.931
+   },
+   {
+    "w": "and",
+    "s": 40.931,
+    "e": 41.091
+   },
+   {
+    "w": "crates.",
+    "s": 41.091,
+    "e": 41.491
+   },
+   {
+    "w": "If",
+    "s": 41.734,
+    "e": 41.854
+   },
+   {
+    "w": "one",
+    "s": 41.854,
+    "e": 42.034
+   },
+   {
+    "w": "bridge",
+    "s": 42.034,
+    "e": 42.294
+   },
+   {
+    "w": "closes",
+    "s": 42.294,
+    "e": 42.734
+   },
+   {
+    "w": "for",
+    "s": 42.734,
+    "e": 42.974
+   },
+   {
+    "w": "maintenance,",
+    "s": 42.974,
+    "e": 43.354
+   },
+   {
+    "w": "coffee",
+    "s": 43.714,
+    "e": 43.974
+   },
+   {
+    "w": "shops",
+    "s": 43.974,
+    "e": 44.334
+   },
+   {
+    "w": "downtown",
+    "s": 44.334,
+    "e": 44.794
+   },
+   {
+    "w": "run",
+    "s": 44.794,
+    "e": 45.234
+   },
+   {
+    "w": "out",
+    "s": 45.234,
+    "e": 45.494
+   },
+   {
+    "w": "of",
+    "s": 45.494,
+    "e": 45.654
+   },
+   {
+    "w": "milk",
+    "s": 45.654,
+    "e": 45.894
+   },
+   {
+    "w": "before",
+    "s": 45.894,
+    "e": 46.214
+   },
+   {
+    "w": "the",
+    "s": 46.214,
+    "e": 46.334
+   },
+   {
+    "w": "morning",
+    "s": 46.334,
+    "e": 46.594
+   },
+   {
+    "w": "rush",
+    "s": 46.594,
+    "e": 46.874
+   },
+   {
+    "w": "even",
+    "s": 46.874,
+    "e": 47.274
+   },
+   {
+    "w": "starts.",
+    "s": 47.274,
+    "e": 47.574
+   },
+   {
+    "w": "Fresh",
+    "s": 48.048,
+    "e": 48.228
+   },
+   {
+    "w": "food",
+    "s": 48.228,
+    "e": 48.488
+   },
+   {
+    "w": "has",
+    "s": 48.488,
+    "e": 48.648
+   },
+   {
+    "w": "zero",
+    "s": 48.648,
+    "e": 48.968
+   },
+   {
+    "w": "tolerance.",
+    "s": 48.968,
+    "e": 49.448
+   },
+   {
+    "w": "Miss",
+    "s": 49.86,
+    "e": 49.98
+   },
+   {
+    "w": "your",
+    "s": 49.98,
+    "e": 50.14
+   },
+   {
+    "w": "delivery",
+    "s": 50.14,
+    "e": 50.46
+   },
+   {
+    "w": "window,",
+    "s": 50.46,
+    "e": 50.86
+   },
+   {
+    "w": "and",
+    "s": 50.86,
+    "e": 51.16
+   },
+   {
+    "w": "thousands",
+    "s": 51.16,
+    "e": 51.58
+   },
+   {
+    "w": "of",
+    "s": 51.58,
+    "e": 51.8
+   },
+   {
+    "w": "meals",
+    "s": 51.8,
+    "e": 52.02
+   },
+   {
+    "w": "turn",
+    "s": 52.02,
+    "e": 52.4
+   },
+   {
+    "w": "into",
+    "s": 52.4,
+    "e": 52.68
+   },
+   {
+    "w": "expensive",
+    "s": 52.68,
+    "e": 53.22
+   },
+   {
+    "w": "dumpster",
+    "s": 53.22,
+    "e": 53.74,
+    "hot": true
+   },
+   {
+    "w": "juice.",
+    "s": 53.74,
+    "e": 53.98
+   },
+   {
+    "w": "An",
+    "s": 54.377,
+    "e": 54.498
+   },
+   {
+    "w": "army",
+    "s": 54.508,
+    "e": 54.759
+   },
+   {
+    "w": "of",
+    "s": 54.769,
+    "e": 54.889
+   },
+   {
+    "w": "night-shift",
+    "s": 54.899,
+    "e": 55.542
+   },
+   {
+    "w": "stockers",
+    "s": 55.552,
+    "e": 56.064
+   },
+   {
+    "w": "unloads",
+    "s": 56.074,
+    "e": 56.521
+   },
+   {
+    "w": "everything",
+    "s": 56.531,
+    "e": 57.174
+   },
+   {
+    "w": "in",
+    "s": 57.184,
+    "e": 57.305
+   },
+   {
+    "w": "total",
+    "s": 57.315,
+    "e": 57.631
+   },
+   {
+    "w": "darkness",
+    "s": 57.641,
+    "e": 58.153
+   },
+   {
+    "w": "before",
+    "s": 58.163,
+    "e": 58.545
+   },
+   {
+    "w": "the",
+    "s": 58.555,
+    "e": 58.741
+   },
+   {
+    "w": "city",
+    "s": 58.751,
+    "e": 59.002
+   },
+   {
+    "w": "wakes",
+    "s": 59.012,
+    "e": 59.328
+   },
+   {
+    "w": "up.",
+    "s": 59.338,
+    "e": 59.459
+   },
+   {
+    "w": "We're",
+    "s": 59.639,
+    "e": 59.739
+   },
+   {
+    "w": "talking",
+    "s": 59.739,
+    "e": 60.019
+   },
+   {
+    "w": "about",
+    "s": 60.019,
+    "e": 60.279
+   },
+   {
+    "w": "moving",
+    "s": 60.279,
+    "e": 60.579
+   },
+   {
+    "w": "billions",
+    "s": 60.579,
+    "e": 61.039,
+    "hot": true
+   },
+   {
+    "w": "of",
+    "s": 61.039,
+    "e": 61.259
+   },
+   {
+    "w": "calories",
+    "s": 61.259,
+    "e": 61.679
+   },
+   {
+    "w": "across",
+    "s": 61.679,
+    "e": 62.039
+   },
+   {
+    "w": "concrete",
+    "s": 62.039,
+    "e": 62.599
+   },
+   {
+    "w": "bridges",
+    "s": 62.599,
+    "e": 63.059
+   },
+   {
+    "w": "every",
+    "s": 63.059,
+    "e": 63.459
+   },
+   {
+    "w": "single",
+    "s": 63.459,
+    "e": 63.819
+   },
+   {
+    "w": "day,",
+    "s": 63.819,
+    "e": 64.139
+   },
+   {
+    "w": "like",
+    "s": 64.439,
+    "e": 64.559
+   },
+   {
+    "w": "clockwork.",
+    "s": 64.559,
+    "e": 65.059
+   },
+   {
+    "w": "It's",
+    "s": 65.39,
+    "e": 65.583
+   },
+   {
+    "w": "the",
+    "s": 65.593,
+    "e": 65.787
+   },
+   {
+    "w": "most",
+    "s": 65.797,
+    "e": 66.058
+   },
+   {
+    "w": "fragile,",
+    "s": 66.068,
+    "e": 66.532
+   },
+   {
+    "w": "high-stakes",
+    "s": 66.542,
+    "e": 67.209
+   },
+   {
+    "w": "logistics",
+    "s": 67.219,
+    "e": 67.818
+   },
+   {
+    "w": "ballet",
+    "s": 67.828,
+    "e": 68.225
+   },
+   {
+    "w": "on",
+    "s": 68.235,
+    "e": 68.36
+   },
+   {
+    "w": "Earth,",
+    "s": 68.37,
+    "e": 68.699
+   },
+   {
+    "w": "and",
+    "s": 68.709,
+    "e": 68.902
+   },
+   {
+    "w": "it",
+    "s": 68.912,
+    "e": 69.037
+   },
+   {
+    "w": "happens",
+    "s": 69.047,
+    "e": 69.511
+   },
+   {
+    "w": "every",
+    "s": 69.521,
+    "e": 69.85
+   },
+   {
+    "w": "twenty-four",
+    "s": 69.86,
+    "e": 70.527
+   },
+   {
+    "w": "hours.",
+    "s": 70.537,
+    "e": 70.866
+   },
+   {
+    "w": "Next",
+    "s": 71.046,
+    "e": 71.246
+   },
+   {
+    "w": "time",
+    "s": 71.246,
+    "e": 71.466
+   },
+   {
+    "w": "you",
+    "s": 71.466,
+    "e": 71.626
+   },
+   {
+    "w": "bite",
+    "s": 71.626,
+    "e": 71.886
+   },
+   {
+    "w": "into",
+    "s": 71.886,
+    "e": 72.126
+   },
+   {
+    "w": "a",
+    "s": 72.126,
+    "e": 72.266
+   },
+   {
+    "w": "bagel",
+    "s": 72.266,
+    "e": 72.706
+   },
+   {
+    "w": "in",
+    "s": 72.706,
+    "e": 72.786
+   },
+   {
+    "w": "Manhattan,",
+    "s": 72.786,
+    "e": 73.266
+   },
+   {
+    "w": "remember",
+    "s": 73.606,
+    "e": 73.926
+   },
+   {
+    "w": "it",
+    "s": 73.926,
+    "e": 74.066
+   },
+   {
+    "w": "survived",
+    "s": 74.066,
+    "e": 74.366
+   },
+   {
+    "w": "bridges,",
+    "s": 74.366,
+    "e": 74.906
+   },
+   {
+    "w": "tunnels,",
+    "s": 75.246,
+    "e": 75.466
+   },
+   {
+    "w": "and",
+    "s": 75.726,
+    "e": 75.786
+   },
+   {
+    "w": "a",
+    "s": 75.786,
+    "e": 75.866
+   },
+   {
+    "w": "parking",
+    "s": 75.866,
+    "e": 76.166
+   },
+   {
+    "w": "ticket.",
+    "s": 76.166,
+    "e": 76.506,
+    "hot": true
+   },
+   {
+    "w": "Send",
+    "s": 76.768,
+    "e": 76.928
+   },
+   {
+    "w": "this",
+    "s": 76.928,
+    "e": 77.128
+   },
+   {
+    "w": "to",
+    "s": 77.128,
+    "e": 77.288
+   },
+   {
+    "w": "anyone",
+    "s": 77.288,
+    "e": 77.668
+   },
+   {
+    "w": "who",
+    "s": 77.668,
+    "e": 77.828
+   },
+   {
+    "w": "thinks",
+    "s": 77.828,
+    "e": 78.048
+   },
+   {
+    "w": "food",
+    "s": 78.048,
+    "e": 78.348
+   },
+   {
+    "w": "magically",
+    "s": 78.348,
+    "e": 78.888
+   },
+   {
+    "w": "appears",
+    "s": 78.888,
+    "e": 79.368
+   },
+   {
+    "w": "on",
+    "s": 79.368,
+    "e": 79.628
+   },
+   {
+    "w": "grocery",
+    "s": 79.628,
+    "e": 79.968
+   },
+   {
+    "w": "shelves.",
+    "s": 79.968,
+    "e": 80.468
+   },
+   {
+    "w": "Hit",
+    "s": 80.828,
+    "e": 80.948
+   },
+   {
+    "w": "follow",
+    "s": 80.948,
+    "e": 81.288
+   },
+   {
+    "w": "for",
+    "s": 81.288,
+    "e": 81.508
+   },
+   {
+    "w": "more",
+    "s": 81.508,
+    "e": 81.688
+   },
+   {
+    "w": "hidden",
+    "s": 81.688,
+    "e": 81.988
+   },
+   {
+    "w": "infrastructure",
+    "s": 81.988,
+    "e": 82.448
+   },
+   {
+    "w": "secrets.",
+    "s": 82.448,
+    "e": 82.968
+   }
+  ]
+ },
+ "style": "storybook",
+ "graphics": "full"
+}

@@ -6,9 +6,10 @@ from typing import Literal, Optional
 
 from pydantic import BaseModel, Field, field_validator
 
-Expr = Literal["neutral", "stern", "grin", "laugh", "whistle", "nervous", "shock", "relief", "relief_open", "dazed", "pained", "smile", "smile_closed", "lick", "starry", "crazy", "squint", "broken", "sweat", "sleepy"]
+Expr = Literal["neutral", "stern", "grin", "laugh", "whistle", "nervous", "shock", "relief", "relief_open", "dazed", "pained", "smile", "smile_closed", "lick", "starry", "crazy", "squint", "broken", "sweat", "sleepy",
+              "smug", "skeptical", "angry", "sad", "cry", "wink", "bored", "scared", "love", "evil", "proud", "confused"]
 Action = Literal["stand", "walk", "dance", "sit", "wave", "march", "stroll", "fall", "stretch", "cheer", "point",
-                 "run", "jump", "panic", "shrug", "hips"]
+                 "run", "jump", "panic", "shrug", "hips", "sitchair"]
 Shot = Literal["wide", "medium", "close", "low", "high", "two_shot", "insert", "extreme", "worm", "dutch"]
 Light = Literal["day", "golden", "night"]
 Mood = Literal["whimsical", "curious", "tense", "warm", "upbeat"]
@@ -62,6 +63,7 @@ class BeatCharacter(BaseModel):
     react: Optional[Reaction] = None
     holding: Optional[Product] = None
     y: Optional[float] = Field(None, ge=0, le=8)   # standing height (up a pole, on a bed)
+    talk: Optional[bool] = None   # lip-flap to the narration while it is on screen (auto for the lead in quoted lines)
 
 
 class BeatFx(BaseModel):
@@ -74,7 +76,7 @@ class BeatFx(BaseModel):
 
 CamMove = Literal["push", "pull", "truck_left", "truck_right", "orbit", "crane_up", "follow", "whip"]
 Hud = Literal["rec", "phone", "news", "map", "panel", "bar", "police",
-            "manhattan", "osaka", "panama", "world", "subway", "mud", "outro"]   # full-screen animated 2D maps / cross-sections / outro   # panel: "TITLE|row|row"; bar: "LABEL|from|to"
+            "manhattan", "osaka", "panama", "world", "subway", "mud", "outro", "spot"]   # full-screen animated 2D maps / cross-sections / outro   # panel: "TITLE|row|row"; bar: "LABEL|from|to"
 
 
 class SubShot(BaseModel):

@@ -269,6 +269,10 @@ const Hud: React.FC<{ kind: string; text?: string; f: number; f0: number; sb: St
         </div>
       </AbsoluteFill>);
   }
+  if (kind === "spot") {    // iris spotlight on a close-up (RicksClips): dark ring closes in to a circle around the face
+    const rr = interpolate(n, [0, 7], [1.2, 0.46], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: (x) => 1 - (1 - x) ** 3 }) * W;
+    return <AbsoluteFill style={{ background: `radial-gradient(circle ${rr}px at 50% 42%, rgba(0,0,0,0) 0, rgba(0,0,0,0) ${rr * 0.97}px, rgba(8,6,14,0.92) ${rr}px)` }} />;
+  }
   if (MAP_KINDS.includes(kind)) return <AbsoluteFill style={{ opacity: Math.min(1, (n + 1) / 6) }}><MapScene kind={kind} n={n} text={text} /></AbsoluteFill>;
   if (kind === "police") {  // red / blue police lights sweeping the room
     const ph = Math.floor(f / 5) % 2;

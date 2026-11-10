@@ -1,0 +1,96 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 79.6415625,
+ "voice": "am_fenrir*0.8+am_eric*0.2",
+ "lang": "en",
+ "speed": 1.042,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "They spent over five billion dollars widening the Panama Canal, and the giant new ships still scrape by with barely any room on either wall.",
+   "start": 0.06,
+   "end": 8.0640625
+  },
+  {
+   "text": "Back in nineteen fourteen, digging a ditch across the jungle connected two oceans and changed global trade forever.",
+   "start": 8.2040625,
+   "end": 14.777291666666667
+  },
+  {
+   "text": "The original cost?",
+   "start": 14.917291666666667,
+   "end": 16.080145833333333
+  },
+  {
+   "text": "Over twenty-five thousand worker lives lost to malaria and yellow fever in the brutal tropical mud.",
+   "start": 16.220145833333333,
+   "end": 21.8986875
+  },
+  {
+   "text": "Fast forward a century, and cargo ships got so big they couldn't even fit through the old locks anymore.",
+   "start": 22.0386875,
+   "end": 27.845958333333332
+  },
+  {
+   "text": "So engineers launched a colossal project: brand new, gigantic concrete water elevators to lift floating cities.",
+   "start": 27.985958333333333,
+   "end": 35.28960416666666
+  },
+  {
+   "text": "Instead of pumps, gravity does all the work, draining lake water to float ships uphill.",
+   "start": 35.429604166666664,
+   "end": 40.18064583333334
+  },
+  {
+   "text": "The new ships are so wide they leave just a few meters on each side.",
+   "start": 40.32064583333333,
+   "end": 43.97233333333333
+  },
+  {
+   "text": "There is zero room for bad steering.",
+   "start": 44.11233333333333,
+   "end": 45.97079166666666
+  },
+  {
+   "text": "Powerful tugboats tie onto both ends to guide the giant beast through safely.",
+   "start": 46.110791666666664,
+   "end": 50.375166666666665
+  },
+  {
+   "text": "The funny part?",
+   "start": 50.515166666666666,
+   "end": 51.381791666666665
+  },
+  {
+   "text": "The canal runs on rainwater, so when a drought hits, ships pay millions just to skip the line.",
+   "start": 51.521791666666665,
+   "end": 56.717666666666666
+  },
+  {
+   "text": "Around forty percent of all US container traffic squeezes through this exact tropical bottleneck.",
+   "start": 56.85766666666667,
+   "end": 62.866104166666666
+  },
+  {
+   "text": "Instead of sailing all the way around South America, you cut about eight thousand miles off the trip in one afternoon.",
+   "start": 63.00610416666667,
+   "end": 69.63202083333333
+  },
+  {
+   "text": "Humanity literally cut a continent in half so your TV could arrive faster.",
+   "start": 69.77202083333333,
+   "end": 73.97139583333333
+  },
+  {
+   "text": "Send this to anyone who loves engineering marvels.",
+   "start": 74.11139583333333,
+   "end": 76.97872916666667
+  },
+  {
+   "text": "Hit follow for more megaproject breakdowns.",
+   "start": 77.11872916666667,
+   "end": 79.5015625
+  }
+ ]
+}
