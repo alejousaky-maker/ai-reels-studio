@@ -1,0 +1,461 @@
+{
+ "version": 1,
+ "title": "How Nobody Beat a Giant",
+ "lang": "en",
+ "style": "storybook",
+ "environment": "cave",
+ "seed": 8,
+ "graphics": "full",
+ "cast": [
+  {
+   "id": "ody",
+   "name": "Odysseus",
+   "role": "hero"
+  },
+  {
+   "id": "crew",
+   "name": "Crewman",
+   "role": "greek",
+   "palette": "#b8843a"
+  },
+  {
+   "id": "crew2",
+   "name": "Crewman",
+   "role": "greek",
+   "palette": "#a8763a"
+  },
+  {
+   "id": "cyclops",
+   "name": "Polyphemus",
+   "role": "giant"
+  },
+  {
+   "id": "nb1",
+   "name": "Cyclops neighbour",
+   "role": "giant",
+   "palette": "#5a6a7a"
+  },
+  {
+   "id": "nb2",
+   "name": "Cyclops neighbour",
+   "role": "giant",
+   "palette": "#6a4a5a"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "This guy escaped being eaten alive, with the worst dad joke in history.",
+   "environment": "cave",
+   "spot": 0,
+   "shot": "medium",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "cyclops",
+     "expr": "grin"
+    },
+    {
+     "id": "crew",
+     "expr": "shock"
+    },
+    {
+     "id": "crew2",
+     "expr": "nervous"
+    }
+   ],
+   "focus": "cyclops",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "word": "eaten",
+     "on": "crew"
+    }
+   ],
+   "visual": "A towering one-eyed giant grins down at two tiny terrified Greeks by the fire."
+  },
+  {
+   "narration": "Odysseus and his men were trapped in a cave with a giant Cyclops.",
+   "environment": "cave",
+   "spot": 0,
+   "shot": "wide",
+   "light": "golden",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "ody",
+     "expr": "nervous"
+    },
+    {
+     "id": "crew",
+     "expr": "nervous"
+    },
+    {
+     "id": "crew2",
+     "expr": "shock"
+    }
+   ],
+   "focus": "ody",
+   "pieces": [
+    {
+     "kind": "sheep",
+     "where": "left"
+    },
+    {
+     "kind": "sheep",
+     "where": "front"
+    }
+   ]
+  },
+  {
+   "narration": "He blocked the door with a boulder, and started eating them.",
+   "environment": "cave",
+   "spot": 0,
+   "shot": "close",
+   "light": "golden",
+   "mood": "tense",
+   "impactWord": "boulder",
+   "characters": [
+    {
+     "id": "cyclops",
+     "expr": "grin",
+     "react": {
+      "word": "eating",
+      "expr": "lick"
+     }
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "boulder",
+     "on": "cyclops"
+    }
+   ]
+  },
+  {
+   "narration": "Easy fix: kill him while he sleeps, right?",
+   "environment": "cave",
+   "spot": 2,
+   "shot": "two_shot",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "crew",
+     "expr": "grin"
+    },
+    {
+     "id": "ody",
+     "expr": "neutral"
+    }
+   ],
+   "focus": "crew",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "question",
+     "word": "right",
+     "on": "crew"
+    }
+   ]
+  },
+  {
+   "narration": "Wrong. Only the giant could move that boulder. Kill him, and you starve inside.",
+   "environment": "cave",
+   "spot": 2,
+   "shot": "medium",
+   "light": "golden",
+   "mood": "tense",
+   "impactWord": "Wrong",
+   "characters": [
+    {
+     "id": "ody",
+     "expr": "stern"
+    },
+    {
+     "id": "crew",
+     "expr": "grin",
+     "react": {
+      "word": "starve",
+      "expr": "shock"
+     }
+    }
+   ],
+   "focus": "ody",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "word": "Wrong",
+     "on": "ody"
+    }
+   ]
+  },
+  {
+   "narration": "So Odysseus offered him wine. Strong wine. No water.",
+   "environment": "cave",
+   "spot": 0,
+   "shot": "two_shot",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "ody",
+     "expr": "smile",
+     "holding": "wine"
+    },
+    {
+     "id": "cyclops",
+     "expr": "neutral",
+     "react": {
+      "word": "Strong",
+      "expr": "grin"
+     }
+    }
+   ],
+   "focus": "ody",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "wine",
+     "word": "wine",
+     "on": "cyclops"
+    }
+   ]
+  },
+  {
+   "narration": "The giant asked his name. My name, he said, is Nobody.",
+   "environment": "cave",
+   "spot": 2,
+   "shot": "close",
+   "light": "golden",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "ody",
+     "expr": "neutral",
+     "react": {
+      "word": "Nobody",
+      "expr": "smile"
+     }
+    }
+   ],
+   "text": "\"NOBODY\"",
+   "textStyle": "label"
+  },
+  {
+   "narration": "Then the Cyclops passed out.",
+   "environment": "cave",
+   "spot": 0,
+   "shot": "medium",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "cyclops",
+     "expr": "dazed"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "stars",
+     "word": "passed",
+     "on": "cyclops"
+    }
+   ]
+  },
+  {
+   "narration": "They heated a sharpened olive stake in the fire, and drove it into his one eye.",
+   "environment": "cave",
+   "spot": 2,
+   "shot": "medium",
+   "light": "golden",
+   "mood": "tense",
+   "impactWord": "eye",
+   "characters": [
+    {
+     "id": "ody",
+     "expr": "stern",
+     "holding": "stake"
+    },
+    {
+     "id": "crew",
+     "expr": "nervous",
+     "holding": "stake"
+    }
+   ],
+   "focus": "ody",
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "eye",
+     "on": "ody"
+    }
+   ]
+  },
+  {
+   "narration": "He screamed for his Cyclops neighbors. Who's hurting you?",
+   "environment": "cave",
+   "spot": 3,
+   "shot": "wide",
+   "light": "night",
+   "mood": "curious",
+   "transition": "xfade",
+   "characters": [
+    {
+     "id": "nb1",
+     "expr": "nervous"
+    },
+    {
+     "id": "nb2",
+     "expr": "neutral"
+    }
+   ],
+   "focus": "nb1",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "question",
+     "word": "hurting",
+     "on": "nb1"
+    }
+   ]
+  },
+  {
+   "narration": "Nobody is killing me!",
+   "environment": "cave",
+   "spot": 0,
+   "shot": "close",
+   "light": "golden",
+   "mood": "tense",
+   "impactWord": "killing",
+   "characters": [
+    {
+     "id": "cyclops",
+     "expr": "pained"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "killing",
+     "on": "cyclops"
+    }
+   ]
+  },
+  {
+   "narration": "Well, if nobody's hurting you, go back to sleep.",
+   "environment": "cave",
+   "spot": 5,
+   "shot": "two_shot",
+   "light": "night",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "nb2",
+     "expr": "neutral",
+     "react": {
+      "word": "sleep",
+      "expr": "relief"
+     }
+    },
+    {
+     "id": "nb1",
+     "expr": "relief"
+    }
+   ],
+   "focus": "nb2"
+  },
+  {
+   "narration": "At dawn, the blind giant rolled the boulder away himself, and the men slipped out under his sheep.",
+   "environment": "cave",
+   "envVariant": "open",
+   "spot": 3,
+   "shot": "wide",
+   "light": "golden",
+   "mood": "warm",
+   "transition": "xfade",
+   "characters": [
+    {
+     "id": "ody",
+     "action": "walk",
+     "expr": "relief"
+    },
+    {
+     "id": "crew",
+     "expr": "grin"
+    }
+   ],
+   "focus": "ody",
+   "pieces": [
+    {
+     "kind": "sheep",
+     "where": "left",
+     "move": "toward"
+    },
+    {
+     "kind": "sheep",
+     "where": "front"
+    }
+   ]
+  },
+  {
+   "narration": "Saved by a fake name. Nobody saw that coming.",
+   "environment": "cave",
+   "envVariant": "open",
+   "spot": 3,
+   "shot": "close",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "ody",
+     "expr": "smile",
+     "react": {
+      "word": "Nobody",
+      "expr": "grin"
+     }
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "coming",
+     "on": "ody"
+    }
+   ]
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Odysseus and his men were trapped in the cave of the Cyclops Polyphemus, sealed by a boulder only the giant could move.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Polyphemus"
+  },
+  {
+   "text": "Polyphemus ate several of the men; Odysseus gave him strong unmixed wine and said his name was 'Nobody' (Outis).",
+   "status": "verified",
+   "source": "Homer, Odyssey IX"
+  },
+  {
+   "text": "They blinded his single eye with a heated olive-wood stake; the neighbours left when he cried that 'Nobody' was hurting him.",
+   "status": "verified",
+   "source": "Homer, Odyssey IX"
+  },
+  {
+   "text": "In the morning he moved the stone to let his flock out and the men escaped clinging under the rams.",
+   "status": "verified",
+   "source": "Homer, Odyssey IX"
+  },
+  {
+   "text": "'Dad joke' is comic framing.",
+   "status": "fiction"
+  }
+ ],
+ "creativeHooks": [
+  "Escaped being eaten alive with the worst dad joke in history.",
+  "Nobody saw that coming."
+ ]
+}

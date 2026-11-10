@@ -1,0 +1,500 @@
+{
+ "version": 1,
+ "title": "The Trojan Horse Trick",
+ "lang": "en",
+ "style": "storybook",
+ "environment": "troy",
+ "seed": 6,
+ "graphics": "full",
+ "cast": [
+  {
+   "id": "ody",
+   "name": "Odysseus",
+   "role": "hero"
+  },
+  {
+   "id": "greek",
+   "name": "Greek soldier",
+   "role": "greek"
+  },
+  {
+   "id": "greek2",
+   "name": "Greek soldier",
+   "role": "greek",
+   "palette": "#b8843a"
+  },
+  {
+   "id": "sinon",
+   "name": "Sinon",
+   "role": "prisoner"
+  },
+  {
+   "id": "trojan",
+   "name": "Trojan soldier",
+   "role": "trojan"
+  },
+  {
+   "id": "trojan2",
+   "name": "Trojan soldier",
+   "role": "trojan",
+   "palette": "#a8946a"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "Ten years of war couldn't break one wall. So one guy weaponized FOMO.",
+   "environment": "troy",
+   "spot": 0,
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "impactWord": "wall",
+   "characters": [
+    {
+     "id": "greek",
+     "expr": "grin",
+     "holding": "spear",
+     "react": {
+      "word": "wall",
+      "expr": "dazed"
+     }
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "wall",
+     "on": "greek"
+    },
+    {
+     "kind": "stars",
+     "word": "So",
+     "on": "greek"
+    }
+   ],
+   "visual": "A Greek soldier's spear bounces off Troy's colossal wall; dizzy stars."
+  },
+  {
+   "narration": "Troy's walls were so strong, Greek spears bounced right off.",
+   "environment": "troy",
+   "spot": 2,
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "greek2",
+     "expr": "nervous"
+    },
+    {
+     "id": "greek",
+     "expr": "dazed"
+    }
+   ],
+   "focus": "greek2",
+   "fx": [
+    {
+     "kind": "puff",
+     "word": "bounced",
+     "on": "greek"
+    }
+   ]
+  },
+  {
+   "narration": "So Odysseus drew a plan. A giant wooden horse. Hollow.",
+   "environment": "beach",
+   "spot": 1,
+   "shot": "medium",
+   "light": "day",
+   "mood": "curious",
+   "transition": "xfade",
+   "characters": [
+    {
+     "id": "ody",
+     "expr": "grin"
+    }
+   ],
+   "pieces": [
+    {
+     "kind": "chalkboard",
+     "where": "right"
+    },
+    {
+     "kind": "tent",
+     "where": "far",
+     "dx": -5
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "lightbulb",
+     "word": "plan",
+     "on": "ody"
+    }
+   ]
+  },
+  {
+   "narration": "His best soldiers hid inside, and the whole army sailed away.",
+   "environment": "beach",
+   "spot": 0,
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "greek",
+     "action": "walk",
+     "expr": "smile"
+    },
+    {
+     "id": "greek2",
+     "action": "walk",
+     "expr": "smile"
+    }
+   ],
+   "pieces": [
+    {
+     "kind": "horse",
+     "where": "left",
+     "dz": 2
+    },
+    {
+     "kind": "galley",
+     "where": "far",
+     "dx": 6,
+     "move": "right"
+    }
+   ]
+  },
+  {
+   "narration": "Well, they pretended to. They hid behind an island.",
+   "environment": "beach",
+   "spot": 0,
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "ody",
+     "expr": "smile",
+     "react": {
+      "word": "pretended",
+      "expr": "smile_closed"
+     }
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "pretended",
+     "on": "ody"
+    }
+   ]
+  },
+  {
+   "narration": "They left one guy behind on the beach. Sinon. Tied up. On purpose.",
+   "environment": "beach",
+   "spot": 1,
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "sinon",
+     "expr": "nervous"
+    }
+   ],
+   "pieces": [
+    {
+     "kind": "horse",
+     "where": "behind",
+     "dx": 2
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "word": "purpose",
+     "on": "sinon"
+    }
+   ],
+   "text": "SINON",
+   "textStyle": "label"
+  },
+  {
+   "narration": "The Trojans found him, and he started crying.",
+   "environment": "beach",
+   "spot": 1,
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "trojan",
+     "expr": "stern"
+    },
+    {
+     "id": "sinon",
+     "expr": "nervous",
+     "react": {
+      "word": "crying",
+      "expr": "pained"
+     }
+    }
+   ],
+   "focus": "sinon"
+  },
+  {
+   "narration": "That horse is a gift for the goddess Athena, he sobbed.",
+   "environment": "beach",
+   "spot": 1,
+   "shot": "close",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "sinon",
+     "expr": "pained"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "scroll",
+     "word": "gift",
+     "on": "sinon"
+    }
+   ]
+  },
+  {
+   "narration": "They built it huge, so you could never get it into your city.",
+   "environment": "beach",
+   "spot": 1,
+   "shot": "medium",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "sinon",
+     "expr": "nervous"
+    },
+    {
+     "id": "trojan",
+     "expr": "neutral"
+    }
+   ],
+   "focus": "sinon",
+   "pieces": [
+    {
+     "kind": "horse",
+     "where": "behind",
+     "dx": -2
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "word": "never",
+     "on": "sinon"
+    }
+   ]
+  },
+  {
+   "narration": "Because if it gets inside, Troy can never fall.",
+   "environment": "beach",
+   "spot": 3,
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "trojan",
+     "expr": "neutral",
+     "react": {
+      "word": "inside",
+      "expr": "grin"
+     }
+    },
+    {
+     "id": "trojan2",
+     "expr": "shock",
+     "react": {
+      "word": "fall",
+      "expr": "grin"
+     }
+    }
+   ],
+   "focus": "trojan",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "lightbulb",
+     "word": "inside",
+     "on": "trojan"
+    }
+   ]
+  },
+  {
+   "narration": "The Trojans could not resist stealing the Greeks' luck.",
+   "environment": "troy",
+   "spot": 0,
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "transition": "xfade",
+   "characters": [
+    {
+     "id": "trojan",
+     "action": "walk",
+     "expr": "grin"
+    },
+    {
+     "id": "trojan2",
+     "action": "walk",
+     "expr": "laugh"
+    }
+   ],
+   "pieces": [
+    {
+     "kind": "horse",
+     "where": "behind",
+     "dz": -2,
+     "move": "away"
+    }
+   ]
+  },
+  {
+   "narration": "So they tore open their own unbreakable wall, to squeeze it in.",
+   "environment": "troy",
+   "envVariant": "breach",
+   "spot": 1,
+   "shot": "wide",
+   "light": "day",
+   "mood": "tense",
+   "impactWord": "tore",
+   "characters": [
+    {
+     "id": "trojan",
+     "expr": "grin"
+    },
+    {
+     "id": "trojan2",
+     "expr": "grin"
+    }
+   ],
+   "pieces": [
+    {
+     "kind": "horse",
+     "where": "behind",
+     "dz": 2
+    }
+   ],
+   "fx": [
+    {
+     "kind": "puff",
+     "word": "tore",
+     "on": "trojan"
+    },
+    {
+     "kind": "burst",
+     "word": "unbreakable",
+     "on": "trojan2"
+    }
+   ]
+  },
+  {
+   "narration": "That night, the Greeks climbed out, and opened the gates.",
+   "environment": "troy",
+   "envVariant": "breach",
+   "spot": 4,
+   "shot": "medium",
+   "light": "night",
+   "mood": "tense",
+   "transition": "xfade",
+   "impactWord": "gates",
+   "characters": [
+    {
+     "id": "greek",
+     "expr": "stern"
+    },
+    {
+     "id": "ody",
+     "expr": "grin"
+    }
+   ],
+   "focus": "ody",
+   "pieces": [
+    {
+     "kind": "horse",
+     "where": "left"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "gates",
+     "on": "greek"
+    }
+   ]
+  },
+  {
+   "narration": "Ten years of attacks failed. Reverse psychology and a wooden toy didn't.",
+   "environment": "troy",
+   "envVariant": "breach",
+   "spot": 4,
+   "shot": "close",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "ody",
+     "expr": "smile",
+     "react": {
+      "word": "toy",
+      "expr": "grin"
+     }
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "toy",
+     "on": "ody"
+    }
+   ]
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "The Greeks besieged Troy for ten years.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Trojan_Horse"
+  },
+  {
+   "text": "Odysseus devised the hollow wooden horse; soldiers hid inside; the fleet sailed to hide behind the island of Tenedos.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Trojan_Horse"
+  },
+  {
+   "text": "Sinon was left behind and claimed the horse was an offering to Athena, built huge so Troy could not take it in, since inside it would protect the city.",
+   "status": "verified",
+   "source": "Virgil, Aeneid II"
+  },
+  {
+   "text": "The Trojans breached their own walls to bring the horse in; at night the Greeks came out and opened the gates.",
+   "status": "verified",
+   "source": "Virgil, Aeneid II"
+  },
+  {
+   "text": "'FOMO' and 'wooden toy' are comic framing.",
+   "status": "fiction"
+  }
+ ],
+ "creativeHooks": [
+  "Ten years of war couldn't break one wall.",
+  "Reverse psychology and a wooden toy didn't."
+ ]
+}

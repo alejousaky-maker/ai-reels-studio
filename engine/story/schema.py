@@ -7,12 +7,29 @@ from typing import Literal, Optional
 from pydantic import BaseModel, Field, field_validator
 
 Expr = Literal["neutral", "stern", "grin", "laugh", "whistle", "nervous", "shock", "relief", "relief_open", "dazed", "pained", "smile", "smile_closed", "lick"]
-Action = Literal["stand", "walk", "dance", "sit", "wave", "march", "stroll"]
+Action = Literal["stand", "walk", "dance", "sit", "wave", "march", "stroll", "fall"]
 Shot = Literal["wide", "medium", "close", "low", "high", "two_shot", "insert"]
 Light = Literal["day", "golden", "night"]
 Mood = Literal["whimsical", "curious", "tense", "warm", "upbeat"]
-Product = Literal["coffee", "croissant", "bread", "cake", "lightbulb", "question", "exclaim", "heart", "clock", "book", "note", "scroll"]
-Role = Literal["villager_woman", "villager_man", "kid", "official", "musician", "baker", "barista", "scholar", "customer", "elder", "worker"]
+Product = Literal["coffee", "croissant", "bread", "cake", "lightbulb", "question", "exclaim", "heart", "clock", "book", "note", "scroll", "map", "globe", "wine", "spear", "stake", "phone", "tablet", "wifi", "key", "camera", "card", "fish", "receipt", "box"]
+Role = Literal["villager_woman", "villager_man", "kid", "official", "musician", "baker", "barista", "scholar", "customer", "elder", "worker",
+              "explorer", "king", "queen", "sailor", "islander", "greek", "hero", "trojan", "prisoner", "giant",
+              "businessman", "boss", "woman", "towelguy", "lawyer", "fisher", "tourist"]
+Env = Literal["village_square", "park", "street", "market", "interior", "harbour", "beach", "ocean", "troy", "cave", "throne",
+              "apartment", "bathroom", "office", "hotel", "airport", "suburb", "lake", "resort"]
+PieceKind = Literal["horse", "ship", "galley", "chalkboard", "sheep", "tent", "scale", "boxes", "car", "van", "poster"]
+
+
+class Piece(BaseModel):
+    """a big painted set piece in the shot, placed relative to the stage: behind / left / right / far / front"""
+    kind: PieceKind
+    where: Literal["behind", "left", "right", "far", "front"] = "behind"
+    dx: float = 0.0   # extra lateral offset (m, + = screen right)
+    dz: float = 0.0   # extra depth offset (m, + = away from the camera)
+    scale: Optional[float] = Field(None, ge=0.3, le=3.0)
+    y: Optional[float] = None
+    mirror: bool = False
+    move: Optional[Literal["left", "right", "toward", "away"]] = None
 
 
 class Reaction(BaseModel):
@@ -51,7 +68,11 @@ class Beat(BaseModel):
     text: Optional[str] = None
     textStyle: Literal["title", "cta", "label"] = "label"
     atShop: bool = False
-    environment: Optional[Literal["village_square", "park", "street", "market", "interior", "harbour"]] = None  # per-beat location
+    environment: Optional[Env] = None  # per-beat location
+    envVariant: Optional[Literal["breach", "open"]] = None   # troy: torn wall; cave: boulder rolled aside
+    pieces: list[Piece] = Field(default_factory=list)
+    extrasRole: Optional[Role] = None
+    spot: Optional[int] = Field(None, ge=0, le=9)   # which staging spot of the location (camera side / view direction)
     visual: Optional[str] = None  # free description for humans / QA (what we should SEE)
 
     @field_validator("narration")
@@ -65,6 +86,10 @@ class CastSpec(BaseModel):
     name: str = ""
     role: Role = "villager_man"
     palette: Optional[str] = None  # main colour override (#rrggbb)
+    # keep one person recognisable across outfits (e.g. the wife later in a fishing vest)
+    skin: Optional[str] = Field(None, pattern=r"^#[0-9a-fA-F]{6}$")
+    hair: Optional[str] = Field(None, pattern=r"^#[0-9a-fA-F]{6}$")
+    shades: Optional[bool] = None
 
 
 class Claim(BaseModel):
@@ -86,7 +111,7 @@ class Plan(BaseModel):
     title: str
     lang: Literal["en", "es"] = "en"
     style: Literal["storybook", "cinematic_explainer", "minimal_stickman", "product_ad", "custom_brand"] = "storybook"
-    environment: Literal["village_square", "park", "street", "market", "interior", "harbour"] = "village_square"
+    environment: Env = "village_square"
     seed: int = 7
     cast: list[CastSpec]
     beats: list[Beat] = Field(min_length=1, max_length=40)

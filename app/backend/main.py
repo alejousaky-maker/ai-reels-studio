@@ -118,7 +118,7 @@ class ProjectIn(BaseModel):
     seconds: int = Field(60, ge=10, le=120)
     quality: str = Field("master", pattern="^(draft|standard|master)$")
     style: str = "storybook"
-    environment: str = Field("village_square", pattern="^(village_square|market|street|park|interior|harbour)$")
+    environment: str = Field("village_square", pattern="^(village_square|market|street|park|interior|harbour|beach|ocean|troy|cave|throne|apartment|bathroom|office|hotel|airport|suburb|lake|resort)$")
     voice: str | None = None
     speed: float = Field(1.0, ge=0.7, le=1.4)
     clientId: str | None = None

@@ -11,7 +11,7 @@ from __future__ import annotations
 import math
 import re
 
-from .presets import SHOTS, TIGHTER, anchors, outfit
+from .presets import SHOTS, TIGHTER, anchors, outfit, ROLE_SCALE, PIECE_SIZE, INDOOR_D, ROOMS
 from .schema import Plan
 
 LEAD = 2
@@ -108,7 +108,18 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
             ancs = anchors(env_name, shp)
             env_cache[env_name] = (shp, ancs[0] if shp else None, [x for x in ancs if not x.get("shop")])
         return env_cache[env_name]
-    cast = [{"id": c.id, "name": c.name, "outfit": outfit(c.role, i, c.palette)} for i, c in enumerate(plan.cast)]
+    def look(c, i):
+        o = outfit(c.role, i, c.palette)
+        if c.skin:
+            o["skin"] = c.skin
+        if c.hair:
+            o["hair"] = c.hair
+        if c.shades is not None:
+            o["shades"] = c.shades
+        return o
+    cast = [{"id": c.id, "name": c.name, "outfit": look(c, i), **({"scale": ROLE_SCALE[c.role]} if c.role in ROLE_SCALE else {})}
+            for i, c in enumerate(plan.cast)]
+    scale_of = {c["id"]: c.get("scale", 0.72 if c["outfit"].get("build") == "kid" else 1.0) for c in cast}
     known = {c.id for c in plan.cast}
     scenes = []
     spans = beat_spans(plan, words, fps)
@@ -120,7 +131,7 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
     for bi, (beat, (a, b, ws)) in enumerate(zip(plan.beats, spans)):
         env_b = beat.environment or plan.environment
         shop_b, shop_anchor, free = env_setup(env_b)
-        anc = shop_anchor if (beat.atShop and shop_anchor) else free[(bi * 2 + plan.seed) % len(free)]
+        anc = shop_anchor if (beat.atShop and shop_anchor) else free[(beat.spot if beat.spot is not None else bi * 2 + plan.seed) % len(free)]
         Cx, Cz = anc["C"]
         ux, uz = anc["u"]
         rx, rz = -uz, ux                      # screen right
@@ -136,13 +147,19 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
         dep = [0.0, 0.9, 1.4, 2.6, 2.9, 3.8, 4.1]
         actors = []
         pos = {}
+        side_pc = next((pc for pc in beat.pieces if pc.where in ("left", "right")), None)
+        cast_shift = (0.32 * half) * (1 if side_pc.where == "left" else -1) if side_pc else 0.0
+        Cx0, Cz0 = Cx, Cz                     # the camera keeps looking at the stage centre
+        Cx, Cz = Cx + rx * cast_shift, Cz + rz * cast_shift
         for k, c in enumerate(order[:7]):
             L, Dp = lat[k] * spread * (1 + 0.12 * dep[k]), dep[k] * (0.6 if beat.shot in ("wide", "high") else 1.0)
+            if scale_of.get(c.id, 1.0) > 1.5 and k > 0:   # a giant stands further back so the people in front stay readable
+                Dp += 2.2
             if beat.shot in ("close", "insert") and k > 0:
                 L *= 1.3; Dp += 1.6
             x, z = Cx + rx * L + ux * Dp, Cz + rz * L + uz * Dp
             act = {"castId": c.id, "x": round(x, 3), "z": round(z, 3), "expr": c.expr,
-                   "mode": {"walk": "stroll", "wave": "stand", "dance": "dance", "sit": "sit", "march": "march", "stroll": "stroll"}.get(c.action, "stand")}
+                   "mode": {"walk": "stroll", "wave": "stand", "dance": "dance", "sit": "sit", "march": "march", "stroll": "stroll", "fall": "fall"}.get(c.action, "stand")}
             if c.action == "wave":
                 act["wave"] = True
             if c.action == "walk":
@@ -161,7 +178,10 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
             eid = f"extra{extras_made % 8}"
             extras_made += 1
             if eid not in {c["id"] for c in cast}:
-                cast.append({"id": eid, "name": "", "outfit": outfit(["villager_woman", "villager_man", "kid"][e % 3], 11 + e)})
+                roles = [beat.extrasRole] if beat.extrasRole else (["kid"] if sum(1 for c in chars if scale_of.get(c.id) == 0.72) * 2 > len(chars) > 0
+                                                                     else ["villager_woman", "villager_man", "kid"])
+                cast.append({"id": eid, "name": "", "outfit": outfit(roles[e % len(roles)], 11 + e)})
+                scale_of[eid] = 0.72 if roles[e % len(roles)] == "kid" else 1.0
             L = (-1) ** e * (1.2 + 1.3 * (e // 2)) + 0.4
             Dp = 3.0 + 1.1 * (e % 3)
             actors.append({"castId": eid, "x": round(Cx + rx * L + ux * Dp, 3), "z": round(Cz + rz * L + uz * Dp, 3),
@@ -169,23 +189,27 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                            "expr": ["smile", "grin", "nervous", "neutral", "laugh"][e % 5]})
         # ---- camera ----
         sp = SHOTS[beat.shot]
-        tx, tz = pos.get(focus_id, (Cx, Cz)) if beat.shot in ("close", "insert", "two_shot") else (Cx, Cz)
+        tx, tz = pos.get(focus_id, (Cx0, Cz0)) if beat.shot in ("close", "insert", "two_shot") else (Cx0, Cz0)
         if beat.shot == "insert":   # product insert: the object sits 1.1 m in front of the subject, the subject stays soft behind it
             tx, tz = tx - ux * 1.1, tz - uz * 1.1
         side_sign = 1 if bi % 2 == 0 else -1
-        fscale = 0.72 if next((c for c in cast if c["id"] == focus_id), {}).get("outfit", {}).get("build") == "kid" else 1.0
+        fscale = scale_of.get(focus_id, 1.0)
         if anc.get("shop") and beat.shot in ("wide", "medium", "high"):
             side_sign = 0           # the shop sign is the subject: frame it centred, never cropped
 
         def frame_at(shot: str, s_sign: int, roll: float = 0.0) -> dict:
             p = SHOTS[shot]
-            dd = min(p["d"], 7.0) if env_b == "interior" else p["d"]   # stay in or just outside the room
+            dd = p["d"]
+            if fscale > 1.2 and shot in ("close", "medium", "two_shot", "insert"):
+                dd *= min(fscale, 2.2)                              # a giant: step back so the same framing fits
+            if env_b in INDOOR_D:
+                dd = min(dd, INDOOR_D[env_b])                       # stay in or just outside the room / on the deck
             cx = tx - ux * dd + rx * p["side"] * s_sign
             cz = tz - uz * dd + rz * p["side"] * s_sign
             if env_b in ("village_square", "market") and math.hypot(cx, cz) < 3.8:  # never inside the fountain
                 k = 3.8 / max(0.01, math.hypot(cx, cz)); cx, cz = cx * k, cz * k
             # aim at the subject's own eye line (kids are 0.72 x an adult); the lens height follows for eye-level shots
-            k_h = fscale if shot in ("close", "insert", "two_shot", "medium") else 1.0
+            k_h = fscale if shot in ("close", "insert", "two_shot", "medium") else (0.6 * fscale if fscale > 1.2 else 1.0)
             lens_h = p["h"] if shot in ("high", "low", "wide") else p["h"] * k_h + (1 - k_h) * 0.35
             return {"position": [round(cx, 3), round(lens_h, 3), round(cz, 3)], "lookAt": [round(tx, 3), round(p["lh"] * k_h, 3), round(tz, 3)], "fov": p["fov"], "roll": roll}
 
@@ -218,7 +242,7 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
         if dur_s > 2.6:
             k1 = impact if impact and impact > a + 20 else a + int(0.55 * (b - a))
             k1 = min(k1, b - 18)
-            nxt = TIGHTER[beat.shot]
+            nxt = beat.shot if side_pc else TIGHTER[beat.shot]   # a side piece shares the frame: keep the framing, just re-angle
             if dur_s > 4.8 or nxt == beat.shot:
                 keys.append({"frame": k1, "cut": True, **frame_at(nxt, -side_sign or 1, 0.04 * (side_sign or 1))})
             else:
@@ -230,10 +254,50 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
         scene = {"sceneId": f"b{bi + 1:02d}", "startFrame": a, "endFrame": b, "narration": beat.narration, "light": beat.light, "mood": beat.mood,
                  "actors": actors, "cameraKeys": keys, "push": sp["push"], "dof": dof, "transitionIn": "cut" if bi == 0 else beat.transition,
                  "seed": plan.seed * 100 + bi, "qualityNotes": beat.visual or ""}
-        if env_b == "interior":   # open-topped room: a high sun pours in over the walls (a low sun would leave it all in shade)
-            scene["sunEl"], scene["sunAz"] = 68, 35
-        if env_b != plan.environment:
-            scene["env"] = {"preset": env_b, "seed": plan.seed, "shop": shop_b}
+        if beat.light == "golden" and env_b in ("beach", "troy", "ocean", "suburb", "lake", "resort"):
+            scene["sunEl"], scene["sunAz"] = 18, 150
+        if env_b in ROOMS or env_b == "cave":   # open-topped rooms: a high sun pours in over the walls
+            scene["sunEl"], scene["sunAz"] = (42, 165) if env_b == "cave" else (68, 35)   # cave: light from behind the lens onto the far wall
+        if env_b != plan.environment or beat.envVariant:
+            scene["env"] = {"preset": env_b, "seed": plan.seed, "shop": shop_b, **({"variant": beat.envVariant} if beat.envVariant else {})}
+        pcs = []
+        for pc in beat.pieces:
+            pw, ph = PIECE_SIZE[pc.kind]
+            k = pc.scale or 1.0
+            if pc.where == "behind":
+                off_l, off_d = 0.0, 3.5 + 0.55 * ph * k
+            elif pc.where == "far":
+                off_l, off_d = 0.0, 12.0 + ph * k
+            elif pc.where in ("left", "right"):
+                # centre the piece at ~55 % of the visible half-width at its depth (the cast moved the other way)
+                off_d = 1.0 + 0.1 * pw * k
+                half_at = (SHOTS[beat.shot]["d"] + off_d) * math.tan(math.radians(SHOTS[beat.shot]["fov"] / 2)) * aspect
+                off_l = (-1 if pc.where == "left" else 1) * max(0.55 * half_at, 0.35 * pw * k + 0.5) - cast_shift
+            else:   # "front": low pieces (sheep) a bit in front of the subject, to one side, inside the frame
+                off_d = -1.2
+                half_at = (SHOTS[beat.shot]["d"] + off_d) * math.tan(math.radians(SHOTS[beat.shot]["fov"] / 2)) * aspect
+                off_l = 0.5 * half_at * (1 if bi % 2 else -1)
+            off_l += pc.dx
+            off_d += pc.dz
+            px, pz = Cx + rx * off_l + ux * off_d, Cz + rz * off_l + uz * off_d
+            spec = {"kind": pc.kind, "x": round(px, 3), "z": round(pz, 3)}
+            if pc.scale:
+                spec["scale"] = pc.scale
+            y = pc.y if pc.y is not None else (-2.6 * k if pc.kind in ("ship", "galley") and env_b in ("beach", "troy", "harbour") else 0.0)
+            if y:
+                spec["y"] = y
+            if pc.mirror:
+                spec["mirror"] = True
+            if pc.kind in ("ship", "galley") and env_b in ("beach", "troy", "harbour", "ocean"):
+                spec["rock"] = 1.0
+            if pc.move:
+                dist = 7.0 if pc.kind in ("horse", "ship", "galley") else 3.0
+                mvx, mvz = {"left": (-rx, -rz), "right": (rx, rz), "toward": (-ux, -uz), "away": (ux, uz)}[pc.move]
+                spec["moveTo"] = [round(px + mvx * dist, 3), round(pz + mvz * dist, 3)]
+                spec["moveFrames"] = [a + int(0.1 * (b - a)), a + int(0.9 * (b - a))]
+            pcs.append(spec)
+        if pcs:
+            scene["pieces"] = pcs
         if impact:
             scene["kicks"] = [{"frame": impact + LEAD, "amp": 0.8}]
         fxs = []
@@ -252,6 +316,9 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                 y = min(2.28, sp["lh"] + 0.62 * vhalf)
                 side = min(0.42, 0.55 * vhalf * aspect)
                 size = min(0.42, 0.32 * vhalf) if f.kind == "product" else min(0.8, 0.5 * vhalf)
+                ks = scale_of.get(f.on or focus_id or "", 1.0)
+                if ks > 1.2:
+                    y, side = y * ks * 0.92, side * ks
                 at = [round(who[0] + rx * side, 3), round(y, 3), round(who[1] + rz * side, 3)]
             elif f.kind == "splash":   # a liquid wave rolling in behind/beside the subject, base on the ground
                 at = [round(who[0] + rx * 1.4 + ux * 2.5, 3), 1.6, round(who[1] + rz * 1.4 + uz * 2.5, 3)]; size = 4.2

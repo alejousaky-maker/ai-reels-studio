@@ -3,7 +3,7 @@ import { api, fileUrl, fmtTime, STEPS } from "../api";
 import { useData } from "../hooks";
 import { JobRow, StatusPill } from "./common";
 
-const ENV_LABEL: Record<string, string> = { village_square: "Plaza del pueblo", market: "Mercado", street: "Calle", park: "Parque", interior: "Interior (habitación / local)", harbour: "Puerto con faro" };
+const ENV_LABEL: Record<string, string> = { village_square: "Plaza del pueblo", market: "Mercado", street: "Calle", park: "Parque", interior: "Interior (habitación / local)", harbour: "Puerto con faro", beach: "Playa tropical", ocean: "Barco en alta mar", troy: "Murallas de Troya", cave: "Cueva", throne: "Salón del trono" };
 type Tab = "prod" | "story" | "script" | "video" | "audio" | "qa" | "versions";
 
 export const Editor: React.FC<{ pid: string }> = ({ pid }) => {

@@ -99,6 +99,111 @@ export const drawProduct = (p: Pen, kind: ProductKind, col = "#c8553d") => {
       for (let k = 0; k < 5; k++) p.stroke([[125, 150 + k * 32], [275 - (k % 2) * 30, 150 + k * 32]], 7, "#8a7a5a");
       break;
     }
+    case "map": {   // parchment map: coast blobs, dotted route, red X
+      const sheet: P2[] = [[60, 110], [200, 90], [340, 110], [330, 320], [200, 300], [70, 320]];
+      p.gradFill(sheet, "#f3e3bd", "#d8c08e", LIGHT); p.poly(sheet, null, 10);
+      p.stroke([[200, 92], [200, 300]], 5, "#c9b07c");
+      p.poly(ellP(130, 190, 45, 55, 0, 360, 18).map(([x, y], i) => [x + (i % 3) * 4, y] as P2), "#8cc06a", 6);
+      p.poly(ellP(275, 230, 40, 35, 0, 360, 18).map(([x, y], i) => [x, y + (i % 4) * 3] as P2), "#8cc06a", 6);
+      for (let i = 0; i < 7; i++) p.dot(160 + i * 15, 210 + 12 * Math.sin(i * 0.9), 5, "#8a3a2a");
+      p.stroke([[262, 215], [288, 241]], 10, "#d23b3b"); p.stroke([[288, 215], [262, 241]], 10, "#d23b3b");
+      break;
+    }
+    case "globe": {   // a small globe on a wooden stand
+      p.poly([[150, 350], [250, 350], [230, 320], [170, 320]], "#8a5a3c", 9);
+      p.stroke([[200, 320], [200, 290]], 14, "#8a5a3c");
+      const g = ellP(200, 175, 120, 120);
+      p.shadedFill(g, "#5fb2e0", "#2f7fb4", LIGHT, 120); p.poly(g, null, 10);
+      p.poly(ellP(165, 140, 45, 38, 0, 360, 16), "#8cc06a", 6);
+      p.poly(ellP(240, 205, 38, 48, 0, 360, 16), "#8cc06a", 6);
+      p.arc(200, 175, 140, 140, 120, 300, 9, "#c9a227");
+      break;
+    }
+    case "wine": {   // clay amphora / wine jug with a red splash at the lip
+      const body: P2[] = [];
+      for (let i = 0; i <= 30; i++) { const t = i / 30, y = 120 + 230 * t, w = 30 + 95 * Math.sin(Math.PI * Math.min(1, t * 1.05)) * (t < 0.15 ? t / 0.15 : 1); body.push([200 + w, y]); }
+      for (let i = 30; i >= 0; i--) { const t = i / 30, y = 120 + 230 * t, w = 30 + 95 * Math.sin(Math.PI * Math.min(1, t * 1.05)) * (t < 0.15 ? t / 0.15 : 1); body.push([200 - w, y]); }
+      p.gradFill(body, "#c8703e", "#8a4422", LIGHT); p.poly(body, null, 10);
+      p.poly(rr(160, 80, 240, 125, 8), "#b8622f", 9);
+      for (const s of [-1, 1]) p.arc(200 + s * 72, 150, 32, 40, s < 0 ? 100 : -100, s < 0 ? 260 : 80, 12);
+      p.stroke([[110, 250], [290, 250]], 8, "#2b2b38");
+      p.ell(200, 80, 34, 10, "#7a1f3a", 6);
+      break;
+    }
+    case "spear": {   // bronze-tipped spear, diagonal
+      p.stroke([[80, 340], [300, 90]], 16, "#8a5a34");
+      p.stroke([[80, 340], [300, 90]], 6, "#a8784a");
+      p.poly([[300, 90], [345, 40], [330, 110], [285, 120]].map(([x, y]) => [x, y] as P2), "#d9a441", 8);
+      break;
+    }
+    case "phone": case "tablet": {   // glowing smartphone / tablet with a notification bubble
+      const tab = kind === "tablet", w = tab ? 130 : 80, h = tab ? 160 : 150;
+      p.poly(rr(200 - w, 200 - h, 200 + w, 200 + h, 26), "#1d1b22", 10);
+      const scr = rr(200 - w + 14, 200 - h + 22, 200 + w - 14, 200 + h - 22, 10);
+      p.gradFill(scr, "#8fd0ff", "#4f8fd1", LIGHT); p.poly(scr, null, 0);
+      p.poly(rr(200 - w + 26, 200 - h + 50, 200 + w - 26, 200 - h + 120, 14), "#ffffff", 5);
+      p.stroke([[200 - w + 44, 200 - h + 76], [200 + w - 60, 200 - h + 76]], 8, "#3f6fb5");
+      p.stroke([[200 - w + 44, 200 - h + 98], [200 + w - 90, 200 - h + 98]], 8, "#9aa0a8");
+      p.ell(200 + w - 8, 200 - h + 8, 30, 30, "#e2453c", 7);
+      break;
+    }
+    case "wifi": {
+      for (const [r2, k] of [[150, 0], [105, 1], [60, 2]] as const) p.arc(200, 300, r2, r2, 225, 315, 26, k === 0 ? "#3f6fb5" : k === 1 ? "#4f8fd1" : "#6fb0ea");
+      p.ell(200, 300, 24, 24, "#3f6fb5", 8);
+      break;
+    }
+    case "key": {   // big golden key
+      p.ell(120, 200, 80, 80, "#e8b83a", 10); p.ell(120, 200, 34, 34, "#fff6dc", 8);
+      p.poly([[190, 182], [360, 182], [360, 218], [190, 218]], "#e8b83a", 9);
+      for (const x of [300, 340]) p.poly([[x - 14, 218], [x + 6, 218], [x + 6, 262], [x - 14, 262]], "#e8b83a", 8);
+      break;
+    }
+    case "camera": {
+      p.poly(rr(70, 130, 330, 310, 26), "#2b2b38", 10);
+      p.poly(rr(120, 100, 200, 140, 8), "#2b2b38", 8);
+      p.ell(200, 220, 70, 70, "#9aa0a8", 10); p.ell(200, 220, 42, 42, "#1d1b22", 8); p.ell(186, 206, 12, 12, "#ffffff", 0);
+      p.ell(290, 160, 14, 14, "#e2453c", 5);
+      break;
+    }
+    case "card": {   // credit card
+      p.poly(rr(60, 110, 340, 290, 24), "#3f6fb5", 10);
+      p.poly(rr(90, 160, 150, 205, 8), "#e8b83a", 6);
+      p.stroke([[90, 245], [300, 245]], 12, "#cfe0ff");
+      p.ell(280, 175, 26, 26, "#e2453c", 0); p.ell(305, 175, 26, 26, "rgba(242,201,76,0.9)", 0);
+      break;
+    }
+    case "fish": {   // cardboard cut-out fish on a stick (a bit crude on purpose)
+      p.stroke([[200, 390], [200, 250]], 12, "#8a5a34");
+      const body: P2[] = [[60, 200], [140, 130], [260, 140], [320, 200], [260, 260], [140, 270]];
+      p.poly(body, "#c9a66b", 10);
+      p.poly([[60, 200], [10, 150], [10, 250]], "#c9a66b", 10);
+      p.ell(280, 190, 14, 14, "#ffffff", 5); p.dot(283, 190, 6);
+      for (const x of [150, 190, 230]) p.arc(x, 200, 22, 34, -60, 60, 5, "#8a6a42");
+      break;
+    }
+    case "receipt": {   // long printed "BUSTED" receipt
+      const pts: P2[] = [[110, 30], [290, 30], [290, 370]];
+      for (let i = 0; i <= 8; i++) pts.push([290 - i * 22.5, 370 + (i % 2 ? -14 : 0)]);
+      pts.push([110, 30]);
+      p.poly(pts, "#fbf9f2", 9);
+      for (let k = 0; k < 4; k++) p.stroke([[135, 70 + k * 26], [265 - (k % 2) * 40, 70 + k * 26]], 6, "#9aa0a8");
+      const g = p.g; g.save(); g.translate(200, 250); g.rotate(-0.25); g.fillStyle = "#e2453c"; g.font = "bold 64px Arial Black, Arial"; g.textAlign = "center"; g.fillText("BUSTED", 0, 20); g.restore();
+      break;
+    }
+    case "box": {   // cardboard moving box
+      p.poly([[70, 160], [330, 160], [330, 350], [70, 350]], "#c9935a", 10);
+      p.poly([[70, 160], [200, 110], [330, 160]], "#d9a86a", 9);
+      p.poly([[180, 160], [220, 160], [220, 350], [180, 350]], "#e8c88a", 0);
+      p.stroke([[100, 300], [160, 300]], 8, "#5a3b2a");
+      break;
+    }
+    case "stake": {   // sharpened olive-wood stake, tip glowing
+      p.stroke([[60, 330], [320, 110]], 30, "#7a5a34");
+      p.poly([[320, 110], [372, 66], [340, 132]], "#a8784a", 8);
+      p.ell(352, 90, 34, 30, "rgba(255,150,40,0.85)", 0);
+      p.ell(352, 90, 16, 14, "#fff1a0", 0);
+      break;
+    }
     default: break;
   }
 };

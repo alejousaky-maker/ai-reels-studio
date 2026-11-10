@@ -12,6 +12,7 @@ import { LIGHTS3, LOOK3 } from "./looks";
 import { camAt } from "./camera";
 import { buildEnv, EnvInfo } from "./env";
 import { drawProduct, drawSplash } from "./products";
+import { PIECES } from "./pieces";
 import type { Storyboard, SceneSpec, ActorSpec, Expr, LightName, V3 } from "./types";
 
 const hh = (i: number, s = 0) => { const v = Math.sin(i * 127.1 + s * 311.7) * 43758.5453; return v - Math.floor(v); };
@@ -91,6 +92,7 @@ export class StoryWorld {
   private cloudMaps: Record<LightName, THREE.Texture[]>;
   private glows: THREE.Sprite[] = [];
   private props: { o: THREE.Object3D; scene: number }[] = [];
+  private pieceActors: Actor[] = [];
   private info: EnvInfo;
   private outfits = new Map<string, { o: Outfit; scale: number; i: number }>();
   private frustum = new THREE.Frustum();
@@ -153,6 +155,13 @@ export class StoryWorld {
       o.position.set(pp.x, 0, pp.z); o.rotation.y = pp.yaw ?? 0; o.visible = false;
       this.props.push({ o, scene: i }); R.add(o);
     }));
+    // big painted set pieces of THIS scene (horse, ships, chalkboard, sheep, tents): lit cards sized per piece
+    for (const pc of sb.scenes[sceneIdx]?.pieces ?? []) {
+      const P = PIECES[pc.kind];
+      if (!P) continue;
+      const k = pc.scale ?? 1, geo = new THREE.PlaneGeometry(P.w * k, P.h * k).translate(0, (P.h * k) / 2, 0);
+      this.pieceActors.push(new Actor(R, geo));
+    }
     sb.cast.forEach((c, i) => this.outfits.set(c.id, { o: { ...c.outfit } as Outfit, scale: c.scale ?? (c.outfit.build === "kid" ? 0.72 : 1), i }));
   }
 
@@ -260,7 +269,7 @@ export class StoryWorld {
       const phase = moving ? q(((t * cadence + hh(who.i, 5)) % 1), 60) : 0;
       const dance = mode0 === "dance";
       const hop = dance ? Math.max(0, Math.sin(2 * Math.PI * (t * 2.2 + hh(who.i, 3)))) * 0.16 * scl : 0;
-      const mode: FrontOpts["mode"] = mode0 === "sit" ? "sit" : mode0 === "march" ? "march" : moving ? "stroll" : "stand";
+      const mode: FrontOpts["mode"] = mode0 === "fall" ? "fall" : mode0 === "sit" ? "sit" : mode0 === "march" ? "march" : moving ? "stroll" : "stand";
       const facing: -1 | 0 | 1 = a.facing ?? (st.dirx ? (((st.dirx > 0 ? 1 : -1) * Math.sign(right.x || 1)) as -1 | 1) : 0);
       const d = cam.position.distanceTo(this.v.set(st.x, 1.2 * scl, st.z)) / scl;
       const [w, h, k] = tier(d);
@@ -351,6 +360,27 @@ export class StoryWorld {
       fused.push(e);
     }
     for (let i = fi; i < this.fxs.length; i++) this.fxs[i].mesh.visible = false;
+    // ---- set pieces ----
+    (s.pieces ?? []).forEach((pc, i) => {
+      const A = this.pieceActors[i], P = PIECES[pc.kind];
+      if (!A || !P) return;
+      let x = pc.x, z = pc.z;
+      if (pc.moveTo && pc.moveFrames) {
+        const u = smooth((f - pc.moveFrames[0]) / Math.max(1, pc.moveFrames[1] - pc.moveFrames[0]));
+        x += (pc.moveTo[0] - pc.x) * u; z += (pc.moveTo[1] - pc.z) * u;
+      }
+      const k = pc.scale ?? 1, d = cam.position.distanceTo(this.v.set(x, P.h * k * 0.5, z)) / (k * P.h / 2.2);
+      const res = d < 3.2 ? 1.6 : d < 6.5 ? 1.0 : d < 16 ? 0.55 : 0.3;
+      const cw = Math.round(P.dw * res), ch = Math.round(P.dh * res);
+      A.r = this.pool.req(`piece|${pc.kind}`, cw, ch, res, P.draw);
+      const bob = pc.rock ? pc.rock * Math.sin(t * 1.6 + i) : 0;
+      A.mesh.visible = true;
+      A.mesh.position.set(x, (pc.y ?? 0) + bob * 0.15, z);
+      A.mesh.rotation.set(0, Math.atan2(cam.position.x - x, cam.position.z - z), bob * 0.03);
+      A.mesh.scale.set(pc.mirror ? -1 : 1, 1, 1);
+      A.mesh.castShadow = L.actorShadow;
+      used.push(A);
+    });
     this.pool.flush();
     for (const a of used) a.bind();
     for (const e of fused) e.bind();

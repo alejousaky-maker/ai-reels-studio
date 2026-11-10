@@ -1,0 +1,401 @@
+{
+ "version": 1,
+ "title": "The Fake Fishing Trip",
+ "lang": "en",
+ "style": "storybook",
+ "environment": "suburb",
+ "seed": 16,
+ "graphics": "full",
+ "cast": [
+  {
+   "id": "hubby",
+   "name": "Husband",
+   "role": "fisher"
+  },
+  {
+   "id": "wife",
+   "name": "Wife",
+   "role": "woman",
+   "palette": "#3f6fb5",
+   "skin": "#8d5a3b",
+   "hair": "#e8c46a"
+  },
+  {
+   "id": "friend",
+   "name": "Friend",
+   "role": "villager_man",
+   "palette": "#b5653f"
+  },
+  {
+   "id": "tourist",
+   "name": "Woman at the resort",
+   "role": "tourist"
+  },
+  {
+   "id": "wifevest",
+   "name": "Wife (fishing vest)",
+   "role": "fisher",
+   "palette": "#6a7a3a",
+   "skin": "#8d5a3b",
+   "hair": "#e8c46a",
+   "shades": false
+  },
+  {
+   "id": "lawyer",
+   "name": "Divorce lawyer",
+   "role": "lawyer"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "This husband faked a fishing trip perfectly. He just forgot how sunglasses work.",
+   "environment": "suburb",
+   "spot": 4,
+   "shot": "medium",
+   "light": "day",
+   "mood": "upbeat",
+   "impactWord": "sunglasses",
+   "characters": [
+    {
+     "id": "hubby",
+     "expr": "grin",
+     "holding": "fish"
+    }
+   ],
+   "pieces": [
+    {
+     "kind": "poster",
+     "where": "right"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "sunglasses",
+     "on": "hubby"
+    }
+   ]
+  },
+  {
+   "narration": "He told his wife: zero signal, a weekend at the lake with the boys.",
+   "environment": "suburb",
+   "spot": 0,
+   "shot": "wide",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "hubby",
+     "action": "wave",
+     "expr": "grin"
+    },
+    {
+     "id": "wife",
+     "action": "wave",
+     "expr": "smile"
+    }
+   ],
+   "focus": "hubby",
+   "pieces": [
+    {
+     "kind": "car",
+     "where": "left"
+    }
+   ]
+  },
+  {
+   "narration": "Then he sent live photos every few hours.",
+   "environment": "apartment",
+   "spot": 0,
+   "shot": "medium",
+   "light": "day",
+   "mood": "curious",
+   "transition": "xfade",
+   "characters": [
+    {
+     "id": "wife",
+     "expr": "smile",
+     "holding": "phone"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "camera",
+     "word": "photos",
+     "on": "wife"
+    }
+   ]
+  },
+  {
+   "narration": "Fishing vest. Rods. Beer by the cabin.",
+   "environment": "lake",
+   "spot": 1,
+   "shot": "wide",
+   "light": "day",
+   "mood": "whimsical",
+   "transition": "xfade",
+   "characters": [
+    {
+     "id": "hubby",
+     "expr": "grin",
+     "holding": "fish"
+    }
+   ]
+  },
+  {
+   "narration": "But his wife zoomed in.",
+   "environment": "apartment",
+   "spot": 0,
+   "shot": "close",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "wife",
+     "expr": "smile",
+     "holding": "phone",
+     "react": {
+      "word": "zoomed",
+      "expr": "stern"
+     }
+    }
+   ]
+  },
+  {
+   "narration": "In every photo, the sun was in the exact same spot.",
+   "environment": "lake",
+   "spot": 0,
+   "shot": "medium",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "hubby",
+     "expr": "grin",
+     "holding": "fish"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "question",
+     "word": "same",
+     "on": "hubby"
+    }
+   ],
+   "text": "SAME SUN. EVERY PHOTO.",
+   "textStyle": "label"
+  },
+  {
+   "narration": "Because he took them all the week before.",
+   "environment": "suburb",
+   "spot": 4,
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "hubby",
+     "expr": "grin",
+     "holding": "fish"
+    },
+    {
+     "id": "friend",
+     "expr": "smile",
+     "holding": "phone"
+    }
+   ],
+   "focus": "hubby",
+   "pieces": [
+    {
+     "kind": "poster",
+     "where": "right"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "camera",
+     "word": "week",
+     "on": "friend"
+    }
+   ]
+  },
+  {
+   "narration": "Except the last selfie. From the boat.",
+   "environment": "resort",
+   "spot": 0,
+   "shot": "close",
+   "light": "day",
+   "mood": "tense",
+   "transition": "xfade",
+   "characters": [
+    {
+     "id": "hubby",
+     "expr": "grin",
+     "holding": "phone"
+    }
+   ]
+  },
+  {
+   "narration": "His sunglasses reflected a neon palm tree, and a pool bar.",
+   "environment": "resort",
+   "spot": 0,
+   "shot": "close",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "hubby",
+     "expr": "grin"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "neon",
+     "on": "hubby"
+    }
+   ]
+  },
+  {
+   "narration": "In Cancun.",
+   "environment": "resort",
+   "spot": 5,
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "impactWord": "Cancun",
+   "characters": [
+    {
+     "id": "hubby",
+     "expr": "grin"
+    },
+    {
+     "id": "tourist",
+     "expr": "smile"
+    }
+   ],
+   "focus": "hubby",
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "Cancun",
+     "on": "hubby"
+    }
+   ],
+   "text": "CANCUN",
+   "textStyle": "title"
+  },
+  {
+   "narration": "And a woman holding the phone, taking the picture.",
+   "environment": "resort",
+   "spot": 0,
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "tourist",
+     "expr": "smile",
+     "holding": "phone"
+    },
+    {
+     "id": "hubby",
+     "expr": "grin"
+    }
+   ],
+   "focus": "tourist",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "camera",
+     "word": "picture",
+     "on": "tourist"
+    }
+   ]
+  },
+  {
+   "narration": "Sunday night, he came home with a suspicious tan.",
+   "environment": "suburb",
+   "spot": 0,
+   "shot": "wide",
+   "light": "night",
+   "mood": "tense",
+   "transition": "xfade",
+   "characters": [
+    {
+     "id": "hubby",
+     "action": "walk",
+     "expr": "smile"
+    }
+   ]
+  },
+  {
+   "narration": "His wife opened the door wearing a fishing vest. Next to her lawyer.",
+   "environment": "suburb",
+   "spot": 0,
+   "shot": "two_shot",
+   "light": "night",
+   "mood": "tense",
+   "impactWord": "lawyer",
+   "characters": [
+    {
+     "id": "wifevest",
+     "expr": "stern"
+    },
+    {
+     "id": "lawyer",
+     "expr": "stern",
+     "holding": "scroll"
+    }
+   ],
+   "focus": "wifevest",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "word": "lawyer",
+     "on": "lawyer"
+    }
+   ]
+  },
+  {
+   "narration": "Holding his credit card statement. Catch of the day.",
+   "environment": "suburb",
+   "spot": 0,
+   "shot": "close",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "wifevest",
+     "expr": "stern",
+     "holding": "card",
+     "react": {
+      "word": "Catch",
+      "expr": "smile"
+     }
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "day",
+     "on": "wifevest"
+    }
+   ]
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Fictional comedy story (not a real event).",
+   "status": "fiction"
+  }
+ ],
+ "creativeHooks": [
+  "He just forgot how sunglasses work.",
+  "Catch of the day."
+ ]
+}

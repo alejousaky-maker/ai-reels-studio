@@ -8,6 +8,8 @@ import { NOINK } from "../bridge/ink";
 import type { EnvSpec, Shop } from "./types";
 import { drawSign, drawAwning } from "./products";
 import { buildInterior, buildHarbour } from "./env2";
+import { buildBeach, buildOcean, buildTroy, buildCave, buildThrone } from "./env3";
+import { buildModernRoom, buildSuburb, buildLake, buildResort } from "./env4";
 
 /** horizontal quad facing up covering x0..x1, z0..z1 at height y with uv tiles u, v */
 export const ground = (x0: number, x1: number, z0: number, z1: number, u: number, v: number, y = 0) => {
@@ -79,11 +81,30 @@ export const buildEnv = (root: THREE.Object3D, kit: Kit, env: EnvSpec, rays: Ray
   const cobble = lam("cobbleHD", () => ({ map: cobbleHD() }));
   const stone = lam("copeHD", () => ({ map: stoneHD("copeHD", ["#e6dccd", "#ddd3c3", "#ece4d6", "#d6cbba"], "#aea293") }));
   // grass everywhere on land (the harbour's sea starts at z = 9.4)
-  b.add(env.preset === "harbour" ? ground(-900, 900, -900, 9.4, 450, 227, -0.01) : ground(-900, 900, -900, 900, 450, 450, -0.01), grass);
-  hills(b);
+  const own = ["beach", "ocean", "troy", "cave", "suburb", "lake", "resort"].includes(env.preset);   // these lay their own ground / sea
+  if (!own) b.add(env.preset === "harbour" ? ground(-900, 900, -900, 9.4, 450, 227, -0.01) : ground(-900, 900, -900, 900, 450, 450, -0.01), grass);
+  if (!["ocean", "beach", "resort"].includes(env.preset)) hills(b);
   setSight(rays);
   const lantern = (x: number, z: number) => { prop(b, kit, "lantern", x, 0, z, 2.8); info.lanterns.push(new THREE.Vector3(x, 2.55, z)); };
 
+  if (["apartment", "bathroom", "office", "hotel", "airport"].includes(env.preset)) {
+    buildModernRoom(root, kit, env, info, b);
+    forest(b, kit, r, 90, FN);
+    b.build(root); setSight([]);
+    return info;
+  }
+  if (env.preset === "suburb" || env.preset === "lake" || env.preset === "resort") {
+    ({ suburb: buildSuburb, lake: buildLake, resort: buildResort })[env.preset](root, kit, env, info, b);
+    b.build(root); setSight([]);
+    return info;
+  }
+  if (env.preset === "beach" || env.preset === "ocean" || env.preset === "troy" || env.preset === "cave" || env.preset === "throne") {
+    ({ beach: buildBeach, ocean: buildOcean, troy: buildTroy, cave: buildCave, throne: buildThrone })[env.preset](root, kit, env, info, b);
+    if (env.preset === "throne") forest(b, kit, r, 90, FN);
+    b.build(root);
+    setSight([]);
+    return info;
+  }
   if (env.preset === "interior") {
     buildInterior(root, kit, env, info, b);
     forest(b, kit, r, 90, FN);

@@ -1,0 +1,478 @@
+{
+ "version": 1,
+ "title": "The Greatest Math Fail in History",
+ "lang": "en",
+ "style": "storybook",
+ "environment": "beach",
+ "seed": 4,
+ "graphics": "full",
+ "cast": [
+  {
+   "id": "columbus",
+   "name": "Columbus",
+   "role": "explorer"
+  },
+  {
+   "id": "scholar",
+   "name": "Scholar",
+   "role": "scholar"
+  },
+  {
+   "id": "villager",
+   "name": "Villager",
+   "role": "villager_man",
+   "palette": "#8a5a3c"
+  },
+  {
+   "id": "king",
+   "name": "King",
+   "role": "king"
+  },
+  {
+   "id": "sailor",
+   "name": "Sailor",
+   "role": "sailor"
+  },
+  {
+   "id": "sailor2",
+   "name": "Sailor",
+   "role": "sailor",
+   "palette": "#c9d6e0"
+  },
+  {
+   "id": "local",
+   "name": "Islander",
+   "role": "islander"
+  },
+  {
+   "id": "local2",
+   "name": "Islander",
+   "role": "islander",
+   "palette": "#d8c49a"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "This guy was so bad at math, he accidentally found two continents.",
+   "environment": "beach",
+   "spot": 0,
+   "shot": "medium",
+   "light": "golden",
+   "mood": "upbeat",
+   "impactWord": "accidentally",
+   "characters": [
+    {
+     "id": "columbus",
+     "expr": "smile",
+     "holding": "map"
+    }
+   ],
+   "pieces": [
+    {
+     "kind": "ship",
+     "where": "behind",
+     "dx": 3
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "accidentally",
+     "on": "columbus"
+    }
+   ],
+   "visual": "Columbus smug on the beach, his caravel rammed into the shore behind him."
+  },
+  {
+   "narration": "And he died refusing to admit he was lost.",
+   "environment": "beach",
+   "spot": 0,
+   "shot": "close",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "columbus",
+     "expr": "smile_closed",
+     "holding": "map"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "question",
+     "word": "lost",
+     "on": "columbus"
+    }
+   ]
+  },
+  {
+   "narration": "Here's the myth: in 1492, people thought the Earth was flat.",
+   "environment": "village_square",
+   "shot": "medium",
+   "light": "day",
+   "mood": "curious",
+   "transition": "xfade",
+   "characters": [
+    {
+     "id": "villager",
+     "expr": "nervous"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "scroll",
+     "word": "myth",
+     "on": "villager"
+    }
+   ],
+   "text": "THE MYTH",
+   "textStyle": "label"
+  },
+  {
+   "narration": "Nope. Educated Europeans knew it was round, and roughly how big.",
+   "environment": "village_square",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "scholar",
+     "expr": "smile",
+     "holding": "globe"
+    },
+    {
+     "id": "villager",
+     "expr": "neutral",
+     "react": {
+      "word": "round",
+      "expr": "shock"
+     }
+    }
+   ],
+   "focus": "scholar",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "lightbulb",
+     "word": "round",
+     "on": "scholar"
+    }
+   ],
+   "spot": 2
+  },
+  {
+   "narration": "About twenty-five thousand miles around. Huge.",
+   "environment": "village_square",
+   "shot": "close",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "scholar",
+     "expr": "smile_closed",
+     "holding": "book"
+    }
+   ],
+   "text": "≈ 25,000 miles",
+   "textStyle": "label"
+  },
+  {
+   "narration": "Columbus read an Arabic measurement, and used shorter Roman miles instead.",
+   "environment": "interior",
+   "shot": "medium",
+   "light": "day",
+   "mood": "curious",
+   "transition": "xfade",
+   "characters": [
+    {
+     "id": "columbus",
+     "expr": "smile",
+     "holding": "map"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "book",
+     "word": "Arabic",
+     "on": "columbus"
+    }
+   ]
+  },
+  {
+   "narration": "Boom. His Earth shrank by a quarter.",
+   "environment": "interior",
+   "shot": "close",
+   "light": "day",
+   "mood": "upbeat",
+   "impactWord": "Boom",
+   "characters": [
+    {
+     "id": "columbus",
+     "expr": "grin"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "Boom",
+     "on": "columbus"
+    }
+   ],
+   "text": "−25% EARTH",
+   "textStyle": "label"
+  },
+  {
+   "narration": "On his map, Japan sat just a few weeks west of the Canary Islands.",
+   "environment": "interior",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "columbus",
+     "expr": "smile_closed",
+     "holding": "map"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "globe",
+     "word": "Japan",
+     "on": "columbus"
+    }
+   ]
+  },
+  {
+   "narration": "The royal experts checked his math, and said no.",
+   "environment": "throne",
+   "spot": 0,
+   "shot": "wide",
+   "light": "day",
+   "mood": "tense",
+   "transition": "xfade",
+   "characters": [
+    {
+     "id": "king",
+     "expr": "stern"
+    },
+    {
+     "id": "columbus",
+     "expr": "smile",
+     "react": {
+      "word": "no",
+      "expr": "shock"
+     }
+    }
+   ],
+   "focus": "king",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "scroll",
+     "word": "no",
+     "on": "king"
+    }
+   ]
+  },
+  {
+   "narration": "Not because of a flat Earth. Because his crew would starve in an empty ocean.",
+   "environment": "throne",
+   "spot": 0,
+   "shot": "close",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "king",
+     "expr": "stern"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "clock",
+     "word": "starve",
+     "on": "king"
+    }
+   ]
+  },
+  {
+   "narration": "And they were right. Except two continents nobody in Europe knew about were in the way.",
+   "environment": "ocean",
+   "spot": 0,
+   "shot": "wide",
+   "light": "golden",
+   "mood": "tense",
+   "transition": "xfade",
+   "characters": [
+    {
+     "id": "sailor",
+     "expr": "nervous"
+    },
+    {
+     "id": "sailor2",
+     "expr": "nervous",
+     "react": {
+      "word": "Except",
+      "expr": "shock"
+     }
+    },
+    {
+     "id": "columbus",
+     "expr": "smile"
+    }
+   ],
+   "focus": "sailor2",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "word": "Except",
+     "on": "sailor2"
+    }
+   ]
+  },
+  {
+   "narration": "He landed in the Bahamas, and called the people he met Indians.",
+   "environment": "beach",
+   "spot": 1,
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "transition": "xfade",
+   "characters": [
+    {
+     "id": "columbus",
+     "action": "wave",
+     "expr": "grin"
+    },
+    {
+     "id": "local",
+     "expr": "neutral",
+     "react": {
+      "word": "Indians",
+      "expr": "shock"
+     }
+    },
+    {
+     "id": "local2",
+     "expr": "neutral"
+    }
+   ],
+   "focus": "columbus",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "question",
+     "word": "Indians",
+     "on": "local"
+    }
+   ]
+  },
+  {
+   "narration": "Later, he made his crew swear that Cuba was part of Asia.",
+   "environment": "beach",
+   "spot": 3,
+   "shot": "medium",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "columbus",
+     "expr": "stern",
+     "holding": "scroll"
+    },
+    {
+     "id": "sailor",
+     "expr": "nervous"
+    },
+    {
+     "id": "sailor2",
+     "expr": "nervous"
+    }
+   ],
+   "focus": "columbus",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "word": "swear",
+     "on": "sailor"
+    }
+   ],
+   "text": "CUBA = ASIA",
+   "textStyle": "label"
+  },
+  {
+   "narration": "The worst math in history, and the luckiest wrong answer ever.",
+   "environment": "beach",
+   "spot": 0,
+   "shot": "close",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "columbus",
+     "expr": "smile",
+     "holding": "map",
+     "react": {
+      "word": "luckiest",
+      "expr": "smile_closed"
+     }
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "luckiest",
+     "on": "columbus"
+    }
+   ]
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Educated Europeans in 1492 knew the Earth was round; the flat-Earth belief is a later myth.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Myth_of_the_flat_Earth"
+  },
+  {
+   "text": "Earth's circumference was known to be roughly 25,000 miles (Eratosthenes-type estimates).",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Christopher_Columbus"
+  },
+  {
+   "text": "Columbus took Alfraganus's degree in Arabic miles as Roman miles, underestimating Earth by about 25%.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Christopher_Columbus"
+  },
+  {
+   "text": "He placed Japan roughly 2,400 nautical miles west of the Canary Islands.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Christopher_Columbus"
+  },
+  {
+   "text": "Royal experts rejected his plan because his distance estimates were too small.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Christopher_Columbus"
+  },
+  {
+   "text": "He landed in the Bahamas in October 1492 and called the inhabitants 'indios'.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Christopher_Columbus"
+  },
+  {
+   "text": "In 1494 he had his crew swear that Cuba was part of the Asian mainland.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Christopher_Columbus"
+  }
+ ],
+ "creativeHooks": [
+  "So bad at math he found two continents.",
+  "The luckiest wrong answer ever."
+ ]
+}

@@ -162,3 +162,26 @@ def test_graphics_full_is_default_and_simple_is_lighter():
     assert all(s["dof"] == {"cInf": 0} for s in simple["scenes"])
     n = lambda sb: sum(1 for a in sb["scenes"][0]["actors"] if a["castId"].startswith("extra"))  # noqa: E731
     assert n(full) == 8 and n(simple) == 2
+
+def test_story_plans_build_and_new_locations():
+    """the six house-formula plans validate and direct: per-beat locations, variants, set pieces, a giant scale"""
+    import glob
+    import json
+    import os
+    root = os.path.join(os.path.dirname(__file__), "..", "docs", "scripts")
+    files = sorted(glob.glob(os.path.join(root, "plan_0*.json")))
+    assert len(files) >= 6
+    for f in files:
+        plan = Plan.model_validate(json.load(open(f, encoding="utf-8")))
+        sb = director.build_storyboard(plan, _words(plan))
+        assert len(sb["scenes"]) == len(plan.beats)
+        for b, s in zip(plan.beats, sb["scenes"]):
+            env = (s.get("env") or sb["env"])["preset"]
+            assert env == (b.environment or plan.environment)
+            if b.envVariant:
+                assert s["env"]["variant"] == b.envVariant
+            assert len(s.get("pieces", [])) == len(b.pieces)
+    cyc = Plan.model_validate(json.load(open(os.path.join(root, "plan_03_cyclops.json"), encoding="utf-8")))
+    sb = director.build_storyboard(cyc, _words(cyc))
+    giant = next(c for c in sb["cast"] if c["id"] == "cyclops")
+    assert giant["scale"] > 2 and giant["outfit"]["cyclops"] is True

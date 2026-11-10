@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.6.0 — 2026-11-10 (megaprompt shorts: history, myth and modern stories)
+- Six new shorts in the house formula from the user's megaprompts (scripts in `docs/scripts/STORIES_*.md`, plans `plan_0*.json`).
+- 13 new locations: beach, ocean (ship deck), troy (wall, gate, variant "breach"), cave (variant "open"), throne; apartment,
+  bathroom, office, hotel, airport, suburb, lake, resort.
+- Set pieces (painted lit cards): horse, ship, galley, chalkboard, sheep, tent, scale, boxes, car, van, poster; placed per beat
+  (behind / left / right / far / front, optional move), the cast steps aside so side pieces stay in frame.
+- Wardrobe: bronze crested helmets, crown, explorer hat, bucket hat, sun hat, long hair, beard, necktie, sunglasses, vest pockets,
+  rope bands; a one-eyed giant at 2.6x scale (camera steps back and aims at his eye line).
+- Icons: map, globe, wine, spear, stake, phone, tablet, wifi, key, camera, card, fish, receipt, box. New action `fall`.
+- Per-beat camera `spot`; outdoor golden scenes in the new places are front-lit; rooms cap the lens distance.
+- Graphics option full (default, the Demo A look) / simple.
+
 ## 0.5.0 — 2026-11-09 (the Demo A formula)
 - New reference video in the Demo A formula: "The School That Couldn't Stop Laughing" (1962 Tanganyika laughter epidemic, EN,
   af_heart voice, Wikipedia-checked facts, one recurring cast, classroom -> village, day -> golden -> night -> golden arc).
