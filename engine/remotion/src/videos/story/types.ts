@@ -2,7 +2,7 @@
 // Everything here is plain serialisable JSON: the engine derives every frame from (storyboard, frame) only.
 export type V3 = [number, number, number];
 export type LightName = "day" | "golden" | "night";
-export type EnvPreset = "village_square" | "park" | "street" | "market";
+export type EnvPreset = "village_square" | "park" | "street" | "market" | "interior" | "harbour";
 
 export type Expr = "neutral" | "stern" | "grin" | "laugh" | "whistle" | "nervous" | "shock" | "relief" | "relief_open" | "dazed"
   | "pained" | "smile" | "smile_closed" | "lick";
@@ -52,6 +52,8 @@ export type SceneSpec = {
   sunAz?: number; sunEl?: number;
   seed?: number;
   qualityNotes?: string;
+  /** optional location for this scene (each scene builds its own world); defaults to the storyboard env */
+  env?: EnvSpec;
 };
 
 export type Shop = { x: number; z: number; yaw: number; name: string; tagline?: string; colors: { primary: string; secondary: string; text: string } };

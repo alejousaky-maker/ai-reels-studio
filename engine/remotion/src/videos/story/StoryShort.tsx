@@ -1,4 +1,4 @@
-﻿// AI Reels Studio - generic storyboard-driven short. Same post chain as the template (bridge/Bridge.tsx):
+// AI Reels Studio - generic storyboard-driven short. Same post chain as the template (bridge/Bridge.tsx):
 // ink (own pass) -> lens blur pre + main -> bloom (emissive only) -> NEUTRAL tone map -> grade, MSAA 4.
 // Ink runs before the DOF so outlines blur with what they belong to (the documented "blur erases ink" bug).
 // All pixel-sized parameters are specified at 1080x1920 and scale with the output height.
@@ -73,7 +73,9 @@ const Inner: React.FC<{ idx: number; world: StoryWorld; sb: Storyboard }> = ({ i
   fx.lens.cInf = d.cInf;
   const tag = fx.grade as unknown as { _light?: LightName };
   if (tag._light !== s.light) { fx.grade.set(GRADES3[s.light]); tag._light = s.light; }
-  return (<><primitive object={world.root} dispose={null} />{post}</>);
+  // keyed by scene: R3F does not swap a <primitive> whose `object` prop changes, so after a crossfade the base canvas
+  // kept rendering the PREVIOUS scene's world (found by QA on the lighthouse master: b05/b12 showed the wrong place)
+  return (<><primitive key={`world-${idx}`} object={world.root} dispose={null} />{post}</>);
 };
 
 const SceneView: React.FC<{ idx: number; kit: Kit; sb: Storyboard; alpha: number; dpr?: number }> = ({ idx, kit, sb, alpha, dpr }) => {

@@ -1,38 +1,34 @@
 # NEXT STEPS (resume here — read PROGRESS.md and DECISIONS.md first)
 
-## Known limits / defects (honest list)
-1. **Subjective quality is not auto-judged.** QA measures technical things; story, appeal, composition need the human
-   rubric in the app. No Demo has been human-approved yet (Calidad tab → score + approve).
-2. **Script quality from the local model is draft-level** (qwen2.5:7b wrote a weak hook in the test). Use "Aprobar guion
-   antes de producir", edit the plan, or Claude-assisted mode. Try `ollama pull qwen3:8b` and compare.
-3. **Environments**: 4 outdoor presets only (village square, market, street, park). No interiors, labs, ships, etc.
-   Stories set elsewhere still render in a town square.
-4. **Characters** are front-view cards (the template's side-view walk cycle `bodySide` is not wired into the director);
-   walking characters slide with a stroll cycle. Hands can hold a product card but not interact with props.
-5. **Night** preset reads as blue hour, not deep night; lanterns glow only as sprites.
-6. **Durations follow the script**: the rule-based writer does not pad a short script to the requested length
-   (Demo B asked 30 s, script gives 20.7 s). Ollama is told the target word count.
-7. Demo C invalidation: last real measurement was 5/15 scenes re-rendered for a 2-scene edit; the boundary-rounding fix
-   after it is unit-tested only (re-measure: duplicate Demo C, edit a beat, "Re-render solo lo cambiado").
-   Any engine source change (even a comment) invalidates every cached scene by design.
-8. Brand colour or environment changes invalidate all scenes (they change the shared world).
-9. Captions are word-by-word only; no styled caption presets.
-10. `on_event` FastAPI deprecation warning (harmless); move to lifespan handlers.
-11. Ollama is called with keep_alive 0 (unloads right away) — not yet re-measured after that change.
+## Known limits / defects (honest list, v0.2)
+1. **Subjective quality is not auto-judged.** QA measures technical things (now including render-vs-control-stills);
+   story, appeal and composition need the human rubric in the app. No video has been human-approved yet.
+2. **Script quality from the local model is draft-level** (qwen2.5:7b wrote a weak hook). Use "Aprobar guion antes de
+   producir", edit the plan, or Claude-assisted mode. Try `ollama pull qwen3:8b` and compare.
+3. **Locations**: 6 presets (village square, market, street, park, interior, harbour), per-beat switching. Still missing:
+   lab/workshop, forest path, ship deck, castle, desert, snow. The lighthouse in `harbour` is red/white bands (it does not
+   change to match a story's specific lighthouse).
+4. **Characters**: front cards + side-view walk; no props in hands except product cards; no sitting on chairs (sit = on the floor pose).
+5. Night interior windows stay daylight-blue painted (texture is static); lamps glow with bloom + ground pools.
+6. **Duration**: rule-based writer still cannot add content; the pipeline re-voices up to 0.88× speed and reports
+   the gap (`manifest.durationNote`). Ollama is told the target word count.
+7. Engine source changes (even a comment) invalidate every cached scene by design; brand colour / location changes
+   invalidate the scenes that show them.
+8. Captions are word-by-word only; no styled caption presets.
+9. FastAPI `on_event` deprecation warning (harmless).
 
 ## Next features by priority
-1. Human review pass on Demo A/B/C in the app; fix whatever the reviewer flags (camera, staging, readability).
-2. Side-view walking (`bodySide`) + prop interaction; per-character height variety; more outfits/roles.
-3. Interior environment preset (room/shop interior/workshop) + a "lab" and a "harbour" preset.
-4. Side-by-side sheet vs `references/` measured targets in the QA tab; per-scene stills on demand from the inspector.
-5. Scene library (save a scene's staging/camera as a reusable preset) and ad template gallery.
-6. Backup/restore of a project as ZIP (inputs + plan + storyboard + voice), cleanup of old render segments per project.
-7. Optional cloud providers behind explicit opt-in + cost confirmation (ElevenLabs) — not implemented.
+1. Human review pass on the master demos; fix what the reviewer flags.
+2. More locations (workshop/lab, forest path, ship deck) + per-location props (books, tools, maps) + hand-held props.
+3. Seated pose on chairs/benches, pointing gesture, two characters facing each other (side views) for dialogue beats.
+4. Night variants of textures (lit windows), rain/snow/fog weather FX.
+5. Scene library (save a scene's staging/camera as a preset), ad template gallery, backup/restore ZIP of a project.
+6. Optional cloud providers behind explicit opt-in + cost confirmation (ElevenLabs) — not implemented.
 
 ## How to resume
 ```
 cd C:\Users\felip\AI-Reels-Studio
 powershell -ExecutionPolicy Bypass -File test.ps1          # sanity
 start.bat                                                  # app on http://127.0.0.1:8777
-.venv\Scripts\python.exe -m engine.pipeline <project> --only storyboard,stills   # CLI per step
+.venv\Scripts\python.exe -m engine.pipeline <project> --only storyboard,stills --quality master   # CLI per step
 ```

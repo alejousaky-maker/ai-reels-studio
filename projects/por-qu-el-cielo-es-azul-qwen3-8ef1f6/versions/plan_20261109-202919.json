@@ -1,0 +1,313 @@
+{
+ "version": 1,
+ "title": "Por qué el cielo es azul (qwen3)",
+ "lang": "es",
+ "style": "storybook",
+ "environment": "village_square",
+ "seed": 7,
+ "cast": [
+  {
+   "id": "pepe",
+   "name": "",
+   "role": "villager_man",
+   "palette": null
+  },
+  {
+   "id": "lola",
+   "name": "",
+   "role": "villager_woman",
+   "palette": null
+  },
+  {
+   "id": "miguel",
+   "name": "",
+   "role": "villager_man",
+   "palette": null
+  },
+  {
+   "id": "tia_maria",
+   "name": "",
+   "role": "villager_woman",
+   "palette": null
+  }
+ ],
+ "beats": [
+  {
+   "narration": "El cielo es azul porque los ángeles lo pintaron con tiza.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "pepe",
+     "action": "march",
+     "expr": "stern",
+     "react": {
+      "word": "pintaron",
+      "expr": "stern"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "pepe",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": null
+  },
+  {
+   "narration": "Pero los ángeles no usan tiza, usan luz.",
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "lola",
+     "action": "sit",
+     "expr": "stern",
+     "react": {
+      "word": "luz",
+      "expr": "stern"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "lola",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": null
+  },
+  {
+   "narration": "La luz del sol se dispersa en el aire y se ve azul.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "miguel",
+     "action": "stand",
+     "expr": "stern",
+     "react": {
+      "word": "dispersa",
+      "expr": "stern"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "miguel",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": null
+  },
+  {
+   "narration": "¿Cómo? ¿Como si fuera un espejo?",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "tia_maria",
+     "action": "sit",
+     "expr": "stern",
+     "react": {
+      "word": "espejo",
+      "expr": "stern"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "tia_maria",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": null
+  },
+  {
+   "narration": "Tú ve el cielo azul porque el aire lo hace brillar.",
+   "shot": "low",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "pepe",
+     "action": "march",
+     "expr": "stern",
+     "react": {
+      "word": "brillar",
+      "expr": "stern"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "pepe",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": null
+  },
+  {
+   "narration": "Como si el cielo fuera un sándwich de azúcar y el sol fuera la mantequilla.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "lola",
+     "action": "sit",
+     "expr": "stern",
+     "react": {
+      "word": "sándwich",
+      "expr": "stern"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "lola",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": null
+  },
+  {
+   "narration": "Y si el cielo fuera rojo, sería como un sándwich de tomate.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "miguel",
+     "action": "stand",
+     "expr": "stern",
+     "react": {
+      "word": "tomate",
+      "expr": "stern"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "miguel",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": null
+  },
+  {
+   "narration": "¿Y si el cielo fuera marrón? Sería como un sándwich de café.",
+   "shot": "high",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "tia_maria",
+     "action": "sit",
+     "expr": "stern",
+     "react": {
+      "word": "café",
+      "expr": "stern"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "tia_maria",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": null
+  },
+  {
+   "narration": "Así que el cielo es azul porque la luz lo hace brillar.",
+   "shot": "two_shot",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "pepe",
+     "action": "march",
+     "expr": "stern",
+     "react": {
+      "word": "brillar",
+      "expr": "stern"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "pepe",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": null
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "La luz del sol se dispersa en el aire y se ve azul.",
+   "status": "uncertain",
+   "source": null
+  },
+  {
+   "text": "El cielo es azul porque la luz lo hace brillar.",
+   "status": "uncertain",
+   "source": null
+  }
+ ],
+ "creativeHooks": [],
+ "brand": null,
+ "cta": null,
+ "captions": false
+}

@@ -1,12 +1,12 @@
 {
- "video": "C:\\Users\\felip\\AI-Reels-Studio\\projects\\demo-dancing-1518\\output\\the-town-that-couldn-t-stop-dancing_standard_v3.mp4",
+ "video": "C:\\Users\\felip\\AI-Reels-Studio\\projects\\demo-dancing-1518\\output\\latest_master.mp4",
  "probe": {
-  "width": 1080,
-  "height": 1920,
+  "width": 1440,
+  "height": 2560,
   "fps": 30.0,
-  "videoSeconds": 63.7,
-  "audioSeconds": 63.7,
-  "sizeMB": 51.92
+  "videoSeconds": 63.633333,
+  "audioSeconds": 63.633333,
+  "sizeMB": 107.51
  },
  "checks": [
   {
@@ -18,7 +18,7 @@
   {
    "check": "9:16 ratio",
    "ok": true,
-   "detail": "1080x1920",
+   "detail": "1440x2560",
    "blocking": true
   },
   {
@@ -30,7 +30,7 @@
   {
    "check": "duration",
    "ok": true,
-   "detail": "video 63.700 s, storyboard 63.700 s",
+   "detail": "video 63.633 s, storyboard 63.633 s",
    "blocking": true
   },
   {
@@ -48,7 +48,7 @@
   {
    "check": "A/V length match",
    "ok": true,
-   "detail": "audio 63.700 s vs video 63.700 s",
+   "detail": "audio 63.633 s vs video 63.633 s",
    "blocking": true
   },
   {
@@ -78,7 +78,7 @@
   {
    "check": "true peak <= -1 dBTP",
    "ok": true,
-   "detail": "true peak -1.9 dBTP",
+   "detail": "true peak -1.4 dBTP",
    "blocking": true
   },
   {
@@ -88,85 +88,91 @@
    "blocking": false
   },
   {
+   "check": "render matches control stills",
+   "ok": true,
+   "detail": "45 frames compared; mismatches: []",
+   "blocking": true
+  },
+  {
    "check": "day exposure (heuristic)",
    "ok": true,
-   "detail": "median luma of day scenes 0.571, reference ~0.57 (range 0.5-0.66)",
+   "detail": "median luma of day scenes 0.570, reference ~0.57 (range 0.5-0.66)",
    "blocking": false
   },
   {
    "check": "no crushed blacks (heuristic)",
    "ok": false,
-   "detail": "scenes with p5 luma < 0.04: ['b02', 'b07', 'b10', 'b15']",
+   "detail": "scenes with p5 luma < 0.04: ['b02', 'b07', 'b10']",
    "blocking": false
   }
  ],
  "blocking": [],
  "warnings": [
-  "no crushed blacks (heuristic): scenes with p5 luma < 0.04: ['b02', 'b07', 'b10', 'b15']"
+  "no crushed blacks (heuristic): scenes with p5 luma < 0.04: ['b02', 'b07', 'b10']"
  ],
  "technicalPass": true,
  "loudness": {
   "I": -14.0,
-  "TP": -1.9
+  "TP": -1.4
  },
  "sceneStats": [
   {
    "scene": "b01",
-   "t": 2.67,
+   "t": 2.7,
    "light": "day",
-   "medianLuma": 0.719,
-   "p5Luma": 0.301,
-   "p95Luma": 0.875,
-   "satMean": 0.312
+   "medianLuma": 0.716,
+   "p5Luma": 0.3,
+   "p95Luma": 0.877,
+   "satMean": 0.313
   },
   {
    "scene": "b02",
-   "t": 6.03,
+   "t": 6.07,
    "light": "day",
-   "medianLuma": 0.559,
-   "p5Luma": 0.039,
-   "p95Luma": 0.832,
-   "satMean": 0.439
+   "medianLuma": 0.557,
+   "p5Luma": 0.037,
+   "p95Luma": 0.833,
+   "satMean": 0.451
   },
   {
    "scene": "b03",
-   "t": 9.43,
+   "t": 9.47,
    "light": "day",
-   "medianLuma": 0.57,
-   "p5Luma": 0.165,
-   "p95Luma": 0.836,
-   "satMean": 0.403
+   "medianLuma": 0.56,
+   "p5Luma": 0.13,
+   "p95Luma": 0.834,
+   "satMean": 0.429
   },
   {
    "scene": "b04",
-   "t": 13.43,
+   "t": 13.47,
    "light": "day",
-   "medianLuma": 0.567,
-   "p5Luma": 0.073,
-   "p95Luma": 0.848,
-   "satMean": 0.462
+   "medianLuma": 0.559,
+   "p5Luma": 0.059,
+   "p95Luma": 0.846,
+   "satMean": 0.478
   },
   {
    "scene": "b05",
-   "t": 17.47,
+   "t": 17.5,
    "light": "day",
-   "medianLuma": 0.77,
-   "p5Luma": 0.256,
+   "medianLuma": 0.767,
+   "p5Luma": 0.21,
    "p95Luma": 0.892,
-   "satMean": 0.275
+   "satMean": 0.282
   },
   {
    "scene": "b06",
-   "t": 21.2,
+   "t": 21.23,
    "light": "day",
-   "medianLuma": 0.626,
-   "p5Luma": 0.123,
-   "p95Luma": 0.864,
+   "medianLuma": 0.625,
+   "p5Luma": 0.124,
+   "p95Luma": 0.865,
    "satMean": 0.31
   },
   {
    "scene": "b07",
-   "t": 23.23,
+   "t": 23.27,
    "light": "day",
    "medianLuma": 0.531,
    "p5Luma": 0.025,
@@ -175,75 +181,75 @@
   },
   {
    "scene": "b08",
-   "t": 27.83,
+   "t": 27.87,
    "light": "day",
    "medianLuma": 0.587,
-   "p5Luma": 0.131,
+   "p5Luma": 0.101,
    "p95Luma": 0.836,
-   "satMean": 0.442
+   "satMean": 0.462
   },
   {
    "scene": "b09",
-   "t": 32.43,
+   "t": 32.47,
    "light": "day",
-   "medianLuma": 0.571,
+   "medianLuma": 0.57,
    "p5Luma": 0.149,
    "p95Luma": 0.85,
    "satMean": 0.319
   },
   {
    "scene": "b10",
-   "t": 34.63,
+   "t": 34.67,
    "light": "golden",
-   "medianLuma": 0.307,
-   "p5Luma": 0.032,
-   "p95Luma": 0.713,
-   "satMean": 0.605
+   "medianLuma": 0.306,
+   "p5Luma": 0.031,
+   "p95Luma": 0.717,
+   "satMean": 0.613
   },
   {
    "scene": "b11",
-   "t": 38.1,
+   "t": 38.13,
    "light": "golden",
-   "medianLuma": 0.3,
-   "p5Luma": 0.154,
-   "p95Luma": 0.595,
-   "satMean": 0.532
+   "medianLuma": 0.298,
+   "p5Luma": 0.149,
+   "p95Luma": 0.596,
+   "satMean": 0.534
   },
   {
    "scene": "b12",
-   "t": 41.93,
+   "t": 42.0,
    "light": "night",
-   "medianLuma": 0.314,
-   "p5Luma": 0.111,
-   "p95Luma": 0.509,
-   "satMean": 0.409
+   "medianLuma": 0.202,
+   "p5Luma": 0.074,
+   "p95Luma": 0.375,
+   "satMean": 0.52
   },
   {
    "scene": "b13",
-   "t": 48.63,
+   "t": 48.7,
    "light": "night",
-   "medianLuma": 0.312,
-   "p5Luma": 0.04,
-   "p95Luma": 0.562,
-   "satMean": 0.466
+   "medianLuma": 0.195,
+   "p5Luma": 0.028,
+   "p95Luma": 0.421,
+   "satMean": 0.579
   },
   {
    "scene": "b14",
-   "t": 56.33,
+   "t": 56.4,
    "light": "golden",
    "medianLuma": 0.309,
-   "p5Luma": 0.196,
+   "p5Luma": 0.195,
    "p95Luma": 0.592,
-   "satMean": 0.512
+   "satMean": 0.514
   },
   {
    "scene": "b15",
    "t": 61.27,
    "light": "golden",
-   "medianLuma": 0.286,
-   "p5Luma": 0.039,
+   "medianLuma": 0.287,
+   "p5Luma": 0.041,
    "p95Luma": 0.556,
-   "satMean": 0.557
+   "satMean": 0.556
   }
  ],
  "rubric": [
@@ -286,7 +292,7 @@
   {
    "area": "SFX, m\u00fasica y sincron\u00eda",
    "score": null,
-   "basis": "computed loudness -14.0 LUFS / TP -1.9 dBTP; sync and taste need a listen",
+   "basis": "computed loudness -14.0 LUFS / TP -1.4 dBTP; sync and taste need a listen",
    "kind": "auto+human"
   },
   {

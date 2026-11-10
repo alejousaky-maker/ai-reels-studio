@@ -1,0 +1,311 @@
+{
+ "version": 1,
+ "title": "la segunda guerra mundial",
+ "lang": "en",
+ "style": "minimal_stickman",
+ "environment": "village_square",
+ "seed": 7,
+ "cast": [
+  {
+   "id": "ella",
+   "name": "",
+   "role": "villager_woman",
+   "palette": null
+  },
+  {
+   "id": "jose",
+   "name": "",
+   "role": "villager_man",
+   "palette": null
+  },
+  {
+   "id": "luis",
+   "name": "",
+   "role": "villager_man",
+   "palette": null
+  }
+ ],
+ "beats": [
+  {
+   "narration": "Did you know a pigeon saved lives during the war?",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "ella",
+     "action": "stroll",
+     "expr": "pained",
+     "react": {
+      "word": "pigeon",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": "wide"
+  },
+  {
+   "narration": "In the village square, messages were sent by bird.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "jose",
+     "action": "walk",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "luis",
+     "action": "stand",
+     "expr": "pained",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": "medium"
+  },
+  {
+   "narration": "One day, Ella received a crucial message.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "ella",
+     "action": "sit",
+     "expr": "whistle",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": "close"
+  },
+  {
+   "narration": "But the messenger was shot down by a sniper.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "jose",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": "medium"
+  },
+  {
+   "narration": "Only the pigeon could deliver now.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "luis",
+     "action": "walk",
+     "expr": "dazed",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": "low"
+  },
+  {
+   "narration": "With a heavy heart, Ella sent the pigeon.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "ella",
+     "action": "stand",
+     "expr": "dazed",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": "high"
+  },
+  {
+   "narration": "You see, even in war, small birds can make a big difference.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "ella",
+     "action": "sit",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": "two_shot"
+  },
+  {
+   "narration": "How can a tiny creature change the course of a war?",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "jose",
+     "action": "stand",
+     "expr": "pained",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": "medium"
+  },
+  {
+   "narration": "Just like how a single light can brighten a dark room.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "luis",
+     "action": "walk",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": "insert"
+  },
+  {
+   "narration": "You never know when a pigeon will save the day.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "ella",
+     "action": "sit",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "visual": "low"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "During World War II, pigeons were used to deliver important messages.",
+   "status": "uncertain",
+   "source": null
+  },
+  {
+   "text": "A pigeon can deliver a message up to 50 miles in under an hour.",
+   "status": "uncertain",
+   "source": null
+  },
+  {
+   "text": "The analogy of a light brightening a room is a fictional comparison.",
+   "status": "fiction",
+   "source": null
+  }
+ ],
+ "creativeHooks": [],
+ "brand": null,
+ "cta": null,
+ "captions": false
+}

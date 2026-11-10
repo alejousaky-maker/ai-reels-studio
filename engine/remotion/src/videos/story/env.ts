@@ -7,6 +7,7 @@ import { grassHD, cobbleHD, stoneHD, rng, ctex } from "../bridge/paint";
 import { NOINK } from "../bridge/ink";
 import type { EnvSpec, Shop } from "./types";
 import { drawSign, drawAwning } from "./products";
+import { buildInterior, buildHarbour } from "./env2";
 
 /** horizontal quad facing up covering x0..x1, z0..z1 at height y with uv tiles u, v */
 export const ground = (x0: number, x1: number, z0: number, z1: number, u: number, v: number, y = 0) => {
@@ -75,12 +76,18 @@ export const buildEnv = (root: THREE.Object3D, kit: Kit, env: EnvSpec, rays: Ray
   const grass = lam("grassHD", () => ({ map: grassHD() }));
   const cobble = lam("cobbleHD", () => ({ map: cobbleHD() }));
   const stone = lam("copeHD", () => ({ map: stoneHD("copeHD", ["#e6dccd", "#ddd3c3", "#ece4d6", "#d6cbba"], "#aea293") }));
-  b.add(ground(-900, 900, -900, 900, 450, 450, -0.01), grass);
+  // grass everywhere on land (the harbour's sea starts at z = 9.4)
+  b.add(env.preset === "harbour" ? ground(-900, 900, -900, 9.4, 450, 227, -0.01) : ground(-900, 900, -900, 900, 450, 450, -0.01), grass);
   hills(b);
   setSight(rays);
   const lantern = (x: number, z: number) => { prop(b, kit, "lantern", x, 0, z, 2.8); info.lanterns.push(new THREE.Vector3(x, 2.55, z)); };
 
-  if (env.preset === "village_square" || env.preset === "market") {
+  if (env.preset === "interior") {
+    buildInterior(root, kit, env, info, b);
+    forest(b, kit, r, 90);
+  } else if (env.preset === "harbour") {
+    buildHarbour(root, kit, env, info, b);
+  } else if (env.preset === "village_square" || env.preset === "market") {
     b.add(ground(-26, 26, -26, 26, 13, 13, 0.0), cobble);
     // fountain in the middle
     b.add(new THREE.CylinderGeometry(2.6, 2.8, 0.7, 28), stone, new THREE.Matrix4().makeTranslation(0, 0.35, 0));
@@ -145,7 +152,7 @@ export const buildEnv = (root: THREE.Object3D, kit: Kit, env: EnvSpec, rays: Ray
     for (let i = 0; i < 6; i++) { const a = (i / 6) * 6.28 + 0.4, d = 70; house(b, Math.cos(a) * d, Math.sin(a) * d, faceCenter(Math.cos(a) * d, Math.sin(a) * d), 8, 8, 8.4, i, 0); }
     forest(b, kit, r, 85);
   }
-  if (env.shop) shopFront(root, b, env.shop, info);
+  if (env.shop && env.preset !== "interior") shopFront(root, b, env.shop, info);
   b.build(root);
   setSight([]);
   return info;

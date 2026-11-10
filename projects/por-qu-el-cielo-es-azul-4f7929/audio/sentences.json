@@ -1,0 +1,61 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 40.31127083333333,
+ "voice": "ef_dora",
+ "lang": "es",
+ "speed": 1.0,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "¡Sorprendente!",
+   "start": 0.06,
+   "end": 1.0209166666666667
+  },
+  {
+   "text": "¿Sabías que el cielo es azul porque es un gran reflejo de tus propios ojos?",
+   "start": 1.1609166666666666,
+   "end": 5.4796458333333335
+  },
+  {
+   "text": "¡Juan y María se dan cuenta de que el cielo es azul porque es un reflejo de sus ojos!",
+   "start": 5.619645833333333,
+   "end": 10.1375
+  },
+  {
+   "text": "Pero en realidad, ¡es porque los rayos del sol se dispersan en la atmósfera!",
+   "start": 10.2775,
+   "end": 14.268520833333334
+  },
+  {
+   "text": "El profesor explica cómo el cielo se vuelve azul gracias a la dispersión de luz.",
+   "start": 14.408520833333334,
+   "end": 19.027479166666666
+  },
+  {
+   "text": "Pero el gato, ¡esconde una teoría propia!",
+   "start": 19.167479166666666,
+   "end": 21.464895833333333
+  },
+  {
+   "text": "Afirma que el cielo es azul porque los gatos lo pintan con sus colores.",
+   "start": 21.604895833333334,
+   "end": 25.6713125
+  },
+  {
+   "text": "¿Y si lo piensas, es como si todos pintáramos juntos el cielo cada día?",
+   "start": 25.8113125,
+   "end": 29.9060625
+  },
+  {
+   "text": "¡Pero de verdad, es porque los rayos del sol se dispersan en la atmósfera!",
+   "start": 30.0460625,
+   "end": 33.912416666666665
+  },
+  {
+   "text": "You see, it's like when you put blue food coloring in water, the water turns blue because of how light behaves.",
+   "start": 34.052416666666666,
+   "end": 40.17127083333333
+  }
+ ]
+}

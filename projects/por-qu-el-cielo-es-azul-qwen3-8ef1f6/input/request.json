@@ -1,0 +1,22 @@
+{
+ "title": "Por qué el cielo es azul (qwen3)",
+ "idea": "Por qué el cielo es azul, explicado con humor",
+ "script": "",
+ "kind": "story",
+ "lang": "es",
+ "seconds": 45,
+ "quality": "master",
+ "style": "storybook",
+ "environment": "village_square",
+ "voice": null,
+ "speed": 1.0,
+ "clientId": null,
+ "cta": null,
+ "captions": false,
+ "music": true,
+ "variants": 1,
+ "provider": "auto",
+ "review": "script_only",
+ "seed": 7,
+ "autostart": true
+}

@@ -22,3 +22,5 @@ assets/clients/
 assets/library/
 .env
 *.part.mp4
+
+images/

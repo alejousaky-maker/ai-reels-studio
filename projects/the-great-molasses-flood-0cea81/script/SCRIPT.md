@@ -1,6 +1,6 @@
 # THE GREAT MOLASSES FLOOD
 
-Language: en Â· style: minimal_stickman Â· 16 beats Â· 166 words (~49 s at 3.4 words/s)
+Language: en · style: minimal_stickman · 16 beats · 166 words (~49 s at 3.4 words/s)
 
 **1. [medium, day, whimsical]** In 1919, a tank of molasses burst in Boston, flooding the city in sticky syrup.
    - _see:_ wide

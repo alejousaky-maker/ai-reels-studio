@@ -122,6 +122,31 @@ def run(pid: str, video: str, qa_dir: str, storyboard: dict | None = None) -> di
         sat = np.where(mx > 0, (mx - mn) / np.maximum(mx, 1e-6), 0)
         stats.append({"scene": sid, "t": round(t, 2), "light": light, "medianLuma": round(float(np.median(Y)), 3), "p5Luma": round(float(np.percentile(Y, 5)), 3),
                       "p95Luma": round(float(np.percentile(Y, 95)), 3), "satMean": round(float(sat.mean()), 3)})
+    # render vs preview consistency: each control still (rendered alone, fresh page) must match the same frame of the
+    # final video. Catches state leaking between frames in a long render (e.g. the wrong world after a crossfade).
+    prev_dir = os.path.join(qa_dir, "..", "preview")
+    sbp = os.path.join(qa_dir, "..", "storyboard", "storyboard.json")
+    mism = []
+    if storyboard and os.path.isdir(prev_dir) and os.path.exists(sbp):
+        sb_m = os.path.getmtime(sbp)
+        stills = sorted(f for f in os.listdir(prev_dir) if f.startswith("f_") and f.endswith(".jpg") and os.path.getmtime(os.path.join(prev_dir, f)) >= sb_m - 1)
+        nums = [int(f[2:6]) for f in stills]
+        if nums:
+            cmp_dir = os.path.join(qa_dir, "cmp")
+            os.makedirs(cmp_dir, exist_ok=True)
+            for old in os.listdir(cmp_dir):
+                os.remove(os.path.join(cmp_dir, old))
+            sel = "+".join(f"eq(n\\,{n})" for n in nums)
+            _run(["ffmpeg", "-v", "error", "-y", "-i", video, "-vf", f"select='{sel}',scale=54:96", "-fps_mode", "passthrough", os.path.join(cmp_dir, "c_%04d.png")], timeout=1200)
+            outs = sorted(os.listdir(cmp_dir))
+            for n, f, o in zip(nums, stills, outs):
+                a = np.asarray(Image.open(os.path.join(prev_dir, f)).convert("L").resize((54, 96)), float) / 255
+                b = np.asarray(Image.open(os.path.join(cmp_dir, o)).convert("L"), float) / 255
+                d = float(np.abs(a - b).mean())
+                if d > 0.15:
+                    sid = next((s["sceneId"] for s in storyboard["scenes"] if s["startFrame"] <= n < s["endFrame"]), "?")
+                    mism.append(f"{sid}@{n} ({d:.2f})")
+            check("render matches control stills", not mism, f"{len(nums)} frames compared; mismatches: {mism[:6]}")
     day = [s for s in stats if s["light"] == "day"]
     if day:
         med = float(np.median([s["medianLuma"] for s in day]))

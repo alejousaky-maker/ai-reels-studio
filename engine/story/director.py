@@ -32,6 +32,10 @@ def shop_for(env: str, brand: dict | None) -> dict | None:
             "colors": {"primary": brand.get("primary", "#c8553d"), "secondary": brand.get("secondary", "#f2c94c"), "text": brand.get("text", "#ffffff")}}
     if env == "street":
         return {**base, "x": -11.5, "z": 0.0, "yaw": math.pi / 2}
+    if env == "interior":
+        return {**base, "x": 0.0, "z": -6.0, "yaw": 0.0}     # the room itself is the shop (counter + sign inside)
+    if env == "harbour":
+        return {**base, "x": 2.0, "z": -6.0, "yaw": 0.0}     # a waterfront house facing the quay
     if env == "park":
         return {**base, "x": 0.0, "z": -24.0, "yaw": 0.0}
     return {**base, "x": 0.0, "z": -29.0, "yaw": 0.0}
@@ -92,11 +96,18 @@ def word_frame(ws: list[dict], word: str | None, fps: int) -> int | None:
 
 
 def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 1080, height: int = 1920) -> dict:
+    aspect = width / height   # 9:16 for Shorts; 1:1 and 16:9 for images/landscape
     brand = plan.brand.model_dump() if plan.brand else None
     shop = shop_for(plan.environment, brand) if (brand and any(b.atShop for b in plan.beats)) else None
-    ancs = anchors(plan.environment, shop)
-    shop_anchor = ancs[0] if shop else None
-    free = [a for a in ancs if not a.get("shop")]
+    env_cache: dict = {}
+
+    def env_setup(env_name: str):
+        """per-location shop + staging anchors (a beat may move the story to another location)"""
+        if env_name not in env_cache:
+            shp = shop if env_name == plan.environment else (shop_for(env_name, brand) if shop else None)
+            ancs = anchors(env_name, shp)
+            env_cache[env_name] = (shp, ancs[0] if shp else None, [x for x in ancs if not x.get("shop")])
+        return env_cache[env_name]
     cast = [{"id": c.id, "name": c.name, "outfit": outfit(c.role, i, c.palette)} for i, c in enumerate(plan.cast)]
     known = {c.id for c in plan.cast}
     scenes = []
@@ -107,6 +118,8 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
         if ws0:
             _ANCHOR[id(ws0)] = (ws0[0]["s"], (a0 + 3) if a0 else int(round(ws0[0]["s"] * fps)))
     for bi, (beat, (a, b, ws)) in enumerate(zip(plan.beats, spans)):
+        env_b = beat.environment or plan.environment
+        shop_b, shop_anchor, free = env_setup(env_b)
         anc = shop_anchor if (beat.atShop and shop_anchor) else free[(bi * 2 + plan.seed) % len(free)]
         Cx, Cz = anc["C"]
         ux, uz = anc["u"]
@@ -117,7 +130,7 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
         order = sorted(chars, key=lambda c: 0 if c.id == focus_id else 1)
         # stage inside the visible 9:16 frame: half-width at the subject = d * tan(fov/2) * 9/16
         sp0 = SHOTS[beat.shot]
-        half = sp0["d"] * math.tan(math.radians(sp0["fov"] / 2)) * 9 / 16
+        half = sp0["d"] * math.tan(math.radians(sp0["fov"] / 2)) * aspect
         spread = max(0.62, min(1.9, 0.78 * half))
         lat = [0.0, -1.0, 1.0, -1.7, 1.7, -2.4, 2.4]
         dep = [0.0, 0.9, 1.4, 2.6, 2.9, 3.8, 4.1]
@@ -160,16 +173,21 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
         if beat.shot == "insert":   # product insert: the object sits 1.1 m in front of the subject, the subject stays soft behind it
             tx, tz = tx - ux * 1.1, tz - uz * 1.1
         side_sign = 1 if bi % 2 == 0 else -1
+        fscale = 0.72 if next((c for c in cast if c["id"] == focus_id), {}).get("outfit", {}).get("build") == "kid" else 1.0
         if anc.get("shop") and beat.shot in ("wide", "medium", "high"):
             side_sign = 0           # the shop sign is the subject: frame it centred, never cropped
 
         def frame_at(shot: str, s_sign: int, roll: float = 0.0) -> dict:
             p = SHOTS[shot]
-            cx = tx - ux * p["d"] + rx * p["side"] * s_sign
-            cz = tz - uz * p["d"] + rz * p["side"] * s_sign
-            if plan.environment in ("village_square", "market") and math.hypot(cx, cz) < 3.8:  # never inside the fountain
+            dd = min(p["d"], 7.0) if env_b == "interior" else p["d"]   # stay in or just outside the room
+            cx = tx - ux * dd + rx * p["side"] * s_sign
+            cz = tz - uz * dd + rz * p["side"] * s_sign
+            if env_b in ("village_square", "market") and math.hypot(cx, cz) < 3.8:  # never inside the fountain
                 k = 3.8 / max(0.01, math.hypot(cx, cz)); cx, cz = cx * k, cz * k
-            return {"position": [round(cx, 3), p["h"], round(cz, 3)], "lookAt": [round(tx, 3), p["lh"], round(tz, 3)], "fov": p["fov"], "roll": roll}
+            # aim at the subject's own eye line (kids are 0.72 x an adult); the lens height follows for eye-level shots
+            k_h = fscale if shot in ("close", "insert", "two_shot", "medium") else 1.0
+            lens_h = p["h"] if shot in ("high", "low", "wide") else p["h"] * k_h + (1 - k_h) * 0.35
+            return {"position": [round(cx, 3), round(lens_h, 3), round(cz, 3)], "lookAt": [round(tx, 3), round(p["lh"] * k_h, 3), round(tz, 3)], "fov": p["fov"], "roll": roll}
 
         keys = [{"frame": a, **frame_at(beat.shot, side_sign)}]
         if anc.get("shop") and beat.shot == "wide":   # include the whole sign (5.6 m) + awning: look a bit higher
@@ -181,7 +199,7 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
             fx_, fz_ = k0["lookAt"][0] - cpx, k0["lookAt"][2] - cpz
             nrm = math.hypot(fx_, fz_) or 1.0
             fx_, fz_ = fx_ / nrm, fz_ / nrm
-            tanh = math.tan(math.radians(k0["fov"] / 2)) * 9 / 16
+            tanh = math.tan(math.radians(k0["fov"] / 2)) * aspect
             for act in actors[1:]:
                 for key in (("x", "z"),):
                     dx, dz = act["x"] - cpx, act["z"] - cpz
@@ -212,6 +230,10 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
         scene = {"sceneId": f"b{bi + 1:02d}", "startFrame": a, "endFrame": b, "narration": beat.narration, "light": beat.light, "mood": beat.mood,
                  "actors": actors, "cameraKeys": keys, "push": sp["push"], "dof": dof, "transitionIn": "cut" if bi == 0 else beat.transition,
                  "seed": plan.seed * 100 + bi, "qualityNotes": beat.visual or ""}
+        if env_b == "interior":   # open-topped room: a high sun pours in over the walls (a low sun would leave it all in shade)
+            scene["sunEl"], scene["sunAz"] = 68, 35
+        if env_b != plan.environment:
+            scene["env"] = {"preset": env_b, "seed": plan.seed, "shop": shop_b}
         if impact:
             scene["kicks"] = [{"frame": impact + LEAD, "amp": 0.8}]
         fxs = []
@@ -228,9 +250,11 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                 dcam = SHOTS[beat.shot]["d"]
                 vhalf = dcam * math.tan(math.radians(sp["fov"] / 2))
                 y = min(2.28, sp["lh"] + 0.62 * vhalf)
-                side = min(0.42, 0.55 * vhalf * 9 / 16)
+                side = min(0.42, 0.55 * vhalf * aspect)
                 size = min(0.42, 0.32 * vhalf) if f.kind == "product" else min(0.8, 0.5 * vhalf)
                 at = [round(who[0] + rx * side, 3), round(y, 3), round(who[1] + rz * side, 3)]
+            elif f.kind == "steam":   # rises from the held cup (right hand), not over the body
+                at = [round(who[0] + rx * 0.42, 3), 1.32, round(who[1] + rz * 0.42 - uz * 0.05, 3)]; size = 0.32
             else:
                 at = [round(who[0], 3), 1.0, round(who[1], 3)]; size = 0.9
             d = b - fr if f.kind in ("notes", "steam") else min(60, b - fr)
@@ -241,11 +265,19 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
         if beat.text:
             scene["textOverlays"] = [{"text": beat.text, "frame": a + 3, "dur": max(20, b - a - 6), "position": "bottom" if beat.textStyle == "cta" else "top", "style": beat.textStyle}]
         scenes.append(scene)
+    # visual style -> post / lens character (storybook = the measured template look)
+    post = None
+    if plan.style == "minimal_stickman":
+        post = {"lens": False}                              # flat, everything sharp
+    elif plan.style == "cinematic_explainer":
+        for sc in scenes:                                   # stronger, more constant background blur
+            sc["dof"] = {**sc["dof"], "cInf": max(sc["dof"].get("cInf", 0), 9 if sc["dof"].get("focusActor") is not None else 0) * 1.25}
     total = scenes[-1]["endFrame"]
     sb = {"version": 1, "title": plan.title, "fps": fps, "width": width, "height": height, "durationInFrames": total,
           "env": {"preset": plan.environment, "seed": plan.seed, "shop": shop}, "cast": cast, "scenes": scenes,
           "brand": ({"name": brand["name"], "primary": brand["primary"], "secondary": brand["secondary"], "text": brand["text"]} if brand else None),
-          "captions": {"enabled": plan.captions, "words": words if plan.captions else []}}
+          "captions": {"enabled": plan.captions, "words": words if plan.captions else []}, "style": plan.style,
+          **({"post": post} if post else {})}
     validate(sb)
     return sb
 

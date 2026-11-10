@@ -1,0 +1,266 @@
+{
+ "video": "C:\\Users\\felip\\AI-Reels-Studio\\projects\\la-segunda-guerra-mundial-c4c1e4\\output\\la-segunda-guerra-mundial_standard_v1.mp4",
+ "probe": {
+  "width": 1080,
+  "height": 1920,
+  "fps": 30.0,
+  "videoSeconds": 26.933333,
+  "audioSeconds": 26.933333,
+  "sizeMB": 15.08
+ },
+ "checks": [
+  {
+   "check": "video stream",
+   "ok": true,
+   "detail": "1 video stream(s), codec h264",
+   "blocking": true
+  },
+  {
+   "check": "9:16 ratio",
+   "ok": true,
+   "detail": "1080x1920",
+   "blocking": true
+  },
+  {
+   "check": "fps",
+   "ok": true,
+   "detail": "30.000 fps",
+   "blocking": true
+  },
+  {
+   "check": "duration",
+   "ok": true,
+   "detail": "video 26.933 s, storyboard 26.933 s",
+   "blocking": true
+  },
+  {
+   "check": "single audio track",
+   "ok": true,
+   "detail": "1 audio stream(s) (a silent extra track means the mux mapped the wrong stream)",
+   "blocking": true
+  },
+  {
+   "check": "AAC 48 kHz",
+   "ok": true,
+   "detail": "aac 48000 Hz 2 ch",
+   "blocking": true
+  },
+  {
+   "check": "A/V length match",
+   "ok": true,
+   "detail": "audio 26.933 s vs video 26.933 s",
+   "blocking": true
+  },
+  {
+   "check": "no black spans",
+   "ok": true,
+   "detail": "0 span(s) []",
+   "blocking": true
+  },
+  {
+   "check": "no white spans (>0.2 s)",
+   "ok": true,
+   "detail": "0 span(s) [] \u2014 4-frame flashes are shorter and allowed",
+   "blocking": true
+  },
+  {
+   "check": "no frozen holds >= 1.5 s",
+   "ok": true,
+   "detail": "0 freeze(s) >= 0.6 s: []",
+   "blocking": false
+  },
+  {
+   "check": "loudness ~ -14 LUFS",
+   "ok": true,
+   "detail": "integrated -14.0 LUFS (target -14, platform normalisation)",
+   "blocking": false
+  },
+  {
+   "check": "true peak <= -1 dBTP",
+   "ok": true,
+   "detail": "true peak -1.9 dBTP",
+   "blocking": true
+  },
+  {
+   "check": "no long silences",
+   "ok": true,
+   "detail": "0 silence(s) >= 1.2 s: []",
+   "blocking": false
+  },
+  {
+   "check": "day exposure (heuristic)",
+   "ok": true,
+   "detail": "median luma of day scenes 0.603, reference ~0.57 (range 0.5-0.66)",
+   "blocking": false
+  },
+  {
+   "check": "no crushed blacks (heuristic)",
+   "ok": true,
+   "detail": "scenes with p5 luma < 0.04: []",
+   "blocking": false
+  }
+ ],
+ "blocking": [],
+ "warnings": [],
+ "technicalPass": true,
+ "loudness": {
+  "I": -14.0,
+  "TP": -1.9
+ },
+ "sceneStats": [
+  {
+   "scene": "b01",
+   "t": 1.3,
+   "light": "day",
+   "medianLuma": 0.59,
+   "p5Luma": 0.29,
+   "p95Luma": 0.843,
+   "satMean": 0.353
+  },
+  {
+   "scene": "b02",
+   "t": 4.03,
+   "light": "day",
+   "medianLuma": 0.603,
+   "p5Luma": 0.159,
+   "p95Luma": 0.859,
+   "satMean": 0.346
+  },
+  {
+   "scene": "b03",
+   "t": 6.7,
+   "light": "day",
+   "medianLuma": 0.594,
+   "p5Luma": 0.3,
+   "p95Luma": 0.842,
+   "satMean": 0.304
+  },
+  {
+   "scene": "b04",
+   "t": 9.17,
+   "light": "day",
+   "medianLuma": 0.624,
+   "p5Luma": 0.236,
+   "p95Luma": 0.874,
+   "satMean": 0.33
+  },
+  {
+   "scene": "b05",
+   "t": 11.33,
+   "light": "day",
+   "medianLuma": 0.61,
+   "p5Luma": 0.313,
+   "p95Luma": 0.863,
+   "satMean": 0.305
+  },
+  {
+   "scene": "b06",
+   "t": 13.43,
+   "light": "day",
+   "medianLuma": 0.603,
+   "p5Luma": 0.3,
+   "p95Luma": 0.854,
+   "satMean": 0.338
+  },
+  {
+   "scene": "b07",
+   "t": 16.37,
+   "light": "day",
+   "medianLuma": 0.588,
+   "p5Luma": 0.288,
+   "p95Luma": 0.843,
+   "satMean": 0.335
+  },
+  {
+   "scene": "b08",
+   "t": 19.63,
+   "light": "day",
+   "medianLuma": 0.608,
+   "p5Luma": 0.185,
+   "p95Luma": 0.859,
+   "satMean": 0.333
+  },
+  {
+   "scene": "b09",
+   "t": 22.57,
+   "light": "day",
+   "medianLuma": 0.59,
+   "p5Luma": 0.212,
+   "p95Luma": 0.858,
+   "satMean": 0.306
+  },
+  {
+   "scene": "b10",
+   "t": 25.47,
+   "light": "day",
+   "medianLuma": 0.614,
+   "p5Luma": 0.284,
+   "p95Luma": 0.874,
+   "satMean": 0.332
+  }
+ ],
+ "rubric": [
+  {
+   "area": "Comprensi\u00f3n narrativa y gancho inicial",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "Coherencia de personajes y escenarios",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "C\u00e1mara y pacing",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "auto+human"
+  },
+  {
+   "area": "Contornos / ilustraci\u00f3n / materiales",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "Iluminaci\u00f3n, color y profundidad",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "auto+human"
+  },
+  {
+   "area": "Claridad y naturalidad de la voz",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "SFX, m\u00fasica y sincron\u00eda",
+   "score": null,
+   "basis": "computed loudness -14.0 LUFS / TP -1.9 dBTP; sync and taste need a listen",
+   "kind": "auto+human"
+  },
+  {
+   "area": "Composici\u00f3n vertical y safe areas",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "Alineaci\u00f3n visual-texto",
+   "score": null,
+   "basis": "pending human review (see checklist)",
+   "kind": "human"
+  },
+  {
+   "area": "Calidad t\u00e9cnica del archivo y licencias",
+   "score": 10,
+   "basis": "computed (checks above)",
+   "kind": "auto"
+  }
+ ],
+ "approved": false,
+ "note": "Technical checks are measured. Subjective rubric areas are NOT auto-scored; a person must review frames/video and approve in the app."
+}

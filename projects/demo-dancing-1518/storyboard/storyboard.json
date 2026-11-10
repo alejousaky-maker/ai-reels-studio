@@ -4,7 +4,7 @@
  "fps": 30,
  "width": 1080,
  "height": 1920,
- "durationInFrames": 1911,
+ "durationInFrames": 1909,
  "env": {
   "preset": "village_square",
   "seed": 3,
@@ -210,7 +210,7 @@
   {
    "sceneId": "b01",
    "startFrame": 0,
-   "endFrame": 161,
+   "endFrame": 162,
    "narration": "In the summer of 1518, a woman in Strasbourg stepped into the street and started dancing.",
    "light": "day",
    "mood": "whimsical",
@@ -253,7 +253,7 @@
      "roll": 0.0
     },
     {
-     "frame": 88,
+     "frame": 89,
      "cut": true,
      "position": [
       15.1,
@@ -279,8 +279,8 @@
   },
   {
    "sceneId": "b02",
-   "startFrame": 161,
-   "endFrame": 201,
+   "startFrame": 162,
+   "endFrame": 202,
    "narration": "And she would not stop.",
    "light": "day",
    "mood": "whimsical",
@@ -295,7 +295,7 @@
    ],
    "cameraKeys": [
     {
-     "frame": 161,
+     "frame": 162,
      "position": [
       9.157,
       1.62,
@@ -320,15 +320,15 @@
    "qualityNotes": "",
    "kicks": [
     {
-     "frame": 180,
+     "frame": 181,
      "amp": 0.8
     }
    ]
   },
   {
    "sceneId": "b03",
-   "startFrame": 201,
-   "endFrame": 366,
+   "startFrame": 202,
+   "endFrame": 367,
    "narration": "There was no music. No party. Just one woman, dancing for days, while her neighbours stared.",
    "light": "day",
    "mood": "curious",
@@ -348,20 +348,20 @@
      "mode": "stand",
      "exprKeys": [
       {
-       "frame": 344,
+       "frame": 345,
        "expr": "nervous"
       }
      ]
     },
     {
      "castId": "greta",
-     "x": -8.1,
-     "z": 0.988,
+     "x": -8.173,
+     "z": 0.733,
      "expr": "smile",
      "mode": "stand",
      "exprKeys": [
       {
-       "frame": 336,
+       "frame": 337,
        "expr": "shock"
       }
      ]
@@ -369,7 +369,7 @@
    ],
    "cameraKeys": [
     {
-     "frame": 201,
+     "frame": 202,
      "position": [
       -15.1,
       1.68,
@@ -384,7 +384,7 @@
      "roll": 0.0
     },
     {
-     "frame": 291,
+     "frame": 292,
      "cut": true,
      "position": [
       -12.4,
@@ -411,12 +411,12 @@
    "fx": [
     {
      "kind": "product",
-     "frame": 214,
+     "frame": 215,
      "dur": 60,
      "at": [
-      -8.1,
+      -8.173,
       2.28,
-      1.408
+      1.153
      ],
      "size": 0.42,
      "product": "question"
@@ -425,8 +425,8 @@
   },
   {
    "sceneId": "b04",
-   "startFrame": 366,
-   "endFrame": 441,
+   "startFrame": 367,
+   "endFrame": 442,
    "narration": "Then her neighbour joined in. Then another.",
    "light": "day",
    "mood": "whimsical",
@@ -440,8 +440,8 @@
     },
     {
      "castId": "anna",
-     "x": 8.6,
-     "z": 0.72,
+     "x": 8.625,
+     "z": 0.612,
      "expr": "grin",
      "mode": "dance"
     },
@@ -461,7 +461,7 @@
    ],
    "cameraKeys": [
     {
-     "frame": 366,
+     "frame": 367,
      "position": [
       13.8,
       1.66,
@@ -493,8 +493,8 @@
   },
   {
    "sceneId": "b05",
-   "startFrame": 441,
-   "endFrame": 607,
+   "startFrame": 442,
+   "endFrame": 608,
    "narration": "Within weeks, dozens of people were dancing in the streets, drenched in sweat, unable to stop.",
    "light": "day",
    "mood": "tense",
@@ -515,15 +515,15 @@
     },
     {
      "castId": "greta",
-     "x": 4.872,
-     "z": -7.375,
+     "x": 5.086,
+     "z": -7.245,
      "expr": "dazed",
      "mode": "dance"
     },
     {
      "castId": "extra0",
-     "x": 3.465,
-     "z": -5.728,
+     "x": 3.661,
+     "z": -5.609,
      "mode": "dance",
      "expr": "smile"
     },
@@ -536,8 +536,8 @@
     },
     {
      "castId": "extra2",
-     "x": 0.99,
-     "z": -5.091,
+     "x": 2.441,
+     "z": -4.21,
      "mode": "dance",
      "expr": "nervous"
     },
@@ -550,8 +550,8 @@
     },
     {
      "castId": "extra4",
-     "x": 0.849,
-     "z": -6.788,
+     "x": 3.359,
+     "z": -5.264,
      "mode": "dance",
      "expr": "laugh"
     },
@@ -564,22 +564,22 @@
     },
     {
      "castId": "extra6",
-     "x": 0.707,
-     "z": -8.485,
+     "x": 4.277,
+     "z": -6.317,
      "mode": "dance",
      "expr": "grin"
     },
     {
      "castId": "extra7",
-     "x": 7.142,
-     "z": -0.495,
+     "x": 6.192,
+     "z": -1.072,
      "mode": "dance",
      "expr": "nervous"
     }
    ],
    "cameraKeys": [
     {
-     "frame": 441,
+     "frame": 442,
      "position": [
       11.526,
       7.6,
@@ -594,7 +594,7 @@
      "roll": 0.0
     },
     {
-     "frame": 532,
+     "frame": 533,
      "cut": true,
      "position": [
       16.263,
@@ -620,8 +620,8 @@
   },
   {
    "sceneId": "b06",
-   "startFrame": 607,
-   "endFrame": 665,
+   "startFrame": 608,
+   "endFrame": 666,
    "narration": "So what did the town council do?",
    "light": "day",
    "mood": "curious",
@@ -636,7 +636,7 @@
    ],
    "cameraKeys": [
     {
-     "frame": 607,
+     "frame": 608,
      "position": [
       -15.1,
       1.68,
@@ -662,7 +662,7 @@
    "fx": [
     {
      "kind": "product",
-     "frame": 634,
+     "frame": 635,
      "dur": 31,
      "at": [
       -9.5,
@@ -676,8 +676,8 @@
   },
   {
    "sceneId": "b07",
-   "startFrame": 665,
-   "endFrame": 729,
+   "startFrame": 666,
+   "endFrame": 730,
    "narration": "They decided the cure was more dancing.",
    "light": "day",
    "mood": "whimsical",
@@ -690,7 +690,7 @@
      "mode": "stand",
      "exprKeys": [
       {
-       "frame": 707,
+       "frame": 708,
        "expr": "grin"
       }
      ]
@@ -698,7 +698,7 @@
    ],
    "cameraKeys": [
     {
-     "frame": 665,
+     "frame": 666,
      "position": [
       12.4,
       1.62,
@@ -723,14 +723,14 @@
    "qualityNotes": "",
    "kicks": [
     {
-     "frame": 709,
+     "frame": 710,
      "amp": 0.8
     }
    ],
    "fx": [
     {
      "kind": "product",
-     "frame": 688,
+     "frame": 689,
      "dur": 41,
      "at": [
       9.5,
@@ -744,8 +744,8 @@
   },
   {
    "sceneId": "b08",
-   "startFrame": 729,
-   "endFrame": 942,
+   "startFrame": 730,
+   "endFrame": 943,
    "narration": "According to the chronicles, they cleared halls, hired musicians, and even paid strong men to keep the dancers on their feet.",
    "light": "day",
    "mood": "upbeat",
@@ -766,15 +766,15 @@
     },
     {
      "castId": "hans",
-     "x": 4.82,
-     "z": -6.635,
+     "x": 5.131,
+     "z": -6.497,
      "expr": "pained",
      "mode": "dance"
     },
     {
      "castId": "extra0",
-     "x": 3.465,
-     "z": -5.728,
+     "x": 4.346,
+     "z": -5.339,
      "mode": "dance",
      "expr": "smile"
     },
@@ -787,8 +787,8 @@
     },
     {
      "castId": "extra2",
-     "x": 0.99,
-     "z": -5.091,
+     "x": 3.443,
+     "z": -4.007,
      "mode": "dance",
      "expr": "nervous"
     },
@@ -802,7 +802,7 @@
    ],
    "cameraKeys": [
     {
-     "frame": 729,
+     "frame": 730,
      "position": [
       9.405,
       0.85,
@@ -817,7 +817,7 @@
      "roll": 0.0
     },
     {
-     "frame": 846,
+     "frame": 847,
      "cut": true,
      "position": [
       9.546,
@@ -844,7 +844,7 @@
    "fx": [
     {
      "kind": "notes",
-     "frame": 819,
+     "frame": 820,
      "dur": 123,
      "at": [
       6.505,
@@ -857,8 +857,8 @@
   },
   {
    "sceneId": "b09",
-   "startFrame": 942,
-   "endFrame": 1005,
+   "startFrame": 943,
+   "endFrame": 1006,
    "narration": "Luckily, the music was excellent.",
    "light": "day",
    "mood": "upbeat",
@@ -880,7 +880,7 @@
    ],
    "cameraKeys": [
     {
-     "frame": 942,
+     "frame": 943,
      "position": [
       -15.1,
       1.68,
@@ -906,7 +906,7 @@
    "fx": [
     {
      "kind": "notes",
-     "frame": 950,
+     "frame": 951,
      "dur": 55,
      "at": [
       -9.5,
@@ -919,8 +919,8 @@
   },
   {
    "sceneId": "b10",
-   "startFrame": 1005,
-   "endFrame": 1073,
+   "startFrame": 1006,
+   "endFrame": 1074,
    "narration": "Unluckily, it only made things worse.",
    "light": "golden",
    "mood": "tense",
@@ -935,7 +935,7 @@
    ],
    "cameraKeys": [
     {
-     "frame": 1005,
+     "frame": 1006,
      "position": [
       12.4,
       1.62,
@@ -960,15 +960,15 @@
    "qualityNotes": "",
    "kicks": [
     {
-     "frame": 1054,
+     "frame": 1055,
      "amp": 0.8
     }
    ]
   },
   {
    "sceneId": "b11",
-   "startFrame": 1073,
-   "endFrame": 1213,
+   "startFrame": 1074,
+   "endFrame": 1215,
    "narration": "The council banned public dancing, and the dancers were sent to a shrine to pray.",
    "light": "golden",
    "mood": "warm",
@@ -982,17 +982,17 @@
     },
     {
      "castId": "anna",
-     "x": 9.418,
-     "z": -3.253,
+     "x": 7.792,
+     "z": -4.156,
      "expr": "dazed",
      "mode": "stroll",
      "walkTo": [
-      7.721,
-      -4.95
+      6.095,
+      -5.853
      ],
      "walkFrames": [
-      1073,
-      1171
+      1074,
+      1172
      ]
     },
     {
@@ -1006,14 +1006,14 @@
       -7.584
      ],
      "walkFrames": [
-      1073,
-      1171
+      1074,
+      1172
      ]
     }
    ],
    "cameraKeys": [
     {
-     "frame": 1073,
+     "frame": 1074,
      "position": [
       12.021,
       2.3,
@@ -1028,7 +1028,7 @@
      "roll": 0.0
     },
     {
-     "frame": 1138,
+     "frame": 1139,
      "dur": 24,
      "position": [
       9.546,
@@ -1054,7 +1054,7 @@
    "fx": [
     {
      "kind": "product",
-     "frame": 1086,
+     "frame": 1087,
      "dur": 60,
      "at": [
       6.421,
@@ -1068,8 +1068,8 @@
   },
   {
    "sceneId": "b12",
-   "startFrame": 1213,
-   "endFrame": 1304,
+   "startFrame": 1215,
+   "endFrame": 1306,
    "narration": "You see, historians still argue about why it happened.",
    "light": "night",
    "mood": "curious",
@@ -1082,7 +1082,7 @@
      "mode": "stand",
      "exprKeys": [
       {
-       "frame": 1258,
+       "frame": 1260,
        "expr": "nervous"
       }
      ]
@@ -1090,7 +1090,7 @@
    ],
    "cameraKeys": [
     {
-     "frame": 1213,
+     "frame": 1215,
      "position": [
       -15.1,
       1.68,
@@ -1105,7 +1105,7 @@
      "roll": 0.0
     },
     {
-     "frame": 1251,
+     "frame": 1253,
      "dur": 24,
      "position": [
       -12.4,
@@ -1132,7 +1132,7 @@
    "fx": [
     {
      "kind": "product",
-     "frame": 1232,
+     "frame": 1234,
      "dur": 60,
      "at": [
       -9.5,
@@ -1146,8 +1146,8 @@
   },
   {
    "sceneId": "b13",
-   "startFrame": 1304,
-   "endFrame": 1614,
+   "startFrame": 1306,
+   "endFrame": 1616,
    "narration": "The most popular idea is that fear, hunger and disease pushed people past their limits, and the panic spread from person to person, like a yawn across a crowded room.",
    "light": "night",
    "mood": "curious",
@@ -1167,20 +1167,20 @@
      "mode": "stand",
      "exprKeys": [
       {
-       "frame": 1558,
+       "frame": 1560,
        "expr": "whistle"
       }
      ]
     },
     {
      "castId": "greta",
-     "x": 8.1,
-     "z": -0.759,
+     "x": 8.143,
+     "z": -0.576,
      "expr": "neutral",
      "mode": "stand",
      "exprKeys": [
       {
-       "frame": 1587,
+       "frame": 1589,
        "expr": "whistle"
       }
      ]
@@ -1188,7 +1188,7 @@
    ],
    "cameraKeys": [
     {
-     "frame": 1304,
+     "frame": 1306,
      "position": [
       13.8,
       1.66,
@@ -1203,7 +1203,7 @@
      "roll": 0.0
     },
     {
-     "frame": 1474,
+     "frame": 1476,
      "cut": true,
      "position": [
       12.4,
@@ -1230,7 +1230,7 @@
    "fx": [
     {
      "kind": "product",
-     "frame": 1328,
+     "frame": 1330,
      "dur": 60,
      "at": [
       9.5,
@@ -1244,8 +1244,8 @@
   },
   {
    "sceneId": "b14",
-   "startFrame": 1614,
-   "endFrame": 1766,
+   "startFrame": 1616,
+   "endFrame": 1768,
    "narration": "By September, the dancing faded away, and nobody knows exactly how many danced.",
    "light": "golden",
    "mood": "warm",
@@ -1259,15 +1259,15 @@
     },
     {
      "castId": "hans",
-     "x": 7.721,
-     "z": -4.95,
+     "x": 7.648,
+     "z": -5.081,
      "expr": "dazed",
      "mode": "sit"
     }
    ],
    "cameraKeys": [
     {
-     "frame": 1614,
+     "frame": 1616,
      "position": [
       16.263,
       2.3,
@@ -1282,7 +1282,7 @@
      "roll": 0.0
     },
     {
-     "frame": 1697,
+     "frame": 1699,
      "cut": true,
      "position": [
       9.546,
@@ -1308,8 +1308,8 @@
   },
   {
    "sceneId": "b15",
-   "startFrame": 1766,
-   "endFrame": 1911,
+   "startFrame": 1768,
+   "endFrame": 1909,
    "narration": "But the town that tried to cure dancing with more dancing never forgot it.",
    "light": "golden",
    "mood": "warm",
@@ -1331,7 +1331,7 @@
    ],
    "cameraKeys": [
     {
-     "frame": 1766,
+     "frame": 1768,
      "position": [
       -15.1,
       1.68,
@@ -1346,12 +1346,12 @@
      "roll": 0.0
     },
     {
-     "frame": 1866,
-     "cut": true,
+     "frame": 1856,
+     "dur": 24,
      "position": [
       -12.4,
       1.62,
-      -0.55
+      0.55
      ],
      "lookAt": [
       -9.5,
@@ -1372,7 +1372,7 @@
    "qualityNotes": "",
    "kicks": [
     {
-     "frame": 1868,
+     "frame": 1870,
      "amp": 0.8
     }
    ]

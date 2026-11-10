@@ -1,4 +1,4 @@
-﻿"""AI Reels Studio API (FastAPI). Listens on 127.0.0.1 only. Serves the built UI from app/frontend/dist."""
+"""AI Reels Studio API (FastAPI). Listens on 127.0.0.1 only. Serves the built UI from app/frontend/dist."""
 from __future__ import annotations
 
 import hashlib
@@ -38,7 +38,7 @@ MAGIC = {".png": [b"\x89PNG"], ".jpg": [b"\xff\xd8\xff"], ".jpeg": [b"\xff\xd8\x
 
 
 def settings() -> dict:
-    d = {"ollamaModel": None, "voiceEn": "af_heart", "voiceEs": "ef_dora", "quality": "standard", "provider": "auto", "musicDb": -10, "qaThreshold": 7}
+    d = {"ollamaModel": None, "voiceEn": "af_heart", "voiceEs": "ef_dora", "quality": "master", "provider": "auto", "musicDb": -10, "qaThreshold": 7}
     d.update(P.load_json(SETTINGS, {}) or {})
     return d
 
@@ -81,7 +81,7 @@ def options():
     from engine.audio.tts import VOICES
     from engine.providers.planner import ollama_models
     return {"voices": VOICES, "qualities": P.QUALITY, "styles": ["storybook", "cinematic_explainer", "minimal_stickman", "product_ad", "custom_brand"],
-            "environments": ["village_square", "market", "street", "park"], "durations": [15, 30, 45, 60, 90],
+            "environments": ["village_square", "market", "street", "park", "interior", "harbour"], "durations": [15, 30, 45, 60, 90],
             "roles": ["villager_woman", "villager_man", "kid", "official", "musician", "baker", "barista", "scholar", "customer", "elder", "worker"],
             "shots": ["wide", "medium", "close", "low", "high", "two_shot", "insert"], "lights": ["day", "golden", "night"],
             "moods": ["whimsical", "curious", "tense", "warm", "upbeat"],
@@ -116,9 +116,9 @@ class ProjectIn(BaseModel):
     kind: str = Field("story", pattern="^(story|ad|explainer)$")
     lang: str = Field("en", pattern="^(en|es)$")
     seconds: int = Field(60, ge=10, le=120)
-    quality: str = Field("standard", pattern="^(draft|standard|master)$")
+    quality: str = Field("master", pattern="^(draft|standard|master)$")
     style: str = "storybook"
-    environment: str = Field("village_square", pattern="^(village_square|market|street|park)$")
+    environment: str = Field("village_square", pattern="^(village_square|market|street|park|interior|harbour)$")
     voice: str | None = None
     speed: float = Field(1.0, ge=0.7, le=1.4)
     clientId: str | None = None
@@ -127,7 +127,7 @@ class ProjectIn(BaseModel):
     music: bool = True
     variants: int = Field(1, ge=1, le=4)
     provider: str = Field("auto", pattern="^(auto|ollama|template|claude)$")
-    review: str = Field("auto_qa", pattern="^(auto_qa|approve_script)$")
+    review: str = Field("auto_qa", pattern="^(auto_qa|approve_script|script_only)$")
     seed: int = 7
     autostart: bool = True
 
@@ -173,7 +173,7 @@ def create_project(p: ProjectIn):
     P.update_manifest(pid, title=p.title, created=db.now(), request=params)
     out = {"id": pid}
     if p.autostart:
-        kind = "plan" if p.review == "approve_script" else "create"
+        kind = "script" if p.review == "script_only" else "plan" if p.review == "approve_script" else "create"
         out["job"] = jobs.submit(pid, kind, {})
         if p.variants > 1:
             out["variants"] = []
@@ -282,6 +282,7 @@ class SceneEdit(BaseModel):
     characters: list[dict] | None = None
     fx: list[dict] | None = None
     text: str | None = None
+    environment: str | None = None
     dofCInf: float | None = None
     push: float | None = None
 
@@ -295,10 +296,10 @@ def edit_beat(pid: str, idx: int, e: SceneEdit):
     if not plan or idx < 0 or idx >= len(plan["beats"]):
         raise HTTPException(404, "beat not found")
     b = plan["beats"][idx]
-    for k in ("light", "shot", "narration", "mood", "transition", "focus", "characters", "fx", "text"):
+    for k in ("light", "shot", "narration", "mood", "transition", "focus", "characters", "fx", "text", "environment"):
         v = getattr(e, k)
         if v is not None:
-            b[k] = v
+            b[k] = (v or None) if k == "environment" else v   # environment "" = back to the project location
     pl = Plan.model_validate(plan)
     P.step_script(pid, pl)
     over = P.load_json(P.pdir(pid, "storyboard", "overrides.json"), {})
@@ -318,7 +319,7 @@ def edit_beat(pid: str, idx: int, e: SceneEdit):
 
 # ------------------------------------------------------------------ jobs
 class JobIn(BaseModel):
-    kind: str = Field(pattern="^(create|plan|produce|voice|storyboard|stills|render|mix|qa|regen_scene|export)$")
+    kind: str = Field(pattern="^(create|plan|script|produce|voice|storyboard|stills|render|mix|qa|regen_scene|export)$")
     params: dict = Field(default_factory=dict)
 
 
@@ -630,8 +631,12 @@ def _plan_for(pid: str, ctx) -> Plan:
     if claims and not plan.verifiedClaims:
         from engine.story.schema import Claim
         plan.verifiedClaims = [Claim(text=c, status="approved_by_client") for c in claims]
+    from engine.story.normalize import normalize_plan
+    plan, fixes = normalize_plan(plan)   # small local models ignore direction fields: repair before producing
+    if fixes:
+        ctx.progress("script", -1, "plan repaired: " + "; ".join(fixes))
     P.step_script(pid, plan)
-    P.update_manifest(pid, scriptProvider=used)
+    P.update_manifest(pid, scriptProvider=used, planRepairs=fixes)
     ctx.progress("script", 1.0, f"{len(plan.beats)} beats by {used}")
     return plan
 
@@ -750,6 +755,69 @@ def h_qa(pid, params, ctx):
     return P.step_qa(pid, P.pdir(pid, "output", f"latest_{quality}.mp4"))
 
 
+# ------------------------------------------------------------------ images from prompts
+class ImageIn(BaseModel):
+    prompt: str = Field(min_length=3, max_length=1000)
+    aspect: str = Field("9:16", pattern="^(9:16|1:1|16:9|4:5)$")
+    variants: int = Field(2, ge=1, le=4)
+    provider: str = Field("auto", pattern="^(auto|ollama|rules)$")
+    spec: dict | None = None   # an edited scene spec (re-render exactly that)
+
+
+@app.post("/api/images")
+def create_image(body: ImageIn):
+    return jobs.submit(None, "image", body.model_dump())
+
+
+@app.post("/api/images/preview-spec")
+def image_spec_preview(body: ImageIn):
+    """how the prompt will be read (keyword reader, instant) - lets the user check/edit before rendering"""
+    from engine.image import rules_spec
+    return rules_spec(body.prompt).model_dump()
+
+
+@app.get("/api/images")
+def list_images():
+    from engine.image import IMAGES
+    out = []
+    if os.path.isdir(IMAGES):
+        for iid in sorted(os.listdir(IMAGES), reverse=True):
+            m = P.load_json(os.path.join(IMAGES, iid, "image.json"))
+            if m:
+                out.append(m)
+    return out
+
+
+@app.get("/api/images/{iid}/{name}")
+def image_file(iid: str, name: str):
+    from engine.image import IMAGES
+    if not re.fullmatch(r"[\w\-]{6,40}", iid) or not re.fullmatch(r"[\w\-.]{1,60}", name):
+        raise HTTPException(404)
+    base = os.path.realpath(os.path.join(IMAGES, iid))
+    full = os.path.realpath(os.path.join(base, name))
+    if not full.startswith(base + os.sep) or not os.path.isfile(full):
+        raise HTTPException(404)
+    return FileResponse(full)
+
+
+def h_image(pid, params, ctx):
+    from engine import image
+    model = None
+    if params.get("provider", "auto") in ("auto", "ollama"):
+        from engine.providers.planner import pick_model
+        model = pick_model(settings().get("ollamaModel"))
+    return image.generate(params["prompt"], params.get("aspect", "9:16"), int(params.get("variants", 2)), params.get("provider", "auto"), model,
+                          params.get("spec"), ctx.progress, ctx.cancelled, ctx.register)
+
+
+def h_script_only(pid, params, ctx):
+    """script from the prompt: plan + SCRIPT.md + FACTS.md, nothing rendered (approve/edit, then 'Producir todo')"""
+    plan = _plan_for(pid, ctx)
+    touch(pid, status="awaiting_review")
+    return {"_status": "awaiting_review", "beats": len(plan.beats), "words": len(plan.full_text().split())}
+
+
+jobs.HANDLERS.update({"image": h_image, "script": h_script_only})
 jobs.HANDLERS.update({"plan": h_plan, "create": h_produce, "produce": h_produce, "voice": h_voice, "storyboard": h_storyboard, "stills": h_stills,
                       "render": h_render, "regen_scene": h_regen_scene, "mix": h_mix, "qa": h_qa})
 

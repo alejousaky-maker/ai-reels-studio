@@ -9,6 +9,7 @@ Quick start in Spanish: **[README_PRIMEROS_PASOS_ES.md](README_PRIMEROS_PASOS_ES
 
 ```
 install.ps1   one-time, idempotent install (no admin)        start.bat / start.ps1   open the app (http://127.0.0.1:8777)
+Default output: Master 2K 1440x2560 (Draft / Standard also available).
 diagnose.ps1  hardware/tools report -> logs/diagnostics.json  test.ps1 [-Render]      tests (+ real GPU render smoke test)
 ```
 
@@ -19,16 +20,22 @@ diagnose.ps1  hardware/tools report -> logs/diagnostics.json  test.ps1 [-Render]
 | Voice | Kokoro-82M (ONNX, CPU), EN + ES voices, sentence-wise, 48 kHz; or import your WAV/MP3 | `audio/voice.wav`, `audio/sentences.json` |
 | Timing | faster-whisper word timestamps (CPU int8) inside TTS sentence spans; fallback by characters; `words.manual.json` overrides | `audio/words.json` |
 | Storyboard | Director: shots, camera keys, push-ins, kicks, DOF, staging inside the 9:16 frustum, reactions 2 f before the word, light arc | `storyboard/storyboard.json` (+ snapshots in `versions/`) |
+| Locations | 6 procedural places (village square, market, street, park, **interior**, **harbour**), switchable per scene | `storyboard.json` `env` per scene |
 | Picture | Remotion + three.js engine (`StoryShort`): template's ink → lens blur → bloom → tone map → grade chain, lit Canvas2D cast | per-scene segments `scenes/`, `preview/` stills + contact sheet |
 | Sound | Original procedural score per scene mood, event SFX, ducking, voice compressor, −14 LUFS, true-peak checked after AAC | `audio/mix.wav` + stems + `mix_report.json` |
 | Export / QA | ffmpeg mux `-map 0:v:0 -map 1:a:0`, ffprobe + filters QA, SRT, poster, ZIP | `output/*.mp4`, `qa/QUALITY_REPORT.md` |
 
-App screens: Panel, Crear vídeo, Proyectos (filters, duplicate, archive), Editor (production steps, storyboard
+Also from a prompt: **images** (2K PNG in the same style, 9:16 / 1:1 / 4:5 / 16:9, `images/<id>/`) and **script only**
+(editable plan + SCRIPT.md + FACTS.md, no render).
+
+App screens: Panel, Crear vídeo / guion, Imágenes, Proyectos (filters, duplicate, archive), Editor (production steps, storyboard
 timeline + inspector with undo/redo and per-scene regeneration, script/plan JSON, video + export, voice & audio with
 waveform and loudness, QA with human scoring/approval, versions), Cola de render (cancel/retry), Biblioteca (licensed
 assets, validated imports), Clientes/marcas (brand kits, approved claims), Ajustes (diagnostics, defaults, safe cache cleaning, logs).
 
 ## Demos included (real renders, original content)
+- **Master demo** `projects/lighthouse-daymarks` — "Why Lighthouses Get Dressed Up" (EN, 57.8 s, **2K 1440×2560**):
+  harbour → keeper's room → night harbour → back, side-view walking, verified facts (Cape Lookout daymark + 15 s flash).
 - **Demo A** `projects/demo-dancing-1518` — "The Town That Couldn't Stop Dancing" (EN, 63.7 s, 15 scenes; facts checked,
   uncertain points worded as uncertain).
 - **Demo B** `projects/caf-lumen-anuncio-*` — ad for a FICTIONAL café "Café Lumen" (ES, 20.7 s): brand-coloured sign and

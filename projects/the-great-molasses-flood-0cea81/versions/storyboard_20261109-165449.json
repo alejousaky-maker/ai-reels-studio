@@ -1,0 +1,913 @@
+{
+ "version": 1,
+ "title": "THE GREAT MOLASSES FLOOD",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1656,
+ "env": {
+  "preset": "village_square",
+  "seed": 7,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "sarah",
+   "name": "",
+   "outfit": {
+    "jacket": "#3f6fb5",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#f5c9a0",
+    "hat": "hair",
+    "hair": "#7a4a2a",
+    "dress": "#b5653f"
+   }
+  },
+  {
+   "id": "josh",
+   "name": "",
+   "outfit": {
+    "jacket": "#8c3b4a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "hat": "cap",
+    "cap": "#b5653f"
+   }
+  },
+  {
+   "id": "timmy",
+   "name": "",
+   "outfit": {
+    "jacket": "#5d7a3a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ecd0b6",
+    "hat": "hair",
+    "hair": "#7a4a2a",
+    "dress": "#7b5ac9"
+   }
+  },
+  {
+   "id": "sally",
+   "name": "",
+   "outfit": {
+    "jacket": "#b5653f",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ffe2c2",
+    "hat": "cap",
+    "cap": "#7b5ac9",
+    "moustache": "#4a3426"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 169,
+   "narration": "In 1919, a tank of molasses burst in Boston, flooding the city in sticky syrup.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      -15.1,
+      1.68,
+      1.6
+     ],
+     "lookAt": [
+      -9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 92,
+     "cut": true,
+     "position": [
+      -12.4,
+      1.62,
+      -0.55
+     ],
+     "lookAt": [
+      -9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10
+   },
+   "transitionIn": "cut",
+   "seed": 700,
+   "qualityNotes": "wide"
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 169,
+   "endFrame": 253,
+   "narration": "Setting: A cozy village square in the heart of Boston.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 169,
+     "position": [
+      15.1,
+      1.68,
+      1.6
+     ],
+     "lookAt": [
+      9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 203,
+     "dur": 24,
+     "position": [
+      12.4,
+      1.62,
+      0.55
+     ],
+     "lookAt": [
+      9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10
+   },
+   "transitionIn": "cut",
+   "seed": 701,
+   "qualityNotes": "wide"
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 253,
+   "endFrame": 365,
+   "narration": "Sarah and Josh, the local shopkeepers, are chatting by the fountain.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "sarah",
+     "x": 6.718,
+     "z": -6.718,
+     "expr": "smile",
+     "mode": "sit"
+    },
+    {
+     "castId": "josh",
+     "x": 6.744,
+     "z": -5.418,
+     "expr": "smile",
+     "mode": "sit"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 253,
+     "position": [
+      9.546,
+      1.68,
+      -11.809
+     ],
+     "lookAt": [
+      6.718,
+      1.38,
+      -6.718
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 302,
+     "dur": 24,
+     "position": [
+      8.379,
+      1.62,
+      -9.157
+     ],
+     "lookAt": [
+      6.718,
+      1.5,
+      -6.718
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 702,
+   "qualityNotes": "two_shot"
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 365,
+   "endFrame": 462,
+   "narration": "Suddenly, a huge tank of molasses appears out of nowhere.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "sarah",
+     "x": -9.5,
+     "z": 0.0,
+     "expr": "shock",
+     "mode": "stand"
+    },
+    {
+     "castId": "josh",
+     "x": -8.642,
+     "z": -0.791,
+     "expr": "shock",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 365,
+     "position": [
+      -15.1,
+      1.68,
+      -1.6
+     ],
+     "lookAt": [
+      -9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 406,
+     "dur": 24,
+     "position": [
+      -12.4,
+      1.62,
+      -0.55
+     ],
+     "lookAt": [
+      -9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 703,
+   "qualityNotes": "two_shot"
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 462,
+   "endFrame": 579,
+   "narration": "It starts to leak, and a thick, sticky flood begins to cover the square.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "timmy",
+     "x": 9.5,
+     "z": 2.4,
+     "expr": "whistle",
+     "mode": "stroll",
+     "walkTo": [
+      9.5,
+      0.0
+     ],
+     "walkFrames": [
+      462,
+      543
+     ]
+    },
+    {
+     "castId": "sally",
+     "x": 8.11,
+     "z": 1.623,
+     "expr": "shock",
+     "mode": "stroll",
+     "walkTo": [
+      8.11,
+      -0.777
+     ],
+     "walkFrames": [
+      462,
+      543
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 462,
+     "position": [
+      15.1,
+      1.68,
+      -1.6
+     ],
+     "lookAt": [
+      9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 514,
+     "dur": 24,
+     "position": [
+      12.4,
+      1.62,
+      -0.55
+     ],
+     "lookAt": [
+      9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 704,
+   "qualityNotes": "two_shot"
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 579,
+   "endFrame": 693,
+   "narration": "Children run in circles, laughing, until the syrup gets too deep.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "timmy",
+     "x": 6.718,
+     "z": -6.718,
+     "expr": "laugh",
+     "mode": "dance"
+    },
+    {
+     "castId": "sally",
+     "x": 7.197,
+     "z": -5.961,
+     "expr": "laugh",
+     "mode": "stroll",
+     "walkTo": [
+      5.5,
+      -7.658
+     ],
+     "walkFrames": [
+      579,
+      658
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 579,
+     "position": [
+      11.809,
+      1.68,
+      -9.546
+     ],
+     "lookAt": [
+      6.718,
+      1.38,
+      -6.718
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 629,
+     "dur": 24,
+     "position": [
+      9.157,
+      1.62,
+      -8.379
+     ],
+     "lookAt": [
+      6.718,
+      1.5,
+      -6.718
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 705,
+   "qualityNotes": "two_shot"
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 693,
+   "endFrame": 814,
+   "narration": "The flood reaches their shop, and they realize the syrup is dangerous.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "sarah",
+     "x": -9.5,
+     "z": 0.0,
+     "expr": "whistle",
+     "mode": "stand"
+    },
+    {
+     "castId": "josh",
+     "x": -8.6,
+     "z": -0.937,
+     "expr": "whistle",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 693,
+     "position": [
+      -15.1,
+      1.68,
+      1.6
+     ],
+     "lookAt": [
+      -9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 747,
+     "dur": 24,
+     "position": [
+      -12.4,
+      1.62,
+      0.55
+     ],
+     "lookAt": [
+      -9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 706,
+   "qualityNotes": "two_shot"
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 814,
+   "endFrame": 837,
+   "narration": "You see,",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 814,
+     "position": [
+      15.1,
+      1.68,
+      1.6
+     ],
+     "lookAt": [
+      9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10
+   },
+   "transitionIn": "cut",
+   "seed": 707,
+   "qualityNotes": ""
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 837,
+   "endFrame": 939,
+   "narration": "The syrup is so thick it traps people in its sticky embrace.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 837,
+     "position": [
+      9.546,
+      1.68,
+      -11.809
+     ],
+     "lookAt": [
+      6.718,
+      1.38,
+      -6.718
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 881,
+     "dur": 24,
+     "position": [
+      8.379,
+      1.62,
+      -9.157
+     ],
+     "lookAt": [
+      6.718,
+      1.5,
+      -6.718
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10
+   },
+   "transitionIn": "cut",
+   "seed": 708,
+   "qualityNotes": ""
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 939,
+   "endFrame": 1027,
+   "narration": "It’s like a giant, gooey blanket that doesn’t let go.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 939,
+     "position": [
+      -15.1,
+      1.68,
+      -1.6
+     ],
+     "lookAt": [
+      -9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 975,
+     "dur": 24,
+     "position": [
+      -12.4,
+      1.62,
+      -0.55
+     ],
+     "lookAt": [
+      -9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10
+   },
+   "transitionIn": "cut",
+   "seed": 709,
+   "qualityNotes": ""
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 1027,
+   "endFrame": 1154,
+   "narration": "You see, the villagers learn to avoid the syrup and use it for its sticky good.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 1027,
+     "position": [
+      15.1,
+      1.68,
+      -1.6
+     ],
+     "lookAt": [
+      9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1084,
+     "dur": 24,
+     "position": [
+      12.4,
+      1.62,
+      -0.55
+     ],
+     "lookAt": [
+      9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10
+   },
+   "transitionIn": "cut",
+   "seed": 710,
+   "qualityNotes": ""
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 1154,
+   "endFrame": 1265,
+   "narration": "In the end, the syrup becomes a fond memory of the great flood.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 1154,
+     "position": [
+      11.809,
+      1.68,
+      -9.546
+     ],
+     "lookAt": [
+      6.718,
+      1.38,
+      -6.718
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1203,
+     "dur": 24,
+     "position": [
+      9.157,
+      1.62,
+      -8.379
+     ],
+     "lookAt": [
+      6.718,
+      1.5,
+      -6.718
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10
+   },
+   "transitionIn": "cut",
+   "seed": 711,
+   "qualityNotes": ""
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 1265,
+   "endFrame": 1423,
+   "narration": "The flood of molasses taught the village to be prepared for unexpected sticky situations.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 1265,
+     "position": [
+      -15.1,
+      1.68,
+      1.6
+     ],
+     "lookAt": [
+      -9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1351,
+     "cut": true,
+     "position": [
+      -12.4,
+      1.62,
+      -0.55
+     ],
+     "lookAt": [
+      -9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10
+   },
+   "transitionIn": "cut",
+   "seed": 712,
+   "qualityNotes": ""
+  },
+  {
+   "sceneId": "b14",
+   "startFrame": 1423,
+   "endFrame": 1530,
+   "narration": "The molasses flood was a true story that left a sweet memory.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 1423,
+     "position": [
+      15.1,
+      1.68,
+      1.6
+     ],
+     "lookAt": [
+      9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1469,
+     "dur": 24,
+     "position": [
+      12.4,
+      1.62,
+      0.55
+     ],
+     "lookAt": [
+      9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10
+   },
+   "transitionIn": "cut",
+   "seed": 713,
+   "qualityNotes": ""
+  },
+  {
+   "sceneId": "b15",
+   "startFrame": 1530,
+   "endFrame": 1581,
+   "narration": "verifiedClaims: [fiction]",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 1530,
+     "position": [
+      9.546,
+      1.68,
+      -11.809
+     ],
+     "lookAt": [
+      6.718,
+      1.38,
+      -6.718
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10
+   },
+   "transitionIn": "cut",
+   "seed": 714,
+   "qualityNotes": ""
+  },
+  {
+   "sceneId": "b16",
+   "startFrame": 1581,
+   "endFrame": 1656,
+   "narration": "verifiedClaims: [uncertain]",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 1581,
+     "position": [
+      -15.1,
+      1.68,
+      -1.6
+     ],
+     "lookAt": [
+      -9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10
+   },
+   "transitionIn": "cut",
+   "seed": 715,
+   "qualityNotes": ""
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": false,
+  "words": []
+ }
+}

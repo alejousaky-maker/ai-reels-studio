@@ -50,6 +50,7 @@ class Beat(BaseModel):
     text: Optional[str] = None
     textStyle: Literal["title", "cta", "label"] = "label"
     atShop: bool = False
+    environment: Optional[Literal["village_square", "park", "street", "market", "interior", "harbour"]] = None  # per-beat location
     visual: Optional[str] = None  # free description for humans / QA (what we should SEE)
 
     @field_validator("narration")
@@ -84,7 +85,7 @@ class Plan(BaseModel):
     title: str
     lang: Literal["en", "es"] = "en"
     style: Literal["storybook", "cinematic_explainer", "minimal_stickman", "product_ad", "custom_brand"] = "storybook"
-    environment: Literal["village_square", "park", "street", "market"] = "village_square"
+    environment: Literal["village_square", "park", "street", "market", "interior", "harbour"] = "village_square"
     seed: int = 7
     cast: list[CastSpec]
     beats: list[Beat] = Field(min_length=1, max_length=40)

@@ -1,0 +1,481 @@
+{
+ "lang": "en",
+ "title": "Why Lighthouses Get Dressed Up",
+ "words": 155,
+ "beats": [
+  {
+   "narration": "Imagine you're a sailor in the eighteen hundreds, and every lighthouse on the coast looks exactly the same.",
+   "shot": "wide",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "sailor",
+     "action": "walk",
+     "expr": "neutral",
+     "react": {
+      "word": "same",
+      "expr": "nervous"
+     },
+     "holding": null
+    },
+    {
+     "id": "fisher",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "sailor",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": "Sunny harbour, boats and the striped lighthouse behind; a sailor walks along the quay."
+  },
+  {
+   "narration": "So which one is home?",
+   "shot": "close",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "sailor",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "sailor",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "question",
+     "word": "home",
+     "on": "sailor"
+    }
+   ],
+   "impactWord": "home",
+   "transition": "flash",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": null
+  },
+  {
+   "narration": "By day, a tall white tower looks like every other tall white tower.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "sailor",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "fisher",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "every",
+      "expr": "laugh"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "sailor",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": null
+  },
+  {
+   "narration": "Steer toward the wrong one, and your trip could end on the rocks.",
+   "shot": "high",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "sailor",
+     "action": "walk",
+     "expr": "shock",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "fisher",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "sailor",
+   "fx": [
+    {
+     "kind": "burst",
+     "product": null,
+     "word": "rocks",
+     "on": "sailor"
+    }
+   ],
+   "impactWord": "rocks",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": null
+  },
+  {
+   "narration": "You see, lighthouses have a secret identity.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "keeper",
+     "action": "stand",
+     "expr": "smile_closed",
+     "react": {
+      "word": "secret",
+      "expr": "grin"
+     },
+     "holding": null
+    },
+    {
+     "id": "kid",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "keeper",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "lightbulb",
+     "word": "secret",
+     "on": "keeper"
+    }
+   ],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "interior",
+   "visual": "The keeper's cosy room at golden hour."
+  },
+  {
+   "narration": "By day, each one wears its own paint. Stripes, bands, even diamonds.",
+   "shot": "two_shot",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "keeper",
+     "action": "wave",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "kid",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "diamonds",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "keeper",
+   "fx": [
+    {
+     "kind": "sparkle",
+     "product": null,
+     "word": "diamonds",
+     "on": "kid"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "interior",
+   "visual": null
+  },
+  {
+   "narration": "Sailors call these patterns daymarks.",
+   "shot": "low",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "sailor",
+     "action": "stand",
+     "expr": "relief",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "keeper",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "sailor",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "book",
+     "word": "daymarks",
+     "on": "sailor"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": null
+  },
+  {
+   "narration": "In North Carolina, Cape Hatteras wears a black and white spiral, while nearby Cape Lookout wears giant diamonds.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "kid",
+     "action": "walk",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "keeper",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "kid",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": null
+  },
+  {
+   "narration": "But at night, paint is useless, so every lighthouse blinks to its own rhythm.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "sailor",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "sailor",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": "Night harbour, lamps glowing, the beacon shining."
+  },
+  {
+   "narration": "Cape Lookout, for example, flashes every fifteen seconds.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "sailor",
+     "action": "stand",
+     "expr": "neutral",
+     "react": {
+      "word": "fifteen",
+      "expr": "grin"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "sailor",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "clock",
+     "word": "flashes",
+     "on": "sailor"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": null
+  },
+  {
+   "narration": "It's like recognising a friend by their outfit in the day, and by their laugh in the dark.",
+   "shot": "two_shot",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "kid",
+     "action": "stand",
+     "expr": "laugh",
+     "react": {
+      "word": "laugh",
+      "expr": "laugh"
+     },
+     "holding": null
+    },
+    {
+     "id": "keeper",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "outfit",
+      "expr": "grin"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "kid",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "interior",
+   "visual": null
+  },
+  {
+   "narration": "So the sailor checks the stripes, counts the flashes, and finally knows the way home.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "sailor",
+     "action": "walk",
+     "expr": "relief",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "fisher",
+     "action": "wave",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "sailor",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": null
+  },
+  {
+   "narration": "All thanks to a lighthouse that got dressed up.",
+   "shot": "close",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "sailor",
+     "action": "stand",
+     "expr": "smile_closed",
+     "react": {
+      "word": "dressed",
+      "expr": "grin"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "sailor",
+   "fx": [
+    {
+     "kind": "sparkle",
+     "product": null,
+     "word": "dressed",
+     "on": "sailor"
+    }
+   ],
+   "impactWord": "dressed",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": null,
+   "visual": null
+  }
+ ]
+}

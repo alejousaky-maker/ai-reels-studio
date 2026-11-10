@@ -13,7 +13,7 @@ export const JobRow: React.FC<{ j: Job; onChange?: () => void; showProject?: boo
       <div className="row">
         <StatusPill s={j.status} />
         <b style={{ fontSize: 14 }}>{KIND[j.kind] ?? j.kind}</b>
-        {showProject && <a className="small" href={`#project/${j.project_id}`}>{j.project_id}</a>}
+        {showProject && (j.project_id ? <a className="small" href={`#project/${j.project_id}`}>{j.project_id}</a> : <a className="small" href="#images">imagen</a>)}
         <span className="sp" />
         {live && <button className="btn sm danger" onClick={() => api.post(`/api/jobs/${j.id}/cancel`).then(onChange)}>Cancelar</button>}
         {(j.status === "failed" || j.status === "canceled") && <button className="btn sm" onClick={() => api.post(`/api/jobs/${j.id}/retry`).then(onChange)}>Reintentar</button>}
@@ -26,7 +26,7 @@ export const JobRow: React.FC<{ j: Job; onChange?: () => void; showProject?: boo
 };
 
 const KIND: Record<string, string> = { create: "Crear vídeo completo", produce: "Producir vídeo", plan: "Escribir guion (para aprobar)", voice: "Voz + tiempos + storyboard",
-  storyboard: "Storyboard", stills: "Fotogramas de control", render: "Render + mezcla + QA", regen_scene: "Regenerar escenas cambiadas", mix: "Remezclar audio", qa: "QA técnico" };
+  storyboard: "Storyboard", stills: "Fotogramas de control", render: "Render + mezcla + QA", regen_scene: "Regenerar escenas cambiadas", mix: "Remezclar audio", qa: "QA técnico", image: "Imagen desde prompt", script: "Guion desde prompt" };
 const STEP: Record<string, string> = { script: "Guion", voice: "Voz", align: "Tiempos", storyboard: "Storyboard", stills: "Fotogramas", render: "Render", mix: "Mezcla" };
 
 /** turn a failure into: what happened + how to fix it */

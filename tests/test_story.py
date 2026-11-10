@@ -63,6 +63,38 @@ def test_time_shift_keeps_later_scenes_identical():
         assert same == len(a) - 1, (delta, same, len(a) - 1)   # every later scene identical
 
 
+def test_per_beat_location_interior_sun_and_kid_eyeline():
+    d = plan_fixture().model_dump()
+    d["environment"] = "harbour"
+    d["beats"][1]["environment"] = "interior"
+    d["beats"][1]["shot"] = "close"
+    d["beats"][1]["characters"] = [{"id": "kid", "expr": "grin"}]
+    d["beats"][1]["focus"] = "kid"
+    plan = Plan.model_validate(d)
+    sb = director.build_storyboard(plan, _words(plan))
+    assert sb["env"]["preset"] == "harbour" and "env" not in sb["scenes"][0]
+    s = sb["scenes"][1]
+    assert s["env"]["preset"] == "interior" and s["sunEl"] >= 60
+    assert s["cameraKeys"][0]["lookAt"][1] < 1.2          # aimed at the kid's eyes, not an adult's (1.5)
+    k0 = s["cameraKeys"][0]["position"]
+    assert abs(k0[2] - s["actors"][0]["z"]) <= 7.01       # interior lens stays within 7 m of the subject
+
+
+def test_normalizer_repairs_lazy_llm_plans():
+    from engine.story.normalize import normalize_plan
+    beats = [{"narration": f"Setting: thing number {i} happens in town today.", "shot": "medium", "light": "day", "mood": "whimsical",
+              "characters": [{"id": "ghost"}] if i % 2 else [], "visual": "wide" if i == 0 else None} for i in range(10)]
+    p = Plan.model_validate({"title": "t", "cast": [{"id": "ana", "role": "villager_woman"}, {"id": "bo", "role": "kid"}], "beats": beats})
+    n, notes = normalize_plan(p)
+    assert all(b.characters and b.focus for b in n.beats)                      # no empty scenes
+    assert not any(b.narration.lower().startswith("setting") for b in n.beats)
+    assert len({b.shot for b in n.beats}) >= 4 and n.beats[0].shot == "wide"
+    assert {"day", "golden", "night"} <= {b.light for b in n.beats}
+    for i in range(2, 10):
+        assert not (n.beats[i].shot == n.beats[i - 1].shot == n.beats[i - 2].shot)
+    assert notes
+
+
 def test_validate_catches_gap():
     plan = plan_fixture()
     sb = director.build_storyboard(plan, _words(plan))

@@ -1,0 +1,61 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 26.5483125,
+ "voice": "af_heart",
+ "lang": "en",
+ "speed": 1.0,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "Did you know a pigeon saved lives during the war?",
+   "start": 0.06,
+   "end": 2.5317291666666666
+  },
+  {
+   "text": "In the village square, messages were sent by bird.",
+   "start": 2.6717291666666667,
+   "end": 5.390270833333333
+  },
+  {
+   "text": "One day, Ella received a crucial message.",
+   "start": 5.530270833333334,
+   "end": 7.886166666666667
+  },
+  {
+   "text": "But the messenger was shot down by a sniper.",
+   "start": 8.026166666666667,
+   "end": 10.326166666666667
+  },
+  {
+   "text": "Only the pigeon could deliver now.",
+   "start": 10.466166666666666,
+   "end": 12.201083333333333
+  },
+  {
+   "text": "With a heavy heart, Ella sent the pigeon.",
+   "start": 12.341083333333334,
+   "end": 14.488875
+  },
+  {
+   "text": "You see, even in war, small birds can make a big difference.",
+   "start": 14.628875,
+   "end": 18.092291666666668
+  },
+  {
+   "text": "How can a tiny creature change the course of a war?",
+   "start": 18.232291666666665,
+   "end": 21.067708333333332
+  },
+  {
+   "text": "Just like how a single light can brighten a dark room.",
+   "start": 21.207708333333333,
+   "end": 23.937083333333334
+  },
+  {
+   "text": "You never know when a pigeon will save the day.",
+   "start": 24.077083333333334,
+   "end": 26.4083125
+  }
+ ]
+}

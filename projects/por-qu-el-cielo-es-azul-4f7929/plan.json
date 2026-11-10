@@ -1,0 +1,320 @@
+{
+ "version": 1,
+ "title": "Por qué el cielo es azul",
+ "lang": "es",
+ "style": "storybook",
+ "environment": "village_square",
+ "seed": 7,
+ "cast": [
+  {
+   "id": "juan",
+   "name": "",
+   "role": "scholar",
+   "palette": null
+  },
+  {
+   "id": "maria",
+   "name": "",
+   "role": "scholar",
+   "palette": null
+  },
+  {
+   "id": "profesor",
+   "name": "",
+   "role": "scholar",
+   "palette": null
+  },
+  {
+   "id": "gato",
+   "name": "",
+   "role": "musician",
+   "palette": null
+  }
+ ],
+ "beats": [
+  {
+   "narration": "¡Sorprendente! ¿Sabías que el cielo es azul porque es un gran reflejo de tus propios ojos?",
+   "shot": "wide",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "juan",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "maria",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "ojos",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "juan",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": "Juan and Maria look at the sky in amazement."
+  },
+  {
+   "narration": "¡Juan y María se dan cuenta de que el cielo es azul porque es un reflejo de sus ojos!",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "maria",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "profesor",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "ojos",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "maria",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": "Juan and Maria look at each other, then at the sky, smiling."
+  },
+  {
+   "narration": "Pero en realidad, ¡es porque los rayos del sol se dispersan en la atmósfera!",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "profesor",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "gato",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "atmósfera",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "profesor",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": "Profesor points to the sky, then to the sun, with a serious face."
+  },
+  {
+   "narration": "El profesor explica cómo el cielo se vuelve azul gracias a la dispersión de luz.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "juan",
+     "action": "stand",
+     "expr": "smile",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "maria",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "luz",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "juan",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": "María and Juan nod, listening attentively."
+  },
+  {
+   "narration": "Pero el gato, ¡esconde una teoría propia! Afirma que el cielo es azul porque los gatos lo pintan con sus colores.",
+   "shot": "insert",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "maria",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "maria",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": "Gato sits on a bench, looking at the sky with a mischievous expression."
+  },
+  {
+   "narration": "¿Y si lo piensas, es como si todos pintáramos juntos el cielo cada día?",
+   "shot": "two_shot",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "profesor",
+     "action": "stand",
+     "expr": "neutral",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "gato",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "día",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "profesor",
+   "fx": [],
+   "impactWord": null,
+   "transition": "xfade",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": "Juan and Maria look at the sky, then at each other, smiling."
+  },
+  {
+   "narration": "¡Pero de verdad, es porque los rayos del sol se dispersan en la atmósfera!",
+   "shot": "high",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "juan",
+     "action": "stand",
+     "expr": "grin",
+     "react": null,
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "juan",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": "Profesor points to the sky, then to the sun, with a serious face."
+  },
+  {
+   "narration": "You see, it's like when you put blue food coloring in water, the water turns blue because of how light behaves.",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "maria",
+     "action": "stand",
+     "expr": "nervous",
+     "react": null,
+     "holding": null
+    },
+    {
+     "id": "profesor",
+     "action": "stand",
+     "expr": "smile",
+     "react": {
+      "word": "behaves",
+      "expr": "shock"
+     },
+     "holding": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "maria",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "village_square",
+   "visual": "Profesor smiles, then he waves his hand as if mixing blue paint."
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "El cielo es azul porque los rayos del sol se dispersan en la atmósfera.",
+   "status": "uncertain",
+   "source": null
+  },
+  {
+   "text": "La dispersión de luz es lo que hace que el cielo sea azul, similar a cómo la luz se dispersa en agua con colorante azul.",
+   "status": "fiction",
+   "source": null
+  }
+ ],
+ "creativeHooks": [],
+ "brand": null,
+ "cta": null,
+ "captions": false
+}

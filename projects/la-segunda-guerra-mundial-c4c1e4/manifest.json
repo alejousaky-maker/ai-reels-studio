@@ -1,0 +1,169 @@
+{
+ "id": "la-segunda-guerra-mundial-c4c1e4",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 93,
+   "beats": 10,
+   "at": "2026-11-09T19:37:47"
+  },
+  "voice": {
+   "duration": 26.5483125,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 9.7,
+   "status": "done",
+   "voice": "af_heart",
+   "speed": 1.0,
+   "at": "2026-11-09T19:37:57"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 6.9,
+   "method": {
+    "whisper": 9,
+    "spread": 1
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-09T19:38:04"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 808,
+   "seconds_video": 26.933333333333334,
+   "scenes": 10,
+   "at": "2026-11-09T19:38:04"
+  },
+  "stills": {
+   "status": "done",
+   "count": 30,
+   "at": "2026-11-09T19:39:58"
+  },
+  "render_standard": {
+   "status": "done",
+   "quality": "standard",
+   "seconds": 124.4,
+   "frames": 808,
+   "renderedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b07",
+    "b08",
+    "b09",
+    "b10"
+   ],
+   "reusedScenes": [],
+   "fps_render": 6.5,
+   "at": "2026-11-09T19:42:02"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 7.6,
+   "integratedLUFS": -14.0,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.27,
+   "maxGainReductionDB": 6.19,
+   "voiceLUFS": -13.99,
+   "musicLUFS": -29.79,
+   "sfxLUFS": -35.09,
+   "at": "2026-11-09T19:42:10"
+  },
+  "mux_standard": {
+   "status": "done",
+   "file": "projects\\la-segunda-guerra-mundial-c4c1e4\\output\\la-segunda-guerra-mundial_standard_v1.mp4",
+   "at": "2026-11-09T19:42:11"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-09T19:42:16"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-09T19:37:47",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T19:37:47",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-09T19:37:57",
+   "seconds": 9.7,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-09T19:38:04",
+   "status": "done",
+   "seconds": 6.9
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T19:38:04",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-09T19:39:58",
+   "status": "done"
+  },
+  {
+   "step": "render_standard",
+   "at": "2026-11-09T19:42:02",
+   "status": "done",
+   "seconds": 124.4
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T19:42:10",
+   "status": "done",
+   "seconds": 7.6
+  },
+  {
+   "step": "mux_standard",
+   "at": "2026-11-09T19:42:11",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T19:42:16",
+   "status": "done"
+  }
+ ],
+ "title": "la segunda guerra mundial",
+ "created": "2026-11-09T19:37:29",
+ "request": {
+  "title": "la segunda guerra mundial",
+  "idea": "la segunda guerra mundial\n",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 60,
+  "quality": "standard",
+  "style": "minimal_stickman",
+  "environment": "village_square",
+  "voice": null,
+  "speed": 1.0,
+  "clientId": null,
+  "cta": null,
+  "captions": false,
+  "music": true,
+  "variants": 1,
+  "provider": "auto",
+  "review": "auto_qa",
+  "seed": 7,
+  "autostart": true
+ },
+ "lang": "en",
+ "style": "minimal_stickman",
+ "scriptProvider": "ollama:qwen2.5:7b"
+}

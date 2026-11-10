@@ -1,0 +1,133 @@
+{
+ "duration": 40.9,
+ "sampleRate": 48000,
+ "targetLUFS": -14.0,
+ "ceilingDBTP": -2.0,
+ "measured": {
+  "integratedLUFS": -14.02,
+  "truePeakDBTP": -2.0,
+  "LRA": 1.23,
+  "maxGainReductionDB": 5.92,
+  "voiceLUFS": -13.69,
+  "musicLUFS": -29.65,
+  "sfxLUFS": -34.72
+ },
+ "ffmpegEbur128": {
+  "I": -14.0,
+  "LRA": 1.2,
+  "truePeak": -2.0
+ },
+ "musicSections": [
+  {
+   "start": 0.0,
+   "end": 5.57,
+   "mood": "curious"
+  },
+  {
+   "start": 5.57,
+   "end": 19.13,
+   "mood": "whimsical"
+  },
+  {
+   "start": 19.13,
+   "end": 25.77,
+   "mood": "warm"
+  },
+  {
+   "start": 25.77,
+   "end": 30.0,
+   "mood": "curious"
+  },
+  {
+   "start": 30.0,
+   "end": 34.03,
+   "mood": "warm"
+  },
+  {
+   "start": 34.03,
+   "end": 40.9,
+   "mood": "curious"
+  }
+ ],
+ "musicCues": [
+  "0.00s section 1: curious (96 bpm)",
+  "5.57s section 2: whimsical (108 bpm)",
+  "19.13s section 3: warm (84 bpm)",
+  "25.77s section 4: curious (96 bpm)",
+  "30.00s section 5: warm (84 bpm)",
+  "34.03s section 6: curious (96 bpm)"
+ ],
+ "sfxCues": [
+  {
+   "t": 0.0,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 5.567,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 8.013,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 10.233,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 12.38,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 14.367,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 16.847,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 19.133,
+   "kind": "bed",
+   "what": "golden ambience"
+  },
+  {
+   "t": 25.767,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 25.647,
+   "kind": "whoosh",
+   "what": "xfade into b06"
+  },
+  {
+   "t": 27.947,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 30.0,
+   "kind": "bed",
+   "what": "golden ambience"
+  },
+  {
+   "t": 32.08,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 34.033,
+   "kind": "bed",
+   "what": "golden ambience"
+  }
+ ],
+ "license": "All music and SFX synthesized locally (numpy/scipy), original; voice from local TTS or user import."
+}

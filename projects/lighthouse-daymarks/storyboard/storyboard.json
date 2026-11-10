@@ -1,0 +1,1069 @@
+{
+ "version": 1,
+ "title": "Why Lighthouses Get Dressed Up",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1735,
+ "env": {
+  "preset": "harbour",
+  "seed": 11,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "sailor",
+   "name": "Sailor",
+   "outfit": {
+    "jacket": "#2f5f6a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#f5c9a0",
+    "hat": "cap",
+    "cap": "#3b5b9a"
+   }
+  },
+  {
+   "id": "keeper",
+   "name": "Lighthouse keeper",
+   "outfit": {
+    "jacket": "#8c3b4a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "hat": "hair",
+    "hair": "#e6e2da",
+    "build": "stout"
+   }
+  },
+  {
+   "id": "kid",
+   "name": "Kid",
+   "outfit": {
+    "jacket": "#5d7a3a",
+    "pants": "#3b5b9a",
+    "boots": "#f4f1ea",
+    "skin": "#ecd0b6",
+    "hat": "cap",
+    "cap": "#e2453c",
+    "build": "kid"
+   }
+  },
+  {
+   "id": "fisher",
+   "name": "Fisher",
+   "outfit": {
+    "jacket": "#d9a441",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ffe2c2",
+    "hat": "bonnet",
+    "hair": "#7a4a2a",
+    "dress": "#c25a7a"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 205,
+   "narration": "Imagine you're a sailor in the eighteen hundreds, and every lighthouse on the coast looks exactly the same.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "sailor",
+     "x": 5.92,
+     "z": 4.56,
+     "expr": "neutral",
+     "mode": "stroll",
+     "walkTo": [
+      4.0,
+      6.0
+     ],
+     "walkFrames": [
+      0,
+      143
+     ],
+     "exprKeys": [
+      {
+       "frame": 191,
+       "expr": "nervous"
+      }
+     ]
+    },
+    {
+     "castId": "fisher",
+     "x": 5.892,
+     "z": 5.256,
+     "expr": "smile",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      -4.7,
+      2.3,
+      -0.6
+     ],
+     "lookAt": [
+      4,
+      1.2,
+      6
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 112,
+     "cut": true,
+     "position": [
+      1.92,
+      1.68,
+      0.56
+     ],
+     "lookAt": [
+      4,
+      1.38,
+      6
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1100,
+   "qualityNotes": "Sunny harbour, boats and the striped lighthouse behind; a sailor walks along the quay."
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 205,
+   "endFrame": 249,
+   "narration": "So which one is home?",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "sailor",
+     "x": 8.0,
+     "z": 3.5,
+     "expr": "nervous",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 205,
+     "position": [
+      7.45,
+      1.62,
+      6.4
+     ],
+     "lookAt": [
+      8.0,
+      1.5,
+      3.5
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "flash",
+   "seed": 1101,
+   "qualityNotes": "",
+   "kicks": [
+    {
+     "frame": 230,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 228,
+     "dur": 21,
+     "at": [
+      8.274,
+      2.05,
+      3.5
+     ],
+     "size": 0.28371807239363683,
+     "product": "question"
+    }
+   ]
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 249,
+   "endFrame": 382,
+   "narration": "By day, a tall white tower looks like every other tall white tower.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "sailor",
+     "x": -20.0,
+     "z": 4.0,
+     "expr": "stern",
+     "mode": "stand"
+    },
+    {
+     "castId": "fisher",
+     "x": -20.937,
+     "z": 3.1,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 317,
+       "expr": "laugh"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 249,
+     "position": [
+      -18.4,
+      1.68,
+      9.6
+     ],
+     "lookAt": [
+      -20,
+      1.38,
+      4
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 310,
+     "dur": 24,
+     "position": [
+      -19.45,
+      1.62,
+      6.9
+     ],
+     "lookAt": [
+      -20,
+      1.5,
+      4
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1102,
+   "qualityNotes": ""
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 382,
+   "endFrame": 501,
+   "narration": "Steer toward the wrong one, and your trip could end on the rocks.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "sailor",
+     "x": 5.92,
+     "z": 4.56,
+     "expr": "shock",
+     "mode": "stroll",
+     "walkTo": [
+      4.0,
+      6.0
+     ],
+     "walkFrames": [
+      382,
+      465
+     ]
+    },
+    {
+     "castId": "fisher",
+     "x": 5.541,
+     "z": 5.478,
+     "expr": "shock",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 382,
+     "position": [
+      0.36,
+      7.6,
+      -2.52
+     ],
+     "lookAt": [
+      4,
+      0.6,
+      6
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 466,
+     "dur": 24,
+     "position": [
+      0.1,
+      2.3,
+      -4.2
+     ],
+     "lookAt": [
+      4,
+      1.2,
+      6
+     ],
+     "fov": 42,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0018,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1103,
+   "qualityNotes": "",
+   "kicks": [
+    {
+     "frame": 480,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 478,
+     "dur": 23,
+     "at": [
+      3.664,
+      2.28,
+      6.252
+     ],
+     "size": 0.8
+    }
+   ]
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 501,
+   "endFrame": 590,
+   "narration": "You see, lighthouses have a secret identity.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "keeper",
+     "x": -2.4,
+     "z": -1.2,
+     "expr": "smile_closed",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 554,
+       "expr": "grin"
+      }
+     ]
+    },
+    {
+     "castId": "kid",
+     "x": -3.143,
+     "z": -2.266,
+     "expr": "smile",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 501,
+     "position": [
+      -1.929,
+      1.68,
+      4.605
+     ],
+     "lookAt": [
+      -2.4,
+      1.38,
+      -1.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 537,
+     "dur": 24,
+     "position": [
+      -2.429,
+      1.62,
+      1.752
+     ],
+     "lookAt": [
+      -2.4,
+      1.5,
+      -1.2
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 1104,
+   "qualityNotes": "The keeper's cosy room at golden hour.",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "interior",
+    "seed": 11,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 554,
+     "dur": 36,
+     "at": [
+      -1.988,
+      2.28,
+      -1.118
+     ],
+     "size": 0.42,
+     "product": "lightbulb"
+    }
+   ]
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 590,
+   "endFrame": 735,
+   "narration": "By day, each one wears its own paint. Stripes, bands, even diamonds.",
+   "light": "golden",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "keeper",
+     "x": -2.0,
+     "z": 1.2,
+     "expr": "grin",
+     "mode": "stand",
+     "wave": true
+    },
+    {
+     "castId": "kid",
+     "x": -2.522,
+     "z": 0.269,
+     "expr": "smile",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 706,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 590,
+     "position": [
+      -3.423,
+      1.66,
+      5.379
+     ],
+     "lookAt": [
+      -2.0,
+      1.42,
+      1.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 669,
+     "cut": true,
+     "position": [
+      -1.741,
+      1.62,
+      4.14
+     ],
+     "lookAt": [
+      -2.0,
+      1.5,
+      1.2
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1105,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "interior",
+    "seed": 11,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 706,
+     "dur": 29,
+     "at": [
+      -2.104,
+      2.28,
+      0.311
+     ],
+     "size": 0.7403043685727803
+    }
+   ]
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 735,
+   "endFrame": 804,
+   "narration": "Sailors call these patterns daymarks.",
+   "light": "golden",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "sailor",
+     "x": 4.0,
+     "z": 6.0,
+     "expr": "relief",
+     "mode": "stand"
+    },
+    {
+     "castId": "keeper",
+     "x": 5.342,
+     "z": 6.037,
+     "expr": "smile",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 735,
+     "position": [
+      2.2,
+      0.85,
+      -0.4
+     ],
+     "lookAt": [
+      4,
+      1.5,
+      6
+     ],
+     "fov": 44,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 6,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1106,
+   "qualityNotes": "",
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 784,
+     "dur": 20,
+     "at": [
+      3.664,
+      2.28,
+      6.252
+     ],
+     "size": 0.42,
+     "product": "book"
+    }
+   ]
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 804,
+   "endFrame": 1039,
+   "narration": "In North Carolina, Cape Hatteras wears a black and white spiral, while nearby Cape Lookout wears giant diamonds.",
+   "light": "golden",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "kid",
+     "x": 5.6,
+     "z": 3.5,
+     "expr": "grin",
+     "mode": "stroll",
+     "walkTo": [
+      8.0,
+      3.5
+     ],
+     "walkFrames": [
+      804,
+      968
+     ]
+    },
+    {
+     "castId": "keeper",
+     "x": 6.184,
+     "z": 3.001,
+     "expr": "smile",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 804,
+     "position": [
+      5.0,
+      2.3,
+      14.0
+     ],
+     "lookAt": [
+      8,
+      1.2,
+      3.5
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 933,
+     "cut": true,
+     "position": [
+      9.6,
+      1.308,
+      9.1
+     ],
+     "lookAt": [
+      8,
+      0.994,
+      3.5
+     ],
+     "fov": 38,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1107,
+   "qualityNotes": ""
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 1039,
+   "endFrame": 1187,
+   "narration": "But at night, paint is useless, so every lighthouse blinks to its own rhythm.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "sailor",
+     "x": -20.0,
+     "z": 4.0,
+     "expr": "nervous",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1039,
+     "position": [
+      -17.0,
+      2.3,
+      14.5
+     ],
+     "lookAt": [
+      -20,
+      1.2,
+      4
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1120,
+     "cut": true,
+     "position": [
+      -21.6,
+      1.68,
+      9.6
+     ],
+     "lookAt": [
+      -20,
+      1.38,
+      4
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 1108,
+   "qualityNotes": "Night harbour, lamps glowing, the beacon shining."
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 1187,
+   "endFrame": 1305,
+   "narration": "Cape Lookout, for example, flashes every fifteen seconds.",
+   "light": "night",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "sailor",
+     "x": 4.0,
+     "z": 6.0,
+     "expr": "neutral",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1265,
+       "expr": "grin"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1187,
+     "position": [
+      1.92,
+      1.68,
+      0.56
+     ],
+     "lookAt": [
+      4,
+      1.38,
+      6
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1239,
+     "dur": 24,
+     "position": [
+      2.7,
+      1.62,
+      3.35
+     ],
+     "lookAt": [
+      4,
+      1.5,
+      6
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1109,
+   "qualityNotes": "",
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 1243,
+     "dur": 60,
+     "at": [
+      3.664,
+      2.28,
+      6.252
+     ],
+     "size": 0.42,
+     "product": "clock"
+    }
+   ]
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 1305,
+   "endFrame": 1471,
+   "narration": "It's like recognising a friend by their outfit in the day, and by their laugh in the dark.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "kid",
+     "x": -2.4,
+     "z": -1.2,
+     "expr": "laugh",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1431,
+       "expr": "laugh"
+      }
+     ]
+    },
+    {
+     "castId": "keeper",
+     "x": -2.929,
+     "z": -2.224,
+     "expr": "smile",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1369,
+       "expr": "grin"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1305,
+     "position": [
+      -2.263,
+      1.293,
+      3.213
+     ],
+     "lookAt": [
+      -2.4,
+      1.022,
+      -1.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1396,
+     "cut": true,
+     "position": [
+      -3.508,
+      1.264,
+      1.536
+     ],
+     "lookAt": [
+      -2.4,
+      1.08,
+      -1.2
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1110,
+   "qualityNotes": "",
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "interior",
+    "seed": 11,
+    "shop": null
+   }
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 1471,
+   "endFrame": 1633,
+   "narration": "So the sailor checks the stripes, counts the flashes, and finally knows the way home.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "sailor",
+     "x": -22.4,
+     "z": 4.0,
+     "expr": "relief",
+     "mode": "stroll",
+     "walkTo": [
+      -20.0,
+      4.0
+     ],
+     "walkFrames": [
+      1471,
+      1584
+     ]
+    },
+    {
+     "castId": "fisher",
+     "x": -21.816,
+     "z": 3.501,
+     "expr": "grin",
+     "mode": "stand",
+     "wave": true
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1471,
+     "position": [
+      -23.0,
+      2.3,
+      14.5
+     ],
+     "lookAt": [
+      -20,
+      1.2,
+      4
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1560,
+     "cut": true,
+     "position": [
+      -18.4,
+      1.68,
+      9.6
+     ],
+     "lookAt": [
+      -20,
+      1.38,
+      4
+     ],
+     "fov": 38,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 1111,
+   "qualityNotes": ""
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 1633,
+   "endFrame": 1735,
+   "narration": "All thanks to a lighthouse that got dressed up.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "sailor",
+     "x": 4.0,
+     "z": 6.0,
+     "expr": "smile_closed",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1692,
+       "expr": "grin"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1633,
+     "position": [
+      1.82,
+      1.62,
+      4.01
+     ],
+     "lookAt": [
+      4.0,
+      1.5,
+      6.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1692,
+     "cut": true,
+     "position": [
+      2.7,
+      1.62,
+      3.35
+     ],
+     "lookAt": [
+      4.0,
+      1.5,
+      6.0
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 13,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 1112,
+   "qualityNotes": "",
+   "kicks": [
+    {
+     "frame": 1694,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 1692,
+     "dur": 43,
+     "at": [
+      3.781,
+      2.05,
+      6.165
+     ],
+     "size": 0.44330948811505755
+    }
+   ]
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": false,
+  "words": []
+ }
+}

@@ -48,11 +48,23 @@ def anchors(env: str, shop: dict | None = None) -> list[dict]:
     elif env == "street":
         for z in (0, -24, 22, -46, 40, -12):
             out.append({"C": (0.0, z), "u": (0.0, -1.0) if z >= 0 else (0.0, 1.0)})
+    elif env == "interior":
+        # cameras look at the back wall (window, shelves, counter); the room is open at the front and the top
+        for (cx, cz, ux, uz) in [(0, -2.2, 0, -1), (-2.4, -1.2, 0.2, -1), (2.4, -1.0, -0.2, -1), (-2.0, 1.2, 0.1, -1), (2.0, 1.4, -0.1, -1), (0, 1.8, 0, -1)]:
+            n = math.hypot(ux, uz)
+            out.append({"C": (cx, cz), "u": (ux / n, uz / n)})
+    elif env == "harbour":
+        # quay at z < 10, sea beyond: half the anchors look out to the boats and the lighthouse, half back at the houses
+        for (cx, cz, ux, uz) in [(0, 5.5, 0.15, 1), (8, 3.5, 0, -1), (-12, 5, 0.25, 1), (-20, 4, 0, -1), (14, 17, 0.45, 0.9), (4, 6, 0.6, 0.8)]:
+            n = math.hypot(ux, uz)
+            out.append({"C": (cx, cz), "u": (ux / n, uz / n)})
     else:  # park
         for (cx, cz, ux, uz) in [(0, 7, 0, -1), (7, 0, -1, 0), (-1, -8, 0.3, 1), (-8, 1, 1, -0.1), (5, 5, -0.7, -0.7), (-6, -6, 0.7, 0.7)]:
             n = math.hypot(ux, uz)
             out.append({"C": (cx, cz), "u": (ux / n, uz / n)})
-    if shop:
+    if shop and env == "interior":
+        out.insert(0, {"C": (0.0, -2.7), "u": (0.0, -1.0), "shop": True})   # in front of the counter, sign behind
+    elif shop:
         fx, fz = math.sin(shop["yaw"]), math.cos(shop["yaw"])
         out.insert(0, {"C": (shop["x"] + fx * 6.2, shop["z"] + fz * 6.2), "u": (-fx, -fz), "shop": True})
     return out

@@ -5,38 +5,88 @@
    "status": "done",
    "words": 166,
    "beats": 16,
-   "at": "2026-11-09T16:33:44"
+   "at": "2026-11-09T17:01:09"
   },
   "voice": {
    "duration": 56.25620833333333,
    "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
-   "seconds": 23.8,
+   "seconds": 18.8,
    "status": "done",
    "voice": "af_heart",
    "speed": 1.0,
-   "at": "2026-11-09T16:34:08"
+   "at": "2026-11-09T17:01:28"
   },
   "align": {
    "status": "done",
-   "seconds": 14.1,
+   "seconds": 10.6,
    "method": {
     "whisper": 14,
     "spread": 2
    },
    "model": "faster-whisper base (cpu/int8)",
-   "at": "2026-11-09T16:34:22"
+   "at": "2026-11-09T17:01:38"
   },
   "storyboard": {
    "status": "done",
-   "frames": 1704,
-   "seconds_video": 56.8,
+   "frames": 1703,
+   "seconds_video": 56.766666666666666,
    "scenes": 16,
-   "at": "2026-11-09T16:34:22"
+   "at": "2026-11-09T17:01:38"
   },
   "stills": {
    "status": "done",
    "count": 48,
-   "at": "2026-11-09T16:37:40"
+   "at": "2026-11-09T17:03:48"
+  },
+  "render_standard": {
+   "status": "done",
+   "quality": "standard",
+   "seconds": 0.3,
+   "frames": 1703,
+   "renderedScenes": [],
+   "reusedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b07",
+    "b08",
+    "b09",
+    "b10",
+    "b11",
+    "b12",
+    "b13",
+    "b14",
+    "b15",
+    "b16"
+   ],
+   "fps_render": 0.0,
+   "at": "2026-11-09T17:03:49"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 17.1,
+   "integratedLUFS": -14.01,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.27,
+   "maxGainReductionDB": 3.72,
+   "voiceLUFS": -14.0,
+   "musicLUFS": -29.81,
+   "sfxLUFS": -34.9,
+   "at": "2026-11-09T17:04:06"
+  },
+  "mux_standard": {
+   "status": "done",
+   "file": "projects\\the-great-molasses-flood-0cea81\\output\\the-great-molasses-flood_standard_v2.mp4",
+   "at": "2026-11-09T17:04:08"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-09T17:04:16"
   }
  },
  "history": [
@@ -70,6 +120,121 @@
   {
    "step": "stills",
    "at": "2026-11-09T16:37:40",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T16:39:58",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-09T16:40:23",
+   "seconds": 23.1,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-09T16:40:36",
+   "status": "done",
+   "seconds": 12.3
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T16:40:36",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-09T16:42:47",
+   "status": "done"
+  },
+  {
+   "step": "render_standard",
+   "at": "2026-11-09T16:46:08",
+   "status": "done",
+   "seconds": 201.1
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T16:46:24",
+   "status": "done",
+   "seconds": 16.1
+  },
+  {
+   "step": "mux_standard",
+   "at": "2026-11-09T16:46:26",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T16:46:34",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-09T16:54:38",
+   "seconds": 18.2,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-09T16:54:49",
+   "status": "done",
+   "seconds": 10.4
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T16:54:49",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T17:01:09",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-09T17:01:28",
+   "seconds": 18.8,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-09T17:01:38",
+   "status": "done",
+   "seconds": 10.6
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T17:01:38",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-09T17:03:48",
+   "status": "done"
+  },
+  {
+   "step": "render_standard",
+   "at": "2026-11-09T17:03:49",
+   "status": "done",
+   "seconds": 0.3
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T17:04:06",
+   "status": "done",
+   "seconds": 17.1
+  },
+  {
+   "step": "mux_standard",
+   "at": "2026-11-09T17:04:08",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T17:04:16",
    "status": "done"
   }
  ],

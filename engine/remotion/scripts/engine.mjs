@@ -53,11 +53,12 @@ try {
   const serveUrl = await getBundle();
   const composition = await selectComposition({ serveUrl, id: "StoryShort", inputProps, browserExecutable, chromiumOptions, onBrowserLog });
   if (mode === "stills") {
-    const prefix = args[2], frames = args[3].split(",").map(Number), scale = Number(args[4] ?? "0.5");
+    const prefix = args[2], frames = args[3].split(",").map(Number), scale = Number(args[4] ?? "0.5"), png = args[5] === "png";
     fs.mkdirSync(path.dirname(path.resolve(prefix + "x")), { recursive: true });
     for (const f of frames) {
-      const t0 = Date.now(), file = path.resolve(`${prefix}${String(f).padStart(4, "0")}.jpg`);
-      await renderStill({ serveUrl, composition, inputProps, frame: Math.min(f, composition.durationInFrames - 1), output: file, scale, imageFormat: "jpeg", jpegQuality: 92,
+      const t0 = Date.now(), file = path.resolve(`${prefix}${String(f).padStart(4, "0")}.${png ? "png" : "jpg"}`);
+      await renderStill({ serveUrl, composition, inputProps, frame: Math.min(f, composition.durationInFrames - 1), output: file, scale,
+        imageFormat: png ? "png" : "jpeg", ...(png ? {} : { jpegQuality: 92 }),
         browserExecutable, chromiumOptions, onBrowserLog, timeoutInMilliseconds: 180000 });
       out({ event: "still", frame: f, file, seconds: (Date.now() - t0) / 1000 });
     }

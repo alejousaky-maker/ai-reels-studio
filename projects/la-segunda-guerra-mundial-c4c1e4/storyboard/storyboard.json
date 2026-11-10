@@ -1,0 +1,596 @@
+{
+ "version": 1,
+ "title": "la segunda guerra mundial",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 808,
+ "env": {
+  "preset": "village_square",
+  "seed": 7,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "ella",
+   "name": "",
+   "outfit": {
+    "jacket": "#3f6fb5",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#f5c9a0",
+    "hat": "hair",
+    "hair": "#7a4a2a",
+    "dress": "#b5653f"
+   }
+  },
+  {
+   "id": "jose",
+   "name": "",
+   "outfit": {
+    "jacket": "#8c3b4a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "hat": "cap",
+    "cap": "#b5653f"
+   }
+  },
+  {
+   "id": "luis",
+   "name": "",
+   "outfit": {
+    "jacket": "#5d7a3a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ecd0b6",
+    "hat": "tophat",
+    "cap": "#2f5f6a"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 78,
+   "narration": "Did you know a pigeon saved lives during the war?",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "ella",
+     "x": -9.5,
+     "z": 0.0,
+     "expr": "pained",
+     "mode": "stroll",
+     "exprKeys": [
+      {
+       "frame": 17,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      -15.1,
+      1.68,
+      1.6
+     ],
+     "lookAt": [
+      -9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 700,
+   "qualityNotes": "wide"
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 78,
+   "endFrame": 164,
+   "narration": "In the village square, messages were sent by bird.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "jose",
+     "x": 9.5,
+     "z": 2.4,
+     "expr": "nervous",
+     "mode": "stroll",
+     "walkTo": [
+      9.5,
+      0.0
+     ],
+     "walkFrames": [
+      78,
+      138
+     ]
+    },
+    {
+     "castId": "luis",
+     "x": 8.642,
+     "z": 0.791,
+     "expr": "pained",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 78,
+     "position": [
+      15.1,
+      1.68,
+      1.6
+     ],
+     "lookAt": [
+      9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 113,
+     "dur": 24,
+     "position": [
+      12.4,
+      1.62,
+      0.55
+     ],
+     "lookAt": [
+      9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 701,
+   "qualityNotes": "medium"
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 164,
+   "endFrame": 239,
+   "narration": "One day, Ella received a crucial message.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "ella",
+     "x": 6.718,
+     "z": -6.718,
+     "expr": "whistle",
+     "mode": "sit"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 164,
+     "position": [
+      9.546,
+      1.68,
+      -11.809
+     ],
+     "lookAt": [
+      6.718,
+      1.38,
+      -6.718
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 702,
+   "qualityNotes": "close"
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 239,
+   "endFrame": 312,
+   "narration": "But the messenger was shot down by a sniper.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "jose",
+     "x": -9.5,
+     "z": 0.0,
+     "expr": "shock",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 239,
+     "position": [
+      -15.1,
+      1.68,
+      -1.6
+     ],
+     "lookAt": [
+      -9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 703,
+   "qualityNotes": "medium"
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 312,
+   "endFrame": 369,
+   "narration": "Only the pigeon could deliver now.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "luis",
+     "x": 9.5,
+     "z": 2.4,
+     "expr": "dazed",
+     "mode": "stroll",
+     "walkTo": [
+      9.5,
+      0.0
+     ],
+     "walkFrames": [
+      312,
+      351
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 312,
+     "position": [
+      15.1,
+      1.68,
+      -1.6
+     ],
+     "lookAt": [
+      9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 704,
+   "qualityNotes": "low"
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 369,
+   "endFrame": 437,
+   "narration": "With a heavy heart, Ella sent the pigeon.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "ella",
+     "x": 6.718,
+     "z": -6.718,
+     "expr": "dazed",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 369,
+     "position": [
+      11.809,
+      1.68,
+      -9.546
+     ],
+     "lookAt": [
+      6.718,
+      1.38,
+      -6.718
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 705,
+   "qualityNotes": "high"
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 437,
+   "endFrame": 545,
+   "narration": "You see, even in war, small birds can make a big difference.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "ella",
+     "x": -9.5,
+     "z": 0.0,
+     "expr": "smile",
+     "mode": "sit"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 437,
+     "position": [
+      -15.1,
+      1.68,
+      1.6
+     ],
+     "lookAt": [
+      -9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 484,
+     "dur": 24,
+     "position": [
+      -12.4,
+      1.62,
+      0.55
+     ],
+     "lookAt": [
+      -9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 706,
+   "qualityNotes": "two_shot"
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 545,
+   "endFrame": 634,
+   "narration": "How can a tiny creature change the course of a war?",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "jose",
+     "x": 9.5,
+     "z": 0.0,
+     "expr": "pained",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 545,
+     "position": [
+      15.1,
+      1.68,
+      1.6
+     ],
+     "lookAt": [
+      9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 581,
+     "dur": 24,
+     "position": [
+      12.4,
+      1.62,
+      0.55
+     ],
+     "lookAt": [
+      9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 707,
+   "qualityNotes": "medium"
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 634,
+   "endFrame": 720,
+   "narration": "Just like how a single light can brighten a dark room.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "luis",
+     "x": 8.415,
+     "z": -5.02,
+     "expr": "smile",
+     "mode": "stroll",
+     "walkTo": [
+      6.718,
+      -6.718
+     ],
+     "walkFrames": [
+      634,
+      694
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 634,
+     "position": [
+      9.546,
+      1.68,
+      -11.809
+     ],
+     "lookAt": [
+      6.718,
+      1.38,
+      -6.718
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 669,
+     "dur": 24,
+     "position": [
+      8.379,
+      1.62,
+      -9.157
+     ],
+     "lookAt": [
+      6.718,
+      1.5,
+      -6.718
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 708,
+   "qualityNotes": "insert"
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 720,
+   "endFrame": 808,
+   "narration": "You never know when a pigeon will save the day.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "ella",
+     "x": -9.5,
+     "z": 0.0,
+     "expr": "smile",
+     "mode": "sit"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 720,
+     "position": [
+      -15.1,
+      1.68,
+      -1.6
+     ],
+     "lookAt": [
+      -9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 756,
+     "dur": 24,
+     "position": [
+      -12.4,
+      1.62,
+      -0.55
+     ],
+     "lookAt": [
+      -9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 709,
+   "qualityNotes": "low"
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": false,
+  "words": []
+ }
+}

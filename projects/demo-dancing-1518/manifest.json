@@ -28,15 +28,15 @@
   },
   "storyboard": {
    "status": "done",
-   "frames": 1911,
-   "seconds_video": 63.7,
+   "frames": 1909,
+   "seconds_video": 63.63333333333333,
    "scenes": 15,
-   "at": "2026-11-09T15:51:12"
+   "at": "2026-11-09T19:57:42"
   },
   "stills": {
    "status": "done",
    "count": 45,
-   "at": "2026-11-09T15:53:42"
+   "at": "2026-11-09T20:00:06"
   },
   "render_standard": {
    "status": "done",
@@ -66,15 +66,15 @@
   },
   "mix": {
    "status": "done",
-   "seconds": 21.4,
+   "seconds": 21.8,
    "integratedLUFS": -14.01,
    "truePeakDBTP": -2.0,
-   "LRA": 1.38,
-   "maxGainReductionDB": 6.99,
+   "LRA": 1.39,
+   "maxGainReductionDB": 6.85,
    "voiceLUFS": -14.06,
-   "musicLUFS": -29.83,
-   "sfxLUFS": -28.59,
-   "at": "2026-11-09T15:54:04"
+   "musicLUFS": -29.84,
+   "sfxLUFS": -28.51,
+   "at": "2026-11-09T20:06:09"
   },
   "mux_standard": {
    "status": "done",
@@ -85,7 +85,38 @@
    "status": "done",
    "blocking": [],
    "technicalPass": true,
-   "at": "2026-11-09T15:54:15"
+   "at": "2026-11-09T20:06:35"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 338.1,
+   "frames": 1909,
+   "renderedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b07",
+    "b08",
+    "b09",
+    "b10",
+    "b11",
+    "b12",
+    "b13",
+    "b14",
+    "b15"
+   ],
+   "reusedScenes": [],
+   "fps_render": 5.65,
+   "at": "2026-11-09T20:05:45"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\demo-dancing-1518\\output\\the-town-that-couldn-t-stop-dancing_master_v1.mp4",
+   "at": "2026-11-09T20:06:11"
   }
  },
  "history": [
@@ -206,6 +237,38 @@
   {
    "step": "qa",
    "at": "2026-11-09T15:54:15",
+   "status": "done"
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T19:57:42",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-09T20:00:06",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-09T20:05:45",
+   "status": "done",
+   "seconds": 338.1
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T20:06:09",
+   "status": "done",
+   "seconds": 21.8
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-09T20:06:11",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T20:06:35",
    "status": "done"
   }
  ],

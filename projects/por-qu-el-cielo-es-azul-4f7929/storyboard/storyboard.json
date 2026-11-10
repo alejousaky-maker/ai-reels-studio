@@ -1,0 +1,613 @@
+{
+ "version": 1,
+ "title": "Por qué el cielo es azul",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1227,
+ "env": {
+  "preset": "village_square",
+  "seed": 7,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "juan",
+   "name": "",
+   "outfit": {
+    "jacket": "#4a3b6a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#f5c9a0",
+    "hat": "hair",
+    "hair": "#d9d4cc",
+    "moustache": "#d9d4cc"
+   }
+  },
+  {
+   "id": "maria",
+   "name": "",
+   "outfit": {
+    "jacket": "#4a3b6a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#8d5a3b",
+    "hat": "hair",
+    "hair": "#d9d4cc",
+    "moustache": "#d9d4cc"
+   }
+  },
+  {
+   "id": "profesor",
+   "name": "",
+   "outfit": {
+    "jacket": "#4a3b6a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ecd0b6",
+    "hat": "hair",
+    "hair": "#d9d4cc",
+    "moustache": "#d9d4cc"
+   }
+  },
+  {
+   "id": "gato",
+   "name": "",
+   "outfit": {
+    "jacket": "#8c3b4a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#ffe2c2",
+    "hat": "tophat"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 167,
+   "narration": "¡Sorprendente! ¿Sabías que el cielo es azul porque es un gran reflejo de tus propios ojos?",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "juan",
+     "x": -9.5,
+     "z": 0.0,
+     "expr": "neutral",
+     "mode": "stand"
+    },
+    {
+     "castId": "maria",
+     "x": -8.96,
+     "z": -1.959,
+     "expr": "smile",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 148,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      -20.0,
+      2.3,
+      3.0
+     ],
+     "lookAt": [
+      -9.5,
+      1.2,
+      0.0
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 91,
+     "cut": true,
+     "position": [
+      -15.1,
+      1.68,
+      -1.6
+     ],
+     "lookAt": [
+      -9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 700,
+   "qualityNotes": "Juan and Maria look at the sky in amazement."
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 167,
+   "endFrame": 307,
+   "narration": "¡Juan y María se dan cuenta de que el cielo es azul porque es un reflejo de sus ojos!",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "maria",
+     "x": 9.5,
+     "z": 0.0,
+     "expr": "grin",
+     "mode": "stand"
+    },
+    {
+     "castId": "profesor",
+     "x": 8.625,
+     "z": 0.612,
+     "expr": "smile",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 289,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 167,
+     "position": [
+      13.8,
+      1.66,
+      1.0
+     ],
+     "lookAt": [
+      9.5,
+      1.42,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 232,
+     "dur": 24,
+     "position": [
+      12.4,
+      1.62,
+      0.55
+     ],
+     "lookAt": [
+      9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 701,
+   "qualityNotes": "Juan and Maria look at each other, then at the sky, smiling."
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 307,
+   "endFrame": 431,
+   "narration": "Pero en realidad, ¡es porque los rayos del sol se dispersan en la atmósfera!",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "profesor",
+     "x": 6.718,
+     "z": -6.718,
+     "expr": "nervous",
+     "mode": "stand"
+    },
+    {
+     "castId": "gato",
+     "x": 6.744,
+     "z": -5.418,
+     "expr": "smile",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 409,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 307,
+     "position": [
+      9.546,
+      1.68,
+      -11.809
+     ],
+     "lookAt": [
+      6.718,
+      1.38,
+      -6.718
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 363,
+     "dur": 24,
+     "position": [
+      8.379,
+      1.62,
+      -9.157
+     ],
+     "lookAt": [
+      6.718,
+      1.5,
+      -6.718
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 702,
+   "qualityNotes": "Profesor points to the sky, then to the sun, with a serious face."
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 431,
+   "endFrame": 574,
+   "narration": "El profesor explica cómo el cielo se vuelve azul gracias a la dispersión de luz.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "juan",
+     "x": -9.5,
+     "z": 0.0,
+     "expr": "smile",
+     "mode": "stand"
+    },
+    {
+     "castId": "maria",
+     "x": -8.642,
+     "z": -0.791,
+     "expr": "smile",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 561,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 431,
+     "position": [
+      -15.1,
+      1.68,
+      -1.6
+     ],
+     "lookAt": [
+      -9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 497,
+     "dur": 24,
+     "position": [
+      -12.4,
+      1.62,
+      -0.55
+     ],
+     "lookAt": [
+      -9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 703,
+   "qualityNotes": "María and Juan nod, listening attentively."
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 574,
+   "endFrame": 773,
+   "narration": "Pero el gato, ¡esconde una teoría propia! Afirma que el cielo es azul porque los gatos lo pintan con sus colores.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "maria",
+     "x": 9.5,
+     "z": 0.0,
+     "expr": "shock",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 574,
+     "position": [
+      12.2,
+      1.55,
+      -0.25
+     ],
+     "lookAt": [
+      10.6,
+      1.32,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 683,
+     "cut": true,
+     "position": [
+      12.2,
+      1.55,
+      0.25
+     ],
+     "lookAt": [
+      10.6,
+      1.32,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 704,
+   "qualityNotes": "Gato sits on a bench, looking at the sky with a mischievous expression."
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 773,
+   "endFrame": 900,
+   "narration": "¿Y si lo piensas, es como si todos pintáramos juntos el cielo cada día?",
+   "light": "night",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "profesor",
+     "x": 6.718,
+     "z": -6.718,
+     "expr": "neutral",
+     "mode": "stand"
+    },
+    {
+     "castId": "gato",
+     "x": 6.532,
+     "z": -5.666,
+     "expr": "smile",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 883,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 773,
+     "position": [
+      10.465,
+      1.66,
+      -9.051
+     ],
+     "lookAt": [
+      6.718,
+      1.42,
+      -6.718
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 830,
+     "dur": 24,
+     "position": [
+      9.157,
+      1.62,
+      -8.379
+     ],
+     "lookAt": [
+      6.718,
+      1.5,
+      -6.718
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "xfade",
+   "seed": 705,
+   "qualityNotes": "Juan and Maria look at the sky, then at each other, smiling."
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 900,
+   "endFrame": 1021,
+   "narration": "¡Pero de verdad, es porque los rayos del sol se dispersan en la atmósfera!",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "juan",
+     "x": -9.5,
+     "z": 0.0,
+     "expr": "grin",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 900,
+     "position": [
+      -18.5,
+      7.6,
+      2.2
+     ],
+     "lookAt": [
+      -9.5,
+      0.6,
+      0.0
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 954,
+     "dur": 24,
+     "position": [
+      -20.0,
+      2.3,
+      3.0
+     ],
+     "lookAt": [
+      -9.5,
+      1.2,
+      0.0
+     ],
+     "fov": 42,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0018,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 706,
+   "qualityNotes": "Profesor points to the sky, then to the sun, with a serious face."
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 1021,
+   "endFrame": 1227,
+   "narration": "You see, it's like when you put blue food coloring in water, the water turns blue because of how light behaves.",
+   "light": "golden",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "maria",
+     "x": 9.5,
+     "z": 0.0,
+     "expr": "nervous",
+     "mode": "stand"
+    },
+    {
+     "castId": "profesor",
+     "x": 8.642,
+     "z": 0.791,
+     "expr": "smile",
+     "mode": "stand",
+     "exprKeys": [
+      {
+       "frame": 1189,
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1021,
+     "position": [
+      15.1,
+      1.68,
+      1.6
+     ],
+     "lookAt": [
+      9.5,
+      1.38,
+      0.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1134,
+     "cut": true,
+     "position": [
+      12.4,
+      1.62,
+      -0.55
+     ],
+     "lookAt": [
+      9.5,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": -0.04
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 10,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 707,
+   "qualityNotes": "Profesor smiles, then he waves his hand as if mixing blue paint."
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": false,
+  "words": []
+ },
+ "style": "storybook"
+}

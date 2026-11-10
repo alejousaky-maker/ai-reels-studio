@@ -1,5 +1,21 @@
 # PROGRESS — real, measured state (2026-11-09)
 
+## v0.3 update (same day, later session)
+- **Master 2K default.** Master renders, all technical QA PASS incl. the new render-vs-control-stills check:
+  - Lighthouse demo `projects/lighthouse-daymarks/output/latest_master.mp4` — 1440×2560, 57.8 s, harbour + interior + night, 6.9 fps (251 s).
+  - Demo A `projects/demo-dancing-1518/output/latest_master.mp4` — 1440×2560, 63.6 s (338 s render).
+  - Demo C `projects/demo-c-variant-of-demo-a-a31d2d/output/latest_master.mp4` — 1440×2560, 64.6 s (338 s render).
+  - Demo B master from v0.2: `projects/caf-lumen-anuncio-71668f/output/latest_master.mp4` (rendered before the crossfade-world fix;
+    its scenes share one location, so the bug could only change culling there — re-render to be certain).
+- **Images from prompts**: 8 test images from 4 Spanish prompts, ~10 s per image incl. local AI; PNG 1440×2560 / 1440×1440 /
+  1440×1800 / 2560×1440 in `images/`. Hybrid reader verified (girl→kid, no invented bread, dancing crowd, light bulb idea).
+- **Script only**: Spanish prompt → 8-9 beat plan + FACTS in 20 s (qwen2.5:7b) / 120 s (qwen3:8b, pulled today). Both are
+  draft quality (weak or playful-false hooks): human review / Claude-assisted mode recommended.
+- Bug found by QA and fixed: after a crossfade, a long render kept the previous scene's world (wrong location in b05/b12).
+- The user's own app runs ("THE GREAT MOLASSES FLOOD", "la segunda guerra mundial") showed empty scenes and monotone
+  shots from qwen2.5 → plan normaliser added (those two projects were made before it; re-run "Producir todo" to apply).
+- Tests: `test.ps1 -Render` all groups passed; pytest 25/25.
+
 Machine: Windows 11 Pro 26200 · RTX 3060 **12 GB** (driver 595.97) · Ryzen 5 5500 (12 threads) · 31.9 GB RAM · C: 930 GB (≈390 GB free).
 
 | Phase | Status | Evidence (command → result) |

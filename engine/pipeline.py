@@ -438,7 +438,18 @@ def produce(pid: str, plan: Plan, quality: str = "standard", voice: str | None =
         if cancel and cancel():
             raise Cancelled()
     step_script(pid, plan); chk()
-    step_voice(pid, plan, voice, speed, progress); chk()
+    vinfo = step_voice(pid, plan, voice, speed, progress); chk()
+    target = (load_json(pdir(pid, "input", "request.json"), {}) or {}).get("seconds")
+    if target and not os.path.exists(pdir(pid, "input", "voice_user.wav")):
+        dur = float(vinfo.get("duration", 0))
+        if dur < 0.85 * target and speed > 0.9:
+            # gently slower narration to approach the requested length (never below 0.88x: intelligibility first)
+            new_speed = round(max(0.88, speed * dur / (0.92 * target)), 3)
+            progress("voice", -1, f"narration {dur:.1f}s vs {target}s requested: re-voicing at speed {new_speed}")
+            vinfo = step_voice(pid, plan, voice, new_speed, progress); chk()
+        dur = float(vinfo.get("duration", 0))
+        note = "" if dur >= 0.85 * target else f"Narration is {dur:.0f}s for a {target}s request: add beats/sentences to reach it."
+        update_manifest(pid, durationNote=note, requestedSeconds=target)
     step_align(pid, plan, progress); chk()
     step_storyboard(pid, plan, progress); chk()
     if stills:

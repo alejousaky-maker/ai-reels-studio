@@ -1,12 +1,12 @@
 {
- "video": "C:\\Users\\felip\\AI-Reels-Studio\\projects\\demo-c-variant-of-demo-a-a31d2d\\output\\the-town-that-couldn-t-stop-dancing_standard_v5.mp4",
+ "video": "C:\\Users\\felip\\AI-Reels-Studio\\projects\\demo-c-variant-of-demo-a-a31d2d\\output\\latest_master.mp4",
  "probe": {
-  "width": 1080,
-  "height": 1920,
+  "width": 1440,
+  "height": 2560,
   "fps": 30.0,
   "videoSeconds": 64.566667,
   "audioSeconds": 64.566667,
-  "sizeMB": 53.6
+  "sizeMB": 109.44
  },
  "checks": [
   {
@@ -18,7 +18,7 @@
   {
    "check": "9:16 ratio",
    "ok": true,
-   "detail": "1080x1920",
+   "detail": "1440x2560",
    "blocking": true
   },
   {
@@ -88,9 +88,15 @@
    "blocking": false
   },
   {
+   "check": "render matches control stills",
+   "ok": true,
+   "detail": "45 frames compared; mismatches: []",
+   "blocking": true
+  },
+  {
    "check": "day exposure (heuristic)",
    "ok": true,
-   "detail": "median luma of day scenes 0.566, reference ~0.57 (range 0.5-0.66)",
+   "detail": "median luma of day scenes 0.565, reference ~0.57 (range 0.5-0.66)",
    "blocking": false
   },
   {
@@ -114,17 +120,17 @@
    "scene": "b01",
    "t": 3.13,
    "light": "day",
-   "medianLuma": 0.718,
-   "p5Luma": 0.299,
-   "p95Luma": 0.875,
-   "satMean": 0.313
+   "medianLuma": 0.714,
+   "p5Luma": 0.297,
+   "p95Luma": 0.877,
+   "satMean": 0.314
   },
   {
    "scene": "b02",
    "t": 6.97,
    "light": "day",
    "medianLuma": 0.557,
-   "p5Luma": 0.038,
+   "p5Luma": 0.037,
    "p95Luma": 0.833,
    "satMean": 0.451
   },
@@ -142,27 +148,27 @@
    "t": 14.37,
    "light": "day",
    "medianLuma": 0.559,
-   "p5Luma": 0.06,
-   "p95Luma": 0.845,
-   "satMean": 0.479
+   "p5Luma": 0.059,
+   "p95Luma": 0.846,
+   "satMean": 0.478
   },
   {
    "scene": "b05",
    "t": 18.4,
    "light": "day",
-   "medianLuma": 0.794,
-   "p5Luma": 0.587,
-   "p95Luma": 0.897,
-   "satMean": 0.233
+   "medianLuma": 0.767,
+   "p5Luma": 0.21,
+   "p95Luma": 0.892,
+   "satMean": 0.282
   },
   {
    "scene": "b06",
    "t": 22.13,
    "light": "golden",
-   "medianLuma": 0.303,
-   "p5Luma": 0.086,
+   "medianLuma": 0.304,
+   "p5Luma": 0.087,
    "p95Luma": 0.596,
-   "satMean": 0.53
+   "satMean": 0.531
   },
   {
    "scene": "b07",
@@ -179,70 +185,70 @@
    "light": "day",
    "medianLuma": 0.587,
    "p5Luma": 0.101,
-   "p95Luma": 0.835,
-   "satMean": 0.461
+   "p95Luma": 0.836,
+   "satMean": 0.462
   },
   {
    "scene": "b09",
    "t": 33.37,
    "light": "day",
-   "medianLuma": 0.571,
+   "medianLuma": 0.57,
    "p5Luma": 0.149,
-   "p95Luma": 0.849,
+   "p95Luma": 0.85,
    "satMean": 0.319
   },
   {
    "scene": "b10",
    "t": 35.57,
    "light": "night",
-   "medianLuma": 0.393,
-   "p5Luma": 0.213,
-   "p95Luma": 0.533,
-   "satMean": 0.352
+   "medianLuma": 0.214,
+   "p5Luma": 0.028,
+   "p95Luma": 0.68,
+   "satMean": 0.606
   },
   {
    "scene": "b11",
    "t": 39.03,
    "light": "golden",
    "medianLuma": 0.298,
-   "p5Luma": 0.145,
-   "p95Luma": 0.597,
-   "satMean": 0.537
+   "p5Luma": 0.149,
+   "p95Luma": 0.596,
+   "satMean": 0.534
   },
   {
    "scene": "b12",
    "t": 42.9,
    "light": "night",
-   "medianLuma": 0.241,
-   "p5Luma": 0.164,
-   "p95Luma": 0.592,
-   "satMean": 0.522
+   "medianLuma": 0.202,
+   "p5Luma": 0.074,
+   "p95Luma": 0.375,
+   "satMean": 0.52
   },
   {
    "scene": "b13",
    "t": 49.6,
    "light": "night",
-   "medianLuma": 0.294,
-   "p5Luma": 0.035,
-   "p95Luma": 0.569,
-   "satMean": 0.497
+   "medianLuma": 0.195,
+   "p5Luma": 0.028,
+   "p95Luma": 0.421,
+   "satMean": 0.579
   },
   {
    "scene": "b14",
    "t": 57.3,
    "light": "golden",
-   "medianLuma": 0.478,
-   "p5Luma": 0.157,
-   "p95Luma": 0.673,
-   "satMean": 0.848
+   "medianLuma": 0.309,
+   "p5Luma": 0.196,
+   "p95Luma": 0.592,
+   "satMean": 0.514
   },
   {
    "scene": "b15",
    "t": 62.2,
    "light": "golden",
-   "medianLuma": 0.286,
+   "medianLuma": 0.287,
    "p5Luma": 0.041,
-   "p95Luma": 0.556,
+   "p95Luma": 0.557,
    "satMean": 0.556
   }
  ],

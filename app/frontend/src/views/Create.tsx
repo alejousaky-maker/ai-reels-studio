@@ -9,11 +9,15 @@ const STYLES = [["storybook", "Storybook 2.5D"], ["cinematic_explainer", "Cinema
 export const Create: React.FC = () => {
   const [opts] = useData<any>("/api/options");
   const [clients] = useData<any[]>("/api/clients");
-  const [f, setF] = useState<any>({ title: "", idea: "", script: "", kind: "story", lang: "en", seconds: 60, quality: "standard", style: "storybook",
+  const [f, setF] = useState<any>({ title: "", idea: "", script: "", kind: "story", lang: "en", seconds: 60, quality: "master", style: "storybook",
     environment: "village_square", voice: "", speed: 1.0, clientId: "", cta: "", captions: false, music: true, variants: 1, provider: "auto", review: "auto_qa" });
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
   const set = (k: string, v: any) => setF((x: any) => ({ ...x, [k]: v }));
+  const [langTouched, setLangTouched] = useState(false);
+  // idea written in Spanish and language not chosen by hand -> Spanish (voice + script)
+  const looksSpanish = (t: string) => /[ñáéíóú¿¡]/i.test(t) || (` ${t.toLowerCase()} `.match(/ (el|la|los|las|de|del|que|por|una|un|en|y|guerra|historia|cómo|por qué) /g) ?? []).length >= 2;
+  const setIdea = (v: string) => setF((x: any) => ({ ...x, idea: v, ...(!langTouched ? { lang: looksSpanish(v) ? "es" : "en", voice: "" } : {}) }));
   const voices: [string, string][] = opts?.voices?.[f.lang] ?? [];
   const submit = async () => {
     setErr(""); setBusy(true);
@@ -32,8 +36,16 @@ export const Create: React.FC = () => {
       <div className="grid" style={{ gridTemplateColumns: "minmax(0,1.4fr) minmax(0,1fr)" }}>
         <div className="card grid">
           <label className="f">Idea del vídeo (una frase basta)
-            <textarea value={f.idea} onChange={(e) => set("idea", e.target.value)} placeholder="p. ej. Por qué en 1518 una ciudad entera no podía dejar de bailar" />
+            <textarea value={f.idea} onChange={(e) => setIdea(e.target.value)} placeholder="p. ej. Por qué en 1518 una ciudad entera no podía dejar de bailar" />
           </label>
+          <div>
+            <h3>Qué quieres obtener</h3>
+            <div className="chips">
+              <button className={`chip ${f.review !== "script_only" ? "on" : ""}`} onClick={() => set("review", "auto_qa")}>🎬 Vídeo completo (voz, escenas, música)</button>
+              <button className={`chip ${f.review === "script_only" ? "on" : ""}`} onClick={() => set("review", "script_only")}>📝 Solo guion (editable, sin render)</button>
+              <a className="chip" href="#images" style={{ textDecoration: "none", color: "inherit" }}>🖼️ Imagen desde un prompt →</a>
+            </div>
+          </div>
           <div>
             <h3>Tipo</h3>
             <div className="chips">{TYPES.map(([k, l]) => <button key={k} className={`chip ${f.kind === k ? "on" : ""}`} onClick={() => { set("kind", k); if (k === "ad") { set("style", "product_ad"); set("seconds", 30); set("environment", "street"); } }}>{l}</button>)}</div>
@@ -44,7 +56,7 @@ export const Create: React.FC = () => {
           </div>
           <div className="grid g3">
             <label className="f">Idioma
-              <select value={f.lang} onChange={(e) => { set("lang", e.target.value); set("voice", ""); }}><option value="en">English</option><option value="es">Español</option></select></label>
+              <select value={f.lang} onChange={(e) => { setLangTouched(true); set("lang", e.target.value); set("voice", ""); }}><option value="en">English</option><option value="es">Español</option></select></label>
             <label className="f">Duración
               <select value={f.seconds} onChange={(e) => set("seconds", Number(e.target.value))}>{[15, 30, 45, 60, 90].map((s) => <option key={s} value={s}>{s} s</option>)}</select></label>
             <label className="f">Calidad
@@ -64,13 +76,13 @@ export const Create: React.FC = () => {
               <label className="f">Guion propio (opcional: si lo escribes, no se usa IA; una o dos frases por escena)
                 <textarea value={f.script} onChange={(e) => set("script", e.target.value)} style={{ minHeight: 140 }} /></label>
               <div className="grid g3">
-                <label className="f">Escenario<select value={f.environment} onChange={(e) => set("environment", e.target.value)}>{["village_square", "market", "street", "park"].map((x) => <option key={x}>{x}</option>)}</select></label>
+                <label className="f">Escenario<select value={f.environment} onChange={(e) => set("environment", e.target.value)}>{[["village_square", "Plaza del pueblo"], ["market", "Mercado"], ["street", "Calle"], ["park", "Parque"], ["interior", "Interior (habitación / local)"], ["harbour", "Puerto con faro"]].map(([x, l]) => <option key={x} value={x}>{l}</option>)}</select></label>
                 <label className="f">Voz<select value={f.voice} onChange={(e) => set("voice", e.target.value)}><option value="">Por defecto</option>{voices.map(([v, l]) => <option key={v} value={v}>{l}</option>)}</select></label>
                 <label className="f">Velocidad de voz<input type="number" step="0.05" min="0.8" max="1.3" value={f.speed} onChange={(e) => set("speed", Number(e.target.value))} /></label>
                 <label className="f">Guionista<select value={f.provider} onChange={(e) => set("provider", e.target.value)}>
                   <option value="auto">Automático (IA local si existe)</option><option value="ollama">Ollama local</option><option value="template">Sin IA (reglas)</option><option value="claude">Claude asistido (copiar/pegar)</option></select></label>
                 <label className="f">Revisión humana<select value={f.review} onChange={(e) => set("review", e.target.value)}>
-                  <option value="auto_qa">Autónomo con QA</option><option value="approve_script">Aprobar guion antes de producir</option></select></label>
+                  <option value="auto_qa">Autónomo con QA</option><option value="approve_script">Aprobar guion antes de producir</option><option value="script_only">Solo guion</option></select></label>
                 <label className="f">Variantes<select value={f.variants} onChange={(e) => set("variants", Number(e.target.value))}>{[1, 2, 3].map((n) => <option key={n}>{n}</option>)}</select></label>
               </div>
               <div className="row">
@@ -80,7 +92,7 @@ export const Create: React.FC = () => {
             </div>
           </details>
           {err && <div className="err">{err}</div>}
-          <div className="row"><button className="btn primary big" disabled={!canGo} onClick={submit}>{busy ? "Creando…" : "Crear vídeo"}</button>
+          <div className="row"><button className="btn primary big" disabled={!canGo} onClick={submit}>{busy ? "Creando…" : f.review === "script_only" ? "Escribir guion" : "Crear vídeo"}</button>
             <span className="small muted">Se añade a la cola. Puedes seguir usando la app.</span></div>
         </div>
         <div className="grid" style={{ alignContent: "start" }}>

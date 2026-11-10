@@ -109,6 +109,8 @@ Return ONLY JSON matching the schema. Rules:
 - Characters: 3-6 cast members with ids (lowercase) and roles from the enum. Each beat lists who is on screen
   (1-3, the focus first), their action, expression, optional reaction on a specific word of THAT beat.
 - Shots vary: wide, medium, close, low, high, two_shot, insert. Light arc day -> golden -> night (explanation) -> golden.
+- A beat may set "environment" (village_square, market, street, park, interior, harbour) to move the story to another
+  place; keep 1-3 places per video and stay in one place for several beats.
 """
 
 
@@ -140,7 +142,16 @@ def ollama_plan(idea: str, kind: str, lang: str, seconds: int, env: str, brand: 
             ids = {c["id"] for c in d.get("cast", [])}
             for b in d.get("beats", []):  # drop references to unknown cast instead of failing
                 b["characters"] = [c for c in b.get("characters", []) if c.get("id") in ids][:4]
-            return Plan.model_validate(d), model
+            plan = Plan.model_validate(d)
+            words = len(plan.full_text().split())
+            if words < 0.8 * target and attempt < 2:
+                # too short for the requested duration: ask for more beats instead of padding with silence
+                msgs += [{"role": "assistant", "content": content[:6000]},
+                         {"role": "user", "content": f"The narration has only {words} words; it needs about {target} words for {seconds} seconds. "
+                                                     f"Keep the same story and cast, add escalation and explanation beats, and return the full JSON."}]
+                last_err = f"too short ({words}/{target} words)"
+                continue
+            return plan, model
         except Exception as e:  # noqa
             last_err = str(e)[:800]
             msgs += [{"role": "assistant", "content": content[:4000]}, {"role": "user", "content": f"That JSON failed validation: {last_err}. Return corrected JSON only."}]

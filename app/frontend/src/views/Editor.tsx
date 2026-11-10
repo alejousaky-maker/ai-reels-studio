@@ -3,6 +3,7 @@ import { api, fileUrl, fmtTime, STEPS } from "../api";
 import { useData } from "../hooks";
 import { JobRow, StatusPill } from "./common";
 
+const ENV_LABEL: Record<string, string> = { village_square: "Plaza del pueblo", market: "Mercado", street: "Calle", park: "Parque", interior: "Interior (habitación / local)", harbour: "Puerto con faro" };
 type Tab = "prod" | "story" | "script" | "video" | "audio" | "qa" | "versions";
 
 export const Editor: React.FC<{ pid: string }> = ({ pid }) => {
@@ -146,6 +147,8 @@ const Storyboard: React.FC<any> = ({ p, opts, job, running, reload, bust, qualit
               <label className="f">Música (ánimo)<select value={edit.mood} onChange={(e) => change("mood", e.target.value)}>{opts?.moods.map((x: string) => <option key={x}>{x}</option>)}</select></label>
               <label className="f">Transición<select value={edit.transition} onChange={(e) => change("transition", e.target.value)}>{["cut", "flash", "xfade"].map((x) => <option key={x}>{x}</option>)}</select></label>
             </div>
+            <label className="f">Lugar de esta escena<select value={edit.environment ?? ""} onChange={(e) => change("environment", e.target.value)}>
+              <option value="">(el del proyecto: {p.plan?.environment})</option>{(opts?.environments ?? []).map((x: string) => <option key={x} value={x}>{ENV_LABEL[x] ?? x}</option>)}</select></label>
             <h3>Personajes en escena</h3>
             {(edit.characters ?? []).map((c: any, i: number) => (
               <div key={i} className="row">

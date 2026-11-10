@@ -1,0 +1,108 @@
+{
+ "duration": 26.933333333333334,
+ "sampleRate": 48000,
+ "targetLUFS": -14.0,
+ "ceilingDBTP": -2.0,
+ "measured": {
+  "integratedLUFS": -14.0,
+  "truePeakDBTP": -2.0,
+  "LRA": 1.27,
+  "maxGainReductionDB": 6.19,
+  "voiceLUFS": -13.99,
+  "musicLUFS": -29.79,
+  "sfxLUFS": -35.09
+ },
+ "ffmpegEbur128": {
+  "I": -14.0,
+  "LRA": 1.3,
+  "truePeak": -2.0
+ },
+ "musicSections": [
+  {
+   "start": 0.0,
+   "end": 26.93,
+   "mood": "whimsical"
+  }
+ ],
+ "musicCues": [
+  "0.00s section 1: whimsical (108 bpm)"
+ ],
+ "sfxCues": [
+  {
+   "t": 0.0,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 2.6,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 4.047,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 5.467,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 7.967,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 10.4,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 12.3,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 14.567,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 16.413,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 18.167,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 19.647,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 21.133,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 22.58,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 24.0,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 25.48,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  }
+ ],
+ "license": "All music and SFX synthesized locally (numpy/scipy), original; voice from local TTS or user import."
+}

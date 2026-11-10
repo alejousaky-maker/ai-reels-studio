@@ -1,0 +1,174 @@
+{
+ "id": "por-qu-el-cielo-es-azul-4f7929",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 134,
+   "beats": 8,
+   "at": "2026-11-09T20:22:41"
+  },
+  "voice": {
+   "duration": 40.31127083333333,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 15.2,
+   "status": "done",
+   "voice": "ef_dora",
+   "speed": 1.0,
+   "at": "2026-11-09T20:22:57"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 18.6,
+   "method": {
+    "whisper": 9,
+    "spread": 1
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-09T20:23:15"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 1227,
+   "seconds_video": 40.9,
+   "scenes": 8,
+   "at": "2026-11-09T20:23:15"
+  },
+  "stills": {
+   "status": "done",
+   "count": 24,
+   "at": "2026-11-09T20:24:28"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 161.0,
+   "frames": 1227,
+   "renderedScenes": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b07",
+    "b08"
+   ],
+   "reusedScenes": [],
+   "fps_render": 7.62,
+   "at": "2026-11-09T20:27:09"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 12.5,
+   "integratedLUFS": -14.02,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.23,
+   "maxGainReductionDB": 5.92,
+   "voiceLUFS": -13.69,
+   "musicLUFS": -29.65,
+   "sfxLUFS": -34.72,
+   "at": "2026-11-09T20:27:22"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\por-qu-el-cielo-es-azul-4f7929\\output\\por-qu-el-cielo-es-azul_master_v1.mp4",
+   "at": "2026-11-09T20:27:23"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-09T20:27:36"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-09T20:19:10",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-09T20:22:41",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-09T20:22:57",
+   "seconds": 15.2,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-09T20:23:15",
+   "status": "done",
+   "seconds": 18.6
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-09T20:23:15",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-09T20:24:28",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-09T20:27:09",
+   "status": "done",
+   "seconds": 161.0
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-09T20:27:22",
+   "status": "done",
+   "seconds": 12.5
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-09T20:27:23",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-09T20:27:36",
+   "status": "done"
+  }
+ ],
+ "title": "Por qué el cielo es azul",
+ "created": "2026-11-09T20:18:54",
+ "request": {
+  "title": "Por qué el cielo es azul",
+  "idea": "Por qué el cielo es azul, explicado con humor",
+  "script": "",
+  "kind": "story",
+  "lang": "es",
+  "seconds": 45,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "village_square",
+  "voice": null,
+  "speed": 1.0,
+  "clientId": null,
+  "cta": null,
+  "captions": false,
+  "music": true,
+  "variants": 1,
+  "provider": "auto",
+  "review": "script_only",
+  "seed": 7,
+  "autostart": true
+ },
+ "lang": "es",
+ "style": "storybook",
+ "scriptProvider": "ollama:qwen2.5:7b",
+ "planRepairs": [
+  "8 beat(s) had no valid characters: cast assigned",
+  "light arc day -> golden -> night -> golden applied",
+  "moods derived from content"
+ ],
+ "durationNote": "",
+ "requestedSeconds": 45
+}

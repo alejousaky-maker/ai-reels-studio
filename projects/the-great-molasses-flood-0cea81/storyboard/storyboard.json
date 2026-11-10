@@ -4,7 +4,7 @@
  "fps": 30,
  "width": 1080,
  "height": 1920,
- "durationInFrames": 1704,
+ "durationInFrames": 1703,
  "env": {
   "preset": "village_square",
   "seed": 7,
@@ -694,7 +694,7 @@
   {
    "sceneId": "b12",
    "startFrame": 1188,
-   "endFrame": 1303,
+   "endFrame": 1302,
    "narration": "In the end, the syrup becomes a fond memory of the great flood.",
    "light": "day",
    "mood": "whimsical",
@@ -716,7 +716,7 @@
      "roll": 0.0
     },
     {
-     "frame": 1239,
+     "frame": 1238,
      "dur": 24,
      "position": [
       9.157,
@@ -742,15 +742,15 @@
   },
   {
    "sceneId": "b13",
-   "startFrame": 1303,
-   "endFrame": 1458,
+   "startFrame": 1302,
+   "endFrame": 1457,
    "narration": "The flood of molasses taught the village to be prepared for unexpected sticky situations.",
    "light": "day",
    "mood": "whimsical",
    "actors": [],
    "cameraKeys": [
     {
-     "frame": 1303,
+     "frame": 1302,
      "position": [
       -15.1,
       1.68,
@@ -765,7 +765,7 @@
      "roll": 0.0
     },
     {
-     "frame": 1388,
+     "frame": 1387,
      "cut": true,
      "position": [
       -12.4,
@@ -791,15 +791,15 @@
   },
   {
    "sceneId": "b14",
-   "startFrame": 1458,
-   "endFrame": 1568,
+   "startFrame": 1457,
+   "endFrame": 1567,
    "narration": "The molasses flood was a true story that left a sweet memory.",
    "light": "day",
    "mood": "whimsical",
    "actors": [],
    "cameraKeys": [
     {
-     "frame": 1458,
+     "frame": 1457,
      "position": [
       15.1,
       1.68,
@@ -814,7 +814,7 @@
      "roll": 0.0
     },
     {
-     "frame": 1506,
+     "frame": 1505,
      "dur": 24,
      "position": [
       12.4,
@@ -840,15 +840,15 @@
   },
   {
    "sceneId": "b15",
-   "startFrame": 1568,
-   "endFrame": 1624,
+   "startFrame": 1567,
+   "endFrame": 1623,
    "narration": "verifiedClaims: [fiction]",
    "light": "day",
    "mood": "whimsical",
    "actors": [],
    "cameraKeys": [
     {
-     "frame": 1568,
+     "frame": 1567,
      "position": [
       9.546,
       1.68,
@@ -873,15 +873,15 @@
   },
   {
    "sceneId": "b16",
-   "startFrame": 1624,
-   "endFrame": 1704,
+   "startFrame": 1623,
+   "endFrame": 1703,
    "narration": "verifiedClaims: [uncertain]",
    "light": "day",
    "mood": "whimsical",
    "actors": [],
    "cameraKeys": [
     {
-     "frame": 1624,
+     "frame": 1623,
      "position": [
       -15.1,
       1.68,
@@ -896,7 +896,7 @@
      "roll": 0.0
     },
     {
-     "frame": 1656,
+     "frame": 1655,
      "dur": 24,
      "position": [
       -12.4,

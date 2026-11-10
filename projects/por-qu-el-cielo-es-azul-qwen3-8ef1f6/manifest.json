@@ -1,0 +1,50 @@
+{
+ "id": "por-qu-el-cielo-es-azul-qwen3-8ef1f6",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 100,
+   "beats": 9,
+   "at": "2026-11-09T20:29:19"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-09T20:29:19",
+   "status": "done"
+  }
+ ],
+ "title": "Por qué el cielo es azul (qwen3)",
+ "created": "2026-11-09T20:27:21",
+ "request": {
+  "title": "Por qué el cielo es azul (qwen3)",
+  "idea": "Por qué el cielo es azul, explicado con humor",
+  "script": "",
+  "kind": "story",
+  "lang": "es",
+  "seconds": 45,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "village_square",
+  "voice": null,
+  "speed": 1.0,
+  "clientId": null,
+  "cta": null,
+  "captions": false,
+  "music": true,
+  "variants": 1,
+  "provider": "auto",
+  "review": "script_only",
+  "seed": 7,
+  "autostart": true
+ },
+ "lang": "es",
+ "style": "storybook",
+ "scriptProvider": "ollama:qwen3:8b",
+ "planRepairs": [
+  "light arc day -> golden -> night -> golden applied",
+  "monotonous shots replaced by a varied shot grammar",
+  "moods derived from content"
+ ]
+}

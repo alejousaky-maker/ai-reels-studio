@@ -1,10 +1,10 @@
-﻿// StoryWorld: one three.js scene per storyboard, posed per frame (pure function of scene index + frame).
+// StoryWorld: one three.js scene per storyboard, posed per frame (pure function of scene index + frame).
 // Sky / sun / fog / two-tone uniforms follow the template's rig (bridge/world.ts); the cast are lit Canvas2D cards
 // drawn by the template's toon.ts; effects are unlit cards. Billboards live on the NOINK layer.
 import * as THREE from "three";
 import { Kit, Ray, V, kitClone } from "../bridge/build";
 import { cloudHD, ctex } from "../bridge/paint";
-import { Pen, bodyFront, fxBurst, fxStars, fxPuff, fxNote, fxShadow, fxContact, FrontOpts, Outfit, INK } from "../bridge/toon";
+import { Pen, bodyFront, bodySide, fxBurst, fxStars, fxPuff, fxNote, fxShadow, fxContact, FrontOpts, SideOpts, Outfit, INK } from "../bridge/toon";
 import { TONE, CHAR, untone } from "../bridge/shade";
 import { NOINK } from "../bridge/ink";
 import { Pool, Actor, Fx, Place, FxPlace } from "../bridge/cast";
@@ -125,7 +125,20 @@ export class StoryWorld {
       m.position.set(Math.cos(a) * d, 120 + (i % 4) * 38, Math.sin(a) * d); m.scale.set(w, w / 2, 1); m.layers.set(NOINK);
       this.clouds.push(m); R.add(m);
     }
-    this.info = buildEnv(R, kit, sb.env, sightLines(sb, sceneIdx));
+    this.info = buildEnv(R, kit, sb.scenes[sceneIdx]?.env ?? sb.env, sightLines(sb, sceneIdx));
+    // warm light pools on the ground under every lamp (night only): additive, unlit, no ink
+    const poolTex = ctex("lampPool", 256, 256, (g) => {
+      const gr = g.createRadialGradient(128, 128, 0, 128, 128, 128);
+      gr.addColorStop(0, "rgba(255,190,110,0.85)"); gr.addColorStop(0.45, "rgba(255,170,90,0.35)"); gr.addColorStop(1, "rgba(255,160,80,0)");
+      g.fillStyle = gr; g.fillRect(0, 0, 256, 256);
+    });
+    for (const p of this.info.lanterns) {
+      if (p.y > 6) continue;   // lighthouse beacon: no ground pool
+      const m = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map: poolTex, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, fog: false }));
+      m.rotation.x = -Math.PI / 2; m.position.set(p.x, 0.04, p.z); m.scale.setScalar(p.y > 2.65 ? 5.0 : 4.2);
+      m.layers.set(NOINK); m.visible = false; m.renderOrder = 0.6;
+      this.glows.push(m as unknown as THREE.Sprite); R.add(m);
+    }
     for (const p of this.info.lanterns) {
       const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex(), color: new THREE.Color(3.2, 2.2, 1.0), fog: false, depthWrite: false, transparent: true, blending: THREE.AdditiveBlending }));
       s.position.copy(p); s.scale.setScalar(1.1); s.layers.set(NOINK); s.visible = false;
@@ -162,16 +175,21 @@ export class StoryWorld {
 
   /** actor state at frame f */
   private pose(a: ActorSpec, f: number) {
-    let x = a.x, z = a.z, moving = false, dirx = 0;
+    let x = a.x, z = a.z, moving = false, dirx = 0, dx = 0, dz = 0, speed = 0, tw = 0;
     if (a.walkTo && a.walkFrames) {
       const [f0, f1] = a.walkFrames, u = clamp01((f - f0) / Math.max(1, f1 - f0));
+      // constant speed with short 6-frame ease in/out so feet start and stop on the spot
       x = a.x + (a.walkTo[0] - a.x) * u; z = a.z + (a.walkTo[1] - a.z) * u;
       moving = f >= f0 && f < f1; dirx = a.walkTo[0] - a.x;
+      const len = Math.hypot(a.walkTo[0] - a.x, a.walkTo[1] - a.z) || 1;
+      dx = (a.walkTo[0] - a.x) / len; dz = (a.walkTo[1] - a.z) / len;
+      speed = len / (Math.max(1, f1 - f0) / this.sb.fps);
+      tw = Math.max(0, f - f0) / this.sb.fps;
     }
     let expr: Expr = a.expr ?? "neutral";
     const swaps: number[] = [];
     for (const k of [...(a.exprKeys ?? [])].sort((p, r) => p.frame - r.frame)) { swaps.push(k.frame); if (f >= k.frame - LEAD) expr = k.expr; }
-    return { x, z, moving, dirx, expr, swaps };
+    return { x, z, moving, dirx, dx, dz, speed, tw, expr, swaps };
   }
 
   update(idx: number, f: number, cam: THREE.PerspectiveCamera, scene: THREE.Scene) {
@@ -250,6 +268,21 @@ export class StoryWorld {
         wave: a.wave || dance ? q(Math.sin(t * (dance ? 7 : 9) + who.i * 1.3), 20) : undefined,
         light: light2D(false), facing, seed: (who.i * 5 + 3) % 7 + 1,
       };
+      // side view while walking ACROSS the frame (template bodySide: planted stance foot, cycloid swing foot)
+      const tx = cam.position.x - st.x, tz = cam.position.z - st.z, tl = Math.hypot(tx, tz) || 1;
+      const toward = st.moving ? (tx * st.dx + tz * st.dz) / tl : 1;
+      if (st.moving && Math.abs(toward) < 0.6) {
+        const cad = 0.9;                                           // gait cycles per second (2 steps)
+        const fs = Math.round(Math.sqrt(Math.max(0, 1 - toward * toward)) * 20) / 20;
+        const stride = Math.max(0.3, Math.min(1.3, st.speed / (2 * cad * 0.8 * scl))) * fs;
+        const mirror = st.dx * right.x + st.dz * right.z < 0;      // bodySide faces screen-right; mirror for leftward walks
+        const so: SideOpts = { phase: q((st.tw * cad + hh(who.i, 5)) % 1, 60), expr: st.expr, mode: "march", stomp: 0.6, stride: q(stride, 20),
+          blink: lidAt(fr, who.i * 7 + ai, st.swaps.map((x) => x - s.startFrame)), light: light2D(mirror), seed: (who.i * 5 + 3) % 7 + 1 };
+        const skey = `S|${a.castId}|${JSON.stringify(so, (_k, v) => (typeof v === "number" ? q(v) : v))}`;
+        places.push({ key: skey, x: st.x, y: 0, z: st.z, scale: scl, mirror, draw: (p) => bodySide(p, who.o, so), size: [w, h, k] });
+        blob(st.x, st.z, scl, 1);
+        return;
+      }
       const key = `F|${a.castId}|${JSON.stringify(fo, (_k, v) => (typeof v === "number" ? q(v) : v))}`;
       places.push({ key, x: st.x, y: hop, z: st.z, scale: scl, draw: (p) => bodyFront(p, who.o, fo), size: [w, h, k] });
       blob(st.x, st.z, scl, hop > 0.02 ? 0.7 : 1);
@@ -295,7 +328,7 @@ export class StoryWorld {
       a.mesh.visible = true;
       a.mesh.position.set(p.x, p.y, p.z);
       a.mesh.rotation.set(0, Math.atan2(cam.position.x - p.x, cam.position.z - p.z), 0);
-      a.mesh.scale.set(sc2, sc2, sc2);
+      a.mesh.scale.set(p.mirror ? -sc2 : sc2, sc2, sc2);
       a.mesh.castShadow = L.actorShadow;
       used.push(a);
     }

@@ -1,0 +1,81 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 57.40379166666666,
+ "voice": "am_michael",
+ "lang": "en",
+ "speed": 0.95,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "Imagine you're a sailor in the eighteen hundreds, and every lighthouse on the coast looks exactly the same.",
+   "start": 0.06,
+   "end": 6.776895833333334
+  },
+  {
+   "text": "So which one is home?",
+   "start": 6.916895833333333,
+   "end": 8.247208333333333
+  },
+  {
+   "text": "By day, a tall white tower looks like every other tall white tower.",
+   "start": 8.387208333333334,
+   "end": 12.676625
+  },
+  {
+   "text": "Steer toward the wrong one, and your trip could end on the rocks.",
+   "start": 12.816625,
+   "end": 16.610645833333333
+  },
+  {
+   "text": "You see, lighthouses have a secret identity.",
+   "start": 16.750645833333333,
+   "end": 19.593916666666665
+  },
+  {
+   "text": "By day, each one wears its own paint.",
+   "start": 19.733916666666666,
+   "end": 22.190833333333334
+  },
+  {
+   "text": "Stripes, bands, even diamonds.",
+   "start": 22.330833333333334,
+   "end": 24.4208125
+  },
+  {
+   "text": "Sailors call these patterns daymarks.",
+   "start": 24.5608125,
+   "end": 26.733645833333334
+  },
+  {
+   "text": "In North Carolina, Cape Hatteras wears a black and white spiral, while nearby Cape Lookout wears giant diamonds.",
+   "start": 26.873645833333335,
+   "end": 34.584
+  },
+  {
+   "text": "But at night, paint is useless, so every lighthouse blinks to its own rhythm.",
+   "start": 34.724,
+   "end": 39.51564583333333
+  },
+  {
+   "text": "Cape Lookout, for example, flashes every fifteen seconds.",
+   "start": 39.65564583333333,
+   "end": 43.432916666666664
+  },
+  {
+   "text": "It's like recognising a friend by their outfit in the day, and by their laugh in the dark.",
+   "start": 43.572916666666664,
+   "end": 48.967083333333335
+  },
+  {
+   "text": "So the sailor checks the stripes, counts the flashes, and finally knows the way home.",
+   "start": 49.107083333333335,
+   "end": 54.357416666666666
+  },
+  {
+   "text": "All thanks to a lighthouse that got dressed up.",
+   "start": 54.497416666666666,
+   "end": 57.26379166666667
+  }
+ ]
+}

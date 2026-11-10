@@ -1382,5 +1382,6 @@
  "captions": {
   "enabled": false,
   "words": []
- }
+ },
+ "style": "storybook"
 }
