@@ -1,0 +1,141 @@
+{
+ "file": "voice.wav",
+ "sampleRate": 48000,
+ "duration": 76.570625,
+ "voice": "am_eric*0.7+am_fenrir*0.3",
+ "lang": "en",
+ "speed": 1.15,
+ "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+ "sentences": [
+  {
+   "text": "What happens when a lifetime gamer finally decides to turn off his console and be useful for a single day?",
+   "start": 0.06,
+   "end": 5.490583333333333
+  },
+  {
+   "text": "Pure psychological horror.",
+   "start": 5.630583333333333,
+   "end": 7.1302916666666665
+  },
+  {
+   "text": "Step one: touching grass.",
+   "start": 7.270291666666667,
+   "end": 8.68575
+  },
+  {
+   "text": "Outside air hits my lungs like chemical warfare.",
+   "start": 8.82575,
+   "end": 11.4513125
+  },
+  {
+   "text": "I tried to clean my bedroom.",
+   "start": 11.5913125,
+   "end": 12.994979166666667
+  },
+  {
+   "text": "Turns out, under three years of pizza boxes, there was actually a wooden floor.",
+   "start": 13.134979166666668,
+   "end": 17.04489583333333
+  },
+  {
+   "text": "Then I tried applying for a real job.",
+   "start": 17.184895833333332,
+   "end": 19.146833333333333
+  },
+  {
+   "text": "The application asked for five years of experience for an entry-level position.",
+   "start": 19.286833333333334,
+   "end": 23.222979166666665
+  },
+  {
+   "text": "I attempted to cook real food instead of eating instant ramen.",
+   "start": 23.362979166666666,
+   "end": 26.489166666666666
+  },
+  {
+   "text": "I managed to set water on fire.",
+   "start": 26.629166666666666,
+   "end": 28.399020833333335
+  },
+  {
+   "text": "The worst part about real life?",
+   "start": 28.539020833333332,
+   "end": 30.182083333333335
+  },
+  {
+   "text": "There is no quick-save button.",
+   "start": 30.32208333333333,
+   "end": 31.826104166666667
+  },
+  {
+   "text": "You drop a plate, and it's gone forever.",
+   "start": 31.966104166666668,
+   "end": 33.74947916666667
+  },
+  {
+   "text": "I tried talking to a normal human being outside.",
+   "start": 33.88947916666667,
+   "end": 36.43247916666667
+  },
+  {
+   "text": "We made awkward eye contact for four seconds and I aged ten years.",
+   "start": 36.57247916666667,
+   "end": 39.987229166666665
+  },
+  {
+   "text": "Nobody warned me that adulting is basically paying a subscription fee just to exist in a server that lags constantly.",
+   "start": 40.127229166666666,
+   "end": 46.39177083333333
+  },
+  {
+   "text": "After four hours of total productivity, my brain felt like a fried graphics card running Crysis on max settings.",
+   "start": 46.53177083333333,
+   "end": 52.6775625
+  },
+  {
+   "text": "I looked at my life, looked at my chores, and made the only logical executive decision.",
+   "start": 52.8175625,
+   "end": 57.30775
+  },
+  {
+   "text": "I pressed the power button.",
+   "start": 57.44775,
+   "end": 58.71879166666667
+  },
+  {
+   "text": "The console beeped.",
+   "start": 58.85879166666667,
+   "end": 59.90625
+  },
+  {
+   "text": "Balance was instantly restored to the universe.",
+   "start": 60.04625,
+   "end": 62.36604166666667
+  },
+  {
+   "text": "Sure, I'm unemployed, broke, and living in squalor.",
+   "start": 62.50604166666667,
+   "end": 64.9909375
+  },
+  {
+   "text": "But at least my K-D ratio is positive.",
+   "start": 65.1309375,
+   "end": 67.5073125
+  },
+  {
+   "text": "Being useful is overrated.",
+   "start": 67.6473125,
+   "end": 69.2285625
+  },
+  {
+   "text": "Grinding in a fictional video game simulator is where true fulfillment lies.",
+   "start": 69.3685625,
+   "end": 73.26489583333333
+  },
+  {
+   "text": "Send this to that friend who really needs to touch grass today.",
+   "start": 73.40489583333333,
+   "end": 76.430625
+  }
+ ]
+}

@@ -1,0 +1,4007 @@
+{
+ "version": 1,
+ "title": "The Fortnite Pirate Token",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 2361,
+ "env": {
+  "preset": "trading",
+  "seed": 97,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "cap",
+   "name": "Pirate captain",
+   "outfit": {
+    "jacket": "#7a4f33",
+    "pants": "#2b2b38",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "tricorn",
+    "cap": "#1d1b22",
+    "eyepatch": true,
+    "headset": "#7a3aff",
+    "belt": "#e8b83a",
+    "buttons": "#e8b83a"
+   }
+  },
+  {
+   "id": "gam",
+   "name": "Gamer trader",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "law",
+   "name": "Studio lawyer",
+   "outfit": {
+    "jacket": "#5a6170",
+    "pants": "#4a4f5a",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "longhair",
+    "hair": "#2a201a",
+    "tie": "#c8323a",
+    "dress": "#5a6170"
+   }
+  },
+  {
+   "id": "extra0",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "extra1",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "extra2",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "extra3",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "extra4",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "extra5",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "crowd_park__0",
+   "name": "",
+   "outfit": {
+    "jacket": "#3f6fb5",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#7a4a2a",
+    "dress": "#b5653f"
+   }
+  },
+  {
+   "id": "crowd_park__1",
+   "name": "",
+   "outfit": {
+    "jacket": "#2f5f6a",
+    "pants": "#3b5b9a",
+    "boots": "#f4f1ea",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#e2453c",
+    "build": "kid"
+   }
+  },
+  {
+   "id": "crowd_park__2",
+   "name": "",
+   "outfit": {
+    "jacket": "#3f6fb5",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#fdfcf8",
+    "hat": "tophat",
+    "cap": "#5d7a3a",
+    "moustache": "#4a3426"
+   }
+  },
+  {
+   "id": "crowd_park__3",
+   "name": "",
+   "outfit": {
+    "jacket": "#2f5f6a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#7a4a2a",
+    "dress": "#d9a441"
+   }
+  },
+  {
+   "id": "crowd_park__4",
+   "name": "",
+   "outfit": {
+    "jacket": "#3f6fb5",
+    "pants": "#3b5b9a",
+    "boots": "#f4f1ea",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#e2453c",
+    "build": "kid"
+   }
+  },
+  {
+   "id": "crowd_park__5",
+   "name": "",
+   "outfit": {
+    "jacket": "#2f5f6a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#fdfcf8",
+    "hat": "tophat",
+    "cap": "#c25a7a",
+    "moustache": "#4a3426"
+   }
+  },
+  {
+   "id": "crowd_shops__0",
+   "name": "",
+   "outfit": {
+    "jacket": "#c25a7a",
+    "pants": "#3b5b9a",
+    "boots": "#f4f1ea",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#e2453c",
+    "build": "kid"
+   }
+  },
+  {
+   "id": "crowd_shops__1",
+   "name": "",
+   "outfit": {
+    "jacket": "#5d7a3a",
+    "pants": "#3a3440",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#5a4a3a",
+    "tie": "#8a2a2a"
+   }
+  },
+  {
+   "id": "crowd_shops__2",
+   "name": "",
+   "outfit": {
+    "jacket": "#3a4566",
+    "pants": "#2b2b38",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "tie": "#3f6fb5"
+   }
+  },
+  {
+   "id": "crowd_shops__3",
+   "name": "",
+   "outfit": {
+    "jacket": "#e06a9a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#fdfcf8",
+    "dress": "#e06a9a",
+    "hat": "longhair",
+    "hair": "#2a201a"
+   }
+  },
+  {
+   "id": "crowd_shops__4",
+   "name": "",
+   "outfit": {
+    "jacket": "#ff7a59",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#fdfcf8",
+    "dress": "#ff7a59",
+    "hat": "sunhat",
+    "hair": "#2a201a",
+    "shades": true
+   }
+  },
+  {
+   "id": "crowd_shops__5",
+   "name": "",
+   "outfit": {
+    "jacket": "#9a7ac9",
+    "pants": "#3b5b9a",
+    "boots": "#f2efe8",
+    "skin": "#fdfcf8",
+    "hat": "longhair",
+    "hair": "#5a3b2a",
+    "pockets": false
+   }
+  },
+  {
+   "id": "extra6",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#1d1b22",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#1d1b22",
+    "tie": "#1d1b22",
+    "shades": true
+   }
+  },
+  {
+   "id": "extra7",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#1d1b22",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#1d1b22",
+    "tie": "#1d1b22",
+    "shades": true
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 115,
+   "narration": "What would happen if internet pirates launched an unofficial crypto token called Fortnite Gold? Absolute chaos.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": -3.296,
+     "z": 1.976,
+     "expr": "starry",
+     "mode": "stand",
+     "pose": "up",
+     "holding": "goldcoin"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      -3.272,
+      2.3,
+      11.259
+     ],
+     "lookAt": [
+      1.468,
+      1.2,
+      3.041
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 0,
+     "position": [
+      -3.272,
+      2.3,
+      11.259
+     ],
+     "lookAt": [
+      -4,
+      1.2,
+      1.8
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9700,
+   "qualityNotes": "",
+   "backdropPrompt": "a stock exchange trading floor with rows of desks, glowing monitors and big red ticker screens, a pirate ship bursting through the big glass window of a neon crypto stock exchange, shattered glass, green tickers, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97000,
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "ship",
+     "x": -1.822,
+     "z": -3.922,
+     "scale": 0.35,
+     "moveTo": [
+      -3.519,
+      2.869
+     ],
+     "moveFrames": [
+      11,
+      103
+     ]
+    },
+    {
+     "kind": "ticker",
+     "x": -5.693,
+     "z": -0.128,
+     "label": "FORTNITE GOLD ▲ 4200%"
+    }
+   ],
+   "backdrop": "backdrops/6db95d3eca0fda2c.png",
+   "backdropDepth": "backdrops/6db95d3eca0fda2c_depth.png"
+  },
+  {
+   "sceneId": "b01a",
+   "startFrame": 115,
+   "endFrame": 150,
+   "narration": "What would happen if internet pirates launched an unofficial crypto token called Fortnite Gold? Absolute chaos.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": -3.918,
+     "z": 1.82,
+     "expr": "starry",
+     "mode": "stand",
+     "holding": "goldcoin"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 115,
+     "position": [
+      -4.517,
+      1.6,
+      3.475
+     ],
+     "lookAt": [
+      -3.918,
+      1.6,
+      1.82
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 115,
+     "position": [
+      -4.277,
+      1.6,
+      2.813
+     ],
+     "lookAt": [
+      -3.918,
+      1.6,
+      1.82
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 35
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 20,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9737,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a stock exchange trading floor with rows of desks, glowing monitors and big red ticker screens, a pirate ship bursting through the big glass window of a neon crypto stock exchange, shattered glass, green tickers, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97000,
+   "hud": {
+    "kind": "spot"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "ship",
+     "x": -2.444,
+     "z": -4.078,
+     "scale": 0.35,
+     "moveTo": [
+      -4.141,
+      2.713
+     ],
+     "moveFrames": [
+      118,
+      146
+     ]
+    },
+    {
+     "kind": "ticker",
+     "x": -5.693,
+     "z": -0.128,
+     "label": "FORTNITE GOLD ▲ 4200%"
+    }
+   ],
+   "punches": [
+    130
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 128,
+     "dur": 22,
+     "at": [
+      -3.777,
+      1.891,
+      1.856
+     ],
+     "size": 0.23445554337723234
+    }
+   ],
+   "backdrop": "backdrops/6db95d3eca0fda2c.png",
+   "backdropDepth": "backdrops/6db95d3eca0fda2c_depth.png"
+  },
+  {
+   "sceneId": "b01b",
+   "startFrame": 150,
+   "endFrame": 190,
+   "narration": "What would happen if internet pirates launched an unofficial crypto token called Fortnite Gold? Absolute chaos.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": -3.708,
+     "z": 1.873,
+     "expr": "laugh",
+     "mode": "jump",
+     "holding": "goldcoin"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 150,
+     "position": [
+      -2.569,
+      1.55,
+      6.516
+     ],
+     "lookAt": [
+      -3.708,
+      1.4,
+      1.873
+     ],
+     "fov": 40,
+     "roll": 0.16
+    },
+    {
+     "frame": 150,
+     "position": [
+      -4.561,
+      1.55,
+      6.576
+     ],
+     "lookAt": [
+      -3.708,
+      1.4,
+      1.873
+     ],
+     "fov": 40,
+     "roll": 0.16,
+     "dur": 40
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9774,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a stock exchange trading floor with rows of desks, glowing monitors and big red ticker screens, a pirate ship bursting through the big glass window of a neon crypto stock exchange, shattered glass, green tickers, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97000,
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "ship",
+     "x": -2.233,
+     "z": -4.025,
+     "scale": 0.35,
+     "moveTo": [
+      -3.931,
+      2.766
+     ],
+     "moveFrames": [
+      154,
+      186
+     ]
+    },
+    {
+     "kind": "ticker",
+     "x": -5.693,
+     "z": -0.128,
+     "label": "FORTNITE GOLD ▲ 4200%"
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 169,
+     "amp": 0.8
+    }
+   ],
+   "punches": [
+    152
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 167,
+     "dur": 23,
+     "at": [
+      -3.3,
+      2.28,
+      1.975
+     ],
+     "size": 0.8
+    },
+    {
+     "kind": "money",
+     "frame": 150,
+     "dur": 40,
+     "at": [
+      -3.853,
+      1.4,
+      2.455
+     ],
+     "size": 3.2
+    }
+   ],
+   "backdrop": "backdrops/6db95d3eca0fda2c.png",
+   "backdropDepth": "backdrops/6db95d3eca0fda2c_depth.png"
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 190,
+   "endFrame": 294,
+   "narration": "For years, gamers wanted a token to trade skins freely, without paying a thirty percent platform fee.",
+   "light": "night",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "gam",
+     "x": 0.347,
+     "z": 1.0,
+     "expr": "skeptical",
+     "mode": "chair"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 190,
+     "position": [
+      -1.6,
+      1.68,
+      6.6
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 190,
+     "position": [
+      -0.96,
+      1.56,
+      4.36
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.0
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 104
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "whip",
+   "seed": 9701,
+   "qualityNotes": "",
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97001,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "gameroom",
+    "seed": 97,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "monitor",
+     "x": -1.27,
+     "z": -0.22,
+     "label": "PLATFORM FEE|30%"
+    }
+   ],
+   "backdrop": "backdrops/0239027f7cadb156.png",
+   "backdropDepth": "backdrops/0239027f7cadb156_depth.png"
+  },
+  {
+   "sceneId": "b02a",
+   "startFrame": 294,
+   "endFrame": 366,
+   "narration": "For years, gamers wanted a token to trade skins freely, without paying a thirty percent platform fee.",
+   "light": "night",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "gam",
+     "x": 0.16,
+     "z": 1.0,
+     "expr": "evil",
+     "mode": "stand",
+     "holding": "cutlass"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 294,
+     "position": [
+      0.71,
+      1.62,
+      3.9
+     ],
+     "lookAt": [
+      1.894,
+      1.5,
+      1.196
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 294,
+     "position": [
+      0.71,
+      1.62,
+      3.9
+     ],
+     "lookAt": [
+      0.16,
+      1.5,
+      1.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9738,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97001,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "gameroom",
+    "seed": 97,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "monitor",
+     "x": -1.27,
+     "z": -0.22,
+     "label": "PLATFORM FEE|30%"
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 350,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 348,
+     "dur": 18,
+     "at": [
+      0.434,
+      2.05,
+      1.0
+     ],
+     "size": 0.44330948811505755
+    }
+   ],
+   "backdrop": "backdrops/0239027f7cadb156.png",
+   "backdropDepth": "backdrops/0239027f7cadb156_depth.png"
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 366,
+   "endFrame": 468,
+   "narration": "So some anonymous devs launched a pirate token overnight, promising it would become the official currency of Tilted Towers.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": 6.0,
+     "z": -2.1,
+     "expr": "smug",
+     "mode": "stand",
+     "pose": "point",
+     "holding": "phone"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 366,
+     "position": [
+      6.307,
+      1.62,
+      0.836
+     ],
+     "lookAt": [
+      6.0,
+      1.5,
+      -2.1
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 366,
+     "position": [
+      6.184,
+      1.572,
+      -0.338
+     ],
+     "lookAt": [
+      6.0,
+      1.5,
+      -2.1
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 102
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9702,
+   "qualityNotes": "",
+   "backdropPrompt": "a stock exchange trading floor with rows of desks, glowing monitors and big red ticker screens, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97002,
+   "hud": {
+    "kind": "panel",
+    "text": "☠ FORTNITE GOLD|PRICE ▲ 4,200%|TO THE MOON!"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "backdrop": "backdrops/7846d8d0a27f5e23.png",
+   "backdropDepth": "backdrops/7846d8d0a27f5e23_depth.png"
+  },
+  {
+   "sceneId": "b03a",
+   "startFrame": 468,
+   "endFrame": 575,
+   "narration": "So some anonymous devs launched a pirate token overnight, promising it would become the official currency of Tilted Towers.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": 6.0,
+     "z": -2.1,
+     "expr": "proud",
+     "mode": "stand",
+     "pose": "hips"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 468,
+     "position": [
+      9.142,
+      0.4,
+      2.804
+     ],
+     "lookAt": [
+      6,
+      1.38,
+      -2.1
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 468,
+     "position": [
+      9.142,
+      4.592,
+      2.804
+     ],
+     "lookAt": [
+      6,
+      1.38,
+      -2.1
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 107
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9739,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a stock exchange trading floor with rows of desks, glowing monitors and big red ticker screens, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97002,
+   "hud": {
+    "kind": "panel",
+    "text": "☠ FORTNITE GOLD|PRICE ▲ 4,200%|TO THE MOON!"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "ticker",
+     "x": 4.583,
+     "z": -6.822,
+     "label": "FTG ▲ TO THE MOON"
+    }
+   ],
+   "backdrop": "backdrops/7846d8d0a27f5e23.png",
+   "backdropDepth": "backdrops/7846d8d0a27f5e23_depth.png"
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 575,
+   "endFrame": 764,
+   "narration": "Within twenty-four hours, millions of players piled in, turning a meme coin into a multi-million-dollar digital treasure island.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "gam",
+     "x": 7.0,
+     "z": 0.0,
+     "expr": "starry",
+     "mode": "stand",
+     "pose": "up"
+    },
+    {
+     "castId": "extra0",
+     "x": 4.0,
+     "z": -1.6,
+     "mode": "dance",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra1",
+     "x": 2.9,
+     "z": 0.8,
+     "mode": "dance",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra2",
+     "x": 1.8,
+     "z": -2.9,
+     "mode": "dance",
+     "expr": "nervous"
+    },
+    {
+     "castId": "extra3",
+     "x": 4.153,
+     "z": 1.563,
+     "mode": "dance",
+     "expr": "neutral"
+    },
+    {
+     "castId": "extra4",
+     "x": 2.86,
+     "z": -4.06,
+     "mode": "dance",
+     "expr": "laugh"
+    },
+    {
+     "castId": "extra5",
+     "x": 2.379,
+     "z": 1.372,
+     "mode": "dance",
+     "expr": "smile"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 575,
+     "position": [
+      17.5,
+      0.4,
+      3.0
+     ],
+     "lookAt": [
+      7,
+      1.2,
+      0
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 575,
+     "position": [
+      17.5,
+      7.76,
+      3.0
+     ],
+     "lookAt": [
+      7,
+      1.2,
+      0
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 189
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9703,
+   "qualityNotes": "",
+   "backdropPrompt": "a sunny city park with lawns, trees, benches, a pond and lamp posts, a colorful video-game island with a treasure chest of glowing gold coins, palm trees and a festival crowd area, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97000,
+   "env": {
+    "preset": "park",
+    "seed": 97,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "partybus",
+     "x": 0.649,
+     "z": 0.0,
+     "scale": 0.9,
+     "y": 5.0,
+     "moveTo": [
+      0.649,
+      -3.0
+     ],
+     "moveFrames": [
+      593,
+      745
+     ]
+    }
+   ],
+   "punches": [
+    620
+   ],
+   "fx": [
+    {
+     "kind": "money",
+     "frame": 618,
+     "dur": 146,
+     "at": [
+      7.6,
+      1.4,
+      0.0
+     ],
+     "size": 3.2
+    }
+   ],
+   "textOverlays": [
+    {
+     "text": "24 HOURS",
+     "frame": 578,
+     "dur": 183,
+     "position": "top",
+     "style": "title"
+    }
+   ],
+   "backdrop": "backdrops/0430c93f801f4d42.png",
+   "backdropDepth": "backdrops/0430c93f801f4d42_depth.png"
+  },
+  {
+   "sceneId": "b04a",
+   "startFrame": 764,
+   "endFrame": 796,
+   "narration": "Within twenty-four hours, millions of players piled in, turning a meme coin into a multi-million-dollar digital treasure island.",
+   "light": "day",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "gam",
+     "x": 7.0,
+     "z": 0.0,
+     "expr": "love",
+     "mode": "stand",
+     "holding": "goldcoin"
+    },
+    {
+     "castId": "crowd_park__0",
+     "x": 3.164,
+     "z": 3.475,
+     "expr": "neutral",
+     "walkTo": [
+      3.164,
+      0.275
+     ],
+     "walkFrames": [
+      764,
+      796
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_park__1",
+     "x": 1.752,
+     "z": 3.479,
+     "expr": "smile",
+     "walkTo": [
+      1.752,
+      6.679
+     ],
+     "walkFrames": [
+      764,
+      796
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_park__2",
+     "x": 4.94,
+     "z": 2.357,
+     "expr": "bored",
+     "mode": "stand",
+     "talk": [
+      [
+       770,
+       796
+      ]
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 764,
+     "position": [
+      9.9,
+      1.62,
+      -0.55
+     ],
+     "lookAt": [
+      7.0,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 764,
+     "position": [
+      8.74,
+      1.572,
+      -0.33
+     ],
+     "lookAt": [
+      7.0,
+      1.5,
+      0.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 32
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9740,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a sunny city park with lawns, trees, benches, a pond and lamp posts, a colorful video-game island with a treasure chest of glowing gold coins, palm trees and a festival crowd area, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97000,
+   "env": {
+    "preset": "park",
+    "seed": 97,
+    "shop": null
+   },
+   "pieces": [
+    {
+     "kind": "partybus",
+     "x": 0.649,
+     "z": 0.0,
+     "scale": 0.9,
+     "y": 5.0,
+     "moveTo": [
+      0.649,
+      -3.0
+     ],
+     "moveFrames": [
+      767,
+      792
+     ]
+    }
+   ],
+   "punches": [
+    766
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 764,
+     "dur": 32,
+     "at": [
+      7.0,
+      2.05,
+      -0.274
+     ],
+     "size": 0.44330948811505755
+    }
+   ],
+   "backdrop": "backdrops/0430c93f801f4d42.png",
+   "backdropDepth": "backdrops/0430c93f801f4d42_depth.png"
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 796,
+   "endFrame": 808,
+   "narration": "Suddenly, you weren't playing to win. You were playing to arbitrage liquidity pools on Discord.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "gam",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "sweat",
+     "mode": "chair",
+     "holding": "controller"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 796,
+     "position": [
+      -1.6,
+      1.68,
+      6.6
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 796,
+     "position": [
+      -0.96,
+      1.56,
+      4.36
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.0
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 12
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9704,
+   "qualityNotes": "",
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97001,
+   "hud": {
+    "kind": "panel",
+    "text": "LIQUIDITY POOL|APY 9,000%!"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "gameroom",
+    "seed": 97,
+    "shop": null
+   },
+   "backdrop": "backdrops/0239027f7cadb156.png",
+   "backdropDepth": "backdrops/0239027f7cadb156_depth.png"
+  },
+  {
+   "sceneId": "b05a",
+   "startFrame": 808,
+   "endFrame": 944,
+   "narration": "Suddenly, you weren't playing to win. You were playing to arbitrage liquidity pools on Discord.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "gam",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "crazy",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 808,
+     "position": [
+      0.18,
+      1.6,
+      2.75
+     ],
+     "lookAt": [
+      0.0,
+      1.6,
+      1.0
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 808,
+     "position": [
+      0.108,
+      1.6,
+      2.05
+     ],
+     "lookAt": [
+      0.0,
+      1.6,
+      1.0
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 136
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 20,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9741,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97001,
+   "hud": {
+    "kind": "panel",
+    "text": "LIQUIDITY POOL|APY 9,000%!"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "gameroom",
+    "seed": 97,
+    "shop": null
+   },
+   "backdrop": "backdrops/0239027f7cadb156.png",
+   "backdropDepth": "backdrops/0239027f7cadb156_depth.png"
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 944,
+   "endFrame": 1037,
+   "narration": "Then the game studio's lawyers finished their morning coffee and chose absolute legal violence.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "law",
+     "x": 3.0,
+     "z": 1.0,
+     "expr": "bored",
+     "mode": "stand",
+     "holding": "coffee"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 944,
+     "position": [
+      3.34,
+      1.68,
+      6.814
+     ],
+     "lookAt": [
+      3,
+      1.38,
+      1
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 944,
+     "position": [
+      3.204,
+      1.56,
+      4.488
+     ],
+     "lookAt": [
+      3,
+      1.38,
+      1
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 93
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "zoom",
+   "seed": 9705,
+   "qualityNotes": "",
+   "backdropPrompt": "a corner office with a big desk, laptop, shelves and floor-to-ceiling windows onto skyscrapers, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97002,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "office",
+    "seed": 97,
+    "shop": null
+   },
+   "backdrop": "backdrops/64db6423deb2519b.png",
+   "backdropDepth": "backdrops/64db6423deb2519b_depth.png"
+  },
+  {
+   "sceneId": "b06a",
+   "startFrame": 1037,
+   "endFrame": 1100,
+   "narration": "Then the game studio's lawyers finished their morning coffee and chose absolute legal violence.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "law",
+     "x": 3.0,
+     "z": 1.0,
+     "expr": "angry",
+     "mode": "stand",
+     "holding": "gavel"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1037,
+     "position": [
+      5.039,
+      0.32,
+      4.101
+     ],
+     "lookAt": [
+      3.0,
+      1.55,
+      1.0
+     ],
+     "fov": 50,
+     "roll": 0.0
+    },
+    {
+     "frame": 1037,
+     "position": [
+      4.223,
+      0.812,
+      2.861
+     ],
+     "lookAt": [
+      3.0,
+      1.55,
+      1.0
+     ],
+     "fov": 50,
+     "roll": 0.0,
+     "dur": 63
+    }
+   ],
+   "push": 0.0028,
+   "dof": {
+    "cInf": 7,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9742,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a corner office with a big desk, laptop, shelves and floor-to-ceiling windows onto skyscrapers, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97002,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "office",
+    "seed": 97,
+    "shop": null
+   },
+   "kicks": [
+    {
+     "frame": 1075,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 1073,
+     "dur": 27,
+     "at": [
+      3.396,
+      2.28,
+      0.861
+     ],
+     "size": 0.8
+    }
+   ],
+   "backdrop": "backdrops/64db6423deb2519b.png",
+   "backdropDepth": "backdrops/64db6423deb2519b_depth.png"
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 1100,
+   "endFrame": 1185,
+   "narration": "A ten-page cease-and-desist letter hit the developers faster than a pump shotgun headshot.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": -1.45,
+     "z": -0.2,
+     "expr": "smug",
+     "mode": "chair",
+     "holding": "phone"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1100,
+     "position": [
+      -4.658,
+      1.68,
+      4.739
+     ],
+     "lookAt": [
+      -2.245,
+      1.38,
+      -0.562
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1100,
+     "position": [
+      -3.068,
+      1.68,
+      5.463
+     ],
+     "lookAt": [
+      -0.655,
+      1.38,
+      0.162
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 85
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9706,
+   "qualityNotes": "",
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97000,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "gameroom",
+    "seed": 97,
+    "shop": null
+   },
+   "punches": [
+    1146
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 1144,
+     "dur": 41,
+     "at": [
+      -1.035,
+      2.28,
+      -0.138
+     ],
+     "size": 0.42,
+     "product": "envelope"
+    }
+   ],
+   "backdrop": "backdrops/bfb1ca8d2b8a322b.png",
+   "backdropDepth": "backdrops/bfb1ca8d2b8a322b_depth.png"
+  },
+  {
+   "sceneId": "b07a",
+   "startFrame": 1185,
+   "endFrame": 1248,
+   "narration": "A ten-page cease-and-desist letter hit the developers faster than a pump shotgun headshot.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": -1.45,
+     "z": -0.2,
+     "expr": "dazed",
+     "mode": "fall"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1185,
+     "position": [
+      -1.336,
+      1.62,
+      2.75
+     ],
+     "lookAt": [
+      0.236,
+      1.5,
+      0.251
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1185,
+     "position": [
+      -1.336,
+      1.62,
+      2.75
+     ],
+     "lookAt": [
+      -1.45,
+      1.5,
+      -0.2
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9743,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97000,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "gameroom",
+    "seed": 97,
+    "shop": null
+   },
+   "kicks": [
+    {
+     "frame": 1231,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "stars",
+     "frame": 1229,
+     "dur": 19,
+     "at": [
+      -1.179,
+      2.05,
+      -0.159
+     ],
+     "size": 0.44330948811505755
+    }
+   ],
+   "backdrop": "backdrops/bfb1ca8d2b8a322b.png",
+   "backdropDepth": "backdrops/bfb1ca8d2b8a322b_depth.png"
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 1248,
+   "endFrame": 1350,
+   "narration": "And just like that, the anonymous creators deleted their accounts, cashed out, and vanished into thin air.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": 0.0,
+     "z": -2.1,
+     "expr": "scared",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1248,
+     "position": [
+      -1.6,
+      0.4,
+      3.5
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      -2.1
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1248,
+     "position": [
+      -1.6,
+      4.592,
+      3.5
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      -2.1
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 102
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9707,
+   "qualityNotes": "",
+   "backdropPrompt": "a stock exchange trading floor with rows of desks, glowing monitors and big red ticker screens, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97001,
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "ticker",
+     "x": 0.0,
+     "z": -7.03,
+     "label": "FORTNITE GOLD ▼ 99.9%"
+    }
+   ],
+   "backdrop": "backdrops/ad97b005b5ddd710.png",
+   "backdropDepth": "backdrops/ad97b005b5ddd710_depth.png"
+  },
+  {
+   "sceneId": "b08a",
+   "startFrame": 1350,
+   "endFrame": 1373,
+   "narration": "And just like that, the anonymous creators deleted their accounts, cashed out, and vanished into thin air.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": 0.0,
+     "z": -2.1,
+     "expr": "dazed",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1350,
+     "position": [
+      0.55,
+      1.62,
+      0.8
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      -2.1
+     ],
+     "fov": 34,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9744,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a stock exchange trading floor with rows of desks, glowing monitors and big red ticker screens, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97001,
+   "hud": {
+    "kind": "panel",
+    "text": "FORTNITE GOLD|▼ 99.9%!"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "ticker",
+     "x": 0.0,
+     "z": -7.03,
+     "label": "FORTNITE GOLD ▼ 99.9%"
+    }
+   ],
+   "punches": [
+    1352
+   ],
+   "fx": [
+    {
+     "kind": "money",
+     "frame": 1350,
+     "dur": 23,
+     "at": [
+      0.0,
+      1.4,
+      -1.5
+     ],
+     "size": 3.2
+    }
+   ],
+   "backdrop": "backdrops/ad97b005b5ddd710.png",
+   "backdropDepth": "backdrops/ad97b005b5ddd710_depth.png"
+  },
+  {
+   "sceneId": "b08b",
+   "startFrame": 1373,
+   "endFrame": 1413,
+   "narration": "And just like that, the anonymous creators deleted their accounts, cashed out, and vanished into thin air.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 1373,
+     "position": [
+      -1.65,
+      1.805,
+      2.85
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      -2.1
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1373,
+     "position": [
+      -3.0,
+      2.3,
+      6.9
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      -2.1
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 40
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9781,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a stock exchange trading floor with rows of desks, glowing monitors and big red ticker screens, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97001,
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "ticker",
+     "x": 0.0,
+     "z": -7.03,
+     "label": "FORTNITE GOLD ▼ 99.9%"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "puff",
+     "frame": 1373,
+     "dur": 40,
+     "at": [
+      0,
+      1.0,
+      -2.1
+     ],
+     "size": 0.9
+    }
+   ],
+   "backdrop": "backdrops/ad97b005b5ddd710.png",
+   "backdropDepth": "backdrops/ad97b005b5ddd710_depth.png"
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 1413,
+   "endFrame": 1543,
+   "narration": "Players who thought they were crypto tycoons were suddenly left holding literal digital garbage.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "gam",
+     "x": 2.4,
+     "z": 0.8,
+     "expr": "sad",
+     "mode": "stand",
+     "holding": "phone"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1413,
+     "position": [
+      3.877,
+      1.62,
+      3.355
+     ],
+     "lookAt": [
+      2.4,
+      1.5,
+      0.8
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1413,
+     "position": [
+      3.286,
+      1.572,
+      2.333
+     ],
+     "lookAt": [
+      2.4,
+      1.5,
+      0.8
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 130
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9708,
+   "qualityNotes": "",
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97002,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "gameroom",
+    "seed": 97,
+    "shop": null
+   },
+   "backdrop": "backdrops/655431133bfc36c8.png",
+   "backdropDepth": "backdrops/655431133bfc36c8_depth.png"
+  },
+  {
+   "sceneId": "b09a",
+   "startFrame": 1543,
+   "endFrame": 1567,
+   "narration": "Players who thought they were crypto tycoons were suddenly left holding literal digital garbage.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "gam",
+     "x": 2.4,
+     "z": 0.8,
+     "expr": "cry",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1543,
+     "position": [
+      2.808,
+      1.6,
+      2.511
+     ],
+     "lookAt": [
+      2.4,
+      1.6,
+      0.8
+     ],
+     "fov": 30,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 20,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9745,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97002,
+   "hud": {
+    "kind": "spot"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "gameroom",
+    "seed": 97,
+    "shop": null
+   },
+   "punches": [
+    1545
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "frame": 1543,
+     "dur": 24,
+     "at": [
+      2.537,
+      1.891,
+      0.752
+     ],
+     "size": 0.1500515477614287,
+     "product": "moth"
+    }
+   ],
+   "backdrop": "backdrops/655431133bfc36c8.png",
+   "backdropDepth": "backdrops/655431133bfc36c8_depth.png"
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 1567,
+   "endFrame": 1701,
+   "narration": "Even worse, anyone caught wearing the pirate token skin got banned from the lobby.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "cap",
+     "x": 7.0,
+     "z": 0.0,
+     "expr": "broken",
+     "mode": "stand"
+    },
+    {
+     "castId": "crowd_park__0",
+     "x": 4.153,
+     "z": 0.946,
+     "expr": "neutral",
+     "walkTo": [
+      4.153,
+      -2.254
+     ],
+     "walkFrames": [
+      1567,
+      1701
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_park__1",
+     "x": 2.741,
+     "z": 2.295,
+     "expr": "smile",
+     "walkTo": [
+      2.741,
+      5.495
+     ],
+     "walkFrames": [
+      1567,
+      1701
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_park__2",
+     "x": 1.329,
+     "z": 0.361,
+     "expr": "bored",
+     "mode": "stand",
+     "talk": [
+      [
+       1573,
+       1701
+      ]
+     ]
+    },
+    {
+     "castId": "crowd_park__3",
+     "x": 4.807,
+     "z": -0.624,
+     "expr": "smile_closed",
+     "walkTo": [
+      4.807,
+      2.576
+     ],
+     "walkFrames": [
+      1567,
+      1701
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_park__4",
+     "x": 3.544,
+     "z": -0.466,
+     "expr": "nervous",
+     "walkTo": [
+      3.544,
+      -3.666
+     ],
+     "walkFrames": [
+      1567,
+      1701
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_park__5",
+     "x": 2.304,
+     "z": -0.311,
+     "expr": "neutral",
+     "mode": "stand",
+     "talk": [
+      [
+       1573,
+       1701
+      ]
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1567,
+     "position": [
+      12.6,
+      1.68,
+      -1.6
+     ],
+     "lookAt": [
+      7.075,
+      1.38,
+      -3.441
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1567,
+     "position": [
+      12.6,
+      1.68,
+      -1.6
+     ],
+     "lookAt": [
+      7,
+      1.38,
+      0
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9709,
+   "qualityNotes": "",
+   "backdropPrompt": "a sunny city park with lawns, trees, benches, a pond and lamp posts, a bright video-game lobby stage with neon lights, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97000,
+   "hud": {
+    "kind": "panel",
+    "text": "LOBBY|BANNED!"
+   },
+   "env": {
+    "preset": "park",
+    "seed": 97,
+    "shop": null
+   },
+   "textOverlays": [
+    {
+     "text": "BANNED",
+     "frame": 1570,
+     "dur": 128,
+     "position": "top",
+     "style": "title"
+    }
+   ],
+   "backdrop": "backdrops/80665a5ae5498341.png",
+   "backdropDepth": "backdrops/80665a5ae5498341_depth.png"
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 1701,
+   "endFrame": 1900,
+   "narration": "Turns out, fighting a multi-billion-dollar gaming giant with a pirate meme coin is a great way to lose your lunch money.",
+   "light": "day",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "gam",
+     "x": -3.084,
+     "z": 3.163,
+     "expr": "sad",
+     "mode": "sit"
+    },
+    {
+     "castId": "crowd_shops__0",
+     "x": -0.28,
+     "z": 4.178,
+     "expr": "neutral",
+     "walkTo": [
+      -1.056,
+      1.074
+     ],
+     "walkFrames": [
+      1701,
+      1900
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__1",
+     "x": 1.179,
+     "z": 4.193,
+     "expr": "smile",
+     "walkTo": [
+      1.955,
+      7.297
+     ],
+     "walkFrames": [
+      1701,
+      1900
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__2",
+     "x": 2.658,
+     "z": 4.287,
+     "expr": "bored",
+     "mode": "stand",
+     "talk": [
+      [
+       1707,
+       1900
+      ]
+     ]
+    },
+    {
+     "castId": "crowd_shops__3",
+     "x": -0.798,
+     "z": 3.606,
+     "expr": "smile_closed",
+     "walkTo": [
+      -0.022,
+      6.71
+     ],
+     "walkFrames": [
+      1701,
+      1900
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__4",
+     "x": 0.689,
+     "z": 3.731,
+     "expr": "nervous",
+     "walkTo": [
+      -0.087,
+      0.626
+     ],
+     "walkFrames": [
+      1701,
+      1900
+     ],
+     "mode": "stroll"
+    },
+    {
+     "castId": "crowd_shops__5",
+     "x": 2.196,
+     "z": 3.936,
+     "expr": "neutral",
+     "mode": "stand",
+     "talk": [
+      [
+       1707,
+       1900
+      ]
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1701,
+     "position": [
+      -6.202,
+      1.545,
+      3.393
+     ],
+     "lookAt": [
+      -3,
+      1.38,
+      3.5
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1701,
+     "position": [
+      -8.821,
+      1.68,
+      3.306
+     ],
+     "lookAt": [
+      -3,
+      1.38,
+      3.5
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 199
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9710,
+   "qualityNotes": "",
+   "backdropPrompt": "a New York street with brick shopfronts, awnings, lit shop windows, street lamps and fire escapes, outside a small convenience store with a glowing shop window, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97001,
+   "env": {
+    "preset": "shops",
+    "seed": 97,
+    "shop": null,
+    "variant": "open"
+   },
+   "pieces": [
+    {
+     "kind": "cardbox",
+     "x": -3.424,
+     "z": 3.248
+    },
+    {
+     "kind": "board",
+     "x": -1.563,
+     "z": 4.342,
+     "label": "WILL TRADE|PIXEL SWORDS|FOR SANDWICHES"
+    }
+   ],
+   "backdrop": "backdrops/7b810143dfea90ae.png",
+   "backdropDepth": "backdrops/7b810143dfea90ae_depth.png"
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 1900,
+   "endFrame": 1970,
+   "narration": "The metaverse isn't the Wild West. It's a gated community owned by guys in suits.",
+   "light": "golden",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "extra6",
+     "x": -33.144,
+     "z": 10.706,
+     "mode": "stand",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra7",
+     "x": -34.0,
+     "z": 13.204,
+     "mode": "stand",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra0",
+     "x": -34.871,
+     "z": 11.123,
+     "mode": "stand",
+     "expr": "nervous"
+    },
+    {
+     "castId": "extra1",
+     "x": -32.776,
+     "z": 14.388,
+     "mode": "stand",
+     "expr": "neutral"
+    },
+    {
+     "castId": "extra2",
+     "x": -33.466,
+     "z": 10.828,
+     "mode": "stand",
+     "expr": "laugh"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1900,
+     "position": [
+      -19.851,
+      0.4,
+      7.97
+     ],
+     "lookAt": [
+      -30,
+      1.2,
+      12
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1900,
+     "position": [
+      -19.851,
+      7.76,
+      7.97
+     ],
+     "lookAt": [
+      -30,
+      1.2,
+      12
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 70
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 9711,
+   "qualityNotes": "",
+   "backdropPrompt": "an artificial island airport in the sea with a runway, a terminal with a curved glass roof and a control tower, a tropical game island completely surrounded by giant grey concrete walls with barbed wire and watchtowers, warm golden-hour sunset light, long soft shadows, orange sky, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97002,
+   "sunEl": 18,
+   "sunAz": 150,
+   "env": {
+    "preset": "island",
+    "seed": 97,
+    "shop": null
+   },
+   "backdrop": "backdrops/e09408f20840ffdc.png",
+   "backdropDepth": "backdrops/e09408f20840ffdc_depth.png"
+  },
+  {
+   "sceneId": "b12a",
+   "startFrame": 1970,
+   "endFrame": 2047,
+   "narration": "The metaverse isn't the Wild West. It's a gated community owned by guys in suits.",
+   "light": "golden",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "extra3",
+     "x": -33.144,
+     "z": 10.706,
+     "mode": "stand",
+     "expr": "smile"
+    },
+    {
+     "castId": "extra4",
+     "x": -33.926,
+     "z": 12.794,
+     "mode": "stand",
+     "expr": "grin"
+    },
+    {
+     "castId": "extra5",
+     "x": -35.463,
+     "z": 9.632,
+     "mode": "stand",
+     "expr": "nervous"
+    },
+    {
+     "castId": "extra6",
+     "x": -32.495,
+     "z": 12.83,
+     "mode": "stand",
+     "expr": "neutral"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1970,
+     "position": [
+      -24.114,
+      1.68,
+      12.175
+     ],
+     "lookAt": [
+      -29.845,
+      1.38,
+      11.14
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1970,
+     "position": [
+      -24.424,
+      1.68,
+      13.895
+     ],
+     "lookAt": [
+      -30.155,
+      1.38,
+      12.86
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 77
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9748,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "an artificial island airport in the sea with a runway, a terminal with a curved glass roof and a control tower, a tropical game island completely surrounded by giant grey concrete walls with barbed wire and watchtowers, warm golden-hour sunset light, long soft shadows, orange sky, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97002,
+   "sunEl": 18,
+   "sunAz": 150,
+   "env": {
+    "preset": "island",
+    "seed": 97,
+    "shop": null
+   },
+   "backdrop": "backdrops/e09408f20840ffdc.png",
+   "backdropDepth": "backdrops/e09408f20840ffdc_depth.png"
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 2047,
+   "endFrame": 2105,
+   "narration": "So stick to regular V-Bucks. At least when you waste them on a bad emote, you actually get to dance.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "gam",
+     "x": -1.45,
+     "z": -0.2,
+     "expr": "starry",
+     "mode": "dance"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 2047,
+     "position": [
+      0.489,
+      1.68,
+      5.291
+     ],
+     "lookAt": [
+      -1.45,
+      1.38,
+      -0.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 2047,
+     "position": [
+      -1.918,
+      1.68,
+      5.605
+     ],
+     "lookAt": [
+      -1.45,
+      1.38,
+      -0.2
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 58
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9712,
+   "qualityNotes": "",
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97000,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "gameroom",
+    "seed": 97,
+    "shop": null
+   },
+   "backdrop": "backdrops/bfb1ca8d2b8a322b.png",
+   "backdropDepth": "backdrops/bfb1ca8d2b8a322b_depth.png"
+  },
+  {
+   "sceneId": "b13a",
+   "startFrame": 2105,
+   "endFrame": 2209,
+   "narration": "So stick to regular V-Bucks. At least when you waste them on a bad emote, you actually get to dance.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "gam",
+     "x": -1.45,
+     "z": -0.2,
+     "expr": "laugh",
+     "mode": "dance"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 2105,
+     "position": [
+      -2.424,
+      1.62,
+      2.586
+     ],
+     "lookAt": [
+      -1.45,
+      1.5,
+      -0.2
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 2105,
+     "position": [
+      -2.034,
+      1.572,
+      1.472
+     ],
+     "lookAt": [
+      -1.45,
+      1.5,
+      -0.2
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 104
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 9749,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 97000,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "gameroom",
+    "seed": 97,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "confetti",
+     "frame": 2189,
+     "dur": 20,
+     "at": [
+      -1.539,
+      1.4,
+      0.393
+     ],
+     "size": 3.2
+    }
+   ],
+   "backdrop": "backdrops/bfb1ca8d2b8a322b.png",
+   "backdropDepth": "backdrops/bfb1ca8d2b8a322b_depth.png"
+  },
+  {
+   "sceneId": "b14",
+   "startFrame": 2209,
+   "endFrame": 2361,
+   "narration": "Send this to that friend who falls for every single crypto scam on the internet.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 2209,
+     "position": [
+      3.0,
+      2.3,
+      6.9
+     ],
+     "lookAt": [
+      0,
+      1.2,
+      -2.1
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 2292,
+     "cut": true,
+     "position": [
+      -1.6,
+      1.68,
+      3.5
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      -2.1
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 9713,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "outro"
+   },
+   "sunEl": 68,
+   "sunAz": 35
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": true,
+  "words": [
+   {
+    "w": "What",
+    "s": 0.06,
+    "e": 0.18
+   },
+   {
+    "w": "would",
+    "s": 0.18,
+    "e": 0.3
+   },
+   {
+    "w": "happen",
+    "s": 0.3,
+    "e": 0.58
+   },
+   {
+    "w": "if",
+    "s": 0.58,
+    "e": 0.8
+   },
+   {
+    "w": "internet",
+    "s": 0.8,
+    "e": 1.08
+   },
+   {
+    "w": "pirates",
+    "s": 1.08,
+    "e": 1.54
+   },
+   {
+    "w": "launched",
+    "s": 1.54,
+    "e": 2.0
+   },
+   {
+    "w": "an",
+    "s": 2.0,
+    "e": 2.22
+   },
+   {
+    "w": "unofficial",
+    "s": 2.22,
+    "e": 2.68
+   },
+   {
+    "w": "crypto",
+    "s": 2.68,
+    "e": 3.08
+   },
+   {
+    "w": "token",
+    "s": 3.08,
+    "e": 3.56
+   },
+   {
+    "w": "called",
+    "s": 3.56,
+    "e": 3.9
+   },
+   {
+    "w": "Fortnite",
+    "s": 3.9,
+    "e": 4.34
+   },
+   {
+    "w": "Gold?",
+    "s": 4.34,
+    "e": 4.66,
+    "hot": true
+   },
+   {
+    "w": "Absolute",
+    "s": 5.045,
+    "e": 5.625,
+    "hot": true
+   },
+   {
+    "w": "chaos.",
+    "s": 5.625,
+    "e": 5.905,
+    "hot": true
+   },
+   {
+    "w": "For",
+    "s": 6.398,
+    "e": 6.518
+   },
+   {
+    "w": "years,",
+    "s": 6.518,
+    "e": 6.838
+   },
+   {
+    "w": "gamers",
+    "s": 7.098,
+    "e": 7.298
+   },
+   {
+    "w": "wanted",
+    "s": 7.298,
+    "e": 7.618
+   },
+   {
+    "w": "a",
+    "s": 7.618,
+    "e": 7.778
+   },
+   {
+    "w": "token",
+    "s": 7.778,
+    "e": 8.098
+   },
+   {
+    "w": "to",
+    "s": 8.098,
+    "e": 8.318
+   },
+   {
+    "w": "trade",
+    "s": 8.318,
+    "e": 8.558
+   },
+   {
+    "w": "skins",
+    "s": 8.558,
+    "e": 8.878
+   },
+   {
+    "w": "freely,",
+    "s": 8.878,
+    "e": 9.418
+   },
+   {
+    "w": "without",
+    "s": 9.818,
+    "e": 10.018
+   },
+   {
+    "w": "paying",
+    "s": 10.018,
+    "e": 10.338
+   },
+   {
+    "w": "a",
+    "s": 10.338,
+    "e": 10.518
+   },
+   {
+    "w": "thirty",
+    "s": 10.518,
+    "e": 10.858
+   },
+   {
+    "w": "percent",
+    "s": 10.858,
+    "e": 11.198
+   },
+   {
+    "w": "platform",
+    "s": 11.198,
+    "e": 11.618
+   },
+   {
+    "w": "fee.",
+    "s": 11.618,
+    "e": 11.958,
+    "hot": true
+   },
+   {
+    "w": "So",
+    "s": 12.272,
+    "e": 12.412
+   },
+   {
+    "w": "some",
+    "s": 12.412,
+    "e": 12.672
+   },
+   {
+    "w": "anonymous",
+    "s": 12.672,
+    "e": 13.112
+   },
+   {
+    "w": "devs",
+    "s": 13.112,
+    "e": 13.672
+   },
+   {
+    "w": "launched",
+    "s": 13.672,
+    "e": 13.872
+   },
+   {
+    "w": "a",
+    "s": 13.872,
+    "e": 14.072
+   },
+   {
+    "w": "pirate",
+    "s": 14.072,
+    "e": 14.312
+   },
+   {
+    "w": "token",
+    "s": 14.312,
+    "e": 14.712
+   },
+   {
+    "w": "overnight,",
+    "s": 14.712,
+    "e": 15.292
+   },
+   {
+    "w": "promising",
+    "s": 15.652,
+    "e": 15.992
+   },
+   {
+    "w": "it",
+    "s": 15.992,
+    "e": 16.232
+   },
+   {
+    "w": "would",
+    "s": 16.232,
+    "e": 16.332
+   },
+   {
+    "w": "become",
+    "s": 16.332,
+    "e": 16.612
+   },
+   {
+    "w": "the",
+    "s": 16.612,
+    "e": 16.792
+   },
+   {
+    "w": "official",
+    "s": 16.792,
+    "e": 17.172
+   },
+   {
+    "w": "currency",
+    "s": 17.172,
+    "e": 17.712
+   },
+   {
+    "w": "of",
+    "s": 17.712,
+    "e": 17.972
+   },
+   {
+    "w": "Tilted",
+    "s": 17.972,
+    "e": 18.332
+   },
+   {
+    "w": "Towers.",
+    "s": 18.332,
+    "e": 18.772
+   },
+   {
+    "w": "Within",
+    "s": 19.223,
+    "e": 19.616
+   },
+   {
+    "w": "twenty-four",
+    "s": 19.626,
+    "e": 20.289
+   },
+   {
+    "w": "hours,",
+    "s": 20.299,
+    "e": 20.625
+   },
+   {
+    "w": "millions",
+    "s": 20.635,
+    "e": 21.163,
+    "hot": true
+   },
+   {
+    "w": "of",
+    "s": 21.173,
+    "e": 21.298
+   },
+   {
+    "w": "players",
+    "s": 21.308,
+    "e": 21.768
+   },
+   {
+    "w": "piled",
+    "s": 21.778,
+    "e": 22.105
+   },
+   {
+    "w": "in,",
+    "s": 22.115,
+    "e": 22.239
+   },
+   {
+    "w": "turning",
+    "s": 22.249,
+    "e": 22.71
+   },
+   {
+    "w": "a",
+    "s": 22.72,
+    "e": 22.844
+   },
+   {
+    "w": "meme",
+    "s": 22.854,
+    "e": 23.113
+   },
+   {
+    "w": "coin",
+    "s": 23.123,
+    "e": 23.382
+   },
+   {
+    "w": "into",
+    "s": 23.392,
+    "e": 23.651
+   },
+   {
+    "w": "a",
+    "s": 23.661,
+    "e": 23.786
+   },
+   {
+    "w": "multi-million-dollar",
+    "s": 23.796,
+    "e": 24.996
+   },
+   {
+    "w": "digital",
+    "s": 25.006,
+    "e": 25.467
+   },
+   {
+    "w": "treasure",
+    "s": 25.477,
+    "e": 26.005,
+    "hot": true
+   },
+   {
+    "w": "island.",
+    "s": 26.015,
+    "e": 26.409
+   },
+   {
+    "w": "Suddenly,",
+    "s": 26.589,
+    "e": 26.969
+   },
+   {
+    "w": "you",
+    "s": 26.969,
+    "e": 27.249
+   },
+   {
+    "w": "weren't",
+    "s": 27.249,
+    "e": 27.469
+   },
+   {
+    "w": "playing",
+    "s": 27.469,
+    "e": 27.669
+   },
+   {
+    "w": "to",
+    "s": 27.669,
+    "e": 27.889
+   },
+   {
+    "w": "win.",
+    "s": 27.889,
+    "e": 28.089
+   },
+   {
+    "w": "You",
+    "s": 28.468,
+    "e": 28.568
+   },
+   {
+    "w": "were",
+    "s": 28.568,
+    "e": 28.668
+   },
+   {
+    "w": "playing",
+    "s": 28.668,
+    "e": 28.908
+   },
+   {
+    "w": "to",
+    "s": 28.908,
+    "e": 29.148
+   },
+   {
+    "w": "arbitrage",
+    "s": 29.148,
+    "e": 29.668
+   },
+   {
+    "w": "liquidity",
+    "s": 29.668,
+    "e": 30.008
+   },
+   {
+    "w": "pools",
+    "s": 30.008,
+    "e": 30.448
+   },
+   {
+    "w": "on",
+    "s": 30.448,
+    "e": 30.688
+   },
+   {
+    "w": "Discord.",
+    "s": 30.688,
+    "e": 31.028
+   },
+   {
+    "w": "Then",
+    "s": 31.522,
+    "e": 31.682
+   },
+   {
+    "w": "the",
+    "s": 31.682,
+    "e": 31.802
+   },
+   {
+    "w": "game",
+    "s": 31.802,
+    "e": 31.962
+   },
+   {
+    "w": "studio's",
+    "s": 31.962,
+    "e": 32.362
+   },
+   {
+    "w": "lawyers",
+    "s": 32.362,
+    "e": 32.842
+   },
+   {
+    "w": "finished",
+    "s": 32.842,
+    "e": 33.222
+   },
+   {
+    "w": "their",
+    "s": 33.222,
+    "e": 33.442
+   },
+   {
+    "w": "morning",
+    "s": 33.442,
+    "e": 33.702
+   },
+   {
+    "w": "coffee",
+    "s": 33.702,
+    "e": 34.162
+   },
+   {
+    "w": "and",
+    "s": 34.162,
+    "e": 34.582
+   },
+   {
+    "w": "chose",
+    "s": 34.582,
+    "e": 34.862
+   },
+   {
+    "w": "absolute",
+    "s": 34.862,
+    "e": 35.422
+   },
+   {
+    "w": "legal",
+    "s": 35.422,
+    "e": 35.802
+   },
+   {
+    "w": "violence.",
+    "s": 35.802,
+    "e": 36.262,
+    "hot": true
+   },
+   {
+    "w": "A",
+    "s": 36.716,
+    "e": 36.831
+   },
+   {
+    "w": "ten-page",
+    "s": 36.841,
+    "e": 37.269
+   },
+   {
+    "w": "cease-and-desist",
+    "s": 37.279,
+    "e": 38.144
+   },
+   {
+    "w": "letter",
+    "s": 38.154,
+    "e": 38.519,
+    "hot": true
+   },
+   {
+    "w": "hit",
+    "s": 38.529,
+    "e": 38.707
+   },
+   {
+    "w": "the",
+    "s": 38.717,
+    "e": 38.895
+   },
+   {
+    "w": "developers",
+    "s": 38.905,
+    "e": 39.52
+   },
+   {
+    "w": "faster",
+    "s": 39.53,
+    "e": 39.895
+   },
+   {
+    "w": "than",
+    "s": 39.905,
+    "e": 40.145
+   },
+   {
+    "w": "a",
+    "s": 40.155,
+    "e": 40.27
+   },
+   {
+    "w": "pump",
+    "s": 40.28,
+    "e": 40.52
+   },
+   {
+    "w": "shotgun",
+    "s": 40.53,
+    "e": 40.958
+   },
+   {
+    "w": "headshot.",
+    "s": 40.968,
+    "e": 41.458,
+    "hot": true
+   },
+   {
+    "w": "And",
+    "s": 41.638,
+    "e": 41.758
+   },
+   {
+    "w": "just",
+    "s": 41.758,
+    "e": 41.938
+   },
+   {
+    "w": "like",
+    "s": 41.938,
+    "e": 42.138
+   },
+   {
+    "w": "that,",
+    "s": 42.138,
+    "e": 42.378
+   },
+   {
+    "w": "the",
+    "s": 42.498,
+    "e": 42.578
+   },
+   {
+    "w": "anonymous",
+    "s": 42.578,
+    "e": 42.938
+   },
+   {
+    "w": "creators",
+    "s": 42.938,
+    "e": 43.518
+   },
+   {
+    "w": "deleted",
+    "s": 43.518,
+    "e": 43.978
+   },
+   {
+    "w": "their",
+    "s": 43.978,
+    "e": 44.218
+   },
+   {
+    "w": "accounts,",
+    "s": 44.218,
+    "e": 44.718
+   },
+   {
+    "w": "cashed",
+    "s": 44.998,
+    "e": 45.378,
+    "hot": true
+   },
+   {
+    "w": "out,",
+    "s": 45.378,
+    "e": 45.518
+   },
+   {
+    "w": "and",
+    "s": 45.518,
+    "e": 45.758
+   },
+   {
+    "w": "vanished",
+    "s": 45.758,
+    "e": 46.078,
+    "hot": true
+   },
+   {
+    "w": "into",
+    "s": 46.078,
+    "e": 46.358
+   },
+   {
+    "w": "thin",
+    "s": 46.358,
+    "e": 46.578
+   },
+   {
+    "w": "air.",
+    "s": 46.578,
+    "e": 46.858
+   },
+   {
+    "w": "Players",
+    "s": 47.148,
+    "e": 47.408
+   },
+   {
+    "w": "who",
+    "s": 47.408,
+    "e": 47.648
+   },
+   {
+    "w": "thought",
+    "s": 47.648,
+    "e": 47.888
+   },
+   {
+    "w": "they",
+    "s": 47.888,
+    "e": 48.068
+   },
+   {
+    "w": "were",
+    "s": 48.068,
+    "e": 48.208
+   },
+   {
+    "w": "crypto",
+    "s": 48.208,
+    "e": 48.568
+   },
+   {
+    "w": "tycoons",
+    "s": 48.568,
+    "e": 49.428
+   },
+   {
+    "w": "were",
+    "s": 49.428,
+    "e": 49.628
+   },
+   {
+    "w": "suddenly",
+    "s": 49.628,
+    "e": 49.968
+   },
+   {
+    "w": "left",
+    "s": 49.968,
+    "e": 50.248
+   },
+   {
+    "w": "holding",
+    "s": 50.248,
+    "e": 50.628
+   },
+   {
+    "w": "literal",
+    "s": 50.628,
+    "e": 50.968
+   },
+   {
+    "w": "digital",
+    "s": 50.968,
+    "e": 51.448
+   },
+   {
+    "w": "garbage.",
+    "s": 51.448,
+    "e": 51.868,
+    "hot": true
+   },
+   {
+    "w": "Even",
+    "s": 52.286,
+    "e": 52.506
+   },
+   {
+    "w": "worse,",
+    "s": 52.506,
+    "e": 52.826
+   },
+   {
+    "w": "anyone",
+    "s": 53.126,
+    "e": 53.326
+   },
+   {
+    "w": "caught",
+    "s": 53.326,
+    "e": 53.646
+   },
+   {
+    "w": "wearing",
+    "s": 53.646,
+    "e": 53.926
+   },
+   {
+    "w": "the",
+    "s": 53.926,
+    "e": 54.146
+   },
+   {
+    "w": "pirate",
+    "s": 54.146,
+    "e": 54.426
+   },
+   {
+    "w": "token",
+    "s": 54.426,
+    "e": 54.806
+   },
+   {
+    "w": "skin",
+    "s": 54.806,
+    "e": 55.206
+   },
+   {
+    "w": "got",
+    "s": 55.206,
+    "e": 55.486
+   },
+   {
+    "w": "banned",
+    "s": 55.486,
+    "e": 55.766
+   },
+   {
+    "w": "from",
+    "s": 55.766,
+    "e": 55.966
+   },
+   {
+    "w": "the",
+    "s": 55.966,
+    "e": 56.106
+   },
+   {
+    "w": "lobby.",
+    "s": 56.106,
+    "e": 56.366
+   },
+   {
+    "w": "Turns",
+    "s": 56.755,
+    "e": 57.072
+   },
+   {
+    "w": "out,",
+    "s": 57.082,
+    "e": 57.267
+   },
+   {
+    "w": "fighting",
+    "s": 57.277,
+    "e": 57.789
+   },
+   {
+    "w": "a",
+    "s": 57.799,
+    "e": 57.92
+   },
+   {
+    "w": "multi-billion-dollar",
+    "s": 57.93,
+    "e": 59.094
+   },
+   {
+    "w": "gaming",
+    "s": 59.104,
+    "e": 59.485
+   },
+   {
+    "w": "giant",
+    "s": 59.495,
+    "e": 59.812
+   },
+   {
+    "w": "with",
+    "s": 59.822,
+    "e": 60.073
+   },
+   {
+    "w": "a",
+    "s": 60.083,
+    "e": 60.203
+   },
+   {
+    "w": "pirate",
+    "s": 60.213,
+    "e": 60.595
+   },
+   {
+    "w": "meme",
+    "s": 60.605,
+    "e": 60.856
+   },
+   {
+    "w": "coin",
+    "s": 60.866,
+    "e": 61.116
+   },
+   {
+    "w": "is",
+    "s": 61.126,
+    "e": 61.247
+   },
+   {
+    "w": "a",
+    "s": 61.257,
+    "e": 61.377
+   },
+   {
+    "w": "great",
+    "s": 61.387,
+    "e": 61.704
+   },
+   {
+    "w": "way",
+    "s": 61.714,
+    "e": 61.899
+   },
+   {
+    "w": "to",
+    "s": 61.909,
+    "e": 62.03
+   },
+   {
+    "w": "lose",
+    "s": 62.04,
+    "e": 62.291
+   },
+   {
+    "w": "your",
+    "s": 62.301,
+    "e": 62.552
+   },
+   {
+    "w": "lunch",
+    "s": 62.562,
+    "e": 62.878
+   },
+   {
+    "w": "money.",
+    "s": 62.888,
+    "e": 63.204
+   },
+   {
+    "w": "The",
+    "s": 63.384,
+    "e": 63.464
+   },
+   {
+    "w": "metaverse",
+    "s": 63.464,
+    "e": 63.924
+   },
+   {
+    "w": "isn't",
+    "s": 63.924,
+    "e": 64.364
+   },
+   {
+    "w": "the",
+    "s": 64.364,
+    "e": 64.444
+   },
+   {
+    "w": "Wild",
+    "s": 64.444,
+    "e": 64.724
+   },
+   {
+    "w": "West.",
+    "s": 64.724,
+    "e": 65.024
+   },
+   {
+    "w": "It's",
+    "s": 65.432,
+    "e": 65.612
+   },
+   {
+    "w": "a",
+    "s": 65.612,
+    "e": 65.672
+   },
+   {
+    "w": "gated",
+    "s": 65.672,
+    "e": 65.972
+   },
+   {
+    "w": "community",
+    "s": 65.972,
+    "e": 66.512
+   },
+   {
+    "w": "owned",
+    "s": 66.512,
+    "e": 66.832
+   },
+   {
+    "w": "by",
+    "s": 66.832,
+    "e": 67.032
+   },
+   {
+    "w": "guys",
+    "s": 67.032,
+    "e": 67.372
+   },
+   {
+    "w": "in",
+    "s": 67.372,
+    "e": 67.632
+   },
+   {
+    "w": "suits.",
+    "s": 67.632,
+    "e": 67.892
+   },
+   {
+    "w": "So",
+    "s": 68.297,
+    "e": 68.443
+   },
+   {
+    "w": "stick",
+    "s": 68.453,
+    "e": 68.835
+   },
+   {
+    "w": "to",
+    "s": 68.845,
+    "e": 68.991
+   },
+   {
+    "w": "regular",
+    "s": 69.001,
+    "e": 69.539
+   },
+   {
+    "w": "V-Bucks.",
+    "s": 69.549,
+    "e": 70.009
+   },
+   {
+    "w": "At",
+    "s": 70.189,
+    "e": 70.309
+   },
+   {
+    "w": "least",
+    "s": 70.309,
+    "e": 70.469
+   },
+   {
+    "w": "when",
+    "s": 70.469,
+    "e": 70.709
+   },
+   {
+    "w": "you",
+    "s": 70.709,
+    "e": 70.809
+   },
+   {
+    "w": "waste",
+    "s": 70.809,
+    "e": 71.049
+   },
+   {
+    "w": "them",
+    "s": 71.049,
+    "e": 71.229
+   },
+   {
+    "w": "on",
+    "s": 71.229,
+    "e": 71.349
+   },
+   {
+    "w": "a",
+    "s": 71.349,
+    "e": 71.409
+   },
+   {
+    "w": "bad",
+    "s": 71.409,
+    "e": 71.609
+   },
+   {
+    "w": "emote,",
+    "s": 71.609,
+    "e": 71.869
+   },
+   {
+    "w": "you",
+    "s": 72.109,
+    "e": 72.229
+   },
+   {
+    "w": "actually",
+    "s": 72.229,
+    "e": 72.629
+   },
+   {
+    "w": "get",
+    "s": 72.629,
+    "e": 72.869
+   },
+   {
+    "w": "to",
+    "s": 72.869,
+    "e": 73.009
+   },
+   {
+    "w": "dance.",
+    "s": 73.009,
+    "e": 73.229,
+    "hot": true
+   },
+   {
+    "w": "Send",
+    "s": 73.691,
+    "e": 73.891
+   },
+   {
+    "w": "this",
+    "s": 73.891,
+    "e": 74.091
+   },
+   {
+    "w": "to",
+    "s": 74.091,
+    "e": 74.251
+   },
+   {
+    "w": "that",
+    "s": 74.251,
+    "e": 74.391
+   },
+   {
+    "w": "friend",
+    "s": 74.391,
+    "e": 74.751
+   },
+   {
+    "w": "who",
+    "s": 74.751,
+    "e": 75.091
+   },
+   {
+    "w": "falls",
+    "s": 75.091,
+    "e": 75.391
+   },
+   {
+    "w": "for",
+    "s": 75.391,
+    "e": 75.631
+   },
+   {
+    "w": "every",
+    "s": 75.631,
+    "e": 75.951
+   },
+   {
+    "w": "single",
+    "s": 75.951,
+    "e": 76.291
+   },
+   {
+    "w": "crypto",
+    "s": 76.291,
+    "e": 76.711
+   },
+   {
+    "w": "scam",
+    "s": 76.711,
+    "e": 77.191
+   },
+   {
+    "w": "on",
+    "s": 77.191,
+    "e": 77.411
+   },
+   {
+    "w": "the",
+    "s": 77.411,
+    "e": 77.551
+   },
+   {
+    "w": "internet.",
+    "s": 77.551,
+    "e": 77.931
+   }
+  ]
+ },
+ "style": "storybook",
+ "graphics": "full"
+}

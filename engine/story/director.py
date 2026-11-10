@@ -286,8 +286,10 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                 act["holding"] = c.holding
             if c.y:
                 act["y"] = c.y
-            # lip flap: explicit, or the lead of a line that quotes someone ("...") speaks it on screen
-            if c.talk or (c.talk is None and c.id == focus_id and ("\"" in beat.narration or "“" in beat.narration)):
+            # lip flap: explicit, or the lead speaks the line on screen when it quotes someone ("...") or the story is told in
+            # the first person ("I tried...", "my brain...")
+            first_person = bool(re.search(r"\b(I|I'm|I've|my|me)\b", beat.narration))
+            if c.talk or (c.talk is None and c.id == focus_id and ("\"" in beat.narration or "“" in beat.narration or first_person)):
                 spans_t = []
                 for w in ws:
                     w0 = _wf_of(ws, w, fps); w1 = w0 + max(3, int(round((w["e"] - w["s"]) * fps)))
@@ -296,14 +298,16 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                     else:
                         spans_t.append([w0, w1])
                 act["talk"] = [[max(a, x0), min(b, x1)] for x0, x1 in spans_t if x1 > a and x0 < b]
+            if len(order) >= 2 and k < 2 and "look" not in act:   # two people in a shot look at each other
+                act["look"] = 1 if (L < 0 or (k == 0 and lat[1] > 0)) else -1
             pos[c.id] = (x, z)
             actors.append(act)
         for e in range(min(beat.extras, 2) if plan.graphics == "simple" else beat.extras):
-            eid = f"extra{extras_made % 8}"
+            roles = [beat.extrasRole] if beat.extrasRole else (["kid"] if sum(1 for c in chars if scale_of.get(c.id) == 0.72) * 2 > len(chars) > 0
+                                                                 else ["villager_woman", "villager_man", "kid"])
+            eid = f"extra_{roles[e % len(roles)]}_{extras_made % 8}"   # per role: a guard never inherits a gamer's outfit
             extras_made += 1
             if eid not in {c["id"] for c in cast}:
-                roles = [beat.extrasRole] if beat.extrasRole else (["kid"] if sum(1 for c in chars if scale_of.get(c.id) == 0.72) * 2 > len(chars) > 0
-                                                                     else ["villager_woman", "villager_man", "kid"])
                 cast.append({"id": eid, "name": "", "outfit": outfit(roles[e % len(roles)], 11 + e)})
                 scale_of[eid] = 0.72 if roles[e % len(roles)] == "kid" else 1.0
             L = (-1) ** e * (1.2 + 1.3 * (e // 2)) + 0.4

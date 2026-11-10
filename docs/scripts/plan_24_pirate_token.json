@@ -16,7 +16,7 @@
   {
    "id": "law",
    "name": "Studio lawyer",
-   "role": "lawyer"
+   "role": "businessman"
   }
  ],
  "beats": [
@@ -39,7 +39,8 @@
     {
      "kind": "ship",
      "scale": 0.35,
-     "move": "toward"
+     "move": "toward",
+     "label": "pirate"
     },
     {
      "kind": "ticker",
@@ -204,8 +205,8 @@
    "pieces": [
     {
      "kind": "partybus",
-     "scale": 0.9,
-     "y": 5.0,
+     "scale": 0.8,
+     "y": 1.8,
      "move": "right"
     }
    ],

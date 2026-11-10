@@ -1,0 +1,283 @@
+{
+ "duration": 78.7,
+ "sampleRate": 48000,
+ "targetLUFS": -14.0,
+ "ceilingDBTP": -2.0,
+ "measured": {
+  "integratedLUFS": -14.0,
+  "truePeakDBTP": -2.0,
+  "LRA": 1.16,
+  "maxGainReductionDB": 2.73,
+  "voiceLUFS": -14.09,
+  "musicLUFS": -29.99,
+  "sfxLUFS": -29.86
+ },
+ "ffmpegEbur128": {
+  "I": -14.0,
+  "LRA": 1.2,
+  "truePeak": -2.0
+ },
+ "musicSections": [
+  {
+   "start": 0.0,
+   "end": 6.33,
+   "mood": "upbeat"
+  },
+  {
+   "start": 6.33,
+   "end": 12.2,
+   "mood": "curious"
+  },
+  {
+   "start": 12.2,
+   "end": 26.53,
+   "mood": "upbeat"
+  },
+  {
+   "start": 26.53,
+   "end": 47.1,
+   "mood": "tense"
+  },
+  {
+   "start": 47.1,
+   "end": 52.23,
+   "mood": "warm"
+  },
+  {
+   "start": 52.23,
+   "end": 56.7,
+   "mood": "tense"
+  },
+  {
+   "start": 56.7,
+   "end": 63.33,
+   "mood": "warm"
+  },
+  {
+   "start": 63.33,
+   "end": 68.23,
+   "mood": "tense"
+  },
+  {
+   "start": 68.23,
+   "end": 73.63,
+   "mood": "upbeat"
+  },
+  {
+   "start": 73.63,
+   "end": 78.7,
+   "mood": "warm"
+  }
+ ],
+ "musicCues": [
+  {
+   "t": 0.0,
+   "kind": "track",
+   "what": "mischief-maker.mp3"
+  }
+ ],
+ "sfxCues": [
+  {
+   "t": 0.0,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 0.093,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 4.242,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 4.267,
+   "kind": "sparkle",
+   "what": "sparkle"
+  },
+  {
+   "t": 5.467,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 5.633,
+   "kind": "impact",
+   "what": "impact thump"
+  },
+  {
+   "t": 5.567,
+   "kind": "burst",
+   "what": "burst"
+  },
+  {
+   "t": 6.333,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 6.113,
+   "kind": "whoosh",
+   "what": "whip into b02"
+  },
+  {
+   "t": 9.893,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 11.667,
+   "kind": "impact",
+   "what": "impact thump"
+  },
+  {
+   "t": 11.6,
+   "kind": "burst",
+   "what": "burst"
+  },
+  {
+   "t": 12.2,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 19.167,
+   "kind": "bed",
+   "what": "day ambience + crowd"
+  },
+  {
+   "t": 25.84,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 25.467,
+   "kind": "sparkle",
+   "what": "sparkle"
+  },
+  {
+   "t": 26.533,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 26.673,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 31.467,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 31.247,
+   "kind": "whoosh",
+   "what": "zoom into b06"
+  },
+  {
+   "t": 35.833,
+   "kind": "impact",
+   "what": "impact thump"
+  },
+  {
+   "t": 35.767,
+   "kind": "burst",
+   "what": "burst"
+  },
+  {
+   "t": 36.667,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 38.133,
+   "kind": "product",
+   "what": "product envelope"
+  },
+  {
+   "t": 39.593,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 41.033,
+   "kind": "impact",
+   "what": "impact thump"
+  },
+  {
+   "t": 40.967,
+   "kind": "stars",
+   "what": "stars"
+  },
+  {
+   "t": 41.6,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 46.233,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 45.767,
+   "kind": "puff",
+   "what": "puff"
+  },
+  {
+   "t": 47.1,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 51.433,
+   "kind": "product",
+   "what": "product moth"
+  },
+  {
+   "t": 52.233,
+   "kind": "bed",
+   "what": "day ambience + crowd"
+  },
+  {
+   "t": 52.327,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 56.7,
+   "kind": "bed",
+   "what": "day ambience + crowd"
+  },
+  {
+   "t": 63.333,
+   "kind": "bed",
+   "what": "golden ambience + crowd"
+  },
+  {
+   "t": 63.213,
+   "kind": "whoosh",
+   "what": "dissolve into b12"
+  },
+  {
+   "t": 68.233,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 73.633,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 73.513,
+   "kind": "whoosh",
+   "what": "dissolve into b14"
+  }
+ ],
+ "license": "Music: \"Mischief Maker\" Kevin MacLeod (incompetech.com) \u00b7 Licensed under Creative Commons: By Attribution 4.0 License \u00b7 http://creativecommons.org/licenses/by/4.0/. Whooshes CC0 (freesound AudioPapkin 441345, D4XX 607250); other SFX synthesized.",
+ "musicCredit": "\"Mischief Maker\" Kevin MacLeod (incompetech.com) \u00b7 Licensed under Creative Commons: By Attribution 4.0 License \u00b7 http://creativecommons.org/licenses/by/4.0/"
+}

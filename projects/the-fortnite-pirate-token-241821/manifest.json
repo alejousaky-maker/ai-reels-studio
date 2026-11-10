@@ -5,33 +5,99 @@
    "status": "done",
    "words": 228,
    "beats": 14,
-   "at": "2026-11-10T18:20:12"
+   "at": "2026-11-10T18:38:53"
   },
   "voice": {
    "duration": 78.20827083333333,
    "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
-   "seconds": 26.4,
+   "seconds": 25.6,
    "status": "done",
    "voice": "am_eric*0.7+am_fenrir*0.3",
    "speed": 0.999,
-   "at": "2026-11-10T18:21:07"
+   "at": "2026-11-10T18:39:47"
   },
   "align": {
    "status": "done",
-   "seconds": 14.7,
+   "seconds": 12.4,
    "method": {
     "whisper": 14,
     "spread": 4
    },
    "model": "faster-whisper base (cpu/int8)",
-   "at": "2026-11-10T18:21:22"
+   "at": "2026-11-10T18:40:00"
   },
   "storyboard": {
    "status": "done",
    "frames": 2361,
    "seconds_video": 78.7,
    "scenes": 27,
-   "at": "2026-11-10T18:28:22"
+   "at": "2026-11-10T18:42:37"
+  },
+  "stills": {
+   "status": "done",
+   "count": 81,
+   "at": "2026-11-10T18:45:29"
+  },
+  "render_master": {
+   "status": "done",
+   "quality": "master",
+   "seconds": 395.5,
+   "frames": 2361,
+   "renderedScenes": [
+    "b01",
+    "b01a",
+    "b01b",
+    "b02",
+    "b02a",
+    "b03",
+    "b03a",
+    "b04",
+    "b04a",
+    "b05",
+    "b05a",
+    "b06",
+    "b06a",
+    "b07",
+    "b07a",
+    "b08",
+    "b08a",
+    "b08b",
+    "b09",
+    "b09a",
+    "b10",
+    "b11",
+    "b12",
+    "b12a",
+    "b13",
+    "b13a",
+    "b14"
+   ],
+   "reusedScenes": [],
+   "fps_render": 5.97,
+   "at": "2026-11-10T18:52:05"
+  },
+  "mix": {
+   "status": "done",
+   "seconds": 12.7,
+   "integratedLUFS": -14.0,
+   "truePeakDBTP": -2.0,
+   "LRA": 1.16,
+   "maxGainReductionDB": 2.73,
+   "voiceLUFS": -14.09,
+   "musicLUFS": -29.99,
+   "sfxLUFS": -29.86,
+   "at": "2026-11-10T18:52:18"
+  },
+  "mux_master": {
+   "status": "done",
+   "file": "projects\\the-fortnite-pirate-token-241821\\output\\the-fortnite-pirate-token_master_v1.mp4",
+   "at": "2026-11-10T18:52:20"
+  },
+  "qa": {
+   "status": "done",
+   "blocking": [],
+   "technicalPass": true,
+   "at": "2026-11-10T18:52:41"
   }
  },
  "history": [
@@ -66,6 +132,66 @@
   {
    "step": "storyboard",
    "at": "2026-11-10T18:28:22",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T18:38:53",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T18:38:53",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T18:39:21",
+   "seconds": 26.1,
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T18:39:47",
+   "seconds": 25.6,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T18:40:00",
+   "status": "done",
+   "seconds": 12.4
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T18:42:37",
+   "status": "done"
+  },
+  {
+   "step": "stills",
+   "at": "2026-11-10T18:45:29",
+   "status": "done"
+  },
+  {
+   "step": "render_master",
+   "at": "2026-11-10T18:52:05",
+   "status": "done",
+   "seconds": 395.5
+  },
+  {
+   "step": "mix",
+   "at": "2026-11-10T18:52:18",
+   "status": "done",
+   "seconds": 12.7
+  },
+  {
+   "step": "mux_master",
+   "at": "2026-11-10T18:52:20",
+   "status": "done"
+  },
+  {
+   "step": "qa",
+   "at": "2026-11-10T18:52:41",
    "status": "done"
   }
  ],

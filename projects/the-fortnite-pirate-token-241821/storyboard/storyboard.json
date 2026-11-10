@@ -410,7 +410,8 @@
      "label": "FORTNITE GOLD ▲ 4200%"
     }
    ],
-   "backdrop": "backdrops/6db95d3eca0fda2c.png"
+   "backdrop": "backdrops/6db95d3eca0fda2c.png",
+   "backdropDepth": "backdrops/6db95d3eca0fda2c_depth.png"
   },
   {
    "sceneId": "b01a",
@@ -516,7 +517,8 @@
      "size": 0.23445554337723234
     }
    ],
-   "backdrop": "backdrops/6db95d3eca0fda2c.png"
+   "backdrop": "backdrops/6db95d3eca0fda2c.png",
+   "backdropDepth": "backdrops/6db95d3eca0fda2c_depth.png"
   },
   {
    "sceneId": "b01b",
@@ -636,7 +638,8 @@
      "size": 3.2
     }
    ],
-   "backdrop": "backdrops/6db95d3eca0fda2c.png"
+   "backdrop": "backdrops/6db95d3eca0fda2c.png",
+   "backdropDepth": "backdrops/6db95d3eca0fda2c_depth.png"
   },
   {
    "sceneId": "b02",
@@ -712,7 +715,8 @@
      "label": "PLATFORM FEE|30%"
     }
    ],
-   "backdrop": "backdrops/0239027f7cadb156.png"
+   "backdrop": "backdrops/0239027f7cadb156.png",
+   "backdropDepth": "backdrops/0239027f7cadb156_depth.png"
   },
   {
    "sceneId": "b02a",
@@ -809,7 +813,8 @@
      "size": 0.44330948811505755
     }
    ],
-   "backdrop": "backdrops/0239027f7cadb156.png"
+   "backdrop": "backdrops/0239027f7cadb156.png",
+   "backdropDepth": "backdrops/0239027f7cadb156_depth.png"
   },
   {
    "sceneId": "b03",
@@ -878,7 +883,8 @@
    },
    "sunEl": 68,
    "sunAz": 35,
-   "backdrop": "backdrops/7846d8d0a27f5e23.png"
+   "backdrop": "backdrops/7846d8d0a27f5e23.png",
+   "backdropDepth": "backdrops/7846d8d0a27f5e23_depth.png"
   },
   {
    "sceneId": "b03a",
@@ -955,7 +961,8 @@
      "label": "FTG ▲ TO THE MOON"
     }
    ],
-   "backdrop": "backdrops/7846d8d0a27f5e23.png"
+   "backdrop": "backdrops/7846d8d0a27f5e23.png",
+   "backdropDepth": "backdrops/7846d8d0a27f5e23_depth.png"
   },
   {
    "sceneId": "b04",
@@ -1105,7 +1112,8 @@
      "style": "title"
     }
    ],
-   "backdrop": "backdrops/0430c93f801f4d42.png"
+   "backdrop": "backdrops/0430c93f801f4d42.png",
+   "backdropDepth": "backdrops/0430c93f801f4d42_depth.png"
   },
   {
    "sceneId": "b04a",
@@ -1249,7 +1257,8 @@
      "size": 0.44330948811505755
     }
    ],
-   "backdrop": "backdrops/0430c93f801f4d42.png"
+   "backdrop": "backdrops/0430c93f801f4d42.png",
+   "backdropDepth": "backdrops/0430c93f801f4d42_depth.png"
   },
   {
    "sceneId": "b05",
@@ -1322,7 +1331,8 @@
     "seed": 97,
     "shop": null
    },
-   "backdrop": "backdrops/0239027f7cadb156.png"
+   "backdrop": "backdrops/0239027f7cadb156.png",
+   "backdropDepth": "backdrops/0239027f7cadb156_depth.png"
   },
   {
    "sceneId": "b05a",
@@ -1395,7 +1405,8 @@
     "seed": 97,
     "shop": null
    },
-   "backdrop": "backdrops/0239027f7cadb156.png"
+   "backdrop": "backdrops/0239027f7cadb156.png",
+   "backdropDepth": "backdrops/0239027f7cadb156_depth.png"
   },
   {
    "sceneId": "b06",
@@ -1464,7 +1475,8 @@
     "seed": 97,
     "shop": null
    },
-   "backdrop": "backdrops/64db6423deb2519b.png"
+   "backdrop": "backdrops/64db6423deb2519b.png",
+   "backdropDepth": "backdrops/64db6423deb2519b_depth.png"
   },
   {
    "sceneId": "b06a",
@@ -1553,7 +1565,8 @@
      "size": 0.8
     }
    ],
-   "backdrop": "backdrops/64db6423deb2519b.png"
+   "backdrop": "backdrops/64db6423deb2519b.png",
+   "backdropDepth": "backdrops/64db6423deb2519b_depth.png"
   },
   {
    "sceneId": "b07",
@@ -1639,7 +1652,8 @@
      "product": "envelope"
     }
    ],
-   "backdrop": "backdrops/bfb1ca8d2b8a322b.png"
+   "backdrop": "backdrops/bfb1ca8d2b8a322b.png",
+   "backdropDepth": "backdrops/bfb1ca8d2b8a322b_depth.png"
   },
   {
    "sceneId": "b07a",
@@ -1727,7 +1741,8 @@
      "size": 0.44330948811505755
     }
    ],
-   "backdrop": "backdrops/bfb1ca8d2b8a322b.png"
+   "backdrop": "backdrops/bfb1ca8d2b8a322b.png",
+   "backdropDepth": "backdrops/bfb1ca8d2b8a322b_depth.png"
   },
   {
    "sceneId": "b08",
@@ -1798,7 +1813,8 @@
      "label": "FORTNITE GOLD ▼ 99.9%"
     }
    ],
-   "backdrop": "backdrops/ad97b005b5ddd710.png"
+   "backdrop": "backdrops/ad97b005b5ddd710.png",
+   "backdropDepth": "backdrops/ad97b005b5ddd710_depth.png"
   },
   {
    "sceneId": "b08a",
@@ -1876,7 +1892,8 @@
      "size": 3.2
     }
    ],
-   "backdrop": "backdrops/ad97b005b5ddd710.png"
+   "backdrop": "backdrops/ad97b005b5ddd710.png",
+   "backdropDepth": "backdrops/ad97b005b5ddd710_depth.png"
   },
   {
    "sceneId": "b08b",
@@ -1952,7 +1969,8 @@
      "size": 0.9
     }
    ],
-   "backdrop": "backdrops/ad97b005b5ddd710.png"
+   "backdrop": "backdrops/ad97b005b5ddd710.png",
+   "backdropDepth": "backdrops/ad97b005b5ddd710_depth.png"
   },
   {
    "sceneId": "b09",
@@ -2021,7 +2039,8 @@
     "seed": 97,
     "shop": null
    },
-   "backdrop": "backdrops/655431133bfc36c8.png"
+   "backdrop": "backdrops/655431133bfc36c8.png",
+   "backdropDepth": "backdrops/655431133bfc36c8_depth.png"
   },
   {
    "sceneId": "b09a",
@@ -2094,7 +2113,8 @@
      "product": "moth"
     }
    ],
-   "backdrop": "backdrops/655431133bfc36c8.png"
+   "backdrop": "backdrops/655431133bfc36c8.png",
+   "backdropDepth": "backdrops/655431133bfc36c8_depth.png"
   },
   {
    "sceneId": "b10",
@@ -2259,7 +2279,8 @@
      "style": "title"
     }
    ],
-   "backdrop": "backdrops/80665a5ae5498341.png"
+   "backdrop": "backdrops/80665a5ae5498341.png",
+   "backdropDepth": "backdrops/80665a5ae5498341_depth.png"
   },
   {
    "sceneId": "b11",
@@ -2425,7 +2446,8 @@
      "label": "WILL TRADE|PIXEL SWORDS|FOR SANDWICHES"
     }
    ],
-   "backdrop": "backdrops/7b810143dfea90ae.png"
+   "backdrop": "backdrops/7b810143dfea90ae.png",
+   "backdropDepth": "backdrops/7b810143dfea90ae_depth.png"
   },
   {
    "sceneId": "b12",
@@ -2520,7 +2542,8 @@
     "seed": 97,
     "shop": null
    },
-   "backdrop": "backdrops/e09408f20840ffdc.png"
+   "backdrop": "backdrops/e09408f20840ffdc.png",
+   "backdropDepth": "backdrops/e09408f20840ffdc_depth.png"
   },
   {
    "sceneId": "b12a",
@@ -2610,7 +2633,8 @@
     "seed": 97,
     "shop": null
    },
-   "backdrop": "backdrops/e09408f20840ffdc.png"
+   "backdrop": "backdrops/e09408f20840ffdc.png",
+   "backdropDepth": "backdrops/e09408f20840ffdc_depth.png"
   },
   {
    "sceneId": "b13",
@@ -2678,7 +2702,8 @@
     "seed": 97,
     "shop": null
    },
-   "backdrop": "backdrops/bfb1ca8d2b8a322b.png"
+   "backdrop": "backdrops/bfb1ca8d2b8a322b.png",
+   "backdropDepth": "backdrops/bfb1ca8d2b8a322b_depth.png"
   },
   {
    "sceneId": "b13a",
@@ -2760,7 +2785,8 @@
      "size": 3.2
     }
    ],
-   "backdrop": "backdrops/bfb1ca8d2b8a322b.png"
+   "backdrop": "backdrops/bfb1ca8d2b8a322b.png",
+   "backdropDepth": "backdrops/bfb1ca8d2b8a322b_depth.png"
   },
   {
    "sceneId": "b14",

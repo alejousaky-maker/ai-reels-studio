@@ -1,0 +1,3545 @@
+{
+ "version": 1,
+ "title": "The Day I Tried to Be Useful",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 2309,
+ "env": {
+  "preset": "gameroom",
+  "seed": 101,
+  "shop": null
+ },
+ "cast": [
+  {
+   "id": "me",
+   "name": "Gamer (stained hoodie)",
+   "outfit": {
+    "jacket": "#6b6f78",
+    "pants": "#2b2b38",
+    "boots": "#f2efe8",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "hoodie": true,
+    "headset": "#7a3aff"
+   }
+  },
+  {
+   "id": "nb",
+   "name": "Neighbour",
+   "outfit": {
+    "jacket": "#8c3b4a",
+    "pants": "#3b3f52",
+    "boots": "#4a3426",
+    "skin": "#fdfcf8",
+    "hat": "cap",
+    "cap": "#b5653f"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "b01",
+   "startFrame": 0,
+   "endFrame": 123,
+   "narration": "What happens when a lifetime gamer finally decides to turn off his console and be useful for a single day? Pure psychological horror.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.728,
+     "z": 0.685,
+     "expr": "scared",
+     "mode": "stand",
+     "holding": "plug"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 0,
+     "position": [
+      5.76,
+      1.68,
+      5.557
+     ],
+     "lookAt": [
+      5.673,
+      1.38,
+      -0.266
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 0,
+     "position": [
+      5.76,
+      1.68,
+      5.557
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      0.8
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10100,
+   "qualityNotes": "",
+   "look": "warm",
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, a messy gamer bedroom piled with pizza boxes, crushed energy drink cans and tangled wires, dramatic red alarm light, night time, deep blue moonlight with warm glowing lamps and neon reflections, warm cozy tint, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101000,
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "monitor",
+     "x": 0.798,
+     "z": 0.068,
+     "label": "GAME OVER"
+    },
+    {
+     "kind": "snacks",
+     "x": 3.112,
+     "z": -0.712,
+     "scale": 1.2
+    }
+   ],
+   "backdrop": "backdrops/c11831671e4a3c53.png",
+   "backdropDepth": "backdrops/c11831671e4a3c53_depth.png"
+  },
+  {
+   "sceneId": "b01a",
+   "startFrame": 123,
+   "endFrame": 167,
+   "narration": "What happens when a lifetime gamer finally decides to turn off his console and be useful for a single day? Pure psychological horror.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.48,
+     "z": 0.772,
+     "expr": "sweat",
+     "mode": "stand",
+     "holding": "plug"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 123,
+     "position": [
+      2.888,
+      1.6,
+      2.483
+     ],
+     "lookAt": [
+      2.48,
+      1.6,
+      0.772
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 123,
+     "position": [
+      2.725,
+      1.6,
+      1.799
+     ],
+     "lookAt": [
+      2.48,
+      1.6,
+      0.772
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 44
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 20,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10137,
+   "qualityNotes": "",
+   "sub": true,
+   "look": "warm",
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, a messy gamer bedroom piled with pizza boxes, crushed energy drink cans and tangled wires, dramatic red alarm light, night time, deep blue moonlight with warm glowing lamps and neon reflections, warm cozy tint, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101000,
+   "hud": {
+    "kind": "spot"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "monitor",
+     "x": 0.798,
+     "z": 0.068,
+     "label": "GAME OVER"
+    },
+    {
+     "kind": "snacks",
+     "x": 3.112,
+     "z": -0.712,
+     "scale": 1.2
+    }
+   ],
+   "backdrop": "backdrops/c11831671e4a3c53.png",
+   "backdropDepth": "backdrops/c11831671e4a3c53_depth.png"
+  },
+  {
+   "sceneId": "b01b",
+   "startFrame": 167,
+   "endFrame": 216,
+   "narration": "What happens when a lifetime gamer finally decides to turn off his console and be useful for a single day? Pure psychological horror.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.684,
+     "z": 0.7,
+     "expr": "scared",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0,
+     "holding": "plug"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 167,
+     "position": [
+      6.186,
+      1.55,
+      3.954
+     ],
+     "lookAt": [
+      2.684,
+      1.4,
+      0.7
+     ],
+     "fov": 40,
+     "roll": 0.16
+    },
+    {
+     "frame": 167,
+     "position": [
+      4.555,
+      1.55,
+      5.1
+     ],
+     "lookAt": [
+      2.684,
+      1.4,
+      0.7
+     ],
+     "fov": 40,
+     "roll": 0.16,
+     "dur": 49
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10174,
+   "qualityNotes": "",
+   "sub": true,
+   "look": "warm",
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, a messy gamer bedroom piled with pizza boxes, crushed energy drink cans and tangled wires, dramatic red alarm light, night time, deep blue moonlight with warm glowing lamps and neon reflections, warm cozy tint, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101000,
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "monitor",
+     "x": 0.798,
+     "z": 0.068,
+     "label": "GAME OVER"
+    },
+    {
+     "kind": "snacks",
+     "x": 3.112,
+     "z": -0.712,
+     "scale": 1.2
+    }
+   ],
+   "kicks": [
+    {
+     "frame": 193,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 191,
+     "dur": 25,
+     "at": [
+      3.081,
+      2.28,
+      0.562
+     ],
+     "size": 0.8
+    }
+   ],
+   "backdrop": "backdrops/c11831671e4a3c53.png",
+   "backdropDepth": "backdrops/c11831671e4a3c53_depth.png"
+  },
+  {
+   "sceneId": "b02",
+   "startFrame": 216,
+   "endFrame": 264,
+   "narration": "Step one: touching grass. Outside air hits my lungs like chemical warfare.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 13.612,
+     "z": 3.239,
+     "expr": "squint",
+     "mode": "stroll",
+     "walkTo": [
+      16.0,
+      3.0
+     ],
+     "walkFrames": [
+      216,
+      249
+     ],
+     "holding": "grass"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 216,
+     "position": [
+      12.577,
+      1.68,
+      8.97
+     ],
+     "lookAt": [
+      13.612,
+      1.38,
+      3.239
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 216,
+     "position": [
+      14.965,
+      1.68,
+      8.731
+     ],
+     "lookAt": [
+      16,
+      1.38,
+      3
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 33
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "whip",
+   "seed": 10101,
+   "qualityNotes": "",
+   "backdropPrompt": "an American suburban street with lawns, picket fences, two-storey houses, mailboxes and parked cars, a bright sunny front yard with a green lawn and a front door, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101001,
+   "env": {
+    "preset": "suburb",
+    "seed": 101,
+    "shop": null
+   },
+   "textOverlays": [
+    {
+     "text": "STEP 1",
+     "frame": 219,
+     "dur": 42,
+     "position": "top",
+     "style": "title"
+    }
+   ],
+   "backdrop": "backdrops/5fd03718e0403741.png",
+   "backdropDepth": "backdrops/5fd03718e0403741_depth.png"
+  },
+  {
+   "sceneId": "b02a",
+   "startFrame": 264,
+   "endFrame": 346,
+   "narration": "Step one: touching grass. Outside air hits my lungs like chemical warfare.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 16.0,
+     "z": 3.0,
+     "expr": "pained",
+     "mode": "stand",
+     "holding": "grass"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 264,
+     "position": [
+      16.836,
+      1.62,
+      5.831
+     ],
+     "lookAt": [
+      16.0,
+      1.5,
+      3.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 264,
+     "position": [
+      16.502,
+      1.572,
+      4.699
+     ],
+     "lookAt": [
+      16.0,
+      1.5,
+      3.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 82
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10138,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "an American suburban street with lawns, picket fences, two-storey houses, mailboxes and parked cars, a bright sunny front yard with a green lawn and a front door, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101001,
+   "env": {
+    "preset": "suburb",
+    "seed": 101,
+    "shop": null
+   },
+   "fx": [
+    {
+     "kind": "puff",
+     "frame": 321,
+     "dur": 25,
+     "at": [
+      16.0,
+      1.0,
+      3.0
+     ],
+     "size": 0.9
+    }
+   ],
+   "backdrop": "backdrops/5fd03718e0403741.png",
+   "backdropDepth": "backdrops/5fd03718e0403741_depth.png"
+  },
+  {
+   "sceneId": "b03",
+   "startFrame": 346,
+   "endFrame": 413,
+   "narration": "I tried to clean my bedroom. Turns out, under three years of pizza boxes, there was actually a wooden floor.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.347,
+     "z": 1.0,
+     "expr": "stern",
+     "mode": "stand",
+     "holding": "shovel"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 346,
+     "position": [
+      -2.44,
+      1.68,
+      6.36
+     ],
+     "lookAt": [
+      -0.84,
+      1.38,
+      0.76
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 346,
+     "position": [
+      -0.76,
+      1.68,
+      6.84
+     ],
+     "lookAt": [
+      0.84,
+      1.38,
+      1.24
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 67
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10102,
+   "qualityNotes": "",
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, a messy bedroom with mountains of pizza boxes and a black trash bag, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101002,
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "snacks",
+     "x": -1.396,
+     "z": -0.256,
+     "scale": 1.6
+    },
+    {
+     "kind": "snacks",
+     "x": 1.228,
+     "z": -0.208,
+     "scale": 1.3
+    }
+   ],
+   "backdrop": "backdrops/b35b427185c0d6c2.png",
+   "backdropDepth": "backdrops/b35b427185c0d6c2_depth.png"
+  },
+  {
+   "sceneId": "b03a",
+   "startFrame": 413,
+   "endFrame": 514,
+   "narration": "I tried to clean my bedroom. Turns out, under three years of pizza boxes, there was actually a wooden floor.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.16,
+     "z": 1.0,
+     "expr": "shock",
+     "mode": "stand",
+     "pose": "shrug"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 413,
+     "position": [
+      0.71,
+      1.62,
+      3.9
+     ],
+     "lookAt": [
+      0.16,
+      1.5,
+      1.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 413,
+     "position": [
+      0.49,
+      1.572,
+      2.74
+     ],
+     "lookAt": [
+      0.16,
+      1.5,
+      1.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 101
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10139,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, a messy bedroom with mountains of pizza boxes and a black trash bag, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101002,
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "snacks",
+     "x": -0.836,
+     "z": -0.096,
+     "scale": 0.6
+    }
+   ],
+   "backdrop": "backdrops/b35b427185c0d6c2.png",
+   "backdropDepth": "backdrops/b35b427185c0d6c2_depth.png"
+  },
+  {
+   "sceneId": "b04",
+   "startFrame": 514,
+   "endFrame": 617,
+   "narration": "Then I tried applying for a real job. The application asked for five years of experience for an entry-level position.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.728,
+     "z": 0.685,
+     "expr": "nervous",
+     "mode": "chair"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 514,
+     "position": [
+      2.74,
+      1.68,
+      6.614
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      0.8
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 514,
+     "position": [
+      2.604,
+      1.56,
+      4.288
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      0.8
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 103
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10103,
+   "qualityNotes": "",
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101000,
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "monitor",
+     "x": 0.798,
+     "z": 0.068,
+     "label": "JOB APPLICATION"
+    }
+   ],
+   "backdrop": "backdrops/beebcb6e7a245581.png",
+   "backdropDepth": "backdrops/beebcb6e7a245581_depth.png"
+  },
+  {
+   "sceneId": "b04a",
+   "startFrame": 617,
+   "endFrame": 699,
+   "narration": "Then I tried applying for a real job. The application asked for five years of experience for an entry-level position.",
+   "light": "night",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.551,
+     "z": 0.747,
+     "expr": "dazed",
+     "mode": "chair"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 617,
+     "position": [
+      4.028,
+      1.62,
+      3.303
+     ],
+     "lookAt": [
+      2.551,
+      1.5,
+      0.747
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 617,
+     "position": [
+      3.437,
+      1.572,
+      2.281
+     ],
+     "lookAt": [
+      2.551,
+      1.5,
+      0.747
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 82
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10140,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101000,
+   "hud": {
+    "kind": "panel",
+    "text": "ERROR|EXPERIENCE REQUIRED: 100 YEARS!"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "monitor",
+     "x": 0.798,
+     "z": 0.068,
+     "label": "JOB APPLICATION"
+    }
+   ],
+   "backdrop": "backdrops/beebcb6e7a245581.png",
+   "backdropDepth": "backdrops/beebcb6e7a245581_depth.png"
+  },
+  {
+   "sceneId": "b05",
+   "startFrame": 699,
+   "endFrame": 801,
+   "narration": "I attempted to cook real food instead of eating instant ramen. I managed to set water on fire.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -2.4,
+     "z": 0.2,
+     "expr": "proud",
+     "mode": "stand",
+     "holding": "fryingpan"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 699,
+     "position": [
+      -4.549,
+      1.68,
+      5.613
+     ],
+     "lookAt": [
+      -2.4,
+      1.38,
+      0.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 699,
+     "position": [
+      -3.689,
+      1.56,
+      3.448
+     ],
+     "lookAt": [
+      -2.4,
+      1.38,
+      0.2
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 102
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10104,
+   "qualityNotes": "",
+   "backdropPrompt": "a bright home kitchen with cabinets, a fridge, a table and a window, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101001,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "kitchen",
+    "seed": 101,
+    "shop": null
+   },
+   "backdrop": "backdrops/b8a3432781c82e94.png",
+   "backdropDepth": "backdrops/b8a3432781c82e94_depth.png"
+  },
+  {
+   "sceneId": "b05a",
+   "startFrame": 801,
+   "endFrame": 854,
+   "narration": "I attempted to cook real food instead of eating instant ramen. I managed to set water on fire.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -6.579,
+     "z": -0.218,
+     "expr": "scared",
+     "mode": "run",
+     "walkTo": [
+      -2.4,
+      0.2
+     ],
+     "walkFrames": [
+      801,
+      832
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 801,
+     "position": [
+      -0.012,
+      2.3,
+      6.469
+     ],
+     "lookAt": [
+      1.557,
+      1.2,
+      -0.053
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 801,
+     "position": [
+      -0.012,
+      2.3,
+      6.469
+     ],
+     "lookAt": [
+      -2.4,
+      1.2,
+      0.2
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 8
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10141,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a bright home kitchen with cabinets, a fridge, a table and a window, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101001,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "kitchen",
+    "seed": 101,
+    "shop": null
+   },
+   "kicks": [
+    {
+     "frame": 837,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 835,
+     "dur": 19,
+     "at": [
+      -1.982,
+      2.28,
+      0.242
+     ],
+     "size": 0.8
+    },
+    {
+     "kind": "sparks",
+     "frame": 820,
+     "dur": 34,
+     "at": [
+      -1.902,
+      1.2,
+      0.25
+     ],
+     "size": 1.0
+    }
+   ],
+   "backdrop": "backdrops/b8a3432781c82e94.png",
+   "backdropDepth": "backdrops/b8a3432781c82e94_depth.png"
+  },
+  {
+   "sceneId": "b06",
+   "startFrame": 854,
+   "endFrame": 958,
+   "narration": "The worst part about real life? There is no quick-save button. You drop a plate, and it's gone forever.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "skeptical",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 854,
+     "position": [
+      -0.55,
+      1.62,
+      3.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      1.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 854,
+     "position": [
+      -0.33,
+      1.572,
+      2.74
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      1.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 104
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10105,
+   "qualityNotes": "",
+   "backdropPrompt": "a bright home kitchen with cabinets, a fridge, a table and a window, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101002,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "kitchen",
+    "seed": 101,
+    "shop": null
+   },
+   "backdrop": "backdrops/fe41d4953a0cc642.png",
+   "backdropDepth": "backdrops/fe41d4953a0cc642_depth.png"
+  },
+  {
+   "sceneId": "b06a",
+   "startFrame": 958,
+   "endFrame": 993,
+   "narration": "The worst part about real life? There is no quick-save button. You drop a plate, and it's gone forever.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "shock",
+     "mode": "stand",
+     "holding": "plate"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 958,
+     "position": [
+      1.6,
+      1.68,
+      6.6
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10142,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a bright home kitchen with cabinets, a fridge, a table and a window, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101002,
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "kitchen",
+    "seed": 101,
+    "shop": null
+   },
+   "kicks": [
+    {
+     "frame": 990,
+     "amp": 0.8
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "frame": 988,
+     "dur": 5,
+     "at": [
+      0.42,
+      2.28,
+      1.0
+     ],
+     "size": 0.8
+    }
+   ],
+   "backdrop": "backdrops/fe41d4953a0cc642.png",
+   "backdropDepth": "backdrops/fe41d4953a0cc642_depth.png"
+  },
+  {
+   "sceneId": "b06b",
+   "startFrame": 993,
+   "endFrame": 1015,
+   "narration": "The worst part about real life? There is no quick-save button. You drop a plate, and it's gone forever.",
+   "light": "day",
+   "mood": "curious",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "crazy",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0,
+     "holding": "controller"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 993,
+     "position": [
+      -0.55,
+      1.62,
+      3.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      1.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 993,
+     "position": [
+      -0.33,
+      1.572,
+      2.74
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      1.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 22
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10179,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a bright home kitchen with cabinets, a fridge, a table and a window, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101002,
+   "hud": {
+    "kind": "panel",
+    "text": "F9 - QUICK LOAD|NOT AVAILABLE"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "env": {
+    "preset": "kitchen",
+    "seed": 101,
+    "shop": null
+   },
+   "backdrop": "backdrops/fe41d4953a0cc642.png",
+   "backdropDepth": "backdrops/fe41d4953a0cc642_depth.png"
+  },
+  {
+   "sceneId": "b07",
+   "startFrame": 1015,
+   "endFrame": 1167,
+   "narration": "I tried talking to a normal human being outside. We made awkward eye contact for four seconds and I aged ten years.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -6.0,
+     "z": 5.0,
+     "expr": "sweat",
+     "mode": "stand"
+    },
+    {
+     "castId": "nb",
+     "x": -6.917,
+     "z": 4.301,
+     "expr": "sweat",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1015,
+     "position": [
+      -3.212,
+      1.66,
+      8.423
+     ],
+     "lookAt": [
+      -6.0,
+      1.42,
+      5.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1015,
+     "position": [
+      -4.85,
+      1.66,
+      9.262
+     ],
+     "lookAt": [
+      -6.0,
+      1.42,
+      5.0
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 152
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 12,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10106,
+   "qualityNotes": "",
+   "backdropPrompt": "an American suburban street with lawns, picket fences, two-storey houses, mailboxes and parked cars, a quiet suburban sidewalk with lawns and houses, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101000,
+   "env": {
+    "preset": "suburb",
+    "seed": 101,
+    "shop": null
+   },
+   "backdrop": "backdrops/dfe9c8d7f6f1fdec.png",
+   "backdropDepth": "backdrops/dfe9c8d7f6f1fdec_depth.png"
+  },
+  {
+   "sceneId": "b07a",
+   "startFrame": 1167,
+   "endFrame": 1202,
+   "narration": "I tried talking to a normal human being outside. We made awkward eye contact for four seconds and I aged ten years.",
+   "light": "day",
+   "mood": "whimsical",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -6.0,
+     "z": 5.0,
+     "expr": "sleepy",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1167,
+     "position": [
+      -5.75,
+      1.6,
+      6.741
+     ],
+     "lookAt": [
+      -6.0,
+      1.6,
+      5.0
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 1167,
+     "position": [
+      -5.85,
+      1.6,
+      6.045
+     ],
+     "lookAt": [
+      -6.0,
+      1.6,
+      5.0
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 35
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 20,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10143,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "an American suburban street with lawns, picket fences, two-storey houses, mailboxes and parked cars, a quiet suburban sidewalk with lawns and houses, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101000,
+   "hud": {
+    "kind": "spot"
+   },
+   "env": {
+    "preset": "suburb",
+    "seed": 101,
+    "shop": null
+   },
+   "backdrop": "backdrops/dfe9c8d7f6f1fdec.png",
+   "backdropDepth": "backdrops/dfe9c8d7f6f1fdec_depth.png"
+  },
+  {
+   "sceneId": "b08",
+   "startFrame": 1202,
+   "endFrame": 1343,
+   "narration": "Nobody warned me that adulting is basically paying a subscription fee just to exist in a server that lags constantly.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -1.107,
+     "z": -0.149,
+     "expr": "shock",
+     "mode": "stand",
+     "holding": "envelope"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1202,
+     "position": [
+      -0.698,
+      1.68,
+      5.575
+     ],
+     "lookAt": [
+      -1.45,
+      1.38,
+      -0.2
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1202,
+     "position": [
+      -0.999,
+      1.56,
+      3.265
+     ],
+     "lookAt": [
+      -1.45,
+      1.38,
+      -0.2
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 141
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10107,
+   "qualityNotes": "",
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101001,
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "cashcounter",
+     "x": -2.194,
+     "z": -1.444,
+     "label": "fire",
+     "shake": 1.2
+    }
+   ],
+   "punches": [
+    1282
+   ],
+   "fx": [
+    {
+     "kind": "money",
+     "frame": 1280,
+     "dur": 63,
+     "at": [
+      -1.196,
+      1.4,
+      0.445
+     ],
+     "size": 3.2
+    }
+   ],
+   "backdrop": "backdrops/97840ecda9ffbb35.png",
+   "backdropDepth": "backdrops/97840ecda9ffbb35_depth.png"
+  },
+  {
+   "sceneId": "b08a",
+   "startFrame": 1343,
+   "endFrame": 1394,
+   "narration": "Nobody warned me that adulting is basically paying a subscription fee just to exist in a server that lags constantly.",
+   "light": "day",
+   "mood": "tense",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -1.152,
+     "z": -0.155,
+     "expr": "dazed",
+     "mode": "stand",
+     "pose": "up",
+     "shake": 1.0,
+     "holding": "envelope"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1343,
+     "position": [
+      -3.985,
+      1.55,
+      3.695
+     ],
+     "lookAt": [
+      -1.152,
+      1.4,
+      -0.155
+     ],
+     "fov": 40,
+     "roll": -0.16
+    },
+    {
+     "frame": 1343,
+     "position": [
+      -2.169,
+      1.55,
+      4.516
+     ],
+     "lookAt": [
+      -1.152,
+      1.4,
+      -0.155
+     ],
+     "fov": 40,
+     "roll": -0.16,
+     "dur": 51
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 9,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10144,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101001,
+   "hud": {
+    "kind": "police"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "cashcounter",
+     "x": -2.194,
+     "z": -1.444,
+     "label": "fire",
+     "shake": 1.2
+    }
+   ],
+   "backdrop": "backdrops/97840ecda9ffbb35.png",
+   "backdropDepth": "backdrops/97840ecda9ffbb35_depth.png"
+  },
+  {
+   "sceneId": "b09",
+   "startFrame": 1394,
+   "endFrame": 1493,
+   "narration": "After four hours of total productivity, my brain felt like a fried graphics card running Crysis on max settings.",
+   "light": "day",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "dazed",
+     "mode": "fall"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1394,
+     "position": [
+      1.6,
+      0.4,
+      6.6
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1394,
+     "position": [
+      1.6,
+      4.592,
+      6.6
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.0
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 99
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10108,
+   "qualityNotes": "",
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101002,
+   "sunEl": 68,
+   "sunAz": 35,
+   "fx": [
+    {
+     "kind": "steam",
+     "frame": 1468,
+     "dur": 25,
+     "at": [
+      0.42,
+      1.32,
+      1.05
+     ],
+     "size": 0.32
+    }
+   ],
+   "backdrop": "backdrops/20e0b90ef7c33a96.png",
+   "backdropDepth": "backdrops/20e0b90ef7c33a96_depth.png"
+  },
+  {
+   "sceneId": "b09a",
+   "startFrame": 1493,
+   "endFrame": 1583,
+   "narration": "After four hours of total productivity, my brain felt like a fried graphics card running Crysis on max settings.",
+   "light": "day",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "crazy",
+     "mode": "fall"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1493,
+     "position": [
+      -0.55,
+      1.62,
+      3.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      1.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1493,
+     "position": [
+      -0.33,
+      1.572,
+      2.74
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      1.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 90
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10145,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, bright daylight, clear blue sky with soft clouds, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101002,
+   "sunEl": 68,
+   "sunAz": 35,
+   "fx": [
+    {
+     "kind": "puff",
+     "frame": 1493,
+     "dur": 60,
+     "at": [
+      0.0,
+      1.0,
+      1.0
+     ],
+     "size": 0.9
+    }
+   ],
+   "backdrop": "backdrops/20e0b90ef7c33a96.png",
+   "backdropDepth": "backdrops/20e0b90ef7c33a96_depth.png"
+  },
+  {
+   "sceneId": "b10",
+   "startFrame": 1583,
+   "endFrame": 1657,
+   "narration": "I looked at my life, looked at my chores, and made the only logical executive decision.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.56,
+     "z": 1.444,
+     "expr": "pained",
+     "mode": "stroll",
+     "walkTo": [
+      2.826,
+      0.651
+     ],
+     "walkFrames": [
+      1583,
+      1634
+     ]
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1583,
+     "position": [
+      -0.149,
+      0.85,
+      8.049
+     ],
+     "lookAt": [
+      0.134,
+      1.5,
+      1.593
+     ],
+     "fov": 44,
+     "roll": 0.0
+    },
+    {
+     "frame": 1583,
+     "position": [
+      2.117,
+      0.85,
+      7.256
+     ],
+     "lookAt": [
+      2.4,
+      1.5,
+      0.8
+     ],
+     "fov": 44,
+     "roll": 0.0,
+     "dur": 51
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 6,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10109,
+   "qualityNotes": "",
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, warm golden-hour sunset light, long soft shadows, orange sky, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101000,
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "console",
+     "x": 1.172,
+     "z": 0.056,
+     "scale": 1.2
+    }
+   ],
+   "backdrop": "backdrops/d51de42bf5f08bbf.png",
+   "backdropDepth": "backdrops/d51de42bf5f08bbf_depth.png"
+  },
+  {
+   "sceneId": "b10a",
+   "startFrame": 1657,
+   "endFrame": 1722,
+   "narration": "I looked at my life, looked at my chores, and made the only logical executive decision.",
+   "light": "golden",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.48,
+     "z": 0.772,
+     "expr": "evil",
+     "mode": "stand"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1657,
+     "position": [
+      2.888,
+      1.6,
+      2.483
+     ],
+     "lookAt": [
+      2.48,
+      1.6,
+      0.772
+     ],
+     "fov": 30,
+     "roll": 0.0
+    },
+    {
+     "frame": 1657,
+     "position": [
+      2.725,
+      1.6,
+      1.799
+     ],
+     "lookAt": [
+      2.48,
+      1.6,
+      0.772
+     ],
+     "fov": 30,
+     "roll": 0.0,
+     "dur": 65
+    }
+   ],
+   "push": 0.0035,
+   "dof": {
+    "cInf": 20,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10146,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, warm golden-hour sunset light, long soft shadows, orange sky, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101000,
+   "hud": {
+    "kind": "spot"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "console",
+     "x": 1.205,
+     "z": 0.044,
+     "scale": 1.2
+    }
+   ],
+   "backdrop": "backdrops/d51de42bf5f08bbf.png",
+   "backdropDepth": "backdrops/d51de42bf5f08bbf_depth.png"
+  },
+  {
+   "sceneId": "b11",
+   "startFrame": 1722,
+   "endFrame": 1801,
+   "narration": "I pressed the power button. The console beeped. Balance was instantly restored to the universe.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -1.45,
+     "z": -0.2,
+     "expr": "starry",
+     "mode": "stand",
+     "pose": "point"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1722,
+     "position": [
+      -1.603,
+      1.55,
+      2.507
+     ],
+     "lookAt": [
+      -1.613,
+      1.32,
+      0.888
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1722,
+     "position": [
+      -1.607,
+      1.458,
+      1.859
+     ],
+     "lookAt": [
+      -1.613,
+      1.32,
+      0.888
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 79
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "flash",
+   "seed": 10110,
+   "qualityNotes": "",
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101001,
+   "sunEl": 68,
+   "sunAz": 35,
+   "pieces": [
+    {
+     "kind": "console",
+     "x": -1.502,
+     "z": 0.146,
+     "scale": 1.0
+    }
+   ],
+   "backdrop": "backdrops/1cada2c14e9a010d.png",
+   "backdropDepth": "backdrops/1cada2c14e9a010d_depth.png"
+  },
+  {
+   "sceneId": "b11a",
+   "startFrame": 1801,
+   "endFrame": 1874,
+   "narration": "I pressed the power button. The console beeped. Balance was instantly restored to the universe.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": -1.45,
+     "z": -0.2,
+     "expr": "laugh",
+     "mode": "stand",
+     "pose": "up"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1801,
+     "position": [
+      -5.307,
+      0.623,
+      5.289
+     ],
+     "lookAt": [
+      -1.45,
+      1.2,
+      -0.2
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 1801,
+     "position": [
+      -5.307,
+      5.654,
+      5.289
+     ],
+     "lookAt": [
+      -1.45,
+      1.2,
+      -0.2
+     ],
+     "fov": 42,
+     "roll": 0.0,
+     "dur": 73
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10147,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101001,
+   "sunEl": 68,
+   "sunAz": 35,
+   "punches": [
+    1831
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "frame": 1829,
+     "dur": 45,
+     "at": [
+      -1.035,
+      2.28,
+      -0.138
+     ],
+     "size": 0.8
+    }
+   ],
+   "backdrop": "backdrops/1cada2c14e9a010d.png",
+   "backdropDepth": "backdrops/1cada2c14e9a010d_depth.png"
+  },
+  {
+   "sceneId": "b12",
+   "startFrame": 1874,
+   "endFrame": 1954,
+   "narration": "Sure, I'm unemployed, broke, and living in squalor. But at least my K-D ratio is positive.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "smug",
+     "mode": "chair",
+     "holding": "controller"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1874,
+     "position": [
+      0.88,
+      1.545,
+      4.08
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.0
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 1874,
+     "position": [
+      1.6,
+      1.68,
+      6.6
+     ],
+     "lookAt": [
+      0,
+      1.38,
+      1.0
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 80
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10111,
+   "qualityNotes": "",
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101002,
+   "sunEl": 68,
+   "sunAz": 35,
+   "backdrop": "backdrops/03d8150fe4147ec4.png",
+   "backdropDepth": "backdrops/03d8150fe4147ec4_depth.png"
+  },
+  {
+   "sceneId": "b12a",
+   "startFrame": 1954,
+   "endFrame": 2028,
+   "narration": "Sure, I'm unemployed, broke, and living in squalor. But at least my K-D ratio is positive.",
+   "light": "night",
+   "mood": "upbeat",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 0.0,
+     "z": 1.0,
+     "expr": "starry",
+     "mode": "chair",
+     "holding": "controller"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 1954,
+     "position": [
+      -0.55,
+      1.62,
+      3.9
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      1.0
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 1954,
+     "position": [
+      -0.33,
+      1.572,
+      2.74
+     ],
+     "lookAt": [
+      0.0,
+      1.5,
+      1.0
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 74
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10148,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101002,
+   "hud": {
+    "kind": "panel",
+    "text": "VICTORY!|K/D RATIO: 1.01"
+   },
+   "sunEl": 68,
+   "sunAz": 35,
+   "fx": [
+    {
+     "kind": "confetti",
+     "frame": 2004,
+     "dur": 24,
+     "at": [
+      0.0,
+      1.4,
+      1.6
+     ],
+     "size": 3.2
+    }
+   ],
+   "backdrop": "backdrops/03d8150fe4147ec4.png",
+   "backdropDepth": "backdrops/03d8150fe4147ec4_depth.png"
+  },
+  {
+   "sceneId": "b13",
+   "startFrame": 2028,
+   "endFrame": 2081,
+   "narration": "Being useful is overrated. Grinding in a fictional video game simulator is where true fulfillment lies.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.4,
+     "z": 0.8,
+     "expr": "wink",
+     "mode": "chair",
+     "holding": "controller"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 2028,
+     "position": [
+      4.377,
+      1.62,
+      2.991
+     ],
+     "lookAt": [
+      2.4,
+      1.5,
+      0.8
+     ],
+     "fov": 34,
+     "roll": 0.0
+    },
+    {
+     "frame": 2028,
+     "position": [
+      3.312,
+      1.62,
+      3.607
+     ],
+     "lookAt": [
+      2.4,
+      1.5,
+      0.8
+     ],
+     "fov": 34,
+     "roll": 0.0,
+     "dur": 53
+    }
+   ],
+   "push": 0.003,
+   "dof": {
+    "cInf": 18,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10112,
+   "qualityNotes": "",
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101000,
+   "sunEl": 68,
+   "sunAz": 35,
+   "backdrop": "backdrops/beebcb6e7a245581.png",
+   "backdropDepth": "backdrops/beebcb6e7a245581_depth.png"
+  },
+  {
+   "sceneId": "b13a",
+   "startFrame": 2081,
+   "endFrame": 2201,
+   "narration": "Being useful is overrated. Grinding in a fictional video game simulator is where true fulfillment lies.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [
+    {
+     "castId": "me",
+     "x": 2.4,
+     "z": 0.8,
+     "expr": "laugh",
+     "mode": "dance"
+    }
+   ],
+   "cameraKeys": [
+    {
+     "frame": 2081,
+     "position": [
+      2.74,
+      1.68,
+      6.614
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      0.8
+     ],
+     "fov": 38,
+     "roll": 0.0
+    },
+    {
+     "frame": 2081,
+     "position": [
+      2.604,
+      1.56,
+      4.288
+     ],
+     "lookAt": [
+      2.4,
+      1.38,
+      0.8
+     ],
+     "fov": 38,
+     "roll": 0.0,
+     "dur": 120
+    }
+   ],
+   "push": 0.0025,
+   "dof": {
+    "cInf": 14,
+    "focusActor": 0
+   },
+   "transitionIn": "cut",
+   "seed": 10149,
+   "qualityNotes": "",
+   "sub": true,
+   "backdropPrompt": "a dark gamer bedroom with RGB LED strips, a big TV, a gaming desk, energy drink cans and pizza boxes, night time, deep blue moonlight with warm glowing lamps and neon reflections, cel-shaded 2.5D cartoon background art for an animated story short, thick clean black ink outlines, soft cinematic lighting, rich detailed environment with lots of small props, vibrant saturated colors, gentle depth of field, eye-level camera, empty scene with no people and no characters, no animals, no text, no letters, no logos, no watermark, vertical 9:16 composition, open floor space in the lower third",
+   "backdropSeed": 101000,
+   "sunEl": 68,
+   "sunAz": 35,
+   "backdrop": "backdrops/beebcb6e7a245581.png",
+   "backdropDepth": "backdrops/beebcb6e7a245581_depth.png"
+  },
+  {
+   "sceneId": "b14",
+   "startFrame": 2201,
+   "endFrame": 2309,
+   "narration": "Send this to that friend who really needs to touch grass today.",
+   "light": "night",
+   "mood": "warm",
+   "actors": [],
+   "cameraKeys": [
+    {
+     "frame": 2201,
+     "position": [
+      0.627,
+      2.3,
+      6.179
+     ],
+     "lookAt": [
+      -1.45,
+      1.2,
+      -0.2
+     ],
+     "fov": 42,
+     "roll": 0.0
+    },
+    {
+     "frame": 2248,
+     "dur": 24,
+     "position": [
+      -0.698,
+      1.68,
+      5.575
+     ],
+     "lookAt": [
+      -1.45,
+      1.38,
+      -0.2
+     ],
+     "fov": 38,
+     "roll": 0.04
+    }
+   ],
+   "push": 0.0022,
+   "dof": {
+    "cInf": 0
+   },
+   "transitionIn": "dissolve",
+   "seed": 10113,
+   "qualityNotes": "",
+   "hud": {
+    "kind": "outro"
+   },
+   "sunEl": 68,
+   "sunAz": 35
+  }
+ ],
+ "brand": null,
+ "captions": {
+  "enabled": true,
+  "words": [
+   {
+    "w": "What",
+    "s": 0.06,
+    "e": 0.18
+   },
+   {
+    "w": "happens",
+    "s": 0.18,
+    "e": 0.46
+   },
+   {
+    "w": "when",
+    "s": 0.46,
+    "e": 0.72
+   },
+   {
+    "w": "a",
+    "s": 0.72,
+    "e": 0.82
+   },
+   {
+    "w": "lifetime",
+    "s": 0.82,
+    "e": 1.16
+   },
+   {
+    "w": "gamer",
+    "s": 1.16,
+    "e": 1.62
+   },
+   {
+    "w": "finally",
+    "s": 1.62,
+    "e": 2.08
+   },
+   {
+    "w": "decides",
+    "s": 2.08,
+    "e": 2.5
+   },
+   {
+    "w": "to",
+    "s": 2.5,
+    "e": 2.82
+   },
+   {
+    "w": "turn",
+    "s": 2.82,
+    "e": 3.04
+   },
+   {
+    "w": "off",
+    "s": 3.04,
+    "e": 3.16
+   },
+   {
+    "w": "his",
+    "s": 3.16,
+    "e": 3.34
+   },
+   {
+    "w": "console",
+    "s": 3.34,
+    "e": 3.76
+   },
+   {
+    "w": "and",
+    "s": 3.76,
+    "e": 4.04
+   },
+   {
+    "w": "be",
+    "s": 4.04,
+    "e": 4.16
+   },
+   {
+    "w": "useful",
+    "s": 4.16,
+    "e": 4.42
+   },
+   {
+    "w": "for",
+    "s": 4.42,
+    "e": 4.68
+   },
+   {
+    "w": "a",
+    "s": 4.68,
+    "e": 4.78
+   },
+   {
+    "w": "single",
+    "s": 4.78,
+    "e": 5.04
+   },
+   {
+    "w": "day?",
+    "s": 5.04,
+    "e": 5.34
+   },
+   {
+    "w": "Pure",
+    "s": 5.631,
+    "e": 5.811
+   },
+   {
+    "w": "psychological",
+    "s": 5.811,
+    "e": 6.431
+   },
+   {
+    "w": "horror.",
+    "s": 6.431,
+    "e": 6.891,
+    "hot": true
+   },
+   {
+    "w": "Step",
+    "s": 7.27,
+    "e": 7.45
+   },
+   {
+    "w": "one:",
+    "s": 7.45,
+    "e": 7.71
+   },
+   {
+    "w": "touching",
+    "s": 7.89,
+    "e": 8.09
+   },
+   {
+    "w": "grass.",
+    "s": 8.09,
+    "e": 8.41
+   },
+   {
+    "w": "Outside",
+    "s": 8.826,
+    "e": 9.126
+   },
+   {
+    "w": "air",
+    "s": 9.126,
+    "e": 9.426
+   },
+   {
+    "w": "hits",
+    "s": 9.426,
+    "e": 9.666
+   },
+   {
+    "w": "my",
+    "s": 9.666,
+    "e": 9.866
+   },
+   {
+    "w": "lungs",
+    "s": 9.866,
+    "e": 10.186
+   },
+   {
+    "w": "like",
+    "s": 10.186,
+    "e": 10.406
+   },
+   {
+    "w": "chemical",
+    "s": 10.406,
+    "e": 10.746
+   },
+   {
+    "w": "warfare.",
+    "s": 10.746,
+    "e": 11.206,
+    "hot": true
+   },
+   {
+    "w": "I",
+    "s": 11.591,
+    "e": 11.691
+   },
+   {
+    "w": "tried",
+    "s": 11.691,
+    "e": 11.871
+   },
+   {
+    "w": "to",
+    "s": 11.871,
+    "e": 12.031
+   },
+   {
+    "w": "clean",
+    "s": 12.031,
+    "e": 12.211
+   },
+   {
+    "w": "my",
+    "s": 12.211,
+    "e": 12.411
+   },
+   {
+    "w": "bedroom.",
+    "s": 12.411,
+    "e": 12.731
+   },
+   {
+    "w": "Turns",
+    "s": 13.135,
+    "e": 13.315
+   },
+   {
+    "w": "out,",
+    "s": 13.315,
+    "e": 13.655
+   },
+   {
+    "w": "under",
+    "s": 13.775,
+    "e": 13.855
+   },
+   {
+    "w": "three",
+    "s": 13.855,
+    "e": 14.135
+   },
+   {
+    "w": "years",
+    "s": 14.135,
+    "e": 14.335
+   },
+   {
+    "w": "of",
+    "s": 14.335,
+    "e": 14.475
+   },
+   {
+    "w": "pizza",
+    "s": 14.475,
+    "e": 14.755
+   },
+   {
+    "w": "boxes,",
+    "s": 14.755,
+    "e": 15.195
+   },
+   {
+    "w": "there",
+    "s": 15.495,
+    "e": 15.575
+   },
+   {
+    "w": "was",
+    "s": 15.575,
+    "e": 15.675
+   },
+   {
+    "w": "actually",
+    "s": 15.675,
+    "e": 16.095
+   },
+   {
+    "w": "a",
+    "s": 16.095,
+    "e": 16.295
+   },
+   {
+    "w": "wooden",
+    "s": 16.295,
+    "e": 16.475
+   },
+   {
+    "w": "floor.",
+    "s": 16.475,
+    "e": 16.835
+   },
+   {
+    "w": "Then",
+    "s": 17.205,
+    "e": 17.442
+   },
+   {
+    "w": "I",
+    "s": 17.452,
+    "e": 17.565
+   },
+   {
+    "w": "tried",
+    "s": 17.575,
+    "e": 17.873
+   },
+   {
+    "w": "applying",
+    "s": 17.883,
+    "e": 18.367
+   },
+   {
+    "w": "for",
+    "s": 18.377,
+    "e": 18.552
+   },
+   {
+    "w": "a",
+    "s": 18.562,
+    "e": 18.675
+   },
+   {
+    "w": "real",
+    "s": 18.685,
+    "e": 18.922
+   },
+   {
+    "w": "job.",
+    "s": 18.932,
+    "e": 19.107
+   },
+   {
+    "w": "The",
+    "s": 19.307,
+    "e": 19.473
+   },
+   {
+    "w": "application",
+    "s": 19.483,
+    "e": 20.121
+   },
+   {
+    "w": "asked",
+    "s": 20.131,
+    "e": 20.416
+   },
+   {
+    "w": "for",
+    "s": 20.426,
+    "e": 20.592
+   },
+   {
+    "w": "five",
+    "s": 20.602,
+    "e": 20.828
+   },
+   {
+    "w": "years",
+    "s": 20.838,
+    "e": 21.122
+   },
+   {
+    "w": "of",
+    "s": 21.132,
+    "e": 21.24
+   },
+   {
+    "w": "experience",
+    "s": 21.25,
+    "e": 21.829
+   },
+   {
+    "w": "for",
+    "s": 21.839,
+    "e": 22.005
+   },
+   {
+    "w": "an",
+    "s": 22.015,
+    "e": 22.123
+   },
+   {
+    "w": "entry-level",
+    "s": 22.133,
+    "e": 22.712
+   },
+   {
+    "w": "position.",
+    "s": 22.722,
+    "e": 23.183
+   },
+   {
+    "w": "I",
+    "s": 23.363,
+    "e": 23.463
+   },
+   {
+    "w": "attempted",
+    "s": 23.463,
+    "e": 23.803
+   },
+   {
+    "w": "to",
+    "s": 23.803,
+    "e": 24.023
+   },
+   {
+    "w": "cook",
+    "s": 24.023,
+    "e": 24.183
+   },
+   {
+    "w": "real",
+    "s": 24.183,
+    "e": 24.423
+   },
+   {
+    "w": "food",
+    "s": 24.423,
+    "e": 24.823
+   },
+   {
+    "w": "instead",
+    "s": 24.823,
+    "e": 25.203
+   },
+   {
+    "w": "of",
+    "s": 25.203,
+    "e": 25.383
+   },
+   {
+    "w": "eating",
+    "s": 25.383,
+    "e": 25.583
+   },
+   {
+    "w": "instant",
+    "s": 25.583,
+    "e": 25.943
+   },
+   {
+    "w": "ramen.",
+    "s": 25.943,
+    "e": 26.303
+   },
+   {
+    "w": "I",
+    "s": 26.629,
+    "e": 26.729
+   },
+   {
+    "w": "managed",
+    "s": 26.729,
+    "e": 26.989
+   },
+   {
+    "w": "to",
+    "s": 26.989,
+    "e": 27.209
+   },
+   {
+    "w": "set",
+    "s": 27.209,
+    "e": 27.369
+   },
+   {
+    "w": "water",
+    "s": 27.369,
+    "e": 27.669,
+    "hot": true
+   },
+   {
+    "w": "on",
+    "s": 27.669,
+    "e": 27.869
+   },
+   {
+    "w": "fire.",
+    "s": 27.869,
+    "e": 28.209,
+    "hot": true
+   },
+   {
+    "w": "The",
+    "s": 28.539,
+    "e": 28.619
+   },
+   {
+    "w": "worst",
+    "s": 28.619,
+    "e": 28.839
+   },
+   {
+    "w": "part",
+    "s": 28.839,
+    "e": 29.119
+   },
+   {
+    "w": "about",
+    "s": 29.119,
+    "e": 29.319
+   },
+   {
+    "w": "real",
+    "s": 29.319,
+    "e": 29.599
+   },
+   {
+    "w": "life?",
+    "s": 29.599,
+    "e": 29.959
+   },
+   {
+    "w": "There",
+    "s": 30.342,
+    "e": 30.635
+   },
+   {
+    "w": "is",
+    "s": 30.645,
+    "e": 30.756
+   },
+   {
+    "w": "no",
+    "s": 30.766,
+    "e": 30.877
+   },
+   {
+    "w": "quick-save",
+    "s": 30.887,
+    "e": 31.423
+   },
+   {
+    "w": "button.",
+    "s": 31.433,
+    "e": 31.786
+   },
+   {
+    "w": "You",
+    "s": 31.966,
+    "e": 32.046
+   },
+   {
+    "w": "drop",
+    "s": 32.046,
+    "e": 32.226
+   },
+   {
+    "w": "a",
+    "s": 32.226,
+    "e": 32.386
+   },
+   {
+    "w": "plate,",
+    "s": 32.386,
+    "e": 32.606
+   },
+   {
+    "w": "and",
+    "s": 32.606,
+    "e": 32.786
+   },
+   {
+    "w": "it's",
+    "s": 32.786,
+    "e": 32.966
+   },
+   {
+    "w": "gone",
+    "s": 32.966,
+    "e": 33.126,
+    "hot": true
+   },
+   {
+    "w": "forever.",
+    "s": 33.126,
+    "e": 33.466
+   },
+   {
+    "w": "I",
+    "s": 33.889,
+    "e": 33.969
+   },
+   {
+    "w": "tried",
+    "s": 33.969,
+    "e": 34.189
+   },
+   {
+    "w": "talking",
+    "s": 34.189,
+    "e": 34.529
+   },
+   {
+    "w": "to",
+    "s": 34.529,
+    "e": 34.749
+   },
+   {
+    "w": "a",
+    "s": 34.749,
+    "e": 34.869
+   },
+   {
+    "w": "normal",
+    "s": 34.869,
+    "e": 35.129
+   },
+   {
+    "w": "human",
+    "s": 35.129,
+    "e": 35.489
+   },
+   {
+    "w": "being",
+    "s": 35.489,
+    "e": 35.729
+   },
+   {
+    "w": "outside.",
+    "s": 35.729,
+    "e": 36.109
+   },
+   {
+    "w": "We",
+    "s": 36.572,
+    "e": 36.652
+   },
+   {
+    "w": "made",
+    "s": 36.652,
+    "e": 36.832
+   },
+   {
+    "w": "awkward",
+    "s": 36.832,
+    "e": 37.152
+   },
+   {
+    "w": "eye",
+    "s": 37.152,
+    "e": 37.372
+   },
+   {
+    "w": "contact",
+    "s": 37.372,
+    "e": 37.812
+   },
+   {
+    "w": "for",
+    "s": 37.812,
+    "e": 38.072
+   },
+   {
+    "w": "four",
+    "s": 38.072,
+    "e": 38.332
+   },
+   {
+    "w": "seconds",
+    "s": 38.332,
+    "e": 38.612
+   },
+   {
+    "w": "and",
+    "s": 38.612,
+    "e": 38.812
+   },
+   {
+    "w": "I",
+    "s": 38.812,
+    "e": 38.912
+   },
+   {
+    "w": "aged",
+    "s": 38.912,
+    "e": 39.232
+   },
+   {
+    "w": "ten",
+    "s": 39.232,
+    "e": 39.472
+   },
+   {
+    "w": "years.",
+    "s": 39.472,
+    "e": 39.752
+   },
+   {
+    "w": "Nobody",
+    "s": 40.127,
+    "e": 40.407
+   },
+   {
+    "w": "warned",
+    "s": 40.407,
+    "e": 40.767
+   },
+   {
+    "w": "me",
+    "s": 40.767,
+    "e": 40.907
+   },
+   {
+    "w": "that",
+    "s": 40.907,
+    "e": 41.067
+   },
+   {
+    "w": "adulting",
+    "s": 41.067,
+    "e": 41.547
+   },
+   {
+    "w": "is",
+    "s": 41.547,
+    "e": 41.727
+   },
+   {
+    "w": "basically",
+    "s": 41.727,
+    "e": 42.167
+   },
+   {
+    "w": "paying",
+    "s": 42.167,
+    "e": 42.547
+   },
+   {
+    "w": "a",
+    "s": 42.547,
+    "e": 42.707
+   },
+   {
+    "w": "subscription",
+    "s": 42.707,
+    "e": 43.167,
+    "hot": true
+   },
+   {
+    "w": "fee",
+    "s": 43.167,
+    "e": 43.547
+   },
+   {
+    "w": "just",
+    "s": 43.547,
+    "e": 43.967
+   },
+   {
+    "w": "to",
+    "s": 43.967,
+    "e": 44.167
+   },
+   {
+    "w": "exist",
+    "s": 44.167,
+    "e": 44.467
+   },
+   {
+    "w": "in",
+    "s": 44.467,
+    "e": 44.687
+   },
+   {
+    "w": "a",
+    "s": 44.687,
+    "e": 44.807
+   },
+   {
+    "w": "server",
+    "s": 44.807,
+    "e": 45.107
+   },
+   {
+    "w": "that",
+    "s": 45.107,
+    "e": 45.347
+   },
+   {
+    "w": "lags",
+    "s": 45.347,
+    "e": 45.747
+   },
+   {
+    "w": "constantly.",
+    "s": 45.747,
+    "e": 46.147
+   },
+   {
+    "w": "After",
+    "s": 46.532,
+    "e": 46.732
+   },
+   {
+    "w": "four",
+    "s": 46.732,
+    "e": 47.072
+   },
+   {
+    "w": "hours",
+    "s": 47.072,
+    "e": 47.372
+   },
+   {
+    "w": "of",
+    "s": 47.372,
+    "e": 47.572
+   },
+   {
+    "w": "total",
+    "s": 47.572,
+    "e": 47.772
+   },
+   {
+    "w": "productivity,",
+    "s": 47.772,
+    "e": 48.452
+   },
+   {
+    "w": "my",
+    "s": 48.892,
+    "e": 48.972
+   },
+   {
+    "w": "brain",
+    "s": 48.972,
+    "e": 49.252,
+    "hot": true
+   },
+   {
+    "w": "felt",
+    "s": 49.252,
+    "e": 49.492
+   },
+   {
+    "w": "like",
+    "s": 49.492,
+    "e": 49.692
+   },
+   {
+    "w": "a",
+    "s": 49.692,
+    "e": 49.812
+   },
+   {
+    "w": "fried",
+    "s": 49.812,
+    "e": 50.072,
+    "hot": true
+   },
+   {
+    "w": "graphics",
+    "s": 50.072,
+    "e": 50.532
+   },
+   {
+    "w": "card",
+    "s": 50.532,
+    "e": 50.852
+   },
+   {
+    "w": "running",
+    "s": 50.852,
+    "e": 51.112
+   },
+   {
+    "w": "Crysis",
+    "s": 51.112,
+    "e": 51.592
+   },
+   {
+    "w": "on",
+    "s": 51.592,
+    "e": 51.812
+   },
+   {
+    "w": "max",
+    "s": 51.812,
+    "e": 52.052
+   },
+   {
+    "w": "settings.",
+    "s": 52.052,
+    "e": 52.412
+   },
+   {
+    "w": "I",
+    "s": 52.818,
+    "e": 52.918
+   },
+   {
+    "w": "looked",
+    "s": 52.918,
+    "e": 53.098
+   },
+   {
+    "w": "at",
+    "s": 53.098,
+    "e": 53.218
+   },
+   {
+    "w": "my",
+    "s": 53.218,
+    "e": 53.358
+   },
+   {
+    "w": "life,",
+    "s": 53.358,
+    "e": 53.778
+   },
+   {
+    "w": "looked",
+    "s": 53.938,
+    "e": 54.058
+   },
+   {
+    "w": "at",
+    "s": 54.058,
+    "e": 54.178
+   },
+   {
+    "w": "my",
+    "s": 54.178,
+    "e": 54.298
+   },
+   {
+    "w": "chores,",
+    "s": 54.298,
+    "e": 54.678
+   },
+   {
+    "w": "and",
+    "s": 54.678,
+    "e": 54.958
+   },
+   {
+    "w": "made",
+    "s": 54.958,
+    "e": 55.078
+   },
+   {
+    "w": "the",
+    "s": 55.078,
+    "e": 55.238
+   },
+   {
+    "w": "only",
+    "s": 55.238,
+    "e": 55.518
+   },
+   {
+    "w": "logical",
+    "s": 55.518,
+    "e": 56.038
+   },
+   {
+    "w": "executive",
+    "s": 56.038,
+    "e": 56.638
+   },
+   {
+    "w": "decision.",
+    "s": 56.638,
+    "e": 57.138
+   },
+   {
+    "w": "I",
+    "s": 57.448,
+    "e": 57.548
+   },
+   {
+    "w": "pressed",
+    "s": 57.548,
+    "e": 57.768
+   },
+   {
+    "w": "the",
+    "s": 57.768,
+    "e": 57.968
+   },
+   {
+    "w": "power",
+    "s": 57.968,
+    "e": 58.188
+   },
+   {
+    "w": "button.",
+    "s": 58.188,
+    "e": 58.508
+   },
+   {
+    "w": "The",
+    "s": 58.859,
+    "e": 58.939
+   },
+   {
+    "w": "console",
+    "s": 58.939,
+    "e": 59.319
+   },
+   {
+    "w": "beeped.",
+    "s": 59.319,
+    "e": 59.819
+   },
+   {
+    "w": "Balance",
+    "s": 60.046,
+    "e": 60.286
+   },
+   {
+    "w": "was",
+    "s": 60.286,
+    "e": 60.546
+   },
+   {
+    "w": "instantly",
+    "s": 60.546,
+    "e": 60.986
+   },
+   {
+    "w": "restored",
+    "s": 60.986,
+    "e": 61.426,
+    "hot": true
+   },
+   {
+    "w": "to",
+    "s": 61.426,
+    "e": 61.666
+   },
+   {
+    "w": "the",
+    "s": 61.666,
+    "e": 61.746
+   },
+   {
+    "w": "universe.",
+    "s": 61.746,
+    "e": 62.106
+   },
+   {
+    "w": "Sure,",
+    "s": 62.506,
+    "e": 62.686
+   },
+   {
+    "w": "I'm",
+    "s": 62.866,
+    "e": 62.966
+   },
+   {
+    "w": "unemployed,",
+    "s": 62.966,
+    "e": 63.466
+   },
+   {
+    "w": "broke,",
+    "s": 63.666,
+    "e": 63.826
+   },
+   {
+    "w": "and",
+    "s": 63.966,
+    "e": 64.006
+   },
+   {
+    "w": "living",
+    "s": 64.006,
+    "e": 64.226
+   },
+   {
+    "w": "in",
+    "s": 64.226,
+    "e": 64.386
+   },
+   {
+    "w": "squalor.",
+    "s": 64.386,
+    "e": 64.886
+   },
+   {
+    "w": "But",
+    "s": 65.131,
+    "e": 65.191
+   },
+   {
+    "w": "at",
+    "s": 65.191,
+    "e": 65.291
+   },
+   {
+    "w": "least",
+    "s": 65.291,
+    "e": 65.451
+   },
+   {
+    "w": "my",
+    "s": 65.451,
+    "e": 65.711
+   },
+   {
+    "w": "K-D",
+    "s": 65.711,
+    "e": 66.111
+   },
+   {
+    "w": "ratio",
+    "s": 66.111,
+    "e": 66.531
+   },
+   {
+    "w": "is",
+    "s": 66.531,
+    "e": 66.811
+   },
+   {
+    "w": "positive.",
+    "s": 66.811,
+    "e": 67.291,
+    "hot": true
+   },
+   {
+    "w": "Being",
+    "s": 67.647,
+    "e": 67.787
+   },
+   {
+    "w": "useful",
+    "s": 67.787,
+    "e": 68.187
+   },
+   {
+    "w": "is",
+    "s": 68.187,
+    "e": 68.467
+   },
+   {
+    "w": "overrated.",
+    "s": 68.467,
+    "e": 69.047
+   },
+   {
+    "w": "Grinding",
+    "s": 69.389,
+    "e": 69.852
+   },
+   {
+    "w": "in",
+    "s": 69.862,
+    "e": 69.97
+   },
+   {
+    "w": "a",
+    "s": 69.98,
+    "e": 70.089
+   },
+   {
+    "w": "fictional",
+    "s": 70.099,
+    "e": 70.621
+   },
+   {
+    "w": "video",
+    "s": 70.631,
+    "e": 70.917
+   },
+   {
+    "w": "game",
+    "s": 70.927,
+    "e": 71.154
+   },
+   {
+    "w": "simulator",
+    "s": 71.164,
+    "e": 71.686
+   },
+   {
+    "w": "is",
+    "s": 71.696,
+    "e": 71.805
+   },
+   {
+    "w": "where",
+    "s": 71.815,
+    "e": 72.101
+   },
+   {
+    "w": "true",
+    "s": 72.111,
+    "e": 72.337
+   },
+   {
+    "w": "fulfillment",
+    "s": 72.347,
+    "e": 72.988
+   },
+   {
+    "w": "lies.",
+    "s": 72.998,
+    "e": 73.225
+   },
+   {
+    "w": "Send",
+    "s": 73.405,
+    "e": 73.565
+   },
+   {
+    "w": "this",
+    "s": 73.565,
+    "e": 73.765
+   },
+   {
+    "w": "to",
+    "s": 73.765,
+    "e": 73.905
+   },
+   {
+    "w": "that",
+    "s": 73.905,
+    "e": 74.025
+   },
+   {
+    "w": "friend",
+    "s": 74.025,
+    "e": 74.345
+   },
+   {
+    "w": "who",
+    "s": 74.345,
+    "e": 74.625
+   },
+   {
+    "w": "really",
+    "s": 74.625,
+    "e": 74.845
+   },
+   {
+    "w": "needs",
+    "s": 74.845,
+    "e": 75.125
+   },
+   {
+    "w": "to",
+    "s": 75.125,
+    "e": 75.365
+   },
+   {
+    "w": "touch",
+    "s": 75.365,
+    "e": 75.585
+   },
+   {
+    "w": "grass",
+    "s": 75.585,
+    "e": 75.905
+   },
+   {
+    "w": "today.",
+    "s": 75.905,
+    "e": 76.205
+   }
+  ]
+ },
+ "style": "storybook",
+ "graphics": "full"
+}

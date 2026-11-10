@@ -59,21 +59,27 @@ const horse = (p: Pen) => {
 };
 
 /** caravel (Columbus-era): high stern castle, three masts, square sails with red crosses, a lateen at the back */
-const ship = (p: Pen, galley = false) => {
-  const hullTop = 900, wl = 1180;
+const ship = (p: Pen, galley = false, label = "") => {
+  const hullTop = 900, wl = 1180, pirate = label === "pirate";
   // sails behind the hull
   if (!galley) {
     for (const [x, top, w, h] of [[640, 300, 300, 330], [930, 420, 210, 230]] as const) {
       p.stroke([[x, hullTop], [x, top - 80]], 16, WOOD_D);
       const sl: P2[] = [[x - w / 2, top], [x + w / 2, top], [x + w / 2 + 18, top + h / 2], [x + w / 2, top + h], [x - w / 2, top + h], [x - w / 2 + 18, top + h / 2]];
-      p.gradFill(sl, "#f6efdc", "#d9cfb6", LIGHT); p.poly(sl, null, 9);
-      p.poly([[x - 22, top + 30], [x + 22, top + 30], [x + 22, top + h - 30], [x - 22, top + h - 30]], "#c8323a", 0);
-      p.poly([[x - w / 2 + 34, top + h / 2 - 22], [x + w / 2 - 34, top + h / 2 - 22], [x + w / 2 - 34, top + h / 2 + 22], [x - w / 2 + 34, top + h / 2 + 22]], "#c8323a", 0);
+      p.gradFill(sl, pirate ? "#2b2b38" : "#f6efdc", pirate ? "#16151b" : "#d9cfb6", LIGHT); p.poly(sl, null, 9);
+      if (pirate) {   // black sails with a white skull and crossbones
+        const cx2 = x, cy2 = top + h / 2, k2 = Math.min(w, h) / 300;
+        p.ell(cx2, cy2 - 20 * k2, 46 * k2, 40 * k2, "#f7f5f0", 5); p.dot(cx2 - 16 * k2, cy2 - 24 * k2, 10 * k2, "#16151b"); p.dot(cx2 + 16 * k2, cy2 - 24 * k2, 10 * k2, "#16151b");
+        p.stroke([[cx2 - 60 * k2, cy2 + 50 * k2], [cx2 + 60 * k2, cy2 + 10 * k2]], 16 * k2, "#f7f5f0"); p.stroke([[cx2 + 60 * k2, cy2 + 50 * k2], [cx2 - 60 * k2, cy2 + 10 * k2]], 16 * k2, "#f7f5f0");
+      } else {
+        p.poly([[x - 22, top + 30], [x + 22, top + 30], [x + 22, top + h - 30], [x - 22, top + h - 30]], "#c8323a", 0);
+        p.poly([[x - w / 2 + 34, top + h / 2 - 22], [x + w / 2 - 34, top + h / 2 - 22], [x + w / 2 - 34, top + h / 2 + 22], [x - w / 2 + 34, top + h / 2 + 22]], "#c8323a", 0);
+      }
       p.stroke([[x - w / 2 - 10, top], [x + w / 2 + 10, top]], 12, WOOD_D);
-      p.poly([[x, top - 80], [x + 70, top - 62], [x, top - 44]], "#c8323a", 6);                       // pennant
+      p.poly([[x, top - 80], [x + 70, top - 62], [x, top - 44]], pirate ? "#16151b" : "#c8323a", 6);                       // pennant
     }
     p.stroke([[300, hullTop - 120], [300, 380]], 13, WOOD_D);                                         // mizzen + lateen
-    p.poly([[300, 380], [430, 720], [190, 690]], "#f1e8d2", 9);
+    p.poly([[300, 380], [430, 720], [190, 690]], pirate ? "#2b2b38" : "#f1e8d2", 9);
   } else {
     p.stroke([[600, hullTop], [600, 330]], 18, WOOD_D);
     const sl: P2[] = [[400, 360], [800, 360], [790, 720], [410, 720]];
@@ -668,7 +674,7 @@ const partybus = (p: Pen) => {   // a flying party bus under a striped hot-air b
 
 export const PIECES: Record<PieceKind, { dw: number; dh: number; w: number; h: number; draw: (p: Pen, label: string) => void }> = {
   horse: { dw: 1000, dh: 1000, w: 8.0, h: 8.0, draw: horse },
-  ship: { dw: 1250, dh: 1200, w: 14.0, h: 13.4, draw: (p) => ship(p, false) },
+  ship: { dw: 1250, dh: 1200, w: 14.0, h: 13.4, draw: (p, label) => ship(p, false, label) },
   galley: { dw: 1250, dh: 1200, w: 13.0, h: 12.5, draw: (p) => ship(p, true) },
   chalkboard: { dw: 600, dh: 780, w: 1.9, h: 2.47, draw: chalkboard },
   sheep: { dw: 500, dh: 380, w: 1.35, h: 1.03, draw: sheep },

@@ -1,0 +1,97 @@
+{
+ "id": "the-day-i-tried-to-be-useful-1f7d1c",
+ "steps": {
+  "script": {
+   "status": "done",
+   "words": 248,
+   "beats": 14,
+   "at": "2026-11-10T18:52:41"
+  },
+  "voice": {
+   "duration": 76.570625,
+   "provider": "kokoro-onnx (Kokoro-82M, Apache-2.0)",
+   "seconds": 25.5,
+   "status": "done",
+   "voice": "am_eric*0.7+am_fenrir*0.3",
+   "speed": 1.15,
+   "at": "2026-11-10T18:53:07"
+  },
+  "align": {
+   "status": "done",
+   "seconds": 17.4,
+   "method": {
+    "whisper": 22,
+    "spread": 4
+   },
+   "model": "faster-whisper base (cpu/int8)",
+   "at": "2026-11-10T18:53:24"
+  },
+  "storyboard": {
+   "status": "done",
+   "frames": 2309,
+   "seconds_video": 76.96666666666667,
+   "scenes": 29,
+   "at": "2026-11-10T19:02:22"
+  }
+ },
+ "history": [
+  {
+   "step": "script",
+   "at": "2026-11-10T18:38:53",
+   "status": "done"
+  },
+  {
+   "step": "script",
+   "at": "2026-11-10T18:52:41",
+   "status": "done"
+  },
+  {
+   "step": "voice",
+   "at": "2026-11-10T18:53:07",
+   "seconds": 25.5,
+   "status": "done"
+  },
+  {
+   "step": "align",
+   "at": "2026-11-10T18:53:24",
+   "status": "done",
+   "seconds": 17.4
+  },
+  {
+   "step": "storyboard",
+   "at": "2026-11-10T19:02:22",
+   "status": "done"
+  }
+ ],
+ "title": "The Day I Tried to Be Useful",
+ "created": "2026-11-10T18:38:53",
+ "request": {
+  "title": "The Day I Tried to Be Useful",
+  "idea": "The Day I Tried to Be Useful",
+  "script": "",
+  "kind": "story",
+  "lang": "en",
+  "seconds": 90,
+  "quality": "master",
+  "style": "storybook",
+  "environment": "gameroom",
+  "voice": "am_eric*0.7+am_fenrir*0.3",
+  "speed": 1.15,
+  "clientId": null,
+  "cta": null,
+  "audience": null,
+  "research": true,
+  "captions": true,
+  "graphics": "full",
+  "music": true,
+  "variants": 1,
+  "provider": "auto",
+  "review": "auto_qa",
+  "seed": 7,
+  "autostart": false
+ },
+ "lang": "en",
+ "style": "storybook",
+ "durationNote": "",
+ "requestedSeconds": 90
+}
