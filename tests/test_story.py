@@ -169,7 +169,7 @@ def test_story_plans_build_and_new_locations():
     import json
     import os
     root = os.path.join(os.path.dirname(__file__), "..", "docs", "scripts")
-    files = sorted(glob.glob(os.path.join(root, "plan_0*.json")))
+    files = sorted(glob.glob(os.path.join(root, "plan_*.json")))
     assert len(files) >= 6
     for f in files:
         plan = Plan.model_validate(json.load(open(f, encoding="utf-8")))

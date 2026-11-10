@@ -1,0 +1,372 @@
+{
+ "version": 1,
+ "title": "The Wedding Slideshow",
+ "lang": "en",
+ "style": "storybook",
+ "environment": "banquet",
+ "seed": 31,
+ "graphics": "full",
+ "cast": [
+  {
+   "id": "groom",
+   "name": "Groom",
+   "role": "groom"
+  },
+  {
+   "id": "bride",
+   "name": "Bride",
+   "role": "bride"
+  },
+  {
+   "id": "best",
+   "name": "Best man",
+   "role": "businessman",
+   "palette": "#2f3f6a"
+  },
+  {
+   "id": "g1",
+   "name": "Guest",
+   "role": "guest"
+  },
+  {
+   "id": "g2",
+   "name": "Guest",
+   "role": "guest",
+   "palette": "#5d7a3a"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "He found out his bride cheated with the best man. He didn't cancel the wedding. He edited the slideshow.",
+   "environment": "banquet",
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "groom",
+     "expr": "smile",
+     "holding": "mic"
+    },
+    {
+     "id": "bride",
+     "expr": "smile"
+    },
+    {
+     "id": "best",
+     "expr": "smile"
+    }
+   ],
+   "spot": 1,
+   "pieces": [
+    {
+     "kind": "screen",
+     "where": "behind",
+     "label": "photos"
+    }
+   ],
+   "impactWord": "slideshow",
+   "focus": "groom"
+  },
+  {
+   "narration": "Forty thousand dollars. Two hundred guests. One projector.",
+   "environment": "banquet",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "g1",
+     "expr": "smile"
+    },
+    {
+     "id": "g2",
+     "expr": "smile"
+    }
+   ],
+   "spot": 3,
+   "text": "$40,000",
+   "textStyle": "label",
+   "focus": "g1"
+  },
+  {
+   "narration": "The night before, a hotel hallway camera told him everything.",
+   "environment": "hotel",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "groom",
+     "expr": "neutral",
+     "holding": "phone",
+     "react": {
+      "word": "everything",
+      "expr": "stern"
+     }
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "camera",
+     "on": "groom",
+     "product": "camera"
+    }
+   ],
+   "transition": "xfade",
+   "focus": "groom"
+  },
+  {
+   "narration": "He smiled through the whole ceremony.",
+   "environment": "banquet",
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "groom",
+     "expr": "smile"
+    }
+   ],
+   "spot": 0,
+   "transition": "xfade",
+   "focus": "groom"
+  },
+  {
+   "narration": "Then, at the reception, he took the mic for a special slideshow.",
+   "environment": "banquet",
+   "shot": "medium",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "groom",
+     "expr": "smile_closed",
+     "holding": "mic"
+    }
+   ],
+   "spot": 1,
+   "focus": "groom"
+  },
+  {
+   "narration": "Baby photos. The first date. The proposal.",
+   "environment": "banquet",
+   "shot": "wide",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "g1",
+     "expr": "smile"
+    },
+    {
+     "id": "g2",
+     "expr": "smile"
+    }
+   ],
+   "spot": 1,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "proposal",
+     "on": "g1",
+     "product": "heart"
+    }
+   ],
+   "pieces": [
+    {
+     "kind": "screen",
+     "where": "behind",
+     "label": "photos"
+    }
+   ],
+   "focus": "g1"
+  },
+  {
+   "narration": "And then, a hallway photo. The bride and the best man, walking into the same hotel room.",
+   "environment": "banquet",
+   "shot": "wide",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "g1",
+     "expr": "smile",
+     "react": {
+      "word": "hallway",
+      "expr": "shock"
+     }
+    },
+    {
+     "id": "g2",
+     "expr": "smile",
+     "react": {
+      "word": "best",
+      "expr": "shock"
+     }
+    }
+   ],
+   "spot": 1,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "hallway",
+     "on": "g2",
+     "product": "exclaim"
+    }
+   ],
+   "pieces": [
+    {
+     "kind": "screen",
+     "where": "behind",
+     "label": "hallway"
+    }
+   ],
+   "impactWord": "hallway",
+   "focus": "g1"
+  },
+  {
+   "narration": "Timestamp: last night.",
+   "environment": "banquet",
+   "shot": "medium",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "groom",
+     "expr": "neutral"
+    }
+   ],
+   "spot": 1,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "last",
+     "on": "groom",
+     "product": "clock"
+    }
+   ],
+   "pieces": [
+    {
+     "kind": "screen",
+     "where": "behind",
+     "label": "hallway"
+    }
+   ],
+   "text": "23:47 — LAST NIGHT",
+   "textStyle": "label",
+   "focus": "groom"
+  },
+  {
+   "narration": "The bride and the best man went pale.",
+   "environment": "banquet",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "bride",
+     "expr": "dazed"
+    },
+    {
+     "id": "best",
+     "expr": "dazed"
+    }
+   ],
+   "spot": 0,
+   "focus": "bride"
+  },
+  {
+   "narration": "He raised his glass. To the happy couple.",
+   "environment": "banquet",
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "groom",
+     "expr": "smile"
+    }
+   ],
+   "spot": 0,
+   "focus": "groom"
+  },
+  {
+   "narration": "Then he dropped the mic.",
+   "environment": "banquet",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "groom",
+     "expr": "stern",
+     "holding": "mic"
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "dropped",
+     "on": "groom"
+    }
+   ],
+   "impactWord": "dropped",
+   "focus": "groom"
+  },
+  {
+   "narration": "He grabbed his suitcase, and the honeymoon tickets.",
+   "environment": "banquet",
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "groom",
+     "expr": "smile",
+     "holding": "suitcase",
+     "action": "walk"
+    }
+   ],
+   "spot": 2,
+   "focus": "groom"
+  },
+  {
+   "narration": "Best wedding ever. For one guest.",
+   "environment": "airport",
+   "shot": "close",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "groom",
+     "expr": "grin",
+     "holding": "ticket"
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "guest",
+     "on": "groom"
+    }
+   ],
+   "transition": "xfade",
+   "focus": "groom"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Fictional comedy story (not a real event).",
+   "status": "fiction"
+  }
+ ],
+ "creativeHooks": [
+  "He found out his bride cheated with the best man. He didn't cancel the wedding. He edited the slideshow.",
+  "Best wedding ever. For one guest."
+ ]
+}

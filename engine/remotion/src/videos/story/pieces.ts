@@ -186,7 +186,96 @@ const poster = (p: Pen) => {   // a lake-and-pines poster on an easel (the fake 
   p.poly(bd, null, 10);
 };
 
-export const PIECES: Record<PieceKind, { dw: number; dh: number; w: number; h: number; draw: (p: Pen) => void }> = {
+const text = (p: Pen, s: string, x: number, y: number, size: number, col: string, font = "Arial Black, Arial") => {
+  const g = p.g; g.fillStyle = col; g.font = `bold ${size}px ${font}`; g.textAlign = "center"; g.fillText(s, x, y);
+};
+/** Lewis gun on a tripod (side view): barrel shroud, pan magazine, stock */
+const lewis = (p: Pen) => {
+  for (const [a, b] of [[[300, 420], [180, 640]], [[300, 420], [420, 640]], [[300, 420], [310, 650]]] as [P2, P2][]) p.stroke([a, b], 16, "#3a3d47");
+  p.poly(rr(140, 340, 560, 400, 20), "#4a4f5a", 9);                            // cooling shroud
+  for (let x = 170; x < 540; x += 30) p.stroke([[x, 345], [x, 395]], 4, "#2b2b38");
+  p.poly([[560, 360], [640, 360], [640, 380], [560, 380]], "#2b2b38", 7);       // muzzle
+  p.ell(330, 320, 90, 22, "#5a5f6a", 8);                                         // pan magazine
+  p.poly([[60, 360], [150, 350], [150, 410], [70, 440]], "#7a4f33", 8);         // stock
+};
+const crates = (p: Pen, label: string) => {
+  const one = (x: number, y: number, w: number, h: number, t: boolean) => {
+    p.poly([[x, y], [x + w, y], [x + w, y + h], [x, y + h]], "#b8864e", 9);
+    for (let k = 1; k < 4; k++) p.stroke([[x, y + (h * k) / 4], [x + w, y + (h * k) / 4]], 4, "#8a5a34");
+    p.stroke([[x, y], [x + w, y + h]], 6, "#8a5a34");
+    if (t) text(p, label || "COBRA FARM", x + w / 2, y + h / 2 + 14, 40, "#3a2a20");
+  };
+  one(40, 300, 340, 300, true); one(380, 360, 280, 240, false); one(150, 70, 300, 230, false);
+  for (const [x, y] of [[230, 90], [300, 110]]) { p.ell(x, y, 22, 20, "#2b2b38", 5); p.ell(x - 7, y - 4, 6, 6, "#ffffff", 0); p.ell(x + 7, y - 4, 6, 6, "#ffffff", 0); }   // peeking snakes
+};
+const snakes = (p: Pen) => {
+  for (let k = 0; k < 7; k++) {
+    const x0 = 60 + k * 110, pts: P2[] = [];
+    for (let i = 0; i <= 18; i++) { const t = i / 18; pts.push([x0 + 90 * t, 230 - 26 * Math.sin(t * Math.PI * 3 + k)]); }
+    p.stroke(pts, 30, INK); p.stroke(pts, 20, k % 2 ? "#2b2b38" : "#5d7a3a");
+    const [hx, hy] = pts[18]; p.ell(hx + 8, hy - 30, 26, 22, k % 2 ? "#2b2b38" : "#5d7a3a", 6);
+    p.ell(hx + 2, hy - 34, 6, 7, "#ffffff", 0); p.ell(hx + 14, hy - 34, 6, 7, "#ffffff", 0);
+  }
+};
+const board = (p: Pen, label: string) => {   // a chalkboard on an easel with a written word
+  for (const [a, b] of [[[130, 740], [210, 120]], [[470, 740], [390, 120]]] as [P2, P2][]) p.stroke([a, b], 18, WOOD_D);
+  p.poly(rr(70, 120, 530, 520, 10), "#8a5a34", 10);
+  p.poly(rr(95, 145, 505, 495, 6), "#2f5a46", 6);
+  const lines = (label || "").split("|");
+  lines.forEach((l, i) => text(p, l, 300, 290 + i * 80 - (lines.length - 1) * 40, l.length > 10 ? 50 : 66, "#f4f1ea", "Comic Sans MS, Arial"));
+  if (label?.startsWith("~")) p.stroke([[110, 330], [490, 300]], 14, "#e2453c");
+};
+const screen = (p: Pen, label: string) => {   // projector screen on legs, the picture glowing
+  p.stroke([[120, 1000], [140, 120]], 16, "#2b2b38"); p.stroke([[1080, 1000], [1060, 120]], 16, "#2b2b38");
+  p.poly(rr(80, 90, 1120, 720, 10), "#f7f7fa", 12);
+  p.clip(rr(110, 120, 1090, 690, 6), () => {
+    const g = p.g;
+    if (label === "hallway") {   // grainy security-camera still: corridor, a door, two figures, a red REC dot and a timestamp
+      g.fillStyle = "#3a4048"; g.fillRect(110, 120, 980, 570);
+      g.fillStyle = "#555c66"; g.beginPath(); g.moveTo(110, 690); g.lineTo(480, 380); g.lineTo(720, 380); g.lineTo(1090, 690); g.fill();
+      g.fillStyle = "#6b4a32"; g.fillRect(700, 260, 120, 230);
+      p.ell(560, 360, 34, 34, "#f2efe8", 4); p.poly([[530, 400], [590, 400], [600, 520], [520, 520]], "#f2efe8", 4);     // white dress
+      p.ell(640, 355, 32, 32, "#d9c4a8", 4); p.poly([[612, 392], [668, 392], [676, 515], [604, 515]], "#2b2b38", 4);     // suit
+      g.fillStyle = "#ff3b3b"; g.beginPath(); g.arc(160, 170, 18, 0, 7); g.fill();
+      g.fillStyle = "#ffffff"; g.font = "bold 40px Courier New, monospace"; g.textAlign = "left"; g.fillText("REC  23:47  HALL CAM 4", 190, 184);
+      g.fillStyle = "rgba(255,255,255,0.06)"; for (let y = 120; y < 690; y += 6) g.fillRect(110, y, 980, 2);
+    } else {   // happy photos collage
+      g.fillStyle = "#fde7ef"; g.fillRect(110, 120, 980, 570);
+      for (const [x, y, c] of [[160, 170, "#ffd23f"], [480, 150, "#8fd0ff"], [790, 190, "#c9f0b0"], [300, 420, "#ffb3c7"], [640, 430, "#e8d4ff"]] as const) {
+        g.fillStyle = "#ffffff"; g.fillRect(x, y, 250, 200); g.fillStyle = c; g.fillRect(x + 14, y + 14, 222, 150);
+        p.ell(x + 125, y + 80, 34, 34, "#ffe2c2", 4); p.arc(x + 125, y + 86, 16, 10, 20, 160, 4);
+      }
+      p.poly([[560, 360], [600, 330], [640, 360], [600, 410]], "#ef4f5f", 6);
+    }
+  });
+};
+const finish = (p: Pen) => {   // two stakes with a red FINISH tape, two packed suitcases in front
+  for (const x of [80, 1020]) p.stroke([[x, 600], [x, 250]], 18, WOOD_D);
+  p.poly([[80, 300], [1020, 300], [1020, 350], [80, 350]], "#e2453c", 8);
+  text(p, "FINISH", 550, 343, 50, "#ffffff");
+  for (const [x, c] of [[300, "#3f6fb5"], [620, "#c8553d"]] as const) {
+    p.poly(rr(x, 420, x + 240, 600, 18), c, 9); p.poly(rr(x + 80, 390, x + 160, 425, 10), null, 8);
+    for (const dx of [50, 190]) p.stroke([[x + dx, 430], [x + dx, 590]], 7, shade(c, 0.8));
+  }
+};
+const truck = (p: Pen) => {   // 1930s army truck, khaki
+  p.poly([[40, 330], [40, 150], [460, 150], [460, 330]], "#7a7a4a", 10);
+  for (let x = 70; x < 460; x += 60) p.stroke([[x, 160], [x, 320]], 4, "#5e5e38");
+  p.poly([[460, 330], [460, 200], [560, 200], [640, 260], [660, 330]], "#8a8a56", 10);
+  p.poly([[480, 215], [550, 215], [610, 260], [480, 260]], "#8fd0ff", 7);
+  for (const x of [140, 380, 560]) wheel(p, x, 340, 52);
+};
+const booth = (p: Pen, label: string) => {   // wooden counter booth with an awning and a sign
+  p.poly([[60, 360], [740, 360], [740, 640], [60, 640]], "#a8784a", 10);
+  for (let y = 400; y < 640; y += 40) p.stroke([[60, y], [740, y]], 4, "#7a4f33");
+  p.poly([[40, 340], [760, 340], [760, 370], [40, 370]], "#6b4a32", 8);
+  for (const x of [80, 720]) p.stroke([[x, 340], [x, 120]], 16, "#6b4a32");
+  for (let i = 0; i < 8; i++) p.poly([[40 + i * 90, 120], [130 + i * 90, 120], [130 + i * 90, 180], [40 + i * 90, 180]], i % 2 ? "#ffffff" : "#c8323a", 6);
+  p.poly(rr(230, 200, 570, 300, 10), "#f3e3bd", 8);
+  text(p, label || "REWARD", 400, 270, 56, "#c8323a");
+};
+
+export const PIECES: Record<PieceKind, { dw: number; dh: number; w: number; h: number; draw: (p: Pen, label: string) => void }> = {
   horse: { dw: 1000, dh: 1000, w: 8.0, h: 8.0, draw: horse },
   ship: { dw: 1250, dh: 1200, w: 14.0, h: 13.4, draw: (p) => ship(p, false) },
   galley: { dw: 1250, dh: 1200, w: 13.0, h: 12.5, draw: (p) => ship(p, true) },
@@ -198,5 +287,13 @@ export const PIECES: Record<PieceKind, { dw: number; dh: number; w: number; h: n
   car: { dw: 720, dh: 400, w: 4.5, h: 2.5, draw: (p) => car(p, false) },
   van: { dw: 720, dh: 400, w: 5.4, h: 3.0, draw: (p) => car(p, true) },
   poster: { dw: 600, dh: 780, w: 1.9, h: 2.47, draw: poster },
+  lewis: { dw: 700, dh: 660, w: 1.7, h: 1.6, draw: lewis },
+  crates: { dw: 700, dh: 620, w: 2.0, h: 1.77, draw: crates },
+  snakes: { dw: 860, dh: 300, w: 3.2, h: 1.1, draw: snakes },
+  board: { dw: 600, dh: 780, w: 1.9, h: 2.47, draw: board },
+  screen: { dw: 1200, dh: 1000, w: 6.0, h: 5.0, draw: screen },
+  finish: { dw: 1100, dh: 620, w: 4.4, h: 2.48, draw: finish },
+  truck: { dw: 700, dh: 400, w: 5.6, h: 3.2, draw: truck },
+  booth: { dw: 800, dh: 660, w: 3.2, h: 2.64, draw: booth },
 };
 export { mix };

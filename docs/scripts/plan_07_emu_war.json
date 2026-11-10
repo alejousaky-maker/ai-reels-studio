@@ -1,0 +1,414 @@
+{
+ "version": 1,
+ "title": "The Great Emu War",
+ "lang": "en",
+ "style": "storybook",
+ "environment": "outback",
+ "seed": 21,
+ "graphics": "full",
+ "cast": [
+  {
+   "id": "sold",
+   "name": "Soldier",
+   "role": "soldier"
+  },
+  {
+   "id": "sold2",
+   "name": "Soldier",
+   "role": "soldier",
+   "palette": "#7a7a4a"
+  },
+  {
+   "id": "major",
+   "name": "Major Meredith",
+   "role": "major"
+  },
+  {
+   "id": "emu",
+   "name": "Emu",
+   "role": "emu"
+  },
+  {
+   "id": "farmer",
+   "name": "Farmer",
+   "role": "farmer"
+  },
+  {
+   "id": "pol",
+   "name": "Politician",
+   "role": "businessman",
+   "palette": "#2b2b38"
+  },
+  {
+   "id": "pol2",
+   "name": "Politician",
+   "role": "guest"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "In 1932, Australia sent soldiers with machine guns to fight birds. The birds won.",
+   "environment": "outback",
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "sold",
+     "expr": "nervous",
+     "react": {
+      "word": "won",
+      "expr": "shock"
+     }
+    },
+    {
+     "id": "emu",
+     "expr": "neutral"
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "won",
+     "on": "sold",
+     "product": "exclaim"
+    }
+   ],
+   "pieces": [
+    {
+     "kind": "lewis",
+     "where": "left"
+    }
+   ],
+   "impactWord": "won",
+   "focus": "sold"
+  },
+  {
+   "narration": "About twenty thousand emus were eating the farmers' wheat.",
+   "environment": "outback",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "farmer",
+     "expr": "stern"
+    }
+   ],
+   "spot": 0,
+   "text": "≈ 20,000 EMUS",
+   "textStyle": "label",
+   "focus": "farmer",
+   "extras": 4,
+   "extrasRole": "emu"
+  },
+  {
+   "narration": "So the army sent Major Meredith, two soldiers, two machine guns, and ten thousand bullets.",
+   "environment": "outback",
+   "shot": "medium",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "major",
+     "expr": "smile"
+    },
+    {
+     "id": "sold",
+     "expr": "neutral"
+    },
+    {
+     "id": "sold2",
+     "expr": "neutral"
+    }
+   ],
+   "spot": 3,
+   "pieces": [
+    {
+     "kind": "truck",
+     "where": "far",
+     "dx": 4
+    }
+   ],
+   "text": "10,000 BULLETS",
+   "textStyle": "label",
+   "focus": "major"
+  },
+  {
+   "narration": "Plan: wait at a dam, let a thousand emus walk in, and open fire.",
+   "environment": "outback",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "sold",
+     "expr": "grin"
+    },
+    {
+     "id": "sold2",
+     "expr": "grin"
+    }
+   ],
+   "spot": 1,
+   "pieces": [
+    {
+     "kind": "lewis",
+     "where": "left"
+    }
+   ],
+   "transition": "xfade",
+   "focus": "sold",
+   "extras": 4,
+   "extrasRole": "emu",
+   "extrasAction": "walk"
+  },
+  {
+   "narration": "The gun jammed after a dozen shots.",
+   "environment": "outback",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "sold",
+     "expr": "neutral",
+     "react": {
+      "word": "jammed",
+      "expr": "dazed"
+     }
+    }
+   ],
+   "spot": 1,
+   "fx": [
+    {
+     "kind": "puff",
+     "word": "jammed",
+     "on": "sold"
+    }
+   ],
+   "pieces": [
+    {
+     "kind": "lewis",
+     "where": "left"
+    }
+   ],
+   "impactWord": "jammed",
+   "focus": "sold"
+  },
+  {
+   "narration": "And the emus scattered in every direction, at fifty kilometers an hour.",
+   "environment": "outback",
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "emu",
+     "expr": "shock",
+     "action": "walk"
+    }
+   ],
+   "spot": 2,
+   "text": "50 KM/H",
+   "textStyle": "label",
+   "focus": "emu",
+   "extras": 6,
+   "extrasRole": "emu",
+   "extrasAction": "walk"
+  },
+  {
+   "narration": "Meredith said they could face machine guns like tanks.",
+   "environment": "outback",
+   "shot": "close",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "major",
+     "expr": "shock"
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "tanks",
+     "on": "major",
+     "product": "exclaim"
+    }
+   ],
+   "focus": "major"
+  },
+  {
+   "narration": "Newspapers laughed. Parliament asked questions.",
+   "environment": "office",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "pol",
+     "expr": "laugh",
+     "holding": "book"
+    },
+    {
+     "id": "pol2",
+     "expr": "laugh"
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "questions",
+     "on": "pol2",
+     "product": "question"
+    }
+   ],
+   "transition": "xfade",
+   "focus": "pol"
+  },
+  {
+   "narration": "The soldiers were pulled out within a week.",
+   "environment": "office",
+   "shot": "close",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "major",
+     "expr": "dazed",
+     "holding": "folder"
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "pulled",
+     "on": "major"
+    }
+   ],
+   "impactWord": "pulled",
+   "focus": "major"
+  },
+  {
+   "narration": "They came back for round two, and used nearly ten bullets per bird.",
+   "environment": "outback",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "sold",
+     "expr": "nervous"
+    },
+    {
+     "id": "emu",
+     "expr": "smile"
+    }
+   ],
+   "spot": 0,
+   "pieces": [
+    {
+     "kind": "lewis",
+     "where": "left"
+    }
+   ],
+   "text": "≈ 10 BULLETS PER BIRD",
+   "textStyle": "label",
+   "transition": "xfade",
+   "focus": "sold"
+  },
+  {
+   "narration": "The emus? Still there. Still eating wheat.",
+   "environment": "outback",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "emu",
+     "expr": "laugh"
+    }
+   ],
+   "spot": 0,
+   "focus": "emu",
+   "extras": 2,
+   "extrasRole": "emu"
+  },
+  {
+   "narration": "In the end, farmers got fences and ammo for themselves.",
+   "environment": "outback",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "farmer",
+     "expr": "smile"
+    }
+   ],
+   "spot": 4,
+   "focus": "farmer"
+  },
+  {
+   "narration": "A modern army. Machine guns. And the only war Australia ever lost to a bird.",
+   "environment": "outback",
+   "shot": "close",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "emu",
+     "expr": "smile",
+     "react": {
+      "word": "bird",
+      "expr": "laugh"
+     }
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "bird",
+     "on": "emu"
+    }
+   ],
+   "focus": "emu"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "In Nov-Dec 1932 the Australian army (Maj. G.P.W. Meredith, two soldiers, two Lewis guns, 10,000 rounds) was sent against emus in Western Australia.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Emu_War"
+  },
+  {
+   "text": "About 20,000 emus were damaging wheat crops.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Emu_War"
+  },
+  {
+   "text": "At a dam ambush a gun jammed after about a dozen birds were killed; Meredith compared the emus' resilience to tanks.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Emu_War"
+  },
+  {
+   "text": "The operation was withdrawn, resumed, and averaged about 10 rounds per confirmed kill.",
+   "status": "verified",
+   "source": "https://en.wikipedia.org/wiki/Emu_War"
+  },
+  {
+   "text": "'Lost a war to birds' is the popular comic framing.",
+   "status": "fiction"
+  }
+ ],
+ "creativeHooks": [
+  "In 1932, Australia sent soldiers with machine guns to fight birds. The birds won.",
+  "A modern army. Machine guns. And the only war Australia ever lost to a bird."
+ ]
+}

@@ -1,0 +1,348 @@
+{
+ "version": 1,
+ "title": "The AirPods Snitch",
+ "lang": "en",
+ "style": "storybook",
+ "environment": "suburb",
+ "seed": 27,
+ "graphics": "full",
+ "cast": [
+  {
+   "id": "gf",
+   "name": "Her",
+   "role": "hoodie",
+   "palette": "#9a7ac9"
+  },
+  {
+   "id": "bf",
+   "name": "Boyfriend",
+   "role": "athlete",
+   "palette": "#f2efe8"
+  },
+  {
+   "id": "girl",
+   "name": "The other girl",
+   "role": "woman",
+   "palette": "#c8323a"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "She caught her boyfriend cheating before she even turned off her car.",
+   "environment": "suburb",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "gf",
+     "expr": "stern",
+     "holding": "phone"
+    }
+   ],
+   "spot": 0,
+   "pieces": [
+    {
+     "kind": "car",
+     "where": "left"
+    }
+   ],
+   "text": "CONNECTED: BEDROOM AIRPODS",
+   "textStyle": "label",
+   "impactWord": "car",
+   "focus": "gf"
+  },
+  {
+   "narration": "She came home early to surprise him.",
+   "environment": "suburb",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "gf",
+     "expr": "smile"
+    }
+   ],
+   "spot": 0,
+   "pieces": [
+    {
+     "kind": "car",
+     "where": "left"
+    }
+   ],
+   "focus": "gf"
+  },
+  {
+   "narration": "Then her car connected to his AirPods. The ones upstairs.",
+   "environment": "suburb",
+   "shot": "close",
+   "light": "golden",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "gf",
+     "expr": "neutral",
+     "react": {
+      "word": "upstairs",
+      "expr": "shock"
+     }
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "AirPods",
+     "on": "gf",
+     "product": "earbuds"
+    }
+   ],
+   "focus": "gf"
+  },
+  {
+   "narration": "And her car speakers started playing his bedroom.",
+   "environment": "suburb",
+   "shot": "medium",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "gf",
+     "expr": "shock",
+     "holding": "phone"
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "notes",
+     "word": "playing",
+     "on": "gf"
+    }
+   ],
+   "pieces": [
+    {
+     "kind": "car",
+     "where": "left"
+    }
+   ],
+   "focus": "gf"
+  },
+  {
+   "narration": "Upstairs, he and another girl were sharing his AirPods, laughing.",
+   "environment": "bedroom",
+   "shot": "two_shot",
+   "light": "night",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "bf",
+     "expr": "laugh",
+     "holding": "earbuds"
+    },
+    {
+     "id": "girl",
+     "expr": "laugh"
+    }
+   ],
+   "spot": 0,
+   "transition": "xfade",
+   "focus": "bf"
+  },
+  {
+   "narration": "They had no idea the mic was live.",
+   "environment": "bedroom",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "bf",
+     "expr": "laugh"
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "mic",
+     "on": "bf",
+     "product": "mic"
+    }
+   ],
+   "focus": "bf"
+  },
+  {
+   "narration": "She didn't scream. She just listened.",
+   "environment": "suburb",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "gf",
+     "expr": "stern"
+    }
+   ],
+   "spot": 0,
+   "transition": "xfade",
+   "focus": "gf"
+  },
+  {
+   "narration": "Then she picked up her phone, and spoke into the mic.",
+   "environment": "suburb",
+   "shot": "medium",
+   "light": "night",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "gf",
+     "expr": "neutral",
+     "holding": "phone"
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "mic",
+     "on": "gf",
+     "product": "mic"
+    }
+   ],
+   "focus": "gf"
+  },
+  {
+   "narration": "Hi babe. Enjoy your last night in my house.",
+   "environment": "suburb",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "gf",
+     "expr": "smile"
+    }
+   ],
+   "spot": 0,
+   "focus": "gf"
+  },
+  {
+   "narration": "Through the upstairs window, two silhouettes froze.",
+   "environment": "bedroom",
+   "shot": "two_shot",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "bf",
+     "expr": "laugh",
+     "react": {
+      "word": "froze",
+      "expr": "shock"
+     }
+    },
+    {
+     "id": "girl",
+     "expr": "laugh",
+     "react": {
+      "word": "froze",
+      "expr": "shock"
+     }
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "froze",
+     "on": "bf",
+     "product": "exclaim"
+    }
+   ],
+   "impactWord": "froze",
+   "focus": "bf"
+  },
+  {
+   "narration": "By morning, the locks were changed and his stuff was on the lawn.",
+   "environment": "suburb",
+   "shot": "wide",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "bf",
+     "expr": "dazed"
+    }
+   ],
+   "spot": 0,
+   "pieces": [
+    {
+     "kind": "boxes",
+     "where": "left"
+    },
+    {
+     "kind": "van",
+     "where": "behind",
+     "dx": 2
+    }
+   ],
+   "transition": "xfade",
+   "focus": "bf"
+  },
+  {
+   "narration": "He kept the AirPods.",
+   "environment": "suburb",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "bf",
+     "expr": "pained",
+     "holding": "earbuds"
+    }
+   ],
+   "spot": 1,
+   "focus": "bf"
+  },
+  {
+   "narration": "Bluetooth: connecting people. Especially the wrong ones.",
+   "environment": "suburb",
+   "shot": "close",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "gf",
+     "expr": "smile",
+     "holding": "key",
+     "react": {
+      "word": "wrong",
+      "expr": "smile_closed"
+     }
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "wrong",
+     "on": "gf"
+    }
+   ],
+   "focus": "gf"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Fictional comedy story (not a real event).",
+   "status": "fiction"
+  }
+ ],
+ "creativeHooks": [
+  "She caught her boyfriend cheating before she even turned off her car.",
+  "Bluetooth: connecting people. Especially the wrong ones."
+ ]
+}

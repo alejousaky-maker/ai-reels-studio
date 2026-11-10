@@ -67,16 +67,50 @@ def outfit(role: str, i: int, palette: str | None = None) -> dict:
         return {**base, "jacket": palette or "#7a8a4a", "pants": "#5a5f6a", "boots": "#3a2f2a", "hat": "bucket", "cap": "#9aa06a", "shades": True, "pockets": True}
     if role == "tourist":
         return {**base, "jacket": palette or "#ff7a59", "dress": palette or "#ff7a59", "hat": "sunhat", "hair": "#2a201a", "shades": True}
+    # ---- history (part 3) ----
+    if role in ("soldier", "major"):
+        o = {**base, "jacket": palette or "#8a8a56", "pants": "#7a7a4a", "boots": "#4a3426", "hat": "slouch", "belt": "#5a4430"}
+        return {**o, "moustache": "#4a3020", "build": "stout", "buttons": "#e8b83a", "sash": "#c8323a"} if role == "major" else o
+    if role == "emu":
+        return {**base, "jacket": palette or "#7a5a3a", "creature": "emu"}
+    if role == "farmer":
+        return {**base, "jacket": palette or "#b5653f", "pants": "#3b5b9a", "hat": "sunhat", "cap": "#e8c46a"}
+    if role == "caesar":
+        return {**base, "jacket": "#f7f5f0", "pants": "#f2efe8", "boots": "#8a5a34", "hat": "laurel", "toga": palette or "#9a2a3a", "skin": SKINS[1]}
+    if role in ("pirate", "captain"):
+        o = {**base, "jacket": palette or ["#c8323a", "#2f5f6a", "#3f6fb5"][i % 3], "stripes": "#f2efe8", "pants": "#3a2f2a", "hat": "bandana",
+             "cap": ["#2b2b38", "#c8323a", "#e8b83a"][i % 3], "eyepatch": i % 2 == 0}
+        return {**o, "beard": "#2a201a", "eyepatch": True, "cap": "#c8323a"} if role == "captain" else o
+    if role == "raj_official":
+        return {**base, "jacket": palette or "#c8323a", "pants": "#f2efe8", "boots": "#2b2b38", "hat": "pith", "buttons": "#e8b83a", "belt": "#ffffff", "moustache": "#8a5a34",
+                "skin": SKINS[0]}
+    if role == "local":
+        return {**base, "jacket": palette or "#e8d9b0", "pants": "#f2efe8", "boots": "#8d5a3b", "hat": "hair", "hair": "#1d1b22", "skin": SKINS[3 + i % 2],
+                **({"moustache": "#1d1b22"} if i % 2 else {})}
+    # ---- modern (part 3) ----
+    if role == "athlete":
+        return {**base, "jacket": palette or "#39d98a", "pants": "#2b2b38", "boots": "#f2efe8", "hat": "headband", "cap": "#ff4fa0", "hair": "#3a2a1e"}
+    if role == "hoodie":
+        return {**base, "jacket": palette or "#9a7ac9", "pants": "#3b5b9a", "boots": "#f2efe8", "hat": "longhair", "hair": ["#5a3b2a", "#e8c46a", "#2a201a"][i % 3], "pockets": False}
+    if role == "robe":
+        return {**base, "jacket": palette or "#f2efe8", "dress": palette or "#f2efe8", "belt": "#c9b0d9", "hat": "longhair", "hair": "#5a3b2a"}
+    if role == "groom":
+        return {**base, "jacket": palette or "#1d1b22", "pants": "#1d1b22", "boots": "#1d1b22", "hat": "hair", "hair": "#3a2a1e", "bowtie": True}
+    if role == "bride":
+        return {**base, "jacket": "#ffffff", "dress": "#ffffff", "hat": "veil", "hair": palette or "#7a4a2a"}
+    if role == "guest":
+        return {**base, "jacket": palette or COATS[i % len(COATS)], "hat": "hair", "hair": "#3a2a1e", **({"dress": COATS[(i + 2) % len(COATS)], "hat": "longhair"} if i % 2 else {"tie": "#c8323a"})}
     return {**base, "hat": "cap", "cap": COATS[(i + 4) % len(COATS)]}
 
 
 # world scale per role (kids 0.72 come from their build); a cyclops is ~2.6 x a person
 ROLE_SCALE = {"giant": 2.6}
 # set pieces: world width, height in metres (engine pieces.ts)
-PIECE_SIZE = {"scale": (0.75, 0.45), "boxes": (1.9, 1.96), "car": (4.5, 2.5), "van": (5.4, 3.0), "poster": (1.9, 2.47), "horse": (8.0, 8.0), "ship": (14.0, 13.4), "galley": (13.0, 12.5), "chalkboard": (1.9, 2.47), "sheep": (1.35, 1.03), "tent": (5.0, 3.67)}
+PIECE_SIZE = {"lewis": (1.7, 1.6), "crates": (2.0, 1.77), "snakes": (3.2, 1.1), "board": (1.9, 2.47), "screen": (6.0, 5.0), "finish": (4.4, 2.48),
+              "truck": (5.6, 3.2), "booth": (3.2, 2.64), "scale": (0.75, 0.45), "boxes": (1.9, 1.96), "car": (4.5, 2.5), "van": (5.4, 3.0), "poster": (1.9, 2.47), "horse": (8.0, 8.0), "ship": (14.0, 13.4), "galley": (13.0, 12.5), "chalkboard": (1.9, 2.47), "sheep": (1.35, 1.03), "tent": (5.0, 3.67)}
 # max lens distance in rooms / chambers (stay inside or just outside the walls)
-INDOOR_D = {"interior": 7.0, "throne": 8.0, "cave": 7.2, "ocean": 4.6, "apartment": 6.5, "bathroom": 5.0, "office": 7.0, "hotel": 6.0, "airport": 10.0}
-ROOMS = ("interior", "throne", "apartment", "bathroom", "office", "hotel", "airport")
+INDOOR_D = {"interior": 7.0, "throne": 8.0, "cave": 7.2, "ocean": 4.6, "apartment": 6.5, "bathroom": 5.0, "office": 7.0, "hotel": 6.0, "airport": 10.0, "cabin": 5.0, "bedroom": 6.0, "kitchen": 6.0, "banquet": 10.0}
+ROOMS = ("interior", "throne", "apartment", "bathroom", "office", "hotel", "airport", "cabin", "bedroom", "kitchen", "banquet")
 
 
 def _rot(x: float, z: float, a: float) -> tuple[float, float]:
@@ -132,8 +166,12 @@ def anchors(env: str, shop: dict | None = None) -> list[dict]:
         for (cx, cz, ux, uz) in [(0, -2.4, 0, -1), (-1.8, -0.8, 0.3, -1), (1.8, -1.0, -0.3, -1), (0, 0.5, 0, -1), (-2.2, 1.6, 0.35, -1), (2.0, 1.8, -0.3, -1)]:
             n = math.hypot(ux, uz)
             out.append({"C": (cx, cz), "u": (ux / n, uz / n)})
-    elif env in ("apartment", "bathroom", "office", "hotel", "airport"):
+    elif env in ("apartment", "bathroom", "office", "hotel", "airport", "cabin", "bedroom", "kitchen", "banquet"):
         table = {
+            "cabin": [(0, -0.8, 0, -1), (-1.6, -0.4, -0.3, -1), (1.6, -0.2, 0.3, -1), (0, 0.8, 0, -1), (-1.2, 0.8, -0.2, -1), (1.2, 0.8, 0.2, -1)],
+            "bedroom": [(-0.5, -0.3, 0, -1), (2.4, 0.0, -0.3, -1), (0, 1.0, 0, -1), (-2.6, 0.6, 0.25, -1), (1.6, 1.2, -0.2, -1), (-1.5, 1.4, 0.1, -1)],
+            "kitchen": [(0, -1.6, 0, -1), (-2.4, 0.2, 0.1, -1), (2.0, 0.0, -0.2, -1), (0, 1.0, 0, -1), (-1.2, 1.2, 0.2, -1), (2.6, 1.2, -0.3, -1)],
+            "banquet": [(0, -4.6, 0, -1), (0, 2.0, 0, -1), (-8.5, 3.8, -1, 0.05), (4, 4, -0.3, -1), (-4, 4, 0.3, -1), (0, -2.0, 0, -1)],
             "apartment": [(0, -1.2, 0, -1), (-2.2, -0.8, 0.3, -1), (2.4, -0.6, -0.3, -1), (0, 1.0, 0, -1), (-2.6, 0.6, 0.2, -1), (2.8, 0.4, -0.4, -1)],
             "bathroom": [(0, -1.0, 0, -1), (1.4, -0.6, 0.35, -1), (-1.4, -0.8, -0.3, -1), (0, 0.4, 0, -1), (-1.2, 0.6, -0.2, -1), (1.2, 0.6, 0.25, -1)],
             "office": [(0, -1.0, 0, -1), (-2.6, -0.2, 0.3, -1), (2.6, -0.2, -0.3, -1), (0, 1.2, 0, -1), (-3, 1, 0.35, -1), (3, 1, -0.35, -1)],
@@ -141,6 +179,11 @@ def anchors(env: str, shop: dict | None = None) -> list[dict]:
             "airport": [(0, -0.2, 0, -1), (-5.0, -1.0, -1, 0.05), (4, 0.5, 0.2, -1), (0, 2.5, 0, -1), (-3, 2, 0.3, -1), (6, 2, -0.3, -1)],
         }[env]
         for (cx, cz, ux, uz) in table:
+            n = math.hypot(ux, uz)
+            out.append({"C": (cx, cz), "u": (ux / n, uz / n)})
+    elif env == "outback":
+        # wheat field + fence to the north (z < -13), a dam to the east (22, 6), open desert south
+        for (cx, cz, ux, uz) in [(0, 0, 0, -1), (14.5, 6, 1, 0), (0, 3, 0, 1), (-8, -5, 0.35, -1), (8, -6, -0.2, -1), (0, 12, 0, -1)]:
             n = math.hypot(ux, uz)
             out.append({"C": (cx, cz), "u": (ux / n, uz / n)})
     elif env == "suburb":

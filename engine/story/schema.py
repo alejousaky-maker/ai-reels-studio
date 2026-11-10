@@ -11,13 +11,18 @@ Action = Literal["stand", "walk", "dance", "sit", "wave", "march", "stroll", "fa
 Shot = Literal["wide", "medium", "close", "low", "high", "two_shot", "insert"]
 Light = Literal["day", "golden", "night"]
 Mood = Literal["whimsical", "curious", "tense", "warm", "upbeat"]
-Product = Literal["coffee", "croissant", "bread", "cake", "lightbulb", "question", "exclaim", "heart", "clock", "book", "note", "scroll", "map", "globe", "wine", "spear", "stake", "phone", "tablet", "wifi", "key", "camera", "card", "fish", "receipt", "box"]
+Product = Literal["coffee", "croissant", "bread", "cake", "lightbulb", "question", "exclaim", "heart", "clock", "book", "note", "scroll", "map", "globe", "wine", "spear", "stake", "phone", "tablet", "wifi", "key", "camera", "card", "fish", "receipt", "box",
+                  "snake", "coins", "mic", "earbuds", "gpsmap", "suitcase", "folder", "ticket"]
 Role = Literal["villager_woman", "villager_man", "kid", "official", "musician", "baker", "barista", "scholar", "customer", "elder", "worker",
               "explorer", "king", "queen", "sailor", "islander", "greek", "hero", "trojan", "prisoner", "giant",
-              "businessman", "boss", "woman", "towelguy", "lawyer", "fisher", "tourist"]
+              "businessman", "boss", "woman", "towelguy", "lawyer", "fisher", "tourist",
+              "soldier", "major", "emu", "farmer", "caesar", "pirate", "captain", "raj_official", "local", "athlete",
+              "hoodie", "robe", "groom", "bride", "guest"]
 Env = Literal["village_square", "park", "street", "market", "interior", "harbour", "beach", "ocean", "troy", "cave", "throne",
-              "apartment", "bathroom", "office", "hotel", "airport", "suburb", "lake", "resort"]
-PieceKind = Literal["horse", "ship", "galley", "chalkboard", "sheep", "tent", "scale", "boxes", "car", "van", "poster"]
+              "apartment", "bathroom", "office", "hotel", "airport", "suburb", "lake", "resort",
+              "outback", "cabin", "bedroom", "kitchen", "banquet"]
+PieceKind = Literal["horse", "ship", "galley", "chalkboard", "sheep", "tent", "scale", "boxes", "car", "van", "poster",
+                    "lewis", "crates", "snakes", "board", "screen", "finish", "truck", "booth"]
 
 
 class Piece(BaseModel):
@@ -30,6 +35,7 @@ class Piece(BaseModel):
     y: Optional[float] = None
     mirror: bool = False
     move: Optional[Literal["left", "right", "toward", "away"]] = None
+    label: Optional[str] = Field(None, max_length=40)   # text on a board / booth / crates; screen picture "photos" | "hallway"
 
 
 class Reaction(BaseModel):

@@ -372,7 +372,7 @@ export class StoryWorld {
       const k = pc.scale ?? 1, d = cam.position.distanceTo(this.v.set(x, P.h * k * 0.5, z)) / (k * P.h / 2.2);
       const res = d < 3.2 ? 1.6 : d < 6.5 ? 1.0 : d < 16 ? 0.55 : 0.3;
       const cw = Math.round(P.dw * res), ch = Math.round(P.dh * res);
-      A.r = this.pool.req(`piece|${pc.kind}`, cw, ch, res, P.draw);
+      A.r = this.pool.req(`piece|${pc.kind}|${pc.label ?? ""}`, cw, ch, res, (pp) => P.draw(pp, pc.label ?? ""));
       const bob = pc.rock ? pc.rock * Math.sin(t * 1.6 + i) : 0;
       A.mesh.visible = true;
       A.mesh.position.set(x, (pc.y ?? 0) + bob * 0.15, z);

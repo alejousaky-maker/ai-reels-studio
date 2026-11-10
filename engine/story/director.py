@@ -254,7 +254,7 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
         scene = {"sceneId": f"b{bi + 1:02d}", "startFrame": a, "endFrame": b, "narration": beat.narration, "light": beat.light, "mood": beat.mood,
                  "actors": actors, "cameraKeys": keys, "push": sp["push"], "dof": dof, "transitionIn": "cut" if bi == 0 else beat.transition,
                  "seed": plan.seed * 100 + bi, "qualityNotes": beat.visual or ""}
-        if beat.light == "golden" and env_b in ("beach", "troy", "ocean", "suburb", "lake", "resort"):
+        if beat.light == "golden" and env_b in ("beach", "troy", "ocean", "suburb", "lake", "resort", "outback"):
             scene["sunEl"], scene["sunAz"] = 18, 150
         if env_b in ROOMS or env_b == "cave":   # open-topped rooms: a high sun pours in over the walls
             scene["sunEl"], scene["sunAz"] = (42, 165) if env_b == "cave" else (68, 35)   # cave: light from behind the lens onto the far wall
@@ -288,6 +288,8 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                 spec["y"] = y
             if pc.mirror:
                 spec["mirror"] = True
+            if pc.label:
+                spec["label"] = pc.label
             if pc.kind in ("ship", "galley") and env_b in ("beach", "troy", "harbour", "ocean"):
                 spec["rock"] = 1.0
             if pc.move:

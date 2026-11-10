@@ -190,6 +190,68 @@ export const buildModernRoom = (root: THREE.Object3D, kit: Kit, env: EnvSpec, in
     const neon = new THREE.Mesh(new THREE.PlaneGeometry(2.4, 2.4), new THREE.MeshBasicMaterial({ map: neonTex("hotel", "hotel"), transparent: true, color: new THREE.Color(2.2, 2.2, 2.2) }));
     neon.position.set(-2.0, 2.5, -D + 0.03); neon.layers.set(NOINK); root.add(neon);
     plant(b, kit, 5.2, -4.2);
+  } else if (kind === "cabin") {   // a ship's cabin: wooden planks everywhere, a hanging lantern, a cot, a chest, porthole
+    const W = 4.5, D = 4, H = 3.0;
+    const wood = lam("planksHD", () => ({ map: planksHD() }));
+    b.add(ground(-W, W, -D, D + 4, 2.5, 2.5, 0.01), wood);
+    const plank = lam("cabinWall", () => ({ map: rep(planksHD(), 1.5, 1) }));
+    quadsRoom(b, W, D, H, plank, plank, 2);
+    for (let z = -D + 0.8; z < D + 2; z += 1.4) box(b, C("cabinBeam", "#5a3b2a"), -W, H - 0.25, z, W, H, z + 0.25);
+    const port = new THREE.Mesh(new THREE.CircleGeometry(0.45, 24), new THREE.MeshBasicMaterial({ color: "#1d2a50" })); port.position.set(2.2, 1.8, -D + 0.03); root.add(port);
+    b.add(new THREE.TorusGeometry(0.47, 0.07, 8, 24), C("brass", "#c9a227"), M4(2.2, 1.8, -D + 0.05));
+    box(b, C("cot", "#6b4a32"), -4.2, 0, -D, -1.6, 0.5, -D + 1.2); box(b, C("blanket", "#8c3b4a"), -4.15, 0.5, -D + 0.05, -1.65, 0.62, -D + 1.15);
+    box(b, C("chest", "#7a4f33"), 2.6, 0, 1.2, 3.9, 0.7, 2.0); box(b, C("chestBand", "#c9a227"), 2.6, 0.55, 1.2, 3.9, 0.62, 2.02);
+    box(b, C("cabinTable", "#6b4a32"), -0.7, 0.7, -2.6, 0.7, 0.78, -1.8); b.add(cyl(0.06, 0.06, 0.7, 6), C("cabinTable", "#6b4a32"), M4(0, 0, -2.2));
+    const lm = new THREE.Mesh(new THREE.SphereGeometry(0.2, 14, 10), glow([3.2, 2.2, 1.0])); lm.position.set(0, 2.2, -1); root.add(lm);
+    box(b, C("lanternCage", "#2b2b38"), -0.17, 2.0, -1.17, 0.17, 2.04, -0.83);
+    info.lanterns.push(V(0, 2.2, -1));
+  } else if (kind === "bedroom") {
+    const W = 5.5, D = 4.6, H = 3.3;
+    b.add(ground(-W, W, -D, D + 4, 3, 3, 0.01), lam("planksHD", () => ({ map: planksHD() })));
+    quadsRoom(b, W, D, H, lam("bedBack", () => ({ map: plainWall("bedB", "#d9c8e8", "#6b4a5a") })), lam("bedSide", () => ({ map: plainWall("bedS", "#c8b4d9", "#6b4a5a") })));
+    windowOn(root, b, 3.2, 1.9, -D, 2.2, 1.6, skylineTex("n", true));
+    box(b, C("bedBase", "#3a2a20"), -2.4, 0, -D, 1.4, 0.4, -1.2);
+    box(b, C("mattress", "#f6f1e6"), -2.35, 0.4, -D + 0.05, 1.35, 0.6, -1.25);
+    box(b, C("duvet2", "#7fa8d9"), -2.4, 0.5, -D + 1.3, 1.4, 0.66, -1.2);
+    for (const x of [-1.5, 0.5]) box(b, C("pillow", "#ffffff"), x - 0.6, 0.6, -D + 0.15, x + 0.6, 0.82, -D + 0.75);
+    box(b, C("headboard2", "#6b4a32"), -2.6, 0, -D, 1.6, 1.5, -D + 0.12);
+    for (const x of [-3.1, 2.1]) { box(b, C("nightstand", "#3a2a20"), x - 0.4, 0, -D, x + 0.4, 0.6, -D + 0.6); const l = new THREE.Mesh(new THREE.SphereGeometry(0.2, 14, 10), glow([2.8, 2.0, 1.1])); l.position.set(x, 0.95, -D + 0.3); root.add(l); info.lanterns.push(V(x, 0.95, -D + 0.3)); }
+    box(b, C("rugBed", "#e8c46a"), -2.6, 0.012, -1.0, 1.6, 0.02, 0.6);
+    plant(b, kit, 4.6, -3.8);
+  } else if (kind === "kitchen") {
+    const W = 5.5, D = 4.4, H = 3.2;
+    b.add(ground(-W, W, -D, D + 4, 3, 3, 0.01), lam("kitFloor", () => ({ map: tileTex("kf", "#f2efe8", "#c9c4b8", 6, true) })));
+    const wall = lam("kitWall", () => ({ map: tileTex("kw", "#ffffff", "#d9dde3", 12) }));
+    quadsRoom(b, W, D, H, wall, lam("kitSide", () => ({ map: plainWall("kitS", "#f7e7c4", "#c8553d") })), 3);
+    windowOn(root, b, 0, 2.0, -D, 2.2, 1.3, skylineTex("d", false));
+    box(b, C("counter", "#3f6fb5"), -W, 0, -D, W, 0.9, -D + 0.7); box(b, C("countertop", "#f2efe8"), -W, 0.9, -D, W, 0.98, -D + 0.75);
+    box(b, C("fridge", "#e9ecef"), 3.6, 0, -D, 5.0, 2.2, -D + 0.9); box(b, C("fridgeLine", "#9aa0a8"), 3.6, 1.35, -D + 0.9, 5.0, 1.38, -D + 0.92);
+    box(b, C("upperCab", "#3f6fb5"), -W, 2.0, -D, -1.4, 2.8, -D + 0.45); box(b, C("upperCab", "#3f6fb5"), 1.4, 2.0, -D, 3.5, 2.8, -D + 0.45);
+    b.add(cyl(0.7, 0.7, 0.06, 20), C("kTable", "#f2efe8"), M4(-2.6, 0.75, -1.2)); b.add(cyl(0.06, 0.06, 0.75, 6), C("kTableLeg", "#2b2b38"), M4(-2.6, 0, -1.2));
+    b.add(cyl(0.09, 0.08, 0.16, 12), C("mug", "#c8553d"), M4(-2.4, 0.81, -1.1));
+    plant(b, kit, -5.0, 1.0);
+  } else if (kind === "banquet") {   // wedding reception hall
+    const W = 11, D = 8, H = 6;
+    b.add(ground(-W, W, -D, D + 6, 6, 6, 0.01), lam("banqFloor", () => ({ map: planksHD() })));
+    quadsRoom(b, W, D, H, lam("banqBack", () => ({ map: plainWall("banqB", "#f2e6d4", "#c9a227") })), lam("banqSide", () => ({ map: plainWall("banqS", "#efe0c8", "#c9a227") })));
+    const cloth = C("tablecloth", "#ffffff"), glass = new THREE.MeshLambertMaterial({ color: "#d8f0ff", transparent: true, opacity: 0.7 });
+    // head table across the back (with a floral garland), round guest tables in rows
+    box(b, cloth, -5, 0, -D + 1.2, 5, 0.8, -D + 2.2);
+    for (let x = -4.6; x <= 4.6; x += 0.6) b.add(new THREE.SphereGeometry(0.16, 8, 6), C("flower" + (Math.round(x * 10) % 3), ["#ff8fc0", "#ffffff", "#ffd23f"][Math.abs(Math.round(x * 10)) % 3]), M4(x, 0.82, -D + 2.25));
+    for (const [x, z] of [[-6.5, -1.5], [-2.5, 0.5], [2.5, 0.5], [6.5, -1.5], [-6.5, 3.5], [6.5, 3.5]]) {
+      b.add(cyl(1.0, 1.0, 0.75, 20), cloth, M4(x, 0, z));
+      for (let k = 0; k < 5; k++) { const a = (k / 5) * Math.PI * 2; const g2 = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.03, 0.22, 8), glass); g2.position.set(x + 0.6 * Math.cos(a), 0.86, z + 0.6 * Math.sin(a)); root.add(g2); }
+      b.add(cyl(0.12, 0.08, 0.3, 10), C("vase", "#c9a227"), M4(x, 0.75, z));
+    }
+    for (const [x, z] of [[-5, -3], [5, -3], [0, 1.5]]) {   // chandeliers
+      const ring = new THREE.TorusGeometry(0.7, 0.05, 6, 24).rotateX(Math.PI / 2);
+      b.add(ring, C("brass", "#c9a227"), M4(x, 4.6, z)); b.add(cyl(0.02, 0.02, 1.4, 4), C("brass", "#c9a227"), M4(x, 4.6, z));
+      for (let k = 0; k < 6; k++) { const a = (k / 6) * Math.PI * 2, l = new THREE.Mesh(new THREE.SphereGeometry(0.11, 10, 8), glow([3.0, 2.4, 1.4])); l.position.set(x + 0.7 * Math.cos(a), 4.72, z + 0.7 * Math.sin(a)); root.add(l); }
+      info.lanterns.push(V(x, 4.6, z));
+    }
+    box(b, C("doors", "#8a5a34"), -W, 0, 2.6, -W + 0.15, 3.2, 5.0);   // double doors on the left wall
+    box(b, C("doorFrame", "#c9a227"), -W, 3.2, 2.5, -W + 0.2, 3.35, 5.1);
+    for (const x of [-9.5, 9.5]) plant(b, kit, x, -6.8);
   } else {   // airport
     const W = 14, D = 8, H = 7;
     b.add(ground(-W, W, -D, D + 6, 6, 6, 0.01), lam("airFloor", () => ({ map: tileTex("af", "#e9e6df", "#d6d2c8", 4, true) })));
@@ -216,6 +278,30 @@ export const buildModernRoom = (root: THREE.Object3D, kit: Kit, env: EnvSpec, in
     for (const x of [-10, 10]) b.add(cyl(0.45, 0.45, H), C("pillar", "#f2efe8"), M4(x, 0, 2));
     plant(b, kit, 12.5, -6.5); plant(b, kit, -12.5, 4);
   }
+};
+
+// ---------------- outback (Western Australia, 1932) ----------------
+export const buildOutback = (root: THREE.Object3D, kit: Kit, env: EnvSpec, info: EnvInfo, b: Batch) => {
+  const r = rng(env.seed || 37);
+  const sand = ctex("redSand", 1024, 1024, (g, rr) => {
+    g.fillStyle = "#d9884a"; g.fillRect(0, 0, 1024, 1024);
+    for (let i = 0; i < 2400; i++) { g.fillStyle = rr() < 0.5 ? "rgba(255,210,150,0.25)" : "rgba(120,50,20,0.16)"; g.fillRect(rr() * 1024, rr() * 1024, 2 + rr() * 6, 2 + rr() * 3); }
+  });
+  b.add(ground(-500, 500, -500, 500, 200, 200, 0.0), lam("outbackSand", () => ({ map: rep(sand, 1, 1) })));
+  // a golden wheat field behind a post-and-wire fence (north), a small dam (east)
+  const wheat = ctex("wheat", 512, 512, (g, rr) => { g.fillStyle = "#e8c45a"; g.fillRect(0, 0, 512, 512); g.strokeStyle = "rgba(160,110,30,0.45)"; g.lineWidth = 3; for (let i = 0; i < 400; i++) { const x = rr() * 512, y = rr() * 512; g.beginPath(); g.moveTo(x, y); g.lineTo(x + 3, y - 18); g.stroke(); } });
+  b.add(ground(-120, 120, -90, -14, 40, 25, 0.02), lam("wheatField", () => ({ map: rep(wheat, 1, 1) })));
+  for (let x = -60; x <= 60; x += 4) { b.add(cyl(0.07, 0.08, 1.3, 6), C("fencePost", "#7a5a3a"), M4(x, 0, -13)); }
+  for (const y of [0.5, 0.95]) box(b, C("fenceWire", "#5a5f6a"), -60, y, -13.02, 60, y + 0.03, -12.98);
+  for (let i = 0; i < 160; i++) { const x = -110 + r() * 220, z = -88 + r() * 72; b.add(cyl(0.02, 0.02, 1.1, 3), C("stalk", "#d9b048"), M4(x, 0, z)); }
+  const dam = new THREE.Mesh(new THREE.CircleGeometry(7, 32).rotateX(-Math.PI / 2), new THREE.MeshLambertMaterial({ color: "#4f9fc4" })); dam.position.set(22, 0.03, 6); root.add(dam);
+  b.add(new THREE.TorusGeometry(7.1, 0.5, 6, 32).rotateX(Math.PI / 2).scale(1, 0.4, 1), C("damBank", "#b8743a"), M4(22, 0.05, 6));
+  // dry bushes, spinifex, a lone gum tree, mesas on the horizon
+  for (let i = 0; i < 70; i++) { const x = -90 + r() * 180, z = -10 + r() * 90; if (Math.abs(x) < 5 && z < 14) continue; b.add(new THREE.SphereGeometry(1, 8, 5, 0, Math.PI * 2, 0, Math.PI / 2), C("dryBush" + (i % 3), ["#8a8a4a", "#9a7a46", "#7a8a5a"][i % 3]), MS(x, 0, z, 0.6 + r() * 0.8, 0.4 + r() * 0.4, 0.6 + r() * 0.8)); }
+  prop(b, kit, "tree_fat", -16, 0, -6, 7, 1.0);
+  const hill = new THREE.SphereGeometry(1, 20, 10, 0, Math.PI * 2, 0, Math.PI / 2);
+  for (const [x, z, sx, sy, sz] of [[-260, -320, 160, 50, 80], [200, -360, 220, 60, 90], [380, 120, 140, 40, 70], [-380, 200, 180, 45, 80]] as const) b.add(hill, C("mesa", "#b8643a"), MS(x, -1, z, sx, sy, sz));
+  void info;
 };
 
 // ---------------- suburb ----------------

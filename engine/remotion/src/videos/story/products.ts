@@ -197,6 +197,67 @@ export const drawProduct = (p: Pen, kind: ProductKind, col = "#c8553d") => {
       p.stroke([[100, 300], [160, 300]], 8, "#5a3b2a");
       break;
     }
+    case "snake": {   // a cartoon cobra: S-curved tube body, hood, big eyes, tongue
+      const pts: P2[] = [];
+      for (let i = 0; i <= 30; i++) { const t = i / 30; pts.push([90 + 220 * t, 340 - 40 * Math.sin(t * Math.PI * 2.2) - 60 * t]); }
+      p.stroke(pts, 40, INK); p.stroke(pts, 28, "#2b2b38");
+      p.stroke([[300, 270], [300, 150]], 40, INK); p.stroke([[300, 270], [300, 150]], 28, "#2b2b38");
+      p.ell(300, 130, 62, 54, "#2b2b38", 9);
+      p.ell(300, 150, 30, 40, "#e8c46a", 0);
+      for (const dx of [-22, 22]) { p.ell(300 + dx, 115, 15, 16, "#ffffff", 4); p.dot(300 + dx, 118, 7); }
+      p.stroke([[300, 182], [300, 210], [288, 224]], 5, "#e2453c"); p.stroke([[300, 210], [312, 224]], 5, "#e2453c");
+      break;
+    }
+    case "coins": {   // a chest spilling silver
+      p.poly([[80, 220], [320, 220], [300, 350], [100, 350]], "#8a5a34", 10);
+      p.poly([[80, 220], [320, 220], [300, 150], [100, 150]], "#a8784a", 9);
+      for (const [x, y] of [[130, 205], [180, 190], [230, 200], [280, 210], [160, 225], [255, 230], [205, 175]]) p.ell(x, y, 28, 14, "#d9dde3", 6);
+      p.poly([[190, 250], [210, 250], [210, 290], [190, 290]], "#e8b83a", 6);
+      break;
+    }
+    case "mic": {
+      p.poly(rr(160, 60, 240, 220, 40), "#9aa0a8", 10);
+      for (let y = 90; y < 210; y += 26) p.stroke([[170, y], [230, y]], 5, "#5a5f6a");
+      p.arc(200, 190, 70, 70, 0, 180, 12); p.stroke([[200, 260], [200, 330]], 14); p.stroke([[150, 335], [250, 335]], 14);
+      break;
+    }
+    case "earbuds": {   // two white wireless earbuds
+      for (const [x, s] of [[140, -1], [260, 1]] as const) {
+        p.ell(x, 170, 50, 46, "#ffffff", 9);
+        p.poly([[x - 14, 200], [x + 14, 200], [x + 12 + s * 6, 330], [x - 12 + s * 6, 330]], "#ffffff", 9);
+        p.ell(x + s * 18, 160, 14, 14, "#2b2b38", 0);
+      }
+      break;
+    }
+    case "gpsmap": {   // dark-mode map: streets, a red route ending at a pink house, a pin
+      p.poly(rr(40, 60, 360, 340, 22), "#1f2a3a", 10);
+      for (const x of [100, 180, 260, 330]) p.stroke([[x, 70], [x, 330]], 9, "#3a4a60");
+      for (const y of [120, 200, 280]) p.stroke([[50, y], [350, y]], 9, "#3a4a60");
+      p.stroke([[100, 320], [100, 200], [260, 200], [260, 135]], 12, "#ff4a4a");
+      p.poly([[235, 135], [285, 135], [285, 95], [260, 75], [235, 95]], "#ff8fc0", 6);
+      p.ell(260, 160, 16, 16, "#ff4a4a", 5);
+      break;
+    }
+    case "suitcase": {
+      p.poly(rr(90, 130, 310, 340, 22), "#3f6fb5", 10);
+      p.poly(rr(160, 90, 240, 135, 12), null, 10);
+      for (const x of [140, 260]) p.stroke([[x, 140], [x, 330]], 8, "#2f5a96");
+      p.ell(130, 350, 14, 14, "#2b2b38", 0); p.ell(270, 350, 14, 14, "#2b2b38", 0);
+      break;
+    }
+    case "folder": {   // a manila folder stamped DEFEAT
+      p.poly([[60, 110], [170, 110], [190, 140], [340, 140], [340, 330], [60, 330]], "#e8c88a", 10);
+      const g = p.g; g.save(); g.translate(200, 245); g.rotate(-0.2); g.strokeStyle = "#d23b3b"; g.lineWidth = 8; g.strokeRect(-120, -45, 240, 90);
+      g.fillStyle = "#d23b3b"; g.font = "bold 58px Arial Black, Arial"; g.textAlign = "center"; g.fillText("DEFEAT", 0, 20); g.restore();
+      break;
+    }
+    case "ticket": {   // plane ticket
+      p.poly(rr(50, 130, 350, 280, 16), "#ffffff", 9);
+      p.poly([[50, 130], [140, 130], [140, 280], [50, 280]], "#3f6fb5", 0);
+      p.poly(rr(50, 130, 350, 280, 16), null, 9);
+      p.poly([[210, 205], [300, 180], [310, 192], [250, 212], [300, 240], [290, 250], [230, 222], [205, 228]], "#2b2b38", 0);
+      break;
+    }
     case "stake": {   // sharpened olive-wood stake, tip glowing
       p.stroke([[60, 330], [320, 110]], 30, "#7a5a34");
       p.poly([[320, 110], [372, 66], [340, 132]], "#a8784a", 8);

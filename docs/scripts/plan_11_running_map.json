@@ -1,0 +1,353 @@
+{
+ "version": 1,
+ "title": "The Running Map Fail",
+ "lang": "en",
+ "style": "storybook",
+ "environment": "kitchen",
+ "seed": 29,
+ "graphics": "full",
+ "cast": [
+  {
+   "id": "hub",
+   "name": "Husband",
+   "role": "athlete"
+  },
+  {
+   "id": "wife",
+   "name": "Wife",
+   "role": "robe"
+  },
+  {
+   "id": "ex",
+   "name": "His ex",
+   "role": "woman",
+   "palette": "#ff8fc0"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "He bragged about running five miles every morning, until his GPS map drew a line straight to his ex's house.",
+   "environment": "kitchen",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "hub",
+     "expr": "grin"
+    },
+    {
+     "id": "wife",
+     "expr": "stern",
+     "holding": "tablet"
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "map",
+     "on": "wife",
+     "product": "gpsmap"
+    }
+   ],
+   "focus": "hub"
+  },
+  {
+   "narration": "Every day at six, he laced up and left.",
+   "environment": "suburb",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "hub",
+     "expr": "smile",
+     "action": "walk"
+    }
+   ],
+   "spot": 0,
+   "transition": "xfade",
+   "focus": "hub"
+  },
+  {
+   "narration": "His running app shared every route. Publicly.",
+   "environment": "kitchen",
+   "shot": "close",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "wife",
+     "expr": "neutral",
+     "holding": "tablet"
+    }
+   ],
+   "spot": 1,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "Publicly",
+     "on": "wife",
+     "product": "phone"
+    }
+   ],
+   "focus": "wife"
+  },
+  {
+   "narration": "His wife opened the map.",
+   "environment": "kitchen",
+   "shot": "close",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "wife",
+     "expr": "stern"
+    }
+   ],
+   "spot": 1,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "map",
+     "on": "wife",
+     "product": "gpsmap"
+    }
+   ],
+   "focus": "wife"
+  },
+  {
+   "narration": "Five miles? The red line went three blocks, and stopped at one pink house.",
+   "environment": "kitchen",
+   "shot": "medium",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "wife",
+     "expr": "neutral",
+     "holding": "tablet",
+     "react": {
+      "word": "pink",
+      "expr": "shock"
+     }
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "pink",
+     "on": "wife",
+     "product": "gpsmap"
+    }
+   ],
+   "text": "5 MILES? 3 BLOCKS.",
+   "textStyle": "label",
+   "focus": "wife"
+  },
+  {
+   "narration": "For forty-five minutes.",
+   "environment": "kitchen",
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "wife",
+     "expr": "stern"
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "minutes",
+     "on": "wife",
+     "product": "clock"
+    }
+   ],
+   "text": "45 MIN",
+   "textStyle": "label",
+   "focus": "wife"
+  },
+  {
+   "narration": "Heart rate: one sixty-five. While standing still.",
+   "environment": "kitchen",
+   "shot": "close",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "wife",
+     "expr": "shock"
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "Heart",
+     "on": "wife",
+     "product": "heart"
+    }
+   ],
+   "text": "165 BPM",
+   "textStyle": "label",
+   "impactWord": "still",
+   "focus": "wife"
+  },
+  {
+   "narration": "The pink house belonged to his ex.",
+   "environment": "suburb",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "ex",
+     "expr": "smile",
+     "action": "wave"
+    }
+   ],
+   "spot": 1,
+   "transition": "xfade",
+   "focus": "ex"
+  },
+  {
+   "narration": "His wife didn't say a word. She planned a finish line.",
+   "environment": "kitchen",
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "wife",
+     "expr": "stern",
+     "react": {
+      "word": "finish",
+      "expr": "smile"
+     }
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "finish",
+     "on": "wife",
+     "product": "lightbulb"
+    }
+   ],
+   "focus": "wife"
+  },
+  {
+   "narration": "Next morning, he jogged home smiling.",
+   "environment": "suburb",
+   "shot": "wide",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "hub",
+     "expr": "grin",
+     "action": "walk"
+    }
+   ],
+   "spot": 0,
+   "transition": "xfade",
+   "focus": "hub"
+  },
+  {
+   "narration": "A red finish tape was stretched across the lawn, tied to two packed suitcases.",
+   "environment": "suburb",
+   "shot": "wide",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "hub",
+     "expr": "grin",
+     "react": {
+      "word": "suitcases",
+      "expr": "shock"
+     }
+    }
+   ],
+   "spot": 0,
+   "pieces": [
+    {
+     "kind": "finish",
+     "where": "behind"
+    }
+   ],
+   "impactWord": "suitcases",
+   "focus": "hub"
+  },
+  {
+   "narration": "And divorce papers, with his route printed on the back.",
+   "environment": "suburb",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "wife",
+     "expr": "stern",
+     "holding": "scroll"
+    },
+    {
+     "id": "hub",
+     "expr": "nervous"
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "route",
+     "on": "wife",
+     "product": "gpsmap"
+    }
+   ],
+   "focus": "wife"
+  },
+  {
+   "narration": "He finally finished a run. Just not the one he planned.",
+   "environment": "suburb",
+   "shot": "close",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "wife",
+     "expr": "smile",
+     "react": {
+      "word": "planned",
+      "expr": "smile_closed"
+     }
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "planned",
+     "on": "wife"
+    }
+   ],
+   "focus": "wife"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Fictional comedy story (not a real event).",
+   "status": "fiction"
+  }
+ ],
+ "creativeHooks": [
+  "He bragged about running five miles every morning, until his GPS map drew a line straight to his ex's house.",
+  "He finally finished a run. Just not the one he planned."
+ ]
+}

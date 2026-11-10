@@ -1,0 +1,394 @@
+{
+ "version": 1,
+ "title": "The Cobra Effect",
+ "lang": "en",
+ "style": "storybook",
+ "environment": "market",
+ "seed": 25,
+ "graphics": "full",
+ "cast": [
+  {
+   "id": "raj",
+   "name": "Official",
+   "role": "raj_official"
+  },
+  {
+   "id": "loc",
+   "name": "Snake catcher",
+   "role": "local"
+  },
+  {
+   "id": "ent",
+   "name": "Entrepreneur",
+   "role": "local",
+   "palette": "#c9a66b"
+  },
+  {
+   "id": "prof",
+   "name": "Economist",
+   "role": "scholar"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "A government paid cash for dead cobras, and somehow ended up with more cobras.",
+   "environment": "market",
+   "shot": "medium",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "raj",
+     "expr": "smile"
+    },
+    {
+     "id": "loc",
+     "expr": "grin",
+     "holding": "snake"
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "cash",
+     "on": "raj",
+     "product": "coins"
+    }
+   ],
+   "pieces": [
+    {
+     "kind": "booth",
+     "where": "behind",
+     "label": "REWARD"
+    }
+   ],
+   "focus": "raj"
+  },
+  {
+   "narration": "The story goes: colonial Delhi had a cobra problem.",
+   "environment": "street",
+   "shot": "wide",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "loc",
+     "expr": "shock"
+    }
+   ],
+   "spot": 0,
+   "pieces": [
+    {
+     "kind": "snakes",
+     "where": "front"
+    }
+   ],
+   "focus": "loc",
+   "extras": 3,
+   "extrasRole": "local"
+  },
+  {
+   "narration": "So the officials offered a reward for every dead cobra.",
+   "environment": "market",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "raj",
+     "expr": "smile_closed"
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "reward",
+     "on": "raj",
+     "product": "scroll"
+    }
+   ],
+   "pieces": [
+    {
+     "kind": "booth",
+     "where": "behind",
+     "label": "REWARD"
+    }
+   ],
+   "focus": "raj"
+  },
+  {
+   "narration": "At first, it worked. Dead snakes came in by the basket.",
+   "environment": "market",
+   "shot": "wide",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "raj",
+     "expr": "grin"
+    },
+    {
+     "id": "loc",
+     "expr": "smile",
+     "holding": "snake"
+    }
+   ],
+   "spot": 0,
+   "pieces": [
+    {
+     "kind": "booth",
+     "where": "behind",
+     "label": "REWARD"
+    }
+   ],
+   "focus": "raj",
+   "extras": 3,
+   "extrasRole": "local"
+  },
+  {
+   "narration": "Then somebody did the math.",
+   "environment": "village_square",
+   "shot": "close",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "ent",
+     "expr": "neutral",
+     "react": {
+      "word": "math",
+      "expr": "grin"
+     }
+    }
+   ],
+   "spot": 1,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "math",
+     "on": "ent",
+     "product": "lightbulb"
+    }
+   ],
+   "focus": "ent"
+  },
+  {
+   "narration": "Why hunt cobras, when you can farm them?",
+   "environment": "village_square",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "ent",
+     "expr": "laugh",
+     "holding": "snake"
+    }
+   ],
+   "spot": 1,
+   "pieces": [
+    {
+     "kind": "crates",
+     "where": "right",
+     "label": "COBRA FARM"
+    }
+   ],
+   "focus": "ent"
+  },
+  {
+   "narration": "More snakes, more cash. Business was booming.",
+   "environment": "market",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "raj",
+     "expr": "grin"
+    },
+    {
+     "id": "ent",
+     "expr": "smile_closed"
+    }
+   ],
+   "spot": 0,
+   "fx": [
+    {
+     "kind": "product",
+     "word": "cash",
+     "on": "ent",
+     "product": "coins"
+    }
+   ],
+   "focus": "raj"
+  },
+  {
+   "narration": "The officials noticed the numbers made no sense.",
+   "environment": "interior",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "raj",
+     "expr": "nervous",
+     "holding": "book"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "word": "sense",
+     "on": "raj",
+     "product": "question"
+    }
+   ],
+   "transition": "xfade",
+   "focus": "raj"
+  },
+  {
+   "narration": "So they cancelled the reward.",
+   "environment": "market",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "raj",
+     "expr": "stern"
+    }
+   ],
+   "spot": 0,
+   "pieces": [
+    {
+     "kind": "board",
+     "where": "right",
+     "label": "~REWARD|CANCELLED"
+    }
+   ],
+   "impactWord": "cancelled",
+   "focus": "raj"
+  },
+  {
+   "narration": "Now the breeders had crates of worthless snakes. So they let them go.",
+   "environment": "street",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "ent",
+     "expr": "grin"
+    }
+   ],
+   "spot": 0,
+   "pieces": [
+    {
+     "kind": "crates",
+     "where": "left",
+     "label": "COBRA FARM"
+    },
+    {
+     "kind": "snakes",
+     "where": "front"
+    }
+   ],
+   "transition": "xfade",
+   "focus": "ent"
+  },
+  {
+   "narration": "The city ended up with more cobras than before.",
+   "environment": "street",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "raj",
+     "expr": "dazed"
+    }
+   ],
+   "spot": 2,
+   "pieces": [
+    {
+     "kind": "snakes",
+     "where": "front"
+    },
+    {
+     "kind": "snakes",
+     "where": "left"
+    }
+   ],
+   "focus": "raj",
+   "extras": 3,
+   "extrasRole": "local",
+   "extrasAction": "walk"
+  },
+  {
+   "narration": "Economists still call it the Cobra Effect.",
+   "environment": "interior",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "prof",
+     "expr": "smile"
+    }
+   ],
+   "pieces": [
+    {
+     "kind": "board",
+     "where": "right",
+     "label": "COBRA|EFFECT"
+    }
+   ],
+   "transition": "xfade",
+   "focus": "prof"
+  },
+  {
+   "narration": "Pay people to solve a problem, and they'll make sure it never ends.",
+   "environment": "village_square",
+   "shot": "close",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "ent",
+     "expr": "smile",
+     "holding": "snake",
+     "react": {
+      "word": "ends",
+      "expr": "smile_closed"
+     }
+    }
+   ],
+   "spot": 1,
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "ends",
+     "on": "ent"
+    }
+   ],
+   "focus": "ent"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "The 'cobra effect' (term coined by economist Horst Siebert) describes a bounty on cobras in colonial Delhi that led to cobra breeding; when the bounty ended, bred snakes were released.",
+   "status": "uncertain",
+   "source": "https://en.wikipedia.org/wiki/Perverse_incentive (anecdote; historicity uncertain)"
+  },
+  {
+   "text": "The story is an anecdote whose historicity is not established; it is narrated as 'the story goes'.",
+   "status": "fiction"
+  }
+ ],
+ "creativeHooks": [
+  "A government paid cash for dead cobras, and somehow ended up with more cobras.",
+  "Pay people to solve a problem, and they'll make sure it never ends."
+ ]
+}
