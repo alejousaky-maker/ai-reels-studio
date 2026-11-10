@@ -37,33 +37,42 @@ def build_sfx(sb: dict, duration: float, voice_lufs: float, seed: int = 11) -> t
     cues = []
     ev = voice_lufs - 6.0          # standard rule: SFX events ~6 dB under the voice
     bed = voice_lufs - 22.0
-    for i, s in enumerate(sb["scenes"]):
+    scenes = sb["scenes"]
+    for i, s in enumerate(scenes):
         a, b = s["startFrame"] / fps, s["endFrame"] / fps
-        dur = max(0.2, b - a)
         light = s.get("light", "day")
+        # clause cuts inside one sentence keep one continuous bed (no restart on every cut)
+        j = i
+        while j + 1 < len(scenes) and scenes[j + 1].get("sub") and scenes[j + 1].get("light", "day") == light:
+            j += 1
+        b_bed = scenes[j]["endFrame"] / fps
+        dur = max(0.2, b_bed - a)
         # ambience bed per scene, short crossfades
         seg = np.zeros((2, D.ns(dur)))
-        if light == "night":
-            x = S.crickets(dur, r, 3)
-        elif light == "golden":
-            x = S.breeze(dur, r, 0.8) + 0.5 * S.bird_chirps(dur, r, 0.2)
-        else:
-            x = S.bird_chirps(dur, r, 0.45) + 0.4 * S.breeze(dur, r, 0.5)
-        x = D.st(np.asarray(x, float))[:, : seg.shape[1]]
-        seg[:, : x.shape[1]] += x
-        if len(s.get("actors", [])) >= 4:
-            seg += D.st(S.babble(dur, r, 150, 1.0, active=0.6))[:, : seg.shape[1]] * 0.6
-        L = D.integrated(seg)
-        if np.isfinite(L):
-            D.place(out, D.fades(seg * D.dbg(bed - L), 0.25, 0.25), a)
-        cues.append({"t": round(a, 3), "kind": "bed", "what": f"{light} ambience" + (" + crowd" if len(s.get('actors', [])) >= 4 else "")})
+        if s.get("sub") and i > 0 and scenes[i - 1].get("light", "day") == light:
+            seg = None
+        if seg is not None:
+            if light == "night":
+                x = S.crickets(dur, r, 3)
+            elif light == "golden":
+                x = S.breeze(dur, r, 0.8) + 0.5 * S.bird_chirps(dur, r, 0.2)
+            else:
+                x = S.bird_chirps(dur, r, 0.45) + 0.4 * S.breeze(dur, r, 0.5)
+            x = D.st(np.asarray(x, float))[:, : seg.shape[1]]
+            seg[:, : x.shape[1]] += x
+            if len(s.get("actors", [])) >= 4:
+                seg += D.st(S.babble(dur, r, 150, 1.0, active=0.6))[:, : seg.shape[1]] * 0.6
+            L = D.integrated(seg)
+            if np.isfinite(L):
+                D.place(out, D.fades(seg * D.dbg(bed - L), 0.25, 0.25), a)
+            cues.append({"t": round(a, 3), "kind": "bed", "what": f"{light} ambience" + (" + crowd" if len(s.get('actors', [])) >= 4 else "")})
         tr = s.get("transitionIn", "cut")
         if i > 0 and tr in ("flash", "xfade"):
             t0 = a - (0.22 if tr == "flash" else 0.12)
             _ev(out, S.whoosh(0.55, r, peak=0.35), max(0, t0), ev - (2 if tr == "flash" else 5), 0.0)
             cues.append({"t": round(t0, 3), "kind": "whoosh", "what": f"{tr} into {s['sceneId']}"})
         for k in s.get("cameraKeys", [])[1:]:
-            if k.get("cut"):
+            if k.get("cut") or k.get("dur", 24) > 40:   # slow camera moves across a whole shot are silent
                 continue
             t0 = k["frame"] / fps + (k.get("dur", 24) / fps) * 0.35
             _ev(out, S.whoosh(0.5, r, peak=0.4, f_lo=250, f_hi=1500), t0 - 0.2, ev - 12, 0.2 * np.sin(k["frame"]))
@@ -181,7 +190,9 @@ def mix(project_audio_dir: str, sb: dict, words: list[dict], duration: float, mo
     fps = sb["fps"]
     secs = []
     for i, s in enumerate(sb["scenes"]):
-        mood = (moods[i] if moods and i < len(moods) else None) or s.get("mood") or ("tense" if s.get("light") == "night" else "whimsical")
+        # the scene carries its own beat's mood (clause cuts make more scenes than beats, so never index moods by scene)
+        mood = s.get("mood") or (moods[i] if moods and i < len(moods) and len(moods) == len(sb["scenes"]) else None) \
+            or ("tense" if s.get("light") == "night" else "whimsical")
         a = s["startFrame"] / fps
         b = s["endFrame"] / fps if i < len(sb["scenes"]) - 1 else duration
         if secs and secs[-1][2] == mood:

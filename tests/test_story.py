@@ -174,8 +174,9 @@ def test_story_plans_build_and_new_locations():
     for f in files:
         plan = Plan.model_validate(json.load(open(f, encoding="utf-8")))
         sb = director.build_storyboard(plan, _words(plan))
-        assert len(sb["scenes"]) == len(plan.beats)
-        for b, s in zip(plan.beats, sb["scenes"]):
+        assert len(sb["scenes"]) >= len(plan.beats)   # clause cuts add scenes inside a sentence
+        assert len([s for s in sb["scenes"] if not s.get("sub")]) == len(plan.beats)
+        for b, s in zip(plan.beats, [s for s in sb["scenes"] if not s.get("sub")]):
             env = (s.get("env") or sb["env"])["preset"]
             assert env == (b.environment or plan.environment)
             if b.envVariant:
@@ -185,3 +186,26 @@ def test_story_plans_build_and_new_locations():
     sb = director.build_storyboard(cyc, _words(cyc))
     giant = next(c for c in sb["cast"] if c["id"] == "cyclops")
     assert giant["scale"] > 2 and giant["outfit"]["cyclops"] is True
+
+def test_clause_shots_cut_on_their_words_and_carry_effects():
+    import json
+    raw = json.load(open("docs/scripts/plan_13b_gta6_pro.json", encoding="utf-8"))
+    plan = Plan.model_validate(raw)
+    words = _words(plan)
+    sb = director.build_storyboard(plan, words)
+    ids = [s["sceneId"] for s in sb["scenes"]]
+    assert "b01a" in ids and "b02c" in ids and len(ids) > len(plan.beats)
+    by = {s["sceneId"]: s for s in sb["scenes"]}
+    # the clause cut lands 2 frames before its word, inside the sentence; later clause scenes are marked sub
+    nothing = next(w for w in words if w["w"].startswith("Nothing"))
+    assert abs(by["b02c"]["startFrame"] - (round(nothing["s"] * 30) - 2)) <= 3 and by["b02c"].get("sub")
+    # the "Nothing" question mark plays in the clause that says it, not in the first one
+    assert any(f["product"] == "question" for f in by["b02c"].get("fx", []))
+    assert not by["b02"].get("fx")
+    # camera moves: a two-key glide across the shot; HUD + highlighted caption words
+    assert len(by["b01"]["cameraKeys"]) == 2 and by["b01"]["cameraKeys"][1]["dur"] >= 12
+    assert by["b07"]["hud"]["kind"] == "phone"
+    assert any(w.get("hot") for w in sb["captions"]["words"])
+    # a follow shot starts framed on the walker's start mark
+    b4 = by["b04"]; k0, k1 = b4["cameraKeys"]; act = b4["actors"][0]
+    assert abs((k1["lookAt"][0] - k0["lookAt"][0]) - (act["walkTo"][0] - act["x"])) < 0.01

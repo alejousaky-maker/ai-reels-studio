@@ -232,5 +232,10 @@ SHOTS = {
     "high": dict(d=9.0, side=2.2, h=7.6, lh=0.6, fov=42, dof=0, push=0.0018),
     "two_shot": dict(d=4.3, side=1.0, h=1.66, lh=1.42, fov=38, dof=9, push=0.0025),
     "insert": dict(d=1.6, side=0.25, h=1.55, lh=1.32, fov=34, dof=14, push=0.003),
+    # pro angles (reference short: face-filling reaction shots, up-angles for power / panic, tilted frames for chaos)
+    "extreme": dict(d=1.75, side=0.18, h=1.6, lh=1.6, fov=30, dof=15, push=0.0035),
+    "worm": dict(d=3.6, side=0.9, h=0.32, lh=1.55, fov=50, dof=7, push=0.0028),
+    "dutch": dict(d=4.6, side=1.3, h=1.55, lh=1.4, fov=40, dof=9, push=0.003, roll=0.16),
 }
-TIGHTER = {"wide": "medium", "medium": "close", "close": "close", "low": "medium", "high": "wide", "two_shot": "close", "insert": "insert"}
+TIGHTER = {"wide": "medium", "medium": "close", "close": "close", "low": "medium", "high": "wide", "two_shot": "close", "insert": "insert",
+           "extreme": "extreme", "worm": "close", "dutch": "close"}

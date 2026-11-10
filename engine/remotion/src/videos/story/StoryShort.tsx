@@ -109,7 +109,8 @@ const Overlays: React.FC<{ sb: Storyboard }> = ({ sb }) => {
   sb.scenes.forEach((s) => (s.textOverlays ?? []).forEach((o, i) => {
     if (f < o.frame || f >= o.frame + o.dur) return;
     const a = interpolate(f, [o.frame, o.frame + 6, o.frame + o.dur - 6, o.frame + o.dur], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-    const y = o.position === "top" ? 0.12 : o.position === "center" ? 0.42 : 0.72;
+    // a phone banner / camcorder frame owns the top of the picture: the label drops below it
+    const y = o.position === "top" ? (s.hud && (s.hud.kind === "phone" || s.hud.kind === "rec") ? 0.2 : 0.12) : o.position === "center" ? 0.42 : 0.72;
     const cta = o.style === "cta";
     items.push(
       <div key={`${s.sceneId}-${i}`} style={{ position: "absolute", left: 0, right: 0, top: H * y, display: "flex", justifyContent: "center", opacity: a,
@@ -120,14 +121,104 @@ const Overlays: React.FC<{ sb: Storyboard }> = ({ sb }) => {
           border: cta ? `${6 * k}px solid #241726` : "none", textShadow: cta ? "none" : `0 ${3 * k}px 0 #241726` }}>{o.text}</div>
       </div>);
   }));
-  // optional word-by-word captions (off by default in the storybook style)
+  // diegetic screen layers (camcorder / phone / news / map) for the scene on screen
+  const cur = sb.scenes.find((s) => f >= s.startFrame && f < s.endFrame);
+  if (cur?.hud) items.push(<Hud key="hud" kind={cur.hud.kind} text={cur.hud.text} f={f} f0={cur.startFrame} sb={sb} />);
+  // word-by-word captions (reference Shorts look): 1-2 words, big white with a black outline, popping in on the syllable;
+  // impact / effect words in yellow. Tiny function words ride with the next word ("a buddy", "the car").
   if (sb.captions?.enabled && sb.captions.words?.length) {
-    const t = f / sb.fps, w = sb.captions.words.find((x) => t >= x.s - 0.03 && t < x.e + 0.08);
-    if (w) items.push(
-      <div key="cap" style={{ position: "absolute", left: 0, right: 0, top: H * 0.66, textAlign: "center", fontFamily: '"Arial Black", Arial, sans-serif',
-        fontSize: 96 * k, color: "#fff", WebkitTextStroke: `${5 * k}px #111`, paintOrder: "stroke" }}>{w.w}</div>);
+    const groups = captionGroups(sb.captions.words);
+    const t = f / sb.fps, g = groups.find((x) => t >= x.s - 0.05 && t < x.e);
+    if (g) {
+      const n = f - Math.round((g.s - 0.05) * sb.fps);
+      const pop = n < 0 ? 1 : n < 3 ? [1.28, 1.14, 1.04][n] : 1;
+      items.push(
+        <div key="cap" style={{ position: "absolute", left: 0, right: 0, top: H * 0.635, display: "flex", justifyContent: "center" }}>
+          <div style={{ fontFamily: '"Arial Black", "Segoe UI Black", Arial, sans-serif', fontWeight: 900, fontSize: 104 * k, letterSpacing: -1 * k,
+            color: g.hot ? "#ffe14d" : "#ffffff", WebkitTextStroke: `${14 * k}px #0d0b10`, paintOrder: "stroke fill",
+            textShadow: `0 ${6 * k}px ${10 * k}px rgba(0,0,0,0.45)`, transform: `scale(${pop}) rotate(${g.hot ? -2 : 0}deg)`, maxWidth: 0.9 * sb.width,
+            textAlign: "center", lineHeight: 1.05 }}>{g.text}</div>
+        </div>);
+    }
   }
   return <AbsoluteFill>{items}</AbsoluteFill>;
+};
+
+const SMALL = new Set(["a", "an", "the", "i", "to", "of", "in", "on", "at", "my", "his", "her", "and", "but", "so", "it", "is", "he", "she", "we", "you", "for", "by", "or", "no"]);
+type CapWord = { w: string; s: number; e: number; hot?: boolean };
+const captionGroups = (ws: CapWord[]) => {
+  const out: { text: string; s: number; e: number; hot: boolean }[] = [];
+  for (let i = 0; i < ws.length; i++) {
+    const w = ws[i], nx = ws[i + 1];
+    const bare = w.w.toLowerCase().replace(/[^a-z']/g, "");
+    let text = w.w.replace(/[.,;:]+$/, ""), e = w.e, hot = !!w.hot;
+    // join a short function word with the next one when they run together (no pause, no sentence end)
+    if (nx && SMALL.has(bare) && !/[.!?,;:]$/.test(w.w) && nx.s - w.e < 0.12 && (text + nx.w).length <= 12) {
+      text = `${text} ${nx.w.replace(/[.,;:]+$/, "")}`; e = nx.e; hot = hot || !!nx.hot; i++;
+    }
+    out.push({ text, s: w.s, e, hot });
+  }
+  // each group stays up until the next one starts (no flicker in the gaps), at most 0.5 s after it was spoken
+  for (let i = 0; i < out.length; i++) out[i].e = Math.min(out[i].e + 0.5, out[i + 1] ? out[i + 1].s - 0.05 : out[i].e + 0.5);
+  return out;
+};
+
+/** screen layers drawn over the 3D picture: they make a shot read as "seen through" a device */
+const Hud: React.FC<{ kind: string; text?: string; f: number; f0: number; sb: Storyboard }> = ({ kind, text, f, f0, sb }) => {
+  const k = sb.height / 1920, W = sb.width, H = sb.height, n = f - f0;
+  const mono = '"Consolas", "Courier New", monospace';
+  if (kind === "rec") {
+    const secs = Math.floor((f / sb.fps) + 3 * 3600 + 17 * 60), hh = Math.floor(secs / 3600) % 24, mm = Math.floor(secs / 60) % 60, ss = secs % 60;
+    const tc = `${String(hh).padStart(2, "0")}:${String(mm).padStart(2, "0")}:${String(ss).padStart(2, "0")}`;
+    const br = (s: React.CSSProperties) => <div style={{ position: "absolute", width: 90 * k, height: 90 * k, borderColor: "rgba(255,255,255,0.9)", borderStyle: "solid", borderWidth: 0, ...s }} />;
+    return (
+      <AbsoluteFill style={{ fontFamily: mono, color: "#fff", textShadow: `0 ${2 * k}px ${4 * k}px rgba(0,0,0,0.7)`,
+        boxShadow: `inset 0 0 ${220 * k}px rgba(0,0,0,0.45)` }}>
+        {br({ left: 60 * k, top: 150 * k, borderLeftWidth: 6 * k, borderTopWidth: 6 * k })}
+        {br({ right: 60 * k, top: 150 * k, borderRightWidth: 6 * k, borderTopWidth: 6 * k })}
+        {br({ left: 60 * k, bottom: 170 * k, borderLeftWidth: 6 * k, borderBottomWidth: 6 * k })}
+        {br({ right: 60 * k, bottom: 170 * k, borderRightWidth: 6 * k, borderBottomWidth: 6 * k })}
+        <div style={{ position: "absolute", left: 90 * k, top: 180 * k, fontSize: 52 * k, fontWeight: 700, display: "flex", alignItems: "center", gap: 16 * k }}>
+          <span style={{ width: 34 * k, height: 34 * k, borderRadius: "50%", background: "#ff2a2a", opacity: Math.floor(f / 15) % 2 ? 0.25 : 1 }} />REC
+        </div>
+        <div style={{ position: "absolute", right: 90 * k, top: 186 * k, fontSize: 44 * k }}>{tc}</div>
+        {text && <div style={{ position: "absolute", left: 90 * k, bottom: 200 * k, fontSize: 40 * k, opacity: 0.95 }}>{text}</div>}
+        <div style={{ position: "absolute", right: 90 * k, bottom: 200 * k, fontSize: 40 * k }}>4K · 60</div>
+      </AbsoluteFill>);
+  }
+  if (kind === "phone") {   // a notification banner dropping in from the top
+    const y = interpolate(n, [0, 7], [-260, 140], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: (x) => 1 - (1 - x) ** 3 });
+    return (
+      <AbsoluteFill>
+        <div style={{ position: "absolute", left: 0.06 * W, right: 0.06 * W, top: y * k, background: "rgba(245,245,250,0.94)", borderRadius: 44 * k,
+          padding: `${28 * k}px ${34 * k}px`, display: "flex", gap: 26 * k, alignItems: "center", boxShadow: `0 ${12 * k}px ${40 * k}px rgba(0,0,0,0.35)`,
+          fontFamily: '"Segoe UI", Arial, sans-serif' }}>
+          <div style={{ width: 96 * k, height: 96 * k, borderRadius: 24 * k, background: "linear-gradient(135deg,#ff6b5a,#ffb347)", flex: "none" }} />
+          <div style={{ color: "#16141a" }}>
+            <div style={{ fontSize: 34 * k, opacity: 0.6, fontWeight: 600 }}>NOW</div>
+            <div style={{ fontSize: 46 * k, fontWeight: 800, lineHeight: 1.15 }}>{text ?? "New message"}</div>
+          </div>
+        </div>
+      </AbsoluteFill>);
+  }
+  if (kind === "news") {    // breaking-news lower third + ticker
+    const slide = interpolate(n, [0, 8], [-W, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: (x) => 1 - (1 - x) ** 3 });
+    return (
+      <AbsoluteFill style={{ fontFamily: '"Arial Black", Arial, sans-serif' }}>
+        <div style={{ position: "absolute", left: slide, top: 0.43 * H, width: W, transform: `translateX(${0}px)` }}>
+          <div style={{ display: "inline-block", background: "#d81e1e", color: "#fff", fontSize: 50 * k, padding: `${10 * k}px ${30 * k}px`, marginLeft: 50 * k }}>BREAKING NEWS</div>
+          <div style={{ background: "rgba(250,250,252,0.96)", color: "#111", fontSize: 54 * k, padding: `${16 * k}px ${50 * k}px`, lineHeight: 1.1 }}>{text ?? "Developing story"}</div>
+        </div>
+      </AbsoluteFill>);
+  }
+  if (kind === "map") {     // GPS pin + route chip
+    return (
+      <AbsoluteFill style={{ fontFamily: '"Segoe UI", Arial, sans-serif' }}>
+        <div style={{ position: "absolute", left: 0.08 * W, top: 150 * k, background: "#1b6ef3", color: "#fff", borderRadius: 30 * k, padding: `${20 * k}px ${34 * k}px`,
+          fontSize: 46 * k, fontWeight: 800, boxShadow: `0 ${10 * k}px ${30 * k}px rgba(0,0,0,0.3)` }}>➜ {text ?? "Route"}</div>
+      </AbsoluteFill>);
+  }
+  return null;
 };
 
 export const StoryShort: React.FC<StoryProps> = ({ storyboard: sb, dpr }) => {

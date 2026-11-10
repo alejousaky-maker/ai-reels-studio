@@ -7,8 +7,9 @@ from typing import Literal, Optional
 from pydantic import BaseModel, Field, field_validator
 
 Expr = Literal["neutral", "stern", "grin", "laugh", "whistle", "nervous", "shock", "relief", "relief_open", "dazed", "pained", "smile", "smile_closed", "lick", "starry", "crazy"]
-Action = Literal["stand", "walk", "dance", "sit", "wave", "march", "stroll", "fall", "stretch", "cheer", "point"]
-Shot = Literal["wide", "medium", "close", "low", "high", "two_shot", "insert"]
+Action = Literal["stand", "walk", "dance", "sit", "wave", "march", "stroll", "fall", "stretch", "cheer", "point",
+                 "run", "jump", "panic", "shrug", "hips"]
+Shot = Literal["wide", "medium", "close", "low", "high", "two_shot", "insert", "extreme", "worm", "dutch"]
 Light = Literal["day", "golden", "night"]
 Mood = Literal["whimsical", "curious", "tense", "warm", "upbeat"]
 Product = Literal["coffee", "croissant", "bread", "cake", "lightbulb", "question", "exclaim", "heart", "clock", "book", "note", "scroll", "map", "globe", "wine", "spear", "stake", "phone", "tablet", "wifi", "key", "camera", "card", "fish", "receipt", "box",
@@ -60,6 +61,36 @@ class BeatFx(BaseModel):
     on: Optional[str] = None  # character id it belongs to (above the head)
 
 
+CamMove = Literal["push", "pull", "truck_left", "truck_right", "orbit", "crane_up", "follow", "whip"]
+Hud = Literal["rec", "phone", "news", "map"]
+
+
+class SubShot(BaseModel):
+    """a new picture INSIDE a sentence: cuts on `at` (a word of the beat's narration) and overrides what the clause shows.
+    The voice stays one natural sentence; the picture follows every clause (reference: a new shot every 1.5-2.5 s)."""
+    at: str
+    shot: Optional[Shot] = None
+    light: Optional[Light] = None
+    environment: Optional[Env] = None
+    envVariant: Optional[Literal["breach", "open", "day", "tvglow"]] = None
+    spot: Optional[int] = Field(None, ge=0, le=9)
+    characters: Optional[list[BeatCharacter]] = None
+    extras: Optional[int] = Field(None, ge=0, le=10)
+    extrasAction: Optional[Action] = None
+    extrasRole: Optional[Role] = None
+    focus: Optional[str] = None
+    fx: Optional[list[BeatFx]] = None
+    impactWord: Optional[str] = None
+    transition: Optional[Literal["cut", "flash", "xfade"]] = None
+    text: Optional[str] = None
+    textStyle: Optional[Literal["title", "cta", "label"]] = None
+    pieces: Optional[list[Piece]] = None
+    camMove: Optional[CamMove] = None
+    hud: Optional[Hud] = None
+    hudText: Optional[str] = Field(None, max_length=60)
+    visual: Optional[str] = None
+
+
 class Beat(BaseModel):
     narration: str = Field(min_length=2, max_length=400)
     shot: Shot = "medium"
@@ -81,6 +112,10 @@ class Beat(BaseModel):
     extrasRole: Optional[Role] = None
     spot: Optional[int] = Field(None, ge=0, le=9)   # which staging spot of the location (camera side / view direction)
     visual: Optional[str] = None  # free description for humans / QA (what we should SEE)
+    camMove: Optional[CamMove] = None   # a real camera move across the shot (push / pull reveal / truck / orbit / crane / follow / whip)
+    hud: Optional[Hud] = None           # diegetic screen layer: camcorder REC, phone notification, breaking news, map
+    hudText: Optional[str] = Field(None, max_length=60)
+    shots: list[SubShot] = Field(default_factory=list, max_length=6)   # extra cuts inside the sentence, one per clause
 
     @field_validator("narration")
     @classmethod
@@ -126,7 +161,7 @@ class Plan(BaseModel):
     creativeHooks: list[str] = Field(default_factory=list)
     brand: Optional[BrandSpec] = None
     cta: Optional[str] = None
-    captions: bool = False
+    captions: bool = True   # big word-by-word captions (pro Shorts look); the plan / form can switch them off
     # "full" = the Demo A look (default); "simple" = lighter sets, no lens blur/bloom, at most 2 background extras
     graphics: Literal["simple", "full"] = "full"
 

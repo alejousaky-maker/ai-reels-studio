@@ -628,7 +628,7 @@ export type FrontOpts = {
   phase?: number; expr?: Expr; mode?: "march" | "stroll" | "stand" | "sit" | "fall"; look?: number; blink?: boolean | number; lift?: number;
   prop?: Prop; tilt?: number; headTilt?: number; wave?: number;
   /** arm pose: "up" = both arms raised (stretch / cheer, wiggled by `wave`), "point" = right arm straight out to the side */
-  pose?: "up" | "point";
+  pose?: "up" | "point" | "shrug" | "hips";
   /** canvas angle the key light comes FROM (painted crescent + thick outline side) */
   light?: number; facing?: -1 | 0 | 1; seed?: number;
 };
@@ -756,6 +756,16 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
     if (rifle) {
       const G = lerp2(R0, R1, 0.1);
       arms.push({ pts: [sh(1), [tcx + 1.12 * T.a + 5 * u, sh(1)[1] + 0.45 * HH], G], front: false });
+    } else if (pose === "shrug" || pose === "hips") {
+      arms.pop();   // both arms posed: replace the hanging left one too
+      for (const side of [-1, 1]) {
+        const S = sh(side), w = (wave ?? 0) * 2 * u;
+        arms.push(pose === "shrug"
+          // elbows tucked by the waist, forearms out and up, open palms at shoulder height ("who knows?")
+          ? { pts: [S, [tcx + side * (1.15 * T.a + 6 * u), S[1] + 0.42 * HH], [tcx + side * (1.55 * T.a + 30 * u), S[1] - 0.02 * HH + w]], front: false }
+          // fists on the hips, elbows pointing out (confident / "seriously?")
+          : { pts: [S, [tcx + side * (1.45 * T.a + 22 * u), S[1] + 0.3 * HH], [tcx + side * (0.98 * T.a + 2 * u), hipY - 0.06 * HH]], front: false });
+      }
     } else if (pose === "point") {
       const S = sh(1), k = (wave ?? 0) * 3 * u;
       arms.push({ pts: [S, [tcx + 1.3 * T.a + 22 * u, S[1] - 0.06 * HH + k], [tcx + 1.55 * T.a + 50 * u, S[1] - 0.14 * HH + k]], front: false });

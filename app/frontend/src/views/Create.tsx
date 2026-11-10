@@ -10,7 +10,7 @@ export const Create: React.FC = () => {
   const [opts] = useData<any>("/api/options");
   const [clients] = useData<any[]>("/api/clients");
   const [f, setF] = useState<any>({ title: "", idea: "", script: "", kind: "story", lang: "en", seconds: 60, quality: "master", style: "storybook",
-    environment: "village_square", voice: "", speed: 1.0, clientId: "", cta: "", audience: "", captions: false, graphics: "full", music: true, variants: 1, provider: "auto", review: "auto_qa" });
+    environment: "village_square", voice: "", speed: 1.0, clientId: "", cta: "", audience: "", captions: true, graphics: "full", music: true, variants: 1, provider: "auto", review: "auto_qa" });
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
   const set = (k: string, v: any) => setF((x: any) => ({ ...x, [k]: v }));

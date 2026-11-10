@@ -83,16 +83,110 @@ def beat_spans(plan: Plan, words: list[dict], fps: int) -> list[tuple[int, int, 
 _ANCHOR: dict = {}
 
 
-def word_frame(ws: list[dict], word: str | None, fps: int) -> int | None:
-    """frame LEAD frames before `word`, measured from the beat's first word (shift-invariant like the scene starts)"""
+def word_frame(ws: list[dict], word: str | None, fps: int, after: int = -1) -> int | None:
+    """frame LEAD frames before `word`, measured from the beat's first word (shift-invariant like the scene starts);
+    `after`: only occurrences landing after that frame (a sub-shot cutting on a repeated word like "and")"""
     if not word or not ws:
         return None
     key = _norm(word)
     base_t, base_f = _ANCHOR.get(id(ws), (ws[0]["s"], int(round(ws[0]["s"] * fps))))
     for w in ws:
         if _norm(w["w"]) == key or (key and _norm(w["w"]).startswith(key)):
-            return max(0, base_f + int(round((w["s"] - base_t) * fps)) - LEAD)
+            f = max(0, base_f + int(round((w["s"] - base_t) * fps)) - LEAD)
+            if f > after:
+                return f
     return None
+
+
+def _wf_of(ws: list[dict], w: dict, fps: int) -> int:
+    base_t, base_f = _ANCHOR.get(id(ws), (ws[0]["s"], int(round(ws[0]["s"] * fps))))
+    return base_f + int(round((w["s"] - base_t) * fps))
+
+
+_SUB_KEEP = ("shot", "light", "environment", "envVariant", "spot", "characters", "extras", "extrasAction", "extrasRole", "focus",
+             "fx", "impactWord", "transition", "text", "textStyle", "pieces", "camMove", "hud", "hudText", "visual")
+
+
+def expand_views(plan: Plan, spans, fps: int) -> list[tuple]:
+    """one picture per clause: a beat with `shots` becomes several consecutive scenes, each cut 2 frames before its word.
+    A view inherits the beat's place / cast / pieces; text, camera move and transition belong to the view that sets them;
+    an effect / reaction plays in the view that contains its word."""
+    views = []
+    for bi, (beat, (a, b, ws)) in enumerate(zip(plan.beats, spans)):
+        cuts = []
+        last = a
+        for s in beat.shots:
+            f = word_frame(ws, s.at, fps, after=last + 11)
+            if f is None or f - last < 12 or b - f < 12:     # never a shot shorter than 0.4 s
+                continue
+            cuts.append((f, s))
+            last = f
+        bounds = [a] + [f for f, _ in cuts] + [b]
+        for k in range(len(bounds) - 1):
+            fa, fb = bounds[k], bounds[k + 1]
+            sub_ws = [w for w in ws if fa <= _wf_of(ws, w, fps) - LEAD < fb or (k == 0 and _wf_of(ws, w, fps) - LEAD < fa)] if cuts else ws
+            if cuts and sub_ws is not ws and ws:
+                _ANCHOR[id(sub_ws)] = _ANCHOR.get(id(ws), (ws[0]["s"], int(round(ws[0]["s"] * fps))))
+            if k == 0:
+                upd = {"shots": []}
+                if cuts:   # effects / reactions / impact whose word falls in a later clause move with it
+                    upd["fx"] = [x for x in beat.fx if not x.word or word_frame(sub_ws, x.word, fps) is not None]
+            else:
+                s = cuts[k - 1][1]
+                upd = {"shots": [], "transition": "cut", "text": None, "camMove": None, "visual": None, "impactWord": beat.impactWord,
+                       "fx": [x for x in beat.fx if x.word and word_frame(sub_ws, x.word, fps) is not None]}
+                for name in _SUB_KEEP:
+                    if name in s.model_fields_set and getattr(s, name) is not None:
+                        upd[name] = getattr(s, name)
+            views.append((bi, k, beat.model_copy(update=upd), fa, fb, sub_ws))
+    return views
+
+
+def camera_move(kind: str, k0: dict, a: int, b: int, si: int, lead: dict | None) -> list[dict]:
+    """a real move across the whole shot (smootherstep glide from the opening framing to the closing one)"""
+    P, L = list(k0["position"]), list(k0["lookAt"])
+    d = [L[i] - P[i] for i in range(3)]
+    dh = math.hypot(d[0], d[2]) or 1.0
+    fx_, fz_ = d[0] / dh, d[2] / dh
+    rx_, rz_ = -fz_, fx_                                  # screen right
+    sgn = 1 if si % 2 == 0 else -1
+    r3 = lambda v: [round(x, 3) for x in v]
+    start, end = dict(k0), dict(k0)
+    dur = max(12, b - a)
+    if kind == "push":            # a decisive dolly-in onto the subject
+        end["position"] = r3([P[i] + 0.4 * d[i] for i in range(3)])
+    elif kind == "pull":          # reveal: start tight, pull back to the full picture
+        start["position"] = r3([P[i] + 0.45 * d[i] for i in range(3)])
+    elif kind in ("truck_left", "truck_right"):
+        s = (1 if kind == "truck_right" else -1) * max(0.8, 0.3 * dh)
+        start["position"] = r3([P[0] - rx_ * s / 2, P[1], P[2] - rz_ * s / 2]); start["lookAt"] = r3([L[0] - rx_ * s / 2, L[1], L[2] - rz_ * s / 2])
+        end["position"] = r3([P[0] + rx_ * s / 2, P[1], P[2] + rz_ * s / 2]); end["lookAt"] = r3([L[0] + rx_ * s / 2, L[1], L[2] + rz_ * s / 2])
+    elif kind == "orbit":         # circle ~24 deg around the subject
+        def rot(t):
+            c, s_ = math.cos(t), math.sin(t)
+            vx, vz = P[0] - L[0], P[2] - L[2]
+            return r3([L[0] + vx * c - vz * s_, P[1], L[2] + vx * s_ + vz * c])
+        start["position"], end["position"] = rot(-0.21 * sgn), rot(0.21 * sgn)
+    elif kind == "crane_up":      # rise from low to a higher, looking-down angle
+        start["position"] = r3([P[0], max(0.4, P[1] - 0.25 * dh), P[2]])
+        end["position"] = r3([P[0], P[1] + 0.5 * dh, P[2]])
+    elif kind == "follow" and lead and "walkTo" in lead:   # the camera travels with the walker
+        # the framing was composed on the walker's END mark: start the same framing on the start mark and travel with them
+        dx, dz = lead["walkTo"][0] - lead["x"], lead["walkTo"][1] - lead["z"]
+        start["position"] = r3([P[0] - dx, P[1], P[2] - dz]); start["lookAt"] = r3([L[0] - dx, L[1], L[2] - dz])
+        dur = max(12, lead["walkFrames"][1] - a)
+    elif kind == "whip":          # whip-pan in: the shot starts swung 35 deg off and snaps onto the subject in 8 frames
+        c, s_ = math.cos(0.6 * sgn), math.sin(0.6 * sgn)
+        vx, vz = L[0] - P[0], L[2] - P[2]
+        start["lookAt"] = r3([P[0] + vx * c - vz * s_, L[1], P[2] + vx * s_ + vz * c])
+        dur = 8
+    else:
+        return [k0]
+    start["frame"] = a
+    start.pop("cut", None); start.pop("dur", None)
+    end = {**end, "frame": a, "dur": dur}
+    end.pop("cut", None)
+    return [start, end]
 
 
 def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 1080, height: int = 1920) -> dict:
@@ -128,7 +222,8 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
     for a0, _b0, ws0 in spans:   # the first word of each beat sits at its chained start + 3 frames
         if ws0:
             _ANCHOR[id(ws0)] = (ws0[0]["s"], (a0 + 3) if a0 else int(round(ws0[0]["s"] * fps)))
-    for bi, (beat, (a, b, ws)) in enumerate(zip(plan.beats, spans)):
+    hot: set[float] = set()   # word start times shown as highlighted captions (impact / effect words)
+    for si, (bi, sub_k, beat, a, b, ws) in enumerate(expand_views(plan, spans, fps)):
         env_b = beat.environment or plan.environment
         shop_b, shop_anchor, free = env_setup(env_b)
         anc = shop_anchor if (beat.atShop and shop_anchor) else free[(beat.spot if beat.spot is not None else bi * 2 + plan.seed) % len(free)]
@@ -155,21 +250,24 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
             L, Dp = lat[k] * spread * (1 + 0.12 * dep[k]), dep[k] * (0.6 if beat.shot in ("wide", "high") else 1.0)
             if scale_of.get(c.id, 1.0) > 1.5 and k > 0:   # a giant stands further back so the people in front stay readable
                 Dp += 2.2
-            if beat.shot in ("close", "insert") and k > 0:
+            if beat.shot in ("close", "insert", "extreme") and k > 0:
                 L *= 1.3; Dp += 1.6
             x, z = Cx + rx * L + ux * Dp, Cz + rz * L + uz * Dp
             act = {"castId": c.id, "x": round(x, 3), "z": round(z, 3), "expr": c.expr,
-                   "mode": {"walk": "stroll", "wave": "stand", "dance": "dance", "sit": "sit", "march": "march", "stroll": "stroll", "fall": "fall", "stretch": "sit"}.get(c.action, "stand")}
+                   "mode": {"walk": "stroll", "wave": "stand", "dance": "dance", "sit": "sit", "march": "march", "stroll": "stroll", "fall": "fall", "stretch": "sit", "run": "run", "jump": "jump"}.get(c.action, "stand")}
             if c.action == "wave":
                 act["wave"] = True
-            if c.action in ("stretch", "cheer"):
+            if c.action in ("stretch", "cheer", "panic"):
                 act["pose"] = "up"
-            if c.action == "point":
-                act["pose"] = "point"
-            if c.action == "walk":
-                act["x"], act["z"] = round(x - rx * 2.4, 3), round(z - rz * 2.4, 3)
+            if c.action == "panic":
+                act["shake"] = 1.0
+            if c.action in ("point", "shrug", "hips"):
+                act["pose"] = c.action
+            if c.action in ("walk", "run"):
+                dist = 2.4 if c.action == "walk" else 4.2
+                act["x"], act["z"] = round(x - rx * dist, 3), round(z - rz * dist, 3)
                 act["walkTo"] = [round(x, 3), round(z, 3)]
-                act["walkFrames"] = [a, a + int(0.7 * (b - a))]
+                act["walkFrames"] = [a, a + int((0.7 if c.action == "walk" else 0.6) * (b - a))]
             if c.react:
                 wf = word_frame(ws, c.react.word, fps)
                 if wf is not None:
@@ -193,10 +291,10 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                            "expr": ["smile", "grin", "nervous", "neutral", "laugh"][e % 5]})
         # ---- camera ----
         sp = SHOTS[beat.shot]
-        tx, tz = pos.get(focus_id, (Cx0, Cz0)) if beat.shot in ("close", "insert", "two_shot") else (Cx0, Cz0)
+        tx, tz = pos.get(focus_id, (Cx0, Cz0)) if beat.shot in ("close", "insert", "two_shot", "extreme", "worm", "dutch") else (Cx0, Cz0)
         if beat.shot == "insert":   # product insert: the object sits 1.1 m in front of the subject, the subject stays soft behind it
             tx, tz = tx - ux * 1.1, tz - uz * 1.1
-        side_sign = 1 if bi % 2 == 0 else -1
+        side_sign = 1 if si % 2 == 0 else -1   # consecutive shots alternate sides (clause cuts never look like a jump cut)
         fscale = scale_of.get(focus_id, 1.0)
         if anc.get("shop") and beat.shot in ("wide", "medium", "high"):
             side_sign = 0           # the shop sign is the subject: frame it centred, never cropped
@@ -204,7 +302,7 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
         def frame_at(shot: str, s_sign: int, roll: float = 0.0) -> dict:
             p = SHOTS[shot]
             dd = p["d"]
-            if fscale > 1.2 and shot in ("close", "medium", "two_shot", "insert"):
+            if fscale > 1.2 and shot in ("close", "medium", "two_shot", "insert", "extreme", "worm", "dutch"):
                 dd *= min(fscale, 2.2)                              # a giant: step back so the same framing fits
             if env_b in INDOOR_D:
                 dd = min(dd, INDOOR_D[env_b])                       # stay in or just outside the room / on the deck
@@ -213,15 +311,16 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
             if env_b in ("village_square", "market") and math.hypot(cx, cz) < 3.8:  # never inside the fountain
                 k = 3.8 / max(0.01, math.hypot(cx, cz)); cx, cz = cx * k, cz * k
             # aim at the subject's own eye line (kids are 0.72 x an adult); the lens height follows for eye-level shots
-            k_h = fscale if shot in ("close", "insert", "two_shot", "medium") else (0.6 * fscale if fscale > 1.2 else 1.0)
-            lens_h = p["h"] if shot in ("high", "low", "wide") else p["h"] * k_h + (1 - k_h) * 0.35
-            return {"position": [round(cx, 3), round(lens_h, 3), round(cz, 3)], "lookAt": [round(tx, 3), round(p["lh"] * k_h, 3), round(tz, 3)], "fov": p["fov"], "roll": roll}
+            k_h = fscale if shot in ("close", "insert", "two_shot", "medium", "extreme", "dutch", "worm") else (0.6 * fscale if fscale > 1.2 else 1.0)
+            lens_h = p["h"] if shot in ("high", "low", "wide", "worm") else p["h"] * k_h + (1 - k_h) * 0.35
+            roll += p.get("roll", 0.0) * (s_sign or 1)
+            return {"position": [round(cx, 3), round(lens_h, 3), round(cz, 3)], "lookAt": [round(tx, 3), round(p["lh"] * k_h, 3), round(tz, 3)], "fov": p["fov"], "roll": round(roll, 4)}
 
         keys = [{"frame": a, **frame_at(beat.shot, side_sign)}]
         if anc.get("shop") and beat.shot == "wide":   # include the whole sign (5.6 m) + awning: look a bit higher
             keys[0]["lookAt"][1] = 2.6
         # frustum check on the opening framing: secondary actors outside 80 % of the visible half-width are pulled in
-        if beat.shot not in ("close", "insert"):
+        if beat.shot not in ("close", "insert", "extreme"):
             k0 = keys[0]
             cpx, cpz = k0["position"][0], k0["position"][2]
             fx_, fz_ = k0["lookAt"][0] - cpx, k0["lookAt"][2] - cpz
@@ -243,7 +342,9 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                         pos[act["castId"]] = (act["x"], act["z"])
         dur_s = (b - a) / fps
         impact = word_frame(ws, beat.impactWord, fps)
-        if dur_s > 2.6:
+        if beat.camMove:
+            keys = camera_move(beat.camMove, keys[0], a, b, si, actors[0] if actors else None)
+        elif dur_s > 2.6:
             k1 = impact if impact and impact > a + 20 else a + int(0.55 * (b - a))
             k1 = min(k1, b - 18)
             nxt = beat.shot if side_pc else TIGHTER[beat.shot]   # a side piece shares the frame: keep the framing, just re-angle
@@ -255,9 +356,20 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
         dof = {"cInf": sp["dof"]}
         if focus_idx is not None and sp["dof"] > 0:
             dof["focusActor"] = focus_idx
-        scene = {"sceneId": f"b{bi + 1:02d}", "startFrame": a, "endFrame": b, "narration": beat.narration, "light": beat.light, "mood": beat.mood,
-                 "actors": actors, "cameraKeys": keys, "push": sp["push"], "dof": dof, "transitionIn": "cut" if bi == 0 else beat.transition,
-                 "seed": plan.seed * 100 + bi, "qualityNotes": beat.visual or ""}
+        scene = {"sceneId": f"b{bi + 1:02d}" + (chr(96 + sub_k) if sub_k else ""), "startFrame": a, "endFrame": b, "narration": beat.narration,
+                 "light": beat.light, "mood": beat.mood,
+                 "actors": actors, "cameraKeys": keys, "push": sp["push"], "dof": dof, "transitionIn": "cut" if si == 0 else beat.transition,
+                 "seed": plan.seed * 100 + bi + 37 * sub_k, "qualityNotes": beat.visual or ""}
+        if sub_k:
+            scene["sub"] = True     # a clause cut inside a sentence (the ambience bed carries on)
+        if beat.hud:
+            scene["hud"] = {"kind": beat.hud, **({"text": beat.hudText} if beat.hudText else {})}
+        for w_ in (beat.impactWord, *[x.word for x in beat.fx]):
+            wf_ = word_frame(ws, w_, fps)
+            if wf_ is not None:
+                for w in ws:
+                    if _norm(w["w"]).startswith(_norm(w_)) and _wf_of(ws, w, fps) - LEAD == wf_:
+                        hot.add(w["s"])
         if beat.light == "golden" and env_b in ("beach", "troy", "ocean", "suburb", "lake", "resort", "outback"):
             scene["sunEl"], scene["sunAz"] = 18, 150
         if env_b in ROOMS or env_b == "cave":   # open-topped rooms: a high sun pours in over the walls
@@ -280,7 +392,7 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
             else:   # "front": low pieces (sheep) a bit in front of the subject, to one side, inside the frame
                 off_d = -1.2
                 half_at = (SHOTS[beat.shot]["d"] + off_d) * math.tan(math.radians(SHOTS[beat.shot]["fov"] / 2)) * aspect
-                off_l = 0.5 * half_at * (1 if bi % 2 else -1)
+                off_l = 0.5 * half_at * (1 if (bi + sub_k) % 2 else -1)
             off_l += pc.dx
             off_d += pc.dz
             px, pz = Cx + rx * off_l + ux * off_d, Cz + rz * off_l + uz * off_d
@@ -359,7 +471,8 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
     sb = {"version": 1, "title": plan.title, "fps": fps, "width": width, "height": height, "durationInFrames": total,
           "env": {"preset": plan.environment, "seed": plan.seed, "shop": shop}, "cast": cast, "scenes": scenes,
           "brand": ({"name": brand["name"], "primary": brand["primary"], "secondary": brand["secondary"], "text": brand["text"]} if brand else None),
-          "captions": {"enabled": plan.captions, "words": words if plan.captions else []}, "style": plan.style,
+          "captions": {"enabled": plan.captions, "words": [({**w, "hot": True} if w["s"] in hot else w) for w in words] if plan.captions else []},
+          "style": plan.style,
           "graphics": plan.graphics, **({"post": post} if post else {})}
     validate(sb)
     return sb

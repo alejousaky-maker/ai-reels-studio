@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.9.0 — 2026-11-11 ("pro" cut: the picture follows every clause)
+- Clause cuts: a beat can carry `shots` (each cuts 2 frames before its word `at` and overrides shot / place / cast / action /
+  pieces / effects / HUD). The voice stays one natural sentence; the picture changes every 1.5–2.5 s like pro Shorts.
+  Effects, reactions and the impact land in the clause that says their word; the ambience bed runs through clause cuts.
+- Camera moves across a shot (`camMove`): push, pull (reveal), truck left/right, orbit, crane up, follow (tracks a walker),
+  whip pan in. New angles: `extreme` (face-filling), `worm` (ground-level up-angle), `dutch` (tilted). Impact words punch
+  the lens ~10 % tighter. Consecutive shots alternate camera sides.
+- New actions: run, jump, panic (arms up + tremble), shrug, hands on hips.
+- Screen layers (`hud`): camcorder REC frame with timecode, phone notification banner, breaking-news lower third, map chip.
+- Captions are ON by default: big 1–2-word white captions with a thick outline, popping on each word, impact / effect words
+  in yellow (can be switched off in the form or plan).
+- `docs/scripts/plan_13b_gta6_pro.json`: the GTA short re-cut with the new grammar (25 shots instead of 15).
+
 ## 0.8.0 — 2026-11-11 (GTA 6 short; livelier cast, richer backdrops)
 - Characters move more: standing/sitting people breathe and sway, heads bob, every reaction lands with a small hop; new arm
   poses `up` (stretch / cheer, wiggling) and `point` (actions stretch, cheer, point). New faces: starry eyes, bloodshot

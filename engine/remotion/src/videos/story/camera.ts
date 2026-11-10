@@ -44,6 +44,13 @@ export const camAt = (sc: SceneSpec, f: number): Cam => {
     const next = keyCam(k, f, push);
     cur = k.cut ? next : mixCam(cur, next, glide((f - k.frame) / (k.dur ?? 24)));
   }
+  // impact punch-in: the lens snaps ~10 % tighter on the impact word and eases back over 12 frames
+  let punch = 0;
+  for (const k of sc.kicks ?? []) {
+    const n = f - k.frame + 1;
+    if (n >= 0 && n < 12) punch = Math.max(punch, 0.1 * Math.min(1, k.amp + 0.2) * (1 - n / 12) ** 2);
+  }
+  if (punch) cur = { ...cur, fov: cur.fov * (1 - punch) };
   const a = kickAt(sc, f);
   if (!a) return cur;
   const d: V3 = [cur.look[0] - cur.pos[0], cur.look[1] - cur.pos[1], cur.look[2] - cur.pos[2]];

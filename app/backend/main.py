@@ -118,14 +118,14 @@ class ProjectIn(BaseModel):
     seconds: int = Field(60, ge=10, le=120)
     quality: str = Field("master", pattern="^(draft|standard|master)$")
     style: str = "storybook"
-    environment: str = Field("village_square", pattern="^(village_square|market|street|park|interior|harbour|beach|ocean|troy|cave|throne|apartment|bathroom|office|hotel|airport|suburb|lake|resort)$")
+    environment: str = Field("village_square", pattern="^(village_square|market|street|park|interior|harbour|beach|ocean|troy|cave|throne|apartment|bathroom|office|hotel|airport|suburb|lake|resort|outback|cabin|bedroom|kitchen|banquet|gameroom|shops)$")
     voice: str | None = None
     speed: float = Field(1.0, ge=0.7, le=1.4)
     clientId: str | None = None
     cta: str | None = Field(None, max_length=80)
     audience: str | None = Field(None, max_length=200)
     research: bool = True
-    captions: bool = False
+    captions: bool = True
     graphics: str = Field("full", pattern="^(simple|full)$")
     music: bool = True
     variants: int = Field(1, ge=1, le=4)
@@ -616,7 +616,7 @@ def _plan_for(pid: str, ctx) -> Plan:
         # your own script: same sentence-driven visuals as the AI path (what you see follows what you hear)
         ctx.progress("script", 0.3, "turning your script into scenes (no AI): place, people, emotions and objects from each sentence")
         s = W.sentences_to_script(p["script"], r["title"])
-        plan, coherence = W.script_to_plan(s, p.get("idea") or p["script"], p.get("lang", "en"), env, seed, style, None, None, p.get("captions", False))
+        plan, coherence = W.script_to_plan(s, p.get("idea") or p["script"], p.get("lang", "en"), env, seed, style, None, None, p.get("captions", True))
         plan = plan.model_copy(update={"title": r["title"]})
         used = "your script"
     elif story and prov in ("auto", "ollama") and planner.pick_model(settings().get("ollamaModel")):
@@ -641,7 +641,7 @@ def _plan_for(pid: str, ctx) -> Plan:
             s, crit = W.critique(s, idea, aud, p.get("lang", "en"), model, log=log, source=source)
             W.unload(model)
             ctx.progress("script", 0.8, "3/3 director: each sentence becomes a scene that shows what is said")
-            plan, coherence = W.script_to_plan(s, idea, p.get("lang", "en"), env, seed, style, None, None, p.get("captions", False), crit)
+            plan, coherence = W.script_to_plan(s, idea, p.get("lang", "en"), env, seed, style, None, None, p.get("captions", True), crit)
             plan = plan.model_copy(update={"title": r["title"]})
             P.save_json(P.pdir(pid, "script", "critique.json"), crit)
             used = f"ollama:{model} (writer+critic+director)"
@@ -649,12 +649,12 @@ def _plan_for(pid: str, ctx) -> Plan:
             W.unload(model)
             ctx.progress("script", -1, f"3-stage writer failed ({str(e)[:160]}); trying the single-pass planner")
             plan, used = planner.ollama_plan(idea, p.get("kind", "story"), p.get("lang", "en"), int(p.get("seconds", 60)), env, brand, p.get("cta"), model, seed)
-            plan = plan.model_copy(update={"title": r["title"], "style": style, "captions": p.get("captions", False)})
+            plan = plan.model_copy(update={"title": r["title"], "style": style, "captions": p.get("captions", True)})
             used = f"ollama:{used} (single pass)"
     elif p.get("script", "").strip() or prov == "template":
         ctx.progress("script", 0.3, "turning the script into beats (no AI)")
         plan = planner.template_plan(r["title"], p.get("script") or p.get("idea"), p.get("kind", "story"), p.get("lang", "en"), env, brand,
-                                     p.get("cta"), seed, style, p.get("captions", False))
+                                     p.get("cta"), seed, style, p.get("captions", True))
         used = "template"
     elif prov in ("auto", "ollama") and planner.pick_model(settings().get("ollamaModel")):
         model = planner.pick_model(settings().get("ollamaModel"))
@@ -662,7 +662,7 @@ def _plan_for(pid: str, ctx) -> Plan:
         try:
             plan, used = planner.ollama_plan(p.get("idea") or r["title"], p.get("kind", "story"), p.get("lang", "en"), int(p.get("seconds", 60)), env, brand,
                                              p.get("cta"), model, seed)
-            plan = plan.model_copy(update={"title": r["title"], "style": style, "captions": p.get("captions", False)})
+            plan = plan.model_copy(update={"title": r["title"], "style": style, "captions": p.get("captions", True)})
             used = f"ollama:{used}"
         except Exception as e:  # noqa
             ctx.progress("script", -1, f"local model failed ({str(e)[:200]}); using the rule-based writer")

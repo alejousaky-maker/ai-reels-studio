@@ -22,13 +22,15 @@ export type ExprKey = { frame: number; expr: Expr };
 export type ActorSpec = {
   castId: string; x: number; z: number;
   /** "dance" = stroll cycle + hop + arm waves */
-  mode?: "stand" | "stroll" | "sit" | "march" | "dance" | "fall";
+  mode?: "stand" | "stroll" | "sit" | "march" | "dance" | "fall" | "run" | "jump";
+  /** panic tremble amount (0-1) */
+  shake?: number;
   expr?: Expr; exprKeys?: ExprKey[];
   /** walk from (x, z) to walkTo between walkFrames[0] and walkFrames[1] */
   walkTo?: [number, number]; walkFrames?: [number, number];
   wave?: boolean; look?: -1 | 0 | 1; facing?: -1 | 0 | 1; tilt?: number;
   /** arm pose: both arms up (stretch / cheer) or pointing */
-  pose?: "up" | "point";
+  pose?: "up" | "point" | "shrug" | "hips";
   /** product / held item drawn as an effect card next to the hand */
   holding?: ProductKind | null;
 };
@@ -74,6 +76,10 @@ export type SceneSpec = {
   qualityNotes?: string;
   /** optional location for this scene (each scene builds its own world); defaults to the storyboard env */
   env?: EnvSpec;
+  /** a clause cut inside a sentence */
+  sub?: boolean;
+  /** diegetic screen layer drawn over the picture */
+  hud?: { kind: "rec" | "phone" | "news" | "map"; text?: string };
 };
 
 export type Shop = { x: number; z: number; yaw: number; name: string; tagline?: string; colors: { primary: string; secondary: string; text: string } };
@@ -90,7 +96,7 @@ export type Storyboard = {
   cast: CastMember[];
   scenes: SceneSpec[];
   brand?: Brand | null;
-  captions?: { enabled: boolean; words?: { w: string; s: number; e: number }[] };
+  captions?: { enabled: boolean; words?: { w: string; s: number; e: number; hot?: boolean }[] };
   post?: { ink?: boolean; lens?: boolean; bloom?: boolean; grade?: boolean };
   /** "simple" = light to render and easy to read: no lens blur / bloom, MSAA 2, 2K shadow map, 4 clouds, sparse set dressing */
   graphics?: "simple" | "full";

@@ -264,12 +264,16 @@ export class StoryWorld {
       if (!who) return;
       const st = this.pose(a, f), scl = who.scale;
       const mode0 = a.mode ?? "stand";
-      const moving = st.moving || mode0 === "stroll" || mode0 === "march" || mode0 === "dance";
-      const cadence = mode0 === "dance" ? 1.1 : mode0 === "march" ? 1.0 : 0.75;
+      const run = mode0 === "run", jump = mode0 === "jump";
+      const moving = st.moving || mode0 === "stroll" || mode0 === "march" || mode0 === "dance" || run;
+      const cadence = mode0 === "dance" ? 1.1 : mode0 === "march" ? 1.0 : run ? 1.9 : 0.75;
       const phase = moving ? q(((t * cadence + hh(who.i, 5)) % 1), 60) : 0;
       const dance = mode0 === "dance";
       let hop = dance ? Math.max(0, Math.sin(2 * Math.PI * (t * 2.2 + hh(who.i, 3)))) * 0.16 * scl : 0;
-      const mode: FrontOpts["mode"] = mode0 === "fall" ? "fall" : mode0 === "sit" ? "sit" : mode0 === "march" ? "march" : moving ? "stroll" : "stand";
+      if (jump) hop = Math.abs(Math.sin(Math.PI * (t * 1.5 + hh(who.i, 3)))) * 0.42 * scl;      // bouncing on the spot (joy / rage)
+      if (run) hop = Math.abs(Math.sin(2 * Math.PI * (t * cadence + hh(who.i, 5)))) * 0.06 * scl;
+      const mode: FrontOpts["mode"] = mode0 === "fall" ? "fall" : mode0 === "sit" ? "sit" : mode0 === "march" || run ? "march" : moving ? "stroll" : "stand";
+      const shake = a.shake ? q(a.shake * 7 * Math.sin(t * 23 + who.i), 4) : 0;   // panic tremble
       // life: standing people breathe and sway, the head bobs; every reaction lands with a small hop
       const idle = mode === "stand" || mode === "sit";
       const sway = idle ? q(1.8 * Math.sin(2 * Math.PI * (t * 0.45 + hh(who.i, 11))), 2) : 0;
@@ -281,16 +285,16 @@ export class StoryWorld {
       const [w, h, k] = tier(d);
       const fo: FrontOpts = {
         phase, expr: st.expr, mode, look: a.look ?? 0, blink: st.expr === "whistle" ? 0 : lidAt(fr, who.i * 7 + ai, st.swaps.map((x) => x - s.startFrame)),
-        lift: 60, tilt: (a.tilt ?? 0) + sway + (dance ? q(9 * Math.sin(2 * Math.PI * t * 1.1 + who.i), 10) : 0), headTilt: nod,
-        wave: a.wave || dance || a.pose ? q(Math.sin(t * (dance ? 7 : a.pose ? 5 : 9) + who.i * 1.3), 20) : undefined,
-        ...(a.pose ? { pose: a.pose } : {}),
+        lift: 60, tilt: (a.tilt ?? 0) + sway + shake + (run ? 8 : 0) + (dance ? q(9 * Math.sin(2 * Math.PI * t * 1.1 + who.i), 10) : 0), headTilt: nod,
+        wave: a.wave || dance || a.pose || jump ? q(Math.sin(t * (dance ? 7 : a.shake ? 16 : a.pose ? 5 : 9) + who.i * 1.3), 20) : undefined,
+        ...(a.pose || jump ? { pose: a.pose ?? "up" } : {}),
         light: light2D(false), facing, seed: (who.i * 5 + 3) % 7 + 1,
       };
       // side view while walking ACROSS the frame (template bodySide: planted stance foot, cycloid swing foot)
       const tx = cam.position.x - st.x, tz = cam.position.z - st.z, tl = Math.hypot(tx, tz) || 1;
       const toward = st.moving ? (tx * st.dx + tz * st.dz) / tl : 1;
       if (st.moving && Math.abs(toward) < 0.6) {
-        const cad = 0.9;                                           // gait cycles per second (2 steps)
+        const cad = run ? 1.7 : 0.9;                               // gait cycles per second (2 steps)
         const fs = Math.round(Math.sqrt(Math.max(0, 1 - toward * toward)) * 20) / 20;
         const stride = Math.max(0.3, Math.min(1.3, st.speed / (2 * cad * 0.8 * scl))) * fs;
         const mirror = st.dx * right.x + st.dz * right.z < 0;      // bodySide faces screen-right; mirror for leftward walks

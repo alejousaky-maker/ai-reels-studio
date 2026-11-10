@@ -1,0 +1,524 @@
+{
+ "title": "The Day the Earth Stood Still (pro)",
+ "environment": "bedroom",
+ "seed": 33,
+ "cast": [
+  {
+   "id": "me",
+   "name": "Him (pajamas)",
+   "role": "pajamas",
+   "skin": "#ffe2c2",
+   "hair": "#3a2a1e"
+  },
+  {
+   "id": "meg",
+   "name": "Him (gamer)",
+   "role": "gamer",
+   "skin": "#ffe2c2",
+   "hair": "#3a2a1e"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "I woke up this morning and thought the zombie apocalypse finally happened. Turns out, it was something way more serious.",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "cheer",
+     "expr": "laugh",
+     "react": {
+      "word": "zombie",
+      "expr": "neutral"
+     }
+    }
+   ],
+   "focus": "me",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "word": "serious",
+     "on": "me"
+    }
+   ],
+   "impactWord": "serious",
+   "environment": "bedroom",
+   "envVariant": "day",
+   "spot": 0,
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "zombie",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "me",
+       "action": "panic",
+       "expr": "shock"
+      }
+     ],
+     "transition": "cut"
+    },
+    {
+     "at": "Turns",
+     "shot": "dutch",
+     "characters": [
+      {
+       "id": "me",
+       "action": "shrug",
+       "expr": "nervous"
+      }
+     ]
+    },
+    {
+     "at": "serious",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "me",
+       "action": "hips",
+       "expr": "stern"
+      }
+     ],
+     "impactWord": "serious"
+    }
+   ]
+  },
+  {
+   "narration": "No traffic. No dogs. No neighbors yelling. Nothing.",
+   "shot": "wide",
+   "mood": "curious",
+   "focus": "me",
+   "environment": "suburb",
+   "pieces": [
+    {
+     "kind": "trafficlight",
+     "where": "right"
+    }
+   ],
+   "spot": 3,
+   "camMove": "truck_right",
+   "shots": [
+    {
+     "at": "dogs",
+     "shot": "wide",
+     "spot": 1,
+     "pieces": [
+      {
+       "kind": "tumbleweed",
+       "where": "front",
+       "move": "left",
+       "spin": 5.0
+      }
+     ],
+     "camMove": "truck_left"
+    },
+    {
+     "at": "neighbors",
+     "shot": "low",
+     "spot": 2,
+     "pieces": [],
+     "camMove": "crane_up"
+    },
+    {
+     "at": "Nothing",
+     "shot": "extreme",
+     "environment": "bedroom",
+     "envVariant": "day",
+     "spot": 2,
+     "characters": [
+      {
+       "id": "me",
+       "expr": "nervous"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "product",
+       "product": "question",
+       "word": "Nothing",
+       "on": "me"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "I opened the blinds. The street was completely empty.",
+   "shot": "wide",
+   "mood": "tense",
+   "transition": "xfade",
+   "environment": "suburb",
+   "pieces": [
+    {
+     "kind": "tumbleweed",
+     "where": "front",
+     "move": "right",
+     "spin": 5.0
+    },
+    {
+     "kind": "trafficlight",
+     "where": "right"
+    }
+   ],
+   "spot": 3,
+   "camMove": "pull"
+  },
+  {
+   "narration": "So I went out in my slippers to find another human being.",
+   "characters": [
+    {
+     "id": "me",
+     "action": "walk",
+     "holding": "coffee"
+    }
+   ],
+   "focus": "me",
+   "transition": "xfade",
+   "environment": "shops",
+   "spot": 3,
+   "camMove": "follow"
+  },
+  {
+   "narration": "The coffee shop? Closed. The bank? Closed. Even the grocery store.",
+   "shot": "wide",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "walk",
+     "expr": "nervous",
+     "holding": "coffee"
+    }
+   ],
+   "focus": "me",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "exclaim",
+     "word": "grocery",
+     "on": "me"
+    }
+   ],
+   "environment": "shops",
+   "spot": 0,
+   "camMove": "truck_right",
+   "shots": [
+    {
+     "at": "bank",
+     "shot": "medium",
+     "spot": 1,
+     "characters": [
+      {
+       "id": "me",
+       "action": "shrug",
+       "expr": "nervous"
+      }
+     ]
+    },
+    {
+     "at": "grocery",
+     "shot": "worm",
+     "spot": 2,
+     "characters": [
+      {
+       "id": "me",
+       "action": "hips",
+       "expr": "shock"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "That's when I really started to panic.",
+   "shot": "worm",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "panic",
+     "expr": "shock"
+    }
+   ],
+   "focus": "me",
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "panic",
+     "on": "me"
+    }
+   ],
+   "impactWord": "panic",
+   "environment": "shops",
+   "spot": 1,
+   "camMove": "push"
+  },
+  {
+   "narration": "Then I checked my phone. November nineteenth.",
+   "shot": "close",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "me",
+     "react": {
+      "word": "nineteenth",
+      "expr": "shock"
+     },
+     "holding": "phone"
+    }
+   ],
+   "focus": "me",
+   "transition": "xfade",
+   "text": "NOV 19 — RELEASE DAY",
+   "environment": "bedroom",
+   "envVariant": "day",
+   "spot": 0,
+   "camMove": "push",
+   "hud": "phone",
+   "hudText": "Nov 19 · Release day is TODAY"
+  },
+  {
+   "narration": "GTA 6 release day.",
+   "shot": "extreme",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "jump",
+     "expr": "starry"
+    }
+   ],
+   "focus": "me",
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "release",
+     "on": "me"
+    }
+   ],
+   "text": "RELEASE DAY",
+   "textStyle": "title",
+   "environment": "bedroom",
+   "envVariant": "day",
+   "spot": 0,
+   "camMove": "whip"
+  },
+  {
+   "narration": "The whole world wasn't gone. It was just loading.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "smile_closed"
+    }
+   ],
+   "focus": "me",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "lightbulb",
+     "word": "loading",
+     "on": "me"
+    }
+   ],
+   "impactWord": "loading",
+   "transition": "xfade",
+   "text": "LOADING...",
+   "environment": "suburb",
+   "envVariant": "tvglow",
+   "spot": 0,
+   "camMove": "crane_up"
+  },
+  {
+   "narration": "Curtains closed. Console on.",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "meg",
+     "expr": "grin",
+     "holding": "controller"
+    }
+   ],
+   "focus": "meg",
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "Console",
+     "on": "meg"
+    }
+   ],
+   "impactWord": "Console",
+   "transition": "flash",
+   "environment": "gameroom",
+   "spot": 0,
+   "camMove": "whip"
+  },
+  {
+   "narration": "Headset on. Snacks stocked. Phone on airplane mode.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "meg",
+     "expr": "smile_closed",
+     "holding": "can"
+    }
+   ],
+   "focus": "meg",
+   "fx": [
+    {
+     "kind": "product",
+     "product": "pizza",
+     "word": "Snacks",
+     "on": "meg"
+    }
+   ],
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "snacks",
+     "where": "left",
+     "scale": 0.7
+    }
+   ],
+   "spot": 1,
+   "shots": [
+    {
+     "at": "Snacks",
+     "shot": "insert",
+     "camMove": "push"
+    },
+    {
+     "at": "Phone",
+     "shot": "close",
+     "hud": "phone",
+     "hudText": "Airplane mode: ON"
+    }
+   ]
+  },
+  {
+   "narration": "Day one.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "meg",
+     "expr": "grin",
+     "holding": "controller"
+    }
+   ],
+   "focus": "meg",
+   "text": "DAY 1",
+   "textStyle": "title",
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "snacks",
+     "where": "left",
+     "scale": 0.8
+    }
+   ],
+   "spot": 1,
+   "hud": "rec",
+   "hudText": "DAY 1"
+  },
+  {
+   "narration": "Day three.",
+   "light": "golden",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "meg",
+     "expr": "crazy",
+     "holding": "controller"
+    }
+   ],
+   "focus": "meg",
+   "transition": "flash",
+   "text": "DAY 3",
+   "textStyle": "title",
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "snacks",
+     "where": "left",
+     "scale": 1.1
+    }
+   ],
+   "spot": 1
+  },
+  {
+   "narration": "Day seven.",
+   "shot": "dutch",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "meg",
+     "action": "panic",
+     "expr": "crazy",
+     "holding": "controller"
+    }
+   ],
+   "focus": "meg",
+   "transition": "flash",
+   "text": "DAY 7",
+   "textStyle": "title",
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "snacks",
+     "where": "left",
+     "scale": 1.5
+    }
+   ],
+   "spot": 1
+  },
+  {
+   "narration": "The apocalypse was real. We just did it to ourselves, one mission at a time.",
+   "shot": "close",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "meg",
+     "expr": "crazy",
+     "react": {
+      "word": "mission",
+      "expr": "starry"
+     },
+     "holding": "controller"
+    }
+   ],
+   "focus": "meg",
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "time",
+     "on": "meg"
+    }
+   ],
+   "environment": "gameroom",
+   "spot": 0,
+   "camMove": "pull"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Comedy fiction about the GTA 6 release day; the game and console appear on screen only as generic, unbranded props.",
+   "status": "fiction"
+  }
+ ],
+ "creativeHooks": [
+  "I thought the zombie apocalypse finally happened.",
+  "We just did it to ourselves, one mission at a time."
+ ]
+}

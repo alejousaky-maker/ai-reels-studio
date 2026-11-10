@@ -12,6 +12,17 @@ The reference videos are:
 - **Ending**: a punchline that loops back to the hook ("Nobody saw that coming").
 - **Facts**: check them against a source first. Comic framing goes into `verifiedClaims` as `fiction`.
 
+## Pro cut (from 0.9.0; reference: fast faceless-story Shorts)
+- **One picture per clause, not per sentence.** Every sentence over ~2 s gets `shots`: each cuts on a word (`at`) and shows
+  literally what that clause says (who, where, doing what). Target: a new shot every 1.5–2.5 s, never under 0.4 s.
+- **Nothing static**: every shot has a `camMove` or a cut inside it. Push on realisations, pull to reveal places, truck along
+  streets, follow walkers/runners, crane up to show scale, whip into surprises, orbit on triumph.
+- **Angles carry the emotion**: `extreme` for reactions (shock, starry, crazy), `worm` for panic / power, `dutch` for chaos,
+  `wide` / `high` only to set a place. Alternate sides (automatic).
+- **Bodies act the verb**: run, jump, panic, shrug, hips, point, cheer, fall, walk — pick the action the narration names.
+- **Screens tell the story**: `hud` rec (filming / days passing), phone (dates, messages, settings), news (big events), map.
+- **Captions on**: the impact word and effect words light up yellow, so key words read even with the sound off.
+
 ## Picture
 - **Cast**: one recurring cast of bean-stickmen. The hero appears in the hook, the middle and the end.
 - **Places**: few, and each one means something (beach → court → ocean → beach). Use the per-beat `environment` and `envVariant`.
