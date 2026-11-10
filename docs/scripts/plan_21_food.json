@@ -107,9 +107,9 @@
      "pieces": [
       {
        "kind": "semi",
-       "where": "front",
+       "where": "left",
        "scale": 0.6,
-       "move": "right"
+       "move": "toward"
       },
       {
        "kind": "semi",
@@ -199,6 +199,7 @@
      "at": "eighty",
      "shot": "wide",
      "environment": "shops",
+     "envVariant": "open",
      "characters": [
       {
        "id": "drv",
@@ -215,8 +216,7 @@
      "pieces": [
       {
        "kind": "semi",
-       "where": "on",
-       "scale": 0.7,
+       "scale": 0.8,
        "shake": 0.3
       }
      ],
@@ -249,6 +249,7 @@
     }
    ],
    "environment": "shops",
+   "envVariant": "open",
    "pieces": [
     {
      "kind": "boxes",
@@ -340,8 +341,8 @@
      "pieces": [
       {
        "kind": "forklift",
-       "where": "front",
-       "move": "left"
+       "where": "left",
+       "move": "right"
       },
       {
        "kind": "fruitpile",
@@ -490,6 +491,7 @@
   },
   {
    "narration": "It's the most fragile, high-stakes logistics ballet on Earth, and it happens every twenty-four hours.",
+   "shot": "wide",
    "light": "golden",
    "characters": [
     {
@@ -538,6 +540,7 @@
    ],
    "transition": "zoom",
    "environment": "shops",
+   "envVariant": "open",
    "camMove": "push",
    "shots": [
     {

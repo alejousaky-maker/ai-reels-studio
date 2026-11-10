@@ -42,7 +42,7 @@
    "shots": [
     {
      "at": "island",
-     "shot": "high",
+     "shot": "wide",
      "pieces": [
       {
        "kind": "airplane",
@@ -423,8 +423,8 @@
   },
   {
    "narration": "Send this to anyone who loves extreme civil engineering.",
-   "shot": "high",
-   "light": "night",
+   "shot": "wide",
+   "light": "golden",
    "mood": "warm",
    "transition": "dissolve",
    "environment": "island",

@@ -7,7 +7,7 @@ Figures corrected to documented facts where the brief overstated them (see verif
 
 1. *shops · medium · day · push* — “If you want to build a subway that costs four and a half billion dollars for just three stations, you don't build transit. You build a gold mine.” — eng (stand, smile, coffee) → **four**: close → **you**: worm → **gold**: extreme
 2. *street · wide · day · truck_right · dissolve · sepia* — “It's nineteen twenty-nine, and New York promises commuters a brand new subway line under Second Avenue to fix endless overcrowding.” — old (stand, smile, newspaper) → **Second**: close
-3. *street · insert · day · push · sepia* — “Then the Great Depression hits, World War Two happens, and the project gets quietly buried for nearly a century.” — old (stand, nervous) → **World**: medium → **buried**: insert
+3. *street · close · day · push · sepia* — “Then the Great Depression hits, World War Two happens, and the project gets quietly buried for nearly a century.” — old (stand, nervous) → **World**: medium → **buried**: medium
 4. *tunnel · wide · night · truck_left · zoom* — “When they finally restart digging in the two thousands, every single inch of dirt costs more than solid platinum.” — dig (stand, stern, pickaxe) → **every**: close
 5. *tunnel · medium · night · orbit* — “Why? Because underneath the street lies a hundred-year-old maze of mystery pipes, electrical cables, and forgotten steam lines.” — dig (shrug, nervous) → **maze**: wide → **electrical**: close
 6. *office · medium · day · push* — “Every time they move a single water pipe, it costs millions. They're literally tunneling through a maze of financial regret.” — acc (stand, sweat) → **millions**: close → **They're**: dutch
@@ -15,7 +15,7 @@ Figures corrected to documented facts where the brief overstated them (see verif
 8. *tunnel · medium · day · follow · HUD panel* — “That means every single step you walk underground cost roughly a million dollars.” — pax (walk, neutral, ticket)
 9. *tunnel · wide · day · truck_left* — “For that money, you could buy every daily rider a brand new car, and still have cash left for a private island.” — pax (point, grin) → **private**: close
 10. *tunnel · medium · night · push* — “So why did it cost so much? Consultants, special contracts, and hiring six guys to watch one guy hold a shovel.” — acc (shrug, nervous) → **Consultants**: close → **six**: wide
-11. *office · insert · day · push · zoom* — “And the best part? Phase two is still years from finished, which means the budget is about to enter orbit.” — eng (stand, grin) → **budget**: worm
+11. *office · medium · day · push · zoom* — “And the best part? Phase two is still years from finished, which means the budget is about to enter orbit.” — eng (point, grin) → **budget**: worm
 12. *tunnel · medium · day · pull* — “Congratulations, you've just built the most expensive hole in human history.” — eng (hips, laugh) → **most**: extreme
 13. *shops · high · golden · crane_up · dissolve* — “Send this to that friend who complains about his local train ticket price.” — no cast
 14. *shops · wide · night · dissolve · HUD outro* — “Hit follow for more engineering disasters.” — no cast
@@ -32,7 +32,7 @@ Figures corrected to documented facts where the brief overstated them (see verif
 8. *kitchen · close · day · push · HUD panel* — “Fresh food has zero tolerance. Miss your delivery window, and thousands of meals turn into expensive dumpster juice.” — chef (stand, nervous, lettuce) → **thousands**: extreme
 9. *shops · medium · night · follow · dissolve* — “An army of night-shift stockers unloads everything in total darkness before the city wakes up.” — stk (walk, stern, box)
 10. *bridge · wide · golden · crane_up · HUD panel* — “We're talking about moving billions of calories across concrete bridges every single day, like clockwork.” — hat (cheer, starry)
-11. *bridge · medium · golden · orbit* — “It's the most fragile, high-stakes logistics ballet on Earth, and it happens every twenty-four hours.” — bal (cheer, nervous) → **every**: worm
+11. *bridge · wide · golden · orbit* — “It's the most fragile, high-stakes logistics ballet on Earth, and it happens every twenty-four hours.” — bal (cheer, nervous) → **every**: worm
 12. *shops · close · day · push · zoom* — “Next time you bite into a bagel in Manhattan, remember it survived bridges, tunnels, and a parking ticket.” — hat (stand, starry, bagel) → **survived**: medium
 13. *bridge · wide · night · dissolve · HUD manhattan* — “Send this to anyone who thinks food magically appears on grocery shelves.” — no cast
 14. *shops · wide · night · dissolve · HUD outro* — “Hit follow for more hidden infrastructure secrets.” — no cast
@@ -41,7 +41,7 @@ Figures corrected to documented facts where the brief overstated them (see verif
 
 1. *canal · wide · day · push* — “They spent over five billion dollars widening the Panama Canal, and the giant new ships still scrape by with barely any room on either wall.” — no cast → **giant**: low → **either**: close
 2. *canal · wide · day · truck_left · dissolve · sepia* — “Back in nineteen fourteen, digging a ditch across the jungle connected two oceans and changed global trade forever.” — wk (stand, stern, shovel) → **connected**: close
-3. *canal · close · night · push · sepia* — “The original cost? Over twenty-five thousand worker lives lost to malaria and yellow fever in the brutal tropical mud.” — wk (sit, sleepy) → **malaria**: extreme
+3. *canal · close · golden · push · sepia* — “The original cost? Over twenty-five thousand worker lives lost to malaria and yellow fever in the brutal tropical mud.” — wk (sit, sleepy) → **malaria**: extreme
 4. *canal · worm · day · crane_up · zoom* — “Fast forward a century, and cargo ships got so big they couldn't even fit through the old locks anymore.” — cap (stand, shock) → **couldn't**: extreme
 5. *canal · medium · day · orbit* — “So engineers launched a colossal project: brand new, gigantic concrete water elevators to lift floating cities.” — eng (point, grin) → **gigantic**: wide
 6. *canal · wide · day · crane_up* — “Instead of pumps, gravity does all the work, draining lake water to float ships uphill.” — no cast → **float**: low
@@ -51,12 +51,12 @@ Figures corrected to documented facts where the brief overstated them (see verif
 10. *canal · wide · day · zoom · HUD world* — “Around forty percent of all US container traffic squeezes through this exact tropical bottleneck.” — no cast
 11. *canal · wide · day · HUD panama* — “Instead of sailing all the way around South America, you cut about eight thousand miles off the trip in one afternoon.” — no cast
 12. *apartment · medium · day · push · dissolve* — “Humanity literally cut a continent in half so your TV could arrive faster.” — cap (cheer, starry) → **TV**: extreme
-13. *canal · high · golden · crane_up · dissolve* — “Send this to anyone who loves engineering marvels.” — no cast
+13. *canal · wide · golden · crane_up · dissolve* — “Send this to anyone who loves engineering marvels.” — no cast
 14. *shops · wide · night · dissolve · HUD outro* — “Hit follow for more megaproject breakdowns.” — no cast
 
 ## The Airport That Is Sinking  (`plan_23_kansai.json`, 14 scenes, 221 words)
 
-1. *island · wide · day · truck_right* — “Japan needed a massive international airport, but there was no room on land, so they built an island in the ocean, which is slowly swallowing itself.” — no cast → **island**: high → **swallowing**: low
+1. *island · wide · day · truck_right* — “Japan needed a massive international airport, but there was no room on land, so they built an island in the ocean, which is slowly swallowing itself.” — no cast → **island**: wide → **swallowing**: low
 2. *suburb · medium · night · push · dissolve* — “In the nineteen eighties, Osaka was running out of space, and residents hated noisy flights over the city.” — slp (point, stern, pillow) → **hated**: close
 3. *island · wide · day · zoom · HUD osaka* — “The solution? Build a brand new artificial island five kilometers out in Osaka Bay, where nobody can complain.” — no cast
 4. *island · wide · day · truck_left* — “Engineers flattened entire mountains, loaded millions of tons of rock onto barges, and dumped it into the sea.” — eng (point, grin) → **dumped**: low
@@ -68,5 +68,5 @@ Figures corrected to documented facts where the brief overstated them (see verif
 10. *airport · wide · day · follow · dissolve* — “Despite sinking into the abyss, Kansai is still one of the most punctual airports on Earth.” — pax (walk, smile, suitcase)
 11. *island · wide · day · follow* — “With sea levels rising, engineers are now in a high-stakes race against Neptune himself.” — eng (run, shock)
 12. *airport · medium · day · push* — “Next time your flight is delayed, remember the runway under you is slowly drowning.” — pax (stand, neutral, coffee) → **runway**: close
-13. *island · high · night · crane_up · dissolve* — “Send this to anyone who loves extreme civil engineering.” — no cast
+13. *island · wide · golden · crane_up · dissolve* — “Send this to anyone who loves extreme civil engineering.” — no cast
 14. *shops · wide · night · dissolve · HUD outro* — “Hit follow for more engineering wonders.” — no cast

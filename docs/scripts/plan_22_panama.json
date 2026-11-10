@@ -6,7 +6,7 @@
   {
    "id": "cap",
    "name": "Captain",
-   "role": "captain"
+   "role": "skipper"
   },
   {
    "id": "eng",
@@ -123,7 +123,7 @@
   {
    "narration": "The original cost? Over twenty-five thousand worker lives lost to malaria and yellow fever in the brutal tropical mud.",
    "shot": "close",
-   "light": "night",
+   "light": "golden",
    "mood": "tense",
    "characters": [
     {
@@ -325,12 +325,14 @@
     },
     {
      "kind": "tugboat",
-     "where": "left",
+     "dx": -9.0,
+     "dz": -2.0,
      "y": -1.4
     },
     {
      "kind": "tugboat",
-     "where": "right",
+     "dx": 9.0,
+     "dz": -2.0,
      "y": -1.4,
      "mirror": true
     }
@@ -459,7 +461,7 @@
   },
   {
    "narration": "Send this to anyone who loves engineering marvels.",
-   "shot": "high",
+   "shot": "wide",
    "light": "golden",
    "mood": "warm",
    "transition": "dissolve",

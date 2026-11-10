@@ -41,6 +41,7 @@
     }
    ],
    "environment": "shops",
+   "envVariant": "open",
    "camMove": "push",
    "shots": [
     {
@@ -154,7 +155,7 @@
   },
   {
    "narration": "Then the Great Depression hits, World War Two happens, and the project gets quietly buried for nearly a century.",
-   "shot": "insert",
+   "shot": "close",
    "mood": "tense",
    "characters": [
     {
@@ -166,7 +167,7 @@
    "pieces": [
     {
      "kind": "blueprint",
-     "where": "on",
+     "where": "left",
      "label": "SECOND AVE LINE"
     }
    ],
@@ -188,7 +189,7 @@
     },
     {
      "at": "buried",
-     "shot": "insert",
+     "shot": "medium",
      "fx": [
       {
        "kind": "dust",
@@ -199,7 +200,8 @@
      "pieces": [
       {
        "kind": "blueprint",
-       "where": "on",
+       "where": "left",
+       "scale": 1.2,
        "label": "~CANCELLED"
       }
      ],
@@ -535,11 +537,11 @@
   },
   {
    "narration": "And the best part? Phase two is still years from finished, which means the budget is about to enter orbit.",
-   "shot": "insert",
    "mood": "upbeat",
    "characters": [
     {
      "id": "eng",
+     "action": "point",
      "expr": "grin"
     }
    ],
@@ -548,7 +550,7 @@
    "pieces": [
     {
      "kind": "subwaymap",
-     "where": "on",
+     "where": "left",
      "label": "PHASE 2|COMING NEVER"
     }
    ],
@@ -598,7 +600,7 @@
    "pieces": [
     {
      "kind": "ribbon",
-     "where": "front"
+     "dz": -2.0
     }
    ],
    "camMove": "pull",
@@ -629,6 +631,7 @@
    "mood": "warm",
    "transition": "dissolve",
    "environment": "shops",
+   "envVariant": "open",
    "camMove": "crane_up"
   },
   {
