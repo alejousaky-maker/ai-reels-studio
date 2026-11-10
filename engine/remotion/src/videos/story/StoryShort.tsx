@@ -253,9 +253,10 @@ const Hud: React.FC<{ kind: string; text?: string; f: number; f0: number; sb: St
       </AbsoluteFill>);
   }
   if (kind === "bar") {     // download / install progress bar: "LABEL|from|to" (percent), fills across the shot
-    const [label, a0, a1] = (text ?? "INSTALLING|0|99").split("|");
+    const [label, a0, a1, unit] = (text ?? "INSTALLING|0|99").split("|");
     const span = Math.max(1, sb.scenes.find((s) => s.startFrame === f0)!.endFrame - f0 - 6);
-    const pc = Number(a0) + (Number(a1) - Number(a0)) * Math.min(1, Math.max(0, n / span)) ** 0.6;
+    const val = Number(a0) + (Number(a1) - Number(a0)) * Math.min(1, Math.max(0, n / span)) ** 0.6;
+    const pc = unit ? (100 * val) / Math.max(1e-6, Math.max(Number(a0), Number(a1))) : val;   // with a unit: a gauge counting up to the target
     return (
       <AbsoluteFill style={{ fontFamily: '"Arial Black", Arial, sans-serif' }}>
         <div style={{ position: "absolute", left: 0.08 * W, right: 0.08 * W, top: 0.15 * H, background: "rgba(14,16,30,0.9)", borderRadius: 26 * k, padding: 26 * k,
@@ -264,7 +265,7 @@ const Hud: React.FC<{ kind: string; text?: string; f: number; f0: number; sb: St
           <div style={{ height: 54 * k, background: "#2b2f45", borderRadius: 27 * k, overflow: "hidden" }}>
             <div style={{ width: `${pc}%`, height: "100%", background: "linear-gradient(90deg,#39d98a,#39d9ff)" }} />
           </div>
-          <div style={{ color: "#ffe14d", fontSize: 58 * k, marginTop: 12 * k, textAlign: "right" }}>{pc.toFixed(pc > 99 ? 1 : 0)}%</div>
+          <div style={{ color: "#ffe14d", fontSize: 58 * k, marginTop: 12 * k, textAlign: "right" }}>{unit ? `${Math.round(val)} ${unit}` : `${pc.toFixed(pc > 99 ? 1 : 0)}%`}</div>
         </div>
       </AbsoluteFill>);
   }

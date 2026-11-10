@@ -407,7 +407,7 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
             spec = {"kind": pc.kind, "x": round(px, 3), "z": round(pz, 3)}
             if pc.scale:
                 spec["scale"] = pc.scale
-            y = pc.y if pc.y is not None else (-2.6 * k if pc.kind in ("ship", "galley") and env_b in ("beach", "troy", "harbour") else 0.0)
+            y = pc.y if pc.y is not None else (-2.6 * k if pc.kind in ("ship", "galley") and env_b in ("beach", "troy", "harbour") else (-4.6 * k if pc.kind == "containership" and env_b == "canal" else 0.0))
             if y:
                 spec["y"] = y
             if pc.mirror:

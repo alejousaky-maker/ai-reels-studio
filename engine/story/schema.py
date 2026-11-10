@@ -22,7 +22,7 @@ Role = Literal["villager_woman", "villager_man", "kid", "official", "musician", 
               "soldier", "major", "emu", "farmer", "caesar", "pirate", "captain", "raj_official", "local", "athlete",
               "hoodie", "robe", "groom", "bride", "guest", "pajamas", "gamer",
               "streamer", "broker", "doctor", "technician", "esports", "oldgamer", "graduate", "teen", "officeguy", "bathrobe", "brokeguy", "wife", "capgamer",
-              "engineer", "accountant", "driver", "cop", "chef", "stocker", "ballerina", "tollman", "pilot", "sleeper", "commuter"]
+              "engineer", "accountant", "driver", "cop", "chef", "stocker", "ballerina", "tollman", "pilot", "sleeper", "commuter", "skipper"]
 Env = Literal["village_square", "park", "street", "market", "interior", "harbour", "beach", "ocean", "troy", "cave", "throne",
               "apartment", "bathroom", "office", "hotel", "airport", "suburb", "lake", "resort",
               "outback", "cabin", "bedroom", "kitchen", "banquet", "gameroom", "shops", "trading", "clinic", "datacenter", "tunnel", "warehouse", "canal", "island", "bridge"]
@@ -84,7 +84,7 @@ class SubShot(BaseModel):
     shot: Optional[Shot] = None
     light: Optional[Light] = None
     environment: Optional[Env] = None
-    envVariant: Optional[Literal["breach", "open", "day", "tvglow", "empty", "ward", "red", "night", "station", "dig", "dry", "aquarium", "build", "jam"]] = None
+    envVariant: Optional[Literal["breach", "open", "day", "tvglow", "empty", "ward", "red", "night", "station", "dig", "dry", "aquarium", "build", "jam", "open"]] = None
     spot: Optional[int] = Field(None, ge=0, le=9)
     characters: Optional[list[BeatCharacter]] = None
     extras: Optional[int] = Field(None, ge=0, le=10)
@@ -121,7 +121,7 @@ class Beat(BaseModel):
     textStyle: Literal["title", "cta", "label"] = "label"
     atShop: bool = False
     environment: Optional[Env] = None  # per-beat location
-    envVariant: Optional[Literal["breach", "open", "day", "tvglow", "empty", "ward", "red", "night", "station", "dig", "dry", "aquarium", "build", "jam"]] = None   # troy: torn wall; cave: boulder rolled aside
+    envVariant: Optional[Literal["breach", "open", "day", "tvglow", "empty", "ward", "red", "night", "station", "dig", "dry", "aquarium", "build", "jam", "open"]] = None   # troy: torn wall; cave: boulder rolled aside
     pieces: list[Piece] = Field(default_factory=list)
     extrasRole: Optional[Role] = None
     spot: Optional[int] = Field(None, ge=0, le=9)   # which staging spot of the location (camera side / view direction)

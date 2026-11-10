@@ -449,6 +449,17 @@ export const buildModernRoom = (root: THREE.Object3D, kit: Kit, env: EnvSpec, in
   }
 };
 
+/** a lit shop window: warm interior, shelves of goods, a counter, the shop's colour on the frame */
+const shopWinTex = (name: string, col: string) => ctex("shopwin_" + name, 512, 300, (g, r) => {
+  const w = g.createLinearGradient(0, 0, 0, 300); w.addColorStop(0, "#fff1c9"); w.addColorStop(1, "#f2c98a"); g.fillStyle = w; g.fillRect(0, 0, 512, 300);
+  for (let y = 70; y < 260; y += 60) { g.fillStyle = "#8a5a34"; g.fillRect(20, y, 472, 8); for (let x = 30; x < 480; x += 26) { g.fillStyle = ["#e2453c", "#ffd23f", "#3f6fb5", "#39d98a", "#ff7a1a", "#9a7ac9"][Math.floor(r() * 6)]; g.fillRect(x, y - 30 - r() * 14, 18, 30 + r() * 14); } }
+  g.fillStyle = "rgba(255,255,255,0.25)"; g.beginPath(); g.moveTo(40, 0); g.lineTo(140, 0); g.lineTo(60, 300); g.lineTo(-40, 300); g.fill();
+  g.strokeStyle = col; g.lineWidth = 18; g.strokeRect(0, 0, 512, 300); g.strokeStyle = INKC; g.lineWidth = 6; g.strokeRect(9, 9, 494, 282);
+});
+const openTex = () => ctex("neonOpen", 256, 128, (g) => {
+  g.clearRect(0, 0, 256, 128); g.font = "bold 76px Arial Black, Arial"; g.textAlign = "center";
+  g.lineWidth = 16; g.strokeStyle = "rgba(57,217,138,0.5)"; g.strokeText("OPEN", 128, 92); g.lineWidth = 6; g.strokeStyle = "#d8ffe8"; g.strokeText("OPEN", 128, 92);
+});
 // ---------------- shops: a high street with every shutter down ----------------
 const brickTex = (key: string, col: string) => ctex("brick_" + key, 512, 512, (g, r) => {
   g.fillStyle = "#d8cbb8"; g.fillRect(0, 0, 512, 512);
@@ -485,12 +496,14 @@ export const buildShops = (root: THREE.Object3D, kit: Kit, env: EnvSpec, info: E
     const x = i * 8, [name, col] = shops[(i + 7) % shops.length], bcol = ["#b8643a", "#a85a40", "#c27a4a", "#9a5a3a"][(i + 4) % 4];
     const brick = lam("brickM" + bcol, () => ({ map: rep(brickTex(bcol, bcol), 2, 2) }));
     box(b, brick, x - 3.9, 0, -6, x + 3.9, 7 + (i % 2) * 1.2, 0);
-    const sh = new THREE.Mesh(new THREE.PlaneGeometry(5.2, 3.0), new THREE.MeshLambertMaterial({ map: shutterTex() })); sh.position.set(x - 0.6, 1.6, 0.03); root.add(sh);
+    const open = env.variant === "open";   // a normal busy street: lit shop windows with goods, green OPEN signs
+    const sh = new THREE.Mesh(new THREE.PlaneGeometry(5.2, 3.0), open ? new THREE.MeshBasicMaterial({ map: shopWinTex(name, col), color: 0xeeeeee }) : new THREE.MeshLambertMaterial({ map: shutterTex() }));
+    sh.position.set(x - 0.6, 1.6, 0.03); if (open) sh.layers.set(NOINK); root.add(sh);
     box(b, C("shutterBox", "#6a6f78"), x - 3.25, 3.1, 0, x + 2.05, 3.4, 0.25);
     const door = new THREE.Mesh(new THREE.PlaneGeometry(1.1, 2.4), new THREE.MeshLambertMaterial({ map: shutterTex(), color: "#9aa0a8" })); door.position.set(x + 2.7, 1.2, 0.03); root.add(door);
     const sign = new THREE.Mesh(new THREE.PlaneGeometry(4.6, 1.15), new THREE.MeshBasicMaterial({ map: signTex(name, col), color: 0xeeeeee })); sign.position.set(x - 0.4, 4.2, 0.05); sign.layers.set(NOINK); root.add(sign);
-    const neon = new THREE.Mesh(new THREE.PlaneGeometry(2.6, 1.3), new THREE.MeshBasicMaterial({ map: closedTex(), transparent: true, color: new THREE.Color(2.6, 2.6, 2.6) }));
-    neon.position.set(x - 0.6, 1.9, 0.06); neon.layers.set(NOINK); root.add(neon);
+    const neon = new THREE.Mesh(new THREE.PlaneGeometry(open ? 1.3 : 2.6, open ? 0.65 : 1.3), new THREE.MeshBasicMaterial({ map: open ? openTex() : closedTex(), transparent: true, color: new THREE.Color(2.6, 2.6, 2.6) }));
+    neon.position.set(open ? x + 1.4 : x - 0.6, open ? 2.7 : 1.9, 0.06); neon.layers.set(NOINK); root.add(neon);
     for (const wx of [-2.2, 0, 2.2]) box(b, C("upWin", "#cfe6fa"), x + wx - 0.6, 5.0, 0.0, x + wx + 0.6, 6.2, 0.04);
     box(b, C("awningBar", "#2b2b38"), x - 3.9, 3.55, 0, x + 3.9, 3.7, 0.5);
   }

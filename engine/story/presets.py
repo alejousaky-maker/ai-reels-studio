@@ -152,6 +152,8 @@ def outfit(role: str, i: int, palette: str | None = None) -> dict:
         return {**base, "jacket": palette or "#1d2a50", "pants": "#1d2a50", "boots": "#1d1b22", "hat": "pilot", "cap": "#1d2a50", "tie": "#1d1b22"}
     if role == "sleeper":    # pyjamas + floppy night cap
         return {**base, "jacket": palette or "#8fb8e6", "pants": "#8fb8e6", "boots": "#f2efe8", "stripes": "#f2efe8", "hat": "nightcap", "cap": "#3f6fb5"}
+    if role == "skipper":    # ship captain: white uniform, white peaked cap with gold, neat beard
+        return {**base, "jacket": palette or "#f7f7fa", "pants": "#1d2a50", "boots": "#1d1b22", "hat": "pilot", "cap": "#f7f7fa", "beard": "#5a3b2a", "tie": "#1d2a50"}
     if role == "commuter":   # 1929 suit + flat cap
         return {**base, "jacket": palette or COATS[i % len(COATS)], "pants": "#3a3440", "boots": "#1d1b22", "hat": "cap", "cap": "#5a4a3a", "tie": "#8a2a2a"}
     if role == "wife":

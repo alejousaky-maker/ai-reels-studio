@@ -84,7 +84,9 @@ export const buildTunnel = (root: THREE.Object3D, kit: Kit, env: EnvSpec, info: 
     const tile = lam("stationWall", () => ({ map: ctex("stTile", 512, 512, (g) => { g.fillStyle = "#e9eef2"; g.fillRect(0, 0, 512, 512); g.strokeStyle = "#c2cad2"; g.lineWidth = 4; for (let k = 0; k <= 512; k += 32) { g.beginPath(); g.moveTo(0, k); g.lineTo(512, k); g.stroke(); g.beginPath(); g.moveTo(k, 0); g.lineTo(k, 512); g.stroke(); } g.fillStyle = "#00933c"; g.fillRect(0, 300, 512, 40); }) }));
     b.add(new THREE.PlaneGeometry(2 * W, H).translate(0, H / 2, -D), tile);
     for (const s of [-1, 1]) b.add(new THREE.PlaneGeometry(2 * D + 6, H).rotateY(-s * Math.PI / 2).translate(s * W, H / 2, 3 - 0), tile);
-    box(b, C("stCeiling", "#d9dde3"), -W, H, -D, W, H + 0.3, D + 6);
+    // the ceiling is added straight to the scene (batched geometry crossing a lens' sight lines gets culled)
+    const ceil = new THREE.Mesh(new THREE.PlaneGeometry(2 * W, 2 * D + 6).rotateX(Math.PI / 2).translate(0, H, 3), new THREE.MeshLambertMaterial({ color: "#d9dde3", side: THREE.DoubleSide }));
+    root.add(ceil);
     for (const z of [-8, -3, 2, 7]) for (const x of [-4.5, 4.5]) { b.add(cyl(0.45, 0.45, H, 20), lam("pillar", () => ({ map: marbleTex() })), M4(x, 0, z)); b.add(cyl(0.6, 0.6, 0.3, 20), C("pillarCap", "#c9a227"), M4(x, H - 0.3, z)); }
     for (const x of [-6.5, -2, 2, 6.5]) { const s = new THREE.Mesh(new THREE.BoxGeometry(0.25, 0.06, 2 * D + 4), glow([3.4, 3.4, 3.6])); s.position.set(x, H - 0.05, 2); root.add(s); }
     box(b, C("platformEdge", "#ffd23f"), -W, 0.0, -D, -6.6, 0.03, D + 6);
