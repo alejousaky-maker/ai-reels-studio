@@ -471,7 +471,9 @@ for i, p in enumerate(S.get("pieces") or []):
         side_ = 1 if (lat - lead_lat) >= 0 else -1
         pw_ = {"board": 1.7, "chalkboard": 1.7, "corkboard": 1.7, "blueprint": 1.7, "tv": 2.3, "monitor": 1.4, "calendar": 1.1, "signs": 1.1,
                "screen": 4.6}.get(p["kind"], PSIZE.get(p["kind"], (1.2, 1.2))[0])
-        if hw >= 1.1:   # wide enough: the whole prop fits beside the lead (scaled down if needed), text fully inside the frame
+        if (p.get("scale") or 1.0) > 1.3:   # a deliberately huge prop (the giant TV): keep its size, just keep it beside the lead
+            want = lead_lat + side_ * (0.45 + pw_ * k / 2)
+        elif hw >= 1.1:   # wide enough: the whole prop fits beside the lead (scaled down if needed), text fully inside the frame
             avail = 0.95 * hw - 0.42 - abs(lead_lat) * 0.5
             k = max(0.45, min(k, avail / pw_))
             want = lead_lat + side_ * (0.42 + pw_ * k / 2)
@@ -480,6 +482,12 @@ for i, p in enumerate(S.get("pieces") or []):
             want = max(-0.62 * hw, min(0.62 * hw, lead_lat + side_ * max(0.42 * hw, 0.7)))
         loc = Pm + fwd * depth + right * want
         loc.z = B(0, p.get("y", 0) or 0, 0).z
+    if p["kind"] in ("cardbox", "boxes", "crates") and S["actors"]:
+        a0 = S["actors"][0]
+        lead0 = B(a0["x"], 0, a0["z"])
+        if a0.get("mode") in ("sit", "chair") and (loc - lead0).length < 1.2:   # the box IS his seat: under him, seat height
+            loc = Vector((lead0.x, lead0.y + 0.05, 0))
+            k = 0.47 / 0.7
     cam_xy = B(*pos0)
     yaw = math.atan2(cam_xy.x - loc.x, -(cam_xy.y - loc.y))
     if p["kind"] == "airplane":
@@ -511,7 +519,7 @@ for j, a in enumerate(S["actors"]):
     exprs = sorted({ex(a.get("expr", "neutral"))} | {ex(k["expr"]) for k in a.get("exprKeys") or []})
     hair = o.get("hair") or o.get("cap") or "#3a2a1e"
     yaw0 = math.atan2(cam_pos.x - loc.x, -(cam_pos.y - loc.y))   # face the opening lens
-    m = rig.Stickman(f"a{j}", FACES, loc=tuple(loc), yaw=yaw0, jacket=o.get("jacket", "#5a6170"), hair=hair, exprs=exprs, pants=o.get("pants", "#16131a"))
+    m = rig.Stickman(f"a{j}", FACES, loc=tuple(loc), yaw=yaw0, jacket=o.get("jacket", "#5a6170"), hair=hair, exprs=exprs, pants=o.get("pants", "#16131a"), outfit=o)
     if c.get("scale"):
         m.root.scale = (c["scale"],) * 3
     if a.get("holding"):
