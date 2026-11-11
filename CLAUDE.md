@@ -15,9 +15,9 @@ El usuario habla español: respóndele en español. La narración de los vídeos
 - **Personajes = stickmen 2D con cabeza BLANCA** (nunca tonos de piel), caras muy expresivas como RicksClips3000
   (shorts 5WMQhPObNqQ, Mz72MuPgnGY, VKsamN3Fk4U): párpados a media asta, ceja levantada, boca que habla (`talk`), parpadeo,
   cejas que se mueven, se sientan en sillas (`sitchair`), caminan bien. Voz estilo RicksClips: `am_eric*0.7+am_fenrir*0.3`.
-- **Gente de fondo solo donde es normal que haya gente** (calles, tiendas, estación terminada, puente, mercado, aeropuerto,
-  parque, playa, puerto, almacén): stickmen paseando o charlando detrás. Nunca en sitios privados o vacíos ni cuando la frase
-  dice que no hay nadie. Forzar por plano con `crowd: true/false`.
+- **Gente de fondo SOLO si el prompt de la historia lo pide** (multitudes, "la gente", una escena concurrida en el texto). Nunca
+  la añadimos por nuestra cuenta, ni siquiera en calles o tiendas: `plan.crowd` es `false` por defecto; activarla con `crowd: true`
+  (plan o plano) o `extras` solo cuando el texto lo pida.
 - **Fondos pintados por IA en local** (ComfyUI + FLUX.1-schnell en `tools/ComfyUI`, `plan.backdrops = "ai"`): ver `engine/imagegen.py`.
 - Mantener el estilo aprobado (Demo A / "The School That Couldn't Stop Laughing"): bean-stickmen con cabeza blanca, tinta negra.
 - Comprobar los datos: lo exagerado o cómico va en `verifiedClaims` como `fiction`/`uncertain`; corregir cifras falsas y avisar.

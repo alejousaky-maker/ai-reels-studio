@@ -190,7 +190,7 @@ class Plan(BaseModel):
     graphics: Literal["simple", "full"] = "full"
     # "ai" = every shot gets a backdrop painted locally by ComfyUI / FLUX (cast, pieces and effects stay 3D on top); "3d" = built sets
     backdrops: Literal["3d", "ai"] = "3d"
-    crowd: bool = True   # background stickmen strolling / chatting in busy places (shops, streets, stations, bridges...)
+    crowd: bool = False   # background stickmen only when the story asks for them (user, 2026-11-11): set per plan / per shot
 
     def full_text(self) -> str:
         return " ".join(b.narration for b in self.beats)

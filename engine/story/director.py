@@ -345,7 +345,7 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
             actors.append({"castId": eid, "x": round(Cx + rx * L + ux * Dp, 3), "z": round(Cz + rz * L + uz * Dp, 3),
                            "mode": {"dance": "dance", "walk": "stroll", "march": "march", "sit": "sit"}.get(beat.extrasAction, "stand"),
                            "expr": ["smile", "grin", "nervous", "neutral", "laugh"][e % 5], **({"holding": beat.extrasHolding} if beat.extrasHolding else {})})
-        # ---- background crowd (user, 2026-11-11): busy places are full of stickmen strolling past, crossing, chatting ----
+        # ---- background crowd: ONLY when the story asks (plan.crowd / beat.crowd); never added on our own (user, 2026-11-11) ----
         roles_c = CROWD.get(env_b)
         want = beat.crowd if beat.crowd is not None else (bool(roles_c) and plan.crowd and not EMPTY_WORDS.search(beat.narration)
                                                          and (env_b != "tunnel" or beat.envVariant == "station"))
