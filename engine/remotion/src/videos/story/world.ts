@@ -14,6 +14,7 @@ import { camAt } from "./camera";
 import { buildEnv, EnvInfo } from "./env";
 import { drawProduct, drawSplash } from "./products";
 import { PIECES } from "./pieces";
+import { model3d } from "./models3d";
 import type { Storyboard, SceneSpec, ActorSpec, Expr, LightName, V3 } from "./types";
 
 const hh = (i: number, s = 0) => { const v = Math.sin(i * 127.1 + s * 311.7) * 43758.5453; return v - Math.floor(v); };
@@ -122,6 +123,8 @@ export class StoryWorld {
   private glows: THREE.Sprite[] = [];
   private props: { o: THREE.Object3D; scene: number }[] = [];
   private pieceActors: Actor[] = [];
+  private piece3d: (THREE.Object3D | null)[] = [];
+  private pieceYaw = new Map<number, number>();
   private info: EnvInfo;
   private outfits = new Map<string, { o: Outfit; scale: number; i: number }>();
   private frustum = new THREE.Frustum();
@@ -220,6 +223,15 @@ export class StoryWorld {
         continueRender(handle);
       }, undefined, () => continueRender(handle));
       this.sky.visible = false; this.sunDisc.visible = false;    } else this.info = buildEnv(R, kit, { ...(scn?.env ?? sb.env), lite }, sightLines(sb, sceneIdx));
+    // interiors: a warm key spot from above-front onto the action (a lit stage, darker corners), like a film set
+    const pre = (scn?.env ?? sb.env)?.preset ?? "";
+    if (!scn?.backdrop && ["apartment", "bathroom", "office", "hotel", "cabin", "bedroom", "kitchen", "gameroom", "trading", "clinic", "datacenter", "warehouse"].includes(pre)) {
+      const c0 = camAt(scn, scn.startFrame), L0 = V(...c0.look), P0 = V(...c0.pos);
+      const toCam = P0.clone().sub(L0).setY(0).normalize();
+      const key = new THREE.SpotLight(scn.light === "night" ? "#ffd9a8" : "#fff2dc", scn.light === "night" ? 26 : 16, 14, 0.62, 0.85, 1.6);
+      key.position.set(L0.x + toCam.x * 1.8, 3.6, L0.z + toCam.z * 1.8); key.target.position.set(L0.x, 0.6, L0.z);
+      R.add(key, key.target);
+    }
     // warm light pools on the ground under every lamp (night only): additive, unlit, no ink
     const poolTex = ctex("lampPool", 256, 256, (g) => {
       const gr = g.createRadialGradient(128, 128, 0, 128, 128, 128);
@@ -248,9 +260,13 @@ export class StoryWorld {
     // big painted set pieces of THIS scene (horse, ships, chalkboard, sheep, tents): lit cards sized per piece
     for (const pc of sb.scenes[sceneIdx]?.pieces ?? []) {
       const P = PIECES[pc.kind];
-      if (!P) continue;
-      const k = pc.scale ?? 1, geo = new THREE.PlaneGeometry(P.w * k, P.h * k).translate(0, pc.spin ? 0 : (P.h * k) / 2, 0);   // spinning pieces pivot on their centre
-      this.pieceActors.push(new Actor(R, geo));
+      if (!P) { this.pieceActors.push(null as unknown as Actor); this.piece3d.push(null); continue; }
+      const k = pc.scale ?? 1;
+      // a real 3D model when we have one (rounded, lit, shadowed), else the painted card
+      const m3 = pc.spin ? null : model3d(pc.kind, pc.label ?? "", kit, P.h * k, P.w * k);
+      if (m3) { m3.visible = false; R.add(m3); this.piece3d.push(m3); this.pieceActors.push(null as unknown as Actor); continue; }
+      const geo = new THREE.PlaneGeometry(P.w * k, P.h * k).translate(0, pc.spin ? 0 : (P.h * k) / 2, 0);   // spinning pieces pivot on their centre
+      this.pieceActors.push(new Actor(R, geo)); this.piece3d.push(null);
     }
     sb.cast.forEach((c, i) => this.outfits.set(c.id, { o: { ...c.outfit } as Outfit, scale: c.scale ?? (c.outfit.build === "kid" ? 0.72 : 1), i }));
   }
@@ -501,8 +517,8 @@ export class StoryWorld {
     for (let i = fi; i < this.fxs.length; i++) this.fxs[i].mesh.visible = false;
     // ---- set pieces ----
     (s.pieces ?? []).forEach((pc, i) => {
-      const A = this.pieceActors[i], P = PIECES[pc.kind];
-      if (!A || !P) return;
+      const A = this.pieceActors[i], P = PIECES[pc.kind], M3 = this.piece3d[i];
+      if ((!A && !M3) || !P) return;
       let x = pc.x, z = pc.z, lift = 0;
       if (pc.moveTo && pc.moveFrames) {
         const u = smooth((f - pc.moveFrames[0]) / Math.max(1, pc.moveFrames[1] - pc.moveFrames[0]));
@@ -513,6 +529,17 @@ export class StoryWorld {
         lift = (pc.liftTo - (pc.y ?? 0)) * u * u * u;
       }
       if (pc.shake) { x += pc.shake * 0.045 * Math.sin(f * 2.7); z += pc.shake * 0.03 * Math.cos(f * 3.3); }
+      if (M3) {   // 3D model: turned once toward the scene's opening lens (camera moves then reveal its depth), squash-in entrance
+        let yaw = this.pieceYaw.get(i);
+        if (yaw === undefined) { const c0 = camAt(s, s.startFrame); yaw = Math.atan2(c0.pos[0] - pc.x, c0.pos[2] - pc.z) + (pc.mirror ? 0.35 : 0); this.pieceYaw.set(i, yaw); }
+        const bob = pc.rock ? pc.rock * Math.sin(t * 1.6 + i) : 0;
+        M3.visible = true;
+        M3.position.set(x, (pc.y ?? 0) + lift + bob * 0.15 + (pc.shake ? pc.shake * 0.02 * Math.abs(Math.sin(f * 4.1)) : 0), z);
+        M3.rotation.set(0, yaw, bob * 0.03 + (pc.shake ? pc.shake * 0.04 * Math.sin(f * 5.3) : 0));
+        M3.scale.set(2 - ent, ent, 2 - ent);
+        M3.traverse((o) => { const m = o as THREE.Mesh; if (m.isMesh && !m.layers.isEnabled(NOINK)) m.castShadow = L.actorShadow; });
+        return;
+      }
       const k = pc.scale ?? 1, d = cam.position.distanceTo(this.v.set(x, P.h * k * 0.5, z)) / (k * P.h / 2.2);
       const res = d < 3.2 ? 1.6 : d < 6.5 ? 1.0 : d < 16 ? 0.55 : 0.3;
       const cw = Math.round(P.dw * res), ch = Math.round(P.dh * res);

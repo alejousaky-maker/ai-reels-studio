@@ -188,10 +188,10 @@ def camera_move(kind: str, k0: dict, a: int, b: int, si: int, lead: dict | None)
         start["position"] = r3([P[0] - dx, P[1], P[2] - dz]); start["lookAt"] = r3([L[0] - dx, L[1], L[2] - dz])
         dur = max(12, lead["walkFrames"][1] - a)
     elif kind == "whip":          # whip-pan in: the shot starts swung 35 deg off and snaps onto the subject in 8 frames
-        c, s_ = math.cos(0.6 * sgn), math.sin(0.6 * sgn)
+        c, s_ = math.cos(0.42 * sgn), math.sin(0.42 * sgn)   # a quick, readable swing (not a blur-out)
         vx, vz = L[0] - P[0], L[2] - P[2]
         start["lookAt"] = r3([P[0] + vx * c - vz * s_, L[1], P[2] + vx * s_ + vz * c])
-        dur = 8
+        dur = 10
     else:
         return [k0]
     start["frame"] = a
@@ -233,6 +233,7 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
         if ws0:
             _ANCHOR[id(ws0)] = (ws0[0]["s"], (a0 + 3) if a0 else int(round(ws0[0]["s"] * fps)))
     hot: set[float] = set()   # word start times shown as highlighted captions (impact / effect words)
+    last_whip = [-99]
     for si, (bi, sub_k, beat, a, b, ws) in enumerate(expand_views(plan, spans, fps)):
         env_b = beat.environment or plan.environment
         shop_b, shop_anchor, free = env_setup(env_b)
@@ -351,7 +352,11 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
         # ---- camera ----
         sp = SHOTS[beat.shot]
         tx, tz = pos.get(focus_id, (Cx0, Cz0)) if beat.shot in ("close", "insert", "two_shot", "extreme", "worm", "dutch") else (Cx0, Cz0)
-        if beat.shot == "insert":   # product insert: the object sits 1.1 m in front of the subject, the subject stays soft behind it
+        on_pc = next((p_ for p_ in beat.pieces if p_.where == "on"), None)
+        on_w, on_h = ((PIECE_SIZE.get(on_pc.kind, (1.0, 1.0))[0] * (on_pc.scale or 1.0), PIECE_SIZE.get(on_pc.kind, (1.0, 1.0))[1] * (on_pc.scale or 1.0)) if on_pc else (0.0, 0.0))
+        if beat.shot == "insert" and on_pc:   # set-piece insert: frame the whole 3D object (it stands 0.35 m in front of the subject)
+            tx, tz = tx - ux * 0.35, tz - uz * 0.35
+        elif beat.shot == "insert":   # product insert: the object sits 1.1 m in front of the subject, the subject stays soft behind it
             tx, tz = tx - ux * 1.1, tz - uz * 1.1
         side_sign = 1 if si % 2 == 0 else -1   # consecutive shots alternate sides (clause cuts never look like a jump cut)
         fscale = scale_of.get(focus_id, 1.0)
@@ -375,6 +380,12 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
             lens_h = p["h"] if shot in ("high", "low", "wide", "worm") else p["h"] * k_h + (1 - k_h) * 0.35
             roll += p.get("roll", 0.0) * (s_sign or 1)
             yo = focus_y   # the lead stands up high (on a pole, hanging from a rocket): lens and aim rise with them
+            if shot == "insert" and on_pc:   # the whole object fills ~70 % of the frame height, seen a little from above
+                py = on_pc.y or 0.0
+                dd2 = max(1.4, on_h * 2.4, on_w * 3.4)   # a 9:16 frame is narrow: fit the width too
+                cx, cz = tx - ux * dd2 + rx * p["side"] * s_sign * on_h, tz - uz * dd2 + rz * p["side"] * s_sign * on_h
+                return {"position": [round(cx, 3), round(py + on_h * 0.72, 3), round(cz, 3)], "lookAt": [round(tx, 3), round(py + on_h * 0.5, 3), round(tz, 3)],
+                        "fov": p["fov"], "roll": round(roll, 4)}
             return {"position": [round(cx, 3), round(lens_h + yo, 3), round(cz, 3)], "lookAt": [round(tx, 3), round(p["lh"] * k_h + yo, 3), round(tz, 3)], "fov": p["fov"], "roll": round(roll, 4)}
 
         keys = [{"frame": a, **frame_at(beat.shot, side_sign)}]
@@ -404,7 +415,13 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
         dur_s = (b - a) / fps
         impact = word_frame(ws, beat.impactWord, fps)
         if beat.camMove:
-            keys = camera_move(beat.camMove, keys[0], a, b, si, actors[0] if actors else None)
+            # transitions only where they count: a whip-pan at most every 4th shot and never twice running (else a dolly-in)
+            mv = beat.camMove
+            if mv == "whip" and (si - last_whip[0] < 4):
+                mv = "push"
+            if mv == "whip":
+                last_whip[0] = si
+            keys = camera_move(mv, keys[0], a, b, si, actors[0] if actors else None)
         elif dur_s > 2.6:
             k1 = impact if impact and impact > a + 20 else a + int(0.55 * (b - a))
             k1 = min(k1, b - 18)

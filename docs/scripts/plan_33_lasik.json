@@ -26,7 +26,6 @@
     {
      "kind": "eye",
      "where": "on",
-     "y": 0.55,
      "label": "flap"
     }
    ],
@@ -46,6 +45,8 @@
       {
        "kind": "eye",
        "where": "left",
+       "scale": 1.4,
+       "y": 0.6,
        "label": "flap"
       }
      ],
@@ -84,7 +85,6 @@
       {
        "kind": "eye",
        "where": "on",
-       "y": 0.55,
        "label": "blur"
       }
      ],
@@ -157,7 +157,6 @@
       {
        "kind": "eye",
        "where": "on",
-       "y": 0.55,
        "label": "dots"
       }
      ],
@@ -181,7 +180,6 @@
     {
      "kind": "eye",
      "where": "on",
-     "y": 0.55,
      "label": "laser"
     }
    ],
@@ -247,7 +245,6 @@
       {
        "kind": "eye",
        "where": "on",
-       "y": 0.55,
        "label": "check"
       }
      ],
