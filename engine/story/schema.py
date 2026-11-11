@@ -16,14 +16,14 @@ Mood = Literal["whimsical", "curious", "tense", "warm", "upbeat"]
 Product = Literal["coffee", "croissant", "bread", "cake", "lightbulb", "question", "exclaim", "heart", "clock", "book", "note", "scroll", "map", "globe", "wine", "spear", "stake", "phone", "tablet", "wifi", "key", "camera", "card", "fish", "receipt", "box",
                   "snake", "coins", "mic", "earbuds", "gpsmap", "suitcase", "folder", "ticket", "controller", "can", "pizza",
                   "thermometer", "moth", "cash", "noodles", "extinguisher", "potato", "battery", "diploma", "sicknote", "router",
-                  "newspaper", "pickaxe", "shovel", "bagel", "lettuce", "pillow", "wrench", "check", "trident", "clipboard", "gavel", "envelope", "cutlass", "goldcoin", "plug", "fryingpan", "plate", "grass", "magnifier", "usb", "poolring", "flamingo", "badge"]
+                  "newspaper", "pickaxe", "shovel", "bagel", "lettuce", "pillow", "wrench", "check", "trident", "clipboard", "gavel", "envelope", "cutlass", "goldcoin", "plug", "fryingpan", "plate", "grass", "magnifier", "usb", "poolring", "flamingo", "badge", "bitcoin", "glasses", "leaf"]
 Role = Literal["villager_woman", "villager_man", "kid", "official", "musician", "baker", "barista", "scholar", "customer", "elder", "worker",
               "explorer", "king", "queen", "sailor", "islander", "greek", "hero", "trojan", "prisoner", "giant",
               "businessman", "boss", "woman", "towelguy", "lawyer", "fisher", "tourist",
               "soldier", "major", "emu", "farmer", "caesar", "pirate", "captain", "raj_official", "local", "athlete",
               "hoodie", "robe", "groom", "bride", "guest", "pajamas", "gamer",
               "streamer", "broker", "doctor", "technician", "esports", "oldgamer", "graduate", "teen", "officeguy", "bathrobe", "brokeguy", "wife", "capgamer",
-              "engineer", "accountant", "driver", "cop", "chef", "stocker", "ballerina", "tollman", "pilot", "sleeper", "commuter", "skipper", "piratecaptain", "guard", "detective", "spy", "agent", "girlfriend"]
+              "engineer", "accountant", "driver", "cop", "chef", "stocker", "ballerina", "tollman", "pilot", "sleeper", "commuter", "skipper", "piratecaptain", "guard", "detective", "spy", "agent", "girlfriend", "retroeng", "surgeon", "patient"]
 Env = Literal["village_square", "park", "street", "market", "interior", "harbour", "beach", "ocean", "troy", "cave", "throne",
               "apartment", "bathroom", "office", "hotel", "airport", "suburb", "lake", "resort",
               "outback", "cabin", "bedroom", "kitchen", "banquet", "gameroom", "shops", "trading", "clinic", "datacenter", "tunnel", "warehouse", "canal", "island", "bridge"]
@@ -32,7 +32,7 @@ PieceKind = Literal["horse", "ship", "galley", "chalkboard", "sheep", "tent", "s
                     "cryo", "redarrow", "console", "sofa", "fridge", "bed", "doghouse", "tv", "calendar", "hospitalbed", "heartmonitor",
                     "pole", "monitor", "cardbox", "desk", "rack", "signs", "ticker",
                     "semi", "forklift", "fruitpile", "containership", "tugboat", "steamshovel", "mosquito", "mixer", "airplane", "excavator",
-                    "rockpile", "tetrapods", "departures", "escalator", "pipes", "cashcounter", "blueprint", "subwaymap", "ribbon", "oldcar", "partybus", "plantpot", "corkboard"]
+                    "rockpile", "tetrapods", "departures", "escalator", "pipes", "cashcounter", "blueprint", "subwaymap", "ribbon", "oldcar", "partybus", "plantpot", "corkboard", "vending", "greenarrow", "glasscase", "eye", "laserarm", "tubetv", "brownbox", "wallet"]
 
 
 class Piece(BaseModel):
@@ -86,7 +86,7 @@ class SubShot(BaseModel):
     shot: Optional[Shot] = None
     light: Optional[Light] = None
     environment: Optional[Env] = None
-    envVariant: Optional[Literal["breach", "open", "day", "tvglow", "empty", "ward", "red", "night", "station", "dig", "dry", "aquarium", "build", "jam", "candles", "flood", "lasers", "vault", "hq"]] = None
+    envVariant: Optional[Literal["breach", "open", "day", "tvglow", "empty", "ward", "red", "night", "station", "dig", "dry", "aquarium", "build", "jam", "candles", "flood", "lasers", "vault", "hq", "retro", "surgery"]] = None
     spot: Optional[int] = Field(None, ge=0, le=9)
     characters: Optional[list[BeatCharacter]] = None
     extras: Optional[int] = Field(None, ge=0, le=10)
@@ -125,7 +125,7 @@ class Beat(BaseModel):
     textStyle: Literal["title", "cta", "label"] = "label"
     atShop: bool = False
     environment: Optional[Env] = None  # per-beat location
-    envVariant: Optional[Literal["breach", "open", "day", "tvglow", "empty", "ward", "red", "night", "station", "dig", "dry", "aquarium", "build", "jam", "candles", "flood", "lasers", "vault", "hq"]] = None   # troy: torn wall; cave: boulder rolled aside
+    envVariant: Optional[Literal["breach", "open", "day", "tvglow", "empty", "ward", "red", "night", "station", "dig", "dry", "aquarium", "build", "jam", "candles", "flood", "lasers", "vault", "hq", "retro", "surgery"]] = None   # troy: torn wall; cave: boulder rolled aside
     pieces: list[Piece] = Field(default_factory=list)
     extrasRole: Optional[Role] = None
     spot: Optional[int] = Field(None, ge=0, le=9)   # which staging spot of the location (camera side / view direction)

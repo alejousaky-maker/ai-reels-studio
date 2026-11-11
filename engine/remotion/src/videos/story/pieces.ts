@@ -687,6 +687,91 @@ const partybus = (p: Pen) => {   // a flying party bus under a striped hot-air b
   for (const [x, y] of [[360, 860], [520, 920], [660, 870]] as const) { p.ell(x, y, 34, 40, "#c8a06a", 7); p.ell(x, y - 6, 14, 14, "#ffd23f", 0); }
 };
 
+// ---------------- scripts 31-33: crypto pizza, the first console, LASIK ----------------
+const vending = (p: Pen, label: string) => {   // snack vending machine; "reject" = a coin flying back out of the slot
+  p.poly(rr(30, 30, 470, 980, 18), "#c8323a", 12);
+  p.poly(rr(60, 70, 330, 760, 8), "#cfe6f2", 8);
+  for (let r = 0; r < 5; r++) for (let c = 0; c < 3; c++) { const x = 85 + c * 82, y = 100 + r * 130; p.poly(rr(x, y, x + 64, y + 80, 8), ["#ffd23f", "#39d98a", "#ff7a1a", "#3f6fb5", "#ff4fa0"][(r + c) % 5], 6); p.stroke([[x - 5, y + 96], [x + 70, y + 96]], 6, "#9aa4ad"); }
+  p.poly(rr(355, 120, 445, 360, 8), "#2b2b38", 7);
+  for (let k = 0; k < 9; k++) p.poly(rr(368 + (k % 3) * 26, 140 + Math.floor(k / 3) * 34, 388 + (k % 3) * 26, 162 + Math.floor(k / 3) * 34, 4), "#c9ccd2", 3);
+  p.poly(rr(380, 400, 420, 470, 6), "#1d1b22", 6); p.stroke([[400, 412], [400, 458]], 6, "#9aa4ad");   // coin slot
+  p.poly(rr(70, 800, 330, 900, 10), "#1d1b22", 8);
+  text(p, "SNACKS", 250, 1000 - 40, 44, "#ffffff");
+  if (label === "reject") { p.ell(470, 330, 46, 46, "#ffd23f", 8); text(p, "B", 470, 348, 52, "#c98a00"); for (const [a, b] of [[[430, 420], [470, 380]], [[440, 445], [500, 410]]] as [P2, P2][]) p.stroke([a, b], 6, "#ffffff"); }
+};
+const greenarrow = (p: Pen, label: string) => {   // the giant green price arrow shooting up through the roof
+  p.poly([[180, 980], [320, 980], [420, 520], [560, 560], [560, 60], [200, 330], [330, 370]], "#39d98a", 14);
+  p.poly([[210, 950], [290, 950], [330, 760]], "rgba(255,255,255,0.35)", 0);
+  for (const [x, y, r] of [[470, 40, 40], [600, 90, 30], [380, 70, 34], [640, 20, 22]] as const) p.poly([[x - r, y], [x, y - r * 0.8], [x + r, y], [x, y + r * 0.5]], "#8a6a4a", 6);
+  if (label) text(p, label, 300, 760, 90, "#ffffff");
+};
+const glasscase = (p: Pen, label: string) => {   // museum case on a gold plinth: a moldy pizza crust on red velvet
+  p.poly(rr(80, 600, 520, 880, 10), "#e8b83a", 10); p.poly(rr(60, 860, 540, 900, 8), "#c9a227", 8);
+  p.poly(rr(110, 520, 490, 610, 8), "#a8202a", 8);
+  p.poly([[180, 560], [430, 540], [450, 570], [200, 590]], "#d9a35a", 8);                       // the crust
+  for (const [x, y] of [[230, 568], [300, 560], [380, 556], [410, 564]] as const) p.ell(x, y, 16, 9, "#7fae5a", 0);   // mold
+  p.poly(rr(100, 160, 500, 615, 10), "rgba(200,235,255,0.28)", 9);
+  p.stroke([[150, 200], [230, 420]], 10, "rgba(255,255,255,0.7)"); p.stroke([[190, 190], [260, 380]], 6, "rgba(255,255,255,0.5)");
+  p.poly(rr(90, 140, 510, 175, 6), "#c9a227", 7);
+  text(p, label || "$800,000,000", 300, 770, 52, "#5a3b1a");
+};
+const eye = (p: Pen, label: string) => {   // giant eyeball, side-front: "flap" hood propped open, "dots" laser trapdoor circle, "laser" UV sculpting, "check" sealed, "blur" light missing
+  const m = label || "";
+  p.ell(500, 520, 420, 420, "#ffffff", 14);
+  for (const [a, b] of [[[120, 420], [260, 470]], [[150, 650], [270, 600]], [[860, 380], [740, 450]], [[850, 680], [730, 620]]] as [P2, P2][]) p.stroke([a, b], 6, "#e2453c");   // veins
+  p.ell(560, 520, 220, 220, "#3f8fd0", 10); p.ell(560, 520, 110, 110, "#1d1b22", 0); p.ell(610, 470, 40, 40, "#ffffff", 0);
+  if (m === "blur") { p.stroke([[1000, 380], [700, 470], [380, 640]], 22, "#ffe14d"); p.ell(330, 650, 34, 34, "#e2453c", 8); p.stroke([[300, 560], [380, 620]], 10, "#e2453c"); p.stroke([[380, 560], [300, 620]], 10, "#e2453c"); }
+  if (m === "dots") for (let k = 0; k < 28; k++) { const a = (k / 28) * Math.PI * 2; p.dot(560 + 250 * Math.cos(a), 520 + 250 * Math.sin(a), 10, "#ff3b3b"); }
+  if (m === "flap") {   // the clear flap lifted like a car hood, a tiny prop rod holding it
+    p.poly([[330, 330], [800, 300], [860, 120], [380, 140]], "rgba(200,235,255,0.55)", 9);
+    p.stroke([[700, 420], [760, 200]], 10, "#9aa4ad");
+  }
+  if (m === "laser") { for (let k = 0; k < 6; k++) p.stroke([[420 + k * 60, -20], [500 + k * 22, 420]], 12, "#5fd8ff"); p.ell(560, 470, 200, 60, "rgba(140,230,255,0.6)", 0); }
+  if (m === "check") { p.ell(230, 230, 110, 110, "#39d98a", 10); p.stroke([[180, 235], [220, 280], [290, 190]], 26, "#ffffff"); }
+};
+const laserarm = (p: Pen, label: string) => {   // futuristic surgical laser on an articulated arm
+  p.poly(rr(140, 860, 560, 980, 20), "#e9ecef", 10);
+  p.stroke([[350, 860], [350, 520]], 60, "#c9d2da"); p.ell(350, 520, 60, 60, "#9aa4ad", 9);
+  p.stroke([[350, 520], [600, 300]], 50, "#e9ecef"); p.ell(600, 300, 50, 50, "#9aa4ad", 9);
+  p.poly(rr(520, 300, 690, 480, 24), "#f7f7fa", 10);
+  const beam = label === "red" ? "#ff3b3b" : "#5fd8ff";
+  p.ell(605, 490, 40, 22, beam, 7); p.stroke([[605, 510], [605, 1000]], 16, beam);
+  p.poly(rr(170, 880, 330, 940, 8), "#1d1b22", 5); text(p, "UV 193", 250, 925, 40, "#5fd8ff");
+};
+const tubetv = (p: Pen, label: string) => {   // 1960s wooden console TV on legs: "static", "dots" (two blocks + a line), "field" (taped green overlay)
+  p.poly(rr(60, 120, 840, 760, 30), "#8a5a34", 12);
+  for (let y = 150; y < 740; y += 36) p.stroke([[80, y], [820, y + 4]], 4, "rgba(60,35,20,0.4)");
+  for (const x of [140, 760]) p.stroke([[x, 760], [x + (x < 450 ? -30 : 30), 890]], 18, "#5a3b2a");
+  const scr = rr(110, 170, 620, 600, 70);
+  p.poly(scr, "#1d1d22", 10);
+  p.clip(scr, () => {
+    const g = p.g, m = label || "static";
+    if (m === "static") { for (let i = 0; i < 1400; i++) { const v = (i * 97) % 255; g.fillStyle = `rgb(${v},${v},${v})`; g.fillRect(110 + ((i * 53) % 510), 170 + ((i * 131) % 430), 9, 9); } }
+    else {
+      g.fillStyle = m === "field" ? "#2f7a3a" : "#121216"; g.fillRect(110, 170, 510, 430);
+      if (m === "field") { g.strokeStyle = "#ffffff"; g.lineWidth = 6; for (let x = 170; x < 620; x += 70) { g.beginPath(); g.moveTo(x, 180); g.lineTo(x, 590); g.stroke(); } }
+      g.fillStyle = "#ffffff"; g.fillRect(190, 330, 28, 28); g.fillRect(500, 400, 28, 28); g.fillRect(355, 180, 10, 410);
+    }
+  });
+  p.arc(365, 385, 280, 240, 205, 245, 10, "rgba(255,255,255,0.35)");
+  if (label === "field") for (const [x, y] of [[120, 175], [590, 175], [120, 570], [590, 570]] as const) p.poly([[x - 30, y - 12], [x + 40, y - 12], [x + 40, y + 16], [x - 30, y + 16]], "rgba(255,240,180,0.85)", 4);   // tape
+  for (const y of [260, 400]) { p.ell(730, y, 50, 50, "#c9a227", 8); p.stroke([[730, y], [760, y - 30]], 8, "#5a3b2a"); }
+  p.poly(rr(680, 500, 790, 700, 10), "#5a3b2a", 6);
+};
+const brownbox = (p: Pen, label: string) => {   // the wood-grain prototype console with knobs, switches and two wired controllers
+  p.poly(rr(60, 60, 640, 300, 14), "#a0703e", 10);
+  for (let y = 80; y < 290; y += 22) p.stroke([[70, y], [630, y + 3]], 3, "rgba(70,40,20,0.45)");
+  for (let k = 0; k < 6; k++) { p.ell(130 + k * 80, 190, 20, 20, "#e9ecef", 6); p.dot(130 + k * 80, 190, 5, "#2b2b38"); }
+  if (label === "open") { p.poly(rr(140, 90, 560, 160, 6), "#2f6a3a", 6); for (let k = 0; k < 7; k++) p.stroke([[160 + k * 55, 120], [200 + k * 50, 230], [180 + k * 52, 290]], 6, ["#e2453c", "#ffd23f", "#3f6fb5"][k % 3]); }
+  for (const x of [120, 560]) { p.stroke([[x, 300], [x - 20, 340], [x + 10, 360]], 6, "#1d1b22"); p.poly(rr(x - 50, 330, x + 50, 390, 10), "#7a4f33", 6); p.ell(x, 345, 12, 12, "#e9ecef", 4); }
+};
+const wallet = (p: Pen) => {   // an open, completely empty leather wallet
+  p.poly(rr(40, 120, 460, 380, 24), "#6b4a32", 10);
+  p.poly(rr(70, 150, 430, 250, 10), "#5a3b2a", 6);
+  p.stroke([[250, 130], [250, 370]], 6, "#4a3020");
+  for (const x of [130, 370]) p.poly(rr(x - 60, 270, x + 60, 340, 8), "#7a5a3e", 5);
+};
+
 export const PIECES: Record<PieceKind, { dw: number; dh: number; w: number; h: number; draw: (p: Pen, label: string) => void }> = {
   horse: { dw: 1000, dh: 1000, w: 8.0, h: 8.0, draw: horse },
   ship: { dw: 1250, dh: 1200, w: 14.0, h: 13.4, draw: (p, label) => ship(p, false, label) },
@@ -751,5 +836,13 @@ export const PIECES: Record<PieceKind, { dw: number; dh: number; w: number; h: n
   partybus: { dw: 1000, dh: 960, w: 6.0, h: 5.76, draw: partybus },
   plantpot: { dw: 500, dh: 660, w: 1.3, h: 1.72, draw: plantpot },
   corkboard: { dw: 1000, dh: 700, w: 3.0, h: 2.1, draw: corkboard },
+  vending: { dw: 520, dh: 1000, w: 1.25, h: 2.4, draw: vending },
+  greenarrow: { dw: 700, dh: 1000, w: 3.5, h: 5.0, draw: greenarrow },
+  glasscase: { dw: 600, dh: 900, w: 1.2, h: 1.8, draw: glasscase },
+  eye: { dw: 1000, dh: 1000, w: 1.3, h: 1.3, draw: eye },
+  laserarm: { dw: 700, dh: 1000, w: 1.6, h: 2.3, draw: laserarm },
+  tubetv: { dw: 900, dh: 900, w: 1.5, h: 1.5, draw: tubetv },
+  brownbox: { dw: 700, dh: 400, w: 1.2, h: 0.69, draw: brownbox },
+  wallet: { dw: 500, dh: 400, w: 0.9, h: 0.72, draw: (p) => wallet(p) },
 };
 export { mix };

@@ -494,8 +494,29 @@ export const drawProduct = (p: Pen, kind: ProductKind, col = "#c8553d") => {
       p.stroke([[150, 270], [250, 240]], 12, "#fff3c0"); p.stroke([[150, 240], [250, 270]], 12, "#fff3c0");
       break;
     }
+    case "bitcoin": {   // a glowing gold crypto coin (generic "B", no logo)
+      p.ell(200, 200, 175, 175, "rgba(255,210,63,0.25)", 0);
+      p.ell(200, 200, 150, 150, "#ffb020", 10); p.ell(200, 200, 118, 118, "#ffc94a", 6);
+      text2(p, "B", 200, 255, 170, "#ffffff");
+      p.stroke([[185, 70], [185, 330]], 12, "#ffffff"); p.stroke([[225, 70], [225, 330]], 12, "#ffffff");
+      break;
+    }
+    case "glasses": {   // thick nerd glasses with coke-bottle lenses
+      for (const x of [110, 290]) { p.ell(x, 200, 85, 75, "rgba(200,235,255,0.6)", 18); p.arc(x - 20, 180, 45, 35, 200, 260, 8, "rgba(255,255,255,0.9)"); }
+      p.stroke([[195, 190], [205, 190]], 16, "#1d1b22");
+      break;
+    }
+    case "leaf": {   // one crisp green leaf with every vein visible
+      p.poly([[80, 330], [120, 160], [230, 70], [340, 60], [320, 170], [230, 290]], "#4fae4a", 9);
+      p.stroke([[80, 330], [320, 75]], 7, "#2f7a3a");
+      for (let k = 1; k < 6; k++) { const x = 80 + k * 42, y = 330 - k * 46; p.stroke([[x, y], [x - 20 + k * 6, y - 60]], 4, "#2f7a3a"); p.stroke([[x, y], [x + 50, y + 10]], 4, "#2f7a3a"); }
+      break;
+    }
     default: break;
   }
+};
+const text2 = (p: Pen, s: string, x: number, y: number, size: number, col: string) => {
+  const g = p.g; g.fillStyle = col; g.font = `bold ${size}px Arial Black, Arial`; g.textAlign = "center"; g.fillText(s, x, y);
 };
 
 /** liquid splash crown on an 800 x 800 canvas (any colour: water, molasses, mud, chocolate); t in 0..1 */

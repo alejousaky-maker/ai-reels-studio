@@ -1,0 +1,378 @@
+{
+ "title": "A Bored Engineer Invented Gaming",
+ "environment": "office",
+ "seed": 218,
+ "cast": [
+  {
+   "id": "ralph",
+   "name": "Engineer",
+   "role": "retroeng"
+  },
+  {
+   "id": "boss",
+   "name": "Boss",
+   "role": "boss"
+  },
+  {
+   "id": "dad",
+   "name": "Dad",
+   "role": "officeguy"
+  },
+  {
+   "id": "mom",
+   "name": "Mom",
+   "role": "wife"
+  },
+  {
+   "id": "kid",
+   "name": "Kid",
+   "role": "kid"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "The first home video game console wasn't invented by a toy company. It was dreamed up by an engineer at a military defense contractor.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "ralph",
+     "expr": "sweat"
+    }
+   ],
+   "impactWord": "military",
+   "environment": "office",
+   "envVariant": "retro",
+   "pieces": [
+    {
+     "kind": "tubetv",
+     "where": "left",
+     "label": "dots"
+    }
+   ],
+   "camMove": "whip",
+   "shots": [
+    {
+     "at": "dreamed",
+     "shot": "two_shot",
+     "characters": [
+      {
+       "id": "ralph",
+       "expr": "nervous"
+      },
+      {
+       "id": "boss",
+       "action": "walk",
+       "expr": "skeptical"
+      }
+     ],
+     "focus": "boss",
+     "pieces": [
+      {
+       "kind": "blueprint",
+       "where": "left",
+       "label": "RADAR"
+      }
+     ],
+     "camMove": "truck_right"
+    },
+    {
+     "at": "military",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "ralph",
+       "expr": "smug"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "In 1966, tens of millions of American homes had a TV, but all you could do was sit and stare at a handful of channels.",
+   "shot": "wide",
+   "light": "night",
+   "characters": [
+    {
+     "id": "dad",
+     "action": "sitchair",
+     "expr": "bored"
+    },
+    {
+     "id": "mom",
+     "action": "sitchair",
+     "expr": "bored"
+    },
+    {
+     "id": "kid",
+     "action": "sit",
+     "expr": "sleepy"
+    }
+   ],
+   "environment": "apartment",
+   "envVariant": "retro",
+   "pieces": [
+    {
+     "kind": "tubetv",
+     "where": "right",
+     "label": "static"
+    }
+   ],
+   "camMove": "push",
+   "look": "bw",
+   "shots": [
+    {
+     "at": "stare",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "dad",
+       "expr": "bored"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Engineer Ralph Baer realized you could wire a box to the TV and actually control glowing white dots on the screen.",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "ralph",
+     "action": "point",
+     "expr": "starry"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "lightbulb",
+     "word": "realized",
+     "on": "ralph"
+    }
+   ],
+   "environment": "office",
+   "envVariant": "retro",
+   "pieces": [
+    {
+     "kind": "brownbox",
+     "where": "on",
+     "label": "open"
+    }
+   ],
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "control",
+     "shot": "medium",
+     "characters": [
+      {
+       "id": "ralph",
+       "action": "sitchair",
+       "expr": "laugh"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "sparkle",
+       "word": "glowing",
+       "on": "ralph"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "tubetv",
+       "where": "left",
+       "label": "dots"
+      }
+     ],
+     "camMove": "orbit"
+    }
+   ]
+  },
+  {
+   "narration": "His prototype was covered in wood-grain sticker, so it became known as the Brown Box.",
+   "shot": "insert",
+   "mood": "upbeat",
+   "impactWord": "Brown",
+   "text": "THE BROWN BOX",
+   "textStyle": "title",
+   "environment": "office",
+   "envVariant": "retro",
+   "pieces": [
+    {
+     "kind": "brownbox",
+     "where": "on"
+    }
+   ],
+   "camMove": "push"
+  },
+  {
+   "narration": "It was so simple it couldn't draw backgrounds, so players stuck plastic sheets onto the TV glass to fake a hockey rink or a football field.",
+   "characters": [
+    {
+     "id": "ralph",
+     "expr": "proud"
+    }
+   ],
+   "environment": "apartment",
+   "envVariant": "retro",
+   "pieces": [
+    {
+     "kind": "tubetv",
+     "where": "left",
+     "label": "field"
+    }
+   ],
+   "camMove": "whip",
+   "shots": [
+    {
+     "at": "stuck",
+     "shot": "insert",
+     "pieces": [
+      {
+       "kind": "tubetv",
+       "where": "on",
+       "label": "field",
+       "shake": 0.3
+      }
+     ],
+     "camMove": "push"
+    },
+    {
+     "at": "football",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "ralph",
+       "expr": "wink"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Some bosses thought it was a waste of money.",
+   "shot": "two_shot",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "boss",
+     "action": "hips",
+     "expr": "angry"
+    },
+    {
+     "id": "ralph",
+     "action": "shrug",
+     "expr": "nervous"
+    }
+   ],
+   "focus": "boss",
+   "environment": "office",
+   "envVariant": "retro",
+   "camMove": "push"
+  },
+  {
+   "narration": "But in 1972 it became the Magnavox Odyssey, and kick-started an industry now worth nearly two hundred billion dollars a year.",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "ralph",
+     "action": "cheer",
+     "expr": "starry"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "money",
+     "word": "billion",
+     "on": "ralph"
+    }
+   ],
+   "impactWord": "billion",
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "console",
+     "where": "left"
+    }
+   ],
+   "camMove": "crane_up",
+   "shots": [
+    {
+     "at": "industry",
+     "shot": "wide",
+     "characters": [
+      {
+       "id": "ralph",
+       "action": "dance",
+       "expr": "laugh"
+      }
+     ],
+     "camMove": "orbit",
+     "hud": "panel",
+     "hudText": "GAMING TODAY|~$190 BILLION / YEAR"
+    }
+   ]
+  },
+  {
+   "narration": "Every time you play GTA or Fortnite, thank a guy who daydreamed at work in 1966.",
+   "shot": "close",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "ralph",
+     "expr": "wink",
+     "holding": "controller"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "thank",
+     "on": "ralph"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "push"
+  },
+  {
+   "narration": "Tag your squad.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "warm",
+   "transition": "dissolve",
+   "environment": "gameroom",
+   "hud": "outro"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Ralph Baer, an engineer at defense contractor Sanders Associates, conceived a TV game device in 1966.",
+   "status": "verified"
+  },
+  {
+   "text": "The 'Brown Box' prototype (1967-69) was wrapped in wood-grain adhesive; licensed to Magnavox as the Odyssey (1972).",
+   "status": "verified"
+  },
+  {
+   "text": "Odyssey games used translucent plastic overlays stuck to the TV screen (they clung by static).",
+   "status": "verified"
+  },
+  {
+   "text": "US TV households in 1966: ~50+ million ('tens of millions' is safe); three national networks dominated.",
+   "status": "verified"
+  },
+  {
+   "text": "Global games market ~ $180-190 billion per year (2024 estimates).",
+   "status": "verified"
+  },
+  {
+   "text": "Some Sanders managers were sceptical but funded it modestly; 'hiding it from the boss' is comedy."
+  }
+ ]
+}

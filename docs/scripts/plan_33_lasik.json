@@ -1,0 +1,350 @@
+{
+ "title": "They Open Your Eye Like a Car Hood",
+ "environment": "clinic",
+ "seed": 225,
+ "cast": [
+  {
+   "id": "doc",
+   "name": "Surgeon",
+   "role": "surgeon"
+  },
+  {
+   "id": "pat",
+   "name": "Patient",
+   "role": "patient"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "To fix your blurry vision in about ten minutes, doctors open a tiny flap on your eye like the hood of a car, while you're wide awake.",
+   "shot": "insert",
+   "mood": "tense",
+   "impactWord": "hood",
+   "environment": "clinic",
+   "envVariant": "surgery",
+   "pieces": [
+    {
+     "kind": "eye",
+     "where": "on",
+     "y": 0.55,
+     "label": "flap"
+    }
+   ],
+   "camMove": "whip",
+   "shots": [
+    {
+     "at": "doctors",
+     "shot": "medium",
+     "characters": [
+      {
+       "id": "doc",
+       "action": "point",
+       "expr": "smug"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "eye",
+       "where": "left",
+       "label": "flap"
+      }
+     ],
+     "camMove": "truck_right"
+    },
+    {
+     "at": "awake",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "pat",
+       "expr": "scared"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Most blurry vision happens because your cornea is curved the wrong amount, so light lands in the wrong spot.",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "pat",
+     "expr": "squint",
+     "holding": "glasses"
+    }
+   ],
+   "environment": "clinic",
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "light",
+     "shot": "insert",
+     "pieces": [
+      {
+       "kind": "eye",
+       "where": "on",
+       "y": 0.55,
+       "label": "blur"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "With astigmatism, it's shaped more like a football than a basketball.",
+   "shot": "close",
+   "characters": [
+    {
+     "id": "pat",
+     "expr": "confused"
+    }
+   ],
+   "environment": "clinic",
+   "camMove": "orbit",
+   "hud": "panel",
+   "hudText": "CORNEA|FOOTBALL, NOT BASKETBALL"
+  },
+  {
+   "narration": "First come numbing drops, so you feel no pain. Then a laser cuts a microscopic flap with a little hinge, like a trapdoor.",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "pat",
+     "action": "sit",
+     "expr": "relief"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "splash",
+     "word": "drops",
+     "on": "pat"
+    }
+   ],
+   "environment": "clinic",
+   "envVariant": "surgery",
+   "pieces": [
+    {
+     "kind": "hospitalbed"
+    }
+   ],
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "laser",
+     "shot": "wide",
+     "characters": [
+      {
+       "id": "doc",
+       "expr": "proud"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "laserarm",
+       "where": "left",
+       "label": "red"
+      }
+     ],
+     "camMove": "truck_left"
+    },
+    {
+     "at": "trapdoor",
+     "shot": "insert",
+     "pieces": [
+      {
+       "kind": "eye",
+       "where": "on",
+       "y": 0.55,
+       "label": "dots"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Next, an ultraviolet laser fires rapid pulses for a few seconds, vaporizing microscopic layers to reshape the cornea, like carving a contact lens right into your eye.",
+   "shot": "insert",
+   "mood": "tense",
+   "fx": [
+    {
+     "kind": "sparks",
+     "word": "vaporizing"
+    }
+   ],
+   "environment": "clinic",
+   "envVariant": "surgery",
+   "pieces": [
+    {
+     "kind": "eye",
+     "where": "on",
+     "y": 0.55,
+     "label": "laser"
+    }
+   ],
+   "camMove": "push",
+   "hud": "panel",
+   "hudText": "UV LASER|PULSING...",
+   "shots": [
+    {
+     "at": "reshape",
+     "shot": "medium",
+     "characters": [
+      {
+       "id": "doc",
+       "expr": "squint"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "laserarm",
+       "where": "left"
+      }
+     ],
+     "camMove": "orbit"
+    },
+    {
+     "at": "contact",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "pat",
+       "expr": "starry"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "The craziest part? No stitches. They fold the flap back down, and it seals itself by natural suction within minutes.",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "doc",
+     "action": "shrug",
+     "expr": "smug"
+    }
+   ],
+   "impactWord": "stitches",
+   "environment": "clinic",
+   "envVariant": "surgery",
+   "camMove": "whip",
+   "shots": [
+    {
+     "at": "fold",
+     "shot": "insert",
+     "fx": [
+      {
+       "kind": "puff",
+       "word": "suction"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "eye",
+       "where": "on",
+       "y": 0.55,
+       "label": "check"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Many patients see sharply within hours, before their ride home even arrives.",
+   "shot": "wide",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "pat",
+     "expr": "starry",
+     "holding": "leaf"
+    }
+   ],
+   "environment": "park",
+   "camMove": "crane_up",
+   "shots": [
+    {
+     "at": "sharply",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "pat",
+       "expr": "starry",
+       "holding": "leaf"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "sparkle",
+       "word": "sharply",
+       "on": "pat"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Send this to your blindest friend with glasses.",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "pat",
+     "action": "cheer",
+     "expr": "laugh",
+     "holding": "glasses"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "product",
+     "product": "glasses",
+     "word": "glasses",
+     "on": "pat"
+    }
+   ],
+   "environment": "clinic",
+   "camMove": "pull"
+  },
+  {
+   "narration": "Follow for more.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "warm",
+   "transition": "dissolve",
+   "environment": "gameroom",
+   "hud": "outro"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "LASIK takes roughly 10-15 minutes for both eyes; patients are awake with numbing drops.",
+   "status": "verified"
+  },
+  {
+   "text": "A hinged corneal flap is cut with a femtosecond laser or microkeratome, then an excimer (193 nm UV) laser reshapes the stroma.",
+   "status": "verified"
+  },
+  {
+   "text": "Refractive errors come from corneal curvature / eye length; astigmatism = cornea curved more one way (football vs basketball).",
+   "status": "verified"
+  },
+  {
+   "text": "No stitches: the flap adheres by the cornea's natural pump/suction within minutes.",
+   "status": "verified"
+  },
+  {
+   "text": "Vision often improves within hours; full stabilisation takes days to weeks; not everyone is a candidate."
+  },
+  {
+   "text": "'Like a car hood' is an analogy; the flap is ~0.1 mm thin.",
+   "status": "fiction"
+  }
+ ]
+}
