@@ -45,18 +45,17 @@
    "id": "law",
    "name": "Studio lawyer",
    "outfit": {
-    "jacket": "#5a6170",
-    "pants": "#4a4f5a",
+    "jacket": "#2f3f6a",
+    "pants": "#26304f",
     "boots": "#1d1b22",
     "skin": "#fdfcf8",
-    "hat": "longhair",
-    "hair": "#2a201a",
-    "tie": "#c8323a",
-    "dress": "#5a6170"
+    "hat": "hair",
+    "hair": "#3a2a1e",
+    "tie": "#c8323a"
    }
   },
   {
-   "id": "extra0",
+   "id": "extra_streamer_0",
    "name": "",
    "outfit": {
     "jacket": "#1d1b22",
@@ -70,7 +69,7 @@
    }
   },
   {
-   "id": "extra1",
+   "id": "extra_streamer_1",
    "name": "",
    "outfit": {
     "jacket": "#1d1b22",
@@ -84,7 +83,7 @@
    }
   },
   {
-   "id": "extra2",
+   "id": "extra_streamer_2",
    "name": "",
    "outfit": {
     "jacket": "#1d1b22",
@@ -98,7 +97,7 @@
    }
   },
   {
-   "id": "extra3",
+   "id": "extra_streamer_3",
    "name": "",
    "outfit": {
     "jacket": "#1d1b22",
@@ -112,7 +111,7 @@
    }
   },
   {
-   "id": "extra4",
+   "id": "extra_streamer_4",
    "name": "",
    "outfit": {
     "jacket": "#1d1b22",
@@ -126,7 +125,7 @@
    }
   },
   {
-   "id": "extra5",
+   "id": "extra_streamer_5",
    "name": "",
    "outfit": {
     "jacket": "#1d1b22",
@@ -297,7 +296,7 @@
    }
   },
   {
-   "id": "extra6",
+   "id": "extra_guard_6",
    "name": "",
    "outfit": {
     "jacket": "#1d1b22",
@@ -311,7 +310,91 @@
    }
   },
   {
-   "id": "extra7",
+   "id": "extra_guard_7",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#1d1b22",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#1d1b22",
+    "tie": "#1d1b22",
+    "shades": true
+   }
+  },
+  {
+   "id": "extra_guard_0",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#1d1b22",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#1d1b22",
+    "tie": "#1d1b22",
+    "shades": true
+   }
+  },
+  {
+   "id": "extra_guard_1",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#1d1b22",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#1d1b22",
+    "tie": "#1d1b22",
+    "shades": true
+   }
+  },
+  {
+   "id": "extra_guard_2",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#1d1b22",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#1d1b22",
+    "tie": "#1d1b22",
+    "shades": true
+   }
+  },
+  {
+   "id": "extra_guard_3",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#1d1b22",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#1d1b22",
+    "tie": "#1d1b22",
+    "shades": true
+   }
+  },
+  {
+   "id": "extra_guard_4",
+   "name": "",
+   "outfit": {
+    "jacket": "#1d1b22",
+    "pants": "#1d1b22",
+    "boots": "#1d1b22",
+    "skin": "#fdfcf8",
+    "hat": "hair",
+    "hair": "#1d1b22",
+    "tie": "#1d1b22",
+    "shades": true
+   }
+  },
+  {
+   "id": "extra_guard_5",
    "name": "",
    "outfit": {
     "jacket": "#1d1b22",
@@ -394,6 +477,7 @@
      "x": -1.822,
      "z": -3.922,
      "scale": 0.35,
+     "label": "pirate",
      "moveTo": [
       -3.519,
       2.869
@@ -435,12 +519,12 @@
      "frame": 115,
      "position": [
       -4.517,
-      1.6,
+      1.56,
       3.475
      ],
      "lookAt": [
       -3.918,
-      1.6,
+      1.5,
       1.82
      ],
      "fov": 30,
@@ -450,12 +534,12 @@
      "frame": 115,
      "position": [
       -4.277,
-      1.6,
+      1.536,
       2.813
      ],
      "lookAt": [
       -3.918,
-      1.6,
+      1.5,
       1.82
      ],
      "fov": 30,
@@ -485,6 +569,7 @@
      "x": -2.444,
      "z": -4.078,
      "scale": 0.35,
+     "label": "pirate",
      "moveTo": [
       -4.141,
       2.713
@@ -511,7 +596,7 @@
      "dur": 22,
      "at": [
       -3.777,
-      1.891,
+      1.791,
       1.856
      ],
      "size": 0.23445554337723234
@@ -589,6 +674,7 @@
      "x": -2.233,
      "z": -4.025,
      "scale": 0.35,
+     "label": "pirate",
      "moveTo": [
       -3.931,
       2.766
@@ -981,42 +1067,42 @@
      "pose": "up"
     },
     {
-     "castId": "extra0",
+     "castId": "extra_streamer_0",
      "x": 4.0,
      "z": -1.6,
      "mode": "dance",
      "expr": "smile"
     },
     {
-     "castId": "extra1",
+     "castId": "extra_streamer_1",
      "x": 2.9,
      "z": 0.8,
      "mode": "dance",
      "expr": "grin"
     },
     {
-     "castId": "extra2",
+     "castId": "extra_streamer_2",
      "x": 1.8,
      "z": -2.9,
      "mode": "dance",
      "expr": "nervous"
     },
     {
-     "castId": "extra3",
+     "castId": "extra_streamer_3",
      "x": 4.153,
      "z": 1.563,
      "mode": "dance",
      "expr": "neutral"
     },
     {
-     "castId": "extra4",
+     "castId": "extra_streamer_4",
      "x": 2.86,
      "z": -4.06,
      "mode": "dance",
      "expr": "laugh"
     },
     {
-     "castId": "extra5",
+     "castId": "extra_streamer_5",
      "x": 2.379,
      "z": 1.372,
      "mode": "dance",
@@ -1073,12 +1159,12 @@
    "pieces": [
     {
      "kind": "partybus",
-     "x": 0.649,
+     "x": 0.966,
      "z": 0.0,
-     "scale": 0.9,
-     "y": 5.0,
+     "scale": 0.8,
+     "y": 1.8,
      "moveTo": [
-      0.649,
+      0.966,
       -3.0
      ],
      "moveFrames": [
@@ -1227,12 +1313,12 @@
    "pieces": [
     {
      "kind": "partybus",
-     "x": 0.649,
+     "x": 0.966,
      "z": 0.0,
-     "scale": 0.9,
-     "y": 5.0,
+     "scale": 0.8,
+     "y": 1.8,
      "moveTo": [
-      0.649,
+      0.966,
       -3.0
      ],
      "moveFrames": [
@@ -1355,12 +1441,12 @@
      "frame": 808,
      "position": [
       0.18,
-      1.6,
+      1.56,
       2.75
      ],
      "lookAt": [
       0.0,
-      1.6,
+      1.5,
       1.0
      ],
      "fov": 30,
@@ -1370,12 +1456,12 @@
      "frame": 808,
      "position": [
       0.108,
-      1.6,
+      1.536,
       2.05
      ],
      "lookAt": [
       0.0,
-      1.6,
+      1.5,
       1.0
      ],
      "fov": 30,
@@ -2063,12 +2149,12 @@
      "frame": 1543,
      "position": [
       2.808,
-      1.6,
+      1.56,
       2.511
      ],
      "lookAt": [
       2.4,
-      1.6,
+      1.5,
       0.8
      ],
      "fov": 30,
@@ -2106,7 +2192,7 @@
      "dur": 24,
      "at": [
       2.537,
-      1.891,
+      1.791,
       0.752
      ],
      "size": 0.1500515477614287,
@@ -2458,35 +2544,35 @@
    "mood": "tense",
    "actors": [
     {
-     "castId": "extra6",
+     "castId": "extra_guard_6",
      "x": -33.144,
      "z": 10.706,
      "mode": "stand",
      "expr": "smile"
     },
     {
-     "castId": "extra7",
+     "castId": "extra_guard_7",
      "x": -34.0,
      "z": 13.204,
      "mode": "stand",
      "expr": "grin"
     },
     {
-     "castId": "extra0",
+     "castId": "extra_guard_0",
      "x": -34.871,
      "z": 11.123,
      "mode": "stand",
      "expr": "nervous"
     },
     {
-     "castId": "extra1",
+     "castId": "extra_guard_1",
      "x": -32.776,
      "z": 14.388,
      "mode": "stand",
      "expr": "neutral"
     },
     {
-     "castId": "extra2",
+     "castId": "extra_guard_2",
      "x": -33.466,
      "z": 10.828,
      "mode": "stand",
@@ -2554,28 +2640,28 @@
    "mood": "tense",
    "actors": [
     {
-     "castId": "extra3",
+     "castId": "extra_guard_3",
      "x": -33.144,
      "z": 10.706,
      "mode": "stand",
      "expr": "smile"
     },
     {
-     "castId": "extra4",
+     "castId": "extra_guard_4",
      "x": -33.926,
      "z": 12.794,
      "mode": "stand",
      "expr": "grin"
     },
     {
-     "castId": "extra5",
+     "castId": "extra_guard_5",
      "x": -35.463,
      "z": 9.632,
      "mode": "stand",
      "expr": "nervous"
     },
     {
-     "castId": "extra6",
+     "castId": "extra_guard_6",
      "x": -32.495,
      "z": 12.83,
      "mode": "stand",

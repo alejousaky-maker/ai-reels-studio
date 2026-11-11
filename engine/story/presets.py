@@ -165,6 +165,14 @@ def _outfit(role: str, i: int, palette: str | None = None) -> dict:
     if role == "piratecaptain":   # tricorn + eyepatch + tattered brown coat + giant RGB gaming headphones
         return {**base, "jacket": palette or "#7a4f33", "pants": "#2b2b38", "boots": "#1d1b22", "hat": "tricorn", "cap": "#1d1b22", "eyepatch": True,
                 "headset": "#7a3aff", "belt": "#e8b83a", "buttons": "#e8b83a"}
+    if role == "detective":   # trench coat + backwards cap + RGB headphones
+        return {**base, "jacket": palette or "#b8935a", "pants": "#3a3440", "boots": "#3a2a20", "hat": "cap", "cap": "#1d1b22", "capBack": True, "headset": "#7a3aff", "belt": "#7a5a34", "pockets": True}
+    if role == "spy":   # black tactical spy suit, night-vision goggles (shades) over an RGB headset
+        return {**base, "jacket": palette or "#1d1b22", "pants": "#1d1b22", "boots": "#1d1b22", "hat": "hair", "hair": "#1d1b22", "shades": True, "headset": "#39d98a", "pockets": True}
+    if role == "agent":   # federal agent: black suit, white shirt, sunglasses
+        return {**base, "jacket": palette or "#16151b", "pants": "#16151b", "boots": "#1d1b22", "hat": "hair", "hair": "#3a2a1e", "tie": "#16151b", "shades": True}
+    if role == "girlfriend":
+        return {**base, "jacket": palette or "#c8553d", "dress": palette or "#c8553d", "hat": "longhair", "hair": "#5a3b2a"}
     if role == "guard":   # security guard: black suit, sunglasses
         return {**base, "jacket": palette or "#1d1b22", "pants": "#1d1b22", "boots": "#1d1b22", "hat": "hair", "hair": "#1d1b22", "tie": "#1d1b22", "shades": True}
     if role == "skipper":    # ship captain: white uniform, white peaked cap with gold, neat beard
@@ -179,7 +187,7 @@ def _outfit(role: str, i: int, palette: str | None = None) -> dict:
 # world scale per role (kids 0.72 come from their build); a cyclops is ~2.6 x a person
 ROLE_SCALE = {"giant": 2.6}
 # set pieces: world width, height in metres (engine pieces.ts)
-PIECE_SIZE = {"partybus": (6.0, 5.76), "semi": (9.0, 3.2), "forklift": (2.6, 1.85), "fruitpile": (2.4, 1.8), "containership": (36.0, 14.6), "tugboat": (6.0, 3.2),
+PIECE_SIZE = {"partybus": (6.0, 5.76), "plantpot": (1.3, 1.72), "corkboard": (3.0, 2.1), "semi": (9.0, 3.2), "forklift": (2.6, 1.85), "fruitpile": (2.4, 1.8), "containership": (36.0, 14.6), "tugboat": (6.0, 3.2),
               "steamshovel": (6.0, 4.1), "mosquito": (1.6, 1.5), "mixer": (5.0, 2.45), "airplane": (16.0, 5.3), "excavator": (6.0, 3.35),
               "rockpile": (5.0, 3.5), "tetrapods": (6.0, 2.5), "departures": (3.6, 2.3), "escalator": (4.0, 3.36), "pipes": (5.0, 3.2),
               "cashcounter": (1.2, 2.16), "blueprint": (2.2, 2.0), "subwaymap": (3.0, 2.25), "ribbon": (4.0, 2.7), "oldcar": (4.2, 2.6),

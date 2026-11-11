@@ -9,8 +9,10 @@ sys.path.insert(0, os.path.join(HERE, "..", ".."))
 from engine.story.schema import Plan  # noqa: E402
 
 
-def C(id, action="stand", expr="neutral", holding=None, react=None, y=None):
+def C(id, action="stand", expr="neutral", holding=None, react=None, y=None, talk=None):
     d = {"id": id, "action": action, "expr": expr}
+    if talk is not None:
+        d["talk"] = talk
     if holding:
         d["holding"] = holding
     if react:

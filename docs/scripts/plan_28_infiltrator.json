@@ -1,0 +1,281 @@
+{
+ "title": "Harder Than Area 51",
+ "environment": "office",
+ "seed": 125,
+ "cast": [
+  {
+   "id": "spy",
+   "name": "Spy gamer",
+   "role": "spy"
+  },
+  {
+   "id": "grd",
+   "name": "Guard",
+   "role": "guard"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "Getting an early copy of GTA 6 is officially harder than breaking into Area 51.",
+   "shot": "dutch",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "spy",
+     "expr": "smug",
+     "y": 2.5
+    }
+   ],
+   "impactWord": "Area",
+   "environment": "street",
+   "camMove": "crane_up",
+   "backdrop": "a high-security game studio fortress at night with searchlights, barbed wire and a sign GAME STUDIO HQ",
+   "shots": [
+    {
+     "at": "breaking",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "spy",
+       "expr": "evil",
+       "y": 2.5
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "After past leaks, security got so tight that one desperate fan tried sneaking in disguised as an office plant.",
+   "characters": [
+    {
+     "id": "grd",
+     "expr": "skeptical"
+    }
+   ],
+   "environment": "office",
+   "camMove": "push",
+   "backdrop": "a bright modern office hallway with glass doors and potted plants",
+   "shots": [
+    {
+     "at": "disguised",
+     "shot": "wide",
+     "characters": [
+      {
+       "id": "spy",
+       "action": "walk",
+       "expr": "sweat"
+      },
+      {
+       "id": "grd",
+       "expr": "bored"
+      }
+     ],
+     "focus": "spy",
+     "pieces": [
+      {
+       "kind": "plantpot",
+       "where": "on",
+       "dz": -0.1
+      }
+     ],
+     "camMove": "truck_right"
+    },
+    {
+     "at": "plant",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "spy",
+       "expr": "smug"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "plantpot",
+       "where": "on"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "He dodged motion cameras, bribed the janitor with Shark Cards, and backflipped through a hallway of red laser beams.",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "spy",
+     "action": "jump",
+     "expr": "sweat"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparks",
+     "word": "dodged",
+     "on": "spy"
+    }
+   ],
+   "environment": "office",
+   "camMove": "whip",
+   "backdrop": "a dark corridor crisscrossed with glowing red laser beams",
+   "shots": [
+    {
+     "at": "bribed",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "spy",
+       "action": "point",
+       "expr": "wink",
+       "holding": "card"
+      }
+     ],
+     "camMove": "push"
+    },
+    {
+     "at": "backflipped",
+     "shot": "worm",
+     "characters": [
+      {
+       "id": "spy",
+       "action": "jump",
+       "expr": "scared"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "sparks",
+       "word": "laser",
+       "on": "spy"
+      }
+     ],
+     "camMove": "orbit"
+    }
+   ]
+  },
+  {
+   "narration": "Finally, he reached the development room, only to find the game locked inside a ten-ton nuclear vault.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "spy",
+     "expr": "dazed"
+    }
+   ],
+   "impactWord": "vault",
+   "environment": "office",
+   "camMove": "pull",
+   "backdrop": "a massive circular steel bank vault door with padlocks, biometric scanners and two laser turrets, glowing pedestal",
+   "shots": [
+    {
+     "at": "ten-ton",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "spy",
+       "expr": "dazed"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "stars",
+       "word": "vault",
+       "on": "spy"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "He cracked the code, grabbed the golden USB drive, and plugged it in, just to find a Rickroll video from the developers.",
+   "shot": "close",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "spy",
+     "expr": "starry",
+     "holding": "usb"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "golden",
+     "on": "spy"
+    }
+   ],
+   "environment": "office",
+   "camMove": "push",
+   "backdrop": "a vault room with a glowing pedestal",
+   "shots": [
+    {
+     "at": "just",
+     "shot": "medium",
+     "characters": [
+      {
+       "id": "spy",
+       "action": "panic",
+       "expr": "broken"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "burst",
+       "word": "Rickroll",
+       "on": "spy"
+      }
+     ],
+     "impactWord": "Rickroll",
+     "camMove": "whip",
+     "hud": "police"
+    }
+   ]
+  },
+  {
+   "narration": "Looks like we're waiting like everyone else.",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "spy",
+     "action": "fall",
+     "expr": "sad",
+     "holding": "controller"
+    },
+    {
+     "id": "grd",
+     "action": "walk",
+     "expr": "stern"
+    }
+   ],
+   "focus": "spy",
+   "environment": "street",
+   "camMove": "truck_left",
+   "backdrop": "the front door of a fortress-like game studio at night, searchlights"
+  },
+  {
+   "narration": "Send this to a friend who'd risk prison for early access.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "warm",
+   "transition": "dissolve",
+   "environment": "gameroom",
+   "hud": "outro"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Comedy parody about GTA 6 fandom; every event is invented. The studio, agents and developers are generic stickmen.",
+   "status": "fiction"
+  }
+ ],
+ "backdrops": "ai"
+}

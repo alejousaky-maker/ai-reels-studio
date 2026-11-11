@@ -165,11 +165,13 @@ const boxes = (p: Pen) => {
   one(40, 380, 300, 260); one(340, 420, 260, 220); one(120, 160, 260, 220); one(390, 230, 180, 190);
   const g = p.g; g.fillStyle = "#5a3b2a"; g.font = "bold 40px Arial"; g.fillText("HER STUFF", 70, 520);
 };
-const car = (p: Pen, van = false) => {
+const car = (p: Pen, van = false, label = "") => {
+  const taxi = label === "taxi";
   const body: P2[] = van
     ? [[40, 330], [60, 120], [520, 110], [620, 200], [660, 330]]
     : [[30, 330], [50, 250], [180, 230], [260, 150], [500, 150], [580, 230], [670, 250], [680, 330]];
-  p.gradFill(body, van ? "#f2efe8" : "#c8323a", van ? "#c9c4b8" : "#8a2028", LIGHT); p.poly(body, null, 11);
+  p.gradFill(body, van ? "#f2efe8" : taxi ? "#ffd23f" : "#c8323a", van ? "#c9c4b8" : taxi ? "#d9a92a" : "#8a2028", LIGHT); p.poly(body, null, 11);
+  if (taxi) { p.poly(rr(300, 105, 420, 150, 8), "#2b2b38", 6); text(p, "TAXI", 360, 140, 34, "#ffd23f"); for (let x = 60; x < 660; x += 40) p.poly([[x, 280], [x + 20, 280], [x + 20, 300], [x, 300]], (x / 40) % 2 ? "#1d1b22" : "#f7f5f0", 0); }
   if (van) {
     p.poly([[520, 125], [600, 205], [520, 205]], "#8fd0ff", 8);
     const g = p.g; g.fillStyle = "#3f6fb5"; g.font = "bold 58px Arial Black, Arial"; g.fillText("MOVERS", 120, 250);
@@ -329,7 +331,8 @@ const redarrow = (p: Pen) => {   // the giant red stock-crash arrow smashing dow
   for (const [x, y, r] of [[560, 930, 40], [470, 950, 30], [660, 940, 34], [520, 975, 22]] as const) p.poly([[x - r, y], [x, y - r * 0.8], [x + r, y], [x, y + r * 0.5]], "#8a6a4a", 6);
 };
 const consoleBox = (p: Pen, label: string) => {   // a tall white console with black core; "hot" glows, "flames" blasts off
-  const hot = label === "hot" || label === "flames";
+  const hot = label === "hot" || label === "flames" || label === "flag";
+  if (label === "flag") { p.stroke([[480, 300], [560, 240], [580, 120]], 8, "#9aa4ad"); p.poly([[580, 120], [690, 90], [670, 150], [585, 170]], "#ffffff", 6); for (let k = 0; k < 3; k++) p.ell(250 + k * 40, -30 - k * 50, 50 + k * 15, 36 + k * 10, "rgba(30,25,30,0.7)", 0); }
   if (label === "flames") {
     for (const [x, w] of [[220, 70], [380, 70]] as const) {
       p.poly([[x - w, 700], [x + w, 700], [x + w * 0.4, 960], [x, 1000], [x - w * 0.4, 960]], "#ff9a2e", 8);
@@ -660,6 +663,18 @@ const oldcar = (p: Pen) => {   // a 1920s automobile: tall cabin, running board,
   p.ell(690, 280, 18, 18, "#fff1a0", 5);
 };
 
+const plantpot = (p: Pen) => {   // giant terracotta pot with big plastic leaves (a spy hides in it)
+  for (let k = 0; k < 9; k++) { const a = -Math.PI * (0.1 + 0.8 * (k / 8)); p.poly([[250, 330], [250 + Math.cos(a) * 230, 330 + Math.sin(a) * 260], [250 + Math.cos(a + 0.18) * 140, 330 + Math.sin(a + 0.18) * 160]], k % 2 ? "#3f8a3a" : "#5fae5a", 7); }
+  p.poly([[90, 330], [410, 330], [370, 640], [130, 640]], "#c8703e", 10);
+  p.poly([[70, 310], [430, 310], [430, 360], [70, 360]], "#d9844a", 9);
+};
+const corkboard = (p: Pen, label: string) => {   // conspiracy board: photos, sticky notes, red yarn
+  p.poly(rr(20, 20, 980, 680, 12), "#b8864e", 12);
+  const pins: P2[] = [[140, 140], [480, 110], [820, 160], [260, 420], [620, 380], [860, 520], [150, 560]];
+  pins.forEach(([x, y], i) => { p.poly([[x - 70, y - 50], [x + 70, y - 50], [x + 70, y + 50], [x - 70, y + 50]], i % 2 ? "#ffe14d" : "#f7f5f0", 5); p.dot(x, y - 40, 9, "#e2453c"); });
+  for (const [a, b] of [[0, 1], [1, 2], [0, 3], [3, 4], [4, 2], [4, 5], [3, 6], [1, 4]] as const) p.stroke([pins[a], pins[b]], 5, "#e2453c");
+  if (label) text(p, label, 500, 660, 46, "#2b2b38", "Comic Sans MS, Arial");
+};
 const partybus = (p: Pen) => {   // a flying party bus under a striped hot-air balloon, pirate flags, coin bags dropping
   p.ell(500, 230, 230, 200, "#3f6fb5", 10);
   for (let k = 0; k < 6; k++) p.arc(500, 230, 60 + k * 30, 200, 270, 450, 14, k % 2 ? "#ffd23f" : "#e2453c");
@@ -681,7 +696,7 @@ export const PIECES: Record<PieceKind, { dw: number; dh: number; w: number; h: n
   tent: { dw: 900, dh: 660, w: 5.0, h: 3.67, draw: tent },
   scale: { dw: 600, dh: 360, w: 0.75, h: 0.45, draw: scale },
   boxes: { dw: 640, dh: 660, w: 1.9, h: 1.96, draw: boxes },
-  car: { dw: 720, dh: 400, w: 4.5, h: 2.5, draw: (p) => car(p, false) },
+  car: { dw: 720, dh: 400, w: 4.5, h: 2.5, draw: (p, label) => car(p, false, label) },
   van: { dw: 720, dh: 400, w: 5.4, h: 3.0, draw: (p) => car(p, true) },
   poster: { dw: 600, dh: 780, w: 1.9, h: 2.47, draw: poster },
   lewis: { dw: 700, dh: 660, w: 1.7, h: 1.6, draw: lewis },
@@ -734,5 +749,7 @@ export const PIECES: Record<PieceKind, { dw: number; dh: number; w: number; h: n
   ribbon: { dw: 1000, dh: 680, w: 4.0, h: 2.7, draw: ribbon },
   oldcar: { dw: 740, dh: 460, w: 4.2, h: 2.6, draw: oldcar },
   partybus: { dw: 1000, dh: 960, w: 6.0, h: 5.76, draw: partybus },
+  plantpot: { dw: 500, dh: 660, w: 1.3, h: 1.72, draw: plantpot },
+  corkboard: { dw: 1000, dh: 700, w: 3.0, h: 2.1, draw: corkboard },
 };
 export { mix };

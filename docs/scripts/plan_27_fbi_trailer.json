@@ -1,0 +1,311 @@
+{
+ "title": "Gamers vs the FBI",
+ "environment": "gameroom",
+ "seed": 118,
+ "cast": [
+  {
+   "id": "det",
+   "name": "Detective gamer",
+   "role": "detective"
+  },
+  {
+   "id": "fbi",
+   "name": "Agent",
+   "role": "agent"
+  },
+  {
+   "id": "dev",
+   "name": "Developer",
+   "role": "streamer",
+   "palette": "#3f6fb5"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "GTA 6 fans are so desperate for news that they analyzed pixel reflections better than the FBI.",
+   "shot": "extreme",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "det",
+     "action": "point",
+     "expr": "smug"
+    }
+   ],
+   "impactWord": "FBI",
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "monitor",
+     "where": "left",
+     "label": "ENHANCE x9000"
+    }
+   ],
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "analyzed",
+     "shot": "medium",
+     "characters": [
+      {
+       "id": "det",
+       "action": "point",
+       "expr": "skeptical",
+       "holding": "magnifier"
+      }
+     ],
+     "camMove": "truck_right"
+    },
+    {
+     "at": "FBI",
+     "shot": "close",
+     "environment": "office",
+     "characters": [
+      {
+       "id": "fbi",
+       "expr": "shock"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "burst",
+       "word": "FBI",
+       "on": "fbi"
+      }
+     ],
+     "camMove": "whip"
+    }
+   ]
+  },
+  {
+   "narration": "While normal people watched a ninety-second trailer, gamers turned their bedrooms into forensic crime labs.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "det",
+     "expr": "crazy",
+     "holding": "magnifier"
+    }
+   ],
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "corkboard",
+     "label": "IT'S ALL CONNECTED"
+    }
+   ],
+   "camMove": "pull",
+   "backdrop": "a dark bedroom covered wall to wall with red yarn, sticky notes and crushed energy cans",
+   "shots": [
+    {
+     "at": "forensic",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "det",
+       "expr": "crazy",
+       "holding": "magnifier"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "sparkle",
+       "word": "crime",
+       "on": "det"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "One guy counted the exact freckles on a character's neck and cross-referenced the trailer's moon phase with NASA's calendar.",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "det",
+     "action": "point",
+     "expr": "sweat",
+     "holding": "magnifier"
+    }
+   ],
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "board",
+     "where": "right",
+     "label": "14 MOLES|= NOVEMBER"
+    }
+   ],
+   "camMove": "orbit",
+   "shots": [
+    {
+     "at": "moon",
+     "shot": "wide",
+     "characters": [
+      {
+       "id": "det",
+       "action": "point",
+       "expr": "starry"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "calendar",
+       "where": "right",
+       "label": "NOV"
+      }
+     ],
+     "camMove": "crane_up",
+     "backdrop": "a bedroom window at night with a big full moon and a telescope"
+    }
+   ]
+  },
+  {
+   "narration": "Even actual intelligence agents watching through his webcam started taking notes.",
+   "light": "night",
+   "characters": [
+    {
+     "id": "fbi",
+     "expr": "shock",
+     "holding": "clipboard"
+    }
+   ],
+   "environment": "office",
+   "camMove": "push",
+   "backdrop": "a dark surveillance office with many monitors",
+   "shots": [
+    {
+     "at": "notes",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "fbi",
+       "expr": "love",
+       "holding": "clipboard"
+      }
+     ],
+     "camMove": "push",
+     "hud": "panel",
+     "hudText": "NOTE TO SELF|HIRE THIS GUY"
+    }
+   ]
+  },
+  {
+   "narration": "The funniest part? The crazy moon theory actually nailed the release window better than the studio's own marketing team.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "dev",
+     "action": "panic",
+     "expr": "sweat"
+    }
+   ],
+   "extras": 2,
+   "environment": "office",
+   "extrasRole": "streamer",
+   "camMove": "whip",
+   "backdrop": "a game studio meeting room with a whiteboard and a big calendar",
+   "shots": [
+    {
+     "at": "nailed",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "dev",
+       "expr": "broken"
+      }
+     ],
+     "extras": 0,
+     "fx": [
+      {
+       "kind": "burst",
+       "word": "nailed",
+       "on": "dev"
+      }
+     ],
+     "camMove": "push"
+    },
+    {
+     "at": "marketing",
+     "shot": "wide",
+     "characters": [
+      {
+       "id": "dev",
+       "action": "shrug",
+       "expr": "nervous"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "calendar",
+       "where": "left",
+       "label": "RELEASE?"
+      }
+     ],
+     "camMove": "truck_left"
+    }
+   ]
+  },
+  {
+   "narration": "Never underestimate a gamer with zero news and too much free time.",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "det",
+     "action": "fall",
+     "expr": "dazed"
+    }
+   ],
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "snacks",
+     "where": "right",
+     "scale": 1.3
+    }
+   ],
+   "camMove": "crane_up",
+   "shots": [
+    {
+     "at": "too",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "det",
+       "expr": "dazed"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "stars",
+       "word": "time",
+       "on": "det"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": "Tag your most delusional friend.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "warm",
+   "transition": "dissolve",
+   "environment": "gameroom",
+   "hud": "outro"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Comedy parody about GTA 6 fandom; every event is invented. The studio, agents and developers are generic stickmen.",
+   "status": "fiction"
+  }
+ ],
+ "backdrops": "ai"
+}

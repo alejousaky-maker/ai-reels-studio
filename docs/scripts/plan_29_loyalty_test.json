@@ -1,0 +1,246 @@
+{
+ "title": "It's Either That Game or Me",
+ "environment": "apartment",
+ "seed": 132,
+ "cast": [
+  {
+   "id": "me",
+   "name": "Gamer",
+   "role": "streamer"
+  },
+  {
+   "id": "gf",
+   "name": "Girlfriend",
+   "role": "girlfriend"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "GTA 6 is about to cause more breakups in one weekend than every dating app in history combined.",
+   "shot": "two_shot",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "love",
+     "holding": "box"
+    },
+    {
+     "id": "gf",
+     "action": "hips",
+     "expr": "angry"
+    }
+   ],
+   "focus": "me",
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "breakups",
+     "on": "gf"
+    }
+   ],
+   "impactWord": "breakups",
+   "environment": "apartment",
+   "camMove": "whip",
+   "shots": [
+    {
+     "at": "dating",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "gf",
+       "expr": "angry"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "The moment the game boots up, millions of girlfriends will drop the ultimate trap: \"It's either that game, or me.\"",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "gf",
+     "action": "point",
+     "expr": "angry",
+     "talk": true
+    }
+   ],
+   "environment": "apartment",
+   "pieces": [
+    {
+     "kind": "tv",
+     "where": "left",
+     "label": "~game"
+    }
+   ],
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "either",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "gf",
+       "expr": "angry",
+       "talk": true
+      }
+     ],
+     "impactWord": "me",
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Our hero looks at his three-year relationship, then looks at twelve years of waiting for Vice City.",
+   "shot": "extreme",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "skeptical"
+    }
+   ],
+   "environment": "apartment",
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "twelve",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "starry"
+      }
+     ],
+     "camMove": "orbit",
+     "hud": "panel",
+     "hudText": "3 YEARS  vs  12 YEARS|DECISION: OBVIOUS"
+    }
+   ]
+  },
+  {
+   "narration": "Instead of arguing, he becomes the most helpful gentleman on Earth, packing her bags in four seconds flat.",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "run",
+     "expr": "proud",
+     "holding": "suitcase"
+    }
+   ],
+   "text": "4 SECONDS",
+   "textStyle": "title",
+   "environment": "apartment",
+   "camMove": "follow",
+   "shots": [
+    {
+     "at": "packing",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "smug",
+       "holding": "suitcase"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "puff",
+       "word": "flat",
+       "on": "me"
+      }
+     ],
+     "camMove": "whip"
+    }
+   ]
+  },
+  {
+   "narration": "He politely loads her luggage into a taxi, hands the driver a twenty, and waves goodbye so he doesn't miss the opening cutscene.",
+   "shot": "wide",
+   "characters": [
+    {
+     "id": "me",
+     "action": "wave",
+     "expr": "laugh"
+    },
+    {
+     "id": "gf",
+     "expr": "shock"
+    }
+   ],
+   "focus": "me",
+   "environment": "suburb",
+   "pieces": [
+    {
+     "kind": "car",
+     "where": "left",
+     "move": "left",
+     "label": "taxi"
+    }
+   ],
+   "camMove": "truck_right",
+   "crowd": false,
+   "shots": [
+    {
+     "at": "waves",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "me",
+       "action": "wave",
+       "expr": "laugh"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "True love is temporary, Vice City is forever.",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sitchair",
+     "expr": "starry",
+     "holding": "controller"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "forever",
+     "on": "me"
+    }
+   ],
+   "environment": "apartment",
+   "pieces": [
+    {
+     "kind": "tv",
+     "where": "left",
+     "label": "~game"
+    }
+   ],
+   "camMove": "orbit"
+  },
+  {
+   "narration": "Send this to your bro before he gets trapped.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "warm",
+   "transition": "dissolve",
+   "environment": "gameroom",
+   "hud": "outro"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Comedy parody about GTA 6 fandom; every event is invented. The studio, agents and developers are generic stickmen.",
+   "status": "fiction"
+  }
+ ],
+ "backdrops": "ai"
+}

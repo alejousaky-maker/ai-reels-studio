@@ -141,12 +141,12 @@
      "frame": 123,
      "position": [
       2.888,
-      1.6,
+      1.56,
       2.483
      ],
      "lookAt": [
       2.48,
-      1.6,
+      1.5,
       0.772
      ],
      "fov": 30,
@@ -156,12 +156,12 @@
      "frame": 123,
      "position": [
       2.725,
-      1.6,
+      1.536,
       1.799
      ],
      "lookAt": [
       2.48,
-      1.6,
+      1.5,
       0.772
      ],
      "fov": 30,
@@ -327,7 +327,17 @@
       216,
       249
      ],
-     "holding": "grass"
+     "holding": "grass",
+     "talk": [
+      [
+       219,
+       232
+      ],
+      [
+       238,
+       254
+      ]
+     ]
     }
    ],
    "cameraKeys": [
@@ -404,7 +414,13 @@
      "z": 3.0,
      "expr": "pained",
      "mode": "stand",
-     "holding": "grass"
+     "holding": "grass",
+     "talk": [
+      [
+       266,
+       337
+      ]
+     ]
     }
    ],
    "cameraKeys": [
@@ -486,7 +502,17 @@
      "z": 1.0,
      "expr": "stern",
      "mode": "stand",
-     "holding": "shovel"
+     "holding": "shovel",
+     "talk": [
+      [
+       349,
+       384
+      ],
+      [
+       395,
+       411
+      ]
+     ]
     }
    ],
    "cameraKeys": [
@@ -565,7 +591,17 @@
      "z": 1.0,
      "expr": "shock",
      "mode": "stand",
-     "pose": "shrug"
+     "pose": "shrug",
+     "talk": [
+      [
+       415,
+       457
+      ],
+      [
+       466,
+       507
+      ]
+     ]
     }
    ],
    "cameraKeys": [
@@ -638,7 +674,17 @@
      "x": 2.728,
      "z": 0.685,
      "expr": "nervous",
-     "mode": "chair"
+     "mode": "chair",
+     "talk": [
+      [
+       517,
+       574
+      ],
+      [
+       580,
+       617
+      ]
+     ]
     }
    ],
    "cameraKeys": [
@@ -710,7 +756,13 @@
      "x": 2.551,
      "z": 0.747,
      "expr": "dazed",
-     "mode": "chair"
+     "mode": "chair",
+     "talk": [
+      [
+       619,
+       697
+      ]
+     ]
     }
    ],
    "cameraKeys": [
@@ -788,7 +840,17 @@
      "z": 0.2,
      "expr": "proud",
      "mode": "stand",
-     "holding": "fryingpan"
+     "holding": "fryingpan",
+     "talk": [
+      [
+       702,
+       790
+      ],
+      [
+       800,
+       801
+      ]
+     ]
     }
    ],
    "cameraKeys": [
@@ -865,6 +927,12 @@
      "walkFrames": [
       801,
       832
+     ],
+     "talk": [
+      [
+       803,
+       847
+      ]
      ]
     }
    ],
@@ -1184,14 +1252,26 @@
      "x": -6.0,
      "z": 5.0,
      "expr": "sweat",
-     "mode": "stand"
+     "mode": "stand",
+     "talk": [
+      [
+       1018,
+       1084
+      ],
+      [
+       1098,
+       1167
+      ]
+     ],
+     "look": -1
     },
     {
      "castId": "nb",
      "x": -6.917,
      "z": 4.301,
      "expr": "sweat",
-     "mode": "stand"
+     "mode": "stand",
+     "look": 1
     }
    ],
    "cameraKeys": [
@@ -1258,7 +1338,13 @@
      "x": -6.0,
      "z": 5.0,
      "expr": "sleepy",
-     "mode": "stand"
+     "mode": "stand",
+     "talk": [
+      [
+       1169,
+       1193
+      ]
+     ]
     }
    ],
    "cameraKeys": [
@@ -1266,12 +1352,12 @@
      "frame": 1167,
      "position": [
       -5.75,
-      1.6,
+      1.56,
       6.741
      ],
      "lookAt": [
       -6.0,
-      1.6,
+      1.5,
       5.0
      ],
      "fov": 30,
@@ -1281,12 +1367,12 @@
      "frame": 1167,
      "position": [
       -5.85,
-      1.6,
+      1.536,
       6.045
      ],
      "lookAt": [
       -6.0,
-      1.6,
+      1.5,
       5.0
      ],
      "fov": 30,
@@ -1330,7 +1416,13 @@
      "z": -0.149,
      "expr": "shock",
      "mode": "stand",
-     "holding": "envelope"
+     "holding": "envelope",
+     "talk": [
+      [
+       1205,
+       1343
+      ]
+     ]
     }
    ],
    "cameraKeys": [
@@ -1422,7 +1514,13 @@
      "mode": "stand",
      "pose": "up",
      "shake": 1.0,
-     "holding": "envelope"
+     "holding": "envelope",
+     "talk": [
+      [
+       1345,
+       1386
+      ]
+     ]
     }
    ],
    "cameraKeys": [
@@ -1499,7 +1597,17 @@
      "x": 0.0,
      "z": 1.0,
      "expr": "dazed",
-     "mode": "fall"
+     "mode": "fall",
+     "talk": [
+      [
+       1397,
+       1454
+      ],
+      [
+       1468,
+       1493
+      ]
+     ]
     }
    ],
    "cameraKeys": [
@@ -1576,7 +1684,13 @@
      "x": 0.0,
      "z": 1.0,
      "expr": "crazy",
-     "mode": "fall"
+     "mode": "fall",
+     "talk": [
+      [
+       1495,
+       1574
+      ]
+     ]
     }
    ],
    "cameraKeys": [
@@ -1662,6 +1776,12 @@
      "walkFrames": [
       1583,
       1634
+     ],
+     "talk": [
+      [
+       1586,
+       1657
+      ]
      ]
     }
    ],
@@ -1734,7 +1854,13 @@
      "x": 2.48,
      "z": 0.772,
      "expr": "evil",
-     "mode": "stand"
+     "mode": "stand",
+     "talk": [
+      [
+       1659,
+       1716
+      ]
+     ]
     }
    ],
    "cameraKeys": [
@@ -1742,12 +1868,12 @@
      "frame": 1657,
      "position": [
       2.888,
-      1.6,
+      1.56,
       2.483
      ],
      "lookAt": [
       2.48,
-      1.6,
+      1.5,
       0.772
      ],
      "fov": 30,
@@ -1757,12 +1883,12 @@
      "frame": 1657,
      "position": [
       2.725,
-      1.6,
+      1.536,
       1.799
      ],
      "lookAt": [
       2.48,
-      1.6,
+      1.5,
       0.772
      ],
      "fov": 30,
@@ -1811,7 +1937,17 @@
      "z": -0.2,
      "expr": "starry",
      "mode": "stand",
-     "pose": "point"
+     "pose": "point",
+     "talk": [
+      [
+       1725,
+       1757
+      ],
+      [
+       1767,
+       1796
+      ]
+     ]
     }
    ],
    "cameraKeys": [
@@ -1884,7 +2020,13 @@
      "z": -0.2,
      "expr": "laugh",
      "mode": "stand",
-     "pose": "up"
+     "pose": "up",
+     "talk": [
+      [
+       1803,
+       1865
+      ]
+     ]
     }
    ],
    "cameraKeys": [
@@ -1965,7 +2107,21 @@
      "z": 1.0,
      "expr": "smug",
      "mode": "chair",
-     "holding": "controller"
+     "holding": "controller",
+     "talk": [
+      [
+       1877,
+       1882
+      ],
+      [
+       1888,
+       1906
+      ],
+      [
+       1912,
+       1948
+      ]
+     ]
     }
    ],
    "cameraKeys": [
@@ -2030,7 +2186,13 @@
      "z": 1.0,
      "expr": "starry",
      "mode": "chair",
-     "holding": "controller"
+     "holding": "controller",
+     "talk": [
+      [
+       1956,
+       2020
+      ]
+     ]
     }
    ],
    "cameraKeys": [

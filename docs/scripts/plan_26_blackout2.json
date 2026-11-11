@@ -1,0 +1,278 @@
+{
+ "title": "The Day GTA 6 Melted the Internet",
+ "environment": "gameroom",
+ "seed": 111,
+ "cast": [
+  {
+   "id": "me",
+   "name": "Esports gamer",
+   "role": "esports"
+  },
+  {
+   "id": "tech",
+   "name": "Technician",
+   "role": "technician"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "The second GTA 6 unlocks at midnight, a hundred million downloads will literally melt the global internet.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "sweat"
+    }
+   ],
+   "impactWord": "melt",
+   "environment": "gameroom",
+   "camMove": "whip",
+   "hud": "panel",
+   "hudText": "12:00 AM|[ DOWNLOAD ]",
+   "backdrop": "a dark gamer bedroom at midnight, glowing RGB strips, a huge monitor showing a download button",
+   "shots": [
+    {
+     "at": "hundred",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "starry"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "burst",
+       "word": "downloads",
+       "on": "me"
+      }
+     ],
+     "camMove": "push"
+    },
+    {
+     "at": "melt",
+     "shot": "wide",
+     "environment": "datacenter",
+     "envVariant": "red",
+     "characters": [],
+     "fx": [
+      {
+       "kind": "sparks",
+       "word": "melt"
+      }
+     ],
+     "camMove": "truck_right"
+    }
+   ]
+  },
+  {
+   "narration": "Every gamer on Earth clicks download at the exact same microsecond, sending a digital tsunami through undersea cables.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "tense",
+   "transition": "zoom",
+   "environment": "gameroom",
+   "hud": "world"
+  },
+  {
+   "narration": "Inside global data centers, server racks start glowing like nuclear reactors.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "tech",
+     "action": "run",
+     "expr": "dazed",
+     "holding": "extinguisher"
+    }
+   ],
+   "extras": 3,
+   "extrasAction": "march",
+   "fx": [
+    {
+     "kind": "sparks",
+     "word": "glowing",
+     "on": "tech"
+    }
+   ],
+   "environment": "datacenter",
+   "envVariant": "red",
+   "pieces": [
+    {
+     "kind": "rack",
+     "where": "left",
+     "label": "red",
+     "shake": 1.0
+    },
+    {
+     "kind": "rack",
+     "where": "right",
+     "label": "red",
+     "shake": 1.0
+    }
+   ],
+   "extrasRole": "technician",
+   "camMove": "follow",
+   "shots": [
+    {
+     "at": "nuclear",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "tech",
+       "action": "panic",
+       "expr": "scared",
+       "holding": "extinguisher"
+      }
+     ],
+     "extras": 0,
+     "fx": [
+      {
+       "kind": "burst",
+       "word": "reactors",
+       "on": "tech"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Right as the progress bar hits ninety-nine percent, the global network flatlines.",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sitchair",
+     "expr": "starry"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "push",
+   "hud": "bar",
+   "hudText": "DOWNLOADING GTA 6|97|99.9",
+   "shots": [
+    {
+     "at": "flatlines",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "broken",
+       "holding": "router"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "puff",
+       "word": "flatlines",
+       "on": "me"
+      }
+     ],
+     "impactWord": "flatlines",
+     "camMove": "whip"
+    }
+   ]
+  },
+  {
+   "narration": "Within minutes, society returns to the Stone Age, and desperate gamers try running their routers off raw potatoes.",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "sweat",
+     "holding": "potato"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "crane_up",
+   "look": "warm",
+   "backdrop": "a dark bedroom lit only by candles, a desk with tangled ethernet cables",
+   "shots": [
+    {
+     "at": "desperate",
+     "shot": "wide",
+     "light": "night",
+     "environment": "street",
+     "characters": [
+      {
+       "id": "me",
+       "action": "run",
+       "expr": "crazy",
+       "holding": "potato"
+      }
+     ],
+     "extras": 5,
+     "extrasAction": "march",
+     "extrasRole": "streamer",
+     "camMove": "truck_left"
+    },
+    {
+     "at": "potatoes",
+     "shot": "close",
+     "environment": "gameroom",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "starry",
+       "holding": "potato"
+      }
+     ],
+     "extras": 0,
+     "fx": [
+      {
+       "kind": "sparks",
+       "word": "potatoes",
+       "on": "me"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "The potato gives zero megabytes, just the smell of french fries.",
+   "shot": "close",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "cry",
+     "holding": "potato"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "steam",
+     "word": "smell",
+     "on": "me"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "pull"
+  },
+  {
+   "narration": "Send this to the friend whose Wi-Fi dies every night.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "warm",
+   "transition": "dissolve",
+   "environment": "gameroom",
+   "hud": "outro"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Comedy parody about GTA 6 fandom; every event is invented. The studio, agents and developers are generic stickmen.",
+   "status": "fiction"
+  }
+ ],
+ "backdrops": "ai"
+}

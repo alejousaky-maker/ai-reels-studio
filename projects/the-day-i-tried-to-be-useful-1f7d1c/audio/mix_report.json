@@ -1,0 +1,238 @@
+{
+ "duration": 76.96666666666667,
+ "sampleRate": 48000,
+ "targetLUFS": -14.0,
+ "ceilingDBTP": -2.0,
+ "measured": {
+  "integratedLUFS": -14.01,
+  "truePeakDBTP": -2.0,
+  "LRA": 1.18,
+  "maxGainReductionDB": 2.71,
+  "voiceLUFS": -14.09,
+  "musicLUFS": -30.04,
+  "sfxLUFS": -30.1
+ },
+ "ffmpegEbur128": {
+  "I": -14.0,
+  "LRA": 1.2,
+  "truePeak": -2.0
+ },
+ "musicSections": [
+  {
+   "start": 0.0,
+   "end": 7.2,
+   "mood": "tense"
+  },
+  {
+   "start": 7.2,
+   "end": 17.13,
+   "mood": "whimsical"
+  },
+  {
+   "start": 17.13,
+   "end": 28.47,
+   "mood": "tense"
+  },
+  {
+   "start": 28.47,
+   "end": 33.83,
+   "mood": "curious"
+  },
+  {
+   "start": 33.83,
+   "end": 40.07,
+   "mood": "whimsical"
+  },
+  {
+   "start": 40.07,
+   "end": 46.47,
+   "mood": "tense"
+  },
+  {
+   "start": 46.47,
+   "end": 57.4,
+   "mood": "warm"
+  },
+  {
+   "start": 57.4,
+   "end": 67.6,
+   "mood": "upbeat"
+  },
+  {
+   "start": 67.6,
+   "end": 76.97,
+   "mood": "warm"
+  }
+ ],
+ "musicCues": [
+  {
+   "t": 0.0,
+   "kind": "track",
+   "what": "sneaky-snitch.mp3"
+  }
+ ],
+ "sfxCues": [
+  {
+   "t": 0.0,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 0.093,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 6.433,
+   "kind": "impact",
+   "what": "impact thump"
+  },
+  {
+   "t": 6.367,
+   "kind": "burst",
+   "what": "burst"
+  },
+  {
+   "t": 7.2,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 6.98,
+   "kind": "whoosh",
+   "what": "whip into b02"
+  },
+  {
+   "t": 7.585,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 10.7,
+   "kind": "puff",
+   "what": "puff"
+  },
+  {
+   "t": 11.533,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 17.133,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 23.3,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 26.793,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 27.9,
+   "kind": "impact",
+   "what": "impact thump"
+  },
+  {
+   "t": 27.833,
+   "kind": "burst",
+   "what": "burst"
+  },
+  {
+   "t": 28.467,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 33.0,
+   "kind": "impact",
+   "what": "impact thump"
+  },
+  {
+   "t": 32.933,
+   "kind": "burst",
+   "what": "burst"
+  },
+  {
+   "t": 33.357,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 33.833,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 39.308,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  },
+  {
+   "t": 40.067,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 46.467,
+   "kind": "bed",
+   "what": "day ambience"
+  },
+  {
+   "t": 49.767,
+   "kind": "puff",
+   "what": "puff"
+  },
+  {
+   "t": 52.767,
+   "kind": "bed",
+   "what": "golden ambience"
+  },
+  {
+   "t": 57.4,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 57.18,
+   "kind": "whoosh",
+   "what": "flash into b11"
+  },
+  {
+   "t": 60.967,
+   "kind": "sparkle",
+   "what": "sparkle"
+  },
+  {
+   "t": 62.467,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 67.6,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 73.367,
+   "kind": "bed",
+   "what": "night ambience"
+  },
+  {
+   "t": 73.247,
+   "kind": "whoosh",
+   "what": "dissolve into b14"
+  },
+  {
+   "t": 75.213,
+   "kind": "glide",
+   "what": "soft camera whoosh"
+  }
+ ],
+ "license": "Music: \"Sneaky Snitch\" Kevin MacLeod (incompetech.com) \u00b7 Licensed under Creative Commons: By Attribution 4.0 License \u00b7 http://creativecommons.org/licenses/by/4.0/. Whooshes CC0 (freesound AudioPapkin 441345, D4XX 607250); other SFX synthesized.",
+ "musicCredit": "\"Sneaky Snitch\" Kevin MacLeod (incompetech.com) \u00b7 Licensed under Creative Commons: By Attribution 4.0 License \u00b7 http://creativecommons.org/licenses/by/4.0/"
+}

@@ -1,0 +1,285 @@
+{
+ "title": "Graphics So Real They Melt Your TV",
+ "environment": "gameroom",
+ "seed": 139,
+ "cast": [
+  {
+   "id": "me",
+   "name": "Gamer",
+   "role": "capgamer"
+  },
+  {
+   "id": "mes",
+   "name": "Gamer (sunglasses)",
+   "role": "capgamer",
+   "shades": true
+  }
+ ],
+ "beats": [
+  {
+   "narration": "GTA 6 graphics are so realistic that my TV started sweating just rendering the main menu.",
+   "light": "night",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "shock",
+     "holding": "controller"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "steam",
+     "word": "sweating",
+     "on": "me"
+    }
+   ],
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "tv",
+     "where": "left",
+     "label": "~game|MAIN MENU",
+     "shake": 0.4
+    }
+   ],
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "sweating",
+     "shot": "insert",
+     "fx": [
+      {
+       "kind": "splash",
+       "word": "sweating"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "tv",
+       "where": "on",
+       "label": "~game|MAIN MENU",
+       "shake": 0.6
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "The second the Vice City sun loaded on screen, the ray-tracing was so bright it gave me a real-life sunburn.",
+   "shot": "close",
+   "light": "golden",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "mes",
+     "expr": "squint"
+    }
+   ],
+   "impactWord": "sunburn",
+   "environment": "gameroom",
+   "camMove": "push",
+   "look": "warm",
+   "shots": [
+    {
+     "at": "bright",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "pained"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "sparkle",
+       "word": "sunburn",
+       "on": "me"
+      }
+     ],
+     "camMove": "push"
+    }
+   ]
+  },
+  {
+   "narration": "Then I walked my character onto the beach, and real ocean water and sand started pouring out of the HDMI port.",
+   "shot": "wide",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "panic",
+     "expr": "scared",
+     "holding": "controller"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "splash",
+     "word": "water",
+     "on": "me"
+    },
+    {
+     "kind": "product",
+     "product": "flamingo",
+     "word": "sand",
+     "on": "me"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "crane_up",
+   "backdrop": "a gamer bedroom flooded with ocean water and sand pouring out of a TV, floating pizza boxes",
+   "shots": [
+    {
+     "at": "pouring",
+     "shot": "close",
+     "characters": [
+      {
+       "id": "me",
+       "action": "panic",
+       "expr": "crazy",
+       "holding": "controller"
+      }
+     ],
+     "fx": [
+      {
+       "kind": "splash",
+       "word": "HDMI",
+       "on": "me"
+      }
+     ],
+     "camMove": "whip"
+    }
+   ]
+  },
+  {
+   "narration": "My base console couldn't take the physics anymore. It popped open the disc drive and waved a tiny white flag.",
+   "shot": "insert",
+   "light": "night",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "sad"
+    }
+   ],
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "console",
+     "where": "on",
+     "label": "hot",
+     "shake": 1.0
+    }
+   ],
+   "camMove": "push",
+   "shots": [
+    {
+     "at": "waved",
+     "shot": "medium",
+     "characters": [
+      {
+       "id": "me",
+       "action": "shrug",
+       "expr": "sad"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "console",
+       "where": "left",
+       "scale": 1.4,
+       "label": "flag"
+      }
+     ],
+     "camMove": "orbit"
+    }
+   ]
+  },
+  {
+   "narration": "When I got a five-star wanted level in the game, real helicopters started circling my actual apartment.",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sit",
+     "expr": "crazy",
+     "holding": "poolring"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "orbit",
+   "hud": "police",
+   "backdrop": "a flooded gamer bedroom at night with red and blue police lights flashing through the window",
+   "shots": [
+    {
+     "at": "helicopters",
+     "shot": "worm",
+     "characters": [
+      {
+       "id": "me",
+       "action": "sit",
+       "expr": "scared",
+       "holding": "controller"
+      }
+     ],
+     "camMove": "crane_up"
+    }
+   ]
+  },
+  {
+   "narration": "My house is ruined, my TV is melted. Ten out of ten, game of the century.",
+   "shot": "close",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "cheer",
+     "expr": "starry",
+     "holding": "controller"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "confetti",
+     "word": "Ten",
+     "on": "me"
+    }
+   ],
+   "environment": "gameroom",
+   "camMove": "pull",
+   "shots": [
+    {
+     "at": "Ten",
+     "shot": "extreme",
+     "characters": [
+      {
+       "id": "me",
+       "expr": "wink"
+      }
+     ],
+     "camMove": "push",
+     "hud": "panel",
+     "hudText": "REVIEW|10/10"
+    }
+   ]
+  },
+  {
+   "narration": "Tag a friend whose console is going to explode.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "warm",
+   "transition": "dissolve",
+   "environment": "gameroom",
+   "hud": "outro"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Comedy parody about GTA 6 fandom; every event is invented. The studio, agents and developers are generic stickmen.",
+   "status": "fiction"
+  }
+ ],
+ "backdrops": "ai"
+}

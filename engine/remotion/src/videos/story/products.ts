@@ -457,6 +457,37 @@ export const drawProduct = (p: Pen, kind: ProductKind, col = "#c8553d") => {
       for (const [x, y] of [[260, 90], [140, 120]] as const) { p.stroke([[x - 16, y], [x + 16, y]], 5, "#ffe14d"); p.stroke([[x, y - 16], [x, y + 16]], 5, "#ffe14d"); }
       break;
     }
+    case "magnifier": {   // detective magnifying glass
+      p.stroke([[250, 250], [360, 370]], 30, "#5a3b2a");
+      p.ell(180, 180, 120, 120, "rgba(190,230,255,0.45)", 14); p.arc(180, 180, 120, 120, 0, 360, 14, "#2b2b38");
+      p.arc(150, 150, 70, 70, 200, 260, 10, "rgba(255,255,255,0.8)");
+      break;
+    }
+    case "usb": {   // a glowing golden USB stick
+      p.ell(200, 200, 150, 150, "rgba(255,210,63,0.25)", 0);
+      p.poly(rr(110, 120, 260, 300, 24), "#e8b83a", 9); p.poly([[260, 160], [330, 160], [330, 260], [260, 260]], "#c9ccd2", 8);
+      p.poly([[280, 185], [300, 185], [300, 205], [280, 205]], "#2b2b38", 0); p.poly([[280, 215], [300, 215], [300, 235], [280, 235]], "#2b2b38", 0);
+      p.stroke([[140, 160], [230, 160]], 8, "#fff3c0");
+      break;
+    }
+    case "poolring": {   // inflatable pool ring
+      p.ell(200, 220, 170, 100, "#ff6fa8", 10); p.ell(200, 220, 80, 44, "#9fd4ff", 8);
+      for (const a of [0.4, 1.9, 3.4, 4.9]) p.arc(200, 220, 125, 72, (a * 180) / Math.PI, (a * 180) / Math.PI + 30, 22, "#ffffff");
+      break;
+    }
+    case "flamingo": {   // pink lawn flamingo
+      p.stroke([[200, 380], [200, 250]], 8, "#2b2b38"); p.stroke([[220, 380], [210, 260]], 8, "#2b2b38");
+      p.ell(210, 220, 90, 60, "#ff7aa8", 9);
+      p.stroke([[270, 200], [300, 110], [270, 60]], 20, "#ff7aa8"); p.ell(270, 60, 26, 22, "#ff7aa8", 7);
+      p.poly([[285, 60], [330, 70], [300, 90]], "#2b2b38", 4); p.dot(265, 55, 5);
+      break;
+    }
+    case "badge": {   // a gold agent badge on a black wallet
+      p.poly(rr(60, 90, 340, 320, 20), "#1d1b22", 9);
+      const st: P2[] = []; for (let i = 0; i < 10; i++) { const a = -Math.PI / 2 + (i * Math.PI) / 5, r2 = i % 2 ? 45 : 95; st.push([200 + Math.cos(a) * r2, 205 + Math.sin(a) * r2]); }
+      p.poly(st, "#e8b83a", 7); p.ell(200, 205, 30, 30, "#c9a227", 4);
+      break;
+    }
     case "goldcoin": {   // a big glowing gold token with a skull
       p.ell(200, 200, 160, 160, "#ffd23f", 10); p.ell(200, 200, 125, 125, "#f2b84a", 6);
       p.ell(200, 185, 55, 50, "#fff3c0", 6); p.dot(180, 180, 12, "#5a3b2a"); p.dot(220, 180, 12, "#5a3b2a");

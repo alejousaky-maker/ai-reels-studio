@@ -1,6 +1,6 @@
 # QUALITY REPORT
 
-Video: `the-fortnite-pirate-token_master_v1.mp4` · 1440x2560 · 30.00 fps · 78.70 s · 95.56 MB
+Video: `the-fortnite-pirate-token_master_v2.mp4` · 1440x2560 · 30.00 fps · 78.70 s · 95.57 MB
 
 **Technical result: PASS** · Approved for delivery: **no — human review pending**
 
@@ -21,36 +21,36 @@ Video: `the-fortnite-pirate-token_master_v1.mp4` · 1440x2560 · 30.00 fps · 78
 | true peak <= -1 dBTP | ✅ | yes | true peak -1.8 dBTP |
 | no long silences | ✅ | no | 0 silence(s) >= 1.2 s: [] |
 | render matches control stills | ✅ | yes | 81 frames compared; mismatches: [] |
-| day exposure (heuristic) | ✅ | no | median luma of day scenes 0.541, reference ~0.57 (range 0.5-0.66) |
-| no crushed blacks (heuristic) | ❌ | no | scenes with p5 luma < 0.04: ['b04a', 'b11'] |
+| day exposure (heuristic) | ✅ | no | median luma of day scenes 0.538, reference ~0.57 (range 0.5-0.66) |
+| no crushed blacks (heuristic) | ❌ | no | scenes with p5 luma < 0.04: ['b04a', 'b11', 'b12a'] |
 
 ## Per-scene picture stats (heuristic, vs reference: day median luma ~0.57, p5 ~0.23)
 | scene | t | light | median Y | p5 | p95 | sat |
 |---|---|---|---|---|---|---|
-| b01 | 1.9 | night | 0.034 | 0.021 | 0.682 | 0.823 |
-| b01a | 4.4 | night | 0.075 | 0.011 | 0.881 | 0.54 |
-| b01b | 5.67 | night | 0.154 | 0.02 | 0.767 | 0.742 |
+| b01 | 1.9 | night | 0.031 | 0.021 | 0.234 | 0.85 |
+| b01a | 4.4 | night | 0.035 | 0.011 | 0.901 | 0.543 |
+| b01b | 5.67 | night | 0.051 | 0.02 | 0.75 | 0.815 |
 | b02 | 8.07 | night | 0.054 | 0.02 | 0.661 | 0.92 |
 | b02a | 11.0 | night | 0.153 | 0.009 | 0.76 | 0.763 |
 | b03 | 13.9 | night | 0.121 | 0.014 | 0.899 | 0.777 |
 | b03a | 17.37 | night | 0.048 | 0.022 | 0.727 | 0.883 |
-| b04 | 22.3 | day | 0.541 | 0.12 | 0.883 | 0.442 |
-| b04a | 26.0 | day | 0.541 | 0.012 | 0.951 | 0.551 |
+| b04 | 22.3 | day | 0.537 | 0.085 | 0.878 | 0.463 |
+| b04a | 26.0 | day | 0.539 | 0.012 | 0.951 | 0.553 |
 | b05 | 26.73 | night | 0.052 | 0.022 | 0.726 | 0.889 |
-| b05a | 29.2 | night | 0.081 | 0.022 | 0.882 | 0.617 |
-| b06 | 33.0 | day | 0.719 | 0.078 | 0.935 | 0.265 |
-| b06a | 35.6 | day | 0.772 | 0.079 | 0.942 | 0.312 |
+| b05a | 29.2 | night | 0.084 | 0.018 | 0.895 | 0.58 |
+| b06 | 33.0 | day | 0.718 | 0.112 | 0.931 | 0.269 |
+| b06a | 35.6 | day | 0.776 | 0.108 | 0.941 | 0.32 |
 | b07 | 38.07 | night | 0.052 | 0.022 | 0.55 | 0.938 |
 | b07a | 40.53 | night | 0.153 | 0.018 | 0.847 | 0.747 |
 | b08 | 43.3 | night | 0.045 | 0.022 | 0.42 | 0.93 |
 | b08a | 45.37 | night | 0.099 | 0.022 | 0.765 | 0.789 |
 | b08b | 46.43 | night | 0.045 | 0.023 | 0.271 | 0.954 |
 | b09 | 49.27 | night | 0.083 | 0.009 | 0.896 | 0.828 |
-| b09a | 51.83 | night | 0.049 | 0.025 | 0.217 | 0.652 |
+| b09a | 51.83 | night | 0.036 | 0.025 | 0.873 | 0.614 |
 | b10 | 54.47 | day | 0.197 | 0.066 | 0.726 | 0.569 |
 | b11 | 60.0 | day | 0.271 | 0.03 | 0.93 | 0.559 |
-| b12 | 64.5 | golden | 0.212 | 0.108 | 0.302 | 0.842 |
-| b12a | 66.93 | golden | 0.218 | 0.063 | 0.716 | 0.792 |
+| b12 | 64.5 | golden | 0.212 | 0.108 | 0.3 | 0.843 |
+| b12a | 66.93 | golden | 0.218 | 0.035 | 0.714 | 0.794 |
 | b13 | 69.2 | night | 0.041 | 0.019 | 0.487 | 0.958 |
 | b13a | 71.9 | night | 0.05 | 0.008 | 0.881 | 0.862 |
 | b14 | 76.17 | night | 0.026 | 0.026 | 0.093 | 0.445 |
@@ -82,4 +82,4 @@ Video: `the-fortnite-pirate-token_master_v1.mp4` · 1440x2560 · 30.00 fps · 78
 - [ ] ¿Textos/CTA dentro de las safe areas y legibles?
 
 ## Warnings
-- no crushed blacks (heuristic): scenes with p5 luma < 0.04: ['b04a', 'b11']
+- no crushed blacks (heuristic): scenes with p5 luma < 0.04: ['b04a', 'b11', 'b12a']

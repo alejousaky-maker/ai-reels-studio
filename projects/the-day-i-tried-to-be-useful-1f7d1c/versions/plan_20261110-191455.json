@@ -1,0 +1,1390 @@
+{
+ "version": 1,
+ "title": "The Day I Tried to Be Useful",
+ "lang": "en",
+ "style": "storybook",
+ "environment": "gameroom",
+ "seed": 101,
+ "cast": [
+  {
+   "id": "me",
+   "name": "Gamer (stained hoodie)",
+   "role": "streamer",
+   "palette": "#6b6f78",
+   "skin": null,
+   "hair": null,
+   "shades": null
+  },
+  {
+   "id": "nb",
+   "name": "Neighbour",
+   "role": "villager_man",
+   "palette": null,
+   "skin": null,
+   "hair": null,
+   "shades": null
+  }
+ ],
+ "beats": [
+  {
+   "narration": "What happens when a lifetime gamer finally decides to turn off his console and be useful for a single day? Pure psychological horror.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "scared",
+     "react": null,
+     "holding": "plug",
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": "horror",
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "monitor",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "GAME OVER",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    },
+    {
+     "kind": "snacks",
+     "where": "right",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 1.2,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "whip",
+   "hud": null,
+   "hudText": null,
+   "look": "warm",
+   "backdrop": "a messy gamer bedroom piled with pizza boxes, crushed energy drink cans and tangled wires, dramatic red alarm light",
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "useful",
+     "shot": "extreme",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "stand",
+       "expr": "sweat",
+       "react": null,
+       "holding": "plug",
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    },
+    {
+     "at": "Pure",
+     "shot": "dutch",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "panic",
+       "expr": "scared",
+       "react": null,
+       "holding": "plug",
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "burst",
+       "product": null,
+       "color": null,
+       "word": "horror",
+       "on": "me"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "orbit",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "Step one: touching grass. Outside air hits my lungs like chemical warfare.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "me",
+     "action": "walk",
+     "expr": "squint",
+     "react": null,
+     "holding": "grass",
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "whip",
+   "text": "STEP 1",
+   "textStyle": "title",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "follow",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": "a bright sunny front yard with a green lawn and a front door",
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "Outside",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "stand",
+       "expr": "pained",
+       "react": null,
+       "holding": "grass",
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "puff",
+       "product": null,
+       "color": null,
+       "word": "warfare",
+       "on": "me"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "I tried to clean my bedroom. Turns out, under three years of pizza boxes, there was actually a wooden floor.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "stern",
+     "react": null,
+     "holding": "shovel",
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "snacks",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 1.6,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    },
+    {
+     "kind": "snacks",
+     "where": "right",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 1.3,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "truck_right",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": "a messy bedroom with mountains of pizza boxes and a black trash bag",
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "under",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "shrug",
+       "expr": "shock",
+       "react": null,
+       "holding": null,
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": [
+      {
+       "kind": "snacks",
+       "where": "left",
+       "dx": 0.0,
+       "dz": 0.0,
+       "scale": 0.6,
+       "y": null,
+       "mirror": false,
+       "move": null,
+       "label": null,
+       "spin": null,
+       "lift": null,
+       "shake": null
+      }
+     ],
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "Then I tried applying for a real job. The application asked for five years of experience for an entry-level position.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sitchair",
+     "expr": "nervous",
+     "react": null,
+     "holding": null,
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "monitor",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "JOB APPLICATION",
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": null,
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "five",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "sitchair",
+       "expr": "dazed",
+       "react": null,
+       "holding": null,
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": "panel",
+     "hudText": "ERROR|EXPERIENCE REQUIRED: 100 YEARS!",
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "I attempted to cook real food instead of eating instant ramen. I managed to set water on fire.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "proud",
+     "react": null,
+     "holding": "fryingpan",
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "kitchen",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": null,
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "managed",
+     "shot": "wide",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "run",
+       "expr": "scared",
+       "react": null,
+       "holding": null,
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "burst",
+       "product": null,
+       "color": null,
+       "word": "fire",
+       "on": "me"
+      },
+      {
+       "kind": "sparks",
+       "product": null,
+       "color": null,
+       "word": "water",
+       "on": "me"
+      }
+     ],
+     "impactWord": "fire",
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "whip",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "The worst part about real life? There is no quick-save button. You drop a plate, and it's gone forever.",
+   "shot": "close",
+   "light": "day",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "skeptical",
+     "react": null,
+     "holding": null,
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "kitchen",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": null,
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "You",
+     "shot": "medium",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "stand",
+       "expr": "shock",
+       "react": null,
+       "holding": "plate",
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "burst",
+       "product": null,
+       "color": null,
+       "word": "gone",
+       "on": "me"
+      }
+     ],
+     "impactWord": "gone",
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": null,
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    },
+    {
+     "at": "forever",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "panic",
+       "expr": "crazy",
+       "react": null,
+       "holding": "controller",
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": "panel",
+     "hudText": "F9 - QUICK LOAD|NOT AVAILABLE",
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "I tried talking to a normal human being outside. We made awkward eye contact for four seconds and I aged ten years.",
+   "shot": "two_shot",
+   "light": "day",
+   "mood": "whimsical",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "sweat",
+     "react": null,
+     "holding": null,
+     "y": null,
+     "talk": null
+    },
+    {
+     "id": "nb",
+     "action": "stand",
+     "expr": "sweat",
+     "react": null,
+     "holding": null,
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": "me",
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "suburb",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "orbit",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": "a quiet suburban sidewalk with lawns and houses",
+   "crowd": false,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "aged",
+     "shot": "extreme",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "stand",
+       "expr": "sleepy",
+       "react": null,
+       "holding": null,
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "Nobody warned me that adulting is basically paying a subscription fee just to exist in a server that lags constantly.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "action": "stand",
+     "expr": "shock",
+     "react": null,
+     "holding": "envelope",
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "money",
+     "product": null,
+     "color": null,
+     "word": "subscription",
+     "on": "me"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "cashcounter",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": null,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": "fire",
+     "spin": null,
+     "lift": null,
+     "shake": 1.2
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": null,
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "server",
+     "shot": "dutch",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "panic",
+       "expr": "dazed",
+       "react": null,
+       "holding": "envelope",
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "orbit",
+     "hud": "police",
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "After four hours of total productivity, my brain felt like a fried graphics card running Crysis on max settings.",
+   "shot": "medium",
+   "light": "day",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "fall",
+     "expr": "dazed",
+     "react": null,
+     "holding": null,
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [
+    {
+     "kind": "steam",
+     "product": null,
+     "color": null,
+     "word": "brain",
+     "on": "me"
+    },
+    {
+     "kind": "sparks",
+     "product": null,
+     "color": null,
+     "word": "fried",
+     "on": "me"
+    }
+   ],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "crane_up",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": null,
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "fried",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "fall",
+       "expr": "crazy",
+       "react": null,
+       "holding": null,
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "puff",
+       "product": null,
+       "color": null,
+       "word": "fried",
+       "on": "me"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "I looked at my life, looked at my chores, and made the only logical executive decision.",
+   "shot": "low",
+   "light": "golden",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "walk",
+     "expr": "pained",
+     "react": null,
+     "holding": null,
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "console",
+     "where": "left",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 1.2,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "follow",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": null,
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "only",
+     "shot": "extreme",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "stand",
+       "expr": "evil",
+       "react": null,
+       "holding": null,
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "I pressed the power button. The console beeped. Balance was instantly restored to the universe.",
+   "shot": "insert",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "starry",
+     "react": null,
+     "holding": null,
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "flash",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [
+    {
+     "kind": "console",
+     "where": "on",
+     "dx": 0.0,
+     "dz": 0.0,
+     "scale": 1.0,
+     "y": null,
+     "mirror": false,
+     "move": null,
+     "label": null,
+     "spin": null,
+     "lift": null,
+     "shake": null
+    }
+   ],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "push",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": null,
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "Balance",
+     "shot": "wide",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "cheer",
+       "expr": "laugh",
+       "react": null,
+       "holding": null,
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "sparkle",
+       "product": null,
+       "color": null,
+       "word": "restored",
+       "on": "me"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": [],
+     "camMove": "crane_up",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "Sure, I'm unemployed, broke, and living in squalor. But at least my K-D ratio is positive.",
+   "shot": "medium",
+   "light": "night",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sitchair",
+     "expr": "smug",
+     "react": null,
+     "holding": "controller",
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "pull",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": null,
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "But",
+     "shot": "close",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "sitchair",
+       "expr": "starry",
+       "react": null,
+       "holding": "controller",
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": [
+      {
+       "kind": "confetti",
+       "product": null,
+       "color": null,
+       "word": "positive",
+       "on": "me"
+      }
+     ],
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": "panel",
+     "hudText": "VICTORY!|K/D RATIO: 1.01",
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "Being useful is overrated. Grinding in a fictional video game simulator is where true fulfillment lies.",
+   "shot": "close",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sitchair",
+     "expr": "wink",
+     "react": null,
+     "holding": "controller",
+     "y": null,
+     "talk": null
+    }
+   ],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "cut",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": "orbit",
+   "hud": null,
+   "hudText": null,
+   "look": null,
+   "backdrop": null,
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": [
+    {
+     "at": "Grinding",
+     "shot": "medium",
+     "light": null,
+     "environment": null,
+     "envVariant": null,
+     "spot": null,
+     "characters": [
+      {
+       "id": "me",
+       "action": "dance",
+       "expr": "laugh",
+       "react": null,
+       "holding": null,
+       "y": null,
+       "talk": null
+      }
+     ],
+     "extras": null,
+     "extrasAction": null,
+     "extrasRole": null,
+     "focus": null,
+     "fx": null,
+     "impactWord": null,
+     "transition": null,
+     "text": null,
+     "textStyle": null,
+     "pieces": null,
+     "camMove": "push",
+     "hud": null,
+     "hudText": null,
+     "visual": null,
+     "look": null,
+     "extrasHolding": null,
+     "backdrop": null,
+     "crowd": null
+    }
+   ]
+  },
+  {
+   "narration": "Send this to that friend who really needs to touch grass today.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "warm",
+   "characters": [],
+   "extras": 0,
+   "extrasAction": "stand",
+   "focus": null,
+   "fx": [],
+   "impactWord": null,
+   "transition": "dissolve",
+   "text": null,
+   "textStyle": "label",
+   "atShop": false,
+   "environment": "gameroom",
+   "envVariant": null,
+   "pieces": [],
+   "extrasRole": null,
+   "spot": null,
+   "visual": null,
+   "camMove": null,
+   "hud": "outro",
+   "hudText": null,
+   "look": null,
+   "backdrop": null,
+   "crowd": null,
+   "extrasHolding": null,
+   "shots": []
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "First-person comedy sketch; fiction.",
+   "status": "fiction",
+   "source": null
+  }
+ ],
+ "creativeHooks": [],
+ "brand": null,
+ "cta": null,
+ "captions": true,
+ "graphics": "full",
+ "backdrops": "ai",
+ "crowd": true
+}
