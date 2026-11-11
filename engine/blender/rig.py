@@ -143,7 +143,32 @@ class Stickman:
         spec = KM.get(item)
         hand = self.el[1]
         o = None
-        if spec:
+        if item in ("phone", "controller", "note", "card", "cash"):   # modelled props: read at a glance in a 9:16 frame
+            root = bpy.data.objects.new(f"{self.name}_hold", None); bpy.context.collection.objects.link(root)
+            dark = L.toon("propDark", L.hexc("#1d1b22"))
+            if item == "phone":
+                b = sets.box(f"{self.name}_ph", (0.085, 0.012, 0.16), (0, 0, 0), dark, outline=0.004)
+                s = sets.box(f"{self.name}_phs", (0.07, 0.004, 0.13), (0, -0.008, 0.004), L.flat("phoneScr", (0.35, 0.65, 1.0), 1.6), shadow=False)
+                parts = [b, s]
+            elif item == "controller":
+                b = sets.box(f"{self.name}_ct", (0.18, 0.05, 0.07), (0, 0, 0), dark, outline=0.004)
+                parts = [b]
+                for sx in (-1, 1):
+                    bpy.ops.mesh.primitive_uv_sphere_add(radius=0.045, location=(sx * 0.08, 0, -0.03)); g = bpy.context.object
+                    g.data.materials.append(dark); L.ink(g, 0.004); parts.append(g)
+                for sx, col in ((0.05, (2.0, 0.3, 0.3)), (0.075, (0.3, 2.0, 0.4))):
+                    bpy.ops.mesh.primitive_uv_sphere_add(radius=0.012, location=(sx, -0.027, 0.012)); g = bpy.context.object
+                    g.data.materials.append(L.flat(f"btn{col}", col, 1.5)); parts.append(g)
+            elif item == "note":
+                parts = [sets.box(f"{self.name}_nt", (0.12, 0.004, 0.12), (0, 0, 0), L.toon("noteY", L.hexc("#ffe14d")), outline=0.003)]
+            elif item == "card":
+                parts = [sets.box(f"{self.name}_cd", (0.13, 0.004, 0.085), (0, 0, 0), L.toon("cardB", L.hexc("#3f6fb5")), outline=0.003)]
+            else:
+                parts = [sets.box(f"{self.name}_cs", (0.15, 0.03, 0.07), (0, 0, 0), L.toon("cashG", L.hexc("#5fae5a")), outline=0.004)]
+            for p_ in parts:
+                p_.parent = root
+            o = root
+        elif spec:
             o = sets.kenney(kits, spec[0], spec[1], spec[2] * 1.4, (0, 0, 0))
         if o is None:
             col = {"phone": "#1d1b22", "card": "#3f6fb5", "note": "#ffe14d", "cash": "#5fae5a", "coins": "#e8b83a", "goldcoin": "#e8b83a",

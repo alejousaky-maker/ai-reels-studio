@@ -1,0 +1,243 @@
+{
+ "title": "He Sold Everything for GTA 6",
+ "environment": "apartment",
+ "seed": 411,
+ "cast": [
+  {
+   "id": "me",
+   "name": "Gamer",
+   "role": "streamer",
+   "palette": "#3a4566"
+  },
+  {
+   "id": "gf",
+   "name": "Girlfriend",
+   "role": "girlfriend"
+  },
+  {
+   "id": "buyer",
+   "name": "Buyer",
+   "role": "officeguy"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "Rumors say GTA 6 might cost a hundred and fifty dollars, and gamers are already selling their furniture to pre-order it.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "shock",
+     "holding": "phone"
+    }
+   ],
+   "impactWord": "hundred",
+   "environment": "apartment",
+   "pieces": [
+    {
+     "kind": "board",
+     "where": "left",
+     "label": "GTA 6|$150 ???"
+    }
+   ]
+  },
+  {
+   "narration": "Our hero checks his bank account: twelve dollars and a coupon for free fries.",
+   "shot": "close",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "sad",
+     "holding": "phone"
+    }
+   ],
+   "environment": "apartment",
+   "hud": "panel",
+   "hudText": "BALANCE|$12.00 + 1 COUPON"
+  },
+  {
+   "narration": "So he looks around his apartment and starts doing math.",
+   "shot": "wide",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "squint"
+    }
+   ],
+   "environment": "apartment",
+   "camMove": "orbit"
+  },
+  {
+   "narration": "The bed goes first. Eighty dollars, to a guy who doesn't even ask why it smells like cheese puffs.",
+   "shot": "two_shot",
+   "characters": [
+    {
+     "id": "buyer",
+     "expr": "skeptical"
+    },
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "smug"
+    }
+   ],
+   "focus": "me",
+   "environment": "bedroom",
+   "pieces": [
+    {
+     "kind": "bed"
+    }
+   ],
+   "hud": "panel",
+   "hudText": "GTA FUND|$80"
+  },
+  {
+   "narration": "Then the fridge, with the food still inside. Another sixty.",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "proud"
+    }
+   ],
+   "environment": "kitchen",
+   "pieces": [
+    {
+     "kind": "fridge",
+     "where": "left"
+    }
+   ],
+   "hud": "panel",
+   "hudText": "GTA FUND|$140"
+  },
+  {
+   "narration": "His girlfriend asks where the couch went. He tells her it's \"on a journey.\"",
+   "shot": "two_shot",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "gf",
+     "action": "hips",
+     "expr": "angry",
+     "talk": true
+    },
+    {
+     "id": "me",
+     "expr": "sweat"
+    }
+   ],
+   "focus": "gf",
+   "environment": "apartment",
+   "envVariant": "empty"
+  },
+  {
+   "narration": "Then he sells his car. Now he can't drive to the store, but who cares? It's a digital download.",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "me",
+     "action": "cheer",
+     "expr": "laugh"
+    }
+   ],
+   "environment": "street",
+   "pieces": [
+    {
+     "kind": "car",
+     "where": "left",
+     "label": "SOLD"
+    }
+   ],
+   "hud": "panel",
+   "hudText": "GTA FUND|$1,140"
+  },
+  {
+   "narration": "You see, rumors like this spread because the last GTA launched at sixty dollars back in 2013, and big new games have already climbed to seventy, even eighty.",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "me",
+     "action": "point",
+     "expr": "smug"
+    }
+   ],
+   "environment": "apartment",
+   "envVariant": "empty",
+   "pieces": [
+    {
+     "kind": "board",
+     "where": "left",
+     "label": "2013: $60|NOW: $70-80"
+    }
+   ]
+  },
+  {
+   "narration": "Launch night: no bed, no fridge, no car. Just him, sitting on a cardboard box in an empty room, in front of the biggest TV money can buy.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "me",
+     "action": "sitchair",
+     "expr": "starry",
+     "holding": "controller"
+    }
+   ],
+   "environment": "apartment",
+   "envVariant": "empty",
+   "pieces": [
+    {
+     "kind": "cardbox",
+     "where": "on"
+    },
+    {
+     "kind": "tv",
+     "where": "left",
+     "scale": 1.8,
+     "label": "~game|DOWNLOADING 99%"
+    }
+   ],
+   "camMove": "pull"
+  },
+  {
+   "narration": "And when the price is finally announced, it's the normal price, which means he sold his bed for",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "broken",
+     "holding": "controller"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "stars",
+     "word": "normal",
+     "on": "me"
+    }
+   ],
+   "environment": "apartment",
+   "envVariant": "empty"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "A $150 GTA 6 price is an online rumour, not an announced price."
+  },
+  {
+   "text": "GTA V launched at $59.99 in 2013; major new games now list at $70, some at $80.",
+   "status": "verified"
+  },
+  {
+   "text": "The sales, the couch 'on a journey' and the final price are invented for the joke.",
+   "status": "fiction"
+  }
+ ],
+ "renderer": "blender",
+ "pacing": "flow"
+}

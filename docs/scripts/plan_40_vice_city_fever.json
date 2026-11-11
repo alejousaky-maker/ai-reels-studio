@@ -1,0 +1,253 @@
+{
+ "title": "The Vice City Fever Pandemic",
+ "environment": "office",
+ "seed": 401,
+ "cast": [
+  {
+   "id": "me",
+   "name": "Gamer",
+   "role": "streamer"
+  },
+  {
+   "id": "boss",
+   "name": "Boss",
+   "role": "boss"
+  },
+  {
+   "id": "room",
+   "name": "Roommate",
+   "role": "capgamer"
+  },
+  {
+   "id": "doc",
+   "name": "Doctor",
+   "role": "doctor"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "The day GTA 6 drops, forty million gamers will mysteriously catch the exact same illness at exactly 8 AM.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "sweat",
+     "holding": "phone"
+    }
+   ],
+   "impactWord": "illness",
+   "environment": "bedroom",
+   "hud": "panel",
+   "hudText": "8:00 AM|LAUNCH DAY"
+  },
+  {
+   "narration": "It starts with one guy. He calls his boss, coughs twice into the phone, and whispers, \"I think it's contagious.\"",
+   "shot": "close",
+   "characters": [
+    {
+     "id": "me",
+     "expr": "sad",
+     "holding": "phone",
+     "talk": true
+    }
+   ],
+   "fx": [
+    {
+     "kind": "puff",
+     "word": "coughs",
+     "on": "me"
+    }
+   ],
+   "environment": "bedroom"
+  },
+  {
+   "narration": "Then his roommate calls in sick. Then his cousin. Then the entire night shift of a pizza place.",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "room",
+     "expr": "sweat",
+     "holding": "phone",
+     "talk": true
+    }
+   ],
+   "environment": "kitchen",
+   "pieces": [
+    {
+     "kind": "snacks",
+     "where": "right"
+    }
+   ]
+  },
+  {
+   "narration": "By nine, the office is a ghost town: a hundred empty desks, and one boss standing in the middle of it, holding a phone that will not stop ringing.",
+   "shot": "wide",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "boss",
+     "expr": "shock",
+     "holding": "phone"
+    }
+   ],
+   "environment": "office",
+   "envVariant": "rows",
+   "camMove": "crane_up"
+  },
+  {
+   "narration": "Every excuse is worse than the last. One guy's grandma is sick again, for the fourth time this year.",
+   "shot": "close",
+   "characters": [
+    {
+     "id": "boss",
+     "expr": "skeptical",
+     "holding": "phone"
+    }
+   ],
+   "environment": "office",
+   "envVariant": "rows",
+   "hud": "panel",
+   "hudText": "GRANDMA SICK|4TH TIME THIS YEAR"
+  },
+  {
+   "narration": "Another one swears he's calling from the hospital, but behind his voice the boss can hear police sirens, explosions, and a radio station from the eighties.",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "room",
+     "action": "sitchair",
+     "expr": "crazy",
+     "holding": "controller",
+     "talk": true
+    }
+   ],
+   "impactWord": "explosions",
+   "environment": "bedroom",
+   "pieces": [
+    {
+     "kind": "tv",
+     "where": "left",
+     "label": "~game|WANTED *****"
+    }
+   ],
+   "hud": "police"
+  },
+  {
+   "narration": "So the boss does the smart thing. No doctor's note, no paycheck.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "boss",
+     "action": "point",
+     "expr": "angry",
+     "holding": "phone",
+     "talk": true
+    }
+   ],
+   "impactWord": "paycheck",
+   "environment": "office",
+   "envVariant": "rows"
+  },
+  {
+   "narration": "By noon, his inbox has a doctor's note from every single one of them, all signed by the same doctor, all with the same diagnosis.",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "boss",
+     "expr": "shock"
+    }
+   ],
+   "environment": "office",
+   "envVariant": "rows",
+   "pieces": [
+    {
+     "kind": "monitor",
+     "where": "left",
+     "label": "DIAGNOSIS:|VICE CITY FEVER"
+    }
+   ]
+  },
+  {
+   "narration": "You see, this already happens. After the Super Bowl, surveys estimate millions of workers plan to skip Monday, and the most popular excuse is a stomach bug.",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "boss",
+     "expr": "squint"
+    }
+   ],
+   "environment": "office",
+   "envVariant": "rows",
+   "pieces": [
+    {
+     "kind": "board",
+     "where": "right",
+     "label": "SUPER BOWL MONDAY|MILLIONS 'SICK'"
+    }
+   ]
+  },
+  {
+   "narration": "So the boss drives to the clinic to confront the doctor himself.",
+   "shot": "wide",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "boss",
+     "action": "walk",
+     "expr": "angry"
+    }
+   ],
+   "environment": "street",
+   "pieces": [
+    {
+     "kind": "car",
+     "where": "right"
+    }
+   ]
+  },
+  {
+   "narration": "He kicks open the door and finds him in his lab coat, controller in hand, three hours into the very first mission of",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "doc",
+     "action": "sitchair",
+     "expr": "starry",
+     "holding": "controller"
+    },
+    {
+     "id": "boss",
+     "expr": "shock"
+    }
+   ],
+   "focus": "doc",
+   "impactWord": "controller",
+   "environment": "clinic",
+   "pieces": [
+    {
+     "kind": "tv",
+     "where": "left",
+     "label": "~game|MISSION 1"
+    }
+   ]
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "'Forty million gamers calling in sick' is a comedy exaggeration, not a statistic.",
+   "status": "fiction"
+  },
+  {
+   "text": "Workforce Institute surveys (2016-2020) estimated ~10-17 million US workers expected to miss work the Monday after the Super Bowl.",
+   "status": "verified"
+  },
+  {
+   "text": "The boss, the doctor and every excuse are invented; parody of GTA 6 hype (no real people).",
+   "status": "fiction"
+  }
+ ],
+ "renderer": "blender",
+ "pacing": "flow"
+}

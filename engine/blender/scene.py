@@ -178,7 +178,11 @@ def room(W, D, H, floor_c, back_c, side_c):
         sets.box("sky", (60, 0.1, 30), (0, D + 12, 8), L.flat("skyM", L.hexc(sky), 1.4), shadow=False)
         for k in range(8):
             sets.box(f"bld{k}", (2.2, 0.4, 3 + k % 3 * 2), (wx0 - 3 + k * 2.6, D + 8, 1.5 + k % 3), L.flat("bldM", L.hexc("#3a4a7a" if night else "#6f8fb8"), 1.0), shadow=False)
+    # side walls: never between the lens and the cast (a camera outside the room on that side drops that wall)
+    cams = [B(*cam_at(f)[0]) for f in range(S["startFrame"], S["endFrame"], 4)]
     for s in (-1, 1):
+        if any(c.x * s > W - 0.3 for c in cams):
+            continue
         sets.box(f"side{s}", (0.25, D + 8, H), (s * W, (D - 8) / 2, H / 2), side)
     trim = L.toon("trim", L.hexc("#3a3440"))
     sets.box("trimB", (2 * W, 0.3, 0.14), (0, D - 0.1, 0.07), trim)
@@ -204,6 +208,23 @@ def room(W, D, H, floor_c, back_c, side_c):
         "warehouse": [("cardboardBoxClosed", 0.8, (-W + 1.5, D - 1.2), 0.2), ("cardboardBoxClosed", 0.8, (-W + 2.4, D - 1.0), 0.6), ("cardboardBoxOpen", 0.7, (W - 1.6, D - 1.5), 0)],
         "airport": [("pottedPlant", 1.6, (W - 1.0, D - 1.0), 0), ("pottedPlant", 1.6, (-W + 1.0, D - 1.0), 0)],
     }.get(preset, [])
+    if variant == "empty":   # sold / moved out: bare room, one hanging bulb
+        dress = []
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.12, location=(0.3, D * 0.4, H - 0.9))
+        bpy.context.object.data.materials.append(L.flat("bulb", (1.0, 0.85, 0.5), 6.0))
+        bl = bpy.data.lights.new("bulbL", "POINT"); bl.energy = 120; bl.color = (1.0, 0.8, 0.5)
+        blo = bpy.data.objects.new("bulbL", bl); blo.location = (0.3, D * 0.4, H - 1.05); bpy.context.collection.objects.link(blo)
+        tube = sets.box("cord", (0.015, 0.015, 0.85), (0.3, D * 0.4, H - 0.42), L.toon("cord", L.hexc("#1d1b22")))
+    if preset == "office" and variant == "rows":   # open-plan floor: rows of identical desks, monitors and empty chairs
+        dress = []
+        for r_ in range(4):
+            for c_ in range(-3, 4):
+                x, y = c_ * 1.9, D - 1.2 - r_ * 2.0
+                if abs(c_) <= 1 and r_ >= 2:
+                    continue   # keep the aisle where the cast stands clear
+                sets.kenney(KITS, "furniture-kit", "desk", 0.76, (x, y, 0), math.pi)
+                sets.kenney(KITS, "furniture-kit", "computerScreen", 0.42, (x, y + 0.15, 0.76), math.pi)
+                sets.kenney(KITS, "furniture-kit", "chairDesk", 0.95, (x, y - 0.75, 0), 0.25 * ((c_ + r_) % 3 - 1))
     for nm, h, (x, y), yaw in dress:
         sets.kenney(KITS, "furniture-kit", nm, h, (x, y, 0), yaw)
     if preset == "office" and variant == "retro":   # 1966 lab: radar console glowing green
@@ -328,6 +349,23 @@ def text3d(text, parent, z, size, col=(1, 1, 1), strength=1.2, y=-0.05, width=No
     return o
 
 
+def game_screen(name):
+    """a lit game screen: synthwave sky (purple -> pink -> orange) with a sun, glowing (blooms)"""
+    m = L._new_mat(name)
+    N, Lk = m.node_tree.nodes, m.node_tree.links
+    tc, sep = N.new("ShaderNodeTexCoord"), N.new("ShaderNodeSeparateXYZ")
+    Lk.new(tc.outputs["Generated"], sep.inputs[0])
+    ramp = N.new("ShaderNodeValToRGB"); cr = ramp.color_ramp
+    cr.elements[0].position, cr.elements[0].color = 0.0, (1.0, 0.45, 0.1, 1)
+    cr.elements[1].position, cr.elements[1].color = 1.0, (0.18, 0.04, 0.35, 1)
+    e = cr.elements.new(0.5); e.color = (1.0, 0.15, 0.45, 1)
+    Lk.new(sep.outputs["Z"], ramp.inputs["Fac"])
+    em = N.new("ShaderNodeEmission"); em.inputs["Strength"].default_value = 1.6
+    Lk.new(ramp.outputs["Color"], em.inputs["Color"])
+    Lk.new(em.outputs[0], N.new("ShaderNodeOutputMaterial").inputs["Surface"])
+    return m
+
+
 def piece3d(i, kind, label, loc, k, yaw):
     """a story piece as a real 3D prop: boards / screens / signs carry their text; else an inked block"""
     root = bpy.data.objects.new(f"pc{i}", None)
@@ -352,7 +390,8 @@ def piece3d(i, kind, label, loc, k, yaw):
         else:
             parts.append(sets.box(f"frm{i}", (w + 0.12, 0.08, h + 0.12), (0, 0, z), dark, outline=0.01))
             parts.append(sets.box(f"stand{i}", (0.1, 0.1, z - h / 2), (0, 0.05, (z - h / 2) / 2), dark, outline=0.006))
-        scr = sets.box(f"scr{i}", (w, 0.02, h), (0, -0.05 if kind != "tubetv" else -0.36, z), L.flat(f"scrM{i}", (0.25, 0.45, 0.95) if kind != "ticker" else (0.05, 0.05, 0.12), 1.3), shadow=False)
+        smat = game_screen(f"scrG{i}") if (label or "").startswith("~game") else L.flat(f"scrM{i}", (0.25, 0.45, 0.95) if kind != "ticker" else (0.05, 0.05, 0.12), 1.3)
+        scr = sets.box(f"scr{i}", (w, 0.02, h), (0, -0.05 if kind != "tubetv" else -0.36, z), smat, shadow=False)
         parts.append(scr)
         txt = (label or "").lstrip("~").replace("game", "").strip("|") or ""
         if txt:
@@ -427,6 +466,9 @@ for i, p in enumerate(S.get("pieces") or []):
         if p["kind"] in ("car", "van", "truck") and p.get("label") in ("taxi", "police"):
             nm = p["label"]
         sets.kenney(KITS, kit, nm, h * k, (loc.x, loc.y, loc.z), yaw + (math.pi / 2 if kit == "car-kit" else 0))
+        if p.get("label") and p["label"] not in ("taxi", "police"):   # a hand-written sign on it ("SOLD", prices...)
+            sg = piece3d(i + 100, "signs", p["label"], loc + Vector((0, 0, 0)), 0.8, yaw)
+            sg.location.z = h * k * 0.55
     else:
         piece3d(i, p["kind"], p.get("label"), loc, k, yaw)
 
