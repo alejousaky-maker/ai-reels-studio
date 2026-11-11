@@ -75,7 +75,8 @@
    "mood": "tense",
    "transition": "zoom",
    "environment": "gameroom",
-   "hud": "world"
+   "hud": "world",
+   "hudText": "EVERYONE AT ONCE|100,000,000 DOWNLOADS"
   },
   {
    "narration": "Inside global data centers, server racks start glowing like nuclear reactors.",
@@ -191,6 +192,7 @@
     }
    ],
    "environment": "gameroom",
+   "envVariant": "candles",
    "camMove": "crane_up",
    "look": "warm",
    "backdrop": "a dark bedroom lit only by candles, a desk with tangled ethernet cables",
@@ -199,7 +201,8 @@
      "at": "desperate",
      "shot": "wide",
      "light": "night",
-     "environment": "street",
+     "environment": "shops",
+     "envVariant": "open",
      "characters": [
       {
        "id": "me",
@@ -217,6 +220,7 @@
      "at": "potatoes",
      "shot": "close",
      "environment": "gameroom",
+     "envVariant": "candles",
      "characters": [
       {
        "id": "me",
@@ -273,6 +277,5 @@
    "text": "Comedy parody about GTA 6 fandom; every event is invented. The studio, agents and developers are generic stickmen.",
    "status": "fiction"
   }
- ],
- "backdrops": "ai"
+ ]
 }

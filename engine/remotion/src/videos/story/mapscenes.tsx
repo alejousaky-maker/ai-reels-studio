@@ -118,7 +118,8 @@ const Panama: React.FC<{ n: number }> = ({ n }) => {
 };
 
 // ---------------- spinning globe, glowing ship lanes converging on Panama
-const World: React.FC<{ n: number }> = ({ n }) => {
+const World: React.FC<{ n: number; text?: string }> = ({ n, text }) => {
+  const [top, bottom] = text ? [text.split("|")[0], text.split("|")[1] ?? ""] : ["ONE BOTTLENECK", "40% OF US CONTAINERS"];
   const off = ((n * 3) % 900);
   const blobs = [[100, 760, 260, 180], [420, 820, 200, 260], [700, 700, 260, 200], [600, 1100, 160, 220], [250, 1120, 150, 200]];
   const target: [number, number] = [520, 960];
@@ -138,8 +139,8 @@ const World: React.FC<{ n: number }> = ({ n }) => {
         </g>
         <circle cx={540} cy={960} r={420} fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth={30} />
         <circle cx={target[0]} cy={target[1]} r={20 + 8 * Math.sin(n / 3)} fill="#ff3b3b" stroke={INK} strokeWidth={6} />
-        <g transform={`translate(540 1560) scale(${pop(n, 6)})`}>{label(0, 0, "40% OF US CONTAINERS", 70, "#ffe14d")}</g>
-        {label(540, 420, "ONE BOTTLENECK", 70)}
+        <g transform={`translate(540 1560) scale(${pop(n, 6)})`}>{label(0, 0, bottom, 70, "#ffe14d")}</g>
+        {label(540, 420, top, 70)}
       </svg>
     </AbsoluteFill>);
 };
@@ -206,7 +207,7 @@ export const MapScene: React.FC<{ kind: string; n: number; text?: string }> = ({
     case "manhattan": return <Manhattan n={n} mode={text ?? "jam"} />;
     case "osaka": return <Osaka n={n} />;
     case "panama": return <Panama n={n} />;
-    case "world": return <World n={n} />;
+    case "world": return <World n={n} text={text} />;
     case "subway": return <Subway n={n} text={text} />;
     case "mud": return <Mud n={n} />;
     case "outro": return <Outro n={n} />;

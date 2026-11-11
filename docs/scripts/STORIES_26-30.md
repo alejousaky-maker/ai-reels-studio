@@ -1,4 +1,4 @@
-# GTA 6 shorts 26–30 (Loophole Lou style, pro cut, AI backdrops + depth parallax)
+# GTA 6 shorts 26–30 (Loophole Lou style, pro cut, 3D built sets + CC0 Kenney models)
 
 Voice `am_eric*0.7+am_fenrir*0.3` @1.15. Parody; generic studio / agents / developers. `→` = cut inside the sentence.
 
@@ -24,12 +24,12 @@ Voice `am_eric*0.7+am_fenrir*0.3` @1.15. Parody; generic studio / agents / devel
 
 ## Harder Than Area 51  (`plan_28_infiltrator.json`, 7 scenes, 110 words)
 
-1. *street · dutch · night · crane_up* — “Getting an early copy of GTA 6 is officially harder than breaking into Area 51.” — spy (stand, smug) → **breaking**: extreme
+1. *shops · dutch · night · crane_up* — “Getting an early copy of GTA 6 is officially harder than breaking into Area 51.” — spy (stand, smug) → **breaking**: extreme
 2. *office · medium · day · push* — “After past leaks, security got so tight that one desperate fan tried sneaking in disguised as an office plant.” — grd (stand, skeptical) → **disguised**: wide → **plant**: close
 3. *office · medium · night · whip* — “He dodged motion cameras, bribed the janitor with Shark Cards, and backflipped through a hallway of red laser beams.” — spy (jump, sweat) → **bribed**: close → **backflipped**: worm
 4. *office · wide · night · pull* — “Finally, he reached the development room, only to find the game locked inside a ten-ton nuclear vault.” — spy (stand, dazed) → **ten-ton**: extreme
 5. *office · close · night · push* — “He cracked the code, grabbed the golden USB drive, and plugged it in, just to find a Rickroll video from the developers.” — spy (stand, starry, usb) → **just**: medium
-6. *street · medium · night · truck_left* — “Looks like we're waiting like everyone else.” — spy (fall, sad, controller), grd (walk, stern)
+6. *shops · medium · night · truck_left* — “Looks like we're waiting like everyone else.” — spy (fall, sad, controller), grd (walk, stern)
 7. *gameroom · wide · night · HUD outro* — “Send this to a friend who'd risk prison for early access.” — no cast
 
 ## It's Either That Game or Me  (`plan_29_loyalty_test.json`, 7 scenes, 113 words)

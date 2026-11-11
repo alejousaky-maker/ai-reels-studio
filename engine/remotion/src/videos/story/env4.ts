@@ -168,7 +168,24 @@ const sofa = (b: Batch, x: number, z: number, col: string, yaw = 0) => {
   T(-1.5, 0.1, -0.45, -1.3, 0.75, 0.45, d); T(1.3, 0.1, -0.45, 1.5, 0.75, 0.45, d);
   for (const s of [-0.65, 0.65]) T(s - 0.6, 0.48, -0.2, s + 0.6, 0.62, 0.4, C("cushion" + col, col));
 };
-const plant = (b: Batch, kit: Kit, x: number, z: number) => { b.add(cyl(0.28, 0.2, 0.45, 14), C("pot", "#c8703e"), M4(x, 0, z)); prop(b, kit, "plant_bushDetailed", x, 0.42, z, 1.1); };
+const plant = (b: Batch, kit: Kit, x: number, z: number) => {
+  if (kit["F.pottedPlant"]) { prop(b, kit, "F.pottedPlant", x, 0, z, 1.5, x * 3.1); return; }
+  b.add(cyl(0.28, 0.2, 0.45, 14), C("pot", "#c8703e"), M4(x, 0, z)); prop(b, kit, "plant_bushDetailed", x, 0.42, z, 1.1);
+};
+/** a CC0 Kenney model when the kit has it, else the hand-built fallback */
+const kp = (b: Batch, kit: Kit, name: string, x: number, y: number, z: number, h: number, yaw = 0, fallback?: () => void) => {
+  if (kit[name]) prop(b, kit, name, x, y, z, h, yaw); else fallback?.();
+};
+const candle = (root: THREE.Object3D, b: Batch, info: EnvInfo, x: number, y: number, z: number, h = 0.22) => {
+  b.add(cyl(0.05, 0.05, h, 10), C("candleWax", "#f4ead2"), M4(x, y, z));
+  const fl = new THREE.Mesh(new THREE.SphereGeometry(0.045, 8, 6).scale(1, 1.7, 1), glow([4.0, 2.4, 0.8])); fl.position.set(x, y + h + 0.06, z); root.add(fl);
+  if (y === 0 && x < 0) info.lanterns.push(V(x, y + h + 0.1, z));   // one warm pool, not a glow per flame
+};
+const laser = (root: THREE.Object3D, x0: number, y0: number, z0: number, x1: number, y1: number, z1: number) => {
+  const a = V(x0, y0, z0), c = V(x1, y1, z1), len = a.distanceTo(c);
+  const m = new THREE.Mesh(new THREE.CylinderGeometry(0.018, 0.018, len, 6), glow([5.0, 0.25, 0.2]));
+  m.position.copy(a).add(c).multiplyScalar(0.5); m.quaternion.setFromUnitVectors(V(0, 1, 0), c.clone().sub(a).normalize()); m.layers.set(NOINK); root.add(m);
+};
 
 // ---------------- rooms ----------------
 export const buildModernRoom = (root: THREE.Object3D, kit: Kit, env: EnvSpec, info: EnvInfo, b: Batch) => {
@@ -253,16 +270,26 @@ export const buildModernRoom = (root: THREE.Object3D, kit: Kit, env: EnvSpec, in
     b.add(ground(-W, W, -D, D + 4, 3.5, 3.5, 0.01), lam("planksHD", () => ({ map: planksHD() })));
     quadsRoom(b, W, D, H, lam("aptBack", () => ({ map: plainWall("aptB", "#e7dfd2", "#8a6a52") })), lam("aptSide", () => ({ map: plainWall("aptS", "#7fa8a2", "#5a4a42") })));
     windowOn(root, b, 1.6, 2.0, -D, 4.2, 2.3, skylineTex(env.variant === "night" ? "n" : "d", env.variant === "night"));
-    sofa(b, -2.6, -3.7, "#c8553d");
-    box(b, C("rugApt", "#d9c49a"), -4.4, 0.012, -2.6, -0.8, 0.02, 0.4);
-    box(b, C("ctable", "#6b4a32"), -3.5, 0.0, -2.3, -1.7, 0.42, -1.5);
+    // CC0 Kenney furniture (hand-built boxes when the kit is missing): sofa + cushions, rug, coffee table with a mug,
+    // TV unit, floor lamp, bookcase, side table, plants, a coat rack by the door
+    kp(b, kit, "F.loungeSofa", -2.6, 0, -3.9, 1.0, 0, () => sofa(b, -2.6, -3.7, "#c8553d"));
+    kp(b, kit, "F.rugRounded", -2.6, 0.005, -1.6, 0.03, 0, () => box(b, C("rugApt", "#d9c49a"), -4.4, 0.012, -2.6, -0.8, 0.02, 0.4));
+    kp(b, kit, "F.tableCoffee", -2.6, 0, -2.2, 0.45, 0, () => box(b, C("ctable", "#6b4a32"), -3.5, 0.0, -2.3, -1.7, 0.42, -1.5));
+    kp(b, kit, "K.mug", -2.3, 0.45, -2.15, 0.16, 0.6);
+    kp(b, kit, "F.books", -2.9, 0.45, -2.25, 0.12, 0.3);
     box(b, C("tvStand", "#3a3440"), 3.6, 0, 1.2, 5.6, 0.55, 1.8);
     box(b, C("tvBody", "#1d1b22"), 3.8, 0.55, 1.4, 5.4, 1.5, 1.5);
     const tv = new THREE.Mesh(new THREE.PlaneGeometry(1.45, 0.82), glow([0.35, 0.6, 1.1])); tv.position.set(4.6, 1.02, 1.36); tv.rotation.y = Math.PI; root.add(tv);
-    b.add(cyl(0.03, 0.03, 1.7, 6), C("lampPole", "#2b2b38"), M4(-5.6, 0, -4.5));
+    kp(b, kit, "F.speakerSmall", 3.75, 0.55, 1.5, 0.4, Math.PI); kp(b, kit, "F.speakerSmall", 5.45, 0.55, 1.5, 0.4, Math.PI);
+    if (kit["F.lampRoundFloor"]) prop(b, kit, "F.lampRoundFloor", -5.6, 0, -4.5, 2.0);
+    else b.add(cyl(0.03, 0.03, 1.7, 6), C("lampPole", "#2b2b38"), M4(-5.6, 0, -4.5));
     const lm = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.32, 0.4, 16), glow([2.6, 2.0, 1.2])); lm.position.set(-5.6, 1.85, -4.5); root.add(lm);
     info.lanterns.push(V(-5.6, 1.85, -4.5));
-    plant(b, kit, 5.6, -4.6); plant(b, kit, -5.8, 2.5);
+    kp(b, kit, "F.bookcaseOpen", 4.9, 0, -D + 0.35, 2.4, 0);
+    kp(b, kit, "F.sideTableDrawers", -0.6, 0, -D + 0.45, 0.7, 0); kp(b, kit, "F.lampRoundTable", -0.6, 0.7, -D + 0.45, 0.55, 0);
+    kp(b, kit, "F.coatRackStanding", W - 0.5, 0, 2.6, 1.9, 0);
+    kp(b, kit, "F.pillowBlue", -3.3, 0.48, -3.75, 0.3, 0.2); kp(b, kit, "F.pillow", -1.9, 0.48, -3.75, 0.3, -0.2);
+    plant(b, kit, 5.6, -2.6); plant(b, kit, -5.8, 2.5); kp(b, kit, "F.plantSmall2", 4.9, 2.4, -D + 0.35, 0.4);
     for (const [x, c] of [[-1.4, "#3f6fb5"], [-0.4, "#e8b83a"]] as const) box(b, C("frame" + c, c), x, 1.6, -D + 0.01, x + 0.7, 2.4, -D + 0.06);
   } else if (kind === "bathroom") {
     const W = 4.2, D = 4.2, H = 3.2;
@@ -290,11 +317,53 @@ export const buildModernRoom = (root: THREE.Object3D, kit: Kit, env: EnvSpec, in
     b.add(cyl(0.22, 0.2, 0.42, 16), C("toilet", "#ffffff"), M4(-W + 0.5, 0, -0.8)); box(b, C("toilet", "#ffffff"), -W, 0.42, -1.15, -W + 0.3, 0.95, -0.45);
     box(b, C("towel", "#e8b83a"), W - 0.05, 0.9, 0.3, W, 1.7, 1.1);
     box(b, C("bathMat", "#7fc4d9"), -1.0, 0.012, -1.6, 0.6, 0.02, -0.6);
+  } else if (kind === "office" && (env.variant === "lasers" || env.variant === "vault")) {
+    // the secure wing: a steel corridor criss-crossed by red laser beams, or the vault room (round 10-ton door + glowing pedestal)
+    const W = 6, D = 5.5, H = 3.8, vault = env.variant === "vault";
+    b.add(ground(-W, W, -D, D + 4, 4, 4, 0.01), lam("secFloor", () => ({ map: tileTex("secf", "#3a3f4a", "#2b2f38", 6, true) })));
+    const steel = lam("secWall", () => ({ map: ctex("secWallT", 512, 256, (g) => {
+      g.fillStyle = "#4a515e"; g.fillRect(0, 0, 512, 256);
+      for (let x = 0; x < 512; x += 128) { g.fillStyle = "#3a404b"; g.fillRect(x, 0, 6, 256); for (let y = 16; y < 256; y += 48) { g.fillStyle = "#6a7280"; g.beginPath(); g.arc(x + 14, y, 4, 0, 7); g.fill(); } }
+      g.fillStyle = "#e8b83a"; for (let x = -40; x < 512; x += 40) { g.beginPath(); g.moveTo(x, 256); g.lineTo(x + 20, 256); g.lineTo(x + 40, 230); g.lineTo(x + 20, 230); g.fill(); }
+    }) }));
+    quadsRoom(b, W, D, H, steel, steel, 2);
+    const strip = new THREE.Mesh(new THREE.BoxGeometry(2 * W, 0.06, 0.06), glow(vault ? [0.4, 1.4, 3.2] : [3.6, 0.3, 0.2])); strip.position.set(0, H - 0.2, -D + 0.08); root.add(strip);
+    if (vault) {
+      const door = new THREE.CylinderGeometry(2.0, 2.0, 0.5, 48).rotateX(Math.PI / 2);
+      b.add(door, C("vaultDoor", "#9aa3b0"), M4(0, 2.0, -D + 0.25));
+      b.add(new THREE.TorusGeometry(2.05, 0.16, 10, 48), C("vaultRim", "#5a616d"), M4(0, 2.0, -D + 0.5));
+      b.add(new THREE.TorusGeometry(1.3, 0.06, 8, 40), C("vaultRing", "#c9ced6"), M4(0, 2.0, -D + 0.52));
+      for (let k = 0; k < 3; k++) b.add(new THREE.BoxGeometry(1.7, 0.12, 0.12).rotateZ((k * Math.PI) / 3), C("vaultSpoke", "#c9a227"), M4(0, 2.0, -D + 0.6));
+      b.add(cyl(0.18, 0.18, 0.25, 16).rotateX(Math.PI / 2), C("vaultHub", "#c9a227"), M4(0, 2.0, -D + 0.5));
+      for (let k = 0; k < 8; k++) { const a = (k / 8) * Math.PI * 2; b.add(new THREE.SphereGeometry(0.1, 10, 8), C("vaultBolt", "#e3e6ea"), M4(1.75 * Math.cos(a), 2.0 + 1.75 * Math.sin(a), -D + 0.5)); }
+      for (const s of [-1, 1]) {   // biometric scanners + padlocks beside the door
+        box(b, C("scanner", "#1d1b22"), s * 2.9 - 0.25, 1.3, -D, s * 2.9 + 0.25, 1.9, -D + 0.12);
+        const sc = new THREE.Mesh(new THREE.PlaneGeometry(0.36, 0.3), glow([0.3, 2.8, 1.2])); sc.position.set(s * 2.9, 1.65, -D + 0.13); root.add(sc);
+        b.add(new THREE.TorusGeometry(0.16, 0.04, 8, 16, Math.PI), C("lockShackle", "#c9ced6"), M4(s * 2.4, 0.85, -D + 0.2));
+        box(b, C("padlock", "#c9a227"), s * 2.4 - 0.18, 0.5, -D + 0.12, s * 2.4 + 0.18, 0.85, -D + 0.3);
+      }
+      b.add(cyl(0.35, 0.45, 1.0, 20), C("pedestal", "#2b2f38"), M4(3.6, 0, -2.6));
+      const halo = new THREE.Mesh(new THREE.CylinderGeometry(0.33, 0.33, 0.05, 20), glow([3.6, 2.8, 0.6])); halo.position.set(3.6, 1.02, -2.6); root.add(halo);
+    } else {
+      for (let k = 0; k < 7; k++) {   // beams anchored on the side walls and the back wall, all behind / beside the cast
+        const z0 = -D + 0.6 + k * 0.75, y0 = 0.4 + ((k * 0.37) % 1) * 2.2, y1 = 2.6 - ((k * 0.53) % 1) * 2.0;
+        laser(root, -W + 0.05, y0, z0, W - 0.05, y1, z0 - 0.9);
+      }
+      for (let k = 0; k < 4; k++) laser(root, -W + 0.6 + k * 3.4, 0.05, -D + 0.05, -W + 2.2 + k * 3.4, H - 0.3, -D + 0.05);
+      for (const s of [-1, 1]) {   // ceiling motion cameras
+        box(b, C("camBody", "#e9ecef"), s * 4.6 - 0.25, H - 0.6, -D + 0.3, s * 4.6 + 0.25, H - 0.35, -D + 0.75);
+        const red = new THREE.Mesh(new THREE.SphereGeometry(0.05, 8, 6), glow([5, 0.3, 0.2])); red.position.set(s * 4.6, H - 0.48, -D + 0.78); root.add(red);
+      }
+    }
   } else if (kind === "office") {
     const W = 7, D = 5.5, H = 3.8;
     b.add(ground(-W, W, -D, D + 4, 4, 4, 0.01), lam("officeCarpet", () => ({ map: tileTex("oc", "#7d8aa0", "#727e94", 6) })));
     quadsRoom(b, W, D, H, lam("offBack", () => ({ map: plainWall("offB", "#eef0f2", "#5a5f6a") })), lam("offSide", () => ({ map: plainWall("offS", "#d9dde3", "#5a5f6a") })));
     windowOn(root, b, 0, 2.05, -D, 9.5, 2.9, skylineTex("o", false));
+    kp(b, kit, "F.computerScreen", 1.0, 0.84, -2.75, 0.55, 0); kp(b, kit, "F.computerKeyboard", 1.0, 0.84, -2.35, 0.04, 0);
+    kp(b, kit, "K.cup-coffee", -1.4, 0.84, -2.4, 0.16); kp(b, kit, "F.trashcan", 2.6, 0, -2.6, 0.55);
+    kp(b, kit, "F.coatRackStanding", -6.3, 0, -3.4, 1.9); kp(b, kit, "F.bookcaseClosedWide", 6.4, 0, 0.6, 2.0, -Math.PI / 2);
+    kp(b, kit, "F.loungeChair", -5.4, 0, 0.2, 0.9, Math.PI / 2); kp(b, kit, "F.sideTable", -5.4, 0, 1.3, 0.5);
     // executive desk + chair, laptop, phone, framed photo
     box(b, C("desk", "#5a3b2a"), -1.9, 0, -2.9, 1.9, 0.78, -2.0); box(b, C("deskTop", "#3a2a20"), -2.0, 0.78, -3.0, 2.0, 0.84, -1.9);
     box(b, C("laptop", "#c9ccd2"), -0.5, 0.84, -2.6, 0.5, 0.86, -2.1);
@@ -357,10 +426,32 @@ export const buildModernRoom = (root: THREE.Object3D, kit: Kit, env: EnvSpec, in
     const W = 5.5, D = 4.4, H = 3.2;
     b.add(ground(-W, W, -D, D + 4, 3, 3, 0.01), lam("planksDark", () => ({ map: planksHD(), color: "#7a7090" })));
     quadsRoom(b, W, D, H, lam("gameBack", () => ({ map: plainWall("gameB", "#2a2448", "#14102a") })), lam("gameSide", () => ({ map: plainWall("gameS", "#231e3e", "#14102a") })));
+    const dark = env.variant === "candles", flood = env.variant === "flood";   // candles: the grid is down; flood: the ocean came out of the TV
     for (const [y, c] of [[H - 0.15, [0.4, 3.0, 3.4]], [0.12, [3.2, 0.5, 2.6]]] as const) {   // RGB strips along the back wall (bloom)
-      const strip = new THREE.Mesh(new THREE.BoxGeometry(2 * W, 0.05, 0.05), glow(c as [number, number, number])); strip.position.set(0, y, -D + 0.06); root.add(strip);
+      const strip = new THREE.Mesh(new THREE.BoxGeometry(2 * W, 0.05, 0.05), dark ? new THREE.MeshLambertMaterial({ color: "#2a2a34" }) : glow(c as [number, number, number])); strip.position.set(0, y, -D + 0.06); root.add(strip);
     }
-    const sideStrip = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.05, D * 2), glow([3.2, 0.5, 2.6])); sideStrip.position.set(-W + 0.06, H - 0.15, 0); root.add(sideStrip);
+    const sideStrip = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.05, D * 2), dark ? new THREE.MeshLambertMaterial({ color: "#2a2a34" }) : glow([3.2, 0.5, 2.6])); sideStrip.position.set(-W + 0.06, H - 0.15, 0); root.add(sideStrip);
+    // CC0 Kenney set dressing: desk speakers, keyboard, snacks and cans, a bookcase of games, a lounge chair, bin, lamp, rug
+    kp(b, kit, "F.speaker", -3.15, 0.8, -D + 0.75, 0.55, 0); kp(b, kit, "F.speakerSmall", 0.25, 0.8, -D + 0.6, 0.35, 0);
+    kp(b, kit, "F.computerKeyboard", -1.4, 0.8, -D + 1.0, 0.04, 0);
+    kp(b, kit, "K.soda-can", -2.4, 0.8, -D + 1.05, 0.16, 0.3); kp(b, kit, "K.soda-can", -2.2, 0.8, -D + 0.95, 0.16, 1.2);
+    kp(b, kit, "K.pizza-box", 3.6, 0, -1.2, 0.12, 0.4); kp(b, kit, "K.soda-can-crushed", 3.1, 0, -0.6, 0.1, 0.9);
+    kp(b, kit, "F.bookcaseOpenLow", W - 0.45, 0, 0.8, 1.1, -Math.PI / 2); kp(b, kit, "F.loungeChairRelax", -4.3, 0, 0.6, 1.0, Math.PI / 2);
+    kp(b, kit, "F.trashcan", 4.6, 0, -3.7, 0.55); kp(b, kit, "F.rugRound", 0.8, 0.005, -1.2, 0.03);
+    if (!dark) kp(b, kit, "F.lampSquareFloor", -4.8, 0, -3.7, 1.9);
+    if (dark) {   // power cut: candles on the desk and the floor, tangled ethernet cables
+      for (const [x, y, z, h] of [[-3.0, 0.8, -D + 0.5, 0.25], [-0.8, 0.8, -D + 0.5, 0.18], [0.3, 0.8, -D + 1.1, 0.3], [-4.6, 0, -2.6, 0.35], [4.2, 0, -2.2, 0.28], [2.4, 0, -3.8, 0.22]] as const) candle(root, b, info, x, y, z, h);
+      for (let k = 0; k < 5; k++) b.add(new THREE.TorusGeometry(0.16 + k * 0.03, 0.012, 6, 20).rotateX(Math.PI / 2 - 0.3 + k * 0.15), C("ethCable" + (k % 2), k % 2 ? "#3f6fb5" : "#e8b83a"), M4(-1.9 + k * 0.18, 0.82, -D + 0.75));
+    }
+    if (flood) {   // ankle-deep sea water over the floor, a sand heap under the TV, floating pizza boxes, police lights at the window
+      const water = new THREE.Mesh(new THREE.PlaneGeometry(2 * W, 2 * D + 4).rotateX(-Math.PI / 2), new THREE.MeshLambertMaterial({ color: "#3fa8d8", transparent: true, opacity: 0.62 }));
+      water.position.set(0, 0.28, 2); water.layers.set(NOINK); root.add(water);
+      b.add(new THREE.SphereGeometry(1, 18, 8, 0, Math.PI * 2, 0, Math.PI / 2), C("sandHeap", "#e9cf8a"), MS(-1.4, 0, -D + 1.1, 1.5, 0.55, 0.8));
+      for (const [x, z, ry] of [[1.8, -0.6, 0.5], [-3.0, 0.9, 1.4], [3.9, 1.6, 2.6]] as const) kp(b, kit, "K.pizza-box", x, 0.27, z, 0.12, ry);
+      for (const [x, c] of [[2.2, [4.0, 0.3, 0.25]], [3.8, [0.3, 0.8, 4.0]]] as const) {
+        const pl = new THREE.Mesh(new THREE.PlaneGeometry(1.4, 2.2), glow(c as [number, number, number])); pl.position.set(x, 1.8, -D + 0.2); pl.layers.set(NOINK); root.add(pl);
+      }
+    }
     // curtains drawn over the window
     box(b, C("curtainShut", "#3a2a6a"), 1.4, 0.6, -D + 0.04, 4.6, 3.0, -D + 0.16);
     for (let x = 1.6; x < 4.6; x += 0.5) box(b, C("curtainFold", "#2a1e52"), x, 0.6, -D + 0.16, x + 0.1, 3.0, -D + 0.19);
@@ -491,7 +582,27 @@ export const buildShops = (root: THREE.Object3D, kit: Kit, env: EnvSpec, info: E
   box(b, C("asphalt", "#4a4f5a"), -150, -0.005, 6, 150, 0.01, 14);
   for (let x = -150; x < 150; x += 6) box(b, C("roadLine", "#f2efe8"), x, 0.012, 9.9, x + 3, 0.015, 10.1);
   box(b, lam("pavement", () => ({ map: rep(tileTex("pv", "#c9c4b8", "#b0aa9c", 4), 1, 1) })), -150, 0, 0, 150, 0.08, 6);
-  const shops: [string, string][] = [["COFFEE", "#7a4f33"], ["BANK", "#2f3f6a"], ["GROCERY", "#3f7a3a"], ["PHARMACY", "#3f8fa0"], ["DINER", "#c8323a"], ["BOOKS", "#7a3a6a"], ["PIZZA", "#c8553d"]];
+  const hq = env.variant === "hq";   // the game studio's fortress HQ: security signs, a fence, sweeping searchlights
+  const shops: [string, string][] = hq ? [["KEEP OUT", "#8a1f1f"], ["SECURITY", "#2b2f38"], ["STUDIO HQ", "#1d1b22"], ["NO LEAKS", "#8a1f1f"]]
+    : [["COFFEE", "#7a4f33"], ["BANK", "#2f3f6a"], ["GROCERY", "#3f7a3a"], ["PHARMACY", "#3f8fa0"], ["DINER", "#c8323a"], ["BOOKS", "#7a3a6a"], ["PIZZA", "#c8553d"]];
+  // CC0 Kenney cars parked along the kerb (a police car outside the HQ)
+  const cars = hq ? ["police", "suv", "van", "police", "sedan"] : ["taxi", "sedan", "suv", "hatchback-sports", "van", "sedan-sports"];
+  [-27, -15, 11, 21, 33].forEach((x, i) => kp(b, kit, "C." + cars[i % cars.length], x, 0, 7.4, 1.5, i % 2 ? Math.PI / 2 : -Math.PI / 2));
+  if (hq) {
+    // steel security fence: posts, rails and a see-through chain-link mesh
+    const link = ctex("chainLink", 256, 256, (g) => { g.clearRect(0, 0, 256, 256); g.strokeStyle = "#c9ced6"; g.lineWidth = 4; for (let k = -256; k < 512; k += 32) { g.beginPath(); g.moveTo(k, 0); g.lineTo(k + 256, 256); g.stroke(); g.beginPath(); g.moveTo(k + 256, 0); g.lineTo(k, 256); g.stroke(); } });
+    link.wrapS = link.wrapT = THREE.RepeatWrapping; link.repeat.set(40, 1);
+    const mesh = new THREE.Mesh(new THREE.PlaneGeometry(52, 1.2), new THREE.MeshLambertMaterial({ map: link, transparent: true, alphaTest: 0.3, side: THREE.DoubleSide }));
+    mesh.position.set(0, 0.68, 0.9); root.add(mesh);
+    for (let x = -26; x <= 26; x += 2.6) b.add(cyl(0.04, 0.04, 1.3, 6), C("fencePostS", "#8a9099"), M4(x, 0.08, 0.9));
+    box(b, C("fenceRail", "#8a9099"), -26, 1.22, 0.87, 26, 1.26, 0.93);
+    for (let x = -26; x <= 26; x += 0.5) box(b, C("barbed", "#9aa0a8"), x, 1.25 + (Math.round(x * 2) % 2) * 0.06, 0.88, x + 0.35, 1.3 + (Math.round(x * 2) % 2) * 0.06, 0.92);
+    const beamM = new THREE.MeshBasicMaterial({ color: new THREE.Color(1.6, 1.5, 1.1), transparent: true, opacity: 0.16, depthWrite: false, side: THREE.DoubleSide });
+    for (const [x, tilt] of [[-12, 0.35], [9, -0.3], [24, 0.2]] as const) {
+      const cone = new THREE.Mesh(new THREE.ConeGeometry(2.2, 22, 20, 1, true), beamM); cone.position.set(x + Math.sin(tilt) * 11, 9 + 11 * Math.cos(tilt), -8); cone.rotation.z = Math.PI + tilt; cone.layers.set(NOINK); root.add(cone);
+      const lamp = new THREE.Mesh(new THREE.SphereGeometry(0.35, 12, 8), glow([4, 3.6, 2.6])); lamp.position.set(x, 9, -8); root.add(lamp);
+    }
+  }
   for (let i = -3; i <= 3; i++) {
     const x = i * 8, [name, col] = shops[(i + 7) % shops.length], bcol = ["#b8643a", "#a85a40", "#c27a4a", "#9a5a3a"][(i + 4) % 4];
     const brick = lam("brickM" + bcol, () => ({ map: rep(brickTex(bcol, bcol), 2, 2) }));
@@ -503,7 +614,7 @@ export const buildShops = (root: THREE.Object3D, kit: Kit, env: EnvSpec, info: E
     const door = new THREE.Mesh(new THREE.PlaneGeometry(1.1, 2.4), new THREE.MeshLambertMaterial({ map: shutterTex(), color: "#9aa0a8" })); door.position.set(x + 2.7, 1.2, 0.03); root.add(door);
     const sign = new THREE.Mesh(new THREE.PlaneGeometry(4.6, 1.15), new THREE.MeshBasicMaterial({ map: signTex(name, col), color: 0xeeeeee })); sign.position.set(x - 0.4, 4.2, 0.05); sign.layers.set(NOINK); root.add(sign);
     const neon = new THREE.Mesh(new THREE.PlaneGeometry(open ? 1.3 : 2.6, open ? 0.65 : 1.3), new THREE.MeshBasicMaterial({ map: open ? openTex() : closedTex(), transparent: true, color: new THREE.Color(2.6, 2.6, 2.6) }));
-    neon.position.set(open ? x + 1.4 : x - 0.6, open ? 2.7 : 1.9, 0.06); neon.layers.set(NOINK); root.add(neon);
+    neon.position.set(open ? x + 1.4 : x - 0.6, open ? 2.7 : 1.9, 0.06); neon.layers.set(NOINK); if (!hq) root.add(neon);
     for (const wx of [-2.2, 0, 2.2]) box(b, C("upWin", "#cfe6fa"), x + wx - 0.6, 5.0, 0.0, x + wx + 0.6, 6.2, 0.04);
     box(b, C("awningBar", "#2b2b38"), x - 3.9, 3.55, 0, x + 3.9, 3.7, 0.5);
   }
@@ -559,6 +670,7 @@ export const buildSuburb = (root: THREE.Object3D, kit: Kit, env: EnvSpec, info: 
     b.add(cyl(0.05, 0.05, 1.1, 6), C("mailPole", "#5a3b2a"), M4(x + 4, 0, 6.8)); box(b, C("mailbox", "#3f6fb5"), x + 3.8, 1.1, 6.6, x + 4.2, 1.4, 7.1);
     prop(b, kit, ["tree_oak", "tree_default", "tree_fat"][(i + 9) % 3], x - 6.5, 0, -1, 6 + r() * 2, r() * 6);
     for (let k = 0; k < 3; k++) prop(b, kit, "plant_bush", x - 4.5 + k * 1.1, 0, -5.4, 0.8);
+    if ((i + 9) % 3 !== 1) kp(b, kit, "C." + ["suv", "sedan", "hatchback-sports", "van"][(i + 9) % 4], x - 0.3, 0, -2.2, 1.5, 0);   // CC0 Kenney car in the driveway
   }
   for (let i = -4; i <= 4; i++) { const x = i * 16 + 8; box(b, C("farHouse", "#d8cbb4"), x - 5, 0, 22, x + 5, 5, 30); b.add(new THREE.CylinderGeometry(0.01, 6.6, 2.8, 4, 1).rotateY(Math.PI / 4).scale(1.05, 1, 1.2), C("roof1", "#4a4f5a"), M4(x, 6.4, 26)); }
   if (env.variant === "tvglow") {   // every house: the same blue TV flicker in the windows (the whole street is playing)

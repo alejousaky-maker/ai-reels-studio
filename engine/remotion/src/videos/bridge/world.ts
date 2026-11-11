@@ -1,4 +1,4 @@
-// The whole place as one three.js scene: sky, river, banks, town, the chain bridge (deck, rails, hangers, chains,
+﻿// The whole place as one three.js scene: sky, river, banks, town, the chain bridge (deck, rails, hangers, chains,
 // backstays, anchors, bunting, flags) deformed every frame from the story physics, the park swing, smoke, clouds
 // and the cast. update(id, f, camera) poses everything for shot `id` at frame f (pure function of id + f).
 import * as THREE from "three";
@@ -17,11 +17,26 @@ import { FPS, D0, SHOTS, PARK, ANCHOR, SNAP, camAt, bridgeState, deckY, dropW, s
 const KENNEY = ["tree_oak", "tree_default", "tree_detailed", "tree_fat", "tree_cone", "tree-high-round", "tree", "plant_bushLarge", "plant_bushDetailed",
   "plant_bush", "hedge", "flower_redA", "flower_yellowA", "flower_purpleA", "grass_large", "grass", "lily_large", "lantern", "cart", "stall-red",
   "stall-green", "stall-bench", "banner-red", "banner-green", "windmill", "canoe"];
+// CC0 Kenney kits in public/kits/<kit>/ (furniture, cars, city, food): loaded as "<P>.<model>", e.g. "F.loungeSofa"
+const KITS: Record<string, [string, string[]]> = {
+  F: ["furniture-kit", ["loungeSofa", "loungeSofaCorner", "loungeChair", "loungeChairRelax", "loungeDesignSofa", "tableCoffee", "tableCoffeeGlass", "cabinetTelevision",
+    "televisionModern", "televisionVintage", "lampRoundFloor", "lampSquareFloor", "lampRoundTable", "pottedPlant", "plantSmall1", "plantSmall2", "bookcaseOpen",
+    "bookcaseOpenLow", "bookcaseClosedWide", "books", "rugRectangle", "rugRound", "rugRounded", "desk", "deskCorner", "chairDesk", "chair", "chairCushion",
+    "computerScreen", "computerKeyboard", "computerMouse", "laptop", "speaker", "speakerSmall", "trashcan", "cardboardBoxOpen", "cardboardBoxClosed",
+    "coatRackStanding", "sideTable", "sideTableDrawers", "kitchenFridge", "kitchenCabinet", "kitchenStove", "kitchenCoffeeMachine", "kitchenMicrowave",
+    "table", "tableRound", "pillow", "pillowBlue", "radio", "bedDouble", "bedSingle", "cabinetBedDrawerTable", "stoolBar", "ceilingFan", "bear"]],
+  C: ["car-kit", ["sedan", "sedan-sports", "suv", "suv-luxury", "taxi", "police", "van", "delivery", "hatchback-sports", "truck", "ambulance", "firetruck", "cone", "box"]],
+  B: ["city-kit-commercial", ["detail-awning", "detail-awning-wide", "detail-parasol-a", "detail-parasol-b", "building-a", "building-c", "building-e", "building-g", "building-skyscraper-a", "building-skyscraper-c"]],
+  S: ["city-kit-suburban", ["building-type-a", "building-type-c", "building-type-f", "building-type-k", "fence-1x3", "fence-low", "planter", "tree-large", "tree-small"]],
+  K: ["food-kit", ["pizza-box", "pizza", "soda-can", "soda-can-crushed", "soda-bottle", "cup-coffee", "mug", "burger", "fries", "donut-sprinkles", "bag", "can"]],
+};
 let kitP: Promise<Kit> | null = null;
 export const loadKit = () => {
   if (!kitP) {
     const loader = new GLTFLoader();
-    kitP = Promise.all(KENNEY.map((n) => loader.loadAsync(staticFile(`bridge/kenney/${n}.glb`)).then((g) => [n, g.scene] as const).catch(() => [n, null] as const)))
+    const jobs: [string, string][] = KENNEY.map((n): [string, string] => [n, `bridge/kenney/${n}.glb`])
+      .concat(Object.entries(KITS).flatMap(([p, [dir, names]]) => names.map((n): [string, string] => [`${p}.${n}`, `kits/${dir}/${n}.glb`])));
+    kitP = Promise.all(jobs.map(([n, f]) => loader.loadAsync(staticFile(f)).then((g) => [n, g.scene] as const).catch(() => [n, null] as const)))
       .then((list) => Object.fromEntries(list.filter((e) => e[1]).map(([n, s]) => [n, s!])) as Kit);
   }
   return kitP;

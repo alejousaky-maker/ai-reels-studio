@@ -1,4 +1,4 @@
-"""GTA 6 shorts 26-30 (Loophole Lou style, pro cut, AI backdrops + depth parallax, RicksClips-style acting).
+"""GTA 6 shorts 26-30 (Loophole Lou style, pro cut, 3D built sets + CC0 Kenney models, RicksClips-style acting).
 Parody: the studio, the FBI and the developers are generic stickmen (no real people, no logos).
 Run: python docs/scripts/build_plans_26_30.py -> plan_26..30 JSON + STORIES_26-30.md"""
 import json
@@ -26,7 +26,7 @@ PLANS["plan_26_blackout2"] = dict(
           shots=[S("hundred", shot="extreme", hud=None, characters=[C("me", expr="starry")], fx=[fx("burst", "downloads", "me")], camMove="push"),
                  S("melt", environment="datacenter", envVariant="red", shot="wide", characters=[], hud=None, fx=[fx("sparks", "melt", None)], camMove="truck_right")]),
         B("Every gamer on Earth clicks download at the exact same microsecond, sending a digital tsunami through undersea cables.",
-          "gameroom", "wide", "night", "tense", [], hud="world", transition="zoom"),
+          "gameroom", "wide", "night", "tense", [], hud="world", hudText="EVERYONE AT ONCE|100,000,000 DOWNLOADS", transition="zoom"),
         B("Inside global data centers, server racks start glowing like nuclear reactors.",
           "datacenter", "wide", "night", "tense", [C("tech", "run", "dazed", "extinguisher")], envVariant="red", extras=3, extrasRole="technician", extrasAction="march",
           pieces=[pc("rack", "left", label="red", shake=1.0), pc("rack", "right", label="red", shake=1.0)], fx=[fx("sparks", "glowing", "tech")], camMove="follow",
@@ -35,10 +35,10 @@ PLANS["plan_26_blackout2"] = dict(
           "gameroom", "medium", "night", "tense", [C("me", "sitchair", "starry")], hud="bar", hudText="DOWNLOADING GTA 6|97|99.9", camMove="push",
           shots=[S("flatlines", shot="extreme", hud=None, characters=[C("me", expr="broken", holding="router")], fx=[fx("puff", "flatlines", "me")], impactWord="flatlines", camMove="whip")]),
         B("Within minutes, society returns to the Stone Age, and desperate gamers try running their routers off raw potatoes.",
-          "gameroom", "medium", "night", "warm", [C("me", "stand", "sweat", "potato")], look="warm", camMove="crane_up",
+          "gameroom", "medium", "night", "warm", [C("me", "stand", "sweat", "potato")], look="warm", camMove="crane_up", envVariant="candles",
           backdrop="a dark bedroom lit only by candles, a desk with tangled ethernet cables",
-          shots=[S("desperate", environment="street", light="night", shot="wide", characters=[C("me", "run", "crazy", "potato")], extras=5, extrasRole="streamer", extrasAction="march", camMove="truck_left"),
-                 S("potatoes", environment="gameroom", shot="close", characters=[C("me", expr="starry", holding="potato")], extras=0, fx=[fx("sparks", "potatoes", "me")], camMove="push")]),
+          shots=[S("desperate", environment="shops", envVariant="open", light="night", shot="wide", characters=[C("me", "run", "crazy", "potato")], extras=5, extrasRole="streamer", extrasAction="march", camMove="truck_left"),
+                 S("potatoes", environment="gameroom", envVariant="candles", shot="close", characters=[C("me", expr="starry", holding="potato")], extras=0, fx=[fx("sparks", "potatoes", "me")], camMove="push")]),
         B("The potato gives zero megabytes, just the smell of french fries.",
           "gameroom", "close", "night", "warm", [C("me", expr="cry", holding="potato")], fx=[fx("steam", "smell", "me")], camMove="pull"),
         OUTRO("Send this to the friend whose Wi-Fi dies every night."),
@@ -83,9 +83,9 @@ PLANS["plan_28_infiltrator"] = dict(
     cast=[{"id": "spy", "name": "Spy gamer", "role": "spy"}, {"id": "grd", "name": "Guard", "role": "guard"}],
     beats=[
         B("Getting an early copy of GTA 6 is officially harder than breaking into Area 51.",
-          "street", "dutch", "night", "tense", [C("spy", "stand", "smug", y=2.5)], camMove="crane_up", impactWord="Area",
+          "shops", "dutch", "night", "tense", [C("spy", "stand", "smug")], camMove="crane_up", impactWord="Area", envVariant="hq", crowd=False,
           backdrop="a high-security game studio fortress at night with searchlights, barbed wire and a sign GAME STUDIO HQ",
-          shots=[S("breaking", shot="extreme", characters=[C("spy", expr="evil", y=2.5)], camMove="push")]),
+          shots=[S("breaking", shot="extreme", characters=[C("spy", expr="evil")], camMove="push")]),
         B("After past leaks, security got so tight that one desperate fan tried sneaking in disguised as an office plant.",
           "office", "medium", "day", "whimsical", [C("grd", "stand", "skeptical")], camMove="push",
           backdrop="a bright modern office hallway with glass doors and potted plants",
@@ -93,20 +93,20 @@ PLANS["plan_28_infiltrator"] = dict(
                    pieces=[pc("plantpot", "on", dz=-0.1)], camMove="truck_right"),
                  S("plant", shot="close", characters=[C("spy", expr="smug")], pieces=[pc("plantpot", "on")], camMove="push")]),
         B("He dodged motion cameras, bribed the janitor with Shark Cards, and backflipped through a hallway of red laser beams.",
-          "office", "medium", "night", "tense", [C("spy", "jump", "sweat")], camMove="whip", fx=[fx("sparks", "dodged", "spy")],
+          "office", "medium", "night", "tense", [C("spy", "jump", "sweat")], camMove="whip", envVariant="lasers", fx=[fx("sparks", "dodged", "spy")],
           backdrop="a dark corridor crisscrossed with glowing red laser beams",
           shots=[S("bribed", shot="close", characters=[C("spy", "point", "wink", "card")], camMove="push"),
                  S("backflipped", shot="worm", characters=[C("spy", "jump", "scared")], fx=[fx("sparks", "laser", "spy")], camMove="orbit")]),
         B("Finally, he reached the development room, only to find the game locked inside a ten-ton nuclear vault.",
-          "office", "wide", "night", "tense", [C("spy", "stand", "dazed")], camMove="pull", impactWord="vault",
+          "office", "wide", "night", "tense", [C("spy", "stand", "dazed")], camMove="pull", impactWord="vault", envVariant="vault",
           backdrop="a massive circular steel bank vault door with padlocks, biometric scanners and two laser turrets, glowing pedestal",
           shots=[S("ten-ton", shot="extreme", characters=[C("spy", expr="dazed")], fx=[fx("stars", "vault", "spy")], camMove="push")]),
         B("He cracked the code, grabbed the golden USB drive, and plugged it in, just to find a Rickroll video from the developers.",
-          "office", "close", "night", "upbeat", [C("spy", "stand", "starry", "usb")], fx=[fx("sparkle", "golden", "spy")], camMove="push",
+          "office", "close", "night", "upbeat", [C("spy", "stand", "starry", "usb")], fx=[fx("sparkle", "golden", "spy")], camMove="push", envVariant="vault",
           backdrop="a vault room with a glowing pedestal",
           shots=[S("just", shot="medium", characters=[C("spy", "panic", "broken")], hud="police", fx=[fx("burst", "Rickroll", "spy")], impactWord="Rickroll", camMove="whip")]),
         B("Looks like we're waiting like everyone else.",
-          "street", "medium", "night", "warm", [C("spy", "fall", "sad", "controller"), C("grd", "walk", "stern")], focus="spy", camMove="truck_left",
+          "shops", "medium", "night", "warm", [C("spy", "fall", "sad", "controller"), C("grd", "walk", "stern")], focus="spy", camMove="truck_left", envVariant="hq", crowd=False,
           backdrop="the front door of a fortress-like game studio at night, searchlights"),
         OUTRO("Send this to a friend who'd risk prison for early access."),
     ])
@@ -150,7 +150,7 @@ PLANS["plan_30_melting_tv"] = dict(
           "gameroom", "close", "golden", "upbeat", [C("mes", "stand", "squint")], look="warm", camMove="push", impactWord="sunburn",
           shots=[S("bright", shot="extreme", characters=[C("me", expr="pained")], fx=[fx("sparkle", "sunburn", "me")], camMove="push")]),
         B("Then I walked my character onto the beach, and real ocean water and sand started pouring out of the HDMI port.",
-          "gameroom", "wide", "day", "upbeat", [C("me", "panic", "scared", "controller")], camMove="crane_up",
+          "gameroom", "wide", "day", "upbeat", [C("me", "panic", "scared", "controller")], camMove="crane_up", envVariant="flood",
           backdrop="a gamer bedroom flooded with ocean water and sand pouring out of a TV, floating pizza boxes",
           fx=[fx("splash", "water", "me"), fx("product", "sand", "me", "flamingo")],
           shots=[S("pouring", shot="close", characters=[C("me", "panic", "crazy", "controller")], fx=[fx("splash", "HDMI", "me")], camMove="whip")]),
@@ -158,7 +158,7 @@ PLANS["plan_30_melting_tv"] = dict(
           "gameroom", "insert", "night", "whimsical", [C("me", expr="sad")], pieces=[pc("console", "on", label="hot", shake=1.0)], camMove="push",
           shots=[S("waved", shot="medium", pieces=[pc("console", "left", scale=1.4, label="flag")], characters=[C("me", "shrug", "sad")], camMove="orbit")]),
         B("When I got a five-star wanted level in the game, real helicopters started circling my actual apartment.",
-          "gameroom", "medium", "night", "tense", [C("me", "sit", "crazy", "poolring")], hud="police", camMove="orbit",
+          "gameroom", "medium", "night", "tense", [C("me", "sit", "crazy", "poolring")], hud="police", camMove="orbit", envVariant="flood",
           backdrop="a flooded gamer bedroom at night with red and blue police lights flashing through the window",
           shots=[S("helicopters", shot="worm", characters=[C("me", "sit", "scared", "controller")], camMove="crane_up")]),
         B("My house is ruined, my TV is melted. Ten out of ten, game of the century.",
@@ -169,10 +169,10 @@ PLANS["plan_30_melting_tv"] = dict(
 
 
 def main():
-    md = ["# GTA 6 shorts 26–30 (Loophole Lou style, pro cut, AI backdrops + depth parallax)", "",
+    md = ["# GTA 6 shorts 26–30 (Loophole Lou style, pro cut, 3D built sets + CC0 Kenney models)", "",
           "Voice `am_eric*0.7+am_fenrir*0.3` @1.15. Parody; generic studio / agents / developers. `→` = cut inside the sentence.", ""]
     for i, (name, p) in enumerate(PLANS.items()):
-        plan = {"version": 1, "lang": "en", "style": "storybook", "graphics": "full", "captions": True, "backdrops": "ai", "seed": 111 + 7 * i, **p,
+        plan = {"version": 1, "lang": "en", "style": "storybook", "graphics": "full", "captions": True, "backdrops": "3d", "seed": 111 + 7 * i, **p,
                 "verifiedClaims": [{"text": t, "status": s} for t, s in FICTION]}
         P = Plan.model_validate(plan)
         with open(os.path.join(HERE, name + ".json"), "w", encoding="utf-8") as f:

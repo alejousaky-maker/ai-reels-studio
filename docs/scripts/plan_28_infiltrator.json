@@ -23,14 +23,15 @@
    "characters": [
     {
      "id": "spy",
-     "expr": "smug",
-     "y": 2.5
+     "expr": "smug"
     }
    ],
    "impactWord": "Area",
-   "environment": "street",
+   "environment": "shops",
+   "envVariant": "hq",
    "camMove": "crane_up",
    "backdrop": "a high-security game studio fortress at night with searchlights, barbed wire and a sign GAME STUDIO HQ",
+   "crowd": false,
    "shots": [
     {
      "at": "breaking",
@@ -38,8 +39,7 @@
      "characters": [
       {
        "id": "spy",
-       "expr": "evil",
-       "y": 2.5
+       "expr": "evil"
       }
      ],
      "camMove": "push"
@@ -120,6 +120,7 @@
     }
    ],
    "environment": "office",
+   "envVariant": "lasers",
    "camMove": "whip",
    "backdrop": "a dark corridor crisscrossed with glowing red laser beams",
    "shots": [
@@ -170,6 +171,7 @@
    ],
    "impactWord": "vault",
    "environment": "office",
+   "envVariant": "vault",
    "camMove": "pull",
    "backdrop": "a massive circular steel bank vault door with padlocks, biometric scanners and two laser turrets, glowing pedestal",
    "shots": [
@@ -213,6 +215,7 @@
     }
    ],
    "environment": "office",
+   "envVariant": "vault",
    "camMove": "push",
    "backdrop": "a vault room with a glowing pedestal",
    "shots": [
@@ -257,9 +260,11 @@
     }
    ],
    "focus": "spy",
-   "environment": "street",
+   "environment": "shops",
+   "envVariant": "hq",
    "camMove": "truck_left",
-   "backdrop": "the front door of a fortress-like game studio at night, searchlights"
+   "backdrop": "the front door of a fortress-like game studio at night, searchlights",
+   "crowd": false
   },
   {
    "narration": "Send this to a friend who'd risk prison for early access.",
@@ -276,6 +281,5 @@
    "text": "Comedy parody about GTA 6 fandom; every event is invented. The studio, agents and developers are generic stickmen.",
    "status": "fiction"
   }
- ],
- "backdrops": "ai"
+ ]
 }

@@ -127,6 +127,7 @@
     }
    ],
    "environment": "gameroom",
+   "envVariant": "flood",
    "camMove": "crane_up",
    "backdrop": "a gamer bedroom flooded with ocean water and sand pouring out of a TV, floating pizza boxes",
    "shots": [
@@ -208,6 +209,7 @@
     }
    ],
    "environment": "gameroom",
+   "envVariant": "flood",
    "camMove": "orbit",
    "hud": "police",
    "backdrop": "a flooded gamer bedroom at night with red and blue police lights flashing through the window",
@@ -280,6 +282,5 @@
    "text": "Comedy parody about GTA 6 fandom; every event is invented. The studio, agents and developers are generic stickmen.",
    "status": "fiction"
   }
- ],
- "backdrops": "ai"
+ ]
 }
