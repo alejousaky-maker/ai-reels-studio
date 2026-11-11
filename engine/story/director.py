@@ -12,7 +12,7 @@ import math
 import re
 
 from .presets import SHOTS, TIGHTER, anchors, outfit, ROLE_SCALE, PIECE_SIZE, INDOOR_D, ROOMS
-from .schema import Plan
+from .schema import Plan, SubShot
 
 LEAD = 2
 MAP_HUDS = ("manhattan", "osaka", "panama", "world", "subway", "mud", "outro")
@@ -125,6 +125,31 @@ def expand_views(plan: Plan, spans, fps: int) -> list[tuple]:
     an effect / reaction plays in the view that contains its word."""
     views = []
     for bi, (beat, (a, b, ws)) in enumerate(zip(plan.beats, spans)):
+        if plan.pacing == "flow" and not beat.shots and ws and (b - a) / fps > 6.2 and beat.hud not in MAP_HUDS:
+            # flow pacing: a new framing every ~4 s — split a long sentence at the clause break nearest each target point
+            n = max(2, round((b - a) / fps / 4.2))
+            alt = {"wide": "medium", "medium": "close", "close": "medium", "two_shot": "close", "high": "medium", "low": "medium",
+                   "insert": "medium", "extreme": "medium", "worm": "medium", "dutch": "medium"}
+            joins = {"and", "but", "so", "which", "then", "while", "because", "until", "or"}
+            subs, used = [], set()
+            for k in range(1, n):
+                target = a + (b - a) * k / n
+                best, score = None, 1e9
+                for j, w in enumerate(ws[1:], 1):
+                    f = _wf_of(ws, w, fps)
+                    if j in used or f - a < 45 or b - f < 45:
+                        continue
+                    brk = ws[j - 1]["w"].rstrip().endswith((",", ".", ";", ":")) or re.sub(r"[^a-z]", "", w["w"].lower()) in joins
+                    sc = abs(f - target) - (40 if brk else 0)
+                    if sc < score:
+                        best, score = j, sc
+                if best is not None:
+                    used.add(best)
+                    word = re.sub(r"[^\w'-]", "", ws[best]["w"])
+                    if word:
+                        subs.append((best, SubShot(at=word, shot=alt.get(beat.shot, "medium") if len(subs) % 2 == 0 else beat.shot)))
+            if subs:
+                beat = beat.model_copy(update={"shots": [s for _, s in sorted(subs, key=lambda x: x[0])]})
         cuts = []
         last = a
         for s in beat.shots:
@@ -152,6 +177,10 @@ def expand_views(plan: Plan, spans, fps: int) -> list[tuple]:
                         upd[name] = getattr(s, name)
             views.append((bi, k, beat.model_copy(update=upd), fa, fb, sub_ws))
     return views
+
+
+# flow pacing: the default travelling move per shot, cycled so consecutive shots never repeat the same motion
+FLOW_MOVES = ["push", "truck_right", "crane_up", "orbit", "truck_left", "push", "pull"]
 
 
 def camera_move(kind: str, k0: dict, a: int, b: int, si: int, lead: dict | None) -> list[dict]:
@@ -414,9 +443,16 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                         pos[act["castId"]] = (act["x"], act["z"])
         dur_s = (b - a) / fps
         impact = word_frame(ws, beat.impactWord, fps)
+        flow = plan.pacing == "flow"
+        if flow and not beat.camMove and beat.hud not in MAP_HUDS:
+            # RicksClips pacing: the camera travels through EVERY shot (a slow, readable move across the whole sentence)
+            beat = beat.model_copy(update={"camMove": FLOW_MOVES[si % len(FLOW_MOVES)]})
         if beat.camMove:
-            # transitions only where they count: a whip-pan at most every 4th shot and never twice running (else a dolly-in)
+            # transitions only where they count: a whip-pan at most every 4th shot and never twice running (else a dolly-in);
+            # flow pacing never whips (the scene change itself is the motion)
             mv = beat.camMove
+            if flow and mv == "whip":
+                mv = "push"
             if mv == "whip" and (si - last_whip[0] < 4):
                 mv = "push"
             if mv == "whip":
@@ -436,7 +472,7 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
             dof["focusActor"] = focus_idx
         scene = {"sceneId": f"b{bi + 1:02d}" + (chr(96 + sub_k) if sub_k else ""), "startFrame": a, "endFrame": b, "narration": beat.narration,
                  "light": beat.light, "mood": beat.mood,
-                 "actors": actors, "cameraKeys": keys, "push": sp["push"], "dof": dof, "transitionIn": "cut" if si == 0 else beat.transition,
+                 "actors": actors, "cameraKeys": keys, "push": sp["push"], "dof": dof, "transitionIn": "cut" if si == 0 else ("flow" if plan.pacing == "flow" and beat.transition == "cut" else beat.transition),
                  "seed": plan.seed * 100 + bi + 37 * sub_k, "qualityNotes": beat.visual or ""}
         if sub_k:
             scene["sub"] = True     # a clause cut inside a sentence (the ambience bed carries on)

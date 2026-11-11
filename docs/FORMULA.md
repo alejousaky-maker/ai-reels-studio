@@ -84,3 +84,23 @@ The older roles (villagers, kid, official, scholar…) remain available.
 - **Settings**: voice af_heart, Master 2K, graphics `full`.
 - **Plan**: Claude writes it from the megaprompt (Claude-assisted), saved in `docs/scripts/plan_*.json`.
 - **Review**: check the contact sheet, re-shoot weak scenes (shot / spot / pieces) and re-render. Only the changed scenes render again.
+
+## Flow pacing + script template (from 2026-11-11; measured on 20 RicksClips3000 Shorts, see docs/RICKSCLIPS_STUDY.md)
+Plan option `pacing: "flow"` (default stays `"pro"`):
+- A new framing every ~4 s: the director splits any sentence longer than ~6 s at the clause break nearest each 4 s mark
+  (alternating a tighter / the beat's own shot). Write 1 beat per sentence; add `shots` only for a deliberate picture.
+- The camera travels through EVERY shot (push / truck / crane / orbit / pull cycled when the beat sets none); no whips.
+- Scene changes are `flow` motion dissolves (13 f): the outgoing shot keeps drifting one way, the next arrives already
+  moving the same way, with a soft air swish under the voice. Hard punctuation only where the beat asks for it
+  (`transition: "flash"` / `"zoom"`), i.e. on hits (a crash, a bang).
+- Voice: speed **1.35** (~3.5 words/s; his is 3.8), 190–230 words for ~60 s. No outro card / CTA.
+
+Script template (structure only — always our own stories, facts checked):
+1. Cold open on the strangest act, past tense, no context ("He drowned a brand-new airliner…").
+2. Switch to present tense; nameless protagonist ("he", "a young engineer", "the cook"); state the stakes.
+3. A skeptic (boss / captain / rival) with one short, funny quoted line.
+4. Escalation with exact numbers and time marks ("Two hundred. A thousand. Three thousand." / "In May… by July…").
+5. The hero seems to lose (rival wins, everyone laughs).
+6. Twist: "Then…", "Until one night…".
+7. "You see," — the real explanation with an everyday analogy (tearing paper, blowing on soup).
+8. Payoff, and the last sentence stops mid-way so the Short loops into the first line.

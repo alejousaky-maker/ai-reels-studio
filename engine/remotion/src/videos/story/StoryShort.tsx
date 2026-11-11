@@ -125,6 +125,14 @@ export const layersAt = (sb: Storyboard, f: number): Layer[] => {
       const u = ease((f - (a - 7) + 1) / 15);
       return [{ idx: i - 1, alpha: 1, filter: `blur(${(u * 6 * sb.height / 1920).toFixed(1)}px)` }, { idx: i, alpha: u, filter: `blur(${((1 - u) * 6 * sb.height / 1920).toFixed(1)}px)` }];
     }
+    if (t === "flow" && f >= a - 6 && f < a + 7) {
+      // motion dissolve (RicksClips): the outgoing shot keeps travelling one way, the next one arrives already moving the
+      // same way, crossfading in 13 frames (~0.43 s) — it reads as one continuous camera move, never as a cut
+      const u = ease((f - (a - 6) + 1) / 13), dir = [[0, -1], [-1, 0], [0, 1], [1, 0]][i % 4];
+      const sh = (k: number) => `translate(${(dir[0] * k).toFixed(2)}%, ${(dir[1] * k).toFixed(2)}%)`;
+      return [{ idx: i - 1, alpha: 1, transform: `${sh(9 * u)} scale(${1 + 0.07 * u})`, filter: `blur(${(u * 3 * sb.height / 1920).toFixed(1)}px)` },
+        { idx: i, alpha: u, transform: `${sh(-9 * (1 - u))} scale(${1.07 - 0.07 * u})`, filter: `blur(${((1 - u) * 3 * sb.height / 1920).toFixed(1)}px)` }];
+    }
     if (t === "zoom" && f >= a - 6 && f < a + 6) {
       if (f < a) { const u = ease((f - (a - 6) + 1) / 6); return [{ idx: i - 1, alpha: 1, transform: `scale(${1 + 0.45 * u})`, filter: `blur(${(u * 16 * sb.height / 1920).toFixed(1)}px) brightness(${1 + 0.3 * u})` }]; }
       const u = ease((f - a + 1) / 6); return [{ idx: i, alpha: 1, transform: `scale(${1.3 - 0.3 * u})`, filter: `blur(${((1 - u) * 14 * sb.height / 1920).toFixed(1)}px)` }];

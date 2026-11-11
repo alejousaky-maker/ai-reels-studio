@@ -95,7 +95,7 @@ class SubShot(BaseModel):
     focus: Optional[str] = None
     fx: Optional[list[BeatFx]] = None
     impactWord: Optional[str] = None
-    transition: Optional[Literal["cut", "flash", "xfade", "dissolve", "zoom", "whip"]] = None
+    transition: Optional[Literal["cut", "flash", "xfade", "dissolve", "zoom", "whip", "flow"]] = None
     text: Optional[str] = None
     textStyle: Optional[Literal["title", "cta", "label"]] = None
     pieces: Optional[list[Piece]] = None
@@ -120,7 +120,7 @@ class Beat(BaseModel):
     focus: Optional[str] = None
     fx: list[BeatFx] = Field(default_factory=list)
     impactWord: Optional[str] = None
-    transition: Literal["cut", "flash", "xfade", "dissolve", "zoom", "whip"] = "cut"
+    transition: Literal["cut", "flash", "xfade", "dissolve", "zoom", "whip", "flow"] = "cut"
     text: Optional[str] = None
     textStyle: Literal["title", "cta", "label"] = "label"
     atShop: bool = False
@@ -183,6 +183,7 @@ class Plan(BaseModel):
     creativeHooks: list[str] = Field(default_factory=list)
     brand: Optional[BrandSpec] = None
     cta: Optional[str] = None
+    pacing: Literal["pro", "flow"] = "pro"   # flow = RicksClips-style: long travelling shots (~4 s), motion dissolves, hard cuts only on hits
     captions: bool = True   # big word-by-word captions (pro Shorts look); the plan / form can switch them off
     # "full" = the Demo A look (default); "simple" = lighter sets, no lens blur/bloom, at most 2 background extras
     graphics: Literal["simple", "full"] = "full"

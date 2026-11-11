@@ -86,10 +86,11 @@ def build_sfx(sb: dict, duration: float, voice_lufs: float, seed: int = 11) -> t
                 D.place(out, D.fades(seg * D.dbg(bed - L), 0.25, 0.25), a)
             cues.append({"t": round(a, 3), "kind": "bed", "what": f"{light} ambience" + (" + crowd" if len(s.get('actors', [])) >= 4 else "")})
         tr = s.get("transitionIn", "cut")
-        if i > 0 and tr in ("flash", "xfade", "dissolve", "zoom", "whip"):
+        if i > 0 and tr in ("flash", "xfade", "dissolve", "zoom", "whip", "flow"):
             t0 = a - (0.22 if tr in ("flash", "zoom", "whip") else 0.12)
             rec = sample("whoosh.wav" if tr in ("zoom", "whip", "flash") else "whoosh2.wav")   # real CC0 whooshes on scene transitions
-            _ev(out, rec if rec is not None else S.whoosh(0.55, r, peak=0.35), max(0, t0), ev - (2 if tr in ("flash", "zoom", "whip") else 5), 0.0)
+            # flow (every ~4 s): only a soft air swish under the voice, never a punctuation hit
+            _ev(out, rec if rec is not None else S.whoosh(0.55, r, peak=0.35), max(0, t0), ev - (2 if tr in ("flash", "zoom", "whip") else 13 if tr == "flow" else 5), 0.0)
             cues.append({"t": round(t0, 3), "kind": "whoosh", "what": f"{tr} into {s['sceneId']}"})
         for k in s.get("cameraKeys", [])[1:]:
             if k.get("cut") or k.get("dur", 24) > 40:   # slow camera moves across a whole shot are silent

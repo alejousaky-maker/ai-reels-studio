@@ -1,0 +1,278 @@
+{
+ "title": "Why Airplane Windows Are Round",
+ "environment": "warehouse",
+ "seed": 341,
+ "cast": [
+  {
+   "id": "eng",
+   "name": "Engineer",
+   "role": "retroeng"
+  },
+  {
+   "id": "boss",
+   "name": "Boss",
+   "role": "boss"
+  },
+  {
+   "id": "pilot",
+   "name": "Pilot",
+   "role": "pilot"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "He drowned a brand-new jet airliner in a giant tank of water, on purpose.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "eng",
+     "expr": "smug"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "splash",
+     "word": "drowned"
+    }
+   ],
+   "impactWord": "drowned",
+   "environment": "warehouse",
+   "pieces": [
+    {
+     "kind": "airplane",
+     "scale": 0.6
+    }
+   ],
+   "camMove": "push"
+  },
+  {
+   "narration": "It's 1954, and the world's first passenger jet is the pride of Britain, flying higher and faster than anything else in the sky.",
+   "shot": "wide",
+   "light": "golden",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "pilot",
+     "action": "wave",
+     "expr": "proud"
+    }
+   ],
+   "environment": "airport",
+   "pieces": [
+    {
+     "kind": "airplane",
+     "where": "far"
+    }
+   ],
+   "camMove": "truck_right"
+  },
+  {
+   "narration": "Then, two of them break apart in midair in just three months.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "tense",
+   "fx": [
+    {
+     "kind": "dust",
+     "word": "break"
+    }
+   ],
+   "impactWord": "break",
+   "transition": "flash",
+   "environment": "ocean",
+   "pieces": [
+    {
+     "kind": "airplane",
+     "scale": 0.8,
+     "shake": 1.2
+    }
+   ],
+   "camMove": "push"
+  },
+  {
+   "narration": "His bosses want a quick answer, a bomb, a fire, anything, but instead he builds a swimming pool around a whole plane.",
+   "shot": "two_shot",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "boss",
+     "action": "point",
+     "expr": "angry"
+    },
+    {
+     "id": "eng",
+     "expr": "bored"
+    }
+   ],
+   "focus": "boss",
+   "environment": "office",
+   "envVariant": "retro",
+   "shots": [
+    {
+     "at": "instead",
+     "shot": "wide",
+     "environment": "warehouse",
+     "characters": [
+      {
+       "id": "eng",
+       "action": "point",
+       "expr": "proud"
+      }
+     ],
+     "pieces": [
+      {
+       "kind": "airplane",
+       "scale": 0.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": "\"We're losing money every day, and you're giving it a bath?\"",
+   "shot": "close",
+   "characters": [
+    {
+     "id": "boss",
+     "action": "hips",
+     "expr": "angry",
+     "talk": true
+    }
+   ],
+   "environment": "office",
+   "envVariant": "retro"
+  },
+  {
+   "narration": "But he just pumps the water in and out, again and again, squeezing the cabin like a real flight, day and night.",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "eng",
+     "action": "sitchair",
+     "expr": "squint"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "steam",
+     "word": "squeezing"
+    }
+   ],
+   "environment": "warehouse",
+   "pieces": [
+    {
+     "kind": "cashcounter",
+     "where": "right",
+     "label": ""
+    }
+   ]
+  },
+  {
+   "narration": "Two hundred flights. A thousand. Three thousand.",
+   "shot": "close",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "eng",
+     "expr": "sleepy"
+    }
+   ],
+   "environment": "warehouse",
+   "hud": "bar",
+   "hudText": "PRESSURE TESTS|200|3000"
+  },
+  {
+   "narration": "Then, one morning there's a bang, and the crack starts at the corner of one little square window.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "eng",
+     "action": "panic",
+     "expr": "shock"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "bang",
+     "on": "eng"
+    },
+    {
+     "kind": "splash",
+     "word": "crack"
+    }
+   ],
+   "impactWord": "bang",
+   "transition": "flash",
+   "environment": "warehouse"
+  },
+  {
+   "narration": "You see, try tearing a sheet of paper. It rips easily from a sharp cut, but a round hole spreads the force all the way around, so a crack has nowhere to start.",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "eng",
+     "action": "point",
+     "expr": "smug",
+     "holding": "note"
+    }
+   ],
+   "environment": "office",
+   "envVariant": "retro",
+   "pieces": [
+    {
+     "kind": "board",
+     "where": "left",
+     "label": "SQUARE = RIP|ROUND = SAFE"
+    }
+   ]
+  },
+  {
+   "narration": "So he rounds every window, and every plane after that gets them too, which is why the window next to your seat",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "eng",
+     "expr": "proud"
+    },
+    {
+     "id": "pilot",
+     "action": "cheer",
+     "expr": "laugh"
+    }
+   ],
+   "focus": "eng",
+   "environment": "airport",
+   "pieces": [
+    {
+     "kind": "airplane",
+     "where": "far"
+    }
+   ]
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "The de Havilland Comet (1952) was the first jet airliner; two broke up in flight in Jan and Apr 1954 (BOAC 781, SA 201).",
+   "status": "verified"
+  },
+  {
+   "text": "RAE Farnborough tested a Comet fuselage in a water tank, cycling cabin pressure; it failed after ~3,000 cycles from a corner of a cut-out.",
+   "status": "verified"
+  },
+  {
+   "text": "Later airliners use rounded windows to avoid stress concentrations at corners.",
+   "status": "verified"
+  },
+  {
+   "text": "The Comet's windows were rectangular with tight corners ('square' is a simplification)."
+  },
+  {
+   "text": "The engineer and the boss are generic stickmen; the quoted line is invented.",
+   "status": "fiction"
+  }
+ ],
+ "pacing": "flow"
+}

@@ -94,7 +94,7 @@ export type SceneSpec = {
   props?: PropSpec[];
   pieces?: PieceSpec[];
   textOverlays?: TextOverlay[];
-  transitionIn?: "cut" | "xfade" | "flash" | "dissolve" | "zoom" | "whip";
+  transitionIn?: "cut" | "xfade" | "flash" | "dissolve" | "zoom" | "whip" | "flow";
   sunAz?: number; sunEl?: number;
   seed?: number;
   qualityNotes?: string;
