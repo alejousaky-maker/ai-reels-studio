@@ -94,16 +94,16 @@ for f in range(F0, F1 + 1):
 
 # ---------------- set ----------------
 ROOMS = {   # preset: (half width W, back depth D, height H, floor, back wall, side wall)
-    "apartment": (6.5, 5.5, 3.6, "#b07a4a", "#e4d6c0", "#7fa3a0"), "office": (7, 5.5, 3.8, "#7d8aa0", "#eef0f2", "#d9dde3"),
+    "apartment": (6.5, 5.5, 3.6, "#b9773f", "#f2c98a", "#4fa3a0"), "office": (7, 5.5, 3.8, "#5a7ab8", "#f4efe2", "#7fb0d9"),
     "gameroom": (5.5, 4.4, 3.2, "#5a5070", "#2a2448", "#231e3e"), "bedroom": (5.5, 4.6, 3.3, "#b07a4a", "#d9c8e8", "#c8b4d9"),
-    "kitchen": (5.5, 4.4, 3.2, "#e9e4da", "#ffffff", "#f7e7c4"), "clinic": (5.5, 4.6, 3.3, "#e6eef0", "#eef4f7", "#d9ecdf"),
+    "kitchen": (5.5, 4.4, 3.2, "#e9d9b4", "#ffffff", "#f7c46a"), "clinic": (5.5, 4.6, 3.3, "#d9eef0", "#eef8f7", "#8fd0c0"),
     "datacenter": (9, 9, 4.2, "#c9ced6", "#2b3240", "#2b3240"), "hotel": (6, 5, 3.5, "#5a2f4a", "#3b2f5a", "#2f2a4a"),
     "bathroom": (4.2, 4.2, 3.2, "#f4f1ea", "#eef6f8", "#eef6f8"), "trading": (10, 7, 5, "#4a4a58", "#22222c", "#1d1d26"),
-    "warehouse": (14, 10, 7, "#9a9a92", "#8a8f98", "#7a7f88"), "airport": (14, 8, 7, "#e9e6df", "#dfe3e8", "#cfd5dc"),
+    "warehouse": (14, 10, 7, "#a8885a", "#c8643a", "#a8503a"), "airport": (14, 8, 7, "#e9e6df", "#9fd0f0", "#f2c94a"),
     "cabin": (4.5, 4, 3.0, "#8a5a34", "#9a6a42", "#9a6a42"), "banquet": (11, 8, 6, "#b07a4a", "#f2e6d4", "#efe0c8"),
 }
 if preset == "office" and variant == "retro":
-    ROOMS["office"] = (6.5, 5.5, 3.6, "#c9c0a8", "#8a5a34", "#7a4f2e")
+    ROOMS["office"] = (6.5, 5.5, 3.6, "#d9c08a", "#9a5a2e", "#7a4f2e")
 if preset == "apartment" and variant == "retro":
     ROOMS["apartment"] = (6.5, 5.5, 3.6, "#b07a4a", "#8a5a34", "#7a4f2e")
 xs = [a["x"] for a in S["actors"]] + [p["x"] for p in S.get("pieces") or []]
@@ -250,9 +250,9 @@ else:
     outdoors()
 
 # ---------------- pieces ----------------
-KMAP = {"sofa": ("furniture-kit", "loungeSofa", 1.0), "tv": ("furniture-kit", "televisionModern", 1.4), "fridge": ("furniture-kit", "kitchenFridge", 1.9),
+KMAP = {"sofa": ("furniture-kit", "loungeSofa", 1.0), "microwave": ("furniture-kit", "kitchenMicrowave", 0.45), "fridge": ("furniture-kit", "kitchenFridge", 1.9),
         "bed": ("furniture-kit", "bedDouble", 1.0), "desk": ("furniture-kit", "desk", 0.8), "cardbox": ("furniture-kit", "cardboardBoxClosed", 0.7),
-        "plantpot": ("furniture-kit", "pottedPlant", 1.7), "monitor": ("furniture-kit", "computerScreen", 0.6), "car": ("car-kit", "sedan", 1.6),
+        "plantpot": ("furniture-kit", "pottedPlant", 1.7), "car": ("car-kit", "sedan", 1.6),
         "van": ("car-kit", "van", 2.2), "truck": ("car-kit", "truck", 2.6), "semi": ("car-kit", "truck", 3.2), "boxes": ("furniture-kit", "cardboardBoxClosed", 1.0),
         "crates": ("furniture-kit", "cardboardBoxClosed", 1.0), "snacks": ("food-kit", "pizza-box", 0.3)}
 PSIZE = {"airplane": (16, 5.3), "board": (1.9, 2.47), "chalkboard": (1.9, 2.47), "calendar": (1.5, 1.5), "cashcounter": (1.2, 2.16), "console": (0.9, 1.5),
@@ -284,6 +284,114 @@ def airplane(loc, k, yaw):
         o.parent = root
 
 
+def text3d(text, parent, z, size, col=(1, 1, 1), strength=1.2, y=-0.05, width=None):
+    """flat lettering on the front (-Y) of a parent object; '|' = new line"""
+    cu = bpy.data.curves.new("txt", "FONT")
+    cu.body = (text or "").replace("|", "\n")
+    cu.align_x, cu.align_y, cu.size = "CENTER", "CENTER", size
+    try:
+        cu.font = bpy.data.fonts.load("C:/Windows/Fonts/ariblk.ttf", check_existing=True)
+    except Exception:
+        pass
+    o = bpy.data.objects.new("txt", cu)
+    bpy.context.collection.objects.link(o)
+    o.data.materials.append(L.flat(f"txt{col}", col, strength))
+    o.parent = parent
+    o.location, o.rotation_euler = (0, y, z), (math.pi / 2, 0, 0)
+    if width:   # shrink long lines to fit
+        bpy.context.view_layer.update()
+        w = o.dimensions.x
+        if w > width:
+            o.scale = (width / w,) * 3
+    return o
+
+
+def piece3d(i, kind, label, loc, k, yaw):
+    """a story piece as a real 3D prop: boards / screens / signs carry their text; else an inked block"""
+    root = bpy.data.objects.new(f"pc{i}", None)
+    bpy.context.collection.objects.link(root)
+    root.location, root.rotation_euler, root.scale = loc, (0, 0, yaw), (k, k, k)
+    wood, dark = L.toon("easelW", L.hexc("#8a5a34")), L.toon("screenB", L.hexc("#16151b"))
+    parts = []
+    if kind in ("board", "chalkboard", "corkboard", "blueprint"):
+        for s in (-1, 1):
+            parts.append(sets.box(f"leg{i}{s}", (0.06, 0.06, 2.3), (s * 0.6, 0.1, 1.15), wood, outline=0.006))
+        face_c = {"corkboard": "#c79a5e", "blueprint": "#2f5fb0"}.get(kind, "#2f5a46")
+        parts.append(sets.box(f"brd{i}", (1.6, 0.08, 1.15), (0, 0, 1.55), L.toon(f"brdF{i}", L.hexc(face_c)), outline=0.01))
+        parts.append(sets.box(f"brdT{i}", (1.7, 0.1, 0.07), (0, 0, 2.15), wood, outline=0.006))
+        if label:
+            text3d(label, root, 1.55, 0.2, (1, 1, 1) if kind != "corkboard" else (0.1, 0.08, 0.1), 1.3, -0.05, 1.4)
+    elif kind in ("tv", "monitor", "screen", "ticker", "departures", "tubetv"):
+        w, h, z = {"tv": (2.2, 1.25, 1.35), "monitor": (1.3, 0.75, 1.25), "screen": (4.5, 2.6, 2.6), "ticker": (4.2, 2.3, 1.7), "departures": (3.2, 1.8, 1.4), "tubetv": (1.0, 0.8, 0.95)}[kind]
+        if kind == "tubetv":
+            parts.append(sets.box(f"cab{i}", (1.4, 0.8, 1.0), (0, 0.05, 0.95), L.toon("tubeW", L.hexc("#8a5a34")), outline=0.01))
+            for s in (-1, 1):
+                parts.append(sets.box(f"tleg{i}{s}", (0.05, 0.05, 0.45), (s * 0.55, 0.05, 0.22), wood, outline=0.004))
+        else:
+            parts.append(sets.box(f"frm{i}", (w + 0.12, 0.08, h + 0.12), (0, 0, z), dark, outline=0.01))
+            parts.append(sets.box(f"stand{i}", (0.1, 0.1, z - h / 2), (0, 0.05, (z - h / 2) / 2), dark, outline=0.006))
+        scr = sets.box(f"scr{i}", (w, 0.02, h), (0, -0.05 if kind != "tubetv" else -0.36, z), L.flat(f"scrM{i}", (0.25, 0.45, 0.95) if kind != "ticker" else (0.05, 0.05, 0.12), 1.3), shadow=False)
+        parts.append(scr)
+        txt = (label or "").lstrip("~").replace("game", "").strip("|") or ""
+        if txt:
+            text3d(txt, root, z, 0.16 * w / 1.3, (1, 1, 1), 2.0, -0.08 if kind != "tubetv" else -0.38, w * 0.9)
+    elif kind in ("calendar", "poster", "signs"):
+        parts.append(sets.box(f"cal{i}", (1.1, 0.06, 1.3), (0, 0, 1.4), L.toon(f"calW{i}", L.hexc("#ffffff")), outline=0.008))
+        parts.append(sets.box(f"calT{i}", (1.1, 0.07, 0.3), (0, -0.01, 1.92), L.toon(f"calR{i}", L.hexc("#e2453c")), outline=0.006))
+        parts.append(sets.box(f"post{i}", (0.06, 0.06, 1.0), (0, 0.06, 0.5), wood, outline=0.004))
+        if label:
+            text3d(label, root, 1.35, 0.22, (0.1, 0.08, 0.1), 1.0, -0.05, 0.95)
+    elif kind == "cashcounter":
+        parts.append(sets.box(f"cc{i}", (0.9, 0.8, 1.6), (0, 0, 0.8), L.toon(f"ccM{i}", L.hexc("#2b2b38")), outline=0.01))
+        parts.append(sets.box(f"ccd{i}", (0.7, 0.02, 0.32), (0, -0.41, 1.25), L.flat(f"ccD{i}", (0.05, 0.08, 0.06), 1), shadow=False))
+        text3d(label or "$0.00", root, 1.25, 0.16, (0.25, 1.6, 0.5), 2.0, -0.43, 0.6)
+    elif kind == "pinball":   # cabinet on legs, tilted playfield, lit backbox with the label
+        body = L.toon(f"pbB{i}", L.hexc("#3f6fb5"))
+        for x in (-0.5, 0.5):
+            for y in (-0.6, 0.6):
+                parts.append(sets.box(f"pbl{i}{x}{y}", (0.07, 0.07, 0.8), (x, y, 0.4), dark, outline=0.004))
+        cab = sets.box(f"pbc{i}", (1.1, 1.6, 0.3), (0, 0, 0.95), body, outline=0.01)
+        cab.rotation_euler = (math.radians(-7), 0, 0)
+        parts.append(cab)
+        pf = sets.box(f"pbf{i}", (0.98, 1.48, 0.02), (0, 0, 1.11), L.flat(f"pbF{i}", (0.9, 0.3, 0.55), 1.4), shadow=False)
+        pf.rotation_euler = cab.rotation_euler
+        parts.append(pf)
+        parts.append(sets.box(f"pbx{i}", (1.1, 0.25, 0.9), (0, 0.85, 1.6), body, outline=0.01))
+        parts.append(sets.box(f"pbg{i}", (0.95, 0.02, 0.7), (0, 0.72, 1.6), L.flat(f"pbG{i}", (1.6, 0.9, 0.2), 1.6), shadow=False))
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.04, location=(0.15, -0.2, 1.17))
+        ball = bpy.context.object; ball.data.materials.append(L.toon("steel", L.hexc("#e6e8ec"))); parts.append(ball)
+        text3d(label or "PINBALL", root, 1.6, 0.16, (0.1, 0.05, 0.1), 1.0, 0.70, 0.85)
+    elif kind == "spring":    # a metal toy spring (helix tube)
+        cu = bpy.data.curves.new(f"spr{i}", "CURVE"); cu.dimensions = "3D"; cu.bevel_depth = 0.012; cu.bevel_resolution = 3
+        sp = cu.splines.new("POLY"); n = 220; sp.points.add(n - 1)
+        for j in range(n):
+            a = j / n * math.tau * 18
+            sp.points[j].co = (0.17 * math.cos(a), 0.17 * math.sin(a), 0.02 + 0.28 * j / n, 1)
+        so = bpy.data.objects.new(f"spr{i}", cu); bpy.context.collection.objects.link(so)
+        so.data.materials.append(L.toon("springM", L.hexc("#c9ced6"), shade=0.5, mid=0.85)); parts.append(so)
+    elif kind == "bubblewrap":   # a clear sheet covered in air bubbles
+        parts.append(sets.box(f"bw{i}", (1.8, 0.02, 1.2), (0, 0, 0.75), L.toon(f"bwS{i}", L.hexc("#cfeaff"), shade=0.7, mid=0.9)))
+        bub = L.toon("bubble", L.hexc("#f2fbff"), shade=0.75, mid=0.95)
+        for x in range(-8, 9):
+            for z in range(-5, 6):
+                bpy.ops.mesh.primitive_uv_sphere_add(segments=10, ring_count=6, radius=0.045, location=(x * 0.1, -0.03, 0.75 + z * 0.1))
+                b = bpy.context.object; b.scale = (1, 0.5, 1); b.data.materials.append(bub); parts.append(b)
+        if label:
+            text3d(label, root, 1.5, 0.18, (0.1, 0.08, 0.1), 1.0, -0.05, 1.6)
+    elif kind == "console":
+        parts.append(sets.box(f"cn{i}", (0.42, 0.95, 1.25), (0, 0, 0.66), L.toon(f"cnW{i}", L.hexc("#f2f2f5")), outline=0.01))
+        parts.append(sets.box(f"cnB{i}", (0.18, 0.96, 1.2), (0, 0, 0.66), dark))
+    else:
+        w, h = PSIZE.get(kind, (1.2, 1.2))
+        parts.append(sets.box(f"blk{i}", (w, 0.6, h), (0, 0, h / 2), L.toon(f"pcM{i}", L.hexc("#c9a06a")), outline=0.012))
+        if label:
+            text3d(label, root, h / 2, min(0.3, w / 6), (0.1, 0.08, 0.1), 1.0, -0.32, w * 0.9)
+    for p in parts:
+        p.parent = root
+        p.location = p.location   # boxes were created at local coords: parenting keeps them relative to the root
+    return root
+
+
 pos0, look0, _, _ = cam_at(S["startFrame"])
 for i, p in enumerate(S.get("pieces") or []):
     k = p.get("scale") or 1.0
@@ -297,9 +405,8 @@ for i, p in enumerate(S.get("pieces") or []):
         if p["kind"] in ("car", "van", "truck") and p.get("label") in ("taxi", "police"):
             nm = p["label"]
         sets.kenney(KITS, kit, nm, h * k, (loc.x, loc.y, loc.z), yaw + (math.pi / 2 if kit == "car-kit" else 0))
-    else:   # a plain inked block of the piece's size (better a solid prop than a flat card)
-        w, h = PSIZE.get(p["kind"], (1.2, 1.2))
-        sets.box(f"pc{i}", (w * k, 0.5 * k, h * k), (loc.x, loc.y, loc.z + h * k / 2), L.toon(f"pcM{i}", L.hexc("#c9a06a")), outline=0.012)
+    else:
+        piece3d(i, p["kind"], p.get("label"), loc, k, yaw)
 
 # ---------------- cast ----------------
 EXPR_MAP = {"grin": "laugh", "laugh": "laugh", "whistle": "neutral", "nervous": "sweat", "relief": "proud", "relief_open": "laugh", "dazed": "crazy",
@@ -320,6 +427,8 @@ for j, a in enumerate(S["actors"]):
     m = rig.Stickman(f"a{j}", FACES, loc=tuple(loc), yaw=yaw0, jacket=o.get("jacket", "#5a6170"), hair=hair, exprs=exprs, pants=o.get("pants", "#16131a"))
     if c.get("scale"):
         m.root.scale = (c["scale"],) * 3
+    if a.get("holding"):
+        m.hold(KITS, a["holding"])
     people.append((m, a, loc))
 partner = {}
 for j, (m, a, loc) in enumerate(people):   # two-person shots: lean the look 30 % toward the other one
@@ -345,10 +454,10 @@ for j, (m, a, loc) in enumerate(people):
     look_pt = None
     if j in partner:
         p2 = partner[j]
-        look_pt = (cam_pos.x * 0.7 + p2.x * 0.3, cam_pos.y * 0.7 + p2.y * 0.3)
+        look_pt = (cam_pos.x * 0.85 + p2.x * 0.15, cam_pos.y * 0.85 + p2.y * 0.15)   # play to the lens, a hint toward the partner
     if a.get("look") in (-1, 1):
         side = Vector((1, 0, 0)) if a["look"] > 0 else Vector((-1, 0, 0))
-        look_pt = (loc.x + side.x * 3 + (cam_pos.x - loc.x) * 0.3, loc.y + (cam_pos.y - loc.y) * 0.3)
+        look_pt = (loc.x + side.x * 1.2 + (cam_pos.x - loc.x), loc.y + (cam_pos.y - loc.y))
     if a.get("walkTo") and a.get("walkFrames"):
         w0, w1 = a["walkFrames"]
         dest = B(a["walkTo"][0], 0, a["walkTo"][1])

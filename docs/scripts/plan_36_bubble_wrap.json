@@ -1,0 +1,257 @@
+{
+ "title": "Bubble Wrap Was Supposed to Be Wallpaper",
+ "environment": "apartment",
+ "seed": 361,
+ "cast": [
+  {
+   "id": "al",
+   "name": "Inventor",
+   "role": "retroeng"
+  },
+  {
+   "id": "marc",
+   "name": "Partner",
+   "role": "officeguy"
+  },
+  {
+   "id": "cust",
+   "name": "Customer",
+   "role": "woman"
+  },
+  {
+   "id": "boss",
+   "name": "Computer boss",
+   "role": "boss"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "He glued two shower curtains together and tried to sell them as wallpaper.",
+   "characters": [
+    {
+     "id": "al",
+     "action": "point",
+     "expr": "proud"
+    }
+   ],
+   "environment": "apartment",
+   "envVariant": "retro",
+   "pieces": [
+    {
+     "kind": "bubblewrap",
+     "where": "left"
+    }
+   ]
+  },
+  {
+   "narration": "It's 1957, and two engineers are sure the future of home decor is plastic covered in tiny bubbles of air.",
+   "shot": "two_shot",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "al",
+     "expr": "starry"
+    },
+    {
+     "id": "marc",
+     "expr": "proud"
+    }
+   ],
+   "environment": "apartment",
+   "envVariant": "retro",
+   "pieces": [
+    {
+     "kind": "bubblewrap",
+     "label": "MODERN WALLPAPER"
+    }
+   ]
+  },
+  {
+   "narration": "They cover a whole living room, step back, and wait for the world to fall in love.",
+   "shot": "wide",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "al",
+     "action": "hips",
+     "expr": "smug"
+    },
+    {
+     "id": "marc",
+     "action": "hips",
+     "expr": "proud"
+    }
+   ],
+   "environment": "apartment",
+   "envVariant": "retro",
+   "pieces": [
+    {
+     "kind": "bubblewrap"
+    }
+   ]
+  },
+  {
+   "narration": "Nobody buys it. \"Why would I want my walls to look like a pool float?\"",
+   "shot": "close",
+   "characters": [
+    {
+     "id": "cust",
+     "action": "hips",
+     "expr": "angry",
+     "talk": true
+    }
+   ],
+   "environment": "apartment",
+   "envVariant": "retro"
+  },
+  {
+   "narration": "So they try again as insulation for greenhouses, and that flops too.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "al",
+     "action": "shrug",
+     "expr": "sad"
+    }
+   ],
+   "environment": "suburb",
+   "pieces": [
+    {
+     "kind": "plantpot",
+     "where": "left"
+    },
+    {
+     "kind": "plantpot",
+     "where": "right"
+    }
+   ]
+  },
+  {
+   "narration": "Two failures, a warehouse full of bubbles, and not a single buyer.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "al",
+     "action": "sit",
+     "expr": "cry"
+    }
+   ],
+   "environment": "warehouse",
+   "pieces": [
+    {
+     "kind": "boxes",
+     "where": "left"
+    },
+    {
+     "kind": "boxes",
+     "where": "right"
+    }
+   ],
+   "hud": "panel",
+   "hudText": "ROLLS SOLD|0"
+  },
+  {
+   "narration": "Then a computer company launches a giant new machine and has to ship it across the country without breaking a single part.",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "boss",
+     "action": "point",
+     "expr": "sweat"
+    }
+   ],
+   "environment": "office",
+   "pieces": [
+    {
+     "kind": "rack",
+     "where": "left",
+     "label": "NEW COMPUTER"
+    }
+   ]
+  },
+  {
+   "narration": "The bubble guys wrap it up, the truck hits every pothole on the highway, and it arrives without a scratch.",
+   "shot": "wide",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "al",
+     "action": "cheer",
+     "expr": "laugh"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "dust",
+     "word": "pothole"
+    }
+   ],
+   "environment": "street",
+   "pieces": [
+    {
+     "kind": "truck",
+     "where": "left"
+    }
+   ]
+  },
+  {
+   "narration": "You see, every bubble is a tiny cushion of trapped air. Squeeze it, and the air pushes back, soaking up the bump before it reaches what's inside.",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "al",
+     "action": "point",
+     "expr": "smug"
+    }
+   ],
+   "environment": "office",
+   "pieces": [
+    {
+     "kind": "board",
+     "where": "left",
+     "label": "TRAPPED AIR|= CUSHION"
+    }
+   ]
+  },
+  {
+   "narration": "Today they make enough every year to wrap around the Earth, and somewhere a kid is still popping the wallpaper that nobody wanted in",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "al",
+     "action": "cheer",
+     "expr": "starry"
+    }
+   ],
+   "environment": "apartment",
+   "envVariant": "retro",
+   "pieces": [
+    {
+     "kind": "bubblewrap",
+     "where": "left"
+    }
+   ]
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Alfred Fielding and Marc Chavannes sealed two shower curtains together (1957) and first pitched it as textured wallpaper.",
+   "status": "verified"
+  },
+  {
+   "text": "It then failed as greenhouse insulation; Sealed Air (1960) found its use packaging IBM's 1401 computer.",
+   "status": "verified"
+  },
+  {
+   "text": "'Enough to wrap around the Earth every year' is a commonly repeated industry figure."
+  },
+  {
+   "text": "The customer's line and the pothole drive are invented.",
+   "status": "fiction"
+  }
+ ],
+ "renderer": "blender",
+ "pacing": "flow"
+}

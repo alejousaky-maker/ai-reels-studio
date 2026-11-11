@@ -1,0 +1,207 @@
+{
+ "title": "The Glue That Was Too Weak",
+ "environment": "office",
+ "seed": 391,
+ "cast": [
+  {
+   "id": "spen",
+   "name": "Chemist",
+   "role": "retroeng"
+  },
+  {
+   "id": "art",
+   "name": "Coworker",
+   "role": "officeguy",
+   "palette": "#2a9d8f"
+  },
+  {
+   "id": "boss",
+   "name": "Boss",
+   "role": "boss"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "He made a glue so weak it couldn't hold anything, and his company filed it away as a failure.",
+   "characters": [
+    {
+     "id": "spen",
+     "action": "shrug",
+     "expr": "sad",
+     "holding": "note"
+    }
+   ],
+   "impactWord": "failure",
+   "environment": "office"
+  },
+  {
+   "narration": "It's 1968, and he's a chemist trying to invent a super strong adhesive for building airplanes.",
+   "shot": "wide",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "spen",
+     "action": "point",
+     "expr": "proud"
+    }
+   ],
+   "environment": "office",
+   "envVariant": "retro",
+   "pieces": [
+    {
+     "kind": "board",
+     "where": "left",
+     "label": "SUPER STRONG GLUE"
+    }
+   ]
+  },
+  {
+   "narration": "Instead, he gets tiny sticky spheres that peel off anything without leaving a mark.",
+   "shot": "close",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "spen",
+     "expr": "confused",
+     "holding": "note"
+    }
+   ],
+   "environment": "office",
+   "envVariant": "retro"
+  },
+  {
+   "narration": "For years he shows it to anyone who'll listen. \"Great, but what's it for?\"",
+   "shot": "two_shot",
+   "characters": [
+    {
+     "id": "boss",
+     "action": "hips",
+     "expr": "skeptical",
+     "talk": true
+    },
+    {
+     "id": "spen",
+     "expr": "sweat"
+    }
+   ],
+   "focus": "boss",
+   "environment": "office"
+  },
+  {
+   "narration": "Then a coworker who sings in his church choir has a problem: the paper bookmarks keep falling out of his hymn book.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "art",
+     "expr": "angry",
+     "holding": "book"
+    }
+   ],
+   "environment": "banquet"
+  },
+  {
+   "narration": "So one Sunday he dabs a little of the weak glue on his bookmarks, and they stay put, then peel right off without tearing a page.",
+   "shot": "close",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "art",
+     "expr": "starry",
+     "holding": "note"
+    }
+   ],
+   "impactWord": "peel",
+   "environment": "banquet"
+  },
+  {
+   "narration": "He starts sticking notes on reports for his boss, and the boss writes back on the same little yellow squares.",
+   "shot": "two_shot",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "art",
+     "expr": "smug",
+     "holding": "note"
+    },
+    {
+     "id": "boss",
+     "expr": "proud",
+     "holding": "note"
+    }
+   ],
+   "focus": "art",
+   "environment": "office"
+  },
+  {
+   "narration": "The first test launch flops, so they hand out free samples in one city, and nine out of ten people order more.",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "art",
+     "action": "cheer",
+     "expr": "laugh"
+    }
+   ],
+   "environment": "shops",
+   "envVariant": "open",
+   "hud": "bar",
+   "hudText": "ORDERED AGAIN|0|90|%"
+  },
+  {
+   "narration": "You see, the glue is made of microscopic spheres that only touch the paper at a few points, so it grips just enough to hold and lets go without a fight.",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "spen",
+     "action": "point",
+     "expr": "smug"
+    }
+   ],
+   "environment": "office",
+   "envVariant": "retro",
+   "pieces": [
+    {
+     "kind": "board",
+     "where": "left",
+     "label": "TINY SPHERES|= GENTLE GRIP"
+    }
+   ]
+  },
+  {
+   "narration": "Today billions of sticky notes are sold every year, all thanks to a glue that was too weak to",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "spen",
+     "action": "cheer",
+     "expr": "starry",
+     "holding": "note"
+    }
+   ],
+   "environment": "office"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Spencer Silver at 3M (1968) made a low-tack microsphere adhesive while aiming for a strong one for aircraft.",
+   "status": "verified"
+  },
+  {
+   "text": "Art Fry (1974) used it for hymnal bookmarks in his church choir; notes on reports to his boss followed.",
+   "status": "verified"
+  },
+  {
+   "text": "The 1977 'Press 'n Peel' test flopped; the 1978 Boise sample blitz had ~90 % reorders; launched 1980.",
+   "status": "verified"
+  },
+  {
+   "text": "'Billions sold every year' (tens of billions by many estimates)."
+  },
+  {
+   "text": "Dialogue is invented.",
+   "status": "fiction"
+  }
+ ],
+ "renderer": "blender",
+ "pacing": "flow"
+}

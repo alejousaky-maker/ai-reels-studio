@@ -100,9 +100,11 @@ class Stickman:
         self.head = _empty(name + "_head", self.neck, (0, 0, 0.22))
         _sphere(name + "_skull", self.head, self.R, (0, 0, 0), white, ink=0.016)
         # hair cap
-        bm = bmesh.new()
-        bmesh.ops.create_uvsphere(bm, u_segments=48, v_segments=24, radius=self.R * 1.04)
-        bmesh.ops.delete(bm, geom=[v for v in bm.verts if v.co.z < self.R * 0.42 - max(0, v.co.y) * 0.9], context="VERTS")
+        bm = bmesh.new()   # a clean cap: the sphere cut by a plane tilted down toward the back (no stair-stepped edge)
+        bmesh.ops.create_uvsphere(bm, u_segments=64, v_segments=32, radius=self.R * 1.04)
+        from mathutils import Vector as _V
+        nrm = _V((0, 0.55, 1.0)).normalized()
+        bmesh.ops.bisect_plane(bm, geom=bm.verts[:] + bm.edges[:] + bm.faces[:], plane_co=(0, 0, self.R * 0.38), plane_no=nrm, clear_inner=True)
         me = bpy.data.meshes.new(name + "_hair"); bm.to_mesh(me); bm.free()
         hr = bpy.data.objects.new(name + "_hair", me); bpy.context.collection.objects.link(hr); hr.parent = self.head
         hr.data.materials.append(L.toon("hair_" + name, L.hexc(hair))); L.smooth(hr)
@@ -128,6 +130,28 @@ class Stickman:
             _seg(f"{name}_sn{s}", self.kn[s], self.SHIN, 0.021, black, ink=0.006)
             _sphere(f"{name}_foot{s}", self.kn[s], 0.058, (0, -0.045, -self.SHIN - 0.015), black, scale=(1, 1.6, 0.55), ink=0.006)
         self.pos, self.yaw = list(loc), yaw
+        self.white = white
+
+    def hold(self, kits, item):
+        """put a small prop in the right hand (CC0 Kenney model when there is one, else a coloured token)"""
+        from . import sets
+        KM = {"pizza": ("food-kit", "pizza", 0.06), "coffee": ("food-kit", "cup-coffee", 0.16), "can": ("food-kit", "soda-can", 0.16),
+              "cake": ("food-kit", "cake", 0.2), "bread": ("food-kit", "loaf", 0.12), "croissant": ("food-kit", "croissant", 0.1),
+              "fish": ("food-kit", "fish", 0.1), "plate": ("food-kit", "plate", 0.04), "fryingpan": ("food-kit", "frying-pan", 0.08),
+              "box": ("furniture-kit", "cardboardBoxClosed", 0.25), "book": ("furniture-kit", "books", 0.12), "phone": None, "chocolate": ("food-kit", "chocolate", 0.05),
+              "egg": ("food-kit", "egg", 0.08), "popcorn": ("food-kit", "fries", 0.18)}
+        spec = KM.get(item)
+        hand = self.el[1]
+        o = None
+        if spec:
+            o = sets.kenney(kits, spec[0], spec[1], spec[2] * 1.4, (0, 0, 0))
+        if o is None:
+            col = {"phone": "#1d1b22", "card": "#3f6fb5", "note": "#ffe14d", "cash": "#5fae5a", "coins": "#e8b83a", "goldcoin": "#e8b83a",
+                   "key": "#c9a227", "controller": "#2b2b38", "usb": "#e8b83a", "suitcase": "#7a4f33", "magnifier": "#c9ccd2"}.get(item, "#e2453c")
+            o = sets.box(f"{self.name}_hold", (0.12, 0.05, 0.16), (0, 0, 0), L.toon("hold_" + item, L.hexc(col)), outline=0.006)
+        o.parent = hand
+        o.location = (0, -0.03, -self.LOWER - 0.09)
+        return o
 
     # ---------------- keying ----------------
     def _rot(self, o, f, x=0.0, y=0.0, z=0.0):

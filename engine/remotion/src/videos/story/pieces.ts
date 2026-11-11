@@ -844,5 +844,10 @@ export const PIECES: Record<PieceKind, { dw: number; dh: number; w: number; h: n
   tubetv: { dw: 900, dh: 900, w: 1.5, h: 1.5, draw: tubetv },
   brownbox: { dw: 700, dh: 400, w: 1.2, h: 0.69, draw: brownbox },
   wallet: { dw: 500, dh: 400, w: 0.9, h: 0.72, draw: (p) => wallet(p) },
+  // Blender-first pieces (simple card fallbacks for the three.js renderer)
+  microwave: { dw: 500, dh: 320, w: 0.8, h: 0.5, draw: (p) => { p.poly(rr(20, 20, 480, 300, 20), "#e9ecef", 10); p.poly(rr(50, 50, 340, 270, 10), "#2b2b38", 8); } },
+  pinball: { dw: 600, dh: 900, w: 1.3, h: 1.9, draw: (p) => { p.poly(rr(60, 40, 540, 380, 16), "#3f6fb5", 10); p.poly([[60, 420], [540, 380], [540, 640], [60, 640]], "#e2453c", 10); for (const x of [100, 500]) p.stroke([[x, 640], [x, 880]], 22, "#2b2b38"); } },
+  spring: { dw: 400, dh: 400, w: 0.5, h: 0.5, draw: (p) => { for (let k = 0; k < 9; k++) p.ell(200, 80 + k * 30, 150, 40, null, 10); } },
+  bubblewrap: { dw: 800, dh: 560, w: 2.0, h: 1.4, draw: (p) => { p.poly(rr(20, 20, 780, 540, 10), "rgba(210,235,255,0.7)", 6); for (let y = 60; y < 520; y += 60) for (let x = 60; x < 760; x += 60) p.ell(x, y, 22, 22, "rgba(255,255,255,0.8)", 4); } },
 };
 export { mix };

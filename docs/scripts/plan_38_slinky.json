@@ -1,0 +1,236 @@
+{
+ "title": "The Spring That Walked Off a Shelf",
+ "environment": "cabin",
+ "seed": 381,
+ "cast": [
+  {
+   "id": "ric",
+   "name": "Engineer",
+   "role": "retroeng"
+  },
+  {
+   "id": "bet",
+   "name": "Wife",
+   "role": "wife"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "He knocked a spring off a shelf, and it walked across the floor by itself.",
+   "characters": [
+    {
+     "id": "ric",
+     "expr": "shock"
+    }
+   ],
+   "impactWord": "walked",
+   "environment": "cabin",
+   "pieces": [
+    {
+     "kind": "spring",
+     "where": "on",
+     "move": "right"
+    }
+   ]
+  },
+  {
+   "narration": "It's 1943, and he's a navy engineer trying to build a spring that keeps a ship's meters steady in rough seas.",
+   "shot": "wide",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "ric",
+     "action": "point",
+     "expr": "proud"
+    }
+   ],
+   "environment": "cabin",
+   "pieces": [
+    {
+     "kind": "rack",
+     "where": "left",
+     "label": "SHIP METERS"
+    }
+   ]
+  },
+  {
+   "narration": "One of his test springs tumbles off the shelf, and instead of crashing, it flips end over end, coil by coil.",
+   "shot": "insert",
+   "characters": [
+    {
+     "id": "ric",
+     "expr": "starry"
+    }
+   ],
+   "environment": "cabin",
+   "pieces": [
+    {
+     "kind": "spring",
+     "where": "on",
+     "move": "right"
+    }
+   ]
+  },
+  {
+   "narration": "He rushes home. \"Honey, I think this could be a toy.\"",
+   "shot": "two_shot",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "ric",
+     "expr": "starry",
+     "holding": "spring",
+     "talk": true
+    },
+    {
+     "id": "bet",
+     "expr": "skeptical"
+    }
+   ],
+   "focus": "ric",
+   "environment": "apartment",
+   "envVariant": "retro"
+  },
+  {
+   "narration": "She flips through the dictionary for two days and finds the perfect name.",
+   "light": "night",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "bet",
+     "action": "sitchair",
+     "expr": "squint",
+     "holding": "book"
+    }
+   ],
+   "environment": "apartment",
+   "envVariant": "retro",
+   "pieces": [
+    {
+     "kind": "board",
+     "where": "right",
+     "label": "SLINKY"
+    }
+   ]
+  },
+  {
+   "narration": "Two years later, they set up a little ramp in a department store just before Christmas, and nobody is buying.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "ric",
+     "expr": "sad"
+    }
+   ],
+   "environment": "shops",
+   "envVariant": "open",
+   "pieces": [
+    {
+     "kind": "signs",
+     "where": "left",
+     "label": "SLINKY $1"
+    }
+   ]
+  },
+  {
+   "narration": "So he does the demo himself. One spring walks down the ramp, and a crowd gathers around him.",
+   "shot": "wide",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "ric",
+     "action": "point",
+     "expr": "proud"
+    }
+   ],
+   "extras": 4,
+   "environment": "shops",
+   "envVariant": "open",
+   "pieces": [
+    {
+     "kind": "spring",
+     "where": "on",
+     "move": "right"
+    }
+   ],
+   "crowd": true
+  },
+  {
+   "narration": "Four hundred Slinkys sell out in ninety minutes.",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "ric",
+     "action": "cheer",
+     "expr": "laugh"
+    },
+    {
+     "id": "bet",
+     "action": "cheer",
+     "expr": "starry"
+    }
+   ],
+   "environment": "shops",
+   "envVariant": "open",
+   "hud": "panel",
+   "hudText": "SOLD OUT|400 IN 90 MINUTES"
+  },
+  {
+   "narration": "You see, each coil passes its weight to the next one like a wave, so the spring keeps flipping over itself as long as there's somewhere lower to go.",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "ric",
+     "action": "point",
+     "expr": "smug"
+    }
+   ],
+   "environment": "office",
+   "envVariant": "retro",
+   "pieces": [
+    {
+     "kind": "board",
+     "where": "left",
+     "label": "WEIGHT -> NEXT COIL"
+    }
+   ]
+  },
+  {
+   "narration": "Since then, hundreds of millions have been sold, all because one clumsy spring couldn't stay on",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "ric",
+     "expr": "wink",
+     "holding": "spring"
+    }
+   ],
+   "environment": "apartment",
+   "envVariant": "retro"
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Naval engineer Richard James (Philadelphia, 1943) saw a tension spring for ship instruments 'walk' after falling.",
+   "status": "verified"
+  },
+  {
+   "text": "Betty James found the name 'Slinky' in a dictionary after two days.",
+   "status": "verified"
+  },
+  {
+   "text": "At Gimbels in Philadelphia (Nov 1945) 400 Slinkys sold in 90 minutes after a demo.",
+   "status": "verified"
+  },
+  {
+   "text": "Hundreds of millions sold since (figures vary, 300M+)."
+  },
+  {
+   "text": "Dialogue is invented.",
+   "status": "fiction"
+  }
+ ],
+ "renderer": "blender",
+ "pacing": "flow"
+}

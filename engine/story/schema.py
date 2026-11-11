@@ -16,7 +16,7 @@ Mood = Literal["whimsical", "curious", "tense", "warm", "upbeat"]
 Product = Literal["coffee", "croissant", "bread", "cake", "lightbulb", "question", "exclaim", "heart", "clock", "book", "note", "scroll", "map", "globe", "wine", "spear", "stake", "phone", "tablet", "wifi", "key", "camera", "card", "fish", "receipt", "box",
                   "snake", "coins", "mic", "earbuds", "gpsmap", "suitcase", "folder", "ticket", "controller", "can", "pizza",
                   "thermometer", "moth", "cash", "noodles", "extinguisher", "potato", "battery", "diploma", "sicknote", "router",
-                  "newspaper", "pickaxe", "shovel", "bagel", "lettuce", "pillow", "wrench", "check", "trident", "clipboard", "gavel", "envelope", "cutlass", "goldcoin", "plug", "fryingpan", "plate", "grass", "magnifier", "usb", "poolring", "flamingo", "badge", "bitcoin", "glasses", "leaf"]
+                  "newspaper", "pickaxe", "shovel", "bagel", "lettuce", "pillow", "wrench", "check", "trident", "clipboard", "gavel", "envelope", "cutlass", "goldcoin", "plug", "fryingpan", "plate", "grass", "magnifier", "usb", "poolring", "flamingo", "badge", "bitcoin", "glasses", "leaf", "chocolate", "egg", "popcorn", "hammer", "spring"]
 Role = Literal["villager_woman", "villager_man", "kid", "official", "musician", "baker", "barista", "scholar", "customer", "elder", "worker",
               "explorer", "king", "queen", "sailor", "islander", "greek", "hero", "trojan", "prisoner", "giant",
               "businessman", "boss", "woman", "towelguy", "lawyer", "fisher", "tourist",
@@ -32,7 +32,7 @@ PieceKind = Literal["horse", "ship", "galley", "chalkboard", "sheep", "tent", "s
                     "cryo", "redarrow", "console", "sofa", "fridge", "bed", "doghouse", "tv", "calendar", "hospitalbed", "heartmonitor",
                     "pole", "monitor", "cardbox", "desk", "rack", "signs", "ticker",
                     "semi", "forklift", "fruitpile", "containership", "tugboat", "steamshovel", "mosquito", "mixer", "airplane", "excavator",
-                    "rockpile", "tetrapods", "departures", "escalator", "pipes", "cashcounter", "blueprint", "subwaymap", "ribbon", "oldcar", "partybus", "plantpot", "corkboard", "vending", "greenarrow", "glasscase", "eye", "laserarm", "tubetv", "brownbox", "wallet"]
+                    "rockpile", "tetrapods", "departures", "escalator", "pipes", "cashcounter", "blueprint", "subwaymap", "ribbon", "oldcar", "partybus", "plantpot", "corkboard", "vending", "greenarrow", "glasscase", "eye", "laserarm", "tubetv", "brownbox", "wallet", "microwave", "pinball", "spring", "bubblewrap"]
 
 
 class Piece(BaseModel):

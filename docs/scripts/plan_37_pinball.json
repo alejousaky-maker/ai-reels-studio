@@ -1,0 +1,236 @@
+{
+ "title": "The Shot That Made Pinball Legal",
+ "environment": "office",
+ "seed": 371,
+ "cast": [
+  {
+   "id": "rog",
+   "name": "Writer",
+   "role": "streamer",
+   "palette": "#3a4566"
+  },
+  {
+   "id": "may",
+   "name": "Mayor",
+   "role": "boss"
+  },
+  {
+   "id": "off",
+   "name": "Official",
+   "role": "officeguy"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "He called his shot in front of the city council, and won back the right to play pinball.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "rog",
+     "action": "point",
+     "expr": "smug"
+    }
+   ],
+   "impactWord": "shot",
+   "environment": "office",
+   "pieces": [
+    {
+     "kind": "pinball",
+     "where": "left"
+    }
+   ]
+  },
+  {
+   "narration": "It's 1976, and pinball has been illegal in New York City for over thirty years.",
+   "shot": "wide",
+   "light": "night",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "rog",
+     "expr": "sad"
+    }
+   ],
+   "environment": "shops",
+   "hud": "panel",
+   "hudText": "PINBALL|BANNED SINCE 1942"
+  },
+  {
+   "narration": "Back in the forties, the mayor called it gambling and smashed the machines with a sledgehammer for the newspapers.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "may",
+     "expr": "angry",
+     "holding": "hammer"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "smashed",
+     "on": "may"
+    }
+   ],
+   "impactWord": "smashed",
+   "transition": "flash",
+   "environment": "street",
+   "pieces": [
+    {
+     "kind": "pinball",
+     "where": "left",
+     "shake": 1.5
+    }
+   ]
+  },
+  {
+   "narration": "You see, under the law, a game of luck counts as gambling, but a game of skill is just fun.",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "rog",
+     "action": "point",
+     "expr": "proud"
+    }
+   ],
+   "environment": "office",
+   "pieces": [
+    {
+     "kind": "board",
+     "where": "left",
+     "label": "LUCK = BANNED|SKILL = LEGAL"
+    }
+   ]
+  },
+  {
+   "narration": "Now one writer has to prove it's skill to a room full of grumpy officials.",
+   "shot": "two_shot",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "off",
+     "action": "hips",
+     "expr": "skeptical"
+    },
+    {
+     "id": "rog",
+     "expr": "sweat"
+    }
+   ],
+   "focus": "off",
+   "environment": "office"
+  },
+  {
+   "narration": "\"It's pure chance, son. You just pull and pray.\"",
+   "shot": "close",
+   "characters": [
+    {
+     "id": "off",
+     "expr": "smug",
+     "talk": true
+    }
+   ],
+   "environment": "office"
+  },
+  {
+   "narration": "So he pulls the plunger, points at the middle lane, and says, \"It's going right there.\"",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "rog",
+     "action": "point",
+     "expr": "smug",
+     "talk": true
+    }
+   ],
+   "environment": "office",
+   "pieces": [
+    {
+     "kind": "pinball",
+     "where": "left"
+    }
+   ]
+  },
+  {
+   "narration": "The room goes quiet. The ball bounces off two bumpers, rolls up the ramp, and drops straight into the middle lane.",
+   "shot": "insert",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "rog",
+     "expr": "shock"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "sparkle",
+     "word": "drops"
+    }
+   ],
+   "environment": "office",
+   "pieces": [
+    {
+     "kind": "pinball",
+     "where": "on"
+    }
+   ]
+  },
+  {
+   "narration": "The officials vote, and the ban is lifted that same year.",
+   "shot": "wide",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "rog",
+     "action": "cheer",
+     "expr": "starry"
+    },
+    {
+     "id": "off",
+     "action": "shrug",
+     "expr": "sad"
+    }
+   ],
+   "environment": "office",
+   "hud": "panel",
+   "hudText": "PINBALL BAN|LIFTED"
+  },
+  {
+   "narration": "Years later, he admitted that shot was mostly luck, which means pinball was made legal by the one shot that proved it was",
+   "light": "night",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "rog",
+     "expr": "wink"
+    }
+   ],
+   "environment": "gameroom",
+   "pieces": [
+    {
+     "kind": "pinball",
+     "where": "left"
+    }
+   ]
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "New York City banned pinball in 1942; Mayor La Guardia smashed machines with a sledgehammer for the press.",
+   "status": "verified"
+  },
+  {
+   "text": "In 1976 writer Roger Sharpe called his shot at a City Council hearing; the ban was lifted that year.",
+   "status": "verified"
+  },
+  {
+   "text": "Sharpe has said the shot involved luck."
+  },
+  {
+   "text": "The official's quoted line is invented.",
+   "status": "fiction"
+  }
+ ],
+ "renderer": "blender",
+ "pacing": "flow"
+}

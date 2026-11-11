@@ -193,7 +193,7 @@ def _outfit(role: str, i: int, palette: str | None = None) -> dict:
 # world scale per role (kids 0.72 come from their build); a cyclops is ~2.6 x a person
 ROLE_SCALE = {"giant": 2.6}
 # set pieces: world width, height in metres (engine pieces.ts)
-PIECE_SIZE = {"vending": (1.25, 2.4), "greenarrow": (3.5, 5.0), "glasscase": (1.2, 1.8), "eye": (1.3, 1.3), "laserarm": (1.6, 2.3), "tubetv": (1.5, 1.5), "brownbox": (1.2, 0.69), "wallet": (0.9, 0.72), "partybus": (6.0, 5.76), "plantpot": (1.3, 1.72), "corkboard": (3.0, 2.1), "semi": (9.0, 3.2), "forklift": (2.6, 1.85), "fruitpile": (2.4, 1.8), "containership": (36.0, 14.6), "tugboat": (6.0, 3.2),
+PIECE_SIZE = {"microwave": (0.8, 0.5), "pinball": (1.3, 1.9), "spring": (0.5, 0.5), "bubblewrap": (2.0, 1.4), "vending": (1.25, 2.4), "greenarrow": (3.5, 5.0), "glasscase": (1.2, 1.8), "eye": (1.3, 1.3), "laserarm": (1.6, 2.3), "tubetv": (1.5, 1.5), "brownbox": (1.2, 0.69), "wallet": (0.9, 0.72), "partybus": (6.0, 5.76), "plantpot": (1.3, 1.72), "corkboard": (3.0, 2.1), "semi": (9.0, 3.2), "forklift": (2.6, 1.85), "fruitpile": (2.4, 1.8), "containership": (36.0, 14.6), "tugboat": (6.0, 3.2),
               "steamshovel": (6.0, 4.1), "mosquito": (1.6, 1.5), "mixer": (5.0, 2.45), "airplane": (16.0, 5.3), "excavator": (6.0, 3.35),
               "rockpile": (5.0, 3.5), "tetrapods": (6.0, 2.5), "departures": (3.6, 2.3), "escalator": (4.0, 3.36), "pipes": (5.0, 3.2),
               "cashcounter": (1.2, 2.16), "blueprint": (2.2, 2.0), "subwaymap": (3.0, 2.25), "ribbon": (4.0, 2.7), "oldcar": (4.2, 2.6),

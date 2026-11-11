@@ -48,14 +48,14 @@ export type ProductKind = "coffee" | "croissant" | "bread" | "cake" | "lightbulb
   | "phone" | "tablet" | "wifi" | "key" | "camera" | "card" | "fish" | "receipt" | "box"
   | "snake" | "coins" | "mic" | "earbuds" | "gpsmap" | "suitcase" | "folder" | "ticket" | "controller" | "can" | "pizza"
   | "thermometer" | "moth" | "cash" | "noodles" | "extinguisher" | "potato" | "battery" | "diploma" | "sicknote" | "router"
-  | "newspaper" | "pickaxe" | "shovel" | "bagel" | "lettuce" | "pillow" | "wrench" | "check" | "trident" | "clipboard" | "gavel" | "envelope" | "cutlass" | "goldcoin" | "plug" | "fryingpan" | "plate" | "grass" | "magnifier" | "usb" | "poolring" | "flamingo" | "badge" | "bitcoin" | "glasses" | "leaf";
+  | "newspaper" | "pickaxe" | "shovel" | "bagel" | "lettuce" | "pillow" | "wrench" | "check" | "trident" | "clipboard" | "gavel" | "envelope" | "cutlass" | "goldcoin" | "plug" | "fryingpan" | "plate" | "grass" | "magnifier" | "usb" | "poolring" | "flamingo" | "badge" | "bitcoin" | "glasses" | "leaf" | "chocolate" | "egg" | "popcorn" | "hammer" | "spring";
 /** big painted set pieces standing in the world as lit cards (always turned to the camera, side view) */
 export type PieceKind = "horse" | "ship" | "galley" | "chalkboard" | "sheep" | "tent" | "scale" | "boxes" | "car" | "van" | "poster"
   | "lewis" | "crates" | "snakes" | "board" | "screen" | "finish" | "truck" | "booth" | "tumbleweed" | "trafficlight" | "snacks"
   | "cryo" | "redarrow" | "console" | "sofa" | "fridge" | "bed" | "doghouse" | "tv" | "calendar" | "hospitalbed" | "heartmonitor"
   | "pole" | "monitor" | "cardbox" | "desk" | "rack" | "signs" | "ticker"
   | "semi" | "forklift" | "fruitpile" | "containership" | "tugboat" | "steamshovel" | "mosquito" | "mixer" | "airplane" | "excavator"
-  | "rockpile" | "tetrapods" | "departures" | "escalator" | "pipes" | "cashcounter" | "blueprint" | "subwaymap" | "ribbon" | "oldcar" | "partybus" | "plantpot" | "corkboard" | "vending" | "greenarrow" | "glasscase" | "eye" | "laserarm" | "tubetv" | "brownbox" | "wallet";
+  | "rockpile" | "tetrapods" | "departures" | "escalator" | "pipes" | "cashcounter" | "blueprint" | "subwaymap" | "ribbon" | "oldcar" | "partybus" | "plantpot" | "corkboard" | "vending" | "greenarrow" | "glasscase" | "eye" | "laserarm" | "tubetv" | "brownbox" | "wallet" | "microwave" | "pinball" | "spring" | "bubblewrap";
 export type PieceSpec = { kind: PieceKind; x: number; z: number; y?: number; scale?: number; mirror?: boolean;
   /** rise to this height across moveFrames (a console blasting off) */
   liftTo?: number;

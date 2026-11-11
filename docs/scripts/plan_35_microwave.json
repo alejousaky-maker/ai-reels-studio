@@ -1,0 +1,242 @@
+{
+ "title": "The Candy Bar That Invented the Microwave",
+ "environment": "office",
+ "seed": 351,
+ "cast": [
+  {
+   "id": "per",
+   "name": "Engineer",
+   "role": "retroeng"
+  },
+  {
+   "id": "mate",
+   "name": "Coworker",
+   "role": "officeguy"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "He melted a chocolate bar in his pocket without ever going near a flame.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "per",
+     "expr": "shock",
+     "holding": "chocolate"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "steam",
+     "word": "melted",
+     "on": "per"
+    }
+   ],
+   "impactWord": "melted",
+   "environment": "office",
+   "envVariant": "retro"
+  },
+  {
+   "narration": "It's 1945, and he's an engineer testing radar parts for the military, standing right next to a machine called a magnetron.",
+   "shot": "wide",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "per",
+     "action": "point",
+     "expr": "proud"
+    }
+   ],
+   "environment": "office",
+   "envVariant": "retro",
+   "pieces": [
+    {
+     "kind": "rack",
+     "where": "left",
+     "label": "MAGNETRON"
+    }
+   ]
+  },
+  {
+   "narration": "He reaches into his pocket for a snack, and his candy bar has turned into a puddle of goo.",
+   "shot": "close",
+   "characters": [
+    {
+     "id": "per",
+     "expr": "confused",
+     "holding": "chocolate"
+    }
+   ],
+   "environment": "office",
+   "envVariant": "retro"
+  },
+  {
+   "narration": "His coworker just laughs. \"You probably sat on it.\"",
+   "shot": "two_shot",
+   "characters": [
+    {
+     "id": "mate",
+     "expr": "laugh",
+     "talk": true
+    },
+    {
+     "id": "per",
+     "expr": "skeptical"
+    }
+   ],
+   "focus": "mate",
+   "environment": "office",
+   "envVariant": "retro"
+  },
+  {
+   "narration": "But he doesn't buy it. He sends out for a bag of popcorn kernels and holds them up to the machine.",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "per",
+     "expr": "squint",
+     "holding": "popcorn"
+    }
+   ],
+   "environment": "office",
+   "envVariant": "retro",
+   "pieces": [
+    {
+     "kind": "rack",
+     "where": "left",
+     "label": "MAGNETRON"
+    }
+   ]
+  },
+  {
+   "narration": "Pop. Pop. Pop. Popcorn starts flying all over the lab.",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "per",
+     "action": "cheer",
+     "expr": "starry"
+    }
+   ],
+   "fx": [
+    {
+     "kind": "confetti",
+     "word": "flying",
+     "on": "per"
+    }
+   ],
+   "impactWord": "Popcorn",
+   "environment": "office",
+   "envVariant": "retro"
+  },
+  {
+   "narration": "The next morning he tries a raw egg, his coworker leans in for a closer look, and the egg explodes right in his face.",
+   "shot": "two_shot",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "per",
+     "expr": "proud",
+     "holding": "egg"
+    },
+    {
+     "id": "mate",
+     "action": "panic",
+     "expr": "shock"
+    }
+   ],
+   "focus": "mate",
+   "fx": [
+    {
+     "kind": "burst",
+     "word": "explodes",
+     "on": "mate"
+    }
+   ],
+   "impactWord": "explodes",
+   "environment": "office",
+   "envVariant": "retro"
+  },
+  {
+   "narration": "You see, the magnetron fires invisible waves that make the water inside food wiggle billions of times a second, and all that wiggling turns into heat.",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "per",
+     "action": "point",
+     "expr": "smug"
+    }
+   ],
+   "environment": "office",
+   "envVariant": "retro",
+   "pieces": [
+    {
+     "kind": "board",
+     "where": "left",
+     "label": "WATER WIGGLES|= HEAT"
+    }
+   ]
+  },
+  {
+   "narration": "Two years later, his company sells the first microwave oven, taller than a man and as heavy as a grand piano.",
+   "shot": "wide",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "per",
+     "expr": "proud"
+    }
+   ],
+   "environment": "warehouse",
+   "pieces": [
+    {
+     "kind": "vending",
+     "where": "left",
+     "label": "FIRST|MICROWAVE"
+    }
+   ],
+   "camMove": "crane_up"
+  },
+  {
+   "narration": "Now one sits in almost every kitchen, which is why your leftovers owe everything to a candy bar that melted in",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "per",
+     "expr": "wink",
+     "holding": "popcorn"
+    }
+   ],
+   "environment": "kitchen",
+   "pieces": [
+    {
+     "kind": "microwave",
+     "where": "left"
+    }
+   ]
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Percy Spencer, a Raytheon engineer working on magnetrons for radar, noticed a candy bar melt in his pocket (1945).",
+   "status": "verified"
+  },
+  {
+   "text": "He then popped popcorn kernels; a coworker's exploding-egg story is widely told."
+  },
+  {
+   "text": "Microwaves (2.45 GHz) make water molecules flip billions of times a second; the motion becomes heat.",
+   "status": "verified"
+  },
+  {
+   "text": "The 1947 Radarange was about 1.8 m tall and ~340 kg (grand pianos weigh ~270-500 kg).",
+   "status": "verified"
+  },
+  {
+   "text": "Coworker's line is invented.",
+   "status": "fiction"
+  }
+ ],
+ "renderer": "blender",
+ "pacing": "flow"
+}
