@@ -1,0 +1,377 @@
+"""Build ONE storyboard scene in Blender and render its frames (runs inside Blender).
+The director's storyboard (three.js coordinates: y up, the camera looks toward -z) is mapped to Blender (z up):
+three (x, y, z) -> blender (x, -z, y). The camera is replayed EXACTLY like camera.ts (keys, exponential push-in,
+quintic glide, cuts, roll); actors play their mode / pose / talk / walk / expression keys through the rig; the set is
+built from the env preset; pieces become Kenney models or simple 3D proxies. Frames are written with handles (8
+before / 8 after) so the compositor can play the motion dissolves between scenes.
+usage: blender -b --python engine/blender/scene.py -- <repo_root> <storyboard.json> <scene_idx> <out_dir> <faces_dir> [res%] [samples]"""
+import json
+import math
+import os
+import sys
+
+import bpy
+from mathutils import Matrix, Vector
+
+argv = sys.argv[sys.argv.index("--") + 1:]
+ROOT, SB, IDX, OUT, FACES = argv[0], argv[1], int(argv[2]), argv[3], argv[4]
+RES = int(argv[5]) if len(argv) > 5 else 100
+SAMPLES = int(argv[6]) if len(argv) > 6 else 24
+sys.path.insert(0, ROOT)
+from engine.blender import look as L, sets, rig  # noqa: E402
+
+KITS = os.path.join(ROOT, "engine", "remotion", "public", "kits")
+sb = json.load(open(SB, encoding="utf-8"))
+S = sb["scenes"][IDX]
+FPS = sb["fps"]
+HANDLE = 8
+F0, F1 = max(0, S["startFrame"] - HANDLE), min(sb["durationInFrames"] - 1, S["endFrame"] + HANDLE)
+
+
+def B(x, y, z):          # three.js -> blender
+    return Vector((x, -z, y))
+
+
+bpy.ops.wm.read_factory_settings(use_empty=True)
+sc = bpy.context.scene
+L.setup_render(sc, F1, RES, SAMPLES)
+sc.frame_start, sc.frame_end = F0, F1
+env = S.get("env") or sb.get("env") or {"preset": "apartment"}
+preset, variant = env.get("preset", "apartment"), env.get("variant")
+light = S.get("light", "day")
+
+# ---------------- camera (exact replay of camera.ts camAt) ----------------
+glide = lambda u: (lambda x: x * x * x * (x * (6 * x - 15) + 10))(min(1.0, max(0.0, u)))
+
+
+def key_cam(k, f, push):
+    s = math.exp(-push * max(0, f - k["frame"]))
+    p, l = k["position"], k["lookAt"]
+    return ([l[i] + (p[i] - l[i]) * s for i in range(3)], list(l), k.get("fov", 40), k.get("roll", 0.0))
+
+
+def cam_at(f):
+    keys = sorted(S["cameraKeys"], key=lambda k: k["frame"])
+    push = S.get("push", 0.002)
+    cur = key_cam(keys[0], f, push)
+    for k in keys[1:]:
+        if f < k["frame"]:
+            break
+        nxt = key_cam(k, f, push)
+        if k.get("cut"):
+            cur = nxt
+        else:
+            g = glide((f - k["frame"]) / (k.get("dur") or 24))
+            cur = ([cur[0][i] + (nxt[0][i] - cur[0][i]) * g for i in range(3)], [cur[1][i] + (nxt[1][i] - cur[1][i]) * g for i in range(3)],
+                   cur[2] + (nxt[2] - cur[2]) * g, cur[3] + (nxt[3] - cur[3]) * g)
+    pos, look, fov, roll = cur
+    punch = 0.0
+    for k in S.get("kicks") or []:
+        n = f - k["frame"] + 1
+        if 0 <= n < 12:
+            punch = max(punch, 0.1 * min(1, k.get("amp", 0.5) + 0.2) * (1 - n / 12) ** 2)
+    return pos, look, fov * (1 - punch), roll
+
+
+cam = bpy.data.cameras.new("cam")
+cam.sensor_fit = "VERTICAL"
+cam.clip_start, cam.clip_end = 0.1, 1500
+co = bpy.data.objects.new("cam", cam)
+bpy.context.collection.objects.link(co)
+sc.camera = co
+co.rotation_mode = "QUATERNION"
+for f in range(F0, F1 + 1):
+    pos, look, fov, roll = cam_at(f)
+    P, T = B(*pos), B(*look)
+    q = (T - P).to_track_quat("-Z", "Y")
+    if roll:
+        q = q @ Matrix.Rotation(roll, 4, "Z").to_quaternion()
+    co.location, co.rotation_quaternion = P, q
+    cam.angle = math.radians(fov)
+    co.keyframe_insert("location", frame=f)
+    co.keyframe_insert("rotation_quaternion", frame=f)
+    cam.keyframe_insert("lens", frame=f)
+
+# ---------------- set ----------------
+ROOMS = {   # preset: (half width W, back depth D, height H, floor, back wall, side wall)
+    "apartment": (6.5, 5.5, 3.6, "#b07a4a", "#e4d6c0", "#7fa3a0"), "office": (7, 5.5, 3.8, "#7d8aa0", "#eef0f2", "#d9dde3"),
+    "gameroom": (5.5, 4.4, 3.2, "#5a5070", "#2a2448", "#231e3e"), "bedroom": (5.5, 4.6, 3.3, "#b07a4a", "#d9c8e8", "#c8b4d9"),
+    "kitchen": (5.5, 4.4, 3.2, "#e9e4da", "#ffffff", "#f7e7c4"), "clinic": (5.5, 4.6, 3.3, "#e6eef0", "#eef4f7", "#d9ecdf"),
+    "datacenter": (9, 9, 4.2, "#c9ced6", "#2b3240", "#2b3240"), "hotel": (6, 5, 3.5, "#5a2f4a", "#3b2f5a", "#2f2a4a"),
+    "bathroom": (4.2, 4.2, 3.2, "#f4f1ea", "#eef6f8", "#eef6f8"), "trading": (10, 7, 5, "#4a4a58", "#22222c", "#1d1d26"),
+    "warehouse": (14, 10, 7, "#9a9a92", "#8a8f98", "#7a7f88"), "airport": (14, 8, 7, "#e9e6df", "#dfe3e8", "#cfd5dc"),
+    "cabin": (4.5, 4, 3.0, "#8a5a34", "#9a6a42", "#9a6a42"), "banquet": (11, 8, 6, "#b07a4a", "#f2e6d4", "#efe0c8"),
+}
+if preset == "office" and variant == "retro":
+    ROOMS["office"] = (6.5, 5.5, 3.6, "#c9c0a8", "#8a5a34", "#7a4f2e")
+if preset == "apartment" and variant == "retro":
+    ROOMS["apartment"] = (6.5, 5.5, 3.6, "#b07a4a", "#8a5a34", "#7a4f2e")
+xs = [a["x"] for a in S["actors"]] + [p["x"] for p in S.get("pieces") or []]
+zs = [a["z"] for a in S["actors"]] + [p["z"] for p in S.get("pieces") or []]
+night = light == "night"
+
+
+def lights(interior):
+    w = sc.world = bpy.data.worlds.new("world")
+    w.use_nodes = True
+    bg = w.node_tree.nodes["Background"]
+    bg.inputs["Color"].default_value = (0.03, 0.04, 0.09, 1) if night else (0.42, 0.55, 0.75, 1) if not interior else (0.06, 0.07, 0.11, 1)
+    bg.inputs["Strength"].default_value = 1.0
+    sun = bpy.data.lights.new("sun", "SUN")
+    sun.energy = {"day": 5.5, "golden": 4.5, "night": 1.2}[light]
+    sun.color = {"day": (1.0, 0.93, 0.82), "golden": (1.0, 0.72, 0.45), "night": (0.55, 0.65, 1.0)}[light]
+    sun.angle = math.radians(0.8)
+    so = bpy.data.objects.new("sun", sun)
+    bpy.context.collection.objects.link(so)
+    # sun from camera-left and above, relative to the scene's opening view (lit faces, long shadows behind the cast)
+    pos, look, _, _ = cam_at(S["startFrame"])
+    d = B(*look) - B(*pos)
+    d.z = 0
+    d.normalize()
+    az = math.atan2(d.x, d.y) + math.radians(-35 if light != "golden" else -60)
+    el = math.radians(48 if light == "day" else 18 if light == "golden" else 35)
+    dirv = Vector((math.sin(az) * math.cos(el), math.cos(az) * math.cos(el), -math.sin(el)))
+    so.rotation_mode = "QUATERNION"
+    so.rotation_quaternion = dirv.to_track_quat("-Z", "Y")
+    fill = bpy.data.lights.new("fill", "AREA")
+    fill.energy, fill.size, fill.color = (60 if night else 140), 6, (0.7, 0.8, 1.0)
+    fo = bpy.data.objects.new("fill", fill)
+    fo.location = B(*pos) + Vector((0, 0, 1.5))
+    fo.rotation_mode = "QUATERNION"
+    fo.rotation_quaternion = (B(*look) - fo.location).to_track_quat("-Z", "Y")
+    bpy.context.collection.objects.link(fo)
+    if interior or night:   # warm key over the action (a lit stage, darker corners)
+        k = bpy.data.lights.new("key", "SPOT")
+        k.energy, k.spot_size, k.spot_blend, k.color = (900 if night else 500), math.radians(70), 0.8, (1.0, 0.82, 0.6)
+        ko = bpy.data.objects.new("key", k)
+        ko.location = B(look[0], 3.4, look[2]) + (B(*pos) - B(*look)).normalized() * 1.8
+        ko.location.z = 3.4
+        ko.rotation_mode = "QUATERNION"
+        ko.rotation_quaternion = (B(look[0], 0.6, look[2]) - ko.location).to_track_quat("-Z", "Y")
+        bpy.context.collection.objects.link(ko)
+
+
+def room(W, D, H, floor_c, back_c, side_c):
+    W = max(W, max([abs(x) for x in xs] + [0]) + 2.5)
+    D = max(D, max([-z for z in zs] + [0]) + 2.0)
+    floor = L.toon("floor", L.hexc(floor_c))
+    sets.box("floor", (2 * W, D + 30, 0.1), (0, (D - 30) / 2 + 0, -0.05), floor)
+    if preset in ("apartment", "bedroom", "cabin") or floor_c.startswith("#b0") or floor_c.startswith("#8a5a"):
+        g = L.toon("groove", L.hexc("#6a4426"))
+        for k in range(int(-W / 0.6), int(W / 0.6) + 1):
+            sets.box(f"gr{k}", (0.025, D + 30, 0.01), (k * 0.6, (D - 30) / 2, 0.003), g)
+    back, side = L.toon("wallB", L.hexc(back_c)), L.toon("wallS", L.hexc(side_c))
+    # back wall with a window (left of centre) unless the room is a windowless type
+    windowless = preset in ("datacenter", "trading", "gameroom", "bathroom", "warehouse")
+    if windowless:
+        sets.box("back", (2 * W, 0.25, H), (0, D, H / 2), back)
+    else:
+        wx0, wx1, wz0, wz1 = -W * 0.45, W * 0.05, 1.0, min(H - 0.5, 2.7)
+        for nm, size, loc in [("bl", (wx0 + W, 0.25, H), ((wx0 - W) / 2, D, H / 2)), ("br", (W - wx1, 0.25, H), ((W + wx1) / 2, D, H / 2)),
+                              ("bs", (wx1 - wx0, 0.25, wz0), ((wx0 + wx1) / 2, D, wz0 / 2)), ("bh", (wx1 - wx0, 0.25, H - wz1), ((wx0 + wx1) / 2, D, (H + wz1) / 2))]:
+            sets.box(nm, size, loc, back)
+        fr = L.toon("frame", L.hexc("#f4efe6"))
+        for x in (wx0, (wx0 + wx1) / 2, wx1):
+            sets.box(f"m{x:.2f}", (0.08, 0.3, wz1 - wz0), (x, D - 0.05, (wz0 + wz1) / 2), fr, outline=0.006)
+        sets.box("mh", (wx1 - wx0, 0.3, 0.08), ((wx0 + wx1) / 2, D - 0.05, (wz0 + wz1) / 2), fr, outline=0.006)
+        sky = "#22305a" if night else "#f2b07a" if light == "golden" else "#8fc4ec"
+        sets.box("sky", (60, 0.1, 30), (0, D + 12, 8), L.flat("skyM", L.hexc(sky), 1.4), shadow=False)
+        for k in range(8):
+            sets.box(f"bld{k}", (2.2, 0.4, 3 + k % 3 * 2), (wx0 - 3 + k * 2.6, D + 8, 1.5 + k % 3), L.flat("bldM", L.hexc("#3a4a7a" if night else "#6f8fb8"), 1.0), shadow=False)
+    for s in (-1, 1):
+        sets.box(f"side{s}", (0.25, D + 8, H), (s * W, (D - 8) / 2, H / 2), side)
+    trim = L.toon("trim", L.hexc("#3a3440"))
+    sets.box("trimB", (2 * W, 0.3, 0.14), (0, D - 0.1, 0.07), trim)
+    # haze inside the room only (light shafts)
+    hz = L._new_mat("haze")
+    hv = hz.node_tree.nodes.new("ShaderNodeVolumePrincipled")
+    hv.inputs["Density"].default_value = 0.035
+    hv.inputs["Anisotropy"].default_value = 0.5
+    hz.node_tree.links.new(hv.outputs[0], hz.node_tree.nodes.new("ShaderNodeOutputMaterial").inputs["Volume"])
+    sets.box("haze", (2 * W - 0.4, D + 6, H - 0.1), (0, (D - 6) / 2, H / 2), hz, shadow=False)
+    # set dressing per room type (CC0 Kenney furniture against the walls, never in the middle)
+    dress = {
+        "apartment": [("loungeSofa", 0.95, (W * 0.45, D - 0.7), math.pi), ("lampRoundFloor", 1.9, (-W + 0.8, D - 0.8), 0), ("pottedPlant", 1.4, (W - 0.7, D - 0.7), 0),
+                      ("bookcaseOpen", 2.2, (-W + 0.5, 0.0), -math.pi / 2), ("rugRounded", 0.03, (0, 1.0), 0)],
+        "office": [("desk", 0.78, (0, D - 1.2), math.pi), ("chairDesk", 1.0, (0, D - 0.4), math.pi), ("bookcaseClosedWide", 2.0, (W - 0.5, 0.6), math.pi / 2),
+                   ("pottedPlant", 1.4, (-W + 0.7, D - 0.7), 0), ("coatRackStanding", 1.9, (-W + 0.7, 1.0), 0)],
+        "gameroom": [("desk", 0.78, (-1.4, D - 0.6), math.pi), ("chairDesk", 1.0, (-1.4, D - 1.4), 0), ("speaker", 0.55, (-2.9, D - 0.5), math.pi),
+                     ("bookcaseOpenLow", 1.1, (W - 0.45, 0.8), math.pi / 2), ("loungeChairRelax", 1.0, (-W + 1.0, 0.6), -math.pi / 2), ("rugRound", 0.03, (0.8, 1.2), 0)],
+        "bedroom": [("bedDouble", 1.0, (-0.6, D - 1.2), math.pi), ("sideTableDrawers", 0.7, (-2.4, D - 0.4), math.pi), ("pottedPlant", 1.4, (W - 0.8, D - 0.8), 0)],
+        "kitchen": [("kitchenFridge", 1.9, (W - 0.9, D - 0.5), math.pi), ("kitchenCabinet", 0.9, (-1.0, D - 0.45), math.pi), ("kitchenStove", 0.9, (0.2, D - 0.45), math.pi),
+                    ("tableRound", 0.75, (-2.6, 1.2), 0)],
+        "clinic": [("pottedPlant", 1.4, (-W + 0.7, D - 0.7), 0), ("sideTable", 0.7, (W - 0.8, D - 0.5), 0)],
+        "warehouse": [("cardboardBoxClosed", 0.8, (-W + 1.5, D - 1.2), 0.2), ("cardboardBoxClosed", 0.8, (-W + 2.4, D - 1.0), 0.6), ("cardboardBoxOpen", 0.7, (W - 1.6, D - 1.5), 0)],
+        "airport": [("pottedPlant", 1.6, (W - 1.0, D - 1.0), 0), ("pottedPlant", 1.6, (-W + 1.0, D - 1.0), 0)],
+    }.get(preset, [])
+    for nm, h, (x, y), yaw in dress:
+        sets.kenney(KITS, "furniture-kit", nm, h, (x, y, 0), yaw)
+    if preset == "office" and variant == "retro":   # 1966 lab: radar console glowing green
+        sets.box("radar", (3.0, 1.0, 1.0), (W * 0.45, D - 0.6, 0.5), L.toon("radarM", L.hexc("#5a6a5a")), outline=0.01)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.5, depth=0.04, location=(W * 0.45, D - 1.12, 1.6), rotation=(math.pi / 2, 0, 0))
+        bpy.context.object.data.materials.append(L.flat("radarG", (0.05, 1.2, 0.3), 2.0))
+    if preset == "datacenter":
+        rack, led = L.toon("rack", L.hexc("#1d1f26")), L.flat("led", (0.2, 2.5, 1.2) if variant != "red" else (3.0, 0.2, 0.1), 3.0)
+        for x in (-6, -2.2, 2.2, 6):
+            for y in range(-1, int(D) - 1, 2):
+                sets.box(f"rk{x}{y}", (1.1, 1.15, 2.4), (x, y + 0.6, 1.2), rack, outline=0.01)
+                sets.box(f"ld{x}{y}", (0.04, 0.9, 1.9), (x - 0.57, y + 0.6, 1.2), led)
+    lights(True)
+
+
+def outdoors():
+    ground = {"street": "#8a8f98", "shops": "#8a8f98", "suburb": "#7cbf4f", "park": "#6fae4a", "village_square": "#c8b89a", "market": "#c8b89a",
+              "beach": "#e9cf8a", "outback": "#d9884a", "harbour": "#8a8f98", "lake": "#6fae4a", "resort": "#e9cf8a", "bridge": "#6fae4a"}.get(preset, "#7cbf4f")
+    sets.box("ground", (400, 400, 0.1), (0, 0, -0.05), L.toon("ground", L.hexc(ground)))
+    if preset in ("street", "shops", "suburb", "harbour"):
+        sets.box("road", (400, 8, 0.02), (0, -10, 0.005), L.toon("road", L.hexc("#4a4f5a")))
+        y0 = max([-z for z in zs] + [0]) + 4
+        names = ["building-a", "building-c", "building-e", "building-g"] if preset in ("street", "shops", "harbour") else ["building-type-a", "building-type-c", "building-type-f", "building-type-k"]
+        kit = "city-kit-commercial" if preset in ("street", "shops", "harbour") else "city-kit-suburban"
+        for k in range(-5, 6):
+            sets.kenney(KITS, kit, names[(k + 5) % 4], 9 if kit.startswith("city-kit-c") else 5.5, (k * 7.5, y0 + 4, 0), math.pi)
+        for k in range(-4, 5):
+            sets.kenney(KITS, "car-kit", ["sedan", "suv", "taxi", "van"][(k + 4) % 4], 1.5, (k * 9 + 3, -7.5, 0), math.pi / 2)
+    if preset in ("park", "suburb", "village_square", "market", "lake", "bridge"):
+        for k in range(14):
+            a = k * 2.4
+            sets.kenney(KITS, "city-kit-suburban", "tree-large" if k % 2 else "tree-small", 5 + (k % 3), (math.cos(a) * (14 + k), 10 + abs(math.sin(a)) * 18, 0), a)
+    if preset in ("ocean", "beach", "harbour", "island", "resort"):
+        water = L.toon("water", L.hexc("#2f8fd0"))
+        sets.box("sea", (600, 300, 0.1), (0, 160 if preset != "ocean" else 0, 0.02 if preset != "ocean" else 0.0), water)
+    sky = "#22305a" if night else "#f2b07a" if light == "golden" else "#8fc4ec"
+    sets.box("skyB", (900, 1, 400), (0, 300, 100), L.flat("skyM", L.hexc(sky), 1.3), shadow=False)
+    lights(False)
+
+
+if preset in ROOMS:
+    room(*ROOMS[preset])
+else:
+    outdoors()
+
+# ---------------- pieces ----------------
+KMAP = {"sofa": ("furniture-kit", "loungeSofa", 1.0), "tv": ("furniture-kit", "televisionModern", 1.4), "fridge": ("furniture-kit", "kitchenFridge", 1.9),
+        "bed": ("furniture-kit", "bedDouble", 1.0), "desk": ("furniture-kit", "desk", 0.8), "cardbox": ("furniture-kit", "cardboardBoxClosed", 0.7),
+        "plantpot": ("furniture-kit", "pottedPlant", 1.7), "monitor": ("furniture-kit", "computerScreen", 0.6), "car": ("car-kit", "sedan", 1.6),
+        "van": ("car-kit", "van", 2.2), "truck": ("car-kit", "truck", 2.6), "semi": ("car-kit", "truck", 3.2), "boxes": ("furniture-kit", "cardboardBoxClosed", 1.0),
+        "crates": ("furniture-kit", "cardboardBoxClosed", 1.0), "snacks": ("food-kit", "pizza-box", 0.3)}
+PSIZE = {"airplane": (16, 5.3), "board": (1.9, 2.47), "chalkboard": (1.9, 2.47), "calendar": (1.5, 1.5), "cashcounter": (1.2, 2.16), "console": (0.9, 1.5),
+         "rack": (1.1, 2.2), "tubetv": (1.5, 1.5), "brownbox": (1.2, 0.69), "eye": (1.3, 1.3), "hospitalbed": (2.4, 1.84), "vending": (1.25, 2.4)}
+
+
+def airplane(loc, k, yaw):
+    w = L.toon("plane", L.hexc("#f4f4f6"))
+    red, blue = L.toon("planeR", L.hexc("#c8323a")), L.toon("planeB", L.hexc("#3f6fb5"))
+    root = bpy.data.objects.new("airplane", None)
+    bpy.context.collection.objects.link(root)
+    root.location, root.rotation_euler, root.scale = loc, (0, 0, yaw), (k, k, k)
+    parts = []
+    bpy.ops.mesh.primitive_cylinder_add(radius=1.0, depth=12, location=(0, 0, 2.2), rotation=(0, math.pi / 2, 0)); parts.append((bpy.context.object, w))
+    bpy.ops.mesh.primitive_uv_sphere_add(radius=1.0, location=(6, 0, 2.2)); o = bpy.context.object; o.scale = (1.6, 1, 1); parts.append((o, w))
+    bpy.ops.mesh.primitive_cone_add(radius1=1.0, radius2=0.25, depth=3, location=(-7.4, 0, 2.5), rotation=(0, -math.pi / 2, 0)); parts.append((bpy.context.object, w))
+    bpy.ops.mesh.primitive_cube_add(size=1, location=(0.5, 0, 1.9)); o = bpy.context.object; o.scale = (2.4, 14, 0.18); parts.append((o, w))
+    bpy.ops.mesh.primitive_cube_add(size=1, location=(-7.6, 0, 4.0)); o = bpy.context.object; o.scale = (1.6, 0.18, 2.6); parts.append((o, red))
+    bpy.ops.mesh.primitive_cube_add(size=1, location=(-7.4, 0, 2.6)); o = bpy.context.object; o.scale = (1.2, 4.5, 0.12); parts.append((o, w))
+    bpy.ops.mesh.primitive_cube_add(size=1, location=(0, 0, 2.2)); o = bpy.context.object; o.scale = (12, 2.04, 0.18); parts.append((o, blue))
+    for x in range(-5, 6):   # windows: little rounded squares (the Comet's problem)
+        for s in (-1, 1):
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(x * 0.9, s * 1.0, 2.6)); o = bpy.context.object; o.scale = (0.35, 0.06, 0.35)
+            parts.append((o, L.toon("planeWin", L.hexc("#2b3a5a"))))
+    for o, m in parts:
+        o.data.materials.append(m)
+        L.smooth(o)
+        L.ink(o, 0.03)
+        o.parent = root
+
+
+pos0, look0, _, _ = cam_at(S["startFrame"])
+for i, p in enumerate(S.get("pieces") or []):
+    k = p.get("scale") or 1.0
+    loc = B(p["x"], p.get("y", 0) or 0, p["z"])
+    cam_xy = B(*pos0)
+    yaw = math.atan2(cam_xy.x - loc.x, -(cam_xy.y - loc.y))
+    if p["kind"] == "airplane":
+        airplane(loc, k * 0.9, yaw + math.pi / 2)
+    elif p["kind"] in KMAP:
+        kit, nm, h = KMAP[p["kind"]]
+        if p["kind"] in ("car", "van", "truck") and p.get("label") in ("taxi", "police"):
+            nm = p["label"]
+        sets.kenney(KITS, kit, nm, h * k, (loc.x, loc.y, loc.z), yaw + (math.pi / 2 if kit == "car-kit" else 0))
+    else:   # a plain inked block of the piece's size (better a solid prop than a flat card)
+        w, h = PSIZE.get(p["kind"], (1.2, 1.2))
+        sets.box(f"pc{i}", (w * k, 0.5 * k, h * k), (loc.x, loc.y, loc.z + h * k / 2), L.toon(f"pcM{i}", L.hexc("#c9a06a")), outline=0.012)
+
+# ---------------- cast ----------------
+EXPR_MAP = {"grin": "laugh", "laugh": "laugh", "whistle": "neutral", "nervous": "sweat", "relief": "proud", "relief_open": "laugh", "dazed": "crazy",
+            "pained": "sad", "smile": "proud", "smile_closed": "proud", "lick": "smug", "broken": "cry", "confused": "skeptical", "bored": "sleepy",
+            "love": "starry", "evil": "smug", "squint": "skeptical", "stern": "angry", "scared": "scared"}
+KNOWN = {"neutral", "smug", "shock", "laugh", "sweat", "starry", "crazy", "sad", "angry", "wink", "sleepy", "skeptical", "scared", "proud", "cry"}
+ex = lambda e: e if e in KNOWN else EXPR_MAP.get(e, "neutral")
+cast = {c["id"]: c for c in sb["cast"]}
+cam_pos = B(*pos0)
+people = []
+for j, a in enumerate(S["actors"]):
+    c = cast.get(a["castId"], {"outfit": {}})
+    o = c.get("outfit", {})
+    loc = B(a["x"], a.get("y", 0) or 0, a["z"])
+    exprs = sorted({ex(a.get("expr", "neutral"))} | {ex(k["expr"]) for k in a.get("exprKeys") or []})
+    hair = o.get("hair") or o.get("cap") or "#3a2a1e"
+    yaw0 = math.atan2(cam_pos.x - loc.x, -(cam_pos.y - loc.y))   # face the opening lens
+    m = rig.Stickman(f"a{j}", FACES, loc=tuple(loc), yaw=yaw0, jacket=o.get("jacket", "#5a6170"), hair=hair, exprs=exprs, pants=o.get("pants", "#16131a"))
+    if c.get("scale"):
+        m.root.scale = (c["scale"],) * 3
+    people.append((m, a, loc))
+partner = {}
+for j, (m, a, loc) in enumerate(people):   # two-person shots: lean the look 30 % toward the other one
+    if len(people) > 1:
+        o = people[1 - j if j < 2 else 0][2]
+        partner[j] = o
+
+
+def segments(a):
+    """split the scene at expression keys; return [(f0, f1, expr)]"""
+    keys = sorted(a.get("exprKeys") or [], key=lambda k: k["frame"])
+    cuts = [F0] + [max(F0, min(F1, k["frame"])) for k in keys] + [F1 + 1]
+    exprs = [ex(a.get("expr", "neutral"))] + [ex(k["expr"]) for k in keys]
+    return [(cuts[i], cuts[i + 1], exprs[i]) for i in range(len(exprs)) if cuts[i + 1] > cuts[i]]
+
+
+ACTION = {"stand": "stand", "stroll": "walk", "march": "walk", "run": "run", "dance": "cheer", "sit": "sitchair", "chair": "sitchair", "fall": "fall", "jump": "cheer"}
+POSE = {"point": "point", "shrug": "shrug", "hips": "hips", "up": "cheer"}
+for j, (m, a, loc) in enumerate(people):
+    mode = a.get("mode", "stand")
+    act = POSE.get(a.get("pose")) or ("wave" if a.get("wave") else ACTION.get(mode, "stand"))
+    talk = [tuple(t) for t in a.get("talk") or []]
+    look_pt = None
+    if j in partner:
+        p2 = partner[j]
+        look_pt = (cam_pos.x * 0.7 + p2.x * 0.3, cam_pos.y * 0.7 + p2.y * 0.3)
+    if a.get("look") in (-1, 1):
+        side = Vector((1, 0, 0)) if a["look"] > 0 else Vector((-1, 0, 0))
+        look_pt = (loc.x + side.x * 3 + (cam_pos.x - loc.x) * 0.3, loc.y + (cam_pos.y - loc.y) * 0.3)
+    if a.get("walkTo") and a.get("walkFrames"):
+        w0, w1 = a["walkFrames"]
+        dest = B(a["walkTo"][0], 0, a["walkTo"][1])
+        segs = segments(a)
+        e0 = segs[0][2]
+        m.act(F0, max(F0 + 1, w0), "stand", e0, talk=talk, seed=j * 1.7)
+        m.act(max(F0 + 1, w0), max(F0 + 2, w1), "run" if mode == "run" else "walk", e0, walk_to=(dest.x, dest.y), seed=j * 1.7)
+        m.act(max(F0 + 2, w1), F1 + 1, act if act not in ("walk", "run") else "stand", segs[-1][2], talk=talk, seed=j * 1.7, face=(cam_pos.x, cam_pos.y))
+    else:
+        for k, (f0, f1, e) in enumerate(segments(a)):
+            m.act(f0, f1, act if act not in ("walk", "run") else "stand", e, talk=talk, seed=j * 1.7, face=look_pt if k == 0 else None)
+
+# depth of field on the lead's head
+dof = S.get("dof") or {}
+if people and dof.get("cInf", 0) > 0:   # cInf = blur of the background in px at infinity (three.js lens); bigger = shallower
+    cam.dof.use_dof = True
+    cam.dof.focus_object = people[min(dof.get("focusActor", 0), len(people) - 1)][0].head
+    cam.dof.aperture_fstop = max(1.4, 28.0 / dof["cInf"])
+
+L.compositor(sc)
+sc.render.image_settings.file_format = "JPEG"
+sc.render.image_settings.quality = 92
+os.makedirs(os.path.join(OUT, str(IDX)), exist_ok=True)
+sc.render.filepath = os.path.join(OUT, str(IDX), "f_#####")
+bpy.ops.render.render(animation=True)
+print("SCENE_DONE", IDX, F0, F1)

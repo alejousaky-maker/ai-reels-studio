@@ -183,6 +183,7 @@ class Plan(BaseModel):
     creativeHooks: list[str] = Field(default_factory=list)
     brand: Optional[BrandSpec] = None
     cta: Optional[str] = None
+    renderer: Literal["three", "blender"] = "three"   # blender = 3D worlds rendered by Blender (EEVEE), composited by Remotion
     pacing: Literal["pro", "flow"] = "pro"   # flow = RicksClips-style: long travelling shots (~4 s), motion dissolves, hard cuts only on hits
     captions: bool = True   # big word-by-word captions (pro Shorts look); the plan / form can switch them off
     # "full" = the Demo A look (default); "simple" = lighter sets, no lens blur/bloom, at most 2 background extras

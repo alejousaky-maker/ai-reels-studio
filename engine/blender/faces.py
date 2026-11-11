@@ -111,10 +111,19 @@ def _mouth(d, kind: str, cx=512, cy=700, open_=0.0):
 EXPRS = ["neutral", "smug", "shock", "laugh", "sweat", "starry", "crazy", "sad", "angry", "wink", "sleepy", "skeptical", "scared", "proud", "cry"]
 
 
-def face(expr: str, mouth_open: float | None = None) -> Image.Image:
-    """mouth_open None = the expression's own mouth; 0..1 = a talking mouth at that opening"""
+def face(expr: str, mouth_open: float | None = None, blink: bool = False) -> Image.Image:
+    """mouth_open None = the expression's own mouth; 0..1 = a talking mouth at that opening; blink = eyes shut"""
     im = Image.new("RGBA", (S, S), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
+    if blink:
+        global _eye, _spiral, _star, _closed, _chevron
+        saved = (_eye, _spiral, _star, _closed, _chevron)
+        shut = lambda dd, cx, cy, r, *a, **k: dd.arc([cx - r, cy - r * 0.5, cx + r, cy + r * 0.7], 20, 160, fill=INK, width=W + 6)
+        _eye = _spiral = _star = _closed = _chevron = shut
+        try:
+            return face(expr, mouth_open, False)
+        finally:
+            _eye, _spiral, _star, _closed, _chevron = saved
     lx, rx, ey, er = 360, 664, 455, 92
     m = None
     if expr == "neutral":
@@ -158,11 +167,15 @@ def face(expr: str, mouth_open: float | None = None) -> Image.Image:
 
 def main(out: str):
     os.makedirs(out, exist_ok=True)
+    n = 0
     for e in EXPRS:
         face(e).save(os.path.join(out, f"{e}.png"))
+        face(e, blink=True).save(os.path.join(out, f"{e}_blink.png"))
+        n += 2
         for k, o in enumerate((0.15, 0.55, 0.95)):   # three talking mouth shapes per expression (lip flap)
             face(e, o).save(os.path.join(out, f"{e}_talk{k}.png"))
-    print("faces:", len(EXPRS) * 4)
+            n += 1
+    print("faces:", n)
 
 
 if __name__ == "__main__":

@@ -337,7 +337,8 @@ def scene_hashes(sb: dict, scale: float, crf: int) -> list[str]:
     Global part: engine source, env, cast, brand, size, quality. Each scene builds its own world culled only by its own
     cameras, so other scenes' cameras do not matter. Neighbours are included when a crossfade overlaps the scene."""
     glob = json.dumps({"e": engine_hash(), "env": sb["env"], "cast": sb["cast"], "brand": sb.get("brand"), "w": sb["width"], "h": sb["height"],
-                       "fps": sb["fps"], "scale": scale, "crf": crf, "post": sb.get("post"), "cap": sb.get("captions")}, sort_keys=True)
+                       "fps": sb["fps"], "scale": scale, "crf": crf, "post": sb.get("post"), "cap": sb.get("captions"),
+                       "blender": sb.get("blender"), "bstamp": sb.get("blenderStamp")}, sort_keys=True)
     out = []
     S = sb["scenes"]
     for i, s in enumerate(S):
@@ -348,6 +349,60 @@ def scene_hashes(sb: dict, scale: float, crf: int) -> list[str]:
             parts.append(("next", _strip_frames(S[i + 1], S[i + 1]["startFrame"]), s["endFrame"] - s["startFrame"]))
         out.append(hashlib.sha256((glob + json.dumps(parts, sort_keys=True)).encode()).hexdigest()[:16])
     return out
+
+
+BLENDER = os.path.join(ROOT, "tools", "blender", "blender.exe" if os.name == "nt" else "blender")
+BLENDER_Q = {"draft": (40, 8), "standard": (60, 16), "high": (100, 24), "master": (100, 32)}   # quality -> (resolution %, EEVEE samples)
+
+
+def blender_hash() -> str:
+    h = hashlib.sha256()
+    for f in sorted(os.listdir(os.path.join(ROOT, "engine", "blender"))):
+        if f.endswith(".py"):
+            with open(os.path.join(ROOT, "engine", "blender", f), "rb") as fh:
+                h.update(f.encode()); h.update(fh.read())
+    return h.hexdigest()[:12]
+
+
+def step_blender(pid: str, quality: str = "standard", progress: Progress = _noop, cancel=None, register=None) -> dict:
+    """Blender render path: every scene's 3D world (stickmen, set, light, the director's camera) is rendered by Blender
+    into engine/remotion/public/blender/<pid>/<scene>/f_<frame>.jpg (with transition handles); the storyboard then points
+    the compositor at those frames (looks, motion dissolves, captions, HUD stay in the Remotion pass)."""
+    if not os.path.exists(BLENDER):
+        raise RuntimeError("Blender not found: install it into tools/blender (see CLAUDE.md)")
+    sbp = pdir(pid, "storyboard", "storyboard.json")
+    sb = load_json(sbp)
+    res, samples = BLENDER_Q.get(quality, BLENDER_Q["standard"])
+    faces = os.path.join(ROOT, "work", "blender", "faces")
+    if not os.path.exists(os.path.join(faces, "neutral_talk2.png")):
+        from engine.blender import faces as F
+        F.main(faces)
+    out = os.path.join(ENGINE, "public", "blender", pid)
+    bh = blender_hash()
+    t0, done, total = time.time(), 0, sb["durationInFrames"]
+    stamps = []
+    for i, s in enumerate(sb["scenes"]):
+        key = hashlib.sha256(json.dumps({"b": bh, "s": s, "cast": sb["cast"], "env": sb.get("env"), "q": [res, samples], "n": total}, sort_keys=True).encode()).hexdigest()[:16]
+        stamp = os.path.join(out, str(i), "stamp.txt")
+        n = s["endFrame"] - s["startFrame"]
+        if not (os.path.exists(stamp) and open(stamp).read().strip() == key):
+            progress("blender", done / total, f"Blender: scene {s['sceneId']} ({i + 1}/{len(sb['scenes'])})")
+            rc = run_proc([BLENDER, "-b", "--python", os.path.join(ROOT, "engine", "blender", "scene.py"), "--", ROOT, sbp, str(i), out, faces, str(res), str(samples)],
+                          None, cancel, cwd=ROOT, register=register)
+            if cancel and cancel():
+                raise Cancelled()
+            if rc != 0:
+                raise RuntimeError(f"Blender failed on scene {s['sceneId']} (exit {rc})")
+            with open(stamp, "w") as fh:
+                fh.write(key)
+        stamps.append(key)
+        done += n
+    sb["blender"] = f"blender/{pid}"
+    sb["blenderStamp"] = hashlib.sha256("".join(stamps).encode()).hexdigest()[:16]
+    save_json(sbp, sb)
+    info = {"status": "done", "seconds": round(time.time() - t0, 1), "res": res, "samples": samples}
+    update_manifest(pid, step=("blender", info))
+    return info
 
 
 def step_render(pid: str, quality: str = "standard", progress: Progress = _noop, cancel=None, register=None) -> dict:
@@ -483,8 +538,10 @@ def produce(pid: str, plan: Plan, quality: str = "standard", voice: str | None =
         update_manifest(pid, durationNote=note, requestedSeconds=target)
     step_align(pid, plan, progress); chk()
     step_storyboard(pid, plan, progress); chk()
-    if stills:
+    if stills and plan.renderer != "blender":
         step_stills(pid, progress=progress, cancel=cancel, register=register); chk()
+    if plan.renderer == "blender":
+        step_blender(pid, quality, progress, cancel, register); chk()
     rinfo = step_render(pid, quality, progress, cancel, register); chk()
     mrep = step_mix(pid, plan, music, progress=progress); chk()
     out = step_mux(pid, quality)
@@ -506,7 +563,7 @@ if __name__ == "__main__":
         for st in a.only.split(","):
             {"script": lambda: step_script(a.project, plan), "voice": lambda: step_voice(a.project, plan, a.voice, a.speed),
              "align": lambda: step_align(a.project, plan), "storyboard": lambda: step_storyboard(a.project, plan),
-             "stills": lambda: step_stills(a.project), "render": lambda: print(step_render(a.project, a.quality)),
+             "stills": lambda: step_stills(a.project), "blender": lambda: print(step_blender(a.project, a.quality)), "render": lambda: print(step_render(a.project, a.quality)),
              "mix": lambda: print(step_mix(a.project, plan)["measured"]), "mux": lambda: print(step_mux(a.project, a.quality)),
              "qa": lambda: print(json.dumps(step_qa(a.project, pdir(a.project, "output", f"latest_{a.quality}.mp4")), indent=1))}[st]()
     else:

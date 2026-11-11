@@ -4,7 +4,7 @@
 // All pixel-sized parameters are specified at 1080x1920 and scale with the output height.
 import React, { useEffect, useMemo, useState } from "react";
 import * as THREE from "three";
-import { AbsoluteFill, continueRender, delayRender, useCurrentFrame, CalculateMetadataFunction, interpolate, staticFile } from "remotion";
+import { AbsoluteFill, continueRender, delayRender, useCurrentFrame, CalculateMetadataFunction, interpolate, staticFile, Img } from "remotion";
 import { ThreeCanvas } from "@remotion/three";
 import { useThree } from "@react-three/fiber";
 import { EffectComposer } from "@react-three/postprocessing";
@@ -96,7 +96,26 @@ const LOOKS: Record<string, string> = {
   sepia: "sepia(0.82) contrast(1.06) brightness(0.97) saturate(1.1)", bw: "grayscale(1) contrast(1.15) brightness(1.02)",
   cool: "hue-rotate(-8deg) saturate(1.1) brightness(0.98)", warm: "sepia(0.18) saturate(1.2) brightness(1.03)",
 };
+/** Blender render path: the scene's 3D world comes from Blender's frames (public/<sb.blender>/<scene>/f_<frame>.jpg,
+ *  rendered with transition handles); looks, transitions, captions, HUD and audio stay here */
+const BlenderView: React.FC<{ idx: number; sb: Storyboard; alpha: number; transform?: string; filter?: string }> = ({ idx, sb, alpha, transform, filter }) => {
+  const f = useCurrentFrame();
+  const look = sb.scenes[idx]?.look;
+  const fl = [look ? LOOKS[look] : "", filter ?? ""].join(" ").trim();
+  const s = sb.scenes[idx];
+  const fr = Math.max(s.startFrame - 8, Math.min(s.endFrame + 8, f));
+  return (
+    <AbsoluteFill style={{ opacity: alpha, ...(transform ? { transform } : {}), ...(fl ? { filter: fl } : {}) }}>
+      <Img src={staticFile(`${sb.blender}/${idx}/f_${String(fr).padStart(5, "0")}.jpg`)} style={{ width: "100%", height: "100%" }} />
+      {look === "sepia" || look === "bw" ? <AbsoluteFill style={{ boxShadow: `inset 0 0 ${sb.height * 0.12}px rgba(40,24,10,0.65)` }} /> : null}
+    </AbsoluteFill>
+  );
+};
 const SceneView: React.FC<{ idx: number; kit: Kit; sb: Storyboard; alpha: number; dpr?: number; transform?: string; filter?: string }> = ({ idx, kit, sb, alpha, dpr, transform, filter }) => {
+  if (sb.blender) return <BlenderView idx={idx} sb={sb} alpha={alpha} transform={transform} filter={filter} />;
+  return <ThreeView idx={idx} kit={kit} sb={sb} alpha={alpha} dpr={dpr} transform={transform} filter={filter} />;
+};
+const ThreeView: React.FC<{ idx: number; kit: Kit; sb: Storyboard; alpha: number; dpr?: number; transform?: string; filter?: string }> = ({ idx, kit, sb, alpha, dpr, transform, filter }) => {
   const world = useMemo(() => new StoryWorld(kit, sb, idx), [kit, sb, idx]); // one world per scene (own sight-line culling)
   const look = sb.scenes[idx]?.look;
   const fl = [look ? LOOKS[look] : "", filter ?? ""].join(" ").trim();

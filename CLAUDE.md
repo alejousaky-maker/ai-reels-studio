@@ -27,6 +27,16 @@ El usuario habla español: respóndele en español. La narración de los vídeos
   aceptar licencias ni activar servicios externos sin permiso. ElevenLabs es opcional y está apagado.
 - No edites el motor (`engine/remotion/src`) mientras haya un render en marcha: el bundle cambiaría a mitad del trabajo.
 
+## Render con Blender (desde 2026-11-11, decisión del usuario: Blender modela y renderiza todo)
+- Blender 4.5 LTS portátil en `tools/blender` (no está en git; bajar `blender-4.5.16-windows-x64.zip` de blender.org y verificar su sha256).
+- Plan con `renderer: "blender"`: `step_blender` (pipeline.py) renderiza cada escena del storyboard con `engine/blender/scene.py`
+  (personajes `rig.py`, decorados `sets.py`, materiales toon + tinta `look.py`, caras `faces.py`) en
+  `engine/remotion/public/blender/<pid>/<escena>/f_#####.jpg`; Remotion compone encima transiciones, subtítulos, HUD y audio.
+- Personaje (referencia del usuario): cabeza grande blanca más ancha que el torso y asomando por encima, torso píldora estrecho,
+  brazos/piernas muy finos negros, contorno de tinta en todo. La tinta no proyecta sombras (si no, todo queda en sombra).
+- No usar volumen en el mundo (se traga el sol): la bruma va solo dentro de las habitaciones.
+- Producir por CLI: `.venv\Scripts\python.exe -m engine.pipeline <pid> --quality master --only blender,render,mix,mux,qa`.
+
 ## Cómo se trabaja
 - Instalar (primera vez, sin admin): `powershell -ExecutionPolicy Bypass -File install.ps1`. Arrancar: `start.bat`
   (backend FastAPI en 127.0.0.1:8777 + frontend compilado). Tests: `.venv\Scripts\python.exe -m pytest tests -q`.

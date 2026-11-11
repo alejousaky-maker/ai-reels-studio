@@ -118,6 +118,8 @@ export type Storyboard = {
   title: string;
   fps: number; width: number; height: number;
   durationInFrames: number;
+  /** Blender render path: public folder holding <scene>/f_<frame>.jpg (the 3D world rendered by Blender) */
+  blender?: string;
   env: EnvSpec;
   cast: CastMember[];
   scenes: SceneSpec[];
