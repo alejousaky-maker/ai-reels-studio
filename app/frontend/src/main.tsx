@@ -10,10 +10,11 @@ import { Library } from "./views/Library";
 import { Clients } from "./views/Clients";
 import { Settings } from "./views/Settings";
 import { Images } from "./views/Images";
+import { Assets3D } from "./views/Assets3D";
 
 const NAV: [string, string, string][] = [
   ["dashboard", "◧", "Panel"], ["create", "✚", "Crear vídeo / guion"], ["images", "▣", "Imágenes"], ["projects", "▤", "Proyectos"], ["queue", "⧗", "Cola de render"],
-  ["library", "❖", "Biblioteca"], ["clients", "◎", "Clientes / marcas"], ["settings", "⚙", "Ajustes y diagnóstico"],
+  ["library", "❖", "Biblioteca"], ["assets3d", "◆", "3D Asset Library"], ["clients", "◎", "Clientes / marcas"], ["settings", "⚙", "Ajustes y diagnóstico"],
 ];
 
 export const go = (h: string) => { window.location.hash = h; };
@@ -27,7 +28,7 @@ const App: React.FC = () => {
   const h = useHash();
   const [view, arg] = h.split("/");
   const page = view === "create" ? <Create /> : view === "projects" ? <Projects /> : view === "project" ? <Editor pid={arg} key={arg} /> : view === "queue" ? <Queue />
-    : view === "images" ? <Images /> : view === "library" ? <Library /> : view === "clients" ? <Clients /> : view === "settings" ? <Settings /> : <Dashboard />;
+    : view === "images" ? <Images /> : view === "library" ? <Library /> : view === "assets3d" ? <Assets3D /> : view === "clients" ? <Clients /> : view === "settings" ? <Settings /> : <Dashboard />;
   return (
     <div className="app">
       <aside className="side" aria-label="Navegación">

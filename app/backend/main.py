@@ -908,6 +908,10 @@ def adopt_project_folders():
             continue
 
 
+from app.backend import assets3d  # noqa: E402  (3D Asset Library + physics clips; before the SPA catch-all below)
+app.include_router(assets3d.router)
+
+
 @app.on_event("startup")
 def _startup():
     db.migrate()

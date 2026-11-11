@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.12.0 — 2026-11-11 (3D Asset Library: Poly Haven + rigid-body physics)
+- `engine/assets/polyhaven.py`: official Poly Haven API client (own User-Agent, retries), local catalogue (521 models)
+  with offline search, on-demand download with every texture dependency (size + MD5 checked), cache and registry with
+  real-world dimensions, CC0 licence and credit; import by id or `polyhaven.com/a/<id>` link; HDRIs.
+- `engine/blender/physics_rb.py` + `physics_scene.py`: real Blender (Bullet) rigid bodies — gravity, collisions, bounce,
+  friction, spin, damping, impulses, simplified colliders, baked to keyframes; presets FALL_AND_BOUNCE … SLOW_MOTION_IMPACT,
+  animated return to origin, loops, camera follow + end orbit, HDRI lighting; verification on real mesh vertices.
+- `engine/physics.py`: spec or plain text → MP4 (H.264, 9:16 / 16:9, 30/60 fps) + report + credits; `join` for longer cuts.
+- API `/api/assets3d/*` (physics clips run as queue jobs) and the **3D Asset Library** tab. Docs: `docs/ASSETS3D.md`.
+- Hybrid renderer (`plan.renderer = "hybrid"`): Blender sets and props, three.js characters composited on top.
+
 ## 0.11.0 — 2026-11-11 (megaproject docs: transitions, film looks, animated maps, new worlds)
 - Scene transitions: `dissolve` (soft blurred crossfade), `zoom` (punch through the frame with zoom blur), `whip`
   (horizontal swipe with motion blur); whooshes follow them in the mix.

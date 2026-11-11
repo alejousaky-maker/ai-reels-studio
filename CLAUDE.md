@@ -37,6 +37,11 @@ El usuario habla español: respóndele en español. La narración de los vídeos
 - No usar volumen en el mundo (se traga el sol): la bruma va solo dentro de las habitaciones.
 - Producir por CLI: `.venv\Scripts\python.exe -m engine.pipeline <pid> --quality master --only blender,render,mix,mux,qa`.
 
+## 3D Asset Library (Poly Haven + física)
+- Modelos y HDRIs CC0 de Poly Haven bajo demanda (`engine/assets/polyhaven.py`, caché en `models/polyhaven/`, no va a git).
+- Clips de física con cuerpos rígidos de Blender: `python -m engine.physics demo|spec|text|join`; API `/api/assets3d/*`,
+  pestaña "3D Asset Library". Detalles y límites en `docs/ASSETS3D.md`.
+
 ## Cómo se trabaja
 - Instalar (primera vez, sin admin): `powershell -ExecutionPolicy Bypass -File install.ps1`. Arrancar: `start.bat`
   (backend FastAPI en 127.0.0.1:8777 + frontend compilado). Tests: `.venv\Scripts\python.exe -m pytest tests -q`.

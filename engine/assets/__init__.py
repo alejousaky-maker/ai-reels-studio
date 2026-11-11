@@ -1,0 +1,1 @@
+﻿"""Asset libraries (Poly Haven)."""
