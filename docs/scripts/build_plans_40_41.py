@@ -56,7 +56,7 @@ CLAIMS["plan_40_vice_city_fever"] = [
 
 # ---------------------------------------------------------------- 41  The $150 rumour
 PLANS["plan_41_150_dollars"] = dict(
-    title="He Sold Everything for GTA 6", environment="apartment", seed=411,
+    title="He Sold Everything for GTA 6", environment="apartment", seed=411, renderer="hybrid",
     cast=[{"id": "me", "name": "Gamer", "role": "streamer", "palette": "#3a4566"}, {"id": "gf", "name": "Girlfriend", "role": "girlfriend"},
           {"id": "buyer", "name": "Buyer", "role": "officeguy"}],
     beats=[
@@ -70,7 +70,8 @@ PLANS["plan_41_150_dollars"] = dict(
           "bedroom", "two_shot", "day", "whimsical", [C("buyer", "stand", "skeptical"), C("me", "point", "smug")], focus="me",
           pieces=[pc("bed", "behind")], hud="panel", hudText="GTA FUND|$80"),
         B("Then the fridge, with the food still inside. Another sixty.",
-          "kitchen", "medium", "day", "upbeat", [C("me", "point", "proud")], pieces=[pc("fridge", "left")], hud="panel", hudText="GTA FUND|$140"),
+          "kitchen", "medium", "day", "upbeat", [C("me", "point", "proud")],
+          pieces=[pc("fridge", "left"), pc("snacks", "right", count=6, physics="throw", physicsAt="food")], hud="panel", hudText="GTA FUND|$140"),
         B("His girlfriend asks where the couch went. He tells her it's \"on a journey.\"",
           "apartment", "two_shot", "day", "tense", [C("gf", "hips", "angry", talk=True), C("me", "stand", "sweat")], envVariant="empty", focus="gf"),
         B("Then he sells his car. Now he can't drive to the store, but who cares? It's a digital download.",

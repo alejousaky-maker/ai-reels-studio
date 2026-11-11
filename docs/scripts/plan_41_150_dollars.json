@@ -107,6 +107,13 @@
     {
      "kind": "fridge",
      "where": "left"
+    },
+    {
+     "kind": "snacks",
+     "where": "right",
+     "physics": "throw",
+     "physicsAt": "food",
+     "count": 6
     }
    ],
    "hud": "panel",
@@ -238,6 +245,6 @@
    "status": "fiction"
   }
  ],
- "renderer": "blender",
+ "renderer": "hybrid",
  "pacing": "flow"
 }

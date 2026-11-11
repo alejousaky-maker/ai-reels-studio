@@ -230,8 +230,7 @@ def room(W, D, H, floor_c, back_c, side_c):
         "office": [("wall_clock", 0.45, (W * 0.55, D - 0.16, 2.3), 0), ("potted_plant_01", 1.3, (-W + 0.7, D - 0.7, 0), 0),
                    ("potted_plant_01", 1.3, (W - 0.7, D - 0.7, 0), 1.0)],
         "kitchen": [("electric_stove", 0.95, (1.2, D - 0.5, 0), 0), ("vintage_microwave", 0.32, (-1.2, D - 0.45, 0.9), 0),
-                    ("dining_table", 0.76, (-W * 0.45, 0.6, 0), 0.0), ("WoodenChair_01", 0.95, (-W * 0.45 - 1.0, 0.6, 0), -math.pi / 2),
-                    ("tea_set_01", 0.18, (-W * 0.45, 0.6, 0.76), 0.3), ("wall_clock", 0.4, (-0.2, D - 0.16, 2.4), 0)],
+                    ("WoodenChair_01", 0.95, (-W + 0.8, 0.6, 0), -math.pi / 2), ("wall_clock", 0.4, (-0.2, D - 0.16, 2.4), 0)],
         "apartment": [("potted_plant_01", 1.3, (W - 0.8, D - 0.8, 0), 0), ("wall_clock", 0.45, (W * 0.3, D - 0.16, 2.5), 0)],
         "bedroom": [("wooden_bookshelf_worn", 1.9, (W - 0.5, 0.4, 0), -math.pi / 2), ("desk_lamp_arm_01", 0.5, (-2.4, D - 0.4, 0.7), 0.4)],
         "clinic": [("vintage_microscope", 0.4, (W - 0.8, D - 0.5, 0.7), 0.6), ("potted_plant_01", 1.3, (-W + 0.7, D - 0.7, 0), 0),
@@ -455,8 +454,8 @@ def piece3d(i, kind, label, loc, k, yaw):
         if label:
             text3d(label, root, 1.5, 0.18, (0.1, 0.08, 0.1), 1.0, -0.05, 1.6)
     elif kind == "toast":   # a slice of toast: crust, crumb, butter on top
-        parts.append(sets.box(f"tst{i}", (0.13, 0.13, 0.018), (0, 0, 0.009), L.toon("toastM", L.hexc("#c98a3e")), outline=0.003))
-        parts.append(sets.box(f"tsb{i}", (0.1, 0.1, 0.004), (0, 0, 0.02), L.toon("butterM", L.hexc("#ffe28a")), outline=0.0))
+        parts.append(sets.box(f"tst{i}", (0.2, 0.2, 0.026), (0, 0, 0.013), L.toon("toastM", L.hexc("#c98a3e")), outline=0.004))
+        parts.append(sets.box(f"tsb{i}", (0.15, 0.15, 0.006), (0, 0, 0.029), L.toon("butterM", L.hexc("#ffe28a")), outline=0.0))
     elif kind in ("papers", "note"):   # a doctor's note: white sheet, red cross, lines of text
         parts.append(sets.box(f"pap{i}", (0.21, 0.297, 0.004), (0, 0, 0.002), L.toon("paperM", L.hexc("#fbfaf6")), outline=0.002))
         parts.append(sets.box(f"pcx{i}", (0.05, 0.015, 0.002), (-0.06, 0.1, 0.005), L.flat("redX", (0.9, 0.1, 0.1))))
@@ -539,7 +538,7 @@ pos0, look0, _, _ = cam_at(S["startFrame"])
 for i, p in enumerate(S.get("pieces") or []):
     k = p.get("scale") or 1.0
     loc = B(p["x"], p.get("y", 0) or 0, p["z"])
-    if p.get("label") or p["kind"] in ("tv", "monitor", "board", "chalkboard", "corkboard", "calendar", "signs", "screen"):
+    if p.get("label") or p["kind"] in ("tv", "monitor", "board", "chalkboard", "corkboard", "calendar", "signs", "screen", "toast"):
         # readable story props: inside the 9:16 frame, beside (never behind) the lead, as seen by the lens mid-shot
         pm, lm, fovm, _ = cam_at((S["startFrame"] + S["endFrame"]) // 2)
         Pm, Lm = B(*pm), B(*lm)
@@ -551,7 +550,7 @@ for i, p in enumerate(S.get("pieces") or []):
         lat = (loc - Pm).dot(right)
         lead_lat = (lead - Pm).dot(right)
         side_ = 1 if (lat - lead_lat) >= 0 else -1
-        pw_ = {"board": 1.7, "chalkboard": 1.7, "corkboard": 1.7, "blueprint": 1.7, "tv": 2.3, "monitor": 1.4, "calendar": 1.1, "signs": 1.1,
+        pw_ = {"toast": 1.6, "board": 1.7, "chalkboard": 1.7, "corkboard": 1.7, "blueprint": 1.7, "tv": 2.3, "monitor": 1.4, "calendar": 1.1, "signs": 1.1,
                "screen": 4.6}.get(p["kind"], PSIZE.get(p["kind"], (1.2, 1.2))[0])
         if (p.get("scale") or 1.0) > 1.3:   # a deliberately huge prop (the giant TV): keep its size, just keep it beside the lead
             want = lead_lat + side_ * (0.45 + pw_ * k / 2)
@@ -587,6 +586,12 @@ for i, p in enumerate(S.get("pieces") or []):
             return o
         if p["kind"] == "table":
             return sets.polyhaven("dining_table", 0.76 * k, (at.x, at.y, at.z), yaw)
+        if p["kind"] == "toast" and p.get("physics") == "fall" and ci == 0:
+            # the table it slides off: its front edge (toward the lens) right under the toast's starting point
+            fp = p.get("physFrame", S["startFrame"])
+            tw = B(*cam_at(fp)[0]) - B(*cam_at(fp)[1]); tw.z = 0; tw.normalize()
+            tyaw = math.atan2(tw.x, -tw.y) + math.pi / 2
+            sets.polyhaven("dining_table", 0.76, (at.x - tw.x * 0.42, at.y - tw.y * 0.42, 0.0), tyaw)
         return piece3d(i * 50 + ci, p["kind"], p.get("label") if ci == 0 else None, at, k, yaw)
 
     n = int(p.get("count") or 1)

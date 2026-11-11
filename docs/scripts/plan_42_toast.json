@@ -1,0 +1,238 @@
+{
+ "title": "Why Toast Always Lands Butter-Side Down",
+ "environment": "kitchen",
+ "seed": 421,
+ "cast": [
+  {
+   "id": "phys",
+   "name": "Physicist",
+   "role": "retroeng"
+  },
+  {
+   "id": "kid",
+   "name": "Schoolkid",
+   "role": "kid"
+  },
+  {
+   "id": "mate",
+   "name": "Skeptic",
+   "role": "officeguy"
+  }
+ ],
+ "beats": [
+  {
+   "narration": "He got a thousand schoolkids to knock nearly ten thousand slices of buttered toast off tables, on purpose.",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "kid",
+     "action": "cheer",
+     "expr": "laugh"
+    }
+   ],
+   "impactWord": "toast",
+   "environment": "office",
+   "envVariant": "rows",
+   "pieces": [
+    {
+     "kind": "toast",
+     "where": "left",
+     "y": 0.76,
+     "physics": "fall",
+     "physicsAt": "knock",
+     "count": 5
+    }
+   ]
+  },
+  {
+   "narration": "It's 1995, and a British physicist is tired of hearing that toast landing butter-side down is just bad luck.",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "phys",
+     "expr": "skeptical"
+    }
+   ],
+   "environment": "office",
+   "envVariant": "retro",
+   "pieces": [
+    {
+     "kind": "board",
+     "where": "left",
+     "label": "MURPHY'S LAW?"
+    }
+   ]
+  },
+  {
+   "narration": "\"It's fifty-fifty, mate. It's a coin flip.\"",
+   "shot": "close",
+   "characters": [
+    {
+     "id": "mate",
+     "expr": "smug",
+     "talk": true
+    }
+   ],
+   "environment": "office",
+   "envVariant": "retro"
+  },
+  {
+   "narration": "So he watches it in slow motion. The slice slides off the edge of the table, starts tipping, and begins to spin.",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "phys",
+     "action": "point",
+     "expr": "squint"
+    }
+   ],
+   "environment": "kitchen",
+   "pieces": [
+    {
+     "kind": "toast",
+     "where": "left",
+     "y": 0.76,
+     "physics": "fall",
+     "physicsAt": "slides",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "narration": "From a normal table, it only falls for about a third of a second. That's just enough time for half a turn.",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "phys",
+     "expr": "shock"
+    }
+   ],
+   "environment": "kitchen",
+   "pieces": [
+    {
+     "kind": "toast",
+     "where": "left",
+     "y": 0.76,
+     "physics": "fall",
+     "physicsAt": "falls",
+     "count": 2
+    }
+   ],
+   "hud": "panel",
+   "hudText": "FALL TIME|0.4 SECONDS"
+  },
+  {
+   "narration": "Butter side down. Every. Single. Time.",
+   "shot": "close",
+   "mood": "tense",
+   "characters": [
+    {
+     "id": "phys",
+     "expr": "crazy"
+    }
+   ],
+   "impactWord": "Time",
+   "environment": "kitchen",
+   "pieces": [
+    {
+     "kind": "toast",
+     "where": "left",
+     "y": 0.76,
+     "physics": "fall",
+     "physicsAt": "Butter",
+     "count": 3
+    }
+   ]
+  },
+  {
+   "narration": "Years later, schoolkids across Britain drop nearly ten thousand slices to test it, and sixty-two percent land butter-side down.",
+   "shot": "wide",
+   "mood": "upbeat",
+   "characters": [
+    {
+     "id": "kid",
+     "action": "cheer",
+     "expr": "starry"
+    }
+   ],
+   "environment": "office",
+   "envVariant": "rows",
+   "pieces": [
+    {
+     "kind": "toast",
+     "where": "left",
+     "y": 0.76,
+     "physics": "fall",
+     "physicsAt": "drop",
+     "count": 6
+    }
+   ],
+   "hud": "bar",
+   "hudText": "BUTTER-SIDE DOWN|0|62|%"
+  },
+  {
+   "narration": "You see, tables are about as tall as they are because people are about as tall as they are. For a full turn, a table would need to be nearly three meters high.",
+   "mood": "curious",
+   "characters": [
+    {
+     "id": "phys",
+     "action": "point",
+     "expr": "smug"
+    }
+   ],
+   "environment": "office",
+   "envVariant": "retro",
+   "pieces": [
+    {
+     "kind": "board",
+     "where": "left",
+     "label": "FULL TURN =|3 M TABLE"
+    }
+   ]
+  },
+  {
+   "narration": "So the universe doesn't hate your breakfast. You're just exactly the wrong height to",
+   "mood": "warm",
+   "characters": [
+    {
+     "id": "phys",
+     "expr": "wink"
+    }
+   ],
+   "environment": "kitchen",
+   "pieces": [
+    {
+     "kind": "toast",
+     "where": "left",
+     "y": 0.76,
+     "physics": "fall",
+     "physicsAt": "breakfast",
+     "count": 2
+    }
+   ]
+  }
+ ],
+ "verifiedClaims": [
+  {
+   "text": "Robert Matthews (Eur. J. Phys., 1995) showed toast falling from table height turns about half a turn: butter-side down; Ig Nobel 1996.",
+   "status": "verified"
+  },
+  {
+   "text": "A falling time of ~0.39 s from a 0.75 m table.",
+   "status": "verified"
+  },
+  {
+   "text": "The 2001 UK schools experiment: 9,821 drops, ~62 % butter-side down; about a thousand children took part."
+  },
+  {
+   "text": "A full turn would need a table about 3 m high (Matthews).",
+   "status": "verified"
+  },
+  {
+   "text": "The skeptic's line is invented.",
+   "status": "fiction"
+  }
+ ],
+ "renderer": "hybrid",
+ "pacing": "flow"
+}
