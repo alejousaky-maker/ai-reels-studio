@@ -154,7 +154,7 @@ export class StoryWorld {
     R.add(this.hemi, this.sun, this.sun.target);
     const pal = (l: LightName) => [0, 1, 2, 3].map((k) => cloudHD(k, LOOK3[l].cloud));
     this.cloudMaps = { day: pal("day"), golden: pal("golden"), night: pal("night") };
-    const nClouds = lite ? 4 : 9;
+    const nClouds = sb.hybrid ? 0 : lite ? 4 : 9;
     for (let i = 0; i < nClouds; i++) {
       const a = (i / nClouds) * Math.PI * 2 + 0.3, d = 620 + (i % 3) * 60, w = 130 + (i % 4) * 30;
       const m = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map: this.cloudMaps.day[i % 4], color: new THREE.Color(1.1, 1.1, 1.1), transparent: true, depthWrite: false, fog: false }));
@@ -222,7 +222,13 @@ export class StoryWorld {
         } catch { /* keep the neutral floor */ }
         continueRender(handle);
       }, undefined, () => continueRender(handle));
-      this.sky.visible = false; this.sunDisc.visible = false;    } else this.info = buildEnv(R, kit, { ...(scn?.env ?? sb.env), lite }, sightLines(sb, sceneIdx));
+      this.sky.visible = false; this.sunDisc.visible = false;    } else if (sb.hybrid) {
+      // hybrid: the world comes from Blender; here only the cast (+ effects), and a ground that only catches their shadows
+      this.info = { lanterns: [] };
+      this.sky.visible = false; this.sunDisc.visible = false;
+      const catcher = new THREE.Mesh(new THREE.PlaneGeometry(400, 400).rotateX(-Math.PI / 2), new THREE.ShadowMaterial({ opacity: 0.32, color: new THREE.Color("#1d1b22") }));
+      catcher.position.y = 0.002; catcher.receiveShadow = true; catcher.layers.set(NOINK); R.add(catcher);
+    } else this.info = buildEnv(R, kit, { ...(scn?.env ?? sb.env), lite }, sightLines(sb, sceneIdx));
     // interiors: a warm key spot from above-front onto the action (a lit stage, darker corners), like a film set
     const pre = (scn?.env ?? sb.env)?.preset ?? "";
     if (!scn?.backdrop && ["apartment", "bathroom", "office", "hotel", "cabin", "bedroom", "kitchen", "gameroom", "trading", "clinic", "datacenter", "warehouse"].includes(pre)) {
@@ -258,7 +264,7 @@ export class StoryWorld {
       this.props.push({ o, scene: i }); R.add(o);
     }));
     // big painted set pieces of THIS scene (horse, ships, chalkboard, sheep, tents): lit cards sized per piece
-    for (const pc of sb.scenes[sceneIdx]?.pieces ?? []) {
+    for (const pc of sb.hybrid ? [] : sb.scenes[sceneIdx]?.pieces ?? []) {
       const P = PIECES[pc.kind];
       if (!P) { this.pieceActors.push(null as unknown as Actor); this.piece3d.push(null); continue; }
       const k = pc.scale ?? 1;
@@ -335,8 +341,8 @@ export class StoryWorld {
     su.e.value.set(e[1], e[2], e[3], e[4]);
     this.sky.position.copy(cam.position);
     untone(L.fog, this.fog.color); this.fog.near = L.fogNear; this.fog.far = L.fogFar;
-    scene.fog = this.fog; scene.background = null;
-    this.sunDisc.visible = s.light === "golden" && !s.backdrop;
+    scene.fog = this.sb.hybrid ? null : this.fog; scene.background = null;
+    this.sunDisc.visible = s.light === "golden" && !s.backdrop && !this.sb.hybrid;
     if (this.sunDisc.visible) {
       this.sunDisc.position.copy(cam.position).addScaledVector(sunDir, 900);
       this.sunDisc.scale.setScalar(2 * 900 * Math.tan(THREE.MathUtils.degToRad(1.7)));

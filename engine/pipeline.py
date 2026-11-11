@@ -338,7 +338,7 @@ def scene_hashes(sb: dict, scale: float, crf: int) -> list[str]:
     cameras, so other scenes' cameras do not matter. Neighbours are included when a crossfade overlaps the scene."""
     glob = json.dumps({"e": engine_hash(), "env": sb["env"], "cast": sb["cast"], "brand": sb.get("brand"), "w": sb["width"], "h": sb["height"],
                        "fps": sb["fps"], "scale": scale, "crf": crf, "post": sb.get("post"), "cap": sb.get("captions"),
-                       "blender": sb.get("blender"), "bstamp": sb.get("blenderStamp")}, sort_keys=True)
+                       "blender": sb.get("blender"), "bstamp": sb.get("blenderStamp"), "hybrid": sb.get("hybrid")}, sort_keys=True)
     out = []
     S = sb["scenes"]
     for i, s in enumerate(S):
@@ -364,7 +364,7 @@ def blender_hash() -> str:
     return h.hexdigest()[:12]
 
 
-def step_blender(pid: str, quality: str = "standard", progress: Progress = _noop, cancel=None, register=None) -> dict:
+def step_blender(pid: str, quality: str = "standard", progress: Progress = _noop, cancel=None, register=None, hybrid: bool = False) -> dict:
     """Blender render path: every scene's 3D world (stickmen, set, light, the director's camera) is rendered by Blender
     into engine/remotion/public/blender/<pid>/<scene>/f_<frame>.jpg (with transition handles); the storyboard then points
     the compositor at those frames (looks, motion dissolves, captions, HUD stay in the Remotion pass)."""
@@ -372,6 +372,8 @@ def step_blender(pid: str, quality: str = "standard", progress: Progress = _noop
         raise RuntimeError("Blender not found: install it into tools/blender (see CLAUDE.md)")
     sbp = pdir(pid, "storyboard", "storyboard.json")
     sb = load_json(sbp)
+    sb["hybrid"] = bool(hybrid)   # hybrid: Blender renders the world + props only; the three.js layer adds the cast
+    save_json(sbp, sb)
     res, samples = BLENDER_Q.get(quality, BLENDER_Q["standard"])
     faces = os.path.join(ROOT, "work", "blender", "faces")
     if not os.path.exists(os.path.join(faces, "neutral_talk2.png")):
@@ -382,7 +384,7 @@ def step_blender(pid: str, quality: str = "standard", progress: Progress = _noop
     t0, done, total = time.time(), 0, sb["durationInFrames"]
     stamps = []
     for i, s in enumerate(sb["scenes"]):
-        key = hashlib.sha256(json.dumps({"b": bh, "s": s, "cast": sb["cast"], "env": sb.get("env"), "q": [res, samples], "n": total}, sort_keys=True).encode()).hexdigest()[:16]
+        key = hashlib.sha256(json.dumps({"b": bh, "s": s, "cast": sb["cast"], "env": sb.get("env"), "q": [res, samples], "n": total, "h": bool(hybrid)}, sort_keys=True).encode()).hexdigest()[:16]
         stamp = os.path.join(out, str(i), "stamp.txt")
         n = s["endFrame"] - s["startFrame"]
         if not (os.path.exists(stamp) and open(stamp).read().strip() == key):
@@ -538,10 +540,10 @@ def produce(pid: str, plan: Plan, quality: str = "standard", voice: str | None =
         update_manifest(pid, durationNote=note, requestedSeconds=target)
     step_align(pid, plan, progress); chk()
     step_storyboard(pid, plan, progress); chk()
-    if stills and plan.renderer != "blender":
+    if stills and plan.renderer == "three":
         step_stills(pid, progress=progress, cancel=cancel, register=register); chk()
-    if plan.renderer == "blender":
-        step_blender(pid, quality, progress, cancel, register); chk()
+    if plan.renderer in ("blender", "hybrid"):
+        step_blender(pid, quality, progress, cancel, register, hybrid=plan.renderer == "hybrid"); chk()
     rinfo = step_render(pid, quality, progress, cancel, register); chk()
     mrep = step_mix(pid, plan, music, progress=progress); chk()
     out = step_mux(pid, quality)

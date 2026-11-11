@@ -848,6 +848,9 @@ export const PIECES: Record<PieceKind, { dw: number; dh: number; w: number; h: n
   microwave: { dw: 500, dh: 320, w: 0.8, h: 0.5, draw: (p) => { p.poly(rr(20, 20, 480, 300, 20), "#e9ecef", 10); p.poly(rr(50, 50, 340, 270, 10), "#2b2b38", 8); } },
   pinball: { dw: 600, dh: 900, w: 1.3, h: 1.9, draw: (p) => { p.poly(rr(60, 40, 540, 380, 16), "#3f6fb5", 10); p.poly([[60, 420], [540, 380], [540, 640], [60, 640]], "#e2453c", 10); for (const x of [100, 500]) p.stroke([[x, 640], [x, 880]], 22, "#2b2b38"); } },
   spring: { dw: 400, dh: 400, w: 0.5, h: 0.5, draw: (p) => { for (let k = 0; k < 9; k++) p.ell(200, 80 + k * 30, 150, 40, null, 10); } },
+  toast: { dw: 300, dh: 60, w: 0.14, h: 0.02, draw: (p) => { p.poly(rr(10, 10, 290, 50, 12), "#d9a35a", 6); p.poly(rr(30, 10, 270, 22, 6), "#ffe28a", 0); } },
+  papers: { dw: 300, dh: 40, w: 0.3, h: 0.02, draw: (p) => { p.poly(rr(10, 10, 290, 30, 4), "#fbfaf6", 4); } },
+  table: { dw: 800, dh: 340, w: 1.8, h: 0.76, draw: (p) => { p.poly(rr(20, 20, 780, 70, 8), "#a0703e", 8); for (const x of [60, 740]) p.stroke([[x, 70], [x, 330]], 22, "#7a4f2e"); } },
   bubblewrap: { dw: 800, dh: 560, w: 2.0, h: 1.4, draw: (p) => { p.poly(rr(20, 20, 780, 540, 10), "rgba(210,235,255,0.7)", 6); for (let y = 60; y < 520; y += 60) for (let x = 60; x < 760; x += 60) p.ell(x, y, 22, 22, "rgba(255,255,255,0.8)", 4); } },
 };
 export { mix };

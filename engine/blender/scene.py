@@ -225,6 +225,21 @@ def room(W, D, H, floor_c, back_c, side_c):
                 sets.kenney(KITS, "furniture-kit", "desk", 0.76, (x, y, 0), math.pi)
                 sets.kenney(KITS, "furniture-kit", "computerScreen", 0.42, (x, y + 0.15, 0.76), math.pi)
                 sets.kenney(KITS, "furniture-kit", "chairDesk", 0.95, (x, y - 0.75, 0), 0.25 * ((c_ + r_) % 3 - 1))
+    # CC0 Poly Haven props (photographed textures under our toon shading + ink) dress every room type
+    ph = {
+        "office": [("wall_clock", 0.45, (W * 0.55, D - 0.16, 2.3), 0), ("potted_plant_01", 1.3, (-W + 0.7, D - 0.7, 0), 0),
+                   ("potted_plant_01", 1.3, (W - 0.7, D - 0.7, 0), 1.0)],
+        "kitchen": [("electric_stove", 0.95, (1.2, D - 0.5, 0), 0), ("vintage_microwave", 0.32, (-1.2, D - 0.45, 0.9), 0),
+                    ("dining_table", 0.76, (-W * 0.45, 0.6, 0), 0.0), ("WoodenChair_01", 0.95, (-W * 0.45 - 1.0, 0.6, 0), -math.pi / 2),
+                    ("tea_set_01", 0.18, (-W * 0.45, 0.6, 0.76), 0.3), ("wall_clock", 0.4, (-0.2, D - 0.16, 2.4), 0)],
+        "apartment": [("potted_plant_01", 1.3, (W - 0.8, D - 0.8, 0), 0), ("wall_clock", 0.45, (W * 0.3, D - 0.16, 2.5), 0)],
+        "bedroom": [("wooden_bookshelf_worn", 1.9, (W - 0.5, 0.4, 0), -math.pi / 2), ("desk_lamp_arm_01", 0.5, (-2.4, D - 0.4, 0.7), 0.4)],
+        "clinic": [("vintage_microscope", 0.4, (W - 0.8, D - 0.5, 0.7), 0.6), ("potted_plant_01", 1.3, (-W + 0.7, D - 0.7, 0), 0),
+                   ("wall_clock", 0.4, (0.0, D - 0.16, 2.5), 0)],
+    }.get(preset, [])
+    if variant != "empty":
+        for nm, h, (x, y, z), yaw in ph:
+            sets.polyhaven(nm, h, (x, y, z), yaw)
     for nm, h, (x, y), yaw in dress:
         sets.kenney(KITS, "furniture-kit", nm, h, (x, y, 0), yaw)
     if preset == "office" and variant == "retro":   # 1966 lab: radar console glowing green
@@ -439,6 +454,15 @@ def piece3d(i, kind, label, loc, k, yaw):
                 b = bpy.context.object; b.scale = (1, 0.5, 1); b.data.materials.append(bub); parts.append(b)
         if label:
             text3d(label, root, 1.5, 0.18, (0.1, 0.08, 0.1), 1.0, -0.05, 1.6)
+    elif kind == "toast":   # a slice of toast: crust, crumb, butter on top
+        parts.append(sets.box(f"tst{i}", (0.13, 0.13, 0.018), (0, 0, 0.009), L.toon("toastM", L.hexc("#c98a3e")), outline=0.003))
+        parts.append(sets.box(f"tsb{i}", (0.1, 0.1, 0.004), (0, 0, 0.02), L.toon("butterM", L.hexc("#ffe28a")), outline=0.0))
+    elif kind in ("papers", "note"):   # a doctor's note: white sheet, red cross, lines of text
+        parts.append(sets.box(f"pap{i}", (0.21, 0.297, 0.004), (0, 0, 0.002), L.toon("paperM", L.hexc("#fbfaf6")), outline=0.002))
+        parts.append(sets.box(f"pcx{i}", (0.05, 0.015, 0.002), (-0.06, 0.1, 0.005), L.flat("redX", (0.9, 0.1, 0.1))))
+        parts.append(sets.box(f"pcy{i}", (0.015, 0.05, 0.002), (-0.06, 0.1, 0.005), L.flat("redX", (0.9, 0.1, 0.1))))
+        for r_ in range(5):
+            parts.append(sets.box(f"pl{i}{r_}", (0.15, 0.006, 0.002), (0.01, 0.04 - r_ * 0.035, 0.005), L.flat("inkL", (0.15, 0.15, 0.2))))
     elif kind == "console":
         parts.append(sets.box(f"cn{i}", (0.42, 0.95, 1.25), (0, 0, 0.66), L.toon(f"cnW{i}", L.hexc("#f2f2f5")), outline=0.01))
         parts.append(sets.box(f"cnB{i}", (0.18, 0.96, 1.2), (0, 0, 0.66), dark))
@@ -451,6 +475,64 @@ def piece3d(i, kind, label, loc, k, yaw):
         p.parent = root
         p.location = p.location   # boxes were created at local coords: parenting keeps them relative to the root
     return root
+
+
+def physics(o, kind, mode, at, f0, ci, n, k):
+    """real motion, integrated frame by frame (g = 9.81 m/s2): 'fall' = slides off a table edge and tumbles (toast: about half
+    a turn from table height, lands butter-side down), 'drop' = falls from above and settles (paper flutters), 'throw' =
+    a ballistic arc with spin, 'topple' = a stack tips over. Bounces with restitution, friction on landing, then rests."""
+    import random
+    rnd = random.Random(hash((kind, ci, f0)) & 0xFFFF)
+    g, dt = 9.81, 1.0 / FPS
+    Pm, Lm = B(*cam_at(f0)[0]), B(*cam_at(f0)[1])
+    toward = (Pm - Lm); toward.z = 0; toward.normalize()
+    side = Vector((toward.y, -toward.x, 0))
+    paper = kind in ("papers", "note")
+    thin = 0.01 if paper else 0.02 * k if kind == "toast" else 0.12 * k
+    start = Vector(at)
+    floor = 0.0
+    if mode == "drop":
+        floor = at.z                                   # lands on the surface it was placed on (desk, counter, floor)
+        start = at + side * rnd.uniform(-0.45, 0.45) + toward * rnd.uniform(-0.25, 0.25) + Vector((0, 0, 2.4 + 0.5 * ci))
+        vel, w = Vector((0, 0, 0)), Vector((rnd.uniform(-3, 3), rnd.uniform(-3, 3), rnd.uniform(-2, 2)))
+    elif mode == "fall":
+        start = at + side * ((ci - (n - 1) / 2) * 0.32)
+        vel, w = toward * 0.55, side * (math.pi / 0.42)  # half a turn while it drops ~0.76 m (0.39 s)
+        floor = 0.0
+    elif mode == "throw":
+        vel, w = side * rnd.uniform(2.4, 3.2) + toward * 0.8 + Vector((0, 0, 2.6)), Vector((rnd.uniform(-8, 8), rnd.uniform(-8, 8), rnd.uniform(-4, 4)))
+    else:   # topple: a stack; each box tips sideways and falls to the floor, upper ones further
+        start = at + Vector((0, 0, ci * 0.13 * k))
+        vel, w = side * (0.6 + 0.35 * ci) + toward * rnd.uniform(-0.2, 0.2), toward * (2.0 + ci * 0.6)
+    base = o.location - Vector(at)            # importers put the model's base offset into the root location: keep it
+    pos, rot = start.copy(), Vector((0.0, 0.0, o.rotation_euler.z))
+    o.rotation_mode = "XYZ"
+    t0 = f0 + (ci * 3 if mode in ("fall", "topple") else ci * 2)
+    resting = False
+    for f in range(F0, F1 + 1):
+        if f >= t0 and not resting:
+            if paper and mode == "drop":   # paper: low terminal speed, side-to-side flutter
+                vel.z = max(vel.z - g * dt, -1.3)
+                vel.x, vel.y = 0.9 * math.sin((f - t0) * 0.35 + ci), 0.6 * math.cos((f - t0) * 0.29 + ci)
+                w = Vector((2.2 * math.sin((f - t0) * 0.3 + ci), 1.8 * math.cos((f - t0) * 0.27), 0.8))
+            else:
+                vel.z -= g * dt
+            pos += vel * dt
+            rot += w * dt
+            if pos.z - thin / 2 <= floor:   # contact
+                pos.z = floor + thin / 2
+                if abs(vel.z) > 0.6 and not paper:
+                    vel.z = -vel.z * 0.3          # bounce
+                    vel.x *= 0.5; vel.y *= 0.5; w *= 0.4
+                else:
+                    resting = True
+                    # settle flat on the nearest face (toast keeps the side it landed on)
+                    rot.x = round(rot.x / math.pi) * math.pi
+                    rot.y = round(rot.y / math.pi) * math.pi
+        o.location = pos
+        o.rotation_euler = (rot.x, rot.y, rot.z)
+        o.keyframe_insert("location", frame=f)
+        o.keyframe_insert("rotation_euler", frame=f)
 
 
 pos0, look0, _, _ = cam_at(S["startFrame"])
@@ -490,18 +572,32 @@ for i, p in enumerate(S.get("pieces") or []):
             k = 0.47 / 0.7
     cam_xy = B(*pos0)
     yaw = math.atan2(cam_xy.x - loc.x, -(cam_xy.y - loc.y))
-    if p["kind"] == "airplane":
-        airplane(loc, k * 0.9, yaw + math.pi / 2)
-    elif p["kind"] in KMAP:
-        kit, nm, h = KMAP[p["kind"]]
-        if p["kind"] in ("car", "van", "truck") and p.get("label") in ("taxi", "police"):
-            nm = p["label"]
-        sets.kenney(KITS, kit, nm, h * k, (loc.x, loc.y, loc.z), yaw + (math.pi / 2 if kit == "car-kit" else 0))
-        if p.get("label") and p["label"] not in ("taxi", "police"):   # a hand-written sign on it ("SOLD", prices...)
-            sg = piece3d(i + 100, "signs", p["label"], loc + Vector((0, 0, 0)), 0.8, yaw)
-            sg.location.z = h * k * 0.55
-    else:
-        piece3d(i, p["kind"], p.get("label"), loc, k, yaw)
+
+    def make(at, ci):
+        if p["kind"] == "airplane":
+            return airplane(at, k * 0.9, yaw + math.pi / 2)
+        if p["kind"] in KMAP:
+            kit, nm, h = KMAP[p["kind"]]
+            if p["kind"] in ("car", "van", "truck") and p.get("label") in ("taxi", "police"):
+                nm = p["label"]
+            o = sets.kenney(KITS, kit, nm, h * k, (at.x, at.y, at.z), yaw + (math.pi / 2 if kit == "car-kit" else 0))
+            if p.get("label") and p["label"] not in ("taxi", "police") and ci == 0:   # a hand-written sign on it ("SOLD", prices...)
+                sg = piece3d(i + 100, "signs", p["label"], at + Vector((0, 0, 0)), 0.8, yaw)
+                sg.location.z = h * k * 0.55
+            return o
+        if p["kind"] == "table":
+            return sets.polyhaven("dining_table", 0.76 * k, (at.x, at.y, at.z), yaw)
+        return piece3d(i * 50 + ci, p["kind"], p.get("label") if ci == 0 else None, at, k, yaw)
+
+    n = int(p.get("count") or 1)
+    for ci in range(n):
+        if n > 1 and not p.get("physics"):   # a group: side by side along the lens' right axis
+            at = loc + Vector((math.cos(yaw), math.sin(yaw), 0)) * ((ci - (n - 1) / 2) * 0.35)
+        else:
+            at = loc.copy()
+        o = make(at, ci)
+        if o is not None and p.get("physics"):
+            physics(o, p["kind"], p["physics"], at, p.get("physFrame", S["startFrame"] + 8), ci, n, k)
 
 # ---------------- cast ----------------
 EXPR_MAP = {"grin": "laugh", "laugh": "laugh", "whistle": "neutral", "nervous": "sweat", "relief": "proud", "relief_open": "laugh", "dazed": "crazy",
@@ -512,7 +608,8 @@ ex = lambda e: e if e in KNOWN else EXPR_MAP.get(e, "neutral")
 cast = {c["id"]: c for c in sb["cast"]}
 cam_pos = B(*pos0)
 people = []
-for j, a in enumerate(S["actors"]):
+HYBRID = bool(sb.get("hybrid"))   # characters come from the three.js layer: Blender renders the world and the props only
+for j, a in enumerate([] if HYBRID else S["actors"]):
     c = cast.get(a["castId"], {"outfit": {}})
     o = c.get("outfit", {})
     loc = B(a["x"], a.get("y", 0) or 0, a["z"])
@@ -567,6 +664,11 @@ for j, (m, a, loc) in enumerate(people):
 
 # depth of field on the lead's head
 dof = S.get("dof") or {}
+if HYBRID and S["actors"] and dof.get("cInf", 0) > 0:   # focus where the lead's head will be composited
+    fa = S["actors"][min(dof.get("focusActor", 0), len(S["actors"]) - 1)]
+    tgt = bpy.data.objects.new("focusPt", None); bpy.context.collection.objects.link(tgt)
+    tgt.location = B(fa["x"], 1.55 + (fa.get("y", 0) or 0), fa["z"])
+    cam.dof.use_dof = True; cam.dof.focus_object = tgt; cam.dof.aperture_fstop = max(1.4, 28.0 / dof["cInf"])
 if people and dof.get("cInf", 0) > 0:   # cInf = blur of the background in px at infinity (three.js lens); bigger = shallower
     cam.dof.use_dof = True
     cam.dof.focus_object = people[min(dof.get("focusActor", 0), len(people) - 1)][0].head

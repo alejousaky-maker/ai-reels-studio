@@ -61,6 +61,49 @@ def kenney(kits, kit, name, h, loc, yaw=0.0):
     return root
 
 
+PH_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "models", "polyhaven")
+
+
+def polyhaven(name, h, loc, yaw=0.0, ink=0.008):
+    """import a CC0 Poly Haven model (glTF 1k), fit its height, keep its painted albedo texture under our toon shading + ink.
+    Returns the root empty (None when the model is missing: run python -m engine.blender.get_polyhaven <id>)."""
+    path = os.path.join(PH_DIR, name, f"{name}_1k.gltf")
+    if not os.path.exists(path):
+        return None
+    before = set(bpy.data.objects)
+    bpy.ops.import_scene.gltf(filepath=path)
+    new = [o for o in bpy.data.objects if o not in before]
+    meshes = [o for o in new if o.type == "MESH"]
+    if not meshes:
+        return None
+    bpy.context.view_layer.update()
+    zs = [(o.matrix_world @ Vector(c)).z for o in meshes for c in o.bound_box]
+    mn, mx = min(zs), max(zs)
+    s = h / max(0.01, mx - mn)
+    root = bpy.data.objects.new("ph_" + name, None)
+    bpy.context.collection.objects.link(root)
+    for o in new:
+        if o.parent is None:
+            o.parent = root
+    for o in meshes:
+        for i, ms in enumerate(o.data.materials):
+            col, img = (0.8, 0.8, 0.8), None
+            if ms and ms.use_nodes:
+                b = next((n for n in ms.node_tree.nodes if n.type == "BSDF_PRINCIPLED"), None)
+                if b:
+                    col = tuple(b.inputs["Base Color"].default_value[:3])
+                    lk = b.inputs["Base Color"].links
+                    if lk and lk[0].from_node.type == "TEX_IMAGE" and lk[0].from_node.image:
+                        img = lk[0].from_node.image
+            o.data.materials[i] = L.toon(f"ph_{name}_{i}", col, image=img)
+        if ink:
+            L.ink(o, ink / s)
+    root.scale = (s, s, s)
+    root.location = (loc[0], loc[1], loc[2] - mn * s)
+    root.rotation_euler = (0, 0, yaw)
+    return root
+
+
 def living_room(kits, night=False):
     wood = L.toon("floor", L.hexc("#b07a4a"))
     wall_b, wall_s = L.toon("wallB", L.hexc("#e4d6c0")), L.toon("wallS", L.hexc("#7fa3a0"))

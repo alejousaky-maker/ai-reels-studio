@@ -550,6 +550,12 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                 mvx, mvz = {"left": (-rx, -rz), "right": (rx, rz), "toward": (-ux, -uz), "away": (ux, uz)}[pc.move]
                 spec["moveTo"] = [round(px + mvx * dist, 3), round(pz + mvz * dist, 3)]
                 spec["moveFrames"] = [a + int(0.1 * (b - a)), a + int(0.9 * (b - a))]
+            wf = word_frame(ws, pc.physicsAt, fps) if (pc.physics and pc.physicsAt) else None
+            if pc.physics and (wf is not None or not pc.physicsAt):   # the event plays in the shot whose words contain it, once
+                spec["physics"] = pc.physics
+                spec["physFrame"] = wf if wf is not None else a + 8
+                if pc.count:
+                    spec["count"] = pc.count
             pcs.append(spec)
         if pcs:
             scene["pieces"] = pcs

@@ -88,7 +88,8 @@ const Inner: React.FC<{ idx: number; world: StoryWorld; sb: Storyboard }> = ({ i
   if (tag._light !== s.light) { fx.grade.set(GRADES3[s.light]); tag._light = s.light; }
   // keyed by scene: R3F does not swap a <primitive> whose `object` prop changes, so after a crossfade the base canvas
   // kept rendering the PREVIOUS scene's world (found by QA on the lighthouse master: b05/b12 showed the wrong place)
-  return (<><primitive key={`world-${idx}`} object={world.root} dispose={null} />{post}</>);
+  // hybrid: plain render (no composer) so the canvas stays transparent around the cast; Blender's frame shows through
+  return (<><primitive key={`world-${idx}`} object={world.root} dispose={null} />{sb.hybrid ? null : post}</>);
 };
 
 /** film looks per scene (the past in sepia, black-and-white archive, cool / warm grades) */
@@ -112,6 +113,11 @@ const BlenderView: React.FC<{ idx: number; sb: Storyboard; alpha: number; transf
   );
 };
 const SceneView: React.FC<{ idx: number; kit: Kit; sb: Storyboard; alpha: number; dpr?: number; transform?: string; filter?: string }> = ({ idx, kit, sb, alpha, dpr, transform, filter }) => {
+  if (sb.blender && sb.hybrid) return (
+    <AbsoluteFill style={{ opacity: alpha, ...(transform ? { transform } : {}), ...(filter ? { filter } : {}) }}>
+      <BlenderView idx={idx} sb={sb} alpha={1} />
+      <ThreeView idx={idx} kit={kit} sb={sb} alpha={1} dpr={dpr} />
+    </AbsoluteFill>);
   if (sb.blender) return <BlenderView idx={idx} sb={sb} alpha={alpha} transform={transform} filter={filter} />;
   return <ThreeView idx={idx} kit={kit} sb={sb} alpha={alpha} dpr={dpr} transform={transform} filter={filter} />;
 };
@@ -122,7 +128,8 @@ const ThreeView: React.FC<{ idx: number; kit: Kit; sb: Storyboard; alpha: number
   return (
     <AbsoluteFill style={{ opacity: alpha, ...(transform ? { transform } : {}), ...(fl ? { filter: fl } : {}) }}>
       <ThreeCanvas width={sb.width} height={sb.height} {...(dpr ? { dpr } : {})} shadows
-        gl={{ antialias: false, stencil: false, powerPreference: "high-performance", toneMappingExposure: 1.0 }}
+        gl={{ antialias: !!sb.hybrid, alpha: !!sb.hybrid, stencil: false, powerPreference: "high-performance", toneMappingExposure: 1.0,
+          ...(sb.hybrid ? { toneMapping: THREE.NeutralToneMapping } : {}) }}
         camera={{ fov: 40, near: 0.2, far: 1500 }}>
         <Inner idx={idx} world={world} sb={sb} />
       </ThreeCanvas>

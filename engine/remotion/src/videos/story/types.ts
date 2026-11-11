@@ -55,7 +55,7 @@ export type PieceKind = "horse" | "ship" | "galley" | "chalkboard" | "sheep" | "
   | "cryo" | "redarrow" | "console" | "sofa" | "fridge" | "bed" | "doghouse" | "tv" | "calendar" | "hospitalbed" | "heartmonitor"
   | "pole" | "monitor" | "cardbox" | "desk" | "rack" | "signs" | "ticker"
   | "semi" | "forklift" | "fruitpile" | "containership" | "tugboat" | "steamshovel" | "mosquito" | "mixer" | "airplane" | "excavator"
-  | "rockpile" | "tetrapods" | "departures" | "escalator" | "pipes" | "cashcounter" | "blueprint" | "subwaymap" | "ribbon" | "oldcar" | "partybus" | "plantpot" | "corkboard" | "vending" | "greenarrow" | "glasscase" | "eye" | "laserarm" | "tubetv" | "brownbox" | "wallet" | "microwave" | "pinball" | "spring" | "bubblewrap";
+  | "rockpile" | "tetrapods" | "departures" | "escalator" | "pipes" | "cashcounter" | "blueprint" | "subwaymap" | "ribbon" | "oldcar" | "partybus" | "plantpot" | "corkboard" | "vending" | "greenarrow" | "glasscase" | "eye" | "laserarm" | "tubetv" | "brownbox" | "wallet" | "microwave" | "pinball" | "spring" | "bubblewrap" | "toast" | "table" | "papers";
 export type PieceSpec = { kind: PieceKind; x: number; z: number; y?: number; scale?: number; mirror?: boolean;
   /** rise to this height across moveFrames (a console blasting off) */
   liftTo?: number;
@@ -120,6 +120,8 @@ export type Storyboard = {
   durationInFrames: number;
   /** Blender render path: public folder holding <scene>/f_<frame>.jpg (the 3D world rendered by Blender) */
   blender?: string;
+  /** hybrid: Blender renders the world + props, three.js composites the cast on top (transparent layer) */
+  hybrid?: boolean;
   env: EnvSpec;
   cast: CastMember[];
   scenes: SceneSpec[];

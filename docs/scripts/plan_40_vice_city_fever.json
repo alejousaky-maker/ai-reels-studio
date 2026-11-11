@@ -75,7 +75,10 @@
    "pieces": [
     {
      "kind": "snacks",
-     "where": "right"
+     "where": "right",
+     "physics": "topple",
+     "physicsAt": "pizza",
+     "count": 5
     }
    ]
   },
@@ -165,6 +168,13 @@
      "kind": "monitor",
      "where": "left",
      "label": "DIAGNOSIS:|VICE CITY FEVER"
+    },
+    {
+     "kind": "papers",
+     "where": "on",
+     "physics": "drop",
+     "physicsAt": "note",
+     "count": 16
     }
    ]
   },
@@ -248,6 +258,6 @@
    "status": "fiction"
   }
  ],
- "renderer": "blender",
+ "renderer": "hybrid",
  "pacing": "flow"
 }

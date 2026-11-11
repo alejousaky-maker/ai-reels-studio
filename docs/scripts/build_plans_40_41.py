@@ -17,7 +17,7 @@ PLANS, CLAIMS = {}, {}
 
 # ---------------------------------------------------------------- 40  Vice City Fever
 PLANS["plan_40_vice_city_fever"] = dict(
-    title="The Vice City Fever Pandemic", environment="office", seed=401,
+    title="The Vice City Fever Pandemic", environment="office", seed=401, renderer="hybrid",
     cast=[{"id": "me", "name": "Gamer", "role": "streamer"}, {"id": "boss", "name": "Boss", "role": "boss"},
           {"id": "room", "name": "Roommate", "role": "capgamer"}, {"id": "doc", "name": "Doctor", "role": "doctor"}],
     beats=[
@@ -26,7 +26,8 @@ PLANS["plan_40_vice_city_fever"] = dict(
         B("It starts with one guy. He calls his boss, coughs twice into the phone, and whispers, \"I think it's contagious.\"",
           "bedroom", "close", "day", "whimsical", [C("me", "stand", "sad", "phone", talk=True)], fx=[fx("puff", "coughs", "me")]),
         B("Then his roommate calls in sick. Then his cousin. Then the entire night shift of a pizza place.",
-          "kitchen", "medium", "day", "upbeat", [C("room", "stand", "sweat", "phone", talk=True)], pieces=[pc("snacks", "right")]),
+          "kitchen", "medium", "day", "upbeat", [C("room", "stand", "sweat", "phone", talk=True)],
+          pieces=[pc("snacks", "right", count=5, physics="topple", physicsAt="pizza")]),
         B("By nine, the office is a ghost town: a hundred empty desks, and one boss standing in the middle of it, holding a phone that will not stop ringing.",
           "office", "wide", "day", "tense", [C("boss", "stand", "shock", "phone")], envVariant="rows", camMove="crane_up"),
         B("Every excuse is worse than the last. One guy's grandma is sick again, for the fourth time this year.",
@@ -37,7 +38,8 @@ PLANS["plan_40_vice_city_fever"] = dict(
         B("So the boss does the smart thing. No doctor's note, no paycheck.",
           "office", "medium", "day", "tense", [C("boss", "point", "angry", "phone", talk=True)], envVariant="rows", impactWord="paycheck"),
         B("By noon, his inbox has a doctor's note from every single one of them, all signed by the same doctor, all with the same diagnosis.",
-          "office", "medium", "day", "curious", [C("boss", "stand", "shock")], envVariant="rows", pieces=[pc("monitor", "left", label="DIAGNOSIS:|VICE CITY FEVER")]),
+          "office", "medium", "day", "curious", [C("boss", "stand", "shock")], envVariant="rows",
+          pieces=[pc("monitor", "left", label="DIAGNOSIS:|VICE CITY FEVER"), pc("papers", "on", count=16, physics="drop", physicsAt="note")]),
         B("You see, this already happens. After the Super Bowl, surveys estimate millions of workers plan to skip Monday, and the most popular excuse is a stomach bug.",
           "office", "medium", "day", "curious", [C("boss", "stand", "squint")], envVariant="rows", pieces=[pc("board", "right", label="SUPER BOWL MONDAY|MILLIONS 'SICK'")]),
         B("So the boss drives to the clinic to confront the doctor himself.",

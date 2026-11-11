@@ -32,7 +32,7 @@ PieceKind = Literal["horse", "ship", "galley", "chalkboard", "sheep", "tent", "s
                     "cryo", "redarrow", "console", "sofa", "fridge", "bed", "doghouse", "tv", "calendar", "hospitalbed", "heartmonitor",
                     "pole", "monitor", "cardbox", "desk", "rack", "signs", "ticker",
                     "semi", "forklift", "fruitpile", "containership", "tugboat", "steamshovel", "mosquito", "mixer", "airplane", "excavator",
-                    "rockpile", "tetrapods", "departures", "escalator", "pipes", "cashcounter", "blueprint", "subwaymap", "ribbon", "oldcar", "partybus", "plantpot", "corkboard", "vending", "greenarrow", "glasscase", "eye", "laserarm", "tubetv", "brownbox", "wallet", "microwave", "pinball", "spring", "bubblewrap"]
+                    "rockpile", "tetrapods", "departures", "escalator", "pipes", "cashcounter", "blueprint", "subwaymap", "ribbon", "oldcar", "partybus", "plantpot", "corkboard", "vending", "greenarrow", "glasscase", "eye", "laserarm", "tubetv", "brownbox", "wallet", "microwave", "pinball", "spring", "bubblewrap", "toast", "table", "papers"]
 
 
 class Piece(BaseModel):
@@ -48,6 +48,9 @@ class Piece(BaseModel):
     label: Optional[str] = Field(None, max_length=40)
     spin: Optional[float] = None   # rad/s, rolling pieces (tumbleweed)
     lift: Optional[float] = None   # rise to this height across the shot (blast-off)
+    physics: Optional[Literal["fall", "throw", "drop", "topple"]] = None   # real motion: slides off a table and tumbles / is thrown / dropped / tips over
+    physicsAt: Optional[str] = None   # the narration word that starts it
+    count: Optional[int] = Field(None, ge=1, le=24)   # several copies (a pile of toast, coins...)
     shake: Optional[float] = Field(None, ge=0, le=2)   # violent vibration   # text on a board / booth / crates; screen picture "photos" | "hallway"
 
 
@@ -183,7 +186,7 @@ class Plan(BaseModel):
     creativeHooks: list[str] = Field(default_factory=list)
     brand: Optional[BrandSpec] = None
     cta: Optional[str] = None
-    renderer: Literal["three", "blender"] = "three"   # blender = 3D worlds rendered by Blender (EEVEE), composited by Remotion
+    renderer: Literal["three", "blender", "hybrid"] = "three"   # hybrid: world + objects from Blender, characters from three.js   # blender = 3D worlds rendered by Blender (EEVEE), composited by Remotion
     pacing: Literal["pro", "flow"] = "pro"   # flow = RicksClips-style: long travelling shots (~4 s), motion dissolves, hard cuts only on hits
     captions: bool = True   # big word-by-word captions (pro Shorts look); the plan / form can switch them off
     # "full" = the Demo A look (default); "simple" = lighter sets, no lens blur/bloom, at most 2 background extras
