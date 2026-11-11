@@ -457,6 +457,29 @@ pos0, look0, _, _ = cam_at(S["startFrame"])
 for i, p in enumerate(S.get("pieces") or []):
     k = p.get("scale") or 1.0
     loc = B(p["x"], p.get("y", 0) or 0, p["z"])
+    if p.get("label") or p["kind"] in ("tv", "monitor", "board", "chalkboard", "corkboard", "calendar", "signs", "screen"):
+        # readable story props: inside the 9:16 frame, beside (never behind) the lead, as seen by the lens mid-shot
+        pm, lm, fovm, _ = cam_at((S["startFrame"] + S["endFrame"]) // 2)
+        Pm, Lm = B(*pm), B(*lm)
+        fwd = Lm - Pm; fwd.z = 0; fwd.normalize()
+        right = Vector((fwd.y, -fwd.x, 0))
+        lead = B(S["actors"][0]["x"], 0, S["actors"][0]["z"]) if S["actors"] else Lm
+        depth = max(1.5, (lead - Pm).dot(fwd) + 0.6)                     # just behind the lead's plane
+        hw = depth * math.tan(math.radians(fovm) / 2) * (9 / 16)
+        lat = (loc - Pm).dot(right)
+        lead_lat = (lead - Pm).dot(right)
+        side_ = 1 if (lat - lead_lat) >= 0 else -1
+        pw_ = {"board": 1.7, "chalkboard": 1.7, "corkboard": 1.7, "blueprint": 1.7, "tv": 2.3, "monitor": 1.4, "calendar": 1.1, "signs": 1.1,
+               "screen": 4.6}.get(p["kind"], PSIZE.get(p["kind"], (1.2, 1.2))[0])
+        if hw >= 1.1:   # wide enough: the whole prop fits beside the lead (scaled down if needed), text fully inside the frame
+            avail = 0.95 * hw - 0.42 - abs(lead_lat) * 0.5
+            k = max(0.45, min(k, avail / pw_))
+            want = lead_lat + side_ * (0.42 + pw_ * k / 2)
+            want = max(-(0.95 * hw - pw_ * k / 2), min(0.95 * hw - pw_ * k / 2, want))
+        else:           # tight shot: at least the prop's centre half (its lettering) beside the lead, inside the frame
+            want = max(-0.62 * hw, min(0.62 * hw, lead_lat + side_ * max(0.42 * hw, 0.7)))
+        loc = Pm + fwd * depth + right * want
+        loc.z = B(0, p.get("y", 0) or 0, 0).z
     cam_xy = B(*pos0)
     yaw = math.atan2(cam_xy.x - loc.x, -(cam_xy.y - loc.y))
     if p["kind"] == "airplane":

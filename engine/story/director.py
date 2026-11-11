@@ -147,7 +147,9 @@ def expand_views(plan: Plan, spans, fps: int) -> list[tuple]:
                     used.add(best)
                     word = re.sub(r"[^\w'-]", "", ws[best]["w"])
                     if word:
-                        subs.append((best, SubShot(at=word, shot=alt.get(beat.shot, "medium") if len(subs) % 2 == 0 else beat.shot)))
+                        # vary the angle like the reference: tighter, then a low angle, then back to the beat's own framing
+                        nxt = [alt.get(beat.shot, "medium"), "low", beat.shot][len(subs) % 3]
+                        subs.append((best, SubShot(at=word, shot=nxt)))
             if subs:
                 beat = beat.model_copy(update={"shots": [s for _, s in sorted(subs, key=lambda x: x[0])]})
         cuts = []
@@ -510,9 +512,13 @@ def build_storyboard(plan: Plan, words: list[dict], fps: int = 30, width: int = 
                 off_l, off_d = 0.0, -0.35
             elif pc.where in ("left", "right"):
                 # centre the piece at ~55 % of the visible half-width at its depth (the cast moved the other way)
-                off_d = 1.0 + 0.1 * pw * k
-                half_at = (SHOTS[beat.shot]["d"] + off_d) * math.tan(math.radians(SHOTS[beat.shot]["fov"] / 2)) * aspect
-                off_l = (-1 if pc.where == "left" else 1) * max(0.55 * half_at, 0.35 * pw * k + 0.5) - cast_shift
+                # in a tight 9:16 shot a wide piece would sit past the frame edge: set it deeper until it fits inside 62 % of
+                # the half-width (labelled boards / screens must stay readable, like the reference channel's centred props)
+                t_ = math.tan(math.radians(SHOTS[beat.shot]["fov"] / 2)) * aspect
+                need = 0.35 * pw * k + 0.5
+                off_d = max(1.0 + 0.1 * pw * k, need / (0.62 * t_) - SHOTS[beat.shot]["d"])
+                half_at = (SHOTS[beat.shot]["d"] + off_d) * t_
+                off_l = (-1 if pc.where == "left" else 1) * max(0.55 * half_at, need) - cast_shift
             else:   # "front": low pieces (sheep) a bit in front of the subject, to one side, inside the frame
                 off_d = -1.2
                 half_at = (SHOTS[beat.shot]["d"] + off_d) * math.tan(math.radians(SHOTS[beat.shot]["fov"] / 2)) * aspect
