@@ -21,7 +21,7 @@ def _new_mat(name):
 
 
 def toon(name, color, shade=0.42, mid=0.78, image=None, alpha=False):
-    key = (name, tuple(color), shade, mid, image, alpha)
+    key = (name, tuple(color), shade, mid, image if not hasattr(image, "name") else "img:" + image.name, alpha)
     if key in _cache:
         return _cache[key]
     m = _new_mat(name)
@@ -41,7 +41,9 @@ def toon(name, color, shade=0.42, mid=0.78, image=None, alpha=False):
     mix = N.new("ShaderNodeMixRGB"); mix.blend_type = "MULTIPLY"; mix.inputs["Fac"].default_value = 1.0
     tex = None
     if image:
-        tex = N.new("ShaderNodeTexImage"); tex.image = bpy.data.images.load(image, check_existing=True); tex.extension = "CLIP"
+        tex = N.new("ShaderNodeTexImage")
+        tex.image = image if isinstance(image, bpy.types.Image) else bpy.data.images.load(image, check_existing=True)
+        tex.extension = "CLIP" if alpha else "REPEAT"
         Lk.new(tex.outputs["Color"], mix.inputs["Color1"])
     else:
         mix.inputs["Color1"].default_value = (*color, 1)

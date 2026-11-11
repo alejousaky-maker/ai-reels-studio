@@ -45,12 +45,15 @@ def kenney(kits, kit, name, h, loc, yaw=0.0):
             o.parent = root
     for o in meshes:
         for i, ms in enumerate(o.data.materials):
-            col = (0.8, 0.8, 0.8)
+            col, img = (0.8, 0.8, 0.8), None
             if ms and ms.use_nodes:
                 b = next((n for n in ms.node_tree.nodes if n.type == "BSDF_PRINCIPLED"), None)
                 if b:
                     col = tuple(b.inputs["Base Color"].default_value[:3])
-            o.data.materials[i] = L.toon(f"k_{name}_{i}", col)
+                    lk = b.inputs["Base Color"].links
+                    if lk and lk[0].from_node.type == "TEX_IMAGE" and lk[0].from_node.image:
+                        img = lk[0].from_node.image   # Kenney city / car kits keep their colours in a palette texture
+            o.data.materials[i] = L.toon(f"k_{name}_{i}", col, image=img)
         L.ink(o, 0.01 / s)
     root.scale = (s, s, s)
     root.location = (loc[0], loc[1], -mn * s)

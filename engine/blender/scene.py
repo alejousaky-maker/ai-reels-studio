@@ -220,27 +220,49 @@ def room(W, D, H, floor_c, back_c, side_c):
 
 
 def outdoors():
+    """exterior set laid out from the camera's point of view: the street / houses / trees / sea / sky are placed BEYOND the
+    cast along the opening view direction (the director's cameras can look any way, e.g. down a long street)"""
     ground = {"street": "#8a8f98", "shops": "#8a8f98", "suburb": "#7cbf4f", "park": "#6fae4a", "village_square": "#c8b89a", "market": "#c8b89a",
               "beach": "#e9cf8a", "outback": "#d9884a", "harbour": "#8a8f98", "lake": "#6fae4a", "resort": "#e9cf8a", "bridge": "#6fae4a"}.get(preset, "#7cbf4f")
-    sets.box("ground", (400, 400, 0.1), (0, 0, -0.05), L.toon("ground", L.hexc(ground)))
+    pos, look, _, _ = cam_at(S["startFrame"])
+    P, T = B(*pos), B(*look)
+    d = T - P
+    d.z = 0
+    d = d.normalized() if d.length > 1e-6 else Vector((0, 1, 0))
+    side = Vector((d.y, -d.x, 0))
+    yaw_face = math.pi - math.atan2(d.x, d.y)          # a Kenney front (+Y) turned to face the lens
+    far = max([(B(a["x"], 0, a["z"]) - T).dot(d) for a in S["actors"]] + [0.0])
+    C0 = Vector((T.x, T.y, 0))
+    sets.box("ground", (600, 600, 0.1), (C0.x, C0.y, -0.05), L.toon("ground", L.hexc(ground)))
+
+    def at(along, across):
+        v = C0 + d * along + side * across
+        return (v.x, v.y, 0.0)
+
     if preset in ("street", "shops", "suburb", "harbour"):
-        sets.box("road", (400, 8, 0.02), (0, -10, 0.005), L.toon("road", L.hexc("#4a4f5a")))
-        y0 = max([-z for z in zs] + [0]) + 4
+        road = sets.box("road", (8, 400, 0.02), (0, 0, 0.005), L.toon("road", L.hexc("#4a4f5a")))
+        road.location = at(far + 5.0, 0)
+        road.rotation_euler = (0, 0, math.atan2(-d.x, d.y) + math.pi / 2)
         names = ["building-a", "building-c", "building-e", "building-g"] if preset in ("street", "shops", "harbour") else ["building-type-a", "building-type-c", "building-type-f", "building-type-k"]
         kit = "city-kit-commercial" if preset in ("street", "shops", "harbour") else "city-kit-suburban"
         for k in range(-5, 6):
-            sets.kenney(KITS, kit, names[(k + 5) % 4], 9 if kit.startswith("city-kit-c") else 5.5, (k * 7.5, y0 + 4, 0), math.pi)
+            sets.kenney(KITS, kit, names[(k + 5) % 4], 9 if kit.startswith("city-kit-c") else 5.5, at(far + 13.0, k * 7.5), yaw_face)
         for k in range(-4, 5):
-            sets.kenney(KITS, "car-kit", ["sedan", "suv", "taxi", "van"][(k + 4) % 4], 1.5, (k * 9 + 3, -7.5, 0), math.pi / 2)
+            sets.kenney(KITS, "car-kit", ["sedan", "suv", "taxi", "van"][(k + 4) % 4], 1.5, at(far + 5.0, k * 9 + 3), yaw_face + math.pi / 2)
     if preset in ("park", "suburb", "village_square", "market", "lake", "bridge"):
         for k in range(14):
             a = k * 2.4
-            sets.kenney(KITS, "city-kit-suburban", "tree-large" if k % 2 else "tree-small", 5 + (k % 3), (math.cos(a) * (14 + k), 10 + abs(math.sin(a)) * 18, 0), a)
+            sets.kenney(KITS, "city-kit-suburban", "tree-large" if k % 2 else "tree-small", 5 + (k % 3), at(far + 14 + abs(math.sin(a)) * 16, math.cos(a) * (14 + k)), a)
     if preset in ("ocean", "beach", "harbour", "island", "resort"):
-        water = L.toon("water", L.hexc("#2f8fd0"))
-        sets.box("sea", (600, 300, 0.1), (0, 160 if preset != "ocean" else 0, 0.02 if preset != "ocean" else 0.0), water)
+        sea = sets.box("sea", (600, 300, 0.1), (0, 0, 0.02), L.toon("water", L.hexc("#2f8fd0")))
+        sea.location = at(150 + (far if preset != "ocean" else -150), 0)
+        sea.location.z = 0.02
+        sea.rotation_euler = (0, 0, math.atan2(-d.x, d.y))
     sky = "#22305a" if night else "#f2b07a" if light == "golden" else "#8fc4ec"
-    sets.box("skyB", (900, 1, 400), (0, 300, 100), L.flat("skyM", L.hexc(sky), 1.3), shadow=False)
+    sk = sets.box("skyB", (900, 1, 400), (0, 0, 0), L.flat("skyM", L.hexc(sky), 1.3), shadow=False)
+    sk.location = at(300, 0)
+    sk.location.z = 100
+    sk.rotation_euler = (0, 0, math.atan2(-d.x, d.y))
     lights(False)
 
 
